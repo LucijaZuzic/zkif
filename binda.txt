@@ -1,0 +1,26 @@
+[1] "binda"
+Something is wrong; all the Accuracy metric values are missing:
+    logLoss         AUC          prAUC        Accuracy       Kappa        Mean_F1   
+ Min.   : NA   Min.   : NA   Min.   : NA   Min.   : NA   Min.   : NA   Min.   : NA  
+ 1st Qu.: NA   1st Qu.: NA   1st Qu.: NA   1st Qu.: NA   1st Qu.: NA   1st Qu.: NA  
+ Median : NA   Median : NA   Median : NA   Median : NA   Median : NA   Median : NA  
+ Mean   :NaN   Mean   :NaN   Mean   :NaN   Mean   :NaN   Mean   :NaN   Mean   :NaN  
+ 3rd Qu.: NA   3rd Qu.: NA   3rd Qu.: NA   3rd Qu.: NA   3rd Qu.: NA   3rd Qu.: NA  
+ Max.   : NA   Max.   : NA   Max.   : NA   Max.   : NA   Max.   : NA   Max.   : NA  
+ NA's   :3     NA's   :3     NA's   :3     NA's   :3     NA's   :3     NA's   :3    
+ Mean_Sensitivity Mean_Specificity Mean_Pos_Pred_Value Mean_Neg_Pred_Value Mean_Precision
+ Min.   : NA      Min.   : NA      Min.   : NA         Min.   : NA         Min.   : NA   
+ 1st Qu.: NA      1st Qu.: NA      1st Qu.: NA         1st Qu.: NA         1st Qu.: NA   
+ Median : NA      Median : NA      Median : NA         Median : NA         Median : NA   
+ Mean   :NaN      Mean   :NaN      Mean   :NaN         Mean   :NaN         Mean   :NaN   
+ 3rd Qu.: NA      3rd Qu.: NA      3rd Qu.: NA         3rd Qu.: NA         3rd Qu.: NA   
+ Max.   : NA      Max.   : NA      Max.   : NA         Max.   : NA         Max.   : NA   
+ NA's   :3        NA's   :3        NA's   :3           NA's   :3           NA's   :3     
+  Mean_Recall  Mean_Detection_Rate Mean_Balanced_Accuracy
+ Min.   : NA   Min.   : NA         Min.   : NA           
+ 1st Qu.: NA   1st Qu.: NA         1st Qu.: NA           
+ Median : NA   Median : NA         Median : NA           
+ Mean   :NaN   Mean   :NaN         Mean   :NaN           
+ 3rd Qu.: NA   3rd Qu.: NA         3rd Qu.: NA           
+ Max.   : NA   Max.   : NA         Max.   : NA           
+ NA's   :3     NA's   :3           NA's   :3             
