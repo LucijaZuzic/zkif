@@ -1,7 +1,7 @@
 import pandas as pd
 
 model_name_list = ["svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet", "binda"]
-wd = "C:/Users/RYZEN/Downloads/zkif-20240911T131920Z-001/zkif/"
+wd = ""
 for model_name in model_name_list:
     file_open = open(wd + model_name + ".txt")
     all_lines = file_open.readlines()
