@@ -2,13 +2,13 @@ import pandas as pd
 import numpy as np
 
 model_name_list = ["svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet"]
-model_print_list = ["svmPoly"]
+model_print_list = ["svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet"]
 by_pred = True
 by_class = True
 by_statistics = True
 use_alias = True
 by_model = True
-by_metric = True
+by_metric = False
 use_alias_second = True
 by_ansamble = True
 skip_first = ["Prevalence"]
@@ -257,29 +257,38 @@ ansamble_list = [4, 7]
 ansamble_print = [4]
 for num_ansamble in ansamble_list:
     file_open = open(wd + "ansamble" + str(num_ansamble) + ".txt")
-    all_lines = file_open.readlines()[-num_ansamble-1:]
+    all_lines = file_open.readlines()[- (1 + num_ansamble) * (1 + int(np.floor(num_ansamble/6))) -2:-2]
     for line_ix in range(len(all_lines)):
+        orig_start = all_lines[line_ix][0]
         while "  " in all_lines[line_ix]:
             all_lines[line_ix] = all_lines[line_ix].replace("  ", " ")
         all_lines[line_ix] = all_lines[line_ix].strip().split()
-    all_lines[0].insert(0, "Model")
+        if orig_start == " ":
+            all_lines[line_ix].insert(0, "Model")
     dict_ansamble = dict()
-    for colname in all_lines[0]:
-        dict_ansamble[colname] = []
-    for row_ix in range(1, len(all_lines)):
-        for col_ix in range(len(all_lines[0])):
-            dict_ansamble[all_lines[0][col_ix]].append(all_lines[row_ix][col_ix])
+    for row_ix in range(len(all_lines)):
+        if all_lines[row_ix][0] not in dict_ansamble:
+            dict_ansamble[all_lines[row_ix][0]] = []
+    for row_ix in range(len(all_lines)):
+        if all_lines[row_ix] != "Model":
+            for col_ix in range(1, len(all_lines[row_ix])):
+                dict_ansamble[all_lines[row_ix][0]].append(all_lines[row_ix][col_ix])
     df_new_dict_a = pd.DataFrame(dict_ansamble)
     df_new_dict_a.to_csv(wd + "ansamble" + str(num_ansamble) + ".csv", index = False)
-    #print(dict_ansamble)
     #print(all_lines)
     lines_print_a = "\\hline\n"
-    for line_ix in range(len(all_lines)):
-        for val_ix in range(len(all_lines[line_ix])):
-            if val_ix and line_ix:
-                lines_print_a += "$" + str(np.round(float(all_lines[line_ix][val_ix]) * 100, 4)) + "\%$ & "
+    ord = ["Model"]
+    for m in model_name_list:
+        ord.append(m)
+    for colname in ord:
+        if colname not in dict_ansamble.keys():
+            continue
+        lines_print_a += colname + " & "
+        for val_ix in range(len(dict_ansamble[colname])):
+            if colname != "Model":
+                lines_print_a += "$" + str(np.round(float(dict_ansamble[colname][val_ix]) * 100, 4)) + "\%$ & "
             else:
-                lines_print_a += str(all_lines[line_ix][val_ix]) + " & "
+                lines_print_a += str(dict_ansamble[colname][val_ix]) + " & "
         lines_print_a = lines_print_a[:-2] + "\\\\ \\hline\n"
     if num_ansamble in ansamble_print and by_ansamble:
         print(lines_print_a)

@@ -35,6 +35,8 @@ library(weird)
 oldw <- getOption("warn")
 options(warn = -1)
 
+sink("data_vars.txt")
+
 # Reading the annual observed TEC data at Darwin, NT in 2014 and
 # data frame arrangement
 
@@ -60,21 +62,34 @@ summary(dataset)
 
 # Exloratory analysis of observations per variables
 plot_histogram(dataset, title = 'over-all TEC')
-
+dev.copy(png, filename = "allTEC.png")
+dev.off()
 # Data set reduction by expelling TEC>=300 outliers
 iono2 <- dataset[dataset$TEC<300,]
 iono2 <- dataset[c(1:8000),]
 plot_histogram(iono2, title = 'TEC<300')
+dev.copy(png, filename = "300TEC.png")
+dev.off()
 #boxplot(dataset, col = 'red', names = c('overall TEC','TEC<200'), 
 #ylab='values [TECU]', cex.axis=1.5, cex.lab=1.5)
 dataset2 <- dataset[,-c(1,2)]
 plot_correlation(dataset2, maxcat = 5L)
+dev.copy(png, filename = "correlation.png")
+dev.off()
 #Box-plots per Dst values, source of the classification criteria
 plot_boxplot(dataset2, by = "Dst")
+dev.copy(png, filename = "dataset2boxplot.png")
+dev.off()
 iono3 <- iono2[,-c(1,2)]
 plot_boxplot(iono3, by = "Dst")
+dev.copy(png, filename = "iono3boxplot.png")
+dev.off()
 plot_scatterplot(dataset2, by = 'TEC', sampled_rows = 1000L)
+dev.copy(png, filename = "dataset2scatterplot.png")
+dev.off()
 plot_scatterplot(iono3, by = 'Dst', sampled_rows = 1000L)
+dev.copy(png, filename = "iono3scatterplot.png")
+dev.off()
 
 ### Dst-based classification under the following rule:
 # 15 ... 50 positive phase of the storm -> P
@@ -139,6 +154,7 @@ ctrl <- trainControl(
   classProbs = TRUE, 
   summaryFunction = multiClassSummary
 )
+sink()
 
 ## Development of candidate models 
 # Source: https://topepo.github.io/caret/train-models-by-tag.html
@@ -167,122 +183,131 @@ library(binda) # only for binda
 
 #model_name_list <- list("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet", "binda", "glmStepAIC")
 model_name_list <- list("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet")
+
+my_process <- function(model_name) {
+  if (model_name == "svmPoly") {
+    model_trained <- train(Dst_class ~ ., data = training,
+                          method = "svmPoly",
+                          trControl= ctrl,
+                          tuneGrid = data.frame(degree = 1,
+                                                scale = 1,
+                                                C = 1),
+                          preProcess = c("pca","scale","center"),
+                          na.action = na.omit
+    )
+  } else if (model_name == "C5.0") {
+    model_trained <- train(Dst_class ~ ., data = training, 
+                          method = "C5.0",
+                          preProcess=c("scale","center"),
+                          trControl= ctrl,
+                          na.action = na.omit
+    )
+  } else if (model_name == "nb") {
+    model_trained <- train(training, training$Dst_class, 
+                          method = "nb",
+                          preProcess=c("scale","center"),
+                          trControl= ctrl,
+                          na.action = na.omit
+    )
+  } else if (model_name == "nnet") {
+    model_trained <- train(training, training$Dst_class,
+                          method = "nnet",
+                          trControl= ctrl,
+                          preProcess=c("scale","center"),
+                          na.action = na.omit
+    )
+  } else if (model_name == "pls") {
+    model_trained <- train(
+      Dst_class ~ .,
+      data = training,
+      method = "pls",
+      preProc = c("center", "scale"),
+      tuneLength = 15,
+      trControl = ctrl,
+      metric = "ROC"
+    )
+    print(model_trained)
+  } else if (model_name == "fda") {
+    model_trained <- train(Dst_class ~ ., data = training,
+                          method = "fda",
+                          trControl= ctrl,
+                          preProcess = c("pca","scale","center"),
+                          na.action = na.omit
+    )
+  } else if (model_name == "pcaNNet") {
+    model_trained <- train(Dst_class ~ ., data = training,
+                          method = "pcaNNet",
+                          trControl= ctrl,
+                          preProcess = c("scale","center"),
+                          na.action = na.omit
+    )
+  } else if (model_name == "binda") {
+    model_trained  <- train(Dst_class ~ ., data = training,
+                            method = "binda",
+                            trControl= ctrl,
+                            preProcess = c("scale","center"),
+                            na.action = na.omit
+    )
+  } else if (model_name == "glmStepAIC") {
+    model_trained  <- train(Dst_class ~ ., data = training,
+                            method = "glmStepAIC",
+                            trControl= ctrl,
+                            preProcess = c("scale","center"),
+                            na.action = na.omit
+    )
+  }
+  # Predictions
+  if (model_name == "pls") {
+    ggplot(model_trained)
+    ggsave("pls_plot.png")
+    model_predictions <- predict(model_trained, newdata = testing)
+    print(str(model_predictions))
+    model_probs <- predict(model_trained, newdata = testing, type = "prob")
+    print(head(model_probs))
+  } else if (model_name == "C5.0" || model_name == "nb") {
+    model_predictions <- predict(model_trained, testing, na.action = na.pass)
+  } else {
+    model_predictions <- predict(model_trained, testing)
+  }
+  # Create confusion matrix
+  if (model_name == "pls") {
+    cm_model <- confusionMatrix(data = model_predictions, trueclasses)
+  } else {
+    cm_model <- confusionMatrix(model_predictions, trueclasses)
+  }
+  # Print confusion matrix and results
+  print(cm_model)
+  # Variable importance
+  #importance <- varImp(model_trained, useModel = TRUE, nonpara = TRUE, scale = TRUE)
+  # Spremanje dijagrama
+  #plot(importance)
+  #dev.copy(png, filename = paste(paste("importance", model_name, sep = "_"), "png", sep = "."))
+  #dev.off()
+}
+
 choice <- "nb"
 for (i in 1:length(model_name_list)) {
-  model_name <- model_name_list[[i]]
-  file_name <- paste(model_name, "txt", sep = ".")
+  model_name_use <- model_name_list[[i]]
+  file_name <- paste(model_name_use, "txt", sep = ".")
   if (!file.exists(file_name)) {
+    print(model_name_use)
     sink(file_name)
-    print(model_name)
-    if (model_name == "svmPoly") {
-      model_trained <- train(Dst_class ~ ., data = training,
-                             method = "svmPoly",
-                             trControl= ctrl,
-                             tuneGrid = data.frame(degree = 1,
-                                                   scale = 1,
-                                                   C = 1),
-                             preProcess = c("pca","scale","center"),
-                             na.action = na.omit
-      )
-    } else if (model_name == "C5.0") {
-      model_trained <- train(Dst_class ~ ., data = training, 
-                             method = "C5.0",
-                             preProcess=c("scale","center"),
-                             trControl= ctrl,
-                             na.action = na.omit
-      )
-    } else if (model_name == "nb") {
-      model_trained <- train(training, training$Dst_class, 
-                             method = "nb",
-                             preProcess=c("scale","center"),
-                             trControl= ctrl,
-                             na.action = na.omit
-      )
-    } else if (model_name == "nnet") {
-      model_trained <- train(training, training$Dst_class,
-                             method = "nnet",
-                             trControl= ctrl,
-                             preProcess=c("scale","center"),
-                             na.action = na.omit
-      )
-    } else if (model_name == "pls") {
-      model_trained <- train(
-        Dst_class ~ .,
-        data = training,
-        method = "pls",
-        preProc = c("center", "scale"),
-        tuneLength = 15,
-        trControl = ctrl,
-        metric = "ROC"
-      )
-      print(model_trained)
-    } else if (model_name == "fda") {
-      model_trained <- train(Dst_class ~ ., data = training,
-                             method = "fda",
-                             trControl= ctrl,
-                             preProcess = c("pca","scale","center"),
-                             na.action = na.omit
-      )
-    } else if (model_name == "pcaNNet") {
-      model_trained <- train(Dst_class ~ ., data = training,
-                             method = "pcaNNet",
-                             trControl= ctrl,
-                             preProcess = c("scale","center"),
-                             na.action = na.omit
-      )
-    } else if (model_name == "binda") {
-      model_trained  <- train(Dst_class ~ ., data = training,
-                              method = "binda",
-                              trControl= ctrl,
-                              preProcess = c("scale","center"),
-                              na.action = na.omit
-      )
-    } else if (model_name == "glmStepAIC") {
-      model_trained  <- train(Dst_class ~ ., data = training,
-                              method = "glmStepAIC",
-                              trControl= ctrl,
-                              preProcess = c("scale","center"),
-                              na.action = na.omit
-      )
-    }
-    # Predictions
-    if (model_name == "pls") {
-      ggplot(model_trained)
-      model_predictions <- predict(model_trained, newdata = testing)
-      print(str(model_predictions))
-      model_probs <- predict(model_trained, newdata = testing, type = "prob")
-      print(head(model_probs))
-    } else if (model_name == "C5.0" || model_name == "nb") {
-      model_predictions <- predict(model_trained, testing, na.action = na.pass)
-    } else {
-      model_predictions <- predict(model_trained, testing)
-    }
-    # Create confusion matrix
-    if (model_name == "pls") {
-      cm_model <- confusionMatrix(data = model_predictions, trueclasses)
-    } else {
-      cm_model <- confusionMatrix(model_predictions, trueclasses)
-    }
-    # Print confusion matrix and results
-    print(cm_model)
-    # Variable importance
-    if (model_name == "svmPoly" || model_name == "fda" || model_name == "pcaNNet" || model_name == "binda") {
-      #importance <- varImp(model_trained, scale=FALSE)
-      #plot(importance)
-      print("importance")
-    }
+    print(model_name_use)
+    time_taken <- system.time(my_process(model_name_use))
+    print(time_taken)
     sink()
+    print(time_taken)
   }
 }
 
-if (!file.exists("ansamble4.txt")) {
-  sink("ansamble4.txt")
-  # Create four models as an ensemble
-  library(caretEnsemble)
+# Create four models as an ensemble
+library(caretEnsemble)
+
+my_ansamble <- function(list_all) {
   econtrol <- trainControl(method="cv", number=10, 
                            savePredictions=TRUE, classProbs=TRUE)
   model_list <- caretList(Dst_class ~., data=training,
-                          methodList=c("svmPoly", "nnet", "C5.0", "nb"),
+                          methodList=list_all,
                           preProcess=c("scale","center"),
                           trControl = econtrol
   )
@@ -290,23 +315,35 @@ if (!file.exists("ansamble4.txt")) {
   # What is model correlation?
   mcr <- modelCor(results)
   print(mcr)
-  sink()
+}
+
+list4 <- c("svmPoly", "nnet", "C5.0", "nb")
+list7 <- c("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet")
+
+if (!file.exists("ansamble4.txt")) {
+    print("ansamble4")
+    sink("ansamble4.txt")
+    print("ansamble4")
+    time_taken <- system.time(my_ansamble(list4))
+    print(time_taken)
+    sink()
+    print(time_taken)
 }
 
 if (!file.exists("ansamble7.txt")) {
-  sink("ansamble7.txt")
-  # Create four models as an ensemble
-  library(caretEnsemble)
-  econtrol <- trainControl(method="cv", number=10, 
-                           savePredictions=TRUE, classProbs=TRUE)
-  model_list <- caretList(Dst_class ~., data=training,
-                          methodList=c("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet"),
-                          preProcess=c("scale","center"),
-                          trControl = econtrol
-  )
-  results <- resamples(model_list)
-  # What is model correlation?
-  mcr <- modelCor(results)
-  print(mcr)
-  sink()
+    print("ansamble7")
+    sink("ansamble7.txt")
+    print("ansamble7")
+    time_taken <- system.time(my_ansamble(list7))
+    print(time_taken)
+    sink()
+    print(time_taken)
+}
+
+# Zatvaranje dijagrama
+
+if (length(dev.list()) > 0) {
+  for (dev_sth_open in dev.list()[1]:dev.list()[length(dev.list())]) {
+    dev.off()
+  }
 }

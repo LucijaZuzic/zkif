@@ -1,3 +1,4 @@
+[1] "ansamble4"
 maximum number of iterations reached 5.7206e-05 -5.689042e-05maximum number of iterations reached 0.0002752227 0.0002729779maximum number of iterations reached 1.29655e-05 -1.293691e-05maximum number of iterations reached 0.001507858 0.001479469maximum number of iterations reached 1.590314e-05 1.584757e-05maximum number of iterations reached 1.384488e-05 -1.378743e-05maximum number of iterations reached 4.042611e-05 4.026196e-05maximum number of iterations reached 0.0004098559 -0.0004061828maximum number of iterations reached 0.002431922 0.002370181maximum number of iterations reached 4.95893e-05 4.938067e-05maximum number of iterations reached 0.001052107 -0.00103811maximum number of iterations reached 0.0006900829 0.0006800048maximum number of iterations reached 8.227206e-05 -8.203373e-05maximum number of iterations reached 0.001542491 0.001509585maximum number of iterations reached 1.237661e-05 1.23356e-05maximum number of iterations reached 1.113497e-05 1.109897e-05maximum number of iterations reached 0.001635346 -0.001595805maximum number of iterations reached 0.001447223 0.001418909maximum number of iterations reached 9.749456e-06 -9.722433e-06maximum number of iterations reached 0.0005281615 -0.0005223209maximum number of iterations reached 0.002163099 0.002116558maximum number of iterations reached 0.0006974295 -0.0006872067maximum number of iterations reached 0.001415185 0.001385893maximum number of iterations reached 7.340092e-05 -7.309289e-05maximum number of iterations reached 0.001118731 0.001100246maximum number of iterations reached 9.75009e-05 -9.71124e-05maximum number of iterations reached 0.001455348 0.001428848maximum number of iterations reached 0.00016426 0.0001631642maximum number of iterations reached 7.877676e-05 7.839213e-05# weights:  18
 initial  value 10035.821288 
 iter  10 value 3594.051522
@@ -86,11 +87,11 @@ iter  30 value 923.114499
 iter  40 value 842.928859
 iter  50 value 821.947511
 iter  60 value 814.113487
-iter  70 value 781.361474
-iter  80 value 757.145388
-iter  90 value 578.522106
-iter 100 value 340.230790
-final  value 340.230790 
+iter  70 value 781.361407
+iter  80 value 757.138749
+iter  90 value 578.324768
+iter 100 value 340.065640
+final  value 340.065640 
 stopped after 100 iterations
 # weights:  44
 initial  value 8536.737850 
@@ -573,9 +574,9 @@ iter  50 value 803.076048
 iter  60 value 768.415417
 iter  70 value 539.124876
 iter  80 value 368.521117
-iter  90 value 328.517973
-iter 100 value 175.464119
-final  value 175.464119 
+iter  90 value 328.517987
+iter 100 value 175.461605
+final  value 175.461605 
 stopped after 100 iterations
 # weights:  44
 initial  value 11742.321065 
@@ -801,10 +802,10 @@ iter  40 value 234.142047
 iter  50 value 213.999102
 iter  60 value 202.403261
 iter  70 value 195.699085
-iter  80 value 189.837061
-iter  90 value 183.699081
-iter 100 value 180.458926
-final  value 180.458926 
+iter  80 value 189.837068
+iter  90 value 183.699091
+iter 100 value 180.458931
+final  value 180.458931 
 stopped after 100 iterations
 # weights:  18
 initial  value 6883.709712 
@@ -840,13 +841,13 @@ iter  10 value 1144.503784
 iter  20 value 380.274957
 iter  30 value 193.034052
 iter  40 value 121.214586
-iter  50 value 87.437416
-iter  60 value 76.755334
-iter  70 value 64.628247
-iter  80 value 58.402010
-iter  90 value 49.388941
-iter 100 value 45.656658
-final  value 45.656658 
+iter  50 value 87.437420
+iter  60 value 76.756049
+iter  70 value 64.613005
+iter  80 value 58.525215
+iter  90 value 52.928993
+iter 100 value 47.195762
+final  value 47.195762 
 stopped after 100 iterations
 # weights:  18
 initial  value 14988.621894 
@@ -1234,3 +1235,5 @@ svmPoly  1.0000000 -0.2402289 -0.1923107 -0.5784886
 nnet    -0.2402289  1.0000000  0.1656890 -0.1581120
 C5.0    -0.1923107  0.1656890  1.0000000 -0.2445466
 nb      -0.5784886 -0.1581120 -0.2445466  1.0000000
+   user  system elapsed 
+ 140.00    8.89  755.42 

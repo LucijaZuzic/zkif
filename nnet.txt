@@ -12246,3 +12246,5 @@ Prevalence           0.001877   0.7322   0.0169   0.2372  0.01189
 Detection Rate       0.001877   0.7322   0.0169   0.2372  0.01189
 Detection Prevalence 0.001877   0.7322   0.0169   0.2372  0.01189
 Balanced Accuracy    1.000000   1.0000   1.0000   1.0000  1.00000
+   user  system elapsed 
+ 141.29    1.64  595.31 
