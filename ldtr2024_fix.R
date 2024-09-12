@@ -165,7 +165,8 @@ library(binda) # only for binda
 # Candidate model 8: binda
 # Candidate model 9: glmStepAIC ?
 
-model_name_list <- list("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet", "binda")
+#model_name_list <- list("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet", "binda", "glmStepAIC")
+model_name_list <- list("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet")
 choice <- "nb"
 for (i in 1:length(model_name_list)) {
   model_name <- model_name_list[[i]]
@@ -236,6 +237,13 @@ for (i in 1:length(model_name_list)) {
                               preProcess = c("scale","center"),
                               na.action = na.omit
       )
+    } else if (model_name == "glmStepAIC") {
+      model_trained  <- train(Dst_class ~ ., data = training,
+                              method = "glmStepAIC",
+                              trControl= ctrl,
+                              preProcess = c("scale","center"),
+                              na.action = na.omit
+      )
     }
     # Predictions
     if (model_name == "pls") {
@@ -267,17 +275,38 @@ for (i in 1:length(model_name_list)) {
   }
 }
 
-# Create four models as an ensemble
-#library(caretEnsemble)
-#library(caret)
-#econtrol <- trainControl(method="cv", number=10, 
-#                         savePredictions=TRUE, classProbs=TRUE)
-#model_list <- caretList(Dst_class ~., data=training,
-#                        methodList=c("svmPoly", "nnet", "C5.0", "nb"),
-#                        preProcess=c("scale","center"),
-#                        trControl = econtrol
-#)
-#results <- resamples(model_list)
-# What is model correlation?
-#mcr <- modelCor(results)
-#print(mcr)
+if (!file.exists("ansamble4.txt")) {
+  sink("ansamble4.txt")
+  # Create four models as an ensemble
+  library(caretEnsemble)
+  econtrol <- trainControl(method="cv", number=10, 
+                           savePredictions=TRUE, classProbs=TRUE)
+  model_list <- caretList(Dst_class ~., data=training,
+                          methodList=c("svmPoly", "nnet", "C5.0", "nb"),
+                          preProcess=c("scale","center"),
+                          trControl = econtrol
+  )
+  results <- resamples(model_list)
+  # What is model correlation?
+  mcr <- modelCor(results)
+  print(mcr)
+  sink()
+}
+
+if (!file.exists("ansamble7.txt")) {
+  sink("ansamble7.txt")
+  # Create four models as an ensemble
+  library(caretEnsemble)
+  econtrol <- trainControl(method="cv", number=10, 
+                           savePredictions=TRUE, classProbs=TRUE)
+  model_list <- caretList(Dst_class ~., data=training,
+                          methodList=c("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet"),
+                          preProcess=c("scale","center"),
+                          trControl = econtrol
+  )
+  results <- resamples(model_list)
+  # What is model correlation?
+  mcr <- modelCor(results)
+  print(mcr)
+  sink()
+}
