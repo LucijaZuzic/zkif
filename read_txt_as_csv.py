@@ -7,6 +7,9 @@ by_pred = True
 by_class = True
 by_statistics = True
 use_alias = True
+by_time_type = True
+by_time_model = False
+skip_time = ["user", "system"]
 by_model = True
 by_metric = False
 use_alias_second = True
@@ -41,6 +44,7 @@ metric_alias_fix = {
 }
 wd = ""
 dict_co_total = dict()
+dict_time_total = {"model": []}
 for model_name in model_name_list:
     dict_co_total[model_name] = dict()
     file_open = open(wd + model_name + ".txt")
@@ -201,6 +205,43 @@ for model_name in model_name_list:
         #print(dict_cs)
         df_cs = pd.DataFrame(dict_cs)
         df_cs.to_csv(wd + model_name + "_cs.csv", index = False)
+        lines_time = all_lines[-2:]
+        for lix in range(len(lines_time)):
+            while "  " in lines_time[lix]:
+                lines_time[lix] = lines_time[lix].replace("  ", " ")
+            lines_time[lix] = lines_time[lix].strip().split(" ")
+        for tix in range(len(lines_time[0])):
+            if lines_time[0][tix] not in dict_time_total:
+                dict_time_total[lines_time[0][tix]] = []
+            dict_time_total[lines_time[0][tix]].append(lines_time[1][tix])
+        dict_time_total["model"].append(model_name)
+#print(dict_time_total)
+df_dict_time_total = pd.DataFrame(dict_time_total)
+df_dict_time_total.to_csv(wd + "time_models.csv", index = False)
+lines_time = "\\hline\n"
+for key_time in dict_time_total:
+    if key_time in skip_time:
+        continue
+    lines_time += key_time + " & "
+lines_time = lines_time[:-2] + "\\\\ \\hline\n"
+for key_val_ix in range(len(dict_time_total["model"])):
+    for key_name in dict_time_total:
+        if key_name in skip_time:
+            continue
+        lines_time += "$" + dict_time_total[key_name][key_val_ix] + "$ & "
+    lines_time = lines_time[:-2] + "\\\\ \\hline\n"
+if by_time_type:
+    print(lines_time)
+lines_time = "\\hline\n"
+for key_name in dict_time_total:
+    if key_name in skip_time:
+        continue
+    lines_time += key_name + " & "
+    for key_val in dict_time_total[key_name]:
+        lines_time += "$" + key_val + "$ & "
+    lines_time = lines_time[:-2] + "\\\\ \\hline\n"
+if by_time_model:
+    print(lines_time)
 #print(dict_co_total)
 models_list = list(dict_co_total.keys())
 metrics_list = list(dict_co_total[models_list[0]].keys())
