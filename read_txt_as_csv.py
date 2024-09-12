@@ -2,6 +2,13 @@ import pandas as pd
 import numpy as np
 
 model_name_list = ["svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet"]
+model_print_list = ["svmPoly"]
+by_pred = True
+by_class = True
+by_statistics = True
+by_model = True
+by_metric = True
+by_ansamble = True
 metric_alias = {
     "Sensitivity": "Sen",
     "Specificity": "Spec",
@@ -30,7 +37,8 @@ for model_name in model_name_list:
     while line_ref < len(all_lines) and "Reference" not in all_lines[line_ref]:
         line_ref += 1
     if line_ref != len(all_lines):
-        print(model_name)
+        if model_name in model_print_list:
+            print(model_name)
         line_sen = line_ref
         while line_sen < len(all_lines) and "Sensitivity" not in all_lines[line_sen]:
             line_sen += 1
@@ -82,7 +90,8 @@ for model_name in model_name_list:
         line_one = line_one.replace(" & Prediction ", "\\multicolumn{2}{c|}{} ")
         line_one = line_one.replace(" & E", "\\multirow{5}{*}{\\rotatebox{90}{Prediction}} & E")
         line_one = line_one.replace("}\\multirow{5}{*}{\\rotatebox{90}{Prediction}} & E", "} & E")
-        print(line_one)
+        if model_name in model_print_list and by_pred:
+            print(line_one)
         #print(dict_cm)
         df_cm = pd.DataFrame(dict_cm)
         df_cm.to_csv(wd + model_name + "_cm.csv", index = False)
@@ -139,7 +148,8 @@ for model_name in model_name_list:
                 line_one += "\\\\ \\hline\n"
             else:
                 line_one += "\\\\ \\cline{2-10}\n"
-        print(line_one.replace(".0\%", "\%"))
+        if model_name in model_print_list and by_class:
+            print(line_one.replace(".0\%", "\%"))
         line_one = "\\cline{3-7}\n\\multicolumn{2}{c|}{} & \\multicolumn{5}{c|}{Class} \\\\ \\cline{3-7}\n"
         for row_ix in range(len(cs)):
             for col_ix in range(len(cs[row_ix])):
@@ -161,7 +171,8 @@ for model_name in model_name_list:
                 line_one += "\\\\ \\hline\n"
             else:
                 line_one += "\\\\ \\cline{2-7}\n"
-        print(line_one.replace(".0\%", "\%"))
+        if model_name in model_print_list and by_statistics:
+            print(line_one.replace(".0\%", "\%"))
         #print(dict_cs)
         df_cs = pd.DataFrame(dict_cs)
         df_cs.to_csv(wd + model_name + "_cs.csv", index = False)
@@ -186,7 +197,8 @@ for metric in metrics_list:
         else:
             line_print += "NA & "
     line_print = line_print[:-2] + "\\\\ \\hline\n"
-print(line_print)
+if by_metric:
+    print(line_print)
 line_print = "\\hline\nModel & "
 for metric in metrics_list:
     line_print += metric_alias_second[metric] + " & "
@@ -199,6 +211,38 @@ for model_name in models_list:
         else:
             line_print += "NA & "
     line_print = line_print[:-2] + "\\\\ \\hline\n"
-print(line_print)
+if by_model:
+    print(line_print)
 df_new_dict_co = pd.DataFrame(new_dict_co)
 df_new_dict_co.to_csv(wd + "stats.csv", index = False)
+
+ansamble_list = [4, 7]
+ansamble_print = [4]
+for num_ansamble in ansamble_list:
+    file_open = open(wd + "ansamble" + str(num_ansamble) + ".txt")
+    all_lines = file_open.readlines()[-num_ansamble-1:]
+    for line_ix in range(len(all_lines)):
+        while "  " in all_lines[line_ix]:
+            all_lines[line_ix] = all_lines[line_ix].replace("  ", " ")
+        all_lines[line_ix] = all_lines[line_ix].strip().split()
+    all_lines[0].insert(0, "Model")
+    dict_ansamble = dict()
+    for colname in all_lines[0]:
+        dict_ansamble[colname] = []
+    for row_ix in range(1, len(all_lines)):
+        for col_ix in range(len(all_lines[0])):
+            dict_ansamble[all_lines[0][col_ix]].append(all_lines[row_ix][col_ix])
+    df_new_dict_a = pd.DataFrame(dict_ansamble)
+    df_new_dict_a.to_csv(wd + "ansamble" + str(num_ansamble) + ".csv", index = False)
+    #print(dict_ansamble)
+    #print(all_lines)
+    lines_print_a = "\\hline\n"
+    for line_ix in range(len(all_lines)):
+        for val_ix in range(len(all_lines[line_ix])):
+            if val_ix and line_ix:
+                lines_print_a += "$" + str(np.round(float(all_lines[line_ix][val_ix]) * 100, 4)) + "\%$ & "
+            else:
+                lines_print_a += str(all_lines[line_ix][val_ix]) + " & "
+        lines_print_a = lines_print_a[:-2] + "\\\\ \\hline\n"
+    if num_ansamble in ansamble_print and by_ansamble:
+        print(lines_print_a)
