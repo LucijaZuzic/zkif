@@ -6,9 +6,12 @@ model_print_list = ["svmPoly"]
 by_pred = True
 by_class = True
 by_statistics = True
+use_alias = True
 by_model = True
 by_metric = True
+use_alias_second = True
 by_ansamble = True
+skip_first = ["Prevalence"]
 metric_alias = {
     "Sensitivity": "Sen",
     "Specificity": "Spec",
@@ -19,13 +22,22 @@ metric_alias = {
     "Detection Prevalence": "DP",
     "Balanced Accuracy": "BA"
 }
+skip_second = ["Mcnemar's Test P-Value"]
 metric_alias_second = {
     "Accuracy": "Acc",
     "95% CI": "$95\%$ CI",
     "No Information Rate": "NIR",
-    "P-Value [Acc > NIR]": "P-Value",
+    "P-Value [Acc > NIR]": "$p$-value",
     "Kappa": "Kappa",
     "Mcnemar's Test P-Value": "McNemar"
+}
+metric_alias_fix = {
+    "Accuracy": "Accuracy",
+    "95% CI": "$95\%$ CI",
+    "No Information Rate": "No Information Rate",
+    "P-Value [Acc > NIR]": "$p$-value $[$Acc $>$ NIR$]$",
+    "Kappa": "Kappa",
+    "Mcnemar's Test P-Value": "McNemar's test $p$-value"
 }
 wd = ""
 dict_co_total = dict()
@@ -127,12 +139,14 @@ for model_name in model_name_list:
                     dict_cs[colname].append("NaN")
                 else:
                     dict_cs[colname].append(cs[row_ix][col_ix])
-        line_one = "\\cline{3-10}\n\\multicolumn{2}{c|}{} & \\multicolumn{8}{c|}{Statistics} \\\\ \\cline{3-10}\n"
+        line_one = "\\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n\\multicolumn{2}{c|}{} & \\multicolumn{" + str(len(metric_alias) - len(skip_first)) + "}{c|}{Statistics} \\\\ \\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n"
         for colname in dict_cs:
             if "E" not in colname and "Statistics" not in colname:
                 line_one += " & "
             line_one += colname.replace("Statistics", "\\multicolumn{2}{c|}{}").replace("E", "\\multirow{5}{*}{\\rotatebox{90}{Class}} & E") + " & "
             for col_ix in range(len(dict_cs[colname])):
+                if dict_cs["Statistics"][col_ix] in skip_first:
+                    continue
                 if str(dict_cs[colname][col_ix]).isdigit() or "." in str(dict_cs[colname][col_ix]):
                     if float(dict_cs[colname][col_ix]) > 100:
                         line_one += "NaN & "
@@ -140,18 +154,23 @@ for model_name in model_name_list:
                         line_one += "$" + str(np.round(float(dict_cs[colname][col_ix]) * 100, 4)) + "\%$ & "
                 else:
                     if str(dict_cs[colname][col_ix]) in metric_alias:
-                        line_one += metric_alias[str(dict_cs[colname][col_ix])] + " & "
+                        if use_alias:
+                            line_one += metric_alias[str(dict_cs[colname][col_ix])] + " & "
+                        else:
+                            line_one += str(dict_cs[colname][col_ix]) + " & "
                     else:
                         line_one += str(dict_cs[colname][col_ix]) + " & "
             line_one = line_one[:-2]
             if "Statistics" in colname or "T" in colname:
                 line_one += "\\\\ \\hline\n"
             else:
-                line_one += "\\\\ \\cline{2-10}\n"
+                line_one += "\\\\ \\cline{2-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n"
         if model_name in model_print_list and by_class:
             print(line_one.replace(".0\%", "\%"))
         line_one = "\\cline{3-7}\n\\multicolumn{2}{c|}{} & \\multicolumn{5}{c|}{Class} \\\\ \\cline{3-7}\n"
         for row_ix in range(len(cs)):
+            if cs[row_ix][0] in skip_first:
+                continue
             for col_ix in range(len(cs[row_ix])):
                 if str(cs[row_ix][col_ix]).isdigit() or "." in str(cs[row_ix][col_ix]):
                     if float(cs[row_ix][col_ix]) > 100:
@@ -160,10 +179,16 @@ for model_name in model_name_list:
                         line_one += "$" + str(np.round(float(cs[row_ix][col_ix]) * 100, 4)) + "\%$ & "
                 else:
                     if str(cs[row_ix][col_ix]) in metric_alias:
-                        if "Sensitivity" not in str(cs[row_ix][col_ix]):
-                            line_one += " & " + metric_alias[str(cs[row_ix][col_ix])] + " & "
+                        if use_alias:
+                            if "Sensitivity" not in str(cs[row_ix][col_ix]):
+                                line_one += " & " + metric_alias[str(cs[row_ix][col_ix])] + " & "
+                            else:
+                                line_one += "\\multirow{" + str(len(metric_alias) - len(skip_first)) + "}{*}{\\rotatebox{90}{Statistics}} & " + metric_alias[str(cs[row_ix][col_ix])] + " & "
                         else:
-                            line_one += "\\multirow{8}{*}{\\rotatebox{90}{Statistics}} & " + metric_alias[str(cs[row_ix][col_ix])] + " & "
+                            if "Sensitivity" not in str(cs[row_ix][col_ix]):
+                                line_one += " & " + str(cs[row_ix][col_ix]) + " & "
+                            else:
+                                line_one += "\\multirow{" + str(len(metric_alias) - len(skip_first)) + "}{*}{\\rotatebox{90}{Statistics}} & " + str(cs[row_ix][col_ix]) + " & "
                     else:
                         line_one += str(cs[row_ix][col_ix]).replace("Statistics", "\\multicolumn{2}{c|}{}") + " & "
             line_one = line_one[:-2]
@@ -190,7 +215,12 @@ for colname in new_dict_co.keys():
     line_print += colname + " & "
 line_print = line_print[:-2] + "\\\\ \\hline\n"
 for metric in metrics_list:
-    line_print += metric_alias_second[metric] + " & "
+    if metric in skip_second:
+        continue
+    if use_alias_second:
+        line_print += metric_alias_second[metric] + " & "
+    else:
+        line_print += metric_alias_fix[metric] + " & "
     for model_name in models_list:
         if "NA" not in dict_co_total[model_name][metric]:
             line_print += "$" + dict_co_total[model_name][metric] + "$ & "
@@ -198,21 +228,28 @@ for metric in metrics_list:
             line_print += "NA & "
     line_print = line_print[:-2] + "\\\\ \\hline\n"
 if by_metric:
-    print(line_print)
+    print(line_print.replace("2.2e-16", "2.2 \\times {10}^{-16}"))
 line_print = "\\hline\nModel & "
 for metric in metrics_list:
-    line_print += metric_alias_second[metric] + " & "
+    if metric in skip_second:
+        continue
+    if use_alias_second:
+        line_print += metric_alias_second[metric] + " & "
+    else:
+        line_print += metric_alias_fix[metric] + " & "
 line_print = line_print[:-2] + "\\\\ \\hline\n"
 for model_name in models_list:
     line_print += model_name + " & "
     for metric in metrics_list:
+        if metric in skip_second:
+            continue
         if "NA" not in dict_co_total[model_name][metric]:
             line_print += "$" + dict_co_total[model_name][metric] + "$ & "
         else:
             line_print += "NA & "
     line_print = line_print[:-2] + "\\\\ \\hline\n"
 if by_model:
-    print(line_print)
+    print(line_print.replace("2.2e-16", "2.2 \\times {10}^{-16}"))
 df_new_dict_co = pd.DataFrame(new_dict_co)
 df_new_dict_co.to_csv(wd + "stats.csv", index = False)
 
