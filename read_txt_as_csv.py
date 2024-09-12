@@ -295,7 +295,7 @@ df_new_dict_co = pd.DataFrame(new_dict_co)
 df_new_dict_co.to_csv(wd + "stats.csv", index = False)
 
 ansamble_list = [4, 7]
-ansamble_print = [4]
+ansamble_print = [4, 7]
 for num_ansamble in ansamble_list:
     file_open = open(wd + "ansamble" + str(num_ansamble) + ".txt")
     all_lines = file_open.readlines()[- (1 + num_ansamble) * (1 + int(np.floor(num_ansamble/6))) -2:-2]
@@ -325,11 +325,15 @@ for num_ansamble in ansamble_list:
         if colname not in dict_ansamble.keys():
             continue
         lines_print_a += colname + " & "
-        for val_ix in range(len(dict_ansamble[colname])):
-            if colname != "Model":
-                lines_print_a += "$" + str(np.round(float(dict_ansamble[colname][val_ix]) * 100, 4)) + "\%$ & "
-            else:
-                lines_print_a += str(dict_ansamble[colname][val_ix]) + " & "
+        for colname2 in ord:
+            if colname2 not in dict_ansamble.keys():
+                continue
+            if colname2 != "Model":
+                val_ix = dict_ansamble["Model"].index(colname2)
+                if colname != "Model":
+                    lines_print_a += "$" + str(np.round(float(dict_ansamble[colname][val_ix]) * 100, 4)) + "\%$ & "
+                else:
+                    lines_print_a += str(dict_ansamble[colname][val_ix]) + " & "
         lines_print_a = lines_print_a[:-2] + "\\\\ \\hline\n"
     if num_ansamble in ansamble_print and by_ansamble:
         print(lines_print_a)
