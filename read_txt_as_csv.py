@@ -3,6 +3,9 @@ import numpy as np
 import os
 
 all_str = ""
+reference_str = ""
+stats_str = ""
+stats_str_reverse = ""
 position_start = "!ht"
 model_name_list = ["svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet"]
 model_print_list = ["svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet"]
@@ -108,8 +111,8 @@ for model_name in model_name_list:
         line_one = line_one.replace(" & Prediction ", "\\multicolumn{2}{c|}{} ")
         line_one = line_one.replace(" & E", "\\multirow{5}{*}{\\rotatebox{90}{Prediction}} & E")
         line_one = line_one.replace("}\\multirow{5}{*}{\\rotatebox{90}{Prediction}} & E", "} & E")
-        caption_txt = "cm_" + model_name
-        label_txt = "tab:cm_" + model_name
+        caption_txt = "cm:" + model_name
+        label_txt = "tab:cm:" + model_name
         line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if model_name in model_print_list and by_pred:
             #print(line_one)
@@ -119,6 +122,7 @@ for model_name in model_name_list:
             file_label.write(line_one)
             file_label.close()
             all_model += line_one + "\n"
+            reference_str += line_one + "\n"
             all_str += line_one + "\n"
         #print(dict_cm)
         df_cm = pd.DataFrame(dict_cm)
@@ -186,8 +190,8 @@ for model_name in model_name_list:
                 line_one += "\\\\ \\hline\n"
             else:
                 line_one += "\\\\ \\cline{2-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n"
-        caption_txt = "cs_" + model_name
-        label_txt = "tab:cs_" + model_name
+        caption_txt = "cs:" + model_name
+        label_txt = "tab:cs:" + model_name
         line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if model_name in model_print_list and by_class:
             line_one = line_one.replace(".0\%", "\%")
@@ -198,6 +202,7 @@ for model_name in model_name_list:
             file_label.write(line_one)
             file_label.close()
             all_model += line_one + "\n"
+            stats_str += line_one + "\n"
             all_str += line_one + "\n"
         line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\cline{3-7}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{5}{c|}{Class - " + model_name + "} \\\\ \\cline{3-7}\n"
         for row_ix in range(len(cs)):
@@ -229,8 +234,8 @@ for model_name in model_name_list:
                 line_one += "\\\\ \\hline\n"
             else:
                 line_one += "\\\\ \\cline{2-7}\n"
-        caption_txt = "cs_reverse_" + model_name
-        label_txt = "tab:cs_reverse_" + model_name
+        caption_txt = "cs:reverse:" + model_name
+        label_txt = "tab:cs:reverse:" + model_name
         line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if model_name in model_print_list and by_statistics:
             line_one = line_one.replace(".0\%", "\%")
@@ -241,6 +246,7 @@ for model_name in model_name_list:
             file_label.write(line_one)
             file_label.close()
             all_model += line_one + "\n"
+            stats_str_reverse += line_one + "\n"
             all_str += line_one + "\n"
         #print(dict_cs)
         df_cs = pd.DataFrame(dict_cs)
@@ -259,6 +265,15 @@ for model_name in model_name_list:
         file_label.write(all_model[:-1])
         file_label.close()
 #print(dict_time_total)
+file_label = open("latex_table/all_reference.tex", "w")
+file_label.write(reference_str[:-1])
+file_label.close()
+file_label = open("latex_table/all_stats.tex", "w")
+file_label.write(stats_str[:-1])
+file_label.close()
+file_label = open("latex_table/all_stats_reverse.tex", "w")
+file_label.write(stats_str_reverse[:-1])
+file_label.close()
 df_dict_time_total = pd.DataFrame(dict_time_total)
 df_dict_time_total.to_csv(wd + "time_models.csv", index = False)
 lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{"
@@ -308,8 +323,8 @@ for key_name in dict_time_total:
     for key_val in dict_time_total[key_name]:
         lines_time += "$" + key_val + "$ & "
     lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-caption_txt = "time_reverse"
-label_txt = "tab:time_reverse"
+caption_txt = "time:reverse"
+label_txt = "tab:time:reverse"
 lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
 if by_time_model:
     #print(lines_time)
@@ -387,8 +402,8 @@ for model_name in models_list:
         else:
             line_print += "NA & "
     line_print = line_print[:-2] + "\\\\ \\hline\n"
-caption_txt = "stats_reverse"
-label_txt = "tab:stats_reverse"
+caption_txt = "stats:reverse"
+label_txt = "tab:stats:reverse"
 line_print += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
 if by_model:
     line_print = line_print.replace("2.2e-16", "2.2 \\times {10}^{-16}")
