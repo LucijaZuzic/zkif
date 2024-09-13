@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
+import os
 
+all_str = ""
+position_start = "!ht"
 model_name_list = ["svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet"]
 model_print_list = ["svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet"]
 by_pred = True
@@ -8,10 +11,10 @@ by_class = True
 by_statistics = True
 use_alias = True
 by_time_type = True
-by_time_model = False
+by_time_model = True
 skip_time = ["user", "system"]
 by_model = True
-by_metric = False
+by_metric = True
 use_alias_second = True
 by_ansamble = True
 skip_first = ["Prevalence"]
@@ -46,6 +49,7 @@ wd = ""
 dict_co_total = dict()
 dict_time_total = {"model": []}
 for model_name in model_name_list:
+    all_model = ""
     dict_co_total[model_name] = dict()
     file_open = open(wd + model_name + ".txt")
     all_lines = file_open.readlines()
@@ -53,8 +57,6 @@ for model_name in model_name_list:
     while line_ref < len(all_lines) and "Reference" not in all_lines[line_ref]:
         line_ref += 1
     if line_ref != len(all_lines):
-        if model_name in model_print_list:
-            print(model_name)
         line_sen = line_ref
         while line_sen < len(all_lines) and "Sensitivity" not in all_lines[line_sen]:
             line_sen += 1
@@ -87,9 +89,9 @@ for model_name in model_name_list:
             dict_cm[colname] = []
             for row_ix in range(1, len(cm[0])):
                 dict_cm[colname].append(cm[row_ix][col_ix])
-        line_one = "\\cline{3-7}\n\\multicolumn{2}{c|}{} & \\multicolumn{5}{|c|}{Reference} \\\\ \\cline{3-7}\n"
+        line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\cline{3-7}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{5}{|c|}{Reference - " + model_name + "} \\\\ \\cline{3-7}\n"
         for row_ix in range(len(cm)):
-            line_one += " & "
+            line_one += "\t\t & "
             flag_end = False
             for col_ix in range(len(cm[row_ix])):
                 if str(cm[row_ix][col_ix]).isdigit():
@@ -106,8 +108,18 @@ for model_name in model_name_list:
         line_one = line_one.replace(" & Prediction ", "\\multicolumn{2}{c|}{} ")
         line_one = line_one.replace(" & E", "\\multirow{5}{*}{\\rotatebox{90}{Prediction}} & E")
         line_one = line_one.replace("}\\multirow{5}{*}{\\rotatebox{90}{Prediction}} & E", "} & E")
+        caption_txt = "cm_" + model_name
+        label_txt = "tab:cm_" + model_name
+        line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if model_name in model_print_list and by_pred:
-            print(line_one)
+            #print(line_one)
+            if not os.path.isdir("latex_table/" + model_name):
+                os.makedirs("latex_table/" + model_name)
+            file_label = open("latex_table/" + model_name + "/cm_" + model_name + ".tex", "w")
+            file_label.write(line_one)
+            file_label.close()
+            all_model += line_one + "\n"
+            all_str += line_one + "\n"
         #print(dict_cm)
         df_cm = pd.DataFrame(dict_cm)
         df_cm.to_csv(wd + model_name + "_cm.csv", index = False)
@@ -143,8 +155,13 @@ for model_name in model_name_list:
                     dict_cs[colname].append("NaN")
                 else:
                     dict_cs[colname].append(cs[row_ix][col_ix])
-        line_one = "\\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n\\multicolumn{2}{c|}{} & \\multicolumn{" + str(len(metric_alias) - len(skip_first)) + "}{c|}{Statistics} \\\\ \\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n"
+        line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{"
+        for i in range(len(metric_alias) - len(skip_first) + 2):
+            line_one += "|c"
+        line_one += "|}"
+        line_one += "\n\t\t\\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{" + str(len(metric_alias) - len(skip_first)) + "}{c|}{Statistics - " + model_name + "} \\\\ \\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n"
         for colname in dict_cs:
+            line_one += "\t\t"
             if "E" not in colname and "Statistics" not in colname:
                 line_one += " & "
             line_one += colname.replace("Statistics", "\\multicolumn{2}{c|}{}").replace("E", "\\multirow{5}{*}{\\rotatebox{90}{Class}} & E") + " & "
@@ -169,12 +186,24 @@ for model_name in model_name_list:
                 line_one += "\\\\ \\hline\n"
             else:
                 line_one += "\\\\ \\cline{2-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n"
+        caption_txt = "cs_" + model_name
+        label_txt = "tab:cs_" + model_name
+        line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if model_name in model_print_list and by_class:
-            print(line_one.replace(".0\%", "\%"))
-        line_one = "\\cline{3-7}\n\\multicolumn{2}{c|}{} & \\multicolumn{5}{c|}{Class} \\\\ \\cline{3-7}\n"
+            line_one = line_one.replace(".0\%", "\%")
+            #print(line_one)
+            if not os.path.isdir("latex_table/" + model_name):
+                os.makedirs("latex_table/" + model_name)
+            file_label = open("latex_table/" + model_name + "/cs_" + model_name + ".tex", "w")
+            file_label.write(line_one)
+            file_label.close()
+            all_model += line_one + "\n"
+            all_str += line_one + "\n"
+        line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\cline{3-7}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{5}{c|}{Class - " + model_name + "} \\\\ \\cline{3-7}\n"
         for row_ix in range(len(cs)):
             if cs[row_ix][0] in skip_first:
                 continue
+            line_one += "\t\t"
             for col_ix in range(len(cs[row_ix])):
                 if str(cs[row_ix][col_ix]).isdigit() or "." in str(cs[row_ix][col_ix]):
                     if float(cs[row_ix][col_ix]) > 100:
@@ -200,8 +229,19 @@ for model_name in model_name_list:
                 line_one += "\\\\ \\hline\n"
             else:
                 line_one += "\\\\ \\cline{2-7}\n"
+        caption_txt = "cs_reverse_" + model_name
+        label_txt = "tab:cs_reverse_" + model_name
+        line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if model_name in model_print_list and by_statistics:
-            print(line_one.replace(".0\%", "\%"))
+            line_one = line_one.replace(".0\%", "\%")
+            #print(line_one)
+            if not os.path.isdir("latex_table/" + model_name):
+                os.makedirs("latex_table/" + model_name)
+            file_label = open("latex_table/" + model_name + "/cs_reverse_" + model_name + ".tex", "w")
+            file_label.write(line_one)
+            file_label.close()
+            all_model += line_one + "\n"
+            all_str += line_one + "\n"
         #print(dict_cs)
         df_cs = pd.DataFrame(dict_cs)
         df_cs.to_csv(wd + model_name + "_cs.csv", index = False)
@@ -215,33 +255,70 @@ for model_name in model_name_list:
                 dict_time_total[lines_time[0][tix]] = []
             dict_time_total[lines_time[0][tix]].append(lines_time[1][tix])
         dict_time_total["model"].append(model_name)
+        file_label = open("latex_table/all_model_" + model_name + ".tex", "w")
+        file_label.write(all_model[:-1])
+        file_label.close()
 #print(dict_time_total)
 df_dict_time_total = pd.DataFrame(dict_time_total)
 df_dict_time_total.to_csv(wd + "time_models.csv", index = False)
-lines_time = "\\hline\n"
+lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{"
+for key_time in dict_time_total:
+    if key_time in skip_time:
+        continue
+    lines_time += "|c"
+lines_time += "|}"
+lines_time += "\n\t\t\\hline\n\t\t"
 for key_time in dict_time_total:
     if key_time in skip_time:
         continue
     lines_time += key_time + " & "
 lines_time = lines_time[:-2] + "\\\\ \\hline\n"
 for key_val_ix in range(len(dict_time_total["model"])):
+    lines_time += "\t\t"
     for key_name in dict_time_total:
         if key_name in skip_time:
             continue
         lines_time += "$" + dict_time_total[key_name][key_val_ix] + "$ & "
     lines_time = lines_time[:-2] + "\\\\ \\hline\n"
+caption_txt = "time"
+label_txt = "tab:time"
+lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
 if by_time_type:
-    print(lines_time)
-lines_time = "\\hline\n"
+    #print(lines_time)
+    if not os.path.isdir("latex_table"):
+        os.makedirs("latex_table")
+    file_label = open("latex_table/time.tex", "w")
+    file_label.write(lines_time)
+    file_label.close()
+    all_str += lines_time + "\n"
+lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c"
 for key_name in dict_time_total:
     if key_name in skip_time:
         continue
+    for key_val in dict_time_total[key_name]:
+        lines_time += "|c"
+    break
+lines_time += "|}"
+lines_time += "\n\t\t\\hline\n"
+for key_name in dict_time_total:
+    if key_name in skip_time:
+        continue
+    lines_time += "\t\t"
     lines_time += key_name + " & "
     for key_val in dict_time_total[key_name]:
         lines_time += "$" + key_val + "$ & "
     lines_time = lines_time[:-2] + "\\\\ \\hline\n"
+caption_txt = "time_reverse"
+label_txt = "tab:time_reverse"
+lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
 if by_time_model:
-    print(lines_time)
+    #print(lines_time)
+    if not os.path.isdir("latex_table"):
+        os.makedirs("latex_table")
+    file_label = open("latex_table/time_reverse.tex", "w")
+    file_label.write(lines_time)
+    file_label.close()
+    all_str += lines_time + "\n"
 #print(dict_co_total)
 models_list = list(dict_co_total.keys())
 metrics_list = list(dict_co_total[models_list[0]].keys())
@@ -251,13 +328,18 @@ for model_name in models_list:
     for metric in metrics_list:
         new_dict_co[model_name].append(dict_co_total[model_name][metric])
 #print(new_dict_co)
-line_print = "\\hline\n"
+line_print = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{"
+for colname in new_dict_co.keys():
+    line_print += "|c"
+line_print += "|}"
+line_print += "\n\t\t\\hline\n\t\t"
 for colname in new_dict_co.keys():
     line_print += colname + " & "
 line_print = line_print[:-2] + "\\\\ \\hline\n"
 for metric in metrics_list:
     if metric in skip_second:
         continue
+    line_print += "\t\t"
     if use_alias_second:
         line_print += metric_alias_second[metric] + " & "
     else:
@@ -268,9 +350,25 @@ for metric in metrics_list:
         else:
             line_print += "NA & "
     line_print = line_print[:-2] + "\\\\ \\hline\n"
+caption_txt = "stats"
+label_txt = "tab:stats"
+line_print += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
 if by_metric:
-    print(line_print.replace("2.2e-16", "2.2 \\times {10}^{-16}"))
-line_print = "\\hline\nModel & "
+    line_print = line_print.replace("2.2e-16", "2.2 \\times {10}^{-16}")
+    #print(line_print)
+    if not os.path.isdir("latex_table"):
+        os.makedirs("latex_table")
+    file_label = open("latex_table/stats.tex", "w")
+    file_label.write(line_print)
+    file_label.close()
+    all_str += line_print + "\n"
+line_print = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c"
+for metric in metrics_list:
+    if metric in skip_second:
+        continue
+    line_print += "|c"
+line_print += "|}"
+line_print += "\n\t\t\\hline\n\t\tModel & "
 for metric in metrics_list:
     if metric in skip_second:
         continue
@@ -280,7 +378,7 @@ for metric in metrics_list:
         line_print += metric_alias_fix[metric] + " & "
 line_print = line_print[:-2] + "\\\\ \\hline\n"
 for model_name in models_list:
-    line_print += model_name + " & "
+    line_print += "\t\t" + model_name + " & "
     for metric in metrics_list:
         if metric in skip_second:
             continue
@@ -289,11 +387,20 @@ for model_name in models_list:
         else:
             line_print += "NA & "
     line_print = line_print[:-2] + "\\\\ \\hline\n"
+caption_txt = "stats_reverse"
+label_txt = "tab:stats_reverse"
+line_print += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
 if by_model:
-    print(line_print.replace("2.2e-16", "2.2 \\times {10}^{-16}"))
+    line_print = line_print.replace("2.2e-16", "2.2 \\times {10}^{-16}")
+    #print(line_print)
+    if not os.path.isdir("latex_table"):
+        os.makedirs("latex_table")
+    file_label = open("latex_table/stats_reverse.tex", "w")
+    file_label.write(line_print)
+    file_label.close()
+    all_str += line_print + "\n"
 df_new_dict_co = pd.DataFrame(new_dict_co)
 df_new_dict_co.to_csv(wd + "stats.csv", index = False)
-
 ansamble_list = [4, 7]
 ansamble_print = [4, 7]
 for num_ansamble in ansamble_list:
@@ -317,14 +424,18 @@ for num_ansamble in ansamble_list:
     df_new_dict_a = pd.DataFrame(dict_ansamble)
     df_new_dict_a.to_csv(wd + "ansamble" + str(num_ansamble) + ".csv", index = False)
     #print(all_lines)
-    lines_print_a = "\\hline\n"
+    lines_print_a = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c"
+    for i in range(num_ansamble):
+        lines_print_a += "|c"
+    lines_print_a += "|}"
+    lines_print_a += "\n\t\t\\hline\n"
     ord = ["Model"]
     for m in model_name_list:
         ord.append(m)
     for colname in ord:
         if colname not in dict_ansamble.keys():
             continue
-        lines_print_a += colname + " & "
+        lines_print_a += "\t\t" + colname + " & "
         for colname2 in ord:
             if colname2 not in dict_ansamble.keys():
                 continue
@@ -335,5 +446,17 @@ for num_ansamble in ansamble_list:
                 else:
                     lines_print_a += str(dict_ansamble[colname][val_ix]) + " & "
         lines_print_a = lines_print_a[:-2] + "\\\\ \\hline\n"
+    caption_txt = "ansamble" + str(num_ansamble)
+    label_txt = "tab:ansamble" + str(num_ansamble)
+    lines_print_a += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
     if num_ansamble in ansamble_print and by_ansamble:
-        print(lines_print_a)
+        #print(lines_print_a)
+        if not os.path.isdir("latex_table"):
+            os.makedirs("latex_table")
+        file_label = open("latex_table/ansamble" + str(num_ansamble) + ".tex", "w")
+        file_label.write(lines_print_a)
+        file_label.close()
+        all_str += lines_print_a + "\n"
+file_label = open("latex_table/all_str.tex", "w")
+file_label.write(all_str[:-1])
+file_label.close()
