@@ -293,7 +293,10 @@ for key_val_ix in range(len(dict_time_total["model"])):
     for key_name in dict_time_total:
         if key_name in skip_time:
             continue
-        lines_time += "$" + dict_time_total[key_name][key_val_ix] + "$ & "
+        if (str(dict_time_total[key_name][key_val_ix]).isdigit() or "." in str(dict_time_total[key_name][key_val_ix])) and "C" not in str(dict_time_total[key_name][key_val_ix]):
+            lines_time += "$" + dict_time_total[key_name][key_val_ix] + "$ & "
+        else:
+            lines_time += dict_time_total[key_name][key_val_ix] + " & "
     lines_time = lines_time[:-2] + "\\\\ \\hline\n"
 caption_txt = "time"
 label_txt = "tab:time"
@@ -321,7 +324,10 @@ for key_name in dict_time_total:
     lines_time += "\t\t"
     lines_time += key_name + " & "
     for key_val in dict_time_total[key_name]:
-        lines_time += "$" + key_val + "$ & "
+        if (str(key_val).isdigit() or "." in str(key_val)) and "C" not in str(key_val):
+            lines_time += "$" + key_val + "$ & "
+        else:
+            lines_time += key_val + " & "
     lines_time = lines_time[:-2] + "\\\\ \\hline\n"
 caption_txt = "time:reverse"
 label_txt = "tab:time:reverse"
