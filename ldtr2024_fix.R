@@ -277,19 +277,21 @@ my_process <- function(model_name) {
   }
   # Print confusion matrix and results
   print(cm_model)
-  # Variable importance
-  #importance <- varImp(model_trained, useModel = TRUE, nonpara = TRUE, scale = TRUE)
-  # Spremanje dijagrama
-  #plot(importance)
-  #dev.copy(png, filename = paste(paste("importance", model_name, sep = "_"), "png", sep = "."))
-  #dev.off()
+  if (model_name == "C5.0" || model_name == "nn" || model_name == "pls" || model_name == "fda") {
+    # Variable importance
+    importance <- varImp(model_trained, scale=FALSE)
+    # Spremanje dijagrama
+    plot(importance)
+    dev.copy(png, filename = paste(paste("importance", model_name, sep = "_"), "png", sep = "."))
+    dev.off()
+  }
 }
 
 choice <- "nb"
 for (i in 1:length(model_name_list)) {
   model_name_use <- model_name_list[[i]]
   file_name <- paste(model_name_use, "txt", sep = ".")
-  if (!file.exists(file_name)) {
+  if (file.exists(file_name)) {
     print(model_name_use)
     sink(file_name)
     print(model_name_use)
@@ -320,7 +322,7 @@ my_ansamble <- function(list_all) {
 list4 <- c("svmPoly", "nnet", "C5.0", "nb")
 list7 <- c("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet")
 
-if (!file.exists("ansamble4.txt")) {
+if (file.exists("ansamble4.txt")) {
     print("ansamble4")
     sink("ansamble4.txt")
     print("ansamble4")
@@ -330,7 +332,7 @@ if (!file.exists("ansamble4.txt")) {
     print(time_taken)
 }
 
-if (!file.exists("ansamble7.txt")) {
+if (file.exists("ansamble7.txt")) {
     print("ansamble7")
     sink("ansamble7.txt")
     print("ansamble7")
