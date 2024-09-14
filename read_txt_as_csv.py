@@ -266,8 +266,6 @@ for wd in wd_list:
                 while line_tm < len(all_lines) and time_name + " time" not in all_lines[line_tm]:
                     line_tm += 1
                 marker_found = True
-                if time_name == "Importance":
-                    print(model_name, time_name, line_tm != len(all_lines))
                 if line_tm == len(all_lines):
                     line_tm = len(all_lines) - 3
                     marker_found = False
@@ -368,7 +366,6 @@ for wd in wd_list:
             file_label.write(lines_time)
             file_label.close()
             all_str += lines_time + "\n"
-    print(dict_time_total_total)
     df_dict_time_total_total = pd.DataFrame(dict_time_total_total)
     df_dict_time_total_total.to_csv(wd + "/time_models.csv", index = False)
     lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{"
