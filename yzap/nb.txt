@@ -1,0 +1,43 @@
+[1] "yzap"
+[1] "nb"
+[1] "Train time"
+   user  system elapsed 
+  38.37    0.61  109.52 
+Confusion Matrix and Statistics
+
+          Reference
+Prediction    E    N    P    R    T
+         E    2    0    0    0    0
+         N    1 1170    1    0    0
+         P    0    0   26    0    0
+         R    0    0    0  379    0
+         T    0    0    0    0   19
+
+Overall Statistics
+                                          
+               Accuracy : 0.9987          
+                 95% CI : (0.9955, 0.9998)
+    No Information Rate : 0.7322          
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.9969          
+                                          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: E Class: N Class: P Class: R Class: T
+Sensitivity          0.666667   1.0000  0.96296   1.0000  1.00000
+Specificity          1.000000   0.9953  1.00000   1.0000  1.00000
+Pos Pred Value       1.000000   0.9983  1.00000   1.0000  1.00000
+Neg Pred Value       0.999373   1.0000  0.99936   1.0000  1.00000
+Prevalence           0.001877   0.7322  0.01690   0.2372  0.01189
+Detection Rate       0.001252   0.7322  0.01627   0.2372  0.01189
+Detection Prevalence 0.001252   0.7334  0.01627   0.2372  0.01189
+Balanced Accuracy    0.833333   0.9977  0.98148   1.0000  1.00000
+[1] "Predict time"
+   user  system elapsed 
+   0.26    0.03    0.82 
+[1] "Total time"
+   user  system elapsed 
+  39.18    0.64  110.89 

@@ -1,0 +1,49 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - pls} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1154$ & $27$ & $281$ & $5$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $3$ & $16$ & $0$ & $98$ & $14$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{cm:pls}
+	\label{tab:cm:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - pls} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $98.63\%$ & $26.87\%$ & $78.66\%$ & $87.79\%$ & $72.22\%$ & $91.8\%$ & $62.75\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & R & $25.858\%$ & $97.293\%$ & $74.809\%$ & $80.845\%$ & $6.133\%$ & $8.198\%$ & $61.575\%$ \\ \cline{2-9}
+		 & T & $0\%$ & $100\%$ & NaN & $98.811\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{cs:pls}
+	\label{tab:cs:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - pls} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $98.63\%$ & $0\%$ & $25.858\%$ & $0\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $26.87\%$ & $100\%$ & $97.293\%$ & $100\%$ \\ \cline{2-7}
+		 & PPV & NaN & $78.66\%$ & NaN & $74.809\%$ & NaN \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $87.79\%$ & $98.31\%$ & $80.845\%$ & $98.811\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $72.22\%$ & $0\%$ & $6.133\%$ & $0\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $91.8\%$ & $0\%$ & $8.198\%$ & $0\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $62.75\%$ & $50\%$ & $61.575\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{cs:reverse:pls}
+	\label{tab:cs:reverse:pls}
+\end{table}

@@ -119,7 +119,25 @@ for(i in 1:length(iono3$TEC)){
     Dst_class[i] <- 'E'
   }
 }
-classdata <- as.data.frame(cbind(iono3,Dst_class))
+classdata <- as.data.frame(cbind(iono3, Dst_class))
+
+classdata_no_Dst <- classdata[c("ap", "Bx", "By", "Bz", "TEC", "dTEC", "Dst_class")]
+colnames(classdata_no_Dst) <- c("ap", "Bx", "By", "Bz", "TEC", "dTEC", "Dst_class")
+
+classdata_no_TEC <- classdata[c("ap", "Bx", "By", "Bz", "Dst_class")]
+colnames(classdata_no_TEC) <- c("ap", "Bx", "By", "Bz", "Dst_class")
+
+classdata_coord <- classdata[c("Bx", "By", "Bz", "Dst_class")]
+colnames(classdata_coord) <- c("Bx", "By", "Bz", "Dst_class")
+
+classdata_xy_ap <- classdata[c("ap", "Bx", "By", "Dst_class")]
+colnames(classdata_xy_ap) <- c("ap", "Bx", "By", "Dst_class")
+
+classdata_xz_ap <- classdata[c("ap", "Bx", "Bz", "Dst_class")]
+colnames(classdata_xz_ap) <- c("ap", "Bx", "Bz", "Dst_class")
+
+classdata_yz_ap <- classdata[c("ap", "By", "Bz", "Dst_class")]
+colnames(classdata_yz_ap) <- c("ap", "By", "Bz", "Dst_class")
 
 ### Classification model development
 
@@ -141,11 +159,29 @@ inTrain <- createDataPartition(
 
 str(inTrain)
 
-training <- classdata[ inTrain,]
-testing  <- classdata[-inTrain,]
+training_all <- classdata[ inTrain,]
+testing_all  <- classdata[-inTrain,]
 
-nrow(training)
-nrow(testing)
+training_no_Dst <- classdata_no_Dst[ inTrain,]
+testing_no_Dst <- classdata_no_Dst[-inTrain,]
+  
+training_no_TEC <- classdata_no_TEC[ inTrain,]
+testing_no_TEC <- classdata_no_TEC[-inTrain,]
+  
+training_coord <- classdata_coord[ inTrain,]
+testing_coord <- classdata_coord[-inTrain,]
+
+training_xy_ap <- classdata_xy_ap[ inTrain,]
+testing_xy_ap <- classdata_xy_ap[-inTrain,]
+
+training_xz_ap <- classdata_xz_ap[ inTrain,]
+testing_xz_ap <- classdata_xz_ap[-inTrain,]
+
+training_yz_ap <- classdata_yz_ap[ inTrain,]
+testing_yz_ap <- classdata_yz_ap[-inTrain,]
+
+nrow(training_all)
+nrow(testing_all)
 
 ctrl <- trainControl(
   method = "repeatedcv",
@@ -158,8 +194,6 @@ sink()
 
 ## Development of candidate models 
 # Source: https://topepo.github.io/caret/train-models-by-tag.html
-
-trueclasses <- as.factor(testing$Dst_class)
 
 library(earth,mda) # only for fda
 library(nnet) # only for pcaNNet
@@ -184,37 +218,43 @@ library(binda) # only for binda
 #model_name_list <- list("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet", "binda", "glmStepAIC")
 model_name_list <- list("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet")
 
-my_process <- function(model_name) {
+model_trained_global <- 0
+model_predictions_global <- 0
+testing <- 0
+training <- 0
+trueclasses <- 0
+  
+my_train <- function(model_name) {
   if (model_name == "svmPoly") {
     model_trained <- train(Dst_class ~ ., data = training,
-                          method = "svmPoly",
-                          trControl= ctrl,
-                          tuneGrid = data.frame(degree = 1,
-                                                scale = 1,
-                                                C = 1),
-                          preProcess = c("pca","scale","center"),
-                          na.action = na.omit
+                           method = "svmPoly",
+                           trControl= ctrl,
+                           tuneGrid = data.frame(degree = 1,
+                                                 scale = 1,
+                                                 C = 1),
+                           preProcess = c("pca","scale","center"),
+                           na.action = na.omit
     )
   } else if (model_name == "C5.0") {
     model_trained <- train(Dst_class ~ ., data = training, 
-                          method = "C5.0",
-                          preProcess=c("scale","center"),
-                          trControl= ctrl,
-                          na.action = na.omit
+                           method = "C5.0",
+                           preProcess=c("scale","center"),
+                           trControl= ctrl,
+                           na.action = na.omit
     )
   } else if (model_name == "nb") {
     model_trained <- train(training, training$Dst_class, 
-                          method = "nb",
-                          preProcess=c("scale","center"),
-                          trControl= ctrl,
-                          na.action = na.omit
+                           method = "nb",
+                           preProcess=c("scale","center"),
+                           trControl= ctrl,
+                           na.action = na.omit
     )
   } else if (model_name == "nnet") {
     model_trained <- train(training, training$Dst_class,
-                          method = "nnet",
-                          trControl= ctrl,
-                          preProcess=c("scale","center"),
-                          na.action = na.omit
+                           method = "nnet",
+                           trControl= ctrl,
+                           preProcess=c("scale","center"),
+                           na.action = na.omit
     )
   } else if (model_name == "pls") {
     model_trained <- train(
@@ -229,17 +269,17 @@ my_process <- function(model_name) {
     print(model_trained)
   } else if (model_name == "fda") {
     model_trained <- train(Dst_class ~ ., data = training,
-                          method = "fda",
-                          trControl= ctrl,
-                          preProcess = c("pca","scale","center"),
-                          na.action = na.omit
+                           method = "fda",
+                           trControl= ctrl,
+                           preProcess = c("pca","scale","center"),
+                           na.action = na.omit
     )
   } else if (model_name == "pcaNNet") {
     model_trained <- train(Dst_class ~ ., data = training,
-                          method = "pcaNNet",
-                          trControl= ctrl,
-                          preProcess = c("scale","center"),
-                          na.action = na.omit
+                           method = "pcaNNet",
+                           trControl= ctrl,
+                           preProcess = c("scale","center"),
+                           na.action = na.omit
     )
   } else if (model_name == "binda") {
     model_trained  <- train(Dst_class ~ ., data = training,
@@ -256,49 +296,48 @@ my_process <- function(model_name) {
                             na.action = na.omit
     )
   }
-  # Predictions
-  if (model_name == "pls") {
-    ggplot(model_trained)
-    ggsave("pls_plot.png")
-    model_predictions <- predict(model_trained, newdata = testing)
-    print(str(model_predictions))
-    model_probs <- predict(model_trained, newdata = testing, type = "prob")
-    print(head(model_probs))
-  } else if (model_name == "C5.0" || model_name == "nb") {
-    model_predictions <- predict(model_trained, testing, na.action = na.pass)
-  } else {
-    model_predictions <- predict(model_trained, testing)
-  }
-  # Create confusion matrix
-  if (model_name == "pls") {
-    cm_model <- confusionMatrix(data = model_predictions, trueclasses)
-  } else {
-    cm_model <- confusionMatrix(model_predictions, trueclasses)
-  }
-  # Print confusion matrix and results
-  print(cm_model)
-  if (model_name == "C5.0" || model_name == "nn" || model_name == "pls" || model_name == "fda") {
-    # Variable importance
-    importance <- varImp(model_trained, scale=FALSE)
-    # Spremanje dijagrama
-    plot(importance)
-    dev.copy(png, filename = paste(paste("importance", model_name, sep = "_"), "png", sep = "."))
-    dev.off()
-  }
+  assign("model_trained_global", model_trained, envir = .GlobalEnv)
 }
 
-choice <- "nb"
-for (i in 1:length(model_name_list)) {
-  model_name_use <- model_name_list[[i]]
-  file_name <- paste(model_name_use, "txt", sep = ".")
-  if (file.exists(file_name)) {
-    print(model_name_use)
-    sink(file_name)
-    print(model_name_use)
-    time_taken <- system.time(my_process(model_name_use))
-    print(time_taken)
-    sink()
-    print(time_taken)
+my_predict <- function(model_name_predict, model_type_predict) {
+  # Predictions
+  if (model_name_predict == "pls") {
+    ggplot(model_trained_global)
+    ggsave(paste(model_type_predict, "pls_plot.png", sep ="/"))
+    model_predictions <- predict(model_trained_global, newdata = testing)
+    print(str(model_predictions))
+    model_probs <- predict(model_trained_global, newdata = testing, type = "prob")
+    print(head(model_probs))
+  } 
+  model_predictions <- predict(model_trained_global, testing)
+  # Create confusion matrix
+  cm_model <- confusionMatrix(model_predictions, trueclasses)
+  # Print confusion matrix and results
+  print(cm_model)
+  assign("model_predictions_global", model_predictions, envir = .GlobalEnv)
+}
+
+my_importance <- function(model_name_importance, model_type_importance) {
+  # Variable importance
+  importance <- varImp(model_trained_global, scale = FALSE)
+  print(importance)
+  # Spremanje dijagrama
+  #plot(importance)
+  #dev.copy(png, filename = paste(paste(paste(model_type_importance, "importance", sep = "/"), model_name_importance, sep = "_"), "png", sep = "."))
+  #dev.off()
+}
+  
+my_process <- function(model_name, model_type) {
+  time_taken_train <- system.time(my_train(model_name))
+  print("Train time")
+  print(time_taken_train)
+  time_taken_predict <- system.time(my_predict(model_name, model_type))
+  print("Predict time")
+  print(time_taken_predict)
+  if (model_name == "pls" || model_name == "fda" || model_name == "C5.0") {
+    time_taken_importance <- system.time(my_importance(model_name, model_type))
+    print("Importance time")
+    print(time_taken_importance)
   }
 }
 
@@ -319,33 +358,77 @@ my_ansamble <- function(list_all) {
   print(mcr)
 }
 
-list4 <- c("svmPoly", "nnet", "C5.0", "nb")
-list7 <- c("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet")
+model_types <- c("all", "no_Dst", "no_TEC", "coord", "xyap", "xzap", "yzap")
 
-if (file.exists("ansamble4.txt")) {
-    print("ansamble4")
-    sink("ansamble4.txt")
-    print("ansamble4")
-    time_taken <- system.time(my_ansamble(list4))
-    print(time_taken)
-    sink()
-    print(time_taken)
-}
-
-if (file.exists("ansamble7.txt")) {
-    print("ansamble7")
-    sink("ansamble7.txt")
-    print("ansamble7")
-    time_taken <- system.time(my_ansamble(list7))
-    print(time_taken)
-    sink()
-    print(time_taken)
-}
-
-# Zatvaranje dijagrama
-
-if (length(dev.list()) > 0) {
-  for (dev_sth_open in dev.list()[1]:dev.list()[length(dev.list())]) {
-    dev.off()
+for (i in 1:length(model_types)) {
+  model_type_use <- model_types[[i]]
+  if (model_type_use == "all") {
+    testing <- testing_all
+    training <- training_all
+  } else if (model_type_use == "no_Dst") {
+    testing <- testing_no_Dst
+    training <- training_no_Dst
+  } else if (model_type_use == "no_TEC") {
+    testing <- testing_no_TEC
+    training <- training_no_TEC
+  } else if (model_type_use == "coord") {
+    testing <- testing_coord
+    training <- training_coord
+  } else if (model_type_use == "xyap") {
+    testing <- testing_xy_ap
+    training <- training_xy_ap
+  } else if (model_type_use == "xzap") {
+    testing <- testing_xz_ap
+    training <- training_xz_ap
+  } else if (model_type_use == "yzap") {
+    testing <- testing_yz_ap
+    training <- training_yz_ap
+  }
+  if (!file.exists(model_type_use)){
+    dir.create(file.path(getCurrentFileLocation(), model_type_use))
+  }
+  trueclasses <- as.factor(testing$Dst_class)
+  for (j in 1:length(model_name_list)) {
+    model_name_use <- model_name_list[[j]]
+    file_name <- paste(paste(model_type_use, model_name_use, sep = "/"), "txt", sep = ".")
+    if (!file.exists(file_name)) {
+      print(model_type_use)
+      print(model_name_use)
+      sink(file_name)
+      print(model_type_use)
+      print(model_name_use)
+      time_taken <- system.time(my_process(model_name_use, model_type_use))
+      print("Total time")
+      print(time_taken)
+      sink()
+      print(time_taken)
+    }
+  }
+  
+  list4 <- c("svmPoly", "nnet", "C5.0", "nb")
+  list7 <- c("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet")
+  
+  if (!file.exists(paste(model_type_use, "ansamble4.txt", sep = "/"))) {
+      print(model_type_use)
+      print("ansamble4")
+      sink(paste(model_type_use, "ansamble4.txt", sep = "/"))
+      print(model_type_use)
+      print("ansamble4")
+      time_taken <- system.time(my_ansamble(list4))
+      print(time_taken)
+      sink()
+      print(time_taken)
+  }
+  
+  if (!file.exists(paste(model_type_use, "ansamble7.txt", sep = "/"))) {
+      print(model_type_use)
+      print("ansamble7")
+      sink(paste(model_type_use, "ansamble7.txt", sep = "/"))
+      print(model_type_use)
+      print("ansamble7")
+      time_taken <- system.time(my_ansamble(list7))
+      print(time_taken)
+      sink()
+      print(time_taken)
   }
 }

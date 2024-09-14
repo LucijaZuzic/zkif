@@ -1,0 +1,43 @@
+[1] "all"
+[1] "svmPoly"
+[1] "Train time"
+   user  system elapsed 
+  80.42    1.22  100.86 
+Confusion Matrix and Statistics
+
+          Reference
+Prediction    E    N    P    R    T
+         E    0    0    0    0    0
+         N    0 1102    1  256    0
+         P    0   68   26    4    0
+         R    0    0    0   79    0
+         T    3    0    0   40   19
+
+Overall Statistics
+                                          
+               Accuracy : 0.7672          
+                 95% CI : (0.7457, 0.7877)
+    No Information Rate : 0.7322          
+    P-Value [Acc > NIR] : 0.0007444       
+                                          
+                  Kappa : 0.3607          
+                                          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: E Class: N Class: P Class: R Class: T
+Sensitivity          0.000000   0.9419  0.96296  0.20844  1.00000
+Specificity          1.000000   0.3995  0.95417  1.00000  0.97277
+Pos Pred Value            NaN   0.8109  0.26531  1.00000  0.30645
+Neg Pred Value       0.998123   0.7155  0.99933  0.80250  1.00000
+Prevalence           0.001877   0.7322  0.01690  0.23717  0.01189
+Detection Rate       0.000000   0.6896  0.01627  0.04944  0.01189
+Detection Prevalence 0.000000   0.8504  0.06133  0.04944  0.03880
+Balanced Accuracy    0.500000   0.6707  0.95857  0.60422  0.98638
+[1] "Predict time"
+   user  system elapsed 
+   0.06    0.00    0.15 
+[1] "Total time"
+   user  system elapsed 
+  80.95    1.24  101.50 

@@ -1,0 +1,49 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - svmPoly} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1159$ & $27$ & $350$ & $6$ \\ \cline{2-7}
+		 & P & $0$ & $1$ & $0$ & $2$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $6$ & $0$ & $10$ & $1$ \\ \cline{2-7}
+		 & T & $3$ & $4$ & $0$ & $17$ & $12$ \\ \hline
+	\end{tabular}
+	\caption{cm:svmPoly}
+	\label{tab:cm:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - svmPoly} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $99.06\%$ & $10.51\%$ & $75.16\%$ & $80.36\%$ & $72.53\%$ & $96.5\%$ & $54.79\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $99.809\%$ & $0\%$ & $98.3072\%$ & $0\%$ & $0.1877\%$ & $49.9045\%$ \\ \cline{2-9}
+		 & R & $2.6385\%$ & $99.4258\%$ & $58.8235\%$ & $76.6603\%$ & $0.6258\%$ & $1.0638\%$ & $51.0321\%$ \\ \cline{2-9}
+		 & T & $63.1579\%$ & $98.4801\%$ & $33.3333\%$ & $99.5519\%$ & $0.7509\%$ & $2.2528\%$ & $80.819\%$ \\ \hline
+	\end{tabular}
+	\caption{cs:svmPoly}
+	\label{tab:cs:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - svmPoly} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $99.06\%$ & $0\%$ & $2.6385\%$ & $63.1579\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $10.51\%$ & $99.809\%$ & $99.4258\%$ & $98.4801\%$ \\ \cline{2-7}
+		 & PPV & NaN & $75.16\%$ & $0\%$ & $58.8235\%$ & $33.3333\%$ \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $80.36\%$ & $98.3072\%$ & $76.6603\%$ & $99.5519\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $72.53\%$ & $0\%$ & $0.6258\%$ & $0.7509\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $96.5\%$ & $0.1877\%$ & $1.0638\%$ & $2.2528\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $54.79\%$ & $49.9045\%$ & $51.0321\%$ & $80.819\%$ \\ \hline
+	\end{tabular}
+	\caption{cs:reverse:svmPoly}
+	\label{tab:cs:reverse:svmPoly}
+\end{table}

@@ -1,17 +1,17 @@
-      DOY            hr             min             sec         TEC         
- Min.   :  1   Min.   : 0.00   Min.   : 0.00   Min.   :0   Min.   :   1.00  
- 1st Qu.: 92   1st Qu.: 6.00   1st Qu.:15.00   1st Qu.:0   1st Qu.:   7.26  
- Median :183   Median :12.00   Median :30.00   Median :0   Median :  19.62  
- Mean   :183   Mean   :11.54   Mean   :29.56   Mean   :0   Mean   :  40.00  
- 3rd Qu.:274   3rd Qu.:18.00   3rd Qu.:45.00   3rd Qu.:0   3rd Qu.:  34.23  
- Max.   :365   Max.   :23.00   Max.   :59.00   Max.   :0   Max.   :1288.00  
-      dTEC              Bx              By             Bz        
- Min.   :  0.01   Min.   :35268   Min.   :1900   Min.   :-29651  
- 1st Qu.:  1.66   1st Qu.:35400   1st Qu.:1988   1st Qu.:-29623  
- Median :  3.13   Median :35410   Median :2001   Median :-29620  
- Mean   : 15.88   Mean   :35412   Mean   :2001   Mean   :-29617  
- 3rd Qu.:  6.49   3rd Qu.:35423   3rd Qu.:2015   3rd Qu.:-29613  
- Max.   :997.00   Max.   :35527   Max.   :2092   Max.   :-29570  
+      DOY            hr             min             sec         TEC               dTEC              Bx              By      
+ Min.   :  1   Min.   : 0.00   Min.   : 0.00   Min.   :0   Min.   :   1.00   Min.   :  0.01   Min.   :35268   Min.   :1900  
+ 1st Qu.: 92   1st Qu.: 6.00   1st Qu.:15.00   1st Qu.:0   1st Qu.:   7.26   1st Qu.:  1.66   1st Qu.:35400   1st Qu.:1988  
+ Median :183   Median :12.00   Median :30.00   Median :0   Median :  19.62   Median :  3.13   Median :35410   Median :2001  
+ Mean   :183   Mean   :11.54   Mean   :29.56   Mean   :0   Mean   :  40.00   Mean   : 15.88   Mean   :35412   Mean   :2001  
+ 3rd Qu.:274   3rd Qu.:18.00   3rd Qu.:45.00   3rd Qu.:0   3rd Qu.:  34.23   3rd Qu.:  6.49   3rd Qu.:35423   3rd Qu.:2015  
+ Max.   :365   Max.   :23.00   Max.   :59.00   Max.   :0   Max.   :1288.00   Max.   :997.00   Max.   :35527   Max.   :2092  
+       Bz        
+ Min.   :-29651  
+ 1st Qu.:-29623  
+ Median :-29620  
+ Mean   :-29617  
+ 3rd Qu.:-29613  
+ Max.   :-29570  
  int [1:6402, 1] 1 2 3 4 6 7 8 9 11 12 ...
  - attr(*, "dimnames")=List of 2
   ..$ : NULL

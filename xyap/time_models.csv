@@ -1,0 +1,8 @@
+Model,user_train,system_train,elapsed_train,user_predict,system_predict,elapsed_predict,user_importance,system_importance,elapsed_importance,user_total,system_total,elapsed_total
+svmPoly,241.89,2.65,265.67,0.32,0.00,0.36,NA,NA,NA,242.75,2.65,266.57
+C5.0,239.23,0.66,283.00,0.05,0.00,0.05,0.01,0.00,0.00,240.11,0.66,283.87
+nb,35.83,0.87,108.03,0.11,0.00,0.80,NA,NA,NA,36.47,0.87,109.39
+nnet,374.58,1.14,422.86,0.00,0.00,0.01,NA,NA,NA,375.11,1.14,423.39
+pls,13.20,0.14,20.07,0.12,0.00,0.22,0.02,0.00,0.01,14.13,0.14,21.11
+fda,41.42,0.43,56.67,0.02,0.00,0.02,0.01,0.00,0.01,42.23,0.43,57.50
+pcaNNet,226.04,1.00,265.25,0.02,0.00,0.02,NA,NA,NA,226.61,1.00,265.81

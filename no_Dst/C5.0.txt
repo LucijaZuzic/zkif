@@ -1,0 +1,55 @@
+[1] "no_Dst"
+[1] "C5.0"
+[1] "Train time"
+   user  system elapsed 
+ 533.06    1.25  587.50 
+Confusion Matrix and Statistics
+
+          Reference
+Prediction    E    N    P    R    T
+         E    1    0    0    0    0
+         N    0 1075   23  104    0
+         P    0    3    3    0    0
+         R    0   92    1  271   12
+         T    2    0    0    4    7
+
+Overall Statistics
+                                          
+               Accuracy : 0.8492          
+                 95% CI : (0.8307, 0.8664)
+    No Information Rate : 0.7322          
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.6165          
+                                          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                      Class: E Class: N Class: P Class: R Class: T
+Sensitivity          0.3333333   0.9188 0.111111   0.7150 0.368421
+Specificity          1.0000000   0.7033 0.998090   0.9139 0.996200
+Pos Pred Value       1.0000000   0.8943 0.500000   0.7207 0.538462
+Neg Pred Value       0.9987477   0.7601 0.984925   0.9116 0.992429
+Prevalence           0.0018773   0.7322 0.016896   0.2372 0.011890
+Detection Rate       0.0006258   0.6727 0.001877   0.1696 0.004380
+Detection Prevalence 0.0006258   0.7522 0.003755   0.2353 0.008135
+Balanced Accuracy    0.6666667   0.8110 0.554601   0.8145 0.682311
+[1] "Predict time"
+   user  system elapsed 
+   0.06    0.00    0.08 
+C5.0 variable importance
+
+     Overall
+ap    100.00
+By    100.00
+Bx    100.00
+TEC   100.00
+dTEC   99.88
+Bz     99.05
+[1] "Importance time"
+   user  system elapsed 
+   0.02    0.00    0.02 
+[1] "Total time"
+   user  system elapsed 
+ 533.97    1.25  588.43 

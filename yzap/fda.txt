@@ -1,0 +1,52 @@
+[1] "yzap"
+[1] "fda"
+[1] "Train time"
+   user  system elapsed 
+  55.13    0.40   68.84 
+Confusion Matrix and Statistics
+
+          Reference
+Prediction    E    N    P    R    T
+         E    2    0    0    0    1
+         N    1 1077   22  231    6
+         P    0    1    0    0    0
+         R    0   82    4  147   12
+         T    0   10    1    1    0
+
+Overall Statistics
+                                          
+               Accuracy : 0.7672          
+                 95% CI : (0.7457, 0.7877)
+    No Information Rate : 0.7322          
+    P-Value [Acc > NIR] : 0.0007444       
+                                          
+                  Kappa : 0.3367          
+                                          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: E Class: N  Class: P Class: R Class: T
+Sensitivity          0.666667   0.9205 0.0000000  0.38786 0.000000
+Specificity          0.999373   0.3925 0.9993635  0.91961 0.992400
+Pos Pred Value       0.666667   0.8055 0.0000000  0.60000 0.000000
+Neg Pred Value       0.999373   0.6437 0.9830933  0.82853 0.988020
+Prevalence           0.001877   0.7322 0.0168961  0.23717 0.011890
+Detection Rate       0.001252   0.6740 0.0000000  0.09199 0.000000
+Detection Prevalence 0.001877   0.8367 0.0006258  0.15332 0.007509
+Balanced Accuracy    0.833020   0.6565 0.4996817  0.65373 0.496200
+[1] "Predict time"
+   user  system elapsed 
+   0.02    0.00    0.02 
+fda variable importance
+
+    Overall
+PC3  100.00
+PC1   78.81
+PC2   47.62
+[1] "Importance time"
+   user  system elapsed 
+   0.02    0.00    0.02 
+[1] "Total time"
+   user  system elapsed 
+  56.00    0.40   69.72 
