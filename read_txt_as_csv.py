@@ -13,6 +13,8 @@ by_statistics = True
 use_alias = True
 by_time_type = True
 by_time_model = True
+by_time_type_ansamble = True
+by_time_model_ansamble = True
 skip_time = ["user", "system"]
 skip_time_tmp = ["user", "system"]
 for skip_time_first in skip_time_tmp:
@@ -51,6 +53,41 @@ metric_alias_fix = {
     "Mcnemar's Test P-Value": "McNemar's test $p$-value"
 }
 wd_list = ["all", "no_Dst", "no_TEC", "coord", "xyap", "xzap", "yzap"]
+ansamble_list = [4, 7]
+ansamble_print = [4, 7]
+all_model_total_dict = ""
+reference_total_dict = ""
+stats_total_dict = ""
+stats_reverse_total_dict = ""
+all_model_dict = dict()
+reference_dict = dict()
+stats_dict = dict()
+stats_reverse_dict = dict()
+for model_name in model_name_list:
+    all_model_dict[model_name] = ""
+    reference_dict[model_name] = ""
+    stats_dict[model_name] = ""
+    stats_reverse_dict[model_name] = ""
+time_dict = dict()
+time_total_dict = ""
+time_reverse_dict = dict()
+time_reverse_total_dict = ""
+all_stats_dict = ""
+all_stats_reverse_dict = ""
+ansamble_dict_total = ""
+ansamble_dict = dict()
+time_ansamble_dict = dict()
+time_ansamble_total_dict = ""
+time_ansamble_reverse_dict = dict()
+time_ansamble_reverse_total_dict = ""
+for an in ansamble_list:
+    ansamble_dict[an] = ""
+    time_ansamble_dict[an] = ""
+    time_ansamble_reverse_dict[an] = ""
+all_str_dict = ""
+for kt in keywords_time:
+    time_dict[kt] = ""
+    time_reverse_dict[kt] = ""
 for wd in wd_list:
     all_str = ""
     reference_str = ""
@@ -66,6 +103,7 @@ for wd in wd_list:
         dict_co_total[model_name] = dict()
         file_open = open(wd + "/" + model_name + ".txt")
         all_lines = file_open.readlines()
+        file_open.close()
         line_ref = 0
         while line_ref < len(all_lines) and "Reference" not in all_lines[line_ref]:
             line_ref += 1
@@ -102,7 +140,7 @@ for wd in wd_list:
                 dict_cm[colname] = []
                 for row_ix in range(1, len(cm[0])):
                     dict_cm[colname].append(cm[row_ix][col_ix])
-            line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\cline{3-7}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{5}{|c|}{Reference - " + model_name + "} \\\\ \\cline{3-7}\n"
+            line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\cline{3-7}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{5}{|c|}{Reference - " + wd + " - " + model_name + "} \\\\ \\cline{3-7}\n"
             for row_ix in range(len(cm)):
                 line_one += "\t\t & "
                 flag_end = False
@@ -134,6 +172,11 @@ for wd in wd_list:
                 all_model += line_one + "\n"
                 reference_str += line_one + "\n"
                 all_str += line_one + "\n"
+                all_model_total_dict += line_one + "\n"
+                reference_total_dict += line_one + "\n"
+                all_model_dict[model_name] += line_one + "\n"
+                reference_dict[model_name] += line_one + "\n"
+                all_str_dict += line_one + "\n"
             #print(dict_cm)
             df_cm = pd.DataFrame(dict_cm)
             df_cm.to_csv(wd + "/" + model_name + "_cm.csv", index = False)
@@ -173,7 +216,7 @@ for wd in wd_list:
             for i in range(len(metric_alias) - len(skip_first) + 2):
                 line_one += "|c"
             line_one += "|}"
-            line_one += "\n\t\t\\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{" + str(len(metric_alias) - len(skip_first)) + "}{c|}{Statistics - " + model_name + "} \\\\ \\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n"
+            line_one += "\n\t\t\\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{" + str(len(metric_alias) - len(skip_first)) + "}{c|}{Statistics - " + wd + " - " + model_name + "} \\\\ \\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n"
             for colname in dict_cs:
                 line_one += "\t\t"
                 if "E" not in colname and "Statistics" not in colname:
@@ -214,7 +257,12 @@ for wd in wd_list:
                 all_model += line_one + "\n"
                 stats_str += line_one + "\n"
                 all_str += line_one + "\n"
-            line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\cline{3-7}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{5}{c|}{Class - " + model_name + "} \\\\ \\cline{3-7}\n"
+                all_model_total_dict += line_one + "\n"
+                stats_total_dict += line_one + "\n"
+                all_model_dict[model_name] += line_one + "\n"
+                stats_dict[model_name] += line_one + "\n"
+                all_str_dict += line_one + "\n"
+            line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\cline{3-7}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{5}{c|}{Class - " + wd + " - " + model_name + "} \\\\ \\cline{3-7}\n"
             for row_ix in range(len(cs)):
                 if cs[row_ix][0] in skip_first:
                     continue
@@ -258,6 +306,11 @@ for wd in wd_list:
                 all_model += line_one + "\n"
                 stats_str_reverse += line_one + "\n"
                 all_str += line_one + "\n"
+                all_model_total_dict += line_one + "\n"
+                stats_reverse_total_dict += line_one + "\n"
+                all_model_dict[model_name] += line_one + "\n"
+                stats_reverse_dict[model_name] += line_one + "\n"
+                all_str_dict += line_one + "\n"
             #print(dict_cs)
             df_cs = pd.DataFrame(dict_cs)
             df_cs.to_csv(wd + "/" + model_name + "_cs.csv", index = False)
@@ -335,6 +388,8 @@ for wd in wd_list:
             file_label.write(lines_time)
             file_label.close()
             all_str += lines_time + "\n"
+            all_str_dict += lines_time + "\n"
+            time_dict[time_name] += lines_time + "\n"
         lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c"
         for key_name in dict_time_total[time_name]:
             if key_name in skip_time:
@@ -366,6 +421,8 @@ for wd in wd_list:
             file_label.write(lines_time)
             file_label.close()
             all_str += lines_time + "\n"
+            all_str_dict += lines_time + "\n"
+            time_reverse_dict[time_name] += lines_time + "\n"
     df_dict_time_total_total = pd.DataFrame(dict_time_total_total)
     df_dict_time_total_total.to_csv(wd + "/time_models.csv", index = False)
     lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{"
@@ -401,6 +458,8 @@ for wd in wd_list:
         file_label.write(lines_time)
         file_label.close()
         all_str += lines_time + "\n"
+        all_str_dict += lines_time + "\n"
+        time_total_dict += lines_time + "\n"
     lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c"
     for key_name in dict_time_total_total:
         if key_name in skip_time:
@@ -432,6 +491,8 @@ for wd in wd_list:
         file_label.write(lines_time)
         file_label.close()
         all_str += lines_time + "\n"
+        all_str_dict += lines_time + "\n"
+        time_reverse_total_dict += lines_time + "\n"
     #print(dict_co_total)
     models_list = list(dict_co_total.keys())
     metrics_list = list(dict_co_total[models_list[0]].keys())
@@ -475,6 +536,8 @@ for wd in wd_list:
         file_label.write(line_print)
         file_label.close()
         all_str += line_print + "\n"
+        all_str_dict += line_print + "\n"
+        all_stats_dict += line_print + "\n"
     line_print = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c"
     for metric in metrics_list:
         if metric in skip_second:
@@ -512,13 +575,24 @@ for wd in wd_list:
         file_label.write(line_print)
         file_label.close()
         all_str += line_print + "\n"
+        all_str_dict += line_print + "\n"
+        all_stats_reverse_dict += line_print + "\n"
     df_new_dict_co = pd.DataFrame(new_dict_co)
     df_new_dict_co.to_csv(wd + "/stats.csv", index = False)
-    ansamble_list = [4, 7]
-    ansamble_print = [4, 7]
+    dict_time_a_total = {"Models": []}
+    dict_time_a = dict()
+    for num_ansamble in ansamble_list:
+        dict_time_a[num_ansamble] = {"Models": []}
     for num_ansamble in ansamble_list:
         file_open = open(wd + "/ansamble" + str(num_ansamble) + ".txt")
-        all_lines = file_open.readlines()[- (1 + num_ansamble) * (1 + int(np.floor(num_ansamble/mod_val))) -2:-2]
+        start_lines = file_open.readlines()
+        file_open.close()
+        all_lines = start_lines[- (1 + num_ansamble) * (1 + int(np.floor(num_ansamble/mod_val))) -2:-2]
+        lines_time_a = start_lines[-2:]
+        for lix in range(len(lines_time_a)):
+            while "  " in lines_time_a[lix]:
+                lines_time_a[lix] = lines_time_a[lix].replace("  ", " ")
+            lines_time_a[lix] = lines_time_a[lix].strip().split(" ")
         for line_ix in range(len(all_lines)):
             orig_start = all_lines[line_ix][0]
             while "  " in all_lines[line_ix]:
@@ -564,12 +638,233 @@ for wd in wd_list:
         lines_print_a += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if num_ansamble in ansamble_print and by_ansamble:
             #print(lines_print_a)
-            if not os.path.isdir(wd + "/latex_table"):
-                os.makedirs(wd + "/latex_table")
             file_label = open(wd + "/latex_table/ansamble" + str(num_ansamble) + ".tex", "w")
             file_label.write(lines_print_a)
             file_label.close()
             all_str += lines_print_a + "\n"
+            all_str_dict+= lines_print_a + "\n"
+            ansamble_dict[num_ansamble] += lines_print_a + "\n"
+            ansamble_dict_total += lines_print_a + "\n"
+        for tix in range(len(lines_time_a[0])):
+            valt = lines_time_a[1][tix]
+            if not marker_found:
+                valt = "NA"
+            if lines_time_a[0][tix] not in dict_time_a[num_ansamble]:
+                dict_time_a[num_ansamble][lines_time_a[0][tix]] = []
+            dict_time_a[num_ansamble][lines_time_a[0][tix]].append(valt)
+            if lines_time_a[0][tix] not in dict_time_a_total:
+                dict_time_a_total[lines_time_a[0][tix]] = []
+            dict_time_a_total[lines_time_a[0][tix]].append(valt)
+        dict_time_a[num_ansamble]["Models"].append(num_ansamble)
+        dict_time_a_total["Models"].append(num_ansamble)
+        df_new_dict_time_a = pd.DataFrame(dict_time_a[num_ansamble])
+        df_new_dict_time_a.to_csv(wd + "/time_ansamble" + str(num_ansamble) + ".csv", index = False)
+        lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{"
+        for key_time in dict_time_a[num_ansamble]:
+            if key_time in skip_time:
+                continue
+            lines_time += "|c"
+        lines_time += "|}"
+        lines_time += "\n\t\t\\hline\n\t\t"
+        for key_time in dict_time_a[num_ansamble]:
+            if key_time in skip_time:
+                continue
+            lines_time += key_time + " & "
+        lines_time = lines_time[:-2] + "\\\\ \\hline\n"
+        for key_val_ix in range(len(dict_time_a[num_ansamble]["Models"])):
+            lines_time += "\t\t"
+            for key_name in dict_time_a[num_ansamble]:
+                if key_name in skip_time:
+                    continue
+                if (str(dict_time_a[num_ansamble][key_name][key_val_ix]).isdigit() or "." in str(dict_time_a[num_ansamble][key_name][key_val_ix])) and "C" not in str(dict_time_a[num_ansamble][key_name][key_val_ix]):
+                    lines_time += "$" + str(dict_time_a[num_ansamble][key_name][key_val_ix]) + "$ & "
+                else:
+                    lines_time += str(dict_time_a[num_ansamble][key_name][key_val_ix]) + " & "
+            lines_time = lines_time[:-2] + "\\\\ \\hline\n"
+        caption_txt = "time:ansamble:" + wd + ":" + str(num_ansamble)
+        label_txt = "tab:time:ansamble:" + wd + ":" + str(num_ansamble)
+        lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
+        if by_time_type_ansamble and num_ansamble in ansamble_print and by_ansamble:
+            #print(lines_time)
+            if not os.path.isdir(wd + "/latex_table"):
+                os.makedirs(wd + "/latex_table")
+            file_label = open(wd + "/latex_table/time_ansamble_" + str(num_ansamble) + ".tex", "w")
+            file_label.write(lines_time)
+            file_label.close()
+            all_str += lines_time + "\n"
+            all_str_dict += lines_time + "\n"
+            time_ansamble_reverse_dict[num_ansamble] += lines_time + "\n"
+        lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c"
+        for key_name in dict_time_a[num_ansamble]:
+            if key_name in skip_time:
+                continue
+            for key_val in dict_time_a[num_ansamble][key_name]:
+                lines_time += "|c"
+            break
+        lines_time += "|}"
+        lines_time += "\n\t\t\\hline\n"
+        for key_name in dict_time_a[num_ansamble]:
+            if key_name in skip_time:
+                continue
+            lines_time += "\t\t"
+            lines_time += key_name + " & "
+            for key_val in dict_time_a[num_ansamble][key_name]:
+                if (str(key_val).isdigit() or "." in str(key_val)) and "C" not in str(key_val):
+                    lines_time += "$" + str(key_val) + "$ & "
+                else:
+                    lines_time += str(key_val) + " & "
+            lines_time = lines_time[:-2] + "\\\\ \\hline\n"
+        caption_txt = "time:ansamble:reverse:" + wd + ":" + str(num_ansamble)
+        label_txt = "tab:time:ansamble:reverse:" + wd + ":"  + str(num_ansamble)
+        lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
+        if by_time_model_ansamble and num_ansamble in ansamble_print and by_ansamble:
+            #print(lines_time)
+            if not os.path.isdir(wd + "/latex_table"):
+                os.makedirs(wd + "/latex_table")
+            file_label = open(wd + "/latex_table/time_ansamble_reverse_" + str(num_ansamble) + ".tex", "w")
+            file_label.write(lines_time)
+            file_label.close()
+            all_str += lines_time + "\n"
+            all_str_dict += lines_time + "\n"
+            time_ansamble_dict[num_ansamble] += lines_time + "\n"
+    lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{"
+    for key_time in dict_time_a_total:
+        if key_time in skip_time:
+            continue
+        lines_time += "|c"
+    lines_time += "|}"
+    lines_time += "\n\t\t\\hline\n\t\t"
+    for key_time in dict_time_a_total:
+        if key_time in skip_time:
+            continue
+        lines_time += key_time + " & "
+    lines_time = lines_time[:-2] + "\\\\ \\hline\n"
+    for key_val_ix in range(len(dict_time_a_total["Models"])):
+        lines_time += "\t\t"
+        for key_name in dict_time_a_total:
+            if key_name in skip_time:
+                continue
+            if (str(dict_time_a_total[key_name][key_val_ix]).isdigit() or "." in str(dict_time_a_total[key_name][key_val_ix])) and "C" not in str(dict_time_a_total[key_name][key_val_ix]):
+                lines_time += "$" + str(dict_time_a_total[key_name][key_val_ix]) + "$ & "
+            else:
+                lines_time += str(dict_time_a_total[key_name][key_val_ix]) + " & "
+        lines_time = lines_time[:-2] + "\\\\ \\hline\n"
+    caption_txt = "time:ansamble:" + wd
+    label_txt = "tab:time:ansamble:" + wd
+    lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
+    if by_time_type_ansamble and by_ansamble:
+        #print(lines_time)
+        if not os.path.isdir(wd + "/latex_table"):
+            os.makedirs(wd + "/latex_table")
+        file_label = open(wd + "/latex_table/time_ansamble.tex", "w")
+        file_label.write(lines_time)
+        file_label.close()
+        all_str += lines_time + "\n"
+        all_str_dict += lines_time + "\n"
+        time_ansamble_reverse_total_dict += lines_time + "\n"
+    lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c"
+    for key_name in dict_time_a_total:
+        if key_name in skip_time:
+            continue
+        for key_val in dict_time_a_total[key_name]:
+            lines_time += "|c"
+        break
+    lines_time += "|}"
+    lines_time += "\n\t\t\\hline\n"
+    for key_name in dict_time_a_total:
+        if key_name in skip_time:
+            continue
+        lines_time += "\t\t"
+        lines_time += key_name + " & "
+        for key_val in dict_time_a_total[key_name]:
+            if (str(key_val).isdigit() or "." in str(key_val)) and "C" not in str(key_val):
+                lines_time += "$" + str(key_val) + "$ & "
+            else:
+                lines_time += str(key_val) + " & "
+        lines_time = lines_time[:-2] + "\\\\ \\hline\n"
+    caption_txt = "time:ansamble:reverse:" + wd
+    label_txt = "tab:time:ansamble:reverse:" + wd
+    lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
+    if by_time_model_ansamble and by_ansamble:
+        #print(lines_time)
+        if not os.path.isdir(wd + "/latex_table"):
+            os.makedirs(wd + "/latex_table")
+        file_label = open(wd + "/latex_table/time_ansamble_reverse.tex", "w")
+        file_label.write(lines_time)
+        file_label.close()
+        all_str += lines_time + "\n"
+        all_str_dict += lines_time + "\n"
+        time_ansamble_total_dict += lines_time + "\n"
+    df_new_dict_time_a_total = pd.DataFrame(dict_time_a_total)
+    df_new_dict_time_a_total.to_csv(wd + "/time_ansamble_total.csv", index = False)
     file_label = open(wd + "/latex_table/all_str.tex", "w")
     file_label.write(all_str[:-1])
+    file_label.close()
+if not os.path.isdir("latex_table_total"):
+    os.makedirs("latex_table_total")
+file_label = open("latex_table_total/all_model_total_dict.tex", "w")
+file_label.write(all_model_total_dict[:-1])
+file_label.close()
+file_label = open("latex_table_total/reference_total_dict.tex", "w")
+file_label.write(reference_total_dict[:-1])
+file_label.close()
+file_label = open("latex_table_total/stats_total_dict.tex", "w")
+file_label.write(stats_total_dict[:-1])
+file_label.close()
+file_label = open("latex_table_total/stats_reverse_total_dict.tex", "w")
+file_label.write(stats_reverse_total_dict[:-1])
+file_label.close()
+for model_name in model_name_list:
+    if not os.path.isdir("latex_table_total/" + model_name):
+        os.makedirs("latex_table_total/" + model_name)
+    file_label = open("latex_table_total/" + model_name + "/all_model_dict_" + model_name + ".tex", "w")
+    file_label.write(all_model_dict[model_name][:-1])
+    file_label.close()
+    file_label = open("latex_table_total/" + model_name + "/reference_dict_" + model_name + ".tex", "w")
+    file_label.write(reference_dict[model_name][:-1])
+    file_label.close()
+    file_label = open("latex_table_total/" + model_name + "/stats_dict_" + model_name + ".tex", "w")
+    file_label.write(stats_dict[model_name][:-1])
+    file_label.close()
+    file_label = open("latex_table_total/" + model_name + "/stats_reverse_dict_" + model_name + ".tex", "w")
+    file_label.write(stats_reverse_dict[model_name][:-1])
+    file_label.close()
+file_label = open("latex_table_total/time_total_dict.tex", "w")
+file_label.write(time_total_dict[:-1])
+file_label.close()
+file_label = open("latex_table_total/time_reverse_total_dict.tex", "w")
+file_label.write(time_reverse_total_dict[:-1])
+file_label.close()
+file_label = open("latex_table_total/all_stats_dict.tex", "w")
+file_label.write(all_stats_dict[:-1])
+file_label.close()
+file_label = open("latex_table_total/all_stats_reverse_dict.tex", "w")
+file_label.write(all_stats_reverse_dict[:-1])
+file_label.close()
+file_label = open("latex_table_total/ansamble_dict_total.tex", "w")
+file_label.write(ansamble_dict_total[:-1])
+file_label.close()
+file_label = open("latex_table_total/time_ansamble_total_dict.tex", "w")
+file_label.write(time_ansamble_total_dict[:-1])
+file_label.close()
+file_label = open("latex_table_total/time_ansamble_reverse_total_dict.tex", "w")
+file_label.write(time_ansamble_reverse_total_dict[:-1])
+file_label.close()
+for an in ansamble_list:
+    file_label = open("latex_table_total/ansamble_dict_" + str(an) + ".tex", "w")
+    file_label.write(ansamble_dict[an][:-1])
+    file_label.close()
+    file_label = open("latex_table_total/time_ansamble_dict_" + str(an) + ".tex", "w")
+    file_label.write(time_ansamble_dict[an][:-1])
+    file_label.close()
+    file_label = open("latex_table_total/time_ansamble_reverse_dict_" + str(an) + ".tex", "w")
+    file_label.write(time_ansamble_reverse_dict[an][:-1])
+    file_label.close()
+all_str_dict = ""
+for kt in keywords_time:
+    file_label = open("latex_table_total/time_dict_" + kt + ".tex", "w")
+    file_label.write(time_dict[kt][:-1])
+    file_label.close()
+    file_label = open("latex_table_total/time_reverse_dict_" + kt + ".tex", "w")
+    file_label.write(time_reverse_dict[kt][:-1])
     file_label.close()
