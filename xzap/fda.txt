@@ -2,7 +2,7 @@
 [1] "fda"
 [1] "Train time"
    user  system elapsed 
-  47.21    0.44   61.36 
+  63.62    0.53   75.10 
 Confusion Matrix and Statistics
 
           Reference
@@ -37,7 +37,7 @@ Detection Prevalence 0.001252   0.8267 0.002503   0.1571  0.01252
 Balanced Accuracy    0.833333   0.7055 0.536400   0.6876  0.68009
 [1] "Predict time"
    user  system elapsed 
-   0.00    0.00    0.02 
+   0.01    0.00    0.02 
 fda variable importance
 
     Overall
@@ -46,7 +46,7 @@ PC2   41.86
 PC3   33.04
 [1] "Importance time"
    user  system elapsed 
-   0.02    0.00    0.02 
+   0.01    0.00    0.02 
 [1] "Total time"
    user  system elapsed 
-  48.06    0.44   62.22 
+  64.54    0.53   76.04 

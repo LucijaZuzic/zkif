@@ -8,23 +8,23 @@ Partial Least Squares
 
 Pre-processing: centered (4), scaled (4) 
 Resampling: Cross-Validated (10 fold, repeated 10 times) 
-Summary of sample sizes: 5763, 5761, 5761, 5762, 5761, 5762, ... 
+Summary of sample sizes: 5761, 5764, 5761, 5762, 5762, 5761, ... 
 Resampling results across tuning parameters:
 
   ncomp  logLoss   AUC        prAUC      Accuracy   Kappa      Mean_F1  Mean_Sensitivity  Mean_Specificity
-  1      1.183762  0.6297207  0.3325588  0.7881592  0.3276310  NaN      0.2550116         0.8544503       
-  2      1.177301  0.6329031  0.3345059  0.7909391  0.3436983  NaN      0.2586684         0.8575008       
-  3      1.175633  0.6835661  0.3371727  0.7962024  0.3634269  NaN      0.2625348         0.8609244       
+  1      1.183771  0.6295029  0.3315434  0.7882546  0.3280064  NaN      0.2550762         0.8544930       
+  2      1.177291  0.6330488  0.3336885  0.7909423  0.3437516  NaN      0.2586207         0.8574772       
+  3      1.175612  0.6840810  0.3384602  0.7959099  0.3624387  NaN      0.2623004         0.8607199       
   Mean_Pos_Pred_Value  Mean_Neg_Pred_Value  Mean_Precision  Mean_Recall  Mean_Detection_Rate  Mean_Balanced_Accuracy
-  NaN                  0.9298613            NaN             0.2550116    0.1576318            0.5547310             
-  NaN                  0.9280570            NaN             0.2586684    0.1581878            0.5580846             
-  NaN                  0.9317702            NaN             0.2625348    0.1592405            0.5617296             
+  NaN                  0.9301155            NaN             0.2550762    0.1576509            0.5547846             
+  NaN                  0.9283846            NaN             0.2586207    0.1581885            0.5580489             
+  NaN                  0.9317514            NaN             0.2623004    0.1591820            0.5615101             
 
 logLoss was used to select the optimal model using the smallest value.
 The final value used for the model was ncomp = 3.
 [1] "Train time"
    user  system elapsed 
-  14.31    0.15   26.57 
+  21.46    0.25   31.99 
  Factor w/ 5 levels "E","N","P","R",..: 4 2 2 2 2 2 2 2 2 2 ...
 NULL
            E         N         P         R         T
@@ -68,7 +68,7 @@ Detection Prevalence 0.000000   0.8817   0.0000   0.1183  0.00000
 Balanced Accuracy    0.500000   0.6634   0.5000   0.6508  0.50000
 [1] "Predict time"
    user  system elapsed 
-   0.11    0.00    0.18 
+   0.17    0.00    0.20 
 pls variable importance
 
   variables are sorted by maximum importance across the classes
@@ -79,7 +79,7 @@ By 0.0031193 0.074825 0.001623 0.060507 0.0118904
 Bz 0.0002116 0.008156 0.005295 0.009486 0.0006628
 [1] "Importance time"
    user  system elapsed 
-   0.02    0.00    0.00 
+   0.01    0.00    0.00 
 [1] "Total time"
    user  system elapsed 
-  15.21    0.15   27.54 
+  22.51    0.25   33.11 

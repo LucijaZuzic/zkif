@@ -1,2115 +1,2117 @@
 [1] "no_Dst"
 [1] "ansamble7"
-maximum number of iterations reached 0.0001414881 -0.0001409202maximum number of iterations reached 0.001195612 0.001192314maximum number of iterations reached 0.005227003 -0.004853069maximum number of iterations reached 0.004486695 0.004438739maximum number of iterations reached 0.0002268923 -0.0002255029maximum number of iterations reached 0.0007903256 0.0007899696maximum number of iterations reached 2.256632e-05 -2.252638e-05maximum number of iterations reached 0.002696554 0.002655682maximum number of iterations reached 0.0001571601 0.0001567078maximum number of iterations reached 0.0008263655 0.0008245266maximum number of iterations reached 0.001846797 0.001775688maximum number of iterations reached 0.002145937 0.002136986maximum number of iterations reached 0.0007993615 -0.0007832046maximum number of iterations reached 0.00120606 0.001203686maximum number of iterations reached 9.285989e-06 -9.278433e-06maximum number of iterations reached 0.001982197 0.001963629maximum number of iterations reached 0.002511774 0.002482106maximum number of iterations reached 0.004018226 0.003916084maximum number of iterations reached 0.0002525381 0.0002520737maximum number of iterations reached 0.003218966 0.003173922maximum number of iterations reached 0.001193903 0.0011563maximum number of iterations reached 0.002523391 0.002509728maximum number of iterations reached 0.0006973941 0.0006952522maximum number of iterations reached 0.003219094 0.003164073maximum number of iterations reached 0.002184167 0.00216228maximum number of iterations reached 0.002487135 0.002377317maximum number of iterations reached 0.001592893 0.001580441maximum number of iterations reached 0.0004722293 0.000467892line search fails -1.645871 -0.0584626 1.324378e-05 -4.358555e-06 -2.378998e-08 -7.402568e-09 -2.828048e-13maximum number of iterations reached 2.349016e-05 -2.346726e-05maximum number of iterations reached 0.002694021 0.002660194maximum number of iterations reached 0.01091081 -0.009517453maximum number of iterations reached 0.003961605 0.003930349maximum number of iterations reached 0.001099945 0.001094928maximum number of iterations reached 0.001277241 -0.00125027maximum number of iterations reached 0.002090613 0.002063228maximum number of iterations reached 0.0004456147 0.0004441507maximum number of iterations reached 0.001911879 0.00189835maximum number of iterations reached 0.00112343 0.001120241maximum number of iterations reached 0.002884811 -0.002745479maximum number of iterations reached 0.002185849 0.002172646maximum number of iterations reached 0.002364105 0.002343493maximum number of iterations reached 0.002565835 0.002552735maximum number of iterations reached 0.003207991 0.003120439maximum number of iterations reached 0.001080634 0.001068956maximum number of iterations reached 0.0007156545 0.0007087842maximum number of iterations reached 0.0001819727 -0.000181033maximum number of iterations reached 0.0007002992 0.0006910932maximum number of iterations reached -0.0006753654 -0.0006768266maximum number of iterations reached 0.003543434 0.00339824maximum number of iterations reached 0.0006717216 0.0006681549maximum number of iterations reached 0.002894316 0.002856412maximum number of iterations reached 0.0008894523 -0.0008781278maximum number of iterations reached 0.003718638 0.003665413maximum number of iterations reached 0.001442073 -0.001387284maximum number of iterations reached 0.001681916 0.001676289maximum number of iterations reached 0.001318599 0.001315923maximum number of iterations reached 0.001966969 0.001952772maximum number of iterations reached 0.001183835 0.001166113maximum number of iterations reached 0.001165489 0.001156234maximum number of iterations reached 0.0006018666 0.0005999098maximum number of iterations reached 0.002182823 0.002174798maximum number of iterations reached 7.108866e-05 -7.089898e-05maximum number of iterations reached 0.002081123 0.002074604maximum number of iterations reached 0.003774113 0.003755049maximum number of iterations reached 0.001986893 0.001970507maximum number of iterations reached 0.002987218 0.002873879maximum number of iterations reached 0.001306075 0.001303678maximum number of iterations reached 0.002500104 0.002492033maximum number of iterations reached 0.001366545 0.001360968maximum number of iterations reached 0.002424066 0.002409079maximum number of iterations reached 0.004412539 0.004190188maximum number of iterations reached 0.0022672 0.002241592maximum number of iterations reached 1.255522e-05 1.254201e-05maximum number of iterations reached 3.424415e-05 -3.420585e-05maximum number of iterations reached 0.0003183284 -0.0003164081maximum number of iterations reached 0.002191648 0.002182242maximum number of iterations reached 0.001079708 -0.001049358maximum number of iterations reached 0.001378359 0.001376797maximum number of iterations reached 0.0002595984 0.0002573415maximum number of iterations reached 0.001074563 0.001069185maximum number of iterations reached 0.003670878 0.003507464maximum number of iterations reached 0.004868325 0.004659477maximum number of iterations reached 0.00283814 0.002789234maximum number of iterations reached 0.001092011 0.001090948maximum number of iterations reached 0.001636751 0.001631431maximum number of iterations reached 0.001208185 0.001190397maximum number of iterations reached 0.002160879 0.002131961maximum number of iterations reached 0.003086269 0.002969394maximum number of iterations reached 0.001926834 0.001861063maximum number of iterations reached 0.003788104 0.003731192maximum number of iterations reached 0.001708494 0.001700439maximum number of iterations reached 0.0007285991 0.0007268732maximum number of iterations reached 0.0007701844 0.0007688843maximum number of iterations reached 0.002597185 0.002567821maximum number of iterations reached 0.002216649 0.002140506maximum number of iterations reached 0.002169213 0.002151324line search fails -1.615074 -0.05716615 1.710403e-05 -5.432806e-06 -3.017619e-08 -9.980171e-09 -4.619141e-13maximum number of iterations reached 7.352369e-05 -7.325754e-05maximum number of iterations reached 0.002122007 0.002118622maximum number of iterations reached 0.002473309 -0.002344358maximum number of iterations reached 0.0001388918 0.0001388678maximum number of iterations reached 1.877352e-05 -1.87527e-05maximum number of iterations reached 0.003073857 0.003040446maximum number of iterations reached 0.0007567088 0.0007563677maximum number of iterations reached 0.002267193 0.002189805maximum number of iterations reached 0.002611289 0.002502463maximum number of iterations reached 0.002806096 0.002760002maximum number of iterations reached 0.005343539 0.005080262maximum number of iterations reached 0.00299858 0.002976801maximum number of iterations reached 0.0006213025 0.0006204337maximum number of iterations reached 0.00159447 0.001591458maximum number of iterations reached 5.0288e-05 5.013276e-05maximum number of iterations reached 0.001135228 0.00113461maximum number of iterations reached 0.001264662 0.001260202maximum number of iterations reached 0.001930378 0.00192753maximum number of iterations reached 0.0003185171 0.0003172753maximum number of iterations reached 0.001721795 0.001715721maximum number of iterations reached 0.002783233 0.002747068maximum number of iterations reached 0.004603447 0.004360184maximum number of iterations reached 2.028206e-05 2.027971e-05maximum number of iterations reached 0.001998776 0.001986265maximum number of iterations reached 0.002915948 0.002789013maximum number of iterations reached 0.000197147 -0.0001957161maximum number of iterations reached 0.001275402 -0.001259902maximum number of iterations reached 0.004981651 0.004923085maximum number of iterations reached 0.002771719 -0.00262515maximum number of iterations reached 3.29234e-05 -3.285589e-05maximum number of iterations reached 0.001685641 0.001680085maximum number of iterations reached 0.0023999 0.002386842maximum number of iterations reached 0.00155614 0.001538209maximum number of iterations reached 0.003143668 0.003029155maximum number of iterations reached 0.001316155 0.001315122maximum number of iterations reached 0.001646825 0.001643776maximum number of iterations reached 0.0001439219 -0.0001429687maximum number of iterations reached 0.001734311 0.001727139maximum number of iterations reached 0.001339007 0.001332588maximum number of iterations reached 0.001592457 0.001588305maximum number of iterations reached 0.001376292 0.001372419maximum number of iterations reached 0.002865312 0.002767538maximum number of iterations reached 4.371529e-05 4.365399e-05maximum number of iterations reached 0.004542327 0.004472205maximum number of iterations reached 0.004685734 0.004640051maximum number of iterations reached 0.002044389 0.002036532maximum number of iterations reached 0.005475968 0.005374335maximum number of iterations reached 0.002957926 0.002929511maximum number of iterations reached 0.003319244 0.003275217maximum number of iterations reached 0.0007325916 0.0007188981maximum number of iterations reached 0.0001610131 -0.0001601373maximum number of iterations reached 0.001437145 -0.001415774maximum number of iterations reached 0.002593745 0.002579737maximum number of iterations reached 0.0004563603 -0.0004515823maximum number of iterations reached 0.001454425 -0.001438743maximum number of iterations reached 0.001492545 0.001491338maximum number of iterations reached 0.0001639387 0.0001629016maximum number of iterations reached 0.00279238 0.00273696maximum number of iterations reached 0.0002291218 0.0002285728maximum number of iterations reached 0.0004261917 0.0004209494maximum number of iterations reached 8.466346e-05 8.417159e-05maximum number of iterations reached 1.861498e-05 -1.859706e-05maximum number of iterations reached 0.00115106 -0.001127233maximum number of iterations reached 0.0008775248 0.0008771379maximum number of iterations reached 1.360297e-05 -1.358547e-05maximum number of iterations reached 0.001990434 0.001978541maximum number of iterations reached 0.0002393349 0.000239094maximum number of iterations reached 0.003177656 0.003117669maximum number of iterations reached 0.0017598 0.001715484maximum number of iterations reached 0.002706989 0.00265864maximum number of iterations reached 4.205306e-05 -4.195744e-05maximum number of iterations reached 0.00192913 0.001917695maximum number of iterations reached 0.002490011 0.002469797maximum number of iterations reached 0.001355323 0.001348651maximum number of iterations reached 0.003179655 0.003136973maximum number of iterations reached 0.001849899 0.00177385maximum number of iterations reached 0.001285264 0.001279285maximum number of iterations reached 1.32983e-05 -1.329271e-05maximum number of iterations reached 0.002436054 0.002428346maximum number of iterations reached 0.0008638447 -0.0008490401maximum number of iterations reached 0.001207018 0.00120357maximum number of iterations reached 9.53887e-05 -9.496041e-05maximum number of iterations reached 3.665195e-05 3.665075e-05maximum number of iterations reached 0.0007452236 0.0007447505maximum number of iterations reached 0.002604453 0.002530051maximum number of iterations reached 0.0001300257 0.0001297366maximum number of iterations reached -6.673397e-05 -6.674751e-05maximum number of iterations reached 0.0007887719 0.0007879914maximum number of iterations reached 1.273408e-05 -1.272323e-05maximum number of iterations reached 0.00186821 0.001866287maximum number of iterations reached 0.0003489229 0.0003475419maximum number of iterations reached -3.46026e-05 -3.465666e-05maximum number of iterations reached 0.001639702 0.001597418maximum number of iterations reached 4.083548e-05 4.072636e-05maximum number of iterations reached 0.00023284 0.0002320581maximum number of iterations reached 0.002993017 0.002971661maximum number of iterations reached 0.001850795 0.001847137maximum number of iterations reached 0.000130887 0.0001307664maximum number of iterations reached 0.001737068 0.001723822maximum number of iterations reached 0.002624733 0.002614916maximum number of iterations reached 0.002325839 0.002247237line search fails -1.626832 -0.07945332 1.017277e-05 -3.392739e-06 -1.778825e-08 -5.509885e-09 -1.622622e-13maximum number of iterations reached 0.0006654189 -0.0006556755maximum number of iterations reached 0.0003104378 0.0003103855maximum number of iterations reached 0.006615052 -0.006075749maximum number of iterations reached 2.799189e-05 -2.796994e-05maximum number of iterations reached 0.003870148 0.003842762maximum number of iterations reached 0.006471973 -0.005877829maximum number of iterations reached 0.0007087419 0.0007066199maximum number of iterations reached 0.0001861361 0.0001861162maximum number of iterations reached 0.003092979 0.003045236maximum number of iterations reached 0.001712978 0.001660538maximum number of iterations reached 0.002524478 0.002513536maximum number of iterations reached 0.002504712 0.002439886maximum number of iterations reached 0.0003772462 0.0003768681maximum number of iterations reached 0.005750355 -0.005185714maximum number of iterations reached 0.00241716 0.002400275maximum number of iterations reached 3.523005e-05 -3.515571e-05maximum number of iterations reached 0.001848233 0.001839346maximum number of iterations reached 0.001115007 0.001113623maximum number of iterations reached 0.001796081 0.001758648maximum number of iterations reached 0.003343086 0.003279701maximum number of iterations reached 0.0003788242 0.000378763maximum number of iterations reached 0.003158206 0.003137869maximum number of iterations reached 0.0001418762 -0.0001410924maximum number of iterations reached 0.001479301 0.001475807maximum number of iterations reached 0.003338033 0.003287228maximum number of iterations reached 0.001331901 0.001327109maximum number of iterations reached 0.002194058 0.002127255maximum number of iterations reached 1.088246e-05 1.088568e-05maximum number of iterations reached 0.0007256375 0.0007253369maximum number of iterations reached 0.00127295 0.001248585maximum number of iterations reached 2.458359e-05 -2.455695e-05maximum number of iterations reached 0.002282887 0.002275752maximum number of iterations reached 0.003883671 -0.003641495maximum number of iterations reached 0.0009247946 0.0009235937maximum number of iterations reached 0.001034656 -0.001012438maximum number of iterations reached 0.00485885 0.004803279maximum number of iterations reached 0.0002953593 -0.0002914753maximum number of iterations reached 0.004020857 0.003944927maximum number of iterations reached 0.002250445 0.002193615maximum number of iterations reached 0.000112668 0.0001118922maximum number of iterations reached 0.001193933 0.00119307maximum number of iterations reached 0.0001176578 0.0001168648maximum number of iterations reached 0.001576258 0.001575145maximum number of iterations reached 0.0004923883 -0.0004853104maximum number of iterations reached 0.001909329 0.001904031maximum number of iterations reached 0.000459254 0.0004588538maximum number of iterations reached 0.002893152 0.002850176maximum number of iterations reached 0.002548329 0.002438116maximum number of iterations reached 0.001770319 0.001730432maximum number of iterations reached 0.003406954 0.003372554maximum number of iterations reached 0.0008652532 0.0008471004maximum number of iterations reached 0.002175534 0.002166988maximum number of iterations reached 0.001332006 0.001320966maximum number of iterations reached 0.0004464818 0.0004458345maximum number of iterations reached 0.001471683 0.001465643maximum number of iterations reached 0.002238546 0.002145703maximum number of iterations reached 0.00151548 0.001495927maximum number of iterations reached 0.001950245 0.001945419maximum number of iterations reached 3.795077e-05 -3.787853e-05# weights:  17
-initial  value 7834.137055 
-iter  10 value 3291.239488
-iter  20 value 2994.185591
-iter  30 value 2923.695152
-iter  40 value 2775.492644
-iter  50 value 2736.308848
-iter  60 value 2722.409397
-iter  70 value 2721.017388
-iter  80 value 2718.518856
-final  value 2718.518711 
+maximum number of iterations reached 0.0002588166 -0.0002573542maximum number of iterations reached 0.0008295473 -0.000817376maximum number of iterations reached 0.001204925 0.001203799maximum number of iterations reached 0.00469725 -0.0044483maximum number of iterations reached 0.002191188 -0.002136421maximum number of iterations reached 0.002677569 0.00266834maximum number of iterations reached 5.824913e-05 -5.81596e-05maximum number of iterations reached 2.996712e-05 -2.993354e-05maximum number of iterations reached 0.002847614 0.002832158maximum number of iterations reached 0.003229834 -0.003057772maximum number of iterations reached 0.001210457 0.001204615maximum number of iterations reached 0.00381206 0.003688607maximum number of iterations reached 0.0004018582 0.0004024maximum number of iterations reached 0.001191093 0.001177811maximum number of iterations reached 0.003720559 0.003502443maximum number of iterations reached 0.0002921775 -0.00029004maximum number of iterations reached 0.001527238 0.001520554maximum number of iterations reached 0.001643377 -0.001571917maximum number of iterations reached 0.003031039 0.002973621maximum number of iterations reached -0.0008931704 -0.0008976748maximum number of iterations reached 0.001543961 0.001539325maximum number of iterations reached 0.002380256 0.002314529maximum number of iterations reached 0.001313047 0.00130347maximum number of iterations reached 0.00164582 0.001644283maximum number of iterations reached 5.218649e-05 -5.205657e-05maximum number of iterations reached 0.003337676 0.00331147maximum number of iterations reached 9.402917e-06 -9.396909e-06maximum number of iterations reached 0.003500026 0.003466297maximum number of iterations reached 0.001675335 0.001666709maximum number of iterations reached 0.002173451 0.002126479maximum number of iterations reached 0.002453342 0.002435068maximum number of iterations reached 2.25582e-05 2.254272e-05maximum number of iterations reached 5.002892e-05 -4.991961e-05maximum number of iterations reached 0.002814326 0.002808118maximum number of iterations reached 0.004968999 -0.004660853maximum number of iterations reached 0.001047268 0.001046798maximum number of iterations reached 0.0002089692 -0.0002073385maximum number of iterations reached -7.099764e-05 -7.104192e-05maximum number of iterations reached 0.0009500177 0.0009408133maximum number of iterations reached 0.00431486 0.004142889maximum number of iterations reached 0.001171361 0.001168258maximum number of iterations reached 0.0004976733 0.0004961108maximum number of iterations reached 0.000752697 0.0007458882maximum number of iterations reached 0.002690438 0.002674679maximum number of iterations reached 0.0001699073 -0.0001684816maximum number of iterations reached 0.00179244 0.001780795maximum number of iterations reached 0.001484961 0.001479318maximum number of iterations reached 0.003247798 0.003178697maximum number of iterations reached 0.003014735 0.002878101maximum number of iterations reached 0.00187901 0.001873577maximum number of iterations reached 0.001287017 0.001239955maximum number of iterations reached 0.0002624136 0.0002622958maximum number of iterations reached 0.000728289 0.0007265843maximum number of iterations reached 0.002341842 0.00233013maximum number of iterations reached 0.002210741 0.002187986maximum number of iterations reached 0.002963251 0.002822591maximum number of iterations reached 0.0001000461 9.953854e-05maximum number of iterations reached 0.001278801 -0.001251626maximum number of iterations reached 0.002832033 0.002790796maximum number of iterations reached 0.003060845 -0.002915509maximum number of iterations reached 0.0009030244 -0.000893015maximum number of iterations reached 0.002920997 0.002902219maximum number of iterations reached 2.662222e-05 -2.657807e-05maximum number of iterations reached 0.0002552747 -0.000254223maximum number of iterations reached 0.001563504 0.00153731maximum number of iterations reached 0.001643556 0.001624047maximum number of iterations reached 0.001633574 0.001580507maximum number of iterations reached 0.00216446 0.002157674maximum number of iterations reached 0.002658316 0.002620855maximum number of iterations reached 9.13012e-05 9.117971e-05maximum number of iterations reached 0.000905017 -0.0008886292maximum number of iterations reached 0.002060216 0.002031681maximum number of iterations reached 1.193352e-05 -1.192121e-05maximum number of iterations reached 0.003595941 0.003560713maximum number of iterations reached 0.00233626 0.002302011maximum number of iterations reached 0.001379837 0.001369666maximum number of iterations reached 0.00427675 0.004089578maximum number of iterations reached 0.005687162 0.005541117maximum number of iterations reached 0.0001126971 0.0001119904maximum number of iterations reached 0.001875282 0.001856904maximum number of iterations reached 0.002199581 0.002187726maximum number of iterations reached 0.001987602 0.001968627maximum number of iterations reached 0.004133756 0.004061524maximum number of iterations reached 0.00129354 0.001243341maximum number of iterations reached 0.001915352 0.001886187maximum number of iterations reached 1.099632e-05 -1.098579e-05maximum number of iterations reached 0.003184733 0.003132675maximum number of iterations reached 0.001230543 -0.001192493maximum number of iterations reached 4.482606e-05 -4.478362e-05maximum number of iterations reached 0.001805118 0.001799041maximum number of iterations reached 0.002437804 0.00242002maximum number of iterations reached 0.001505868 0.001501425maximum number of iterations reached 0.0003258167 0.0003237145maximum number of iterations reached 0.003651835 0.003525375maximum number of iterations reached 0.0003783893 0.0003748935maximum number of iterations reached 0.002203264 0.002142293maximum number of iterations reached 0.002239938 0.002236224maximum number of iterations reached 3.360159e-05 -3.352795e-05maximum number of iterations reached 0.002673956 0.00262377maximum number of iterations reached 0.0004162075 0.0004118233maximum number of iterations reached 0.002240394 0.002232348maximum number of iterations reached 0.0007877655 0.0007793429maximum number of iterations reached 0.002173968 0.002092332maximum number of iterations reached 0.002138792 0.002113554maximum number of iterations reached 0.0007648247 0.0007483514maximum number of iterations reached 0.0007768839 0.0007737878maximum number of iterations reached 0.000714078 0.0007123073maximum number of iterations reached 0.001140232 0.001132917maximum number of iterations reached 0.0007673121 0.0007598011maximum number of iterations reached 0.002684693 0.002590495maximum number of iterations reached 0.001344567 0.001302722maximum number of iterations reached 0.002590208 0.002546801maximum number of iterations reached 5.71706e-05 -5.703182e-05maximum number of iterations reached 0.002853531 0.002843981maximum number of iterations reached 0.005713225 -0.00526396maximum number of iterations reached 0.002055106 0.002053442maximum number of iterations reached 0.005073776 -0.00467536maximum number of iterations reached 0.001003852 0.001003263maximum number of iterations reached 0.0007910707 0.000789573maximum number of iterations reached 0.000678784 0.0006751086maximum number of iterations reached 0.003441921 0.003344207maximum number of iterations reached 0.0004376562 0.0004351685maximum number of iterations reached 0.000180791 0.0001791003maximum number of iterations reached 0.001978382 0.001975723maximum number of iterations reached 0.0005530795 -0.0005445379maximum number of iterations reached 0.001910203 0.001895845maximum number of iterations reached 0.001847431 0.001839054maximum number of iterations reached 0.001752716 0.001732054maximum number of iterations reached 0.002500983 0.002451331maximum number of iterations reached 0.001600279 0.001572123maximum number of iterations reached 0.001588014 0.001575761maximum number of iterations reached 0.002010952 0.001997707maximum number of iterations reached 0.000103038 -0.00010257maximum number of iterations reached 0.00172724 0.001718796maximum number of iterations reached 2.3305e-05 -2.328215e-05maximum number of iterations reached 0.004172146 0.004117423maximum number of iterations reached 0.001237416 0.001231583maximum number of iterations reached 0.003512108 0.003382715maximum number of iterations reached 0.001570853 0.001550385maximum number of iterations reached 0.002073368 0.002018507line search fails -1.633215 -0.07030185 1.142344e-05 -3.376953e-06 -2.097403e-08 -7.977222e-09 -2.12657e-13maximum number of iterations reached 0.0002663961 -0.0002646623maximum number of iterations reached 0.001961956 0.0019596maximum number of iterations reached 0.003464118 -0.003275622maximum number of iterations reached 0.001007941 0.001007043maximum number of iterations reached 0.002485406 0.00247775maximum number of iterations reached 0.001056954 0.001054383maximum number of iterations reached 0.004425445 0.004271734maximum number of iterations reached 0.001286358 0.001277998maximum number of iterations reached 0.002041175 0.00202178maximum number of iterations reached 0.001146497 0.001146167maximum number of iterations reached 0.002828678 0.00280919maximum number of iterations reached 0.0008155477 0.0008117208maximum number of iterations reached 0.001846828 0.001831291maximum number of iterations reached 0.003417136 0.003300684maximum number of iterations reached 4.225794e-05 4.227544e-05maximum number of iterations reached 0.0003125321 0.0003125117maximum number of iterations reached 0.001665574 0.001658111maximum number of iterations reached 0.004660346 0.004587257maximum number of iterations reached 0.002742919 0.002709644maximum number of iterations reached 0.001361974 0.001356828maximum number of iterations reached 0.0001706187 0.0001705187maximum number of iterations reached 0.002596731 0.002577921line search fails -1.657876 -0.09249997 1.449697e-05 -4.672589e-06 -2.660193e-08 -9.154721e-09 -3.428711e-13maximum number of iterations reached 0.0004410953 -0.0004357001maximum number of iterations reached 0.002145792 0.00214338maximum number of iterations reached 0.002814553 -0.002660057maximum number of iterations reached 0.001557618 0.001556126maximum number of iterations reached 0.0003873427 -0.0003819017maximum number of iterations reached 0.0008495956 0.00084895maximum number of iterations reached 0.001366366 0.001358391maximum number of iterations reached 0.003128601 0.003026129maximum number of iterations reached 0.004518453 0.004407916maximum number of iterations reached 0.002776022 0.002698191maximum number of iterations reached 0.001202755 0.001199575maximum number of iterations reached 0.000107167 -0.000106776maximum number of iterations reached 0.003953149 0.003920987maximum number of iterations reached 0.001820047 0.001816144maximum number of iterations reached 0.001923744 0.001919629maximum number of iterations reached 0.002695711 0.00261581maximum number of iterations reached 0.0004485227 0.0004481665maximum number of iterations reached 0.006172727 0.005824553maximum number of iterations reached 0.001415936 0.001413718maximum number of iterations reached 0.003033046 0.003018527maximum number of iterations reached 0.00253541 0.002514076maximum number of iterations reached 0.0004715834 0.0004715247maximum number of iterations reached 0.003664977 0.003546036maximum number of iterations reached 0.0005943652 0.0005909535maximum number of iterations reached 0.0001111592 -0.0001106436maximum number of iterations reached 2.113944e-05 -2.112239e-05maximum number of iterations reached 0.002042061 0.00203719maximum number of iterations reached 0.004340508 -0.004091198maximum number of iterations reached 0.002159143 0.002155377maximum number of iterations reached 0.0003837903 -0.0003801899maximum number of iterations reached 0.0004297786 0.0004292677maximum number of iterations reached 0.000421549 -0.0004151021maximum number of iterations reached 0.0004955095 0.0004953383maximum number of iterations reached 0.002471656 0.002414868maximum number of iterations reached 0.001305687 0.001304464maximum number of iterations reached 0.0003699998 0.0003699727maximum number of iterations reached 0.00164945 0.001642875maximum number of iterations reached 0.002368279 -0.00225456maximum number of iterations reached 0.002620172 0.002600385maximum number of iterations reached 0.0006082958 0.0006075641maximum number of iterations reached 0.0006525227 0.000648967maximum number of iterations reached 0.001822045 0.001797804maximum number of iterations reached 1.602664e-05 1.603228e-05maximum number of iterations reached 0.00430965 0.004264587maximum number of iterations reached 0.0001324707 0.000131346maximum number of iterations reached 0.002071291 0.002063964maximum number of iterations reached 1.986608e-05 -1.985669e-05maximum number of iterations reached -0.001528211 -0.001532175maximum number of iterations reached 0.002484749 0.002463343maximum number of iterations reached 0.00166581 0.001652096maximum number of iterations reached 0.00202637 0.001963178maximum number of iterations reached 0.0009760546 0.0009636539maximum number of iterations reached 0.0008892216 0.0008757364maximum number of iterations reached 0.002133752 0.002111886maximum number of iterations reached 0.004494269 -0.004156814maximum number of iterations reached 0.002269009 0.002251276maximum number of iterations reached 0.001622788 0.001614642maximum number of iterations reached 1.016987e-05 -1.015958e-05maximum number of iterations reached 0.002433292 0.002411403maximum number of iterations reached 0.001502305 0.001481664maximum number of iterations reached 0.001515766 0.001469957maximum number of iterations reached 0.0008610682 0.0008602635maximum number of iterations reached 0.004495958 0.004388964maximum number of iterations reached 0.001220763 0.001218553maximum number of iterations reached 2.897479e-05 -2.892625e-05maximum number of iterations reached 0.0007258445 0.0007243724maximum number of iterations reached 0.0009458663 0.000941891maximum number of iterations reached 0.00180021 0.001793482maximum number of iterations reached 0.002764964 0.002665478maximum number of iterations reached 0.0004751753 0.0004728256maximum number of iterations reached 0.0008086754 0.0007998727maximum number of iterations reached 1.654292e-05 1.653417e-05maximum number of iterations reached 5.850201e-05 5.833622e-05maximum number of iterations reached 0.0001820785 0.0001813279maximum number of iterations reached 0.001792274 0.001781604maximum number of iterations reached 0.0016874 0.001681879maximum number of iterations reached 0.001790312 0.001727935maximum number of iterations reached 0.001794293 0.001780983maximum number of iterations reached 9.558059e-06 -9.554775e-06maximum number of iterations reached 0.0002790698 -0.0002765923maximum number of iterations reached 0.001009086 0.001008447maximum number of iterations reached 0.0008064645 -0.0007921182maximum number of iterations reached 0.00143002 0.001427362maximum number of iterations reached 0.0001059639 -0.0001055053maximum number of iterations reached 0.003021144 0.003001759maximum number of iterations reached 0.00219235 0.002164602maximum number of iterations reached 0.00361068 0.003465782maximum number of iterations reached 0.0009567609 0.0009454768maximum number of iterations reached 0.002149542 0.002133934maximum number of iterations reached 0.003319741 0.003301671maximum number of iterations reached 3.065959e-05 -3.06072e-05maximum number of iterations reached 0.001751075 0.001747593maximum number of iterations reached 0.001971679 0.001957804maximum number of iterations reached 0.002016175 0.002011746maximum number of iterations reached 0.001374541 0.001356665maximum number of iterations reached 0.0007469682 0.0007379341maximum number of iterations reached 0.001429039 0.001425386maximum number of iterations reached 0.002318479 0.00230479maximum number of iterations reached 0.001619665 0.00160931maximum number of iterations reached 0.003675993 0.003644733maximum number of iterations reached 0.005066399 0.004788442maximum number of iterations reached 1.550769e-05 1.550723e-05maximum number of iterations reached 0.002243884 0.002215545maximum number of iterations reached 0.0002904121 0.0002875999# weights:  17
+initial  value 11259.468274 
+iter  10 value 4240.379692
+iter  20 value 2863.799709
+iter  30 value 2777.604859
+iter  40 value 2751.696566
+iter  50 value 2740.227192
+iter  60 value 2739.735669
+final  value 2739.695293 
 converged
 # weights:  41
-initial  value 13015.312963 
-iter  10 value 2950.717374
-iter  20 value 2729.347224
-iter  30 value 2595.193766
-iter  40 value 2508.261934
-iter  50 value 2450.534352
-iter  60 value 2439.155216
-iter  70 value 2424.925047
-iter  80 value 2409.947499
-iter  90 value 2397.932013
-iter 100 value 2393.940881
-final  value 2393.940881 
+initial  value 9012.588486 
+iter  10 value 3052.929465
+iter  20 value 2790.989952
+iter  30 value 2660.588676
+iter  40 value 2577.167812
+iter  50 value 2557.636031
+iter  60 value 2548.139323
+iter  70 value 2543.178849
+iter  80 value 2539.502807
+iter  90 value 2536.952645
+iter 100 value 2534.503790
+final  value 2534.503790 
 stopped after 100 iterations
 # weights:  65
-initial  value 9625.900395 
-iter  10 value 2952.885365
-iter  20 value 2636.787784
-iter  30 value 2519.167069
-iter  40 value 2438.373428
-iter  50 value 2372.530980
-iter  60 value 2322.800782
-iter  70 value 2274.119075
-iter  80 value 2259.330284
-iter  90 value 2252.035611
-iter 100 value 2249.138014
-final  value 2249.138014 
+initial  value 7660.714659 
+iter  10 value 2845.653243
+iter  20 value 2585.368125
+iter  30 value 2507.897341
+iter  40 value 2444.452537
+iter  50 value 2343.121004
+iter  60 value 2281.237201
+iter  70 value 2255.205554
+iter  80 value 2246.942068
+iter  90 value 2242.057418
+iter 100 value 2227.206522
+final  value 2227.206522 
 stopped after 100 iterations
 # weights:  17
-initial  value 9463.105651 
-iter  10 value 3138.058888
-iter  20 value 2947.100720
-iter  30 value 2789.602762
-iter  40 value 2780.603030
-iter  50 value 2773.900187
-final  value 2773.735426 
+initial  value 7147.963638 
+iter  10 value 4113.412544
+iter  20 value 3632.739507
+iter  30 value 3260.745302
+iter  40 value 2888.786586
+iter  50 value 2817.950900
+iter  60 value 2798.216634
+iter  70 value 2791.632843
+iter  70 value 2791.632839
+iter  70 value 2791.632839
+final  value 2791.632839 
 converged
 # weights:  41
-initial  value 9248.190571 
-iter  10 value 2907.495169
-iter  20 value 2741.447832
-iter  30 value 2682.427482
-iter  40 value 2630.819768
-iter  50 value 2594.619713
-iter  60 value 2570.415617
-iter  70 value 2544.685104
-iter  80 value 2505.749393
-iter  90 value 2482.130990
-iter 100 value 2458.168477
-final  value 2458.168477 
+initial  value 11017.328008 
+iter  10 value 2830.736030
+iter  20 value 2724.119061
+iter  30 value 2658.600819
+iter  40 value 2600.543888
+iter  50 value 2531.373332
+iter  60 value 2504.210068
+iter  70 value 2498.910474
+iter  80 value 2497.507423
+iter  90 value 2497.452465
+iter 100 value 2497.414772
+final  value 2497.414772 
 stopped after 100 iterations
 # weights:  65
-initial  value 9570.325307 
-iter  10 value 2732.023901
-iter  20 value 2566.443474
-iter  30 value 2500.923733
-iter  40 value 2454.536211
-iter  50 value 2405.171929
-iter  60 value 2378.537506
-iter  70 value 2354.566230
-iter  80 value 2341.614864
-iter  90 value 2331.423267
-iter 100 value 2314.927739
-final  value 2314.927739 
+initial  value 9695.508665 
+iter  10 value 2909.650059
+iter  20 value 2651.847332
+iter  30 value 2547.838235
+iter  40 value 2459.930622
+iter  50 value 2409.741048
+iter  60 value 2361.197392
+iter  70 value 2329.364235
+iter  80 value 2318.716304
+iter  90 value 2309.432010
+iter 100 value 2302.271213
+final  value 2302.271213 
 stopped after 100 iterations
 # weights:  17
-initial  value 8402.599164 
-iter  10 value 4008.864399
-iter  20 value 3628.461666
-iter  30 value 2961.766219
-iter  40 value 2801.062122
-iter  50 value 2760.282931
-iter  60 value 2720.112756
-iter  70 value 2719.576057
-final  value 2719.059781 
+initial  value 13039.942273 
+iter  10 value 3559.762967
+iter  20 value 2897.624628
+iter  30 value 2822.583451
+iter  40 value 2817.105529
+iter  50 value 2813.354697
+iter  60 value 2805.847648
+final  value 2805.791820 
 converged
 # weights:  41
-initial  value 11229.423890 
-iter  10 value 2694.008197
-iter  20 value 2600.923681
-iter  30 value 2577.638259
-iter  40 value 2536.158045
-iter  50 value 2508.681038
-iter  60 value 2499.315564
-iter  70 value 2484.879977
-iter  80 value 2455.474343
-iter  90 value 2424.456649
-iter 100 value 2417.470208
-final  value 2417.470208 
+initial  value 9566.907434 
+iter  10 value 2807.132933
+iter  20 value 2641.049388
+iter  30 value 2532.824587
+iter  40 value 2475.886619
+iter  50 value 2412.952279
+iter  60 value 2356.654760
+iter  70 value 2340.404235
+iter  80 value 2324.673697
+iter  90 value 2323.621447
+iter 100 value 2323.198457
+final  value 2323.198457 
 stopped after 100 iterations
 # weights:  65
-initial  value 10431.621014 
-iter  10 value 2754.471053
-iter  20 value 2586.536437
-iter  30 value 2521.140720
-iter  40 value 2454.194542
-iter  50 value 2408.707645
-iter  60 value 2373.702466
-iter  70 value 2345.704126
-iter  80 value 2327.527419
-iter  90 value 2314.175034
-iter 100 value 2302.218627
-final  value 2302.218627 
+initial  value 8510.624687 
+iter  10 value 2874.589757
+iter  20 value 2556.496009
+iter  30 value 2473.564417
+iter  40 value 2415.199915
+iter  50 value 2346.517095
+iter  60 value 2296.070427
+iter  70 value 2257.717032
+iter  80 value 2241.132931
+iter  90 value 2229.204956
+iter 100 value 2224.045131
+final  value 2224.045131 
 stopped after 100 iterations
 # weights:  17
-initial  value 9642.676839 
-iter  10 value 3534.639601
-iter  20 value 2826.999763
-iter  30 value 2766.109211
-iter  40 value 2746.580038
-iter  50 value 2742.465130
-iter  60 value 2740.311229
-final  value 2740.294150 
+initial  value 10169.566532 
+iter  10 value 3676.797306
+iter  20 value 2829.029727
+iter  30 value 2760.110600
+iter  40 value 2743.795815
+iter  50 value 2743.394785
+iter  60 value 2742.275255
+final  value 2742.275167 
 converged
 # weights:  41
-initial  value 6421.072903 
-iter  10 value 2960.255797
-iter  20 value 2691.101328
-iter  30 value 2636.832920
-iter  40 value 2575.213553
-iter  50 value 2506.542747
-iter  60 value 2470.029856
-iter  70 value 2451.288577
-iter  80 value 2435.993530
-iter  90 value 2432.196770
-iter 100 value 2430.896444
-final  value 2430.896444 
+initial  value 11617.782694 
+iter  10 value 2788.383587
+iter  20 value 2671.591862
+iter  30 value 2548.763821
+iter  40 value 2482.115364
+iter  50 value 2448.680547
+iter  60 value 2442.085874
+iter  70 value 2438.535505
+iter  80 value 2435.011344
+iter  90 value 2430.017432
+iter 100 value 2424.469195
+final  value 2424.469195 
 stopped after 100 iterations
 # weights:  65
-initial  value 9766.419088 
-iter  10 value 2858.024473
-iter  20 value 2682.086437
-iter  30 value 2559.624236
-iter  40 value 2513.990129
-iter  50 value 2452.152355
-iter  60 value 2337.089237
-iter  70 value 2284.763214
-iter  80 value 2252.564940
-iter  90 value 2229.352789
-iter 100 value 2223.272054
-final  value 2223.272054 
+initial  value 13131.490243 
+iter  10 value 2749.037275
+iter  20 value 2498.928123
+iter  30 value 2374.921797
+iter  40 value 2336.658645
+iter  50 value 2311.549044
+iter  60 value 2281.893864
+iter  70 value 2268.137856
+iter  80 value 2263.577192
+iter  90 value 2246.717325
+iter 100 value 2241.833057
+final  value 2241.833057 
 stopped after 100 iterations
 # weights:  17
-initial  value 8302.944013 
-iter  10 value 3046.920947
-iter  20 value 2853.623048
-iter  30 value 2809.131916
-iter  40 value 2803.783097
-iter  50 value 2790.773120
-final  value 2789.865792 
+initial  value 11330.263462 
+iter  10 value 3574.662396
+iter  20 value 2962.546134
+iter  30 value 2868.002906
+iter  40 value 2858.709207
+iter  50 value 2856.715571
+final  value 2856.512374 
 converged
 # weights:  41
-initial  value 9736.101368 
-iter  10 value 2882.070779
-iter  20 value 2719.154999
-iter  30 value 2628.770661
-iter  40 value 2566.895665
-iter  50 value 2544.112173
-iter  60 value 2535.361156
-iter  70 value 2524.542232
-iter  80 value 2514.740082
-iter  90 value 2513.874197
-iter 100 value 2512.773863
-final  value 2512.773863 
+initial  value 9630.607705 
+iter  10 value 2956.529759
+iter  20 value 2756.581397
+iter  30 value 2675.750400
+iter  40 value 2604.376921
+iter  50 value 2588.329579
+iter  60 value 2572.200352
+iter  70 value 2548.603656
+iter  80 value 2538.083479
+iter  90 value 2537.513275
+iter 100 value 2537.215167
+final  value 2537.215167 
 stopped after 100 iterations
 # weights:  65
-initial  value 14008.929408 
-iter  10 value 2889.049597
-iter  20 value 2711.527045
-iter  30 value 2593.964625
-iter  40 value 2534.108624
-iter  50 value 2503.057643
-iter  60 value 2475.143117
-iter  70 value 2445.805116
-iter  80 value 2406.525015
-iter  90 value 2322.235640
-iter 100 value 2306.959248
-final  value 2306.959248 
+initial  value 9048.451697 
+iter  10 value 3035.166603
+iter  20 value 2718.463697
+iter  30 value 2564.925570
+iter  40 value 2453.900890
+iter  50 value 2395.225734
+iter  60 value 2361.599771
+iter  70 value 2338.805363
+iter  80 value 2323.816622
+iter  90 value 2317.213544
+iter 100 value 2310.181517
+final  value 2310.181517 
 stopped after 100 iterations
 # weights:  17
-initial  value 8713.953353 
-iter  10 value 3422.563214
-iter  20 value 2814.450685
-iter  30 value 2752.623236
-iter  40 value 2741.630128
-iter  50 value 2740.844642
-iter  60 value 2740.727522
-final  value 2740.726846 
+initial  value 8972.838217 
+iter  10 value 3273.333242
+iter  20 value 2812.855907
+iter  30 value 2759.284596
+iter  40 value 2746.505562
+iter  50 value 2743.760231
+iter  60 value 2742.652017
+final  value 2742.651481 
 converged
 # weights:  41
-initial  value 7178.101260 
-iter  10 value 2791.498662
-iter  20 value 2678.514211
-iter  30 value 2553.690057
-iter  40 value 2503.190915
-iter  50 value 2483.544140
-iter  60 value 2469.617210
-iter  70 value 2449.550711
-iter  80 value 2439.516553
-iter  90 value 2424.038716
-iter 100 value 2407.371970
-final  value 2407.371970 
+initial  value 8848.993949 
+iter  10 value 2996.988710
+iter  20 value 2633.348518
+iter  30 value 2534.170773
+iter  40 value 2471.694113
+iter  50 value 2439.752044
+iter  60 value 2425.973397
+iter  70 value 2415.752985
+iter  80 value 2412.569619
+iter  90 value 2411.572964
+iter 100 value 2410.848899
+final  value 2410.848899 
 stopped after 100 iterations
 # weights:  65
-initial  value 11249.618450 
-iter  10 value 2922.890836
-iter  20 value 2616.884618
-iter  30 value 2525.774462
-iter  40 value 2493.515393
-iter  50 value 2471.648529
-iter  60 value 2442.906256
-iter  70 value 2427.628749
-iter  80 value 2396.936877
-iter  90 value 2327.911504
-iter 100 value 2308.819410
-final  value 2308.819410 
+initial  value 9534.120605 
+iter  10 value 2820.343324
+iter  20 value 2522.531385
+iter  30 value 2404.230073
+iter  40 value 2317.430937
+iter  50 value 2279.811992
+iter  60 value 2252.495202
+iter  70 value 2226.069457
+iter  80 value 2211.298454
+iter  90 value 2207.122616
+iter 100 value 2202.093157
+final  value 2202.093157 
 stopped after 100 iterations
 # weights:  17
-initial  value 8174.163580 
-iter  10 value 3446.375517
-iter  20 value 3005.689211
-iter  30 value 2831.937098
-iter  40 value 2785.475030
-iter  50 value 2770.494137
-iter  60 value 2761.830552
-final  value 2761.220674 
+initial  value 8083.737048 
+iter  10 value 3115.860195
+iter  20 value 2840.062268
+iter  30 value 2771.317958
+iter  40 value 2762.380068
+iter  50 value 2760.912610
+iter  60 value 2758.023585
+final  value 2758.019208 
 converged
 # weights:  41
-initial  value 8737.080662 
-iter  10 value 2840.759892
-iter  20 value 2617.358804
-iter  30 value 2523.169339
-iter  40 value 2498.972576
-iter  50 value 2476.688327
-iter  60 value 2463.213255
-iter  70 value 2454.892869
-iter  80 value 2451.656040
-iter  90 value 2450.854346
-iter 100 value 2449.598984
-final  value 2449.598984 
+initial  value 9869.583262 
+iter  10 value 2889.994601
+iter  20 value 2778.695410
+iter  30 value 2700.665575
+iter  40 value 2648.767447
+iter  50 value 2611.230081
+iter  60 value 2562.996606
+iter  70 value 2528.591452
+iter  80 value 2493.755335
+iter  90 value 2463.801305
+iter 100 value 2455.665474
+final  value 2455.665474 
 stopped after 100 iterations
 # weights:  65
-initial  value 6123.536390 
-iter  10 value 2720.024467
-iter  20 value 2600.960617
-iter  30 value 2535.164387
-iter  40 value 2421.519330
-iter  50 value 2339.862803
-iter  60 value 2279.793302
-iter  70 value 2260.502477
-iter  80 value 2253.639634
-iter  90 value 2247.755109
-iter 100 value 2241.904380
-final  value 2241.904380 
+initial  value 8616.677796 
+iter  10 value 2776.318806
+iter  20 value 2541.972099
+iter  30 value 2472.429094
+iter  40 value 2375.586097
+iter  50 value 2285.117463
+iter  60 value 2264.551153
+iter  70 value 2255.943342
+iter  80 value 2251.816430
+iter  90 value 2245.061747
+iter 100 value 2236.854427
+final  value 2236.854427 
 stopped after 100 iterations
 # weights:  17
-initial  value 8843.753887 
-iter  10 value 4497.015295
-iter  20 value 3971.140293
-iter  30 value 3771.174960
-iter  40 value 3154.365637
-iter  50 value 2967.076820
-iter  60 value 2871.862062
-iter  70 value 2820.849694
-iter  80 value 2814.112869
-final  value 2812.041601 
+initial  value 8543.822408 
+iter  10 value 3803.742831
+iter  20 value 2943.011901
+iter  30 value 2833.321287
+iter  40 value 2817.426471
+iter  50 value 2809.592849
+final  value 2809.543397 
 converged
 # weights:  41
-initial  value 10895.109057 
-iter  10 value 3094.810862
-iter  20 value 2870.648989
-iter  30 value 2696.324741
-iter  40 value 2645.355170
-iter  50 value 2585.464306
-iter  60 value 2571.587502
-iter  70 value 2563.246422
-iter  80 value 2555.937697
-iter  90 value 2548.583927
-iter 100 value 2542.474584
-final  value 2542.474584 
+initial  value 13527.530968 
+iter  10 value 3383.741003
+iter  20 value 3050.621055
+iter  30 value 2801.552055
+iter  40 value 2666.856258
+iter  50 value 2569.881994
+iter  60 value 2531.500887
+iter  70 value 2489.431388
+iter  80 value 2471.111183
+iter  90 value 2467.298832
+iter 100 value 2464.952151
+final  value 2464.952151 
 stopped after 100 iterations
 # weights:  65
-initial  value 9986.031303 
-iter  10 value 2771.939908
-iter  20 value 2599.888849
-iter  30 value 2547.117583
-iter  40 value 2508.628817
-iter  50 value 2472.187088
-iter  60 value 2453.244204
-iter  70 value 2438.490378
-iter  80 value 2431.101068
-iter  90 value 2430.765616
-iter 100 value 2430.725567
-final  value 2430.725567 
+initial  value 11645.899715 
+iter  10 value 2771.987651
+iter  20 value 2594.281666
+iter  30 value 2490.118234
+iter  40 value 2410.029229
+iter  50 value 2372.018718
+iter  60 value 2342.288305
+iter  70 value 2333.507770
+iter  80 value 2329.234488
+iter  90 value 2327.005000
+iter 100 value 2326.182736
+final  value 2326.182736 
 stopped after 100 iterations
 # weights:  17
-initial  value 7260.975654 
-iter  10 value 3055.324865
-iter  20 value 2850.151410
-iter  30 value 2777.746476
-iter  40 value 2765.263057
-iter  50 value 2763.949815
-iter  60 value 2761.496406
-final  value 2761.496173 
+initial  value 9360.617983 
+iter  10 value 2998.747673
+iter  20 value 2813.154445
+iter  30 value 2780.209340
+iter  40 value 2777.690051
+iter  50 value 2767.722648
+iter  60 value 2760.115512
+iter  70 value 2758.517282
+final  value 2758.515055 
 converged
 # weights:  41
-initial  value 12547.509401 
-iter  10 value 3136.771491
-iter  20 value 2834.626547
-iter  30 value 2760.347302
-iter  40 value 2671.844884
-iter  50 value 2632.730762
-iter  60 value 2592.555588
-iter  70 value 2529.040855
-iter  80 value 2481.176592
-iter  90 value 2474.611619
-iter 100 value 2468.321998
-final  value 2468.321998 
+initial  value 12497.633532 
+iter  10 value 2838.153589
+iter  20 value 2691.982879
+iter  30 value 2633.773254
+iter  40 value 2593.701965
+iter  50 value 2578.127080
+iter  60 value 2558.212740
+iter  70 value 2539.739583
+iter  80 value 2523.028066
+iter  90 value 2518.043337
+iter 100 value 2516.065560
+final  value 2516.065560 
 stopped after 100 iterations
 # weights:  65
-initial  value 7277.657038 
-iter  10 value 2862.183755
-iter  20 value 2589.464861
-iter  30 value 2516.489197
-iter  40 value 2473.873899
-iter  50 value 2403.150569
-iter  60 value 2313.731940
-iter  70 value 2276.772744
-iter  80 value 2268.766506
-iter  90 value 2257.419537
-iter 100 value 2244.751304
-final  value 2244.751304 
+initial  value 13450.612280 
+iter  10 value 2873.486456
+iter  20 value 2591.853497
+iter  30 value 2525.527951
+iter  40 value 2490.493860
+iter  50 value 2472.059059
+iter  60 value 2443.478463
+iter  70 value 2430.687197
+iter  80 value 2424.817993
+iter  90 value 2413.043899
+iter 100 value 2404.388846
+final  value 2404.388846 
 stopped after 100 iterations
 # weights:  17
-initial  value 9660.755875 
-iter  10 value 4127.082704
-iter  20 value 3786.288748
-iter  30 value 3212.894858
-iter  40 value 3109.808299
-iter  50 value 3057.415947
-iter  60 value 3027.635090
-iter  70 value 3006.827343
-iter  80 value 2963.472205
-iter  90 value 2855.360789
-iter 100 value 2815.285655
-final  value 2815.285655 
-stopped after 100 iterations
-# weights:  41
-initial  value 9871.389155 
-iter  10 value 3034.123268
-iter  20 value 2737.212248
-iter  30 value 2566.665096
-iter  40 value 2511.755847
-iter  50 value 2468.268277
-iter  60 value 2446.903233
-iter  70 value 2430.928430
-iter  80 value 2422.227344
-iter  90 value 2414.587669
-iter 100 value 2407.138957
-final  value 2407.138957 
-stopped after 100 iterations
-# weights:  65
-initial  value 10481.564064 
-iter  10 value 2832.196589
-iter  20 value 2593.802305
-iter  30 value 2490.955807
-iter  40 value 2386.894012
-iter  50 value 2332.535804
-iter  60 value 2291.165607
-iter  70 value 2277.412505
-iter  80 value 2272.075319
-iter  90 value 2268.321989
-iter 100 value 2265.395091
-final  value 2265.395091 
-stopped after 100 iterations
-# weights:  17
-initial  value 7980.015251 
-iter  10 value 3572.668978
-iter  20 value 2856.932805
-iter  30 value 2805.419589
-iter  40 value 2800.854906
-iter  50 value 2800.028073
-final  value 2800.015453 
+initial  value 7715.881196 
+iter  10 value 3215.109987
+iter  20 value 2803.001923
+iter  30 value 2747.727275
+iter  40 value 2739.481220
+iter  50 value 2738.678846
+iter  60 value 2737.796559
+final  value 2737.796517 
 converged
 # weights:  41
-initial  value 9956.093717 
-iter  10 value 2917.562253
-iter  20 value 2812.833828
-iter  30 value 2715.688847
-iter  40 value 2654.430375
-iter  50 value 2621.911059
-iter  60 value 2605.220643
-iter  70 value 2589.786853
-iter  80 value 2583.681740
-iter  90 value 2582.759766
-iter 100 value 2582.511164
-final  value 2582.511164 
+initial  value 11201.737592 
+iter  10 value 2949.531549
+iter  20 value 2729.224014
+iter  30 value 2627.897312
+iter  40 value 2574.828860
+iter  50 value 2558.954079
+iter  60 value 2542.665114
+iter  70 value 2498.656940
+iter  80 value 2475.501841
+iter  90 value 2470.913380
+iter 100 value 2469.550060
+final  value 2469.550060 
 stopped after 100 iterations
 # weights:  65
-initial  value 7136.037816 
-iter  10 value 2792.099788
-iter  20 value 2615.899667
-iter  30 value 2528.689325
-iter  40 value 2467.132452
-iter  50 value 2441.715002
-iter  60 value 2422.351134
-iter  70 value 2413.301859
-iter  80 value 2391.986935
-iter  90 value 2377.980262
-iter 100 value 2368.432017
-final  value 2368.432017 
+initial  value 8033.899933 
+iter  10 value 2820.366900
+iter  20 value 2588.062725
+iter  30 value 2484.724801
+iter  40 value 2375.113886
+iter  50 value 2323.195286
+iter  60 value 2290.207326
+iter  70 value 2277.332053
+iter  80 value 2270.578337
+iter  90 value 2258.662956
+iter 100 value 2243.648839
+final  value 2243.648839 
 stopped after 100 iterations
 # weights:  17
-initial  value 7743.623542 
-iter  10 value 3458.935070
-iter  20 value 2769.250501
-iter  30 value 2752.701148
-iter  40 value 2751.123279
-iter  50 value 2750.844912
-iter  60 value 2749.171687
-final  value 2749.171518 
+initial  value 9972.748031 
+iter  10 value 4075.012397
+iter  20 value 3542.543821
+iter  30 value 2947.651073
+iter  40 value 2793.511026
+iter  50 value 2790.357739
+final  value 2790.331871 
 converged
 # weights:  41
-initial  value 11929.844460 
-iter  10 value 2894.259436
-iter  20 value 2738.355668
-iter  30 value 2665.062360
-iter  40 value 2614.478890
-iter  50 value 2542.988506
-iter  60 value 2493.044010
-iter  70 value 2473.514148
-iter  80 value 2459.445800
-iter  90 value 2449.296348
-iter 100 value 2443.447519
-final  value 2443.447519 
+initial  value 9506.961580 
+iter  10 value 2668.165292
+iter  20 value 2592.845232
+iter  30 value 2515.170365
+iter  40 value 2478.824630
+iter  50 value 2469.130164
+iter  60 value 2466.823752
+iter  70 value 2466.180093
+iter  80 value 2465.862388
+iter  90 value 2465.833506
+iter 100 value 2465.801260
+final  value 2465.801260 
 stopped after 100 iterations
 # weights:  65
-initial  value 10728.328635 
-iter  10 value 2689.545381
-iter  20 value 2526.607655
-iter  30 value 2413.400036
-iter  40 value 2313.255011
-iter  50 value 2273.343975
-iter  60 value 2244.066489
-iter  70 value 2228.035043
-iter  80 value 2213.928694
-iter  90 value 2205.354585
-iter 100 value 2201.216636
-final  value 2201.216636 
+initial  value 9963.711292 
+iter  10 value 2747.462131
+iter  20 value 2561.566602
+iter  30 value 2498.653140
+iter  40 value 2409.637714
+iter  50 value 2364.314281
+iter  60 value 2322.234710
+iter  70 value 2302.721953
+iter  80 value 2295.813496
+iter  90 value 2290.245335
+iter 100 value 2287.423917
+final  value 2287.423917 
 stopped after 100 iterations
 # weights:  17
-initial  value 13392.468059 
-iter  10 value 3906.169385
-iter  20 value 2992.899079
-iter  30 value 2826.933041
-iter  40 value 2819.028138
-iter  50 value 2816.429879
-iter  60 value 2811.367541
-iter  70 value 2806.188446
-final  value 2806.188160 
+initial  value 8512.318759 
+iter  10 value 3229.535330
+iter  20 value 2948.328296
+iter  30 value 2769.968731
+iter  40 value 2747.052544
+iter  50 value 2743.558607
+iter  60 value 2738.106421
+final  value 2738.106341 
 converged
 # weights:  41
-initial  value 9128.948512 
-iter  10 value 2870.338060
-iter  20 value 2698.607859
-iter  30 value 2615.106965
-iter  40 value 2577.514406
-iter  50 value 2542.492695
-iter  60 value 2522.693451
-iter  70 value 2504.202333
-iter  80 value 2481.295143
-iter  90 value 2469.582347
-iter 100 value 2466.697908
-final  value 2466.697908 
+initial  value 13992.134012 
+iter  10 value 3434.710542
+iter  20 value 3110.319130
+iter  30 value 2795.123209
+iter  40 value 2538.020598
+iter  50 value 2441.953500
+iter  60 value 2427.380217
+iter  70 value 2416.842261
+iter  80 value 2411.670289
+iter  90 value 2407.702958
+iter 100 value 2406.204142
+final  value 2406.204142 
 stopped after 100 iterations
 # weights:  65
-initial  value 13112.850778 
-iter  10 value 3143.097160
-iter  20 value 2702.946649
-iter  30 value 2535.542275
-iter  40 value 2430.851321
-iter  50 value 2387.290538
-iter  60 value 2353.660853
-iter  70 value 2332.407022
-iter  80 value 2304.402148
-iter  90 value 2290.440088
-iter 100 value 2273.807950
-final  value 2273.807950 
+initial  value 11880.428390 
+iter  10 value 2673.245070
+iter  20 value 2515.019117
+iter  30 value 2396.932720
+iter  40 value 2328.481753
+iter  50 value 2306.236673
+iter  60 value 2292.666893
+iter  70 value 2281.886963
+iter  80 value 2274.196441
+iter  90 value 2269.579526
+iter 100 value 2265.300053
+final  value 2265.300053 
 stopped after 100 iterations
 # weights:  17
-initial  value 11170.855214 
-iter  10 value 4003.171050
-iter  20 value 3522.665926
-iter  30 value 3035.711629
-iter  40 value 2915.342565
-iter  50 value 2876.882667
-final  value 2875.672344 
+initial  value 6892.179505 
+iter  10 value 3512.402501
+iter  20 value 2965.249870
+iter  30 value 2843.278128
+iter  40 value 2751.595942
+iter  50 value 2737.449747
+iter  60 value 2728.661384
+final  value 2728.358017 
 converged
 # weights:  41
-initial  value 14749.979858 
-iter  10 value 2967.084236
-iter  20 value 2741.622108
-iter  30 value 2686.154848
-iter  40 value 2640.286732
-iter  50 value 2540.160421
-iter  60 value 2480.046635
-iter  70 value 2461.950890
-iter  80 value 2439.541629
-iter  90 value 2431.592835
-iter 100 value 2428.395990
-final  value 2428.395990 
+initial  value 9924.889559 
+iter  10 value 3045.887148
+iter  20 value 2746.721180
+iter  30 value 2649.980593
+iter  40 value 2598.194007
+iter  50 value 2581.873502
+iter  60 value 2575.209428
+iter  70 value 2564.994202
+iter  80 value 2559.350681
+iter  90 value 2556.784740
+iter 100 value 2551.945994
+final  value 2551.945994 
 stopped after 100 iterations
 # weights:  65
-initial  value 8678.323423 
-iter  10 value 3015.325329
-iter  20 value 2714.116304
-iter  30 value 2606.680844
-iter  40 value 2572.519402
-iter  50 value 2530.268328
-iter  60 value 2498.941874
-iter  70 value 2408.815206
-iter  80 value 2356.331595
-iter  90 value 2331.745689
-iter 100 value 2317.577978
-final  value 2317.577978 
+initial  value 7282.335796 
+iter  10 value 2871.448541
+iter  20 value 2630.601924
+iter  30 value 2465.146647
+iter  40 value 2416.689867
+iter  50 value 2366.766140
+iter  60 value 2332.316076
+iter  70 value 2307.509755
+iter  80 value 2288.151921
+iter  90 value 2273.870583
+iter 100 value 2267.755155
+final  value 2267.755155 
 stopped after 100 iterations
 # weights:  17
-initial  value 10797.007046 
-iter  10 value 3731.883189
-iter  20 value 3034.680767
-iter  30 value 2929.448826
-iter  40 value 2810.528782
-iter  50 value 2774.972613
-iter  60 value 2755.217026
-iter  70 value 2753.178720
-final  value 2753.171359 
+initial  value 9651.093378 
+iter  10 value 3103.419935
+iter  20 value 2848.793967
+iter  30 value 2789.157696
+iter  40 value 2781.616978
+iter  50 value 2779.016474
+final  value 2778.926880 
 converged
 # weights:  41
-initial  value 9958.865182 
-iter  10 value 2907.804896
-iter  20 value 2646.466656
-iter  30 value 2557.297123
-iter  40 value 2526.706960
-iter  50 value 2494.715930
-iter  60 value 2457.281836
-iter  70 value 2437.581818
-iter  80 value 2407.194127
-iter  90 value 2365.256325
-iter 100 value 2338.699108
-final  value 2338.699108 
+initial  value 7343.369599 
+iter  10 value 2821.184093
+iter  20 value 2653.473906
+iter  30 value 2614.185341
+iter  40 value 2578.049064
+iter  50 value 2545.734874
+iter  60 value 2533.080103
+iter  70 value 2527.627926
+iter  80 value 2519.465507
+iter  90 value 2516.074982
+iter 100 value 2514.453195
+final  value 2514.453195 
 stopped after 100 iterations
 # weights:  65
-initial  value 6580.310741 
-iter  10 value 2738.762202
-iter  20 value 2545.802669
-iter  30 value 2450.336277
-iter  40 value 2390.201749
-iter  50 value 2351.011996
-iter  60 value 2311.221890
-iter  70 value 2296.881989
-iter  80 value 2282.428342
-iter  90 value 2270.895219
-iter 100 value 2258.317836
-final  value 2258.317836 
+initial  value 7781.479184 
+iter  10 value 2774.845288
+iter  20 value 2564.692431
+iter  30 value 2495.928026
+iter  40 value 2393.222190
+iter  50 value 2351.157657
+iter  60 value 2325.167242
+iter  70 value 2311.599536
+iter  80 value 2300.727987
+iter  90 value 2297.526663
+iter 100 value 2296.735407
+final  value 2296.735407 
 stopped after 100 iterations
 # weights:  17
-initial  value 7062.000613 
-iter  10 value 3494.608555
-iter  20 value 2939.357047
-iter  30 value 2833.416306
-iter  40 value 2776.345979
-iter  50 value 2748.494346
-iter  60 value 2736.766958
-iter  70 value 2731.737331
-iter  80 value 2731.520601
-iter  90 value 2731.502194
-final  value 2731.426779 
+initial  value 7042.797034 
+iter  10 value 3758.721156
+iter  20 value 2973.350023
+iter  30 value 2831.464400
+iter  40 value 2756.238274
+iter  50 value 2738.314340
+iter  60 value 2729.669740
+final  value 2728.665905 
 converged
 # weights:  41
-initial  value 6706.765184 
-iter  10 value 2730.528488
-iter  20 value 2627.601990
-iter  30 value 2556.602925
-iter  40 value 2500.522415
-iter  50 value 2450.805245
-iter  60 value 2437.633347
-iter  70 value 2431.811211
-iter  80 value 2424.745891
-iter  90 value 2399.486954
-iter 100 value 2390.865582
-final  value 2390.865582 
+initial  value 10957.987693 
+iter  10 value 2819.159860
+iter  20 value 2709.916358
+iter  30 value 2608.338322
+iter  40 value 2484.758022
+iter  50 value 2442.830587
+iter  60 value 2433.665831
+iter  70 value 2422.833415
+iter  80 value 2399.462862
+iter  90 value 2378.922067
+iter 100 value 2341.316751
+final  value 2341.316751 
 stopped after 100 iterations
 # weights:  65
-initial  value 7995.211003 
-iter  10 value 2964.454990
-iter  20 value 2667.137551
-iter  30 value 2562.279319
-iter  40 value 2500.980737
-iter  50 value 2463.585352
-iter  60 value 2403.106696
-iter  70 value 2356.569831
-iter  80 value 2328.892837
-iter  90 value 2311.726599
-iter 100 value 2306.082565
-final  value 2306.082565 
+initial  value 7381.117920 
+iter  10 value 2764.973572
+iter  20 value 2486.225840
+iter  30 value 2371.683382
+iter  40 value 2314.186357
+iter  50 value 2262.886937
+iter  60 value 2239.413721
+iter  70 value 2214.177028
+iter  80 value 2207.184903
+iter  90 value 2204.684072
+iter 100 value 2202.941829
+final  value 2202.941829 
 stopped after 100 iterations
 # weights:  17
-initial  value 9442.654723 
-iter  10 value 3922.546473
-iter  20 value 3095.745989
-iter  30 value 2845.944815
-iter  40 value 2789.000805
-final  value 2788.189812 
+initial  value 7363.821434 
+iter  10 value 3620.571164
+iter  20 value 2939.127167
+iter  30 value 2767.232672
+iter  40 value 2759.407604
+iter  50 value 2745.767511
+iter  60 value 2739.620034
+iter  70 value 2738.689021
+final  value 2738.688892 
 converged
 # weights:  41
-initial  value 8716.311715 
-iter  10 value 2778.778914
-iter  20 value 2689.716538
-iter  30 value 2617.253222
-iter  40 value 2591.541420
-iter  50 value 2563.115975
-iter  60 value 2555.863126
-iter  70 value 2554.926288
-iter  80 value 2554.602760
-iter  90 value 2554.476899
-iter 100 value 2554.303377
-final  value 2554.303377 
+initial  value 10575.409918 
+iter  10 value 3356.253807
+iter  20 value 2811.468707
+iter  30 value 2651.160650
+iter  40 value 2556.698599
+iter  50 value 2508.974998
+iter  60 value 2481.795627
+iter  70 value 2457.859843
+iter  80 value 2444.563820
+iter  90 value 2438.880387
+iter 100 value 2436.554455
+final  value 2436.554455 
 stopped after 100 iterations
 # weights:  65
-initial  value 11491.713986 
-iter  10 value 2797.407956
-iter  20 value 2525.556831
-iter  30 value 2452.595415
-iter  40 value 2418.039446
-iter  50 value 2387.425831
-iter  60 value 2364.104993
-iter  70 value 2341.971371
-iter  80 value 2332.245596
-iter  90 value 2323.712906
-iter 100 value 2320.710450
-final  value 2320.710450 
+initial  value 12265.360023 
+iter  10 value 2803.527752
+iter  20 value 2635.124942
+iter  30 value 2469.504617
+iter  40 value 2367.500945
+iter  50 value 2329.518005
+iter  60 value 2302.079837
+iter  70 value 2261.191793
+iter  80 value 2246.107446
+iter  90 value 2235.379684
+iter 100 value 2229.279718
+final  value 2229.279718 
 stopped after 100 iterations
 # weights:  17
-initial  value 8853.200833 
-iter  10 value 3336.428556
-iter  20 value 2914.980211
-iter  30 value 2769.048415
-iter  40 value 2752.716660
-iter  50 value 2743.364369
-iter  60 value 2732.725815
-final  value 2732.707591 
+initial  value 13607.639506 
+iter  10 value 3538.221165
+iter  20 value 2898.845817
+iter  30 value 2804.427629
+iter  40 value 2790.768792
+iter  50 value 2787.246550
+final  value 2787.175010 
 converged
 # weights:  41
-initial  value 11494.488094 
-iter  10 value 3020.780234
-iter  20 value 2744.202967
-iter  30 value 2575.463563
-iter  40 value 2470.732105
-iter  50 value 2435.398152
-iter  60 value 2423.697730
-iter  70 value 2417.003668
-iter  80 value 2409.987105
-iter  90 value 2408.352592
-iter 100 value 2407.707454
-final  value 2407.707454 
+initial  value 10804.186354 
+iter  10 value 2841.281834
+iter  20 value 2717.548266
+iter  30 value 2675.236063
+iter  40 value 2638.925948
+iter  50 value 2615.950882
+iter  60 value 2596.327453
+iter  70 value 2555.698859
+iter  80 value 2551.239148
+iter  90 value 2550.382370
+iter 100 value 2548.550874
+final  value 2548.550874 
 stopped after 100 iterations
 # weights:  65
-initial  value 17005.942681 
-iter  10 value 3276.555324
-iter  20 value 2815.220919
-iter  30 value 2678.586706
-iter  40 value 2615.825893
-iter  50 value 2573.822878
-iter  60 value 2513.979619
-iter  70 value 2448.134762
-iter  80 value 2401.251267
-iter  90 value 2370.659680
-iter 100 value 2335.693745
-final  value 2335.693745 
+initial  value 13623.033677 
+iter  10 value 2910.831677
+iter  20 value 2627.776577
+iter  30 value 2488.715063
+iter  40 value 2415.337130
+iter  50 value 2375.313349
+iter  60 value 2352.643706
+iter  70 value 2339.089785
+iter  80 value 2329.129723
+iter  90 value 2323.746092
+iter 100 value 2316.347027
+final  value 2316.347027 
 stopped after 100 iterations
 # weights:  17
-initial  value 8757.422409 
-iter  10 value 3160.451809
-iter  20 value 2930.407102
-iter  30 value 2795.323850
-iter  40 value 2764.322631
-iter  50 value 2749.033494
-iter  60 value 2741.437418
-final  value 2741.409116 
+initial  value 9168.983916 
+iter  10 value 3870.220277
+iter  20 value 3056.717850
+iter  30 value 2881.239670
+iter  40 value 2781.637691
+iter  50 value 2750.821565
+iter  60 value 2740.091011
+iter  70 value 2739.041826
+iter  70 value 2739.041817
+iter  70 value 2739.041817
+final  value 2739.041817 
 converged
 # weights:  41
-initial  value 8470.838903 
-iter  10 value 2915.393934
-iter  20 value 2715.239948
-iter  30 value 2623.683544
-iter  40 value 2584.737481
-iter  50 value 2578.243123
-iter  60 value 2569.605370
-iter  70 value 2567.079182
-iter  80 value 2565.365252
-iter  90 value 2561.457455
-iter 100 value 2555.976744
-final  value 2555.976744 
+initial  value 8784.390606 
+iter  10 value 2873.303420
+iter  20 value 2722.238361
+iter  30 value 2636.194595
+iter  40 value 2562.270815
+iter  50 value 2527.639997
+iter  60 value 2506.326725
+iter  70 value 2496.828986
+iter  80 value 2433.500442
+iter  90 value 2428.134065
+iter 100 value 2426.580923
+final  value 2426.580923 
 stopped after 100 iterations
 # weights:  65
-initial  value 9059.074909 
-iter  10 value 2932.563439
-iter  20 value 2600.571111
-iter  30 value 2463.342228
-iter  40 value 2388.625933
-iter  50 value 2312.021266
-iter  60 value 2283.653816
-iter  70 value 2250.895631
-iter  80 value 2230.500854
-iter  90 value 2222.678149
-iter 100 value 2216.862960
-final  value 2216.862960 
+initial  value 6522.330632 
+iter  10 value 2862.775600
+iter  20 value 2551.078524
+iter  30 value 2486.896135
+iter  40 value 2397.225940
+iter  50 value 2351.159857
+iter  60 value 2320.613969
+iter  70 value 2299.016480
+iter  80 value 2281.672998
+iter  90 value 2273.814821
+iter 100 value 2267.218300
+final  value 2267.218300 
 stopped after 100 iterations
 # weights:  17
-initial  value 11339.648984 
-iter  10 value 3615.932828
-iter  20 value 3003.494425
-iter  30 value 2904.346729
-iter  40 value 2900.180592
-iter  50 value 2900.014999
-final  value 2900.011937 
+initial  value 7350.970527 
+iter  10 value 3913.112825
+iter  20 value 3647.187196
+iter  30 value 3074.366895
+iter  40 value 2968.249334
+iter  50 value 2860.017717
+iter  60 value 2779.858373
+iter  70 value 2763.384698
+iter  80 value 2762.068566
+iter  90 value 2758.717121
+final  value 2758.634761 
 converged
 # weights:  41
-initial  value 10747.984654 
-iter  10 value 2915.184457
-iter  20 value 2730.683664
-iter  30 value 2673.875523
-iter  40 value 2618.294910
-iter  50 value 2591.731244
-iter  60 value 2579.673218
-iter  70 value 2571.887208
-iter  80 value 2552.144412
-iter  90 value 2533.524421
-iter 100 value 2522.641160
-final  value 2522.641160 
+initial  value 9140.108032 
+iter  10 value 2951.208571
+iter  20 value 2686.234055
+iter  30 value 2600.559536
+iter  40 value 2541.289107
+iter  50 value 2488.654471
+iter  60 value 2462.415073
+iter  70 value 2455.484479
+iter  80 value 2454.153198
+iter  90 value 2453.505354
+iter 100 value 2453.259694
+final  value 2453.259694 
 stopped after 100 iterations
 # weights:  65
-initial  value 13210.846712 
-iter  10 value 2734.859948
-iter  20 value 2557.192071
-iter  30 value 2449.952006
-iter  40 value 2381.826129
-iter  50 value 2358.958037
-iter  60 value 2345.828826
-iter  70 value 2335.339289
-iter  80 value 2331.655098
-iter  90 value 2330.064075
-iter 100 value 2329.186051
-final  value 2329.186051 
+initial  value 10183.370531 
+iter  10 value 2750.042032
+iter  20 value 2604.111966
+iter  30 value 2453.832431
+iter  40 value 2386.424036
+iter  50 value 2339.926448
+iter  60 value 2306.062425
+iter  70 value 2279.117251
+iter  80 value 2262.049374
+iter  90 value 2254.854190
+iter 100 value 2247.910688
+final  value 2247.910688 
 stopped after 100 iterations
 # weights:  17
-initial  value 8701.910101 
-iter  10 value 3924.962229
-iter  20 value 3043.270201
-iter  30 value 2799.096877
-iter  40 value 2769.521509
-iter  50 value 2760.137494
-iter  60 value 2742.867651
-iter  70 value 2741.956653
-iter  80 value 2741.836309
-iter  90 value 2741.718486
-final  value 2741.686726 
+initial  value 9967.260194 
+iter  10 value 3577.179473
+iter  20 value 2922.825091
+iter  30 value 2885.706136
+iter  40 value 2883.485924
+iter  50 value 2882.740982
+final  value 2882.734332 
 converged
 # weights:  41
-initial  value 8335.981458 
-iter  10 value 2837.051895
-iter  20 value 2691.616719
-iter  30 value 2550.289660
-iter  40 value 2517.074297
-iter  50 value 2477.271604
-iter  60 value 2436.556373
-iter  70 value 2416.603755
-iter  80 value 2408.432872
-iter  90 value 2402.717251
-iter 100 value 2401.272602
-final  value 2401.272602 
+initial  value 10978.374489 
+iter  10 value 3022.314356
+iter  20 value 2753.351777
+iter  30 value 2685.993928
+iter  40 value 2564.515496
+iter  50 value 2531.252777
+iter  60 value 2510.247476
+iter  70 value 2496.065206
+iter  80 value 2488.393275
+iter  90 value 2486.324332
+iter 100 value 2485.727868
+final  value 2485.727868 
 stopped after 100 iterations
 # weights:  65
-initial  value 10742.565112 
-iter  10 value 2785.631983
-iter  20 value 2565.024784
-iter  30 value 2405.658354
-iter  40 value 2370.238360
-iter  50 value 2337.769000
-iter  60 value 2314.145130
-iter  70 value 2294.090509
-iter  80 value 2288.081304
-iter  90 value 2278.012686
-iter 100 value 2270.627577
-final  value 2270.627577 
+initial  value 8018.933192 
+iter  10 value 2843.496262
+iter  20 value 2552.007764
+iter  30 value 2444.267684
+iter  40 value 2385.633019
+iter  50 value 2362.971618
+iter  60 value 2344.413174
+iter  70 value 2336.073451
+iter  80 value 2331.641086
+iter  90 value 2328.059453
+iter 100 value 2326.985370
+final  value 2326.985370 
 stopped after 100 iterations
 # weights:  17
-initial  value 9535.599255 
-iter  10 value 3674.738647
-iter  20 value 2854.421787
-iter  30 value 2777.427084
-iter  40 value 2766.422122
-iter  50 value 2766.110183
-final  value 2764.487480 
+initial  value 9134.549307 
+iter  10 value 3556.004132
+iter  20 value 3006.645710
+iter  30 value 2838.129766
+iter  40 value 2834.085413
+iter  50 value 2825.836821
+iter  60 value 2821.495033
+final  value 2819.246122 
 converged
 # weights:  41
-initial  value 13004.501765 
-iter  10 value 2945.650879
-iter  20 value 2770.965511
-iter  30 value 2577.651347
-iter  40 value 2529.282071
-iter  50 value 2498.094582
-iter  60 value 2475.537479
-iter  70 value 2470.279703
-iter  80 value 2467.103793
-iter  90 value 2464.299779
-iter 100 value 2462.145650
-final  value 2462.145650 
+initial  value 10583.361992 
+iter  10 value 2895.372275
+iter  20 value 2726.632748
+iter  30 value 2624.402556
+iter  40 value 2572.474375
+iter  50 value 2519.552895
+iter  60 value 2459.768186
+iter  70 value 2445.774244
+iter  80 value 2436.579742
+iter  90 value 2432.729942
+iter 100 value 2431.331946
+final  value 2431.331946 
 stopped after 100 iterations
 # weights:  65
-initial  value 9445.870310 
-iter  10 value 2790.306634
-iter  20 value 2599.475754
-iter  30 value 2516.501314
-iter  40 value 2475.691382
-iter  50 value 2385.689295
-iter  60 value 2345.608883
-iter  70 value 2324.019127
-iter  80 value 2313.269601
-iter  90 value 2293.556524
-iter 100 value 2278.357562
-final  value 2278.357562 
+initial  value 5304.909402 
+iter  10 value 2773.918106
+iter  20 value 2563.463861
+iter  30 value 2508.508847
+iter  40 value 2457.632245
+iter  50 value 2372.626530
+iter  60 value 2307.654996
+iter  70 value 2275.873958
+iter  80 value 2246.941762
+iter  90 value 2240.343773
+iter 100 value 2237.293720
+final  value 2237.293720 
 stopped after 100 iterations
 # weights:  17
-initial  value 7913.597056 
-iter  10 value 4166.871288
-iter  20 value 3081.632217
-iter  30 value 2939.533437
-iter  40 value 2907.696117
-iter  50 value 2876.860096
-final  value 2875.946889 
+initial  value 10785.894406 
+iter  10 value 3417.765193
+iter  20 value 2920.899804
+iter  30 value 2785.856366
+iter  40 value 2765.477056
+iter  50 value 2760.869496
+iter  60 value 2753.050561
+final  value 2752.909842 
 converged
 # weights:  41
-initial  value 11586.280681 
-iter  10 value 2730.887278
-iter  20 value 2616.956091
-iter  30 value 2577.263741
-iter  40 value 2551.331599
-iter  50 value 2518.090940
-iter  60 value 2507.794610
-iter  70 value 2502.663485
-iter  80 value 2496.894132
-iter  90 value 2489.771111
-iter 100 value 2484.166064
-final  value 2484.166064 
+initial  value 10552.096890 
+iter  10 value 2948.841545
+iter  20 value 2818.381930
+iter  30 value 2770.538797
+iter  40 value 2694.371082
+iter  50 value 2635.295391
+iter  60 value 2555.488555
+iter  70 value 2490.396319
+iter  80 value 2476.785602
+iter  90 value 2470.863518
+iter 100 value 2468.982371
+final  value 2468.982371 
 stopped after 100 iterations
 # weights:  65
-initial  value 9884.294040 
-iter  10 value 2739.011389
-iter  20 value 2591.084931
-iter  30 value 2510.042217
-iter  40 value 2433.740004
-iter  50 value 2374.700326
-iter  60 value 2345.787158
-iter  70 value 2331.271181
-iter  80 value 2325.180661
-iter  90 value 2323.404229
-iter 100 value 2322.464347
-final  value 2322.464347 
+initial  value 8895.887435 
+iter  10 value 2769.718388
+iter  20 value 2526.503913
+iter  30 value 2441.319672
+iter  40 value 2379.910702
+iter  50 value 2287.043951
+iter  60 value 2255.938550
+iter  70 value 2241.206396
+iter  80 value 2230.084523
+iter  90 value 2216.214635
+iter 100 value 2207.279478
+final  value 2207.279478 
 stopped after 100 iterations
 # weights:  17
-initial  value 7610.017221 
-iter  10 value 3163.388696
-iter  20 value 2953.538090
-iter  30 value 2846.469691
-iter  40 value 2773.541696
-iter  50 value 2767.619490
-iter  60 value 2766.154148
-iter  70 value 2765.129358
-final  value 2764.874692 
+initial  value 6216.959108 
+iter  10 value 3125.398086
+iter  20 value 2916.194627
+iter  30 value 2842.395361
+iter  40 value 2831.278347
+iter  50 value 2814.127387
+iter  60 value 2811.680133
+iter  60 value 2811.680119
+iter  60 value 2811.680119
+final  value 2811.680119 
 converged
 # weights:  41
-initial  value 10159.073924 
-iter  10 value 3242.720973
-iter  20 value 2839.730560
-iter  30 value 2723.715194
-iter  40 value 2683.785001
-iter  50 value 2670.197416
-iter  60 value 2646.312891
-iter  70 value 2615.812455
-iter  80 value 2611.612510
-iter  90 value 2611.265319
-iter 100 value 2610.886827
-final  value 2610.886827 
+initial  value 11222.467961 
+iter  10 value 2909.445485
+iter  20 value 2749.265185
+iter  30 value 2701.863966
+iter  40 value 2598.472747
+iter  50 value 2535.015045
+iter  60 value 2509.781219
+iter  70 value 2500.468180
+iter  80 value 2494.208012
+iter  90 value 2493.741527
+iter 100 value 2493.026591
+final  value 2493.026591 
 stopped after 100 iterations
 # weights:  65
-initial  value 8657.069410 
-iter  10 value 2920.203574
-iter  20 value 2701.189601
-iter  30 value 2541.121006
-iter  40 value 2449.335436
-iter  50 value 2407.233294
-iter  60 value 2345.957909
-iter  70 value 2308.085390
-iter  80 value 2293.865908
-iter  90 value 2287.216372
-iter 100 value 2279.351668
-final  value 2279.351668 
+initial  value 10420.174953 
+iter  10 value 2783.000364
+iter  20 value 2615.215410
+iter  30 value 2561.090731
+iter  40 value 2527.529336
+iter  50 value 2511.882163
+iter  60 value 2496.379785
+iter  70 value 2489.044227
+iter  80 value 2471.722698
+iter  90 value 2458.939965
+iter 100 value 2444.757183
+final  value 2444.757183 
 stopped after 100 iterations
 # weights:  17
-initial  value 11641.262981 
-iter  10 value 3518.435535
-iter  20 value 2906.473686
-iter  30 value 2780.464274
-iter  40 value 2763.339338
-iter  50 value 2753.335090
-iter  60 value 2750.100672
-final  value 2749.447749 
+initial  value 10866.903660 
+iter  10 value 3776.611013
+iter  20 value 2920.630656
+iter  30 value 2795.305387
+iter  40 value 2766.395444
+iter  50 value 2759.197611
+iter  60 value 2755.828332
+final  value 2754.079109 
 converged
 # weights:  41
-initial  value 12725.417992 
-iter  10 value 3076.618027
-iter  20 value 2676.115575
-iter  30 value 2582.495024
-iter  40 value 2531.761652
-iter  50 value 2479.453519
-iter  60 value 2460.374002
-iter  70 value 2451.729407
-iter  80 value 2442.187532
-iter  90 value 2438.584666
-iter 100 value 2434.050122
-final  value 2434.050122 
+initial  value 10830.107747 
+iter  10 value 3161.342161
+iter  20 value 2890.318595
+iter  30 value 2669.766166
+iter  40 value 2540.204162
+iter  50 value 2487.814278
+iter  60 value 2467.154885
+iter  70 value 2456.052941
+iter  80 value 2448.460502
+iter  90 value 2446.938365
+iter 100 value 2445.128123
+final  value 2445.128123 
 stopped after 100 iterations
 # weights:  65
-initial  value 9213.355469 
-iter  10 value 2747.585682
-iter  20 value 2522.376065
-iter  30 value 2389.855896
-iter  40 value 2337.471760
-iter  50 value 2305.394606
-iter  60 value 2289.478315
-iter  70 value 2280.448851
-iter  80 value 2271.413969
-iter  90 value 2267.527582
-iter 100 value 2263.699240
-final  value 2263.699240 
+initial  value 9338.020256 
+iter  10 value 2786.600093
+iter  20 value 2587.962645
+iter  30 value 2494.573888
+iter  40 value 2416.730169
+iter  50 value 2354.107542
+iter  60 value 2289.360133
+iter  70 value 2260.014717
+iter  80 value 2246.389454
+iter  90 value 2234.940262
+iter 100 value 2228.610583
+final  value 2228.610583 
 stopped after 100 iterations
 # weights:  17
-initial  value 10978.684937 
-iter  10 value 3810.544163
-iter  20 value 3075.141099
-iter  30 value 2860.384369
-iter  40 value 2816.057511
-iter  50 value 2801.549049
-final  value 2800.996721 
+initial  value 9614.633447 
+iter  10 value 3273.181216
+iter  20 value 2949.855620
+iter  30 value 2766.247764
+iter  40 value 2757.886636
+iter  50 value 2757.242327
+iter  60 value 2756.381578
+final  value 2755.993685 
 converged
 # weights:  41
-initial  value 11883.969070 
-iter  10 value 2867.093769
-iter  20 value 2783.809968
-iter  30 value 2750.044747
-iter  40 value 2657.221117
-iter  50 value 2590.975501
-iter  60 value 2571.299109
-iter  70 value 2566.798485
-iter  80 value 2566.072759
-iter  90 value 2565.984702
-iter 100 value 2565.935443
-final  value 2565.935443 
+initial  value 13087.636818 
+iter  10 value 3434.090938
+iter  20 value 2952.689749
+iter  30 value 2791.069212
+iter  40 value 2691.521510
+iter  50 value 2630.086994
+iter  60 value 2582.151364
+iter  70 value 2537.392623
+iter  80 value 2526.660479
+iter  90 value 2516.238516
+iter 100 value 2508.647462
+final  value 2508.647462 
 stopped after 100 iterations
 # weights:  65
-initial  value 6441.769101 
-iter  10 value 2735.407529
-iter  20 value 2590.614595
-iter  30 value 2493.805452
-iter  40 value 2402.513671
-iter  50 value 2362.091566
-iter  60 value 2322.458880
-iter  70 value 2304.581360
-iter  80 value 2294.990814
-iter  90 value 2285.453313
-iter 100 value 2282.737155
-final  value 2282.737155 
+initial  value 11515.046944 
+iter  10 value 2844.350469
+iter  20 value 2576.866550
+iter  30 value 2467.509323
+iter  40 value 2404.710039
+iter  50 value 2374.014714
+iter  60 value 2338.385223
+iter  70 value 2316.962313
+iter  80 value 2301.090378
+iter  90 value 2289.203425
+iter 100 value 2283.716044
+final  value 2283.716044 
 stopped after 100 iterations
 # weights:  17
-initial  value 9451.019760 
-iter  10 value 3269.263322
-iter  20 value 2869.087860
-iter  30 value 2776.429885
-iter  40 value 2766.108637
-iter  50 value 2755.836227
-iter  60 value 2750.410317
-iter  70 value 2749.723688
-iter  80 value 2749.701708
-iter  80 value 2749.701683
-final  value 2749.701319 
+initial  value 11938.995695 
+iter  10 value 4010.147255
+iter  20 value 3077.760842
+iter  30 value 2865.360979
+iter  40 value 2840.397255
+iter  50 value 2807.431713
+final  value 2806.829684 
 converged
 # weights:  41
-initial  value 9264.621060 
-iter  10 value 2784.773211
-iter  20 value 2690.381770
-iter  30 value 2601.904093
-iter  40 value 2513.604543
-iter  50 value 2436.972585
-iter  60 value 2407.530754
-iter  70 value 2396.739166
-iter  80 value 2380.510836
-iter  90 value 2370.964323
-iter 100 value 2367.541047
-final  value 2367.541047 
+initial  value 9492.628002 
+iter  10 value 3229.462894
+iter  20 value 2867.352612
+iter  30 value 2705.551470
+iter  40 value 2611.356617
+iter  50 value 2559.976434
+iter  60 value 2530.385583
+iter  70 value 2526.042491
+iter  80 value 2522.780747
+iter  90 value 2522.479388
+iter 100 value 2522.051549
+final  value 2522.051549 
 stopped after 100 iterations
 # weights:  65
-initial  value 9629.193519 
-iter  10 value 2912.557727
-iter  20 value 2601.932826
-iter  30 value 2486.124298
-iter  40 value 2393.545865
-iter  50 value 2341.453408
-iter  60 value 2295.217945
-iter  70 value 2266.017883
-iter  80 value 2247.657152
-iter  90 value 2241.481869
-iter 100 value 2236.271055
-final  value 2236.271055 
+initial  value 10993.432837 
+iter  10 value 2938.090741
+iter  20 value 2588.615361
+iter  30 value 2471.378428
+iter  40 value 2409.573835
+iter  50 value 2389.650520
+iter  60 value 2350.534215
+iter  70 value 2339.357771
+iter  80 value 2336.913208
+iter  90 value 2334.809605
+iter 100 value 2334.481181
+final  value 2334.481181 
 stopped after 100 iterations
 # weights:  17
-initial  value 9594.685623 
-iter  10 value 3068.315954
-iter  20 value 2848.014658
-iter  30 value 2769.260621
-iter  40 value 2755.196263
-iter  50 value 2752.882428
-iter  60 value 2749.955555
-final  value 2749.953952 
+initial  value 11805.084239 
+iter  10 value 3541.588981
+iter  20 value 2993.546403
+iter  30 value 2933.928177
+iter  40 value 2850.612944
+iter  50 value 2775.803644
+iter  60 value 2757.296505
+iter  70 value 2756.453093
+final  value 2756.385657 
 converged
 # weights:  41
-initial  value 9482.062818 
-iter  10 value 2930.742581
-iter  20 value 2783.080966
-iter  30 value 2720.608534
-iter  40 value 2634.815664
-iter  50 value 2597.251177
-iter  60 value 2546.253403
-iter  70 value 2481.060135
-iter  80 value 2474.642934
-iter  90 value 2472.658268
-iter 100 value 2471.132714
-final  value 2471.132714 
+initial  value 8900.943858 
+iter  10 value 2838.607525
+iter  20 value 2693.315941
+iter  30 value 2628.890564
+iter  40 value 2596.746527
+iter  50 value 2567.698516
+iter  60 value 2532.592229
+iter  70 value 2487.772904
+iter  80 value 2474.237010
+iter  90 value 2470.419719
+iter 100 value 2468.360047
+final  value 2468.360047 
 stopped after 100 iterations
 # weights:  65
-initial  value 9661.318809 
-iter  10 value 2766.759615
-iter  20 value 2600.962837
-iter  30 value 2485.818231
-iter  40 value 2399.119310
-iter  50 value 2372.254151
-iter  60 value 2356.219576
-iter  70 value 2341.757285
-iter  80 value 2329.409136
-iter  90 value 2321.824094
-iter 100 value 2307.447759
-final  value 2307.447759 
+initial  value 6921.679268 
+iter  10 value 2769.764325
+iter  20 value 2592.665561
+iter  30 value 2486.990526
+iter  40 value 2397.236739
+iter  50 value 2328.999948
+iter  60 value 2283.317497
+iter  70 value 2259.587333
+iter  80 value 2249.462497
+iter  90 value 2241.148920
+iter 100 value 2237.633802
+final  value 2237.633802 
 stopped after 100 iterations
 # weights:  17
-initial  value 9280.898198 
-iter  10 value 3123.161050
-iter  20 value 2984.209653
-iter  30 value 2833.782863
-iter  40 value 2812.465645
-iter  50 value 2802.264661
-final  value 2802.100962 
+initial  value 9222.035903 
+iter  10 value 3352.961472
+iter  20 value 2969.935387
+iter  30 value 2816.626254
+iter  40 value 2783.791047
+iter  50 value 2767.343734
+iter  60 value 2747.487929
+iter  70 value 2746.404765
+iter  80 value 2746.213451
+iter  90 value 2745.934059
+final  value 2745.744031 
 converged
 # weights:  41
-initial  value 11231.689555 
-iter  10 value 2926.970192
-iter  20 value 2774.476764
-iter  30 value 2698.165995
-iter  40 value 2643.556290
-iter  50 value 2635.090591
-iter  60 value 2629.646299
-iter  70 value 2625.627750
-iter  80 value 2607.600164
-iter  90 value 2586.957555
-iter 100 value 2579.614171
-final  value 2579.614171 
+initial  value 10547.900524 
+iter  10 value 2775.612380
+iter  20 value 2654.893165
+iter  30 value 2596.000067
+iter  40 value 2563.542229
+iter  50 value 2526.505719
+iter  60 value 2519.922635
+iter  70 value 2498.135538
+iter  80 value 2488.529254
+iter  90 value 2483.111514
+iter 100 value 2481.868082
+final  value 2481.868082 
 stopped after 100 iterations
 # weights:  65
-initial  value 10530.478724 
-iter  10 value 2903.937291
-iter  20 value 2631.218743
-iter  30 value 2545.187311
-iter  40 value 2465.719384
-iter  50 value 2417.290806
-iter  60 value 2374.116564
-iter  70 value 2357.773609
-iter  80 value 2345.877022
-iter  90 value 2333.557454
-iter 100 value 2324.145570
-final  value 2324.145570 
+initial  value 9549.677915 
+iter  10 value 2950.150833
+iter  20 value 2633.285742
+iter  30 value 2513.076400
+iter  40 value 2466.703978
+iter  50 value 2426.479086
+iter  60 value 2349.923531
+iter  70 value 2315.456584
+iter  80 value 2292.568001
+iter  90 value 2280.739895
+iter 100 value 2270.561459
+final  value 2270.561459 
 stopped after 100 iterations
 # weights:  17
-initial  value 6664.222636 
-iter  10 value 3435.258960
-iter  20 value 2771.779145
-iter  30 value 2753.913148
-iter  40 value 2752.814676
-iter  50 value 2752.019950
-iter  60 value 2750.354775
-iter  60 value 2750.354764
-iter  60 value 2750.354764
-final  value 2750.354764 
+initial  value 7295.156093 
+iter  10 value 3824.958418
+iter  20 value 2946.932596
+iter  30 value 2817.728424
+iter  40 value 2806.443365
+iter  50 value 2798.844253
+final  value 2798.625015 
 converged
 # weights:  41
-initial  value 8531.312653 
-iter  10 value 2885.049857
-iter  20 value 2759.939392
-iter  30 value 2619.608987
-iter  40 value 2536.023658
-iter  50 value 2457.913421
-iter  60 value 2384.372724
-iter  70 value 2340.119036
-iter  80 value 2309.348092
-iter  90 value 2301.670968
-iter 100 value 2299.115179
-final  value 2299.115179 
+initial  value 8750.850379 
+iter  10 value 3276.026245
+iter  20 value 2859.792884
+iter  30 value 2634.407619
+iter  40 value 2535.426893
+iter  50 value 2498.272801
+iter  60 value 2482.179173
+iter  70 value 2475.389779
+iter  80 value 2474.348449
+iter  90 value 2474.292271
+iter 100 value 2474.279963
+final  value 2474.279963 
 stopped after 100 iterations
 # weights:  65
-initial  value 11411.264699 
-iter  10 value 2624.801564
-iter  20 value 2501.936759
-iter  30 value 2462.920784
-iter  40 value 2442.171783
-iter  50 value 2431.164745
-iter  60 value 2414.936434
-iter  70 value 2402.104368
-iter  80 value 2399.534979
-iter  90 value 2397.355774
-iter 100 value 2396.461495
-final  value 2396.461495 
-stopped after 100 iterations
-# weights:  65
-initial  value 10012.244204 
-iter  10 value 3072.546720
-iter  20 value 2835.398966
-iter  30 value 2773.921128
-iter  40 value 2714.714043
-iter  50 value 2653.277465
-iter  60 value 2612.260619
-iter  70 value 2597.668990
-iter  80 value 2596.309362
-iter  90 value 2595.728538
-iter 100 value 2595.286928
-final  value 2595.286928 
+initial  value 13227.234113 
+iter  10 value 2973.866963
+iter  20 value 2621.026199
+iter  30 value 2507.602065
+iter  40 value 2453.432195
+iter  50 value 2426.829058
+iter  60 value 2408.887117
+iter  70 value 2388.687181
+iter  80 value 2377.582420
+iter  90 value 2369.898419
+iter 100 value 2364.195922
+final  value 2364.195922 
 stopped after 100 iterations
 # weights:  17
-initial  value 5566.423728 
+initial  value 7327.457146 
+iter  10 value 3357.309521
+iter  20 value 2856.616298
+iter  30 value 2763.876825
+iter  40 value 2755.019230
+iter  50 value 2749.890374
+iter  60 value 2746.105927
+final  value 2746.074386 
+converged
+# weights:  41
+initial  value 8565.772243 
+iter  10 value 2903.401483
+iter  20 value 2742.686750
+iter  30 value 2666.134478
+iter  40 value 2565.332490
+iter  50 value 2490.865703
+iter  60 value 2465.664977
+iter  70 value 2454.803713
+iter  80 value 2442.323528
+iter  90 value 2424.754034
+iter 100 value 2415.556914
+final  value 2415.556914 
+stopped after 100 iterations
+# weights:  65
+initial  value 8106.873739 
+iter  10 value 2793.134431
+iter  20 value 2527.447795
+iter  30 value 2419.129205
+iter  40 value 2370.526551
+iter  50 value 2336.048296
+iter  60 value 2319.738626
+iter  70 value 2303.766365
+iter  80 value 2286.956745
+iter  90 value 2278.719775
+iter 100 value 2271.067260
+final  value 2271.067260 
+stopped after 100 iterations
+# weights:  65
+initial  value 16220.590207 
+iter  10 value 3022.806343
+iter  20 value 2804.697732
+iter  30 value 2702.771024
+iter  40 value 2625.887453
+iter  50 value 2595.249138
+iter  60 value 2554.530106
+iter  70 value 2530.519686
+iter  80 value 2521.528260
+iter  90 value 2512.787949
+iter 100 value 2508.390943
+final  value 2508.390943 
+stopped after 100 iterations
+# weights:  17
+initial  value 7597.264279 
 final  value 3092.000000 
 converged
 # weights:  41
-initial  value 7101.934174 
+initial  value 6129.553535 
 final  value 3092.000000 
 converged
 # weights:  65
-initial  value 8588.996388 
-final  value 5762.000000 
-converged
-# weights:  17
-initial  value 6912.855517 
-iter  10 value 2549.623106
-iter  20 value 1756.386621
-iter  30 value 1587.582094
-iter  40 value 1570.474235
-final  value 1569.442451 
-converged
-# weights:  41
-initial  value 5594.744486 
-iter  10 value 3195.784939
-iter  20 value 2339.781206
-iter  30 value 1998.309388
-iter  40 value 1674.162267
-iter  50 value 1549.945403
-iter  60 value 1511.182081
-iter  70 value 1494.231657
-iter  80 value 1465.304994
-iter  90 value 1448.532514
-iter 100 value 1441.888465
-final  value 1441.888465 
-stopped after 100 iterations
-# weights:  65
-initial  value 11401.898946 
-iter  10 value 2816.641996
-iter  20 value 2002.671732
-iter  30 value 1674.208476
-iter  40 value 1523.406254
-iter  50 value 1452.317173
-iter  60 value 1419.173374
-iter  70 value 1403.959094
-iter  80 value 1396.460064
-iter  90 value 1394.915298
-iter 100 value 1393.378299
-final  value 1393.378299 
-stopped after 100 iterations
-# weights:  17
-initial  value 7125.641561 
-iter  10 value 3126.830857
-iter  20 value 3092.401571
-iter  30 value 3092.049158
-iter  40 value 2457.137838
-iter  50 value 2314.635162
-iter  60 value 2275.865759
-iter  70 value 2258.070922
-iter  80 value 2252.499044
-iter  90 value 2251.923451
-iter 100 value 2251.859853
-final  value 2251.859853 
-stopped after 100 iterations
-# weights:  41
-initial  value 7479.772760 
-iter  10 value 3138.281664
-iter  20 value 3092.533591
-iter  30 value 3074.697175
-iter  40 value 1643.912310
-iter  50 value 1542.199488
-iter  60 value 1524.520074
-iter  70 value 1503.564401
-iter  80 value 1500.332407
-iter  90 value 1495.527642
-iter 100 value 1487.976688
-final  value 1487.976688 
-stopped after 100 iterations
-# weights:  65
-initial  value 7559.199775 
-iter  10 value 3146.128430
-iter  20 value 3092.623574
-iter  30 value 2432.564857
-iter  40 value 2356.730588
-iter  50 value 1556.306710
-iter  60 value 1472.771033
-iter  70 value 1439.766812
-iter  80 value 1428.825686
-iter  90 value 1420.530893
-iter 100 value 1408.048602
-final  value 1408.048602 
-stopped after 100 iterations
-# weights:  17
-initial  value 10099.855247 
-final  value 3094.000000 
-converged
-# weights:  41
-initial  value 9102.806698 
-final  value 3094.000000 
-converged
-# weights:  65
-initial  value 7851.524066 
-final  value 3094.000000 
-converged
-# weights:  17
-initial  value 9086.367466 
-iter  10 value 3135.583431
-iter  20 value 2347.075227
-iter  30 value 1763.022125
-iter  40 value 1661.429780
-iter  50 value 1649.500046
-iter  60 value 1632.836260
-iter  70 value 1593.488964
-iter  80 value 1586.540718
-final  value 1586.538750 
-converged
-# weights:  41
-initial  value 9131.718543 
-iter  10 value 3098.253869
-iter  20 value 2376.966525
-iter  30 value 2268.697184
-iter  40 value 1846.006721
-iter  50 value 1612.353663
-iter  60 value 1525.927078
-iter  70 value 1498.370122
-iter  80 value 1478.254801
-iter  90 value 1466.060551
-iter 100 value 1457.246235
-final  value 1457.246235 
-stopped after 100 iterations
-# weights:  65
-initial  value 6870.290924 
-iter  10 value 3253.616499
-iter  20 value 2291.008328
-iter  30 value 1830.915496
-iter  40 value 1615.918027
-iter  50 value 1521.116983
-iter  60 value 1463.649886
-iter  70 value 1444.903659
-iter  80 value 1439.011006
-iter  90 value 1431.474557
-iter 100 value 1413.967228
-final  value 1413.967228 
-stopped after 100 iterations
-# weights:  17
-initial  value 7974.079141 
-iter  10 value 3131.015194
-iter  20 value 3094.426756
-iter  30 value 2011.616687
-iter  40 value 1960.191770
-iter  50 value 1954.027130
-iter  60 value 1950.013215
-iter  70 value 1936.911653
-iter  80 value 1847.114651
-iter  90 value 1843.219151
-iter 100 value 1767.206425
-final  value 1767.206425 
-stopped after 100 iterations
-# weights:  41
-initial  value 8231.409728 
-iter  10 value 3151.693221
-iter  20 value 3094.565027
-iter  30 value 3094.457151
-iter  40 value 2419.859048
-iter  50 value 2245.121050
-iter  60 value 2223.746022
-iter  70 value 2217.325138
-iter  80 value 2214.789265
-iter  90 value 2209.444346
-iter 100 value 2200.884211
-final  value 2200.884211 
-stopped after 100 iterations
-# weights:  65
-initial  value 8411.799583 
-iter  10 value 3159.496435
-iter  20 value 3094.748809
-iter  30 value 3094.105097
-iter  40 value 2443.453367
-iter  50 value 2385.605305
-iter  60 value 2378.899715
-iter  70 value 2357.360929
-iter  80 value 2348.484922
-iter  90 value 2342.784180
-iter 100 value 2339.891045
-final  value 2339.891045 
-stopped after 100 iterations
-# weights:  17
-initial  value 8046.774477 
-final  value 3092.000000 
-converged
-# weights:  41
-initial  value 8082.965535 
-final  value 3092.000000 
-converged
-# weights:  65
-initial  value 8032.435517 
+initial  value 7176.026272 
 final  value 3092.000000 
 converged
 # weights:  17
-initial  value 7065.571771 
-iter  10 value 2512.228450
-iter  20 value 1707.214490
-iter  30 value 1621.960321
-iter  40 value 1567.122288
-iter  50 value 1564.167835
-iter  60 value 1563.519764
-iter  60 value 1563.519759
-iter  60 value 1563.519759
-final  value 1563.519759 
+initial  value 7588.689490 
+iter  10 value 2974.641228
+iter  20 value 1903.253072
+iter  30 value 1627.184245
+iter  40 value 1559.007908
+iter  50 value 1553.443124
+iter  60 value 1553.439274
+final  value 1553.438564 
 converged
 # weights:  41
-initial  value 8742.141803 
-iter  10 value 3215.671927
-iter  20 value 2535.586720
-iter  30 value 1870.718452
-iter  40 value 1581.124460
-iter  50 value 1527.058389
-iter  60 value 1486.918082
-iter  70 value 1464.165241
-iter  80 value 1458.447573
-iter  90 value 1457.630961
-iter 100 value 1457.524985
-final  value 1457.524985 
+initial  value 6795.842540 
+iter  10 value 2997.059705
+iter  20 value 2489.250190
+iter  30 value 1689.575844
+iter  40 value 1541.382125
+iter  50 value 1498.344623
+iter  60 value 1462.292273
+iter  70 value 1444.438053
+iter  80 value 1436.629734
+iter  90 value 1434.107363
+iter 100 value 1432.568015
+final  value 1432.568015 
 stopped after 100 iterations
 # weights:  65
-initial  value 8318.467426 
-iter  10 value 3794.675121
-iter  20 value 2624.510435
-iter  30 value 1643.286117
-iter  40 value 1534.126511
-iter  50 value 1461.391692
-iter  60 value 1443.208114
-iter  70 value 1426.524956
-iter  80 value 1407.564641
-iter  90 value 1401.179981
-iter 100 value 1399.220080
-final  value 1399.220080 
+initial  value 8063.652881 
+iter  10 value 3208.308636
+iter  20 value 2482.089424
+iter  30 value 1780.044928
+iter  40 value 1586.653978
+iter  50 value 1517.165694
+iter  60 value 1453.625949
+iter  70 value 1417.776154
+iter  80 value 1404.504840
+iter  90 value 1401.108314
+iter 100 value 1400.442456
+final  value 1400.442456 
 stopped after 100 iterations
 # weights:  17
-initial  value 7393.204343 
-iter  10 value 3125.007017
-iter  20 value 2769.765187
-iter  30 value 2289.073368
-iter  40 value 2253.776266
-iter  50 value 2251.015768
-iter  60 value 2250.859738
-iter  70 value 2250.576256
-iter  80 value 1779.789725
-iter  90 value 1617.932161
-iter 100 value 1600.657624
-final  value 1600.657624 
+initial  value 7322.894622 
+iter  10 value 3124.174735
+iter  20 value 3092.356012
+iter  30 value 2503.843769
+iter  40 value 2470.924328
+iter  50 value 2461.059368
+iter  60 value 2432.244930
+iter  70 value 2415.147468
+iter  80 value 2407.841747
+iter  90 value 2404.839446
+iter 100 value 1591.440472
+final  value 1591.440472 
 stopped after 100 iterations
 # weights:  41
-initial  value 5717.901385 
-iter  10 value 3128.661524
-iter  20 value 3093.169715
-iter  30 value 2297.566766
-iter  40 value 2246.487542
-iter  50 value 2219.800108
-iter  60 value 2190.153290
-iter  70 value 2187.117465
-iter  80 value 2185.779717
-iter  90 value 2184.817639
-iter 100 value 2184.641576
-final  value 2184.641576 
+initial  value 8462.323036 
+iter  10 value 3155.758299
+iter  20 value 3092.735083
+iter  30 value 3092.072313
+iter  40 value 3092.068889
+iter  50 value 3039.534335
+iter  60 value 1805.786885
+iter  70 value 1583.749122
+iter  80 value 1508.368347
+iter  90 value 1461.480101
+iter 100 value 1439.517164
+final  value 1439.517164 
 stopped after 100 iterations
 # weights:  65
-initial  value 8569.257097 
-iter  10 value 3153.100683
-iter  20 value 3070.060697
-iter  30 value 2301.841162
-iter  40 value 2247.503515
-iter  50 value 2228.779712
-iter  60 value 2219.174370
-iter  70 value 2211.408451
-iter  80 value 2205.967782
-iter  90 value 2204.525788
-iter 100 value 2203.752852
-final  value 2203.752852 
+initial  value 4358.596638 
+iter  10 value 3115.392192
+iter  20 value 1805.152597
+iter  30 value 1578.703065
+iter  40 value 1483.044097
+iter  50 value 1443.692273
+iter  60 value 1426.973531
+iter  70 value 1409.827499
+iter  80 value 1399.411883
+iter  90 value 1391.128823
+iter 100 value 1388.377468
+final  value 1388.377468 
 stopped after 100 iterations
 # weights:  17
-initial  value 8908.927189 
+initial  value 6999.917075 
 final  value 3090.000000 
 converged
 # weights:  41
-initial  value 6621.805448 
+initial  value 6066.139067 
 final  value 3090.000000 
 converged
 # weights:  65
-initial  value 8567.046574 
+initial  value 8859.919034 
 final  value 3090.000000 
 converged
 # weights:  17
-initial  value 8993.240790 
-iter  10 value 2991.302872
-iter  20 value 2365.453113
-iter  30 value 1649.215779
-iter  40 value 1608.731805
-iter  50 value 1579.245326
-iter  60 value 1571.731961
-final  value 1571.675130 
+initial  value 9687.177017 
+iter  10 value 3189.305068
+iter  20 value 2001.120202
+iter  30 value 1630.273111
+iter  40 value 1551.058029
+iter  50 value 1544.473547
+iter  60 value 1544.450716
+final  value 1544.450323 
 converged
 # weights:  41
-initial  value 5916.848071 
-iter  10 value 3016.973528
-iter  20 value 1918.924195
-iter  30 value 1643.343412
-iter  40 value 1510.121309
-iter  50 value 1474.202275
-iter  60 value 1456.769061
-iter  70 value 1453.390789
-iter  80 value 1451.030012
-iter  90 value 1449.548531
-iter 100 value 1449.393311
-final  value 1449.393311 
+initial  value 9333.511235 
+iter  10 value 3185.984517
+iter  20 value 2508.668310
+iter  30 value 2215.915679
+iter  40 value 1735.756541
+iter  50 value 1550.869912
+iter  60 value 1511.371646
+iter  70 value 1498.864586
+iter  80 value 1489.371395
+iter  90 value 1485.346672
+iter 100 value 1483.337578
+final  value 1483.337578 
 stopped after 100 iterations
 # weights:  65
-initial  value 8346.401354 
-iter  10 value 2947.912149
-iter  20 value 2409.965583
-iter  30 value 1861.455787
-iter  40 value 1563.705344
-iter  50 value 1478.659146
-iter  60 value 1439.048794
-iter  70 value 1421.266583
-iter  80 value 1413.880120
-iter  90 value 1407.655420
-iter 100 value 1405.308066
-final  value 1405.308066 
+initial  value 6396.964090 
+iter  10 value 3206.671538
+iter  20 value 2364.746278
+iter  30 value 1611.988651
+iter  40 value 1491.123665
+iter  50 value 1442.027564
+iter  60 value 1418.898975
+iter  70 value 1402.823082
+iter  80 value 1394.944445
+iter  90 value 1388.595295
+iter 100 value 1386.595022
+final  value 1386.595022 
 stopped after 100 iterations
 # weights:  17
-initial  value 7390.681398 
-iter  10 value 3129.559539
-iter  20 value 3090.456090
-iter  30 value 2379.087486
-iter  40 value 1702.334578
-iter  50 value 1683.402055
-iter  60 value 1665.234040
-iter  70 value 1627.560599
-iter  80 value 1619.546425
-iter  90 value 1616.742384
-iter 100 value 1614.502668
-final  value 1614.502668 
+initial  value 9688.381492 
+iter  10 value 3135.612740
+iter  20 value 3090.447355
+iter  30 value 3090.386936
+iter  40 value 3086.579240
+iter  50 value 2364.426908
+iter  60 value 2356.209129
+iter  70 value 2347.726094
+iter  80 value 2306.901984
+iter  90 value 2259.035188
+iter 100 value 2238.530852
+final  value 2238.530852 
 stopped after 100 iterations
 # weights:  41
-initial  value 6265.270741 
-iter  10 value 3128.085152
-iter  20 value 2525.339622
-iter  30 value 2261.756756
-iter  40 value 2222.539001
-iter  50 value 2195.159081
-iter  60 value 2187.931981
-iter  70 value 2184.833737
-iter  80 value 2182.456207
-iter  90 value 2181.679422
-iter 100 value 2181.560782
-final  value 2181.560782 
+initial  value 6455.473297 
+iter  10 value 3132.428959
+iter  20 value 2960.348547
+iter  30 value 2427.835155
+iter  40 value 2391.839521
+iter  50 value 2391.276302
+iter  60 value 2388.557677
+iter  70 value 2387.096301
+iter  80 value 2385.432185
+iter  90 value 2383.768480
+iter 100 value 2382.660095
+final  value 2382.660095 
 stopped after 100 iterations
 # weights:  65
-initial  value 8435.069622 
-iter  10 value 3155.900916
-iter  20 value 3090.759786
-iter  30 value 3090.069432
-iter  40 value 2648.996233
-iter  50 value 2228.430751
-iter  60 value 2198.447829
-iter  70 value 2190.849824
-iter  80 value 2184.617847
-iter  90 value 2181.385301
-iter 100 value 1443.153696
-final  value 1443.153696 
+initial  value 8778.599153 
+iter  10 value 3178.793229
+iter  20 value 3091.023716
+iter  30 value 2500.978971
+iter  40 value 2231.011099
+iter  50 value 2185.126759
+iter  60 value 2162.532787
+iter  70 value 2153.870963
+iter  80 value 2151.089770
+iter  90 value 2149.584644
+iter 100 value 2148.101992
+final  value 2148.101992 
 stopped after 100 iterations
 # weights:  17
-initial  value 6753.135011 
-final  value 3092.000000 
+initial  value 8084.427002 
+final  value 3088.000000 
 converged
 # weights:  41
-initial  value 6752.029626 
-final  value 3092.000000 
-converged
+initial  value 4842.125557 
+iter  10 value 2256.992192
+iter  20 value 2240.929770
+iter  30 value 2231.405954
+iter  40 value 2215.172308
+iter  50 value 2209.847366
+iter  60 value 2206.679335
+iter  70 value 2205.614431
+iter  80 value 2205.217910
+iter  90 value 2204.719181
+iter 100 value 2203.612298
+final  value 2203.612298 
+stopped after 100 iterations
 # weights:  65
-initial  value 9038.696461 
-final  value 3092.000000 
+initial  value 11266.010835 
+final  value 3088.000000 
 converged
 # weights:  17
-initial  value 8458.763367 
-iter  10 value 3069.621126
-iter  20 value 1898.437550
-iter  30 value 1664.130547
-iter  40 value 1599.120225
-iter  50 value 1579.206872
-iter  60 value 1577.333455
-final  value 1577.330386 
+initial  value 7548.886260 
+iter  10 value 2665.960661
+iter  20 value 1762.682504
+iter  30 value 1589.065580
+iter  40 value 1569.173534
+iter  50 value 1567.758469
+iter  60 value 1567.738207
+final  value 1567.738099 
 converged
 # weights:  41
-initial  value 6776.766076 
-iter  10 value 3138.053196
-iter  20 value 2487.587696
-iter  30 value 1911.802484
-iter  40 value 1565.937342
-iter  50 value 1510.761743
-iter  60 value 1493.204713
-iter  70 value 1480.088434
-iter  80 value 1474.721439
-iter  90 value 1468.748067
-iter 100 value 1467.050962
-final  value 1467.050962 
-stopped after 100 iterations
+initial  value 6504.386869 
+iter  10 value 2600.854553
+iter  20 value 1980.499215
+iter  30 value 1569.081770
+iter  40 value 1486.119494
+iter  50 value 1471.045568
+iter  60 value 1464.201192
+iter  70 value 1462.677530
+iter  80 value 1462.472951
+iter  90 value 1462.440410
+iter  90 value 1462.440401
+iter  90 value 1462.440401
+final  value 1462.440401 
+converged
 # weights:  65
-initial  value 8447.504914 
-iter  10 value 5245.312997
-iter  20 value 4341.967338
-iter  30 value 3007.737449
-iter  40 value 2167.281606
-iter  50 value 1916.143838
-iter  60 value 1729.284755
-iter  70 value 1586.911108
-iter  80 value 1515.169459
-iter  90 value 1476.861914
-iter 100 value 1444.510031
-final  value 1444.510031 
+initial  value 9213.439751 
+iter  10 value 3376.352024
+iter  20 value 2475.861783
+iter  30 value 1760.713720
+iter  40 value 1543.923403
+iter  50 value 1487.552199
+iter  60 value 1456.733484
+iter  70 value 1442.942150
+iter  80 value 1427.097809
+iter  90 value 1417.604796
+iter 100 value 1410.676336
+final  value 1410.676336 
 stopped after 100 iterations
 # weights:  17
-initial  value 10038.320121 
-iter  10 value 3143.516096
-iter  20 value 3092.593940
-iter  30 value 3092.178977
-iter  40 value 3092.018014
-iter  50 value 2668.025672
-iter  60 value 2493.375462
-iter  70 value 2439.263258
-iter  80 value 2436.379415
-iter  90 value 2434.073504
-iter 100 value 2422.493063
-final  value 2422.493063 
-stopped after 100 iterations
+initial  value 7332.421623 
+iter  10 value 3125.992460
+iter  20 value 3088.437998
+iter  30 value 3087.974631
+iter  40 value 2341.182027
+iter  50 value 2255.521545
+iter  60 value 1653.615018
+iter  70 value 1585.328376
+iter  80 value 1565.361205
+iter  90 value 1565.145749
+final  value 1565.145587 
+converged
 # weights:  41
-initial  value 7240.755037 
-iter  10 value 3133.563305
-iter  20 value 2516.742194
-iter  30 value 2343.256144
-iter  40 value 2278.005365
-iter  50 value 2237.386114
-iter  60 value 2225.149882
-iter  70 value 2223.974095
-iter  80 value 1812.597867
-iter  90 value 1563.350869
-iter 100 value 1521.288259
-final  value 1521.288259 
+initial  value 9191.369443 
+iter  10 value 3148.619999
+iter  20 value 3088.698892
+iter  30 value 2420.219993
+iter  40 value 1575.717139
+iter  50 value 1492.940707
+iter  60 value 1458.276497
+iter  70 value 1443.844995
+iter  80 value 1438.366711
+iter  90 value 1435.791388
+iter 100 value 1434.617090
+final  value 1434.617090 
 stopped after 100 iterations
 # weights:  65
-initial  value 7674.392207 
-iter  10 value 3153.977002
-iter  20 value 3092.714546
-iter  30 value 3091.762815
-iter  40 value 2350.432103
-iter  50 value 1567.365131
-iter  60 value 1506.912894
-iter  70 value 1470.715383
-iter  80 value 1451.337934
-iter  90 value 1432.187823
-iter 100 value 1417.878804
-final  value 1417.878804 
+initial  value 8501.562834 
+iter  10 value 3167.058844
+iter  20 value 3088.911486
+iter  30 value 2655.810363
+iter  40 value 1704.471303
+iter  50 value 1521.228007
+iter  60 value 1473.338871
+iter  70 value 1455.272935
+iter  80 value 1434.163223
+iter  90 value 1415.726839
+iter 100 value 1403.925771
+final  value 1403.925771 
 stopped after 100 iterations
 # weights:  17
-initial  value 7199.490672 
+initial  value 6353.573938 
 final  value 3094.000000 
 converged
 # weights:  41
-initial  value 6373.617539 
+initial  value 8149.040045 
 final  value 3094.000000 
 converged
 # weights:  65
-initial  value 6712.454145 
+initial  value 7542.154920 
 final  value 3094.000000 
 converged
 # weights:  17
-initial  value 7950.692442 
-iter  10 value 3173.988728
-iter  20 value 2351.160935
-iter  30 value 1749.596959
-iter  40 value 1616.089084
-iter  50 value 1568.216499
-iter  60 value 1565.422087
-iter  70 value 1565.413217
-final  value 1565.413191 
+initial  value 6348.450759 
+iter  10 value 2849.822340
+iter  20 value 1769.421748
+iter  30 value 1599.338413
+iter  40 value 1577.147343
+iter  50 value 1576.353888
+iter  60 value 1576.352720
+final  value 1576.352642 
 converged
 # weights:  41
-initial  value 6814.724726 
-iter  10 value 2152.283671
-iter  20 value 1641.103956
-iter  30 value 1536.422036
-iter  40 value 1473.457304
-iter  50 value 1449.299884
-iter  60 value 1445.638024
-iter  70 value 1445.012283
-iter  80 value 1444.992721
-iter  80 value 1444.992713
-iter  80 value 1444.992712
-final  value 1444.992712 
+initial  value 7561.124676 
+iter  10 value 2928.853822
+iter  20 value 2198.726369
+iter  30 value 1646.286064
+iter  40 value 1540.758298
+iter  50 value 1481.026078
+iter  60 value 1456.011426
+iter  70 value 1452.220798
+iter  80 value 1450.768738
+iter  90 value 1449.990616
+final  value 1449.974318 
 converged
 # weights:  65
-initial  value 6013.308463 
-iter  10 value 3127.861605
-iter  20 value 2440.645108
-iter  30 value 1749.883096
-iter  40 value 1592.300270
-iter  50 value 1484.691362
-iter  60 value 1448.198086
-iter  70 value 1426.447926
-iter  80 value 1412.866487
-iter  90 value 1400.268635
-iter 100 value 1384.799979
-final  value 1384.799979 
+initial  value 8000.271498 
+iter  10 value 2645.991160
+iter  20 value 1831.574873
+iter  30 value 1596.317154
+iter  40 value 1517.506770
+iter  50 value 1468.947317
+iter  60 value 1434.122684
+iter  70 value 1420.229044
+iter  80 value 1413.650152
+iter  90 value 1409.266230
+iter 100 value 1406.337458
+final  value 1406.337458 
 stopped after 100 iterations
 # weights:  17
-initial  value 10463.455194 
-iter  10 value 3148.364471
-iter  20 value 3094.610267
-iter  30 value 2326.522233
-iter  40 value 1696.973195
-iter  50 value 1617.730710
-iter  60 value 1564.905339
-iter  70 value 1559.774309
-final  value 1559.769202 
-converged
+initial  value 7516.797727 
+iter  10 value 3133.278142
+iter  20 value 3094.452846
+iter  30 value 2605.785112
+iter  40 value 2344.259670
+iter  50 value 2283.691020
+iter  60 value 1665.580163
+iter  70 value 1612.383512
+iter  80 value 1593.364873
+iter  90 value 1591.346084
+iter 100 value 1586.388051
+final  value 1586.388051 
+stopped after 100 iterations
 # weights:  41
-initial  value 8587.517410 
-iter  10 value 3152.608605
-iter  20 value 3094.675711
-iter  30 value 3090.650816
-iter  40 value 2283.329761
-iter  50 value 2244.176001
-iter  60 value 2224.565140
-iter  70 value 1556.950038
-iter  80 value 1502.967325
-iter  90 value 1467.203170
-iter 100 value 1448.721700
-final  value 1448.721700 
+initial  value 9132.358579 
+iter  10 value 3154.639701
+iter  20 value 3094.699128
+iter  30 value 2478.600415
+iter  40 value 1564.678375
+iter  50 value 1521.253868
+iter  60 value 1493.580904
+iter  70 value 1471.538932
+iter  80 value 1462.574487
+iter  90 value 1456.715121
+iter 100 value 1453.365783
+final  value 1453.365783 
 stopped after 100 iterations
 # weights:  65
-initial  value 10492.755573 
-iter  10 value 3179.932793
-iter  20 value 3094.990738
-iter  30 value 3094.025071
-iter  40 value 2315.196233
-iter  50 value 2222.864836
-iter  60 value 2200.950372
-iter  70 value 2192.506446
-iter  80 value 2186.165828
-iter  90 value 2181.385239
-iter 100 value 2175.017145
-final  value 2175.017145 
+initial  value 7483.258844 
+iter  10 value 3158.272335
+iter  20 value 3094.741010
+iter  30 value 2464.747204
+iter  40 value 1655.041704
+iter  50 value 1539.675345
+iter  60 value 1482.264105
+iter  70 value 1459.723479
+iter  80 value 1439.379643
+iter  90 value 1427.729621
+iter 100 value 1424.407453
+final  value 1424.407453 
 stopped after 100 iterations
 # weights:  17
-initial  value 5703.034829 
+initial  value 9847.567065 
 final  value 3092.000000 
 converged
 # weights:  41
-initial  value 8211.547984 
+initial  value 8557.662331 
 final  value 3092.000000 
 converged
 # weights:  65
-initial  value 8571.689956 
+initial  value 7926.044664 
 final  value 3092.000000 
 converged
 # weights:  17
-initial  value 5965.375856 
-iter  10 value 3478.714506
-iter  20 value 2931.343462
-iter  30 value 1818.688297
-iter  40 value 1614.669028
-iter  50 value 1560.617793
-iter  60 value 1558.505256
-iter  70 value 1558.504017
-final  value 1558.503961 
+initial  value 9029.668964 
+iter  10 value 2963.865349
+iter  20 value 2170.424502
+iter  30 value 1602.558032
+iter  40 value 1555.509162
+iter  50 value 1553.960632
+iter  50 value 1553.960618
+iter  50 value 1553.960618
+final  value 1553.960618 
 converged
 # weights:  41
-initial  value 7795.136667 
-iter  10 value 3080.937021
-iter  20 value 1863.234472
-iter  30 value 1620.556096
-iter  40 value 1508.101942
-iter  50 value 1477.437252
-iter  60 value 1459.168150
-iter  70 value 1447.338210
-iter  80 value 1443.862279
-iter  90 value 1442.804847
-iter 100 value 1442.113289
-final  value 1442.113289 
+initial  value 11740.851851 
+iter  10 value 2700.076876
+iter  20 value 2025.073596
+iter  30 value 1648.074661
+iter  40 value 1525.460231
+iter  50 value 1487.613671
+iter  60 value 1454.219511
+iter  70 value 1439.289991
+iter  80 value 1437.498321
+iter  90 value 1436.992080
+iter 100 value 1436.896296
+final  value 1436.896296 
 stopped after 100 iterations
 # weights:  65
-initial  value 6038.552975 
-iter  10 value 3436.836958
-iter  20 value 2024.601537
-iter  30 value 1667.055067
-iter  40 value 1507.266484
-iter  50 value 1459.052743
-iter  60 value 1445.046034
-iter  70 value 1426.839237
-iter  80 value 1422.300029
-iter  90 value 1420.456366
-iter 100 value 1415.814479
-final  value 1415.814479 
+initial  value 6548.629768 
+iter  10 value 3254.235772
+iter  20 value 2519.645734
+iter  30 value 1622.550465
+iter  40 value 1510.240126
+iter  50 value 1451.897038
+iter  60 value 1417.643469
+iter  70 value 1396.071092
+iter  80 value 1391.167218
+iter  90 value 1384.589059
+iter 100 value 1379.331605
+final  value 1379.331605 
 stopped after 100 iterations
 # weights:  17
-initial  value 8231.005576 
-iter  10 value 3132.423996
-iter  20 value 3092.466057
-iter  30 value 3091.876380
-iter  40 value 2601.910107
-iter  50 value 2497.278432
-iter  60 value 1701.568857
-iter  70 value 1567.043321
-iter  80 value 1556.149495
-iter  90 value 1556.128829
-iter 100 value 1556.074637
-final  value 1556.074637 
+initial  value 5774.240061 
+iter  10 value 3118.746208
+iter  20 value 2848.803852
+iter  30 value 2566.003426
+iter  40 value 2553.004671
+iter  50 value 2550.225087
+iter  60 value 2546.417191
+iter  70 value 2541.382223
+iter  80 value 2516.342349
+iter  90 value 2495.596450
+iter 100 value 2453.063773
+final  value 2453.063773 
 stopped after 100 iterations
 # weights:  41
-initial  value 8093.125796 
-iter  10 value 3148.932584
-iter  20 value 3092.581619
-iter  30 value 3092.005175
-iter  40 value 2569.471967
-iter  50 value 1846.958330
-iter  60 value 1635.186314
-iter  70 value 1569.811796
-iter  80 value 1551.564710
-iter  90 value 1536.170668
-iter 100 value 1532.273656
-final  value 1532.273656 
+initial  value 5039.159266 
+iter  10 value 3300.231946
+iter  20 value 3254.504901
+iter  30 value 3248.237601
+iter  40 value 3217.649960
+iter  50 value 3197.144094
+iter  60 value 3183.527453
+iter  70 value 3158.530068
+iter  80 value 3018.761701
+iter  90 value 2925.415293
+iter 100 value 2915.313998
+final  value 2915.313998 
 stopped after 100 iterations
 # weights:  65
-initial  value 7590.343280 
-iter  10 value 3162.328254
-iter  20 value 3092.810830
-iter  30 value 3092.019792
-iter  40 value 2727.436363
-iter  50 value 1751.585787
-iter  60 value 1600.011843
-iter  70 value 1540.761066
-iter  80 value 1467.056436
-iter  90 value 1441.941017
-iter 100 value 1432.956961
-final  value 1432.956961 
+initial  value 6775.704380 
+iter  10 value 3148.881826
+iter  20 value 3092.655803
+iter  30 value 2444.208247
+iter  40 value 2361.272975
+iter  50 value 2331.795405
+iter  60 value 2310.716464
+iter  70 value 2301.475338
+iter  80 value 2294.524884
+iter  90 value 2293.488292
+iter 100 value 2293.198806
+final  value 2293.198806 
 stopped after 100 iterations
 # weights:  17
-initial  value 8484.883651 
+initial  value 7641.729843 
+final  value 3092.000000 
+converged
+# weights:  41
+initial  value 6818.702829 
+final  value 3092.000000 
+converged
+# weights:  65
+initial  value 7585.005404 
+final  value 3092.000000 
+converged
+# weights:  17
+initial  value 8670.226478 
+iter  10 value 3179.824923
+iter  20 value 2453.854190
+iter  30 value 2012.978711
+iter  40 value 1675.031455
+iter  50 value 1605.944249
+iter  60 value 1571.726329
+iter  70 value 1563.388868
+final  value 1563.340044 
+converged
+# weights:  41
+initial  value 8121.483534 
+iter  10 value 2936.303153
+iter  20 value 2618.621106
+iter  30 value 1545.123021
+iter  40 value 1497.866542
+iter  50 value 1458.314921
+iter  60 value 1438.365132
+iter  70 value 1431.893213
+iter  80 value 1430.450656
+iter  90 value 1430.106191
+iter 100 value 1430.055275
+final  value 1430.055275 
+stopped after 100 iterations
+# weights:  65
+initial  value 8089.166312 
+iter  10 value 2909.596287
+iter  20 value 2032.331744
+iter  30 value 1755.609209
+iter  40 value 1567.569465
+iter  50 value 1479.219358
+iter  60 value 1431.672353
+iter  70 value 1410.722746
+iter  80 value 1402.241585
+iter  90 value 1400.752452
+iter 100 value 1400.400422
+final  value 1400.400422 
+stopped after 100 iterations
+# weights:  17
+initial  value 7625.255700 
+iter  10 value 3133.135183
+iter  20 value 3092.063654
+iter  30 value 2431.787600
+iter  40 value 2353.986581
+iter  50 value 2351.350735
+iter  60 value 2349.343951
+iter  70 value 2341.786014
+iter  80 value 2309.328970
+iter  90 value 2304.750394
+iter 100 value 2285.707414
+final  value 2285.707414 
+stopped after 100 iterations
+# weights:  41
+initial  value 8077.890588 
+iter  10 value 3138.074664
+iter  20 value 3093.065330
+iter  30 value 3047.998562
+iter  40 value 2436.124219
+iter  50 value 2282.069516
+iter  60 value 2263.003423
+iter  70 value 2248.758653
+iter  80 value 2242.577417
+iter  90 value 2223.067821
+iter 100 value 2217.233801
+final  value 2217.233801 
+stopped after 100 iterations
+# weights:  65
+initial  value 8063.803623 
+iter  10 value 3157.103072
+iter  20 value 3092.750587
+iter  30 value 2412.791943
+iter  40 value 2355.319748
+iter  50 value 1832.958879
+iter  60 value 1503.933992
+iter  70 value 1439.789435
+iter  80 value 1411.627780
+iter  90 value 1392.170011
+iter 100 value 1383.662922
+final  value 1383.662922 
+stopped after 100 iterations
+# weights:  17
+initial  value 8673.007187 
 final  value 3094.000000 
 converged
 # weights:  41
-initial  value 7102.201894 
+initial  value 6961.645576 
 final  value 3094.000000 
 converged
 # weights:  65
-initial  value 7815.102125 
+initial  value 8685.141924 
 final  value 3094.000000 
 converged
 # weights:  17
-initial  value 6728.615312 
-iter  10 value 3156.868303
-iter  20 value 1577.713356
-iter  30 value 1568.652108
-iter  40 value 1563.447075
-iter  50 value 1562.169431
-final  value 1562.169361 
+initial  value 6778.267076 
+iter  10 value 3024.562796
+iter  20 value 2319.584823
+iter  30 value 1836.973332
+iter  40 value 1629.337715
+iter  50 value 1579.174832
+iter  60 value 1569.791046
+final  value 1569.728678 
 converged
 # weights:  41
-initial  value 10567.634879 
-iter  10 value 3332.435787
-iter  20 value 2876.763868
-iter  30 value 2610.038083
-iter  40 value 2426.151743
-iter  50 value 1766.162546
-iter  60 value 1602.842473
-iter  70 value 1548.277116
-iter  80 value 1530.442283
-iter  90 value 1515.798410
-iter 100 value 1491.500320
-final  value 1491.500320 
-stopped after 100 iterations
+initial  value 6551.770537 
+iter  10 value 2576.748827
+iter  20 value 1840.950132
+iter  30 value 1601.412643
+iter  40 value 1534.831803
+iter  50 value 1489.041642
+iter  60 value 1478.707009
+iter  70 value 1475.062107
+iter  80 value 1474.089908
+iter  90 value 1474.043595
+final  value 1474.043575 
+converged
 # weights:  65
-initial  value 11620.908154 
-iter  10 value 2873.149866
-iter  20 value 2022.094883
-iter  30 value 1760.961898
-iter  40 value 1558.703836
-iter  50 value 1477.156272
-iter  60 value 1438.312105
-iter  70 value 1419.235561
-iter  80 value 1406.852745
-iter  90 value 1399.747793
-iter 100 value 1392.575314
-final  value 1392.575314 
+initial  value 8672.763006 
+iter  10 value 3051.631396
+iter  20 value 2390.196241
+iter  30 value 1945.853959
+iter  40 value 1628.200616
+iter  50 value 1507.914726
+iter  60 value 1449.233963
+iter  70 value 1418.706953
+iter  80 value 1405.334990
+iter  90 value 1395.174501
+iter 100 value 1390.792456
+final  value 1390.792456 
 stopped after 100 iterations
 # weights:  17
-initial  value 5899.781963 
-iter  10 value 3120.660571
-iter  20 value 3094.254414
-iter  30 value 3094.229085
-iter  40 value 3094.131736
-iter  50 value 2811.635557
-iter  60 value 2455.237979
-iter  70 value 2434.139955
-iter  80 value 2420.373775
-iter  90 value 2415.504517
-iter 100 value 2415.245364
-final  value 2415.245364 
+initial  value 6091.929700 
+iter  10 value 3122.774828
+iter  20 value 2688.465281
+iter  30 value 2491.418206
+iter  40 value 2455.769714
+iter  50 value 2444.596198
+iter  60 value 2438.199594
+iter  70 value 2436.801430
+iter  80 value 2435.167523
+iter  90 value 2423.430713
+iter 100 value 2416.720623
+final  value 2416.720623 
 stopped after 100 iterations
 # weights:  41
-initial  value 7809.976966 
-iter  10 value 3140.647615
-iter  20 value 2931.067584
-iter  30 value 2438.968903
-iter  40 value 2397.560625
-iter  50 value 2378.960138
-iter  60 value 2372.359726
-iter  70 value 2369.317061
-iter  80 value 2358.071789
-iter  90 value 2357.119825
-iter 100 value 2353.627276
-final  value 2353.627276 
+initial  value 9363.616821 
+iter  10 value 3154.888626
+iter  20 value 3094.701578
+iter  30 value 2421.490623
+iter  40 value 2379.153840
+iter  50 value 2375.277323
+iter  60 value 1757.065666
+iter  70 value 1592.903775
+iter  80 value 1539.074263
+iter  90 value 1520.270410
+iter 100 value 1489.744709
+final  value 1489.744709 
 stopped after 100 iterations
 # weights:  65
-initial  value 7294.203617 
-iter  10 value 3152.751425
-iter  20 value 2868.477056
-iter  30 value 2423.481762
-iter  40 value 2335.219589
-iter  50 value 2316.830559
-iter  60 value 2313.504793
-iter  70 value 2307.821950
-iter  80 value 2305.975520
-iter  90 value 2302.743811
-iter 100 value 2299.654249
-final  value 2299.654249 
+initial  value 8016.519851 
+iter  10 value 3167.488864
+iter  20 value 3094.847269
+iter  30 value 2864.879823
+iter  40 value 2228.872004
+iter  50 value 2207.760041
+iter  60 value 1541.745349
+iter  70 value 1444.862952
+iter  80 value 1417.710599
+iter  90 value 1410.375227
+iter 100 value 1399.630754
+final  value 1399.630754 
 stopped after 100 iterations
 # weights:  17
-initial  value 6488.204417 
+initial  value 8164.573819 
+final  value 3094.000000 
+converged
+# weights:  41
+initial  value 8971.716918 
+final  value 3094.000000 
+converged
+# weights:  65
+initial  value 7813.630907 
+final  value 3094.000000 
+converged
+# weights:  17
+initial  value 6569.808156 
+iter  10 value 2124.618907
+iter  20 value 1749.964031
+iter  30 value 1601.948317
+iter  40 value 1585.830815
+iter  50 value 1583.293409
+iter  60 value 1582.985695
+final  value 1582.978125 
+converged
+# weights:  41
+initial  value 4660.399523 
+iter  10 value 2797.827207
+iter  20 value 1780.031012
+iter  30 value 1603.157515
+iter  40 value 1545.967366
+iter  50 value 1524.075889
+iter  60 value 1508.382239
+iter  70 value 1483.908175
+iter  80 value 1476.043882
+iter  90 value 1474.507677
+iter 100 value 1474.095978
+final  value 1474.095978 
+stopped after 100 iterations
+# weights:  65
+initial  value 9843.928350 
+iter  10 value 3180.103473
+iter  20 value 2142.284181
+iter  30 value 1674.326241
+iter  40 value 1535.722987
+iter  50 value 1504.888833
+iter  60 value 1471.682162
+iter  70 value 1455.326668
+iter  80 value 1437.665595
+iter  90 value 1421.780168
+iter 100 value 1412.737761
+final  value 1412.737761 
+stopped after 100 iterations
+# weights:  17
+initial  value 6561.561592 
+iter  10 value 3123.037620
+iter  20 value 3094.318028
+iter  30 value 2861.620485
+iter  40 value 2553.995620
+iter  50 value 2461.198883
+iter  60 value 2429.646661
+iter  70 value 2410.252904
+iter  80 value 2410.032177
+iter  90 value 2408.923023
+iter 100 value 1634.646730
+final  value 1634.646730 
+stopped after 100 iterations
+# weights:  41
+initial  value 6577.064722 
+iter  10 value 3138.706433
+iter  20 value 2807.306572
+iter  30 value 2406.923482
+iter  40 value 2374.031615
+iter  50 value 2362.453531
+iter  60 value 2354.232384
+iter  70 value 2351.677700
+iter  80 value 2349.211308
+iter  90 value 2348.572003
+iter 100 value 2347.489825
+final  value 2347.489825 
+stopped after 100 iterations
+# weights:  65
+initial  value 6862.371688 
+iter  10 value 3972.188602
+iter  20 value 3888.912264
+iter  30 value 3659.519455
+iter  40 value 3557.362574
+iter  50 value 3348.451984
+iter  60 value 3084.495592
+iter  70 value 3032.956017
+iter  80 value 2902.244739
+iter  90 value 2886.260462
+iter 100 value 2812.932518
+final  value 2812.932518 
+stopped after 100 iterations
+# weights:  17
+initial  value 8359.700232 
+final  value 3096.000000 
+converged
+# weights:  41
+initial  value 8353.452549 
+final  value 3096.000000 
+converged
+# weights:  65
+initial  value 9639.866621 
+final  value 3096.000000 
+converged
+# weights:  17
+initial  value 9304.205066 
+iter  10 value 3158.448400
+iter  20 value 2060.484833
+iter  30 value 1706.553134
+iter  40 value 1598.563581
+iter  50 value 1579.831042
+final  value 1579.595348 
+converged
+# weights:  41
+initial  value 8054.753652 
+iter  10 value 2662.981799
+iter  20 value 2030.509653
+iter  30 value 1646.318459
+iter  40 value 1516.923569
+iter  50 value 1490.227336
+iter  60 value 1472.109584
+iter  70 value 1470.049121
+iter  80 value 1469.383165
+iter  90 value 1469.344894
+final  value 1469.344731 
+converged
+# weights:  65
+initial  value 6615.492366 
+iter  10 value 3268.757750
+iter  20 value 2279.152460
+iter  30 value 1721.902960
+iter  40 value 1557.400809
+iter  50 value 1487.381735
+iter  60 value 1457.553096
+iter  70 value 1427.645691
+iter  80 value 1410.794492
+iter  90 value 1406.809820
+iter 100 value 1405.691685
+final  value 1405.691685 
+stopped after 100 iterations
+# weights:  17
+initial  value 6343.413862 
+iter  10 value 3123.904737
+iter  20 value 3096.395235
+iter  30 value 3096.156528
+iter  40 value 2621.371943
+iter  50 value 2558.520863
+iter  60 value 2555.860215
+iter  70 value 2550.880106
+iter  80 value 2543.788735
+iter  90 value 2313.978817
+iter 100 value 1735.036664
+final  value 1735.036664 
+stopped after 100 iterations
+# weights:  41
+initial  value 7248.128199 
+iter  10 value 3156.595996
+iter  20 value 3096.698624
+iter  30 value 3096.133456
+iter  40 value 2436.149148
+iter  50 value 2396.268303
+iter  60 value 2384.587726
+iter  70 value 1556.271668
+iter  80 value 1530.341153
+iter  90 value 1517.342661
+iter 100 value 1502.284180
+final  value 1502.284180 
+stopped after 100 iterations
+# weights:  65
+initial  value 5113.589472 
+iter  10 value 3131.929021
+iter  20 value 3096.414233
+iter  30 value 1873.874822
+iter  40 value 1528.671415
+iter  50 value 1446.830438
+iter  60 value 1419.427517
+iter  70 value 1405.620255
+iter  80 value 1397.940357
+iter  90 value 1393.397449
+iter 100 value 1390.898256
+final  value 1390.898256 
+stopped after 100 iterations
+# weights:  17
+initial  value 6705.532745 
 final  value 3092.000000 
 converged
 # weights:  41
-initial  value 7784.961600 
+initial  value 8849.076762 
 final  value 3092.000000 
 converged
 # weights:  65
-initial  value 7556.875831 
+initial  value 7877.672148 
 final  value 3092.000000 
 converged
 # weights:  17
-initial  value 6909.349343 
-iter  10 value 3156.784605
-iter  20 value 2427.689830
-iter  30 value 1732.186628
-iter  40 value 1583.966695
-iter  50 value 1560.965667
-iter  60 value 1559.577709
-iter  70 value 1559.547484
-iter  70 value 1559.547481
-iter  70 value 1559.547481
-final  value 1559.547481 
+initial  value 8223.091484 
+iter  10 value 3183.162991
+iter  20 value 2384.679389
+iter  30 value 1676.294331
+iter  40 value 1604.554487
+iter  50 value 1569.848515
+iter  60 value 1567.572788
+final  value 1567.572698 
 converged
 # weights:  41
-initial  value 6259.458409 
-iter  10 value 3675.710281
-iter  20 value 2874.212645
-iter  30 value 1927.635488
-iter  40 value 1644.257932
-iter  50 value 1535.620403
-iter  60 value 1496.034504
-iter  70 value 1472.135162
-iter  80 value 1452.795399
-iter  90 value 1449.665316
-iter 100 value 1442.535027
-final  value 1442.535027 
+initial  value 6179.355257 
+iter  10 value 3374.254053
+iter  20 value 2553.430095
+iter  30 value 1796.804889
+iter  40 value 1638.828702
+iter  50 value 1560.036146
+iter  60 value 1512.138742
+iter  70 value 1488.738388
+iter  80 value 1472.476255
+iter  90 value 1469.693297
+iter 100 value 1469.419019
+final  value 1469.419019 
 stopped after 100 iterations
 # weights:  65
-initial  value 9441.481702 
-iter  10 value 5583.798071
-iter  20 value 3188.914716
-iter  30 value 2271.474775
-iter  40 value 1752.166235
-iter  50 value 1568.683681
-iter  60 value 1489.495722
-iter  70 value 1442.289407
-iter  80 value 1416.139210
-iter  90 value 1397.482630
-iter 100 value 1393.789391
-final  value 1393.789391 
+initial  value 5847.187904 
+iter  10 value 3483.998065
+iter  20 value 2518.314730
+iter  30 value 1804.392447
+iter  40 value 1577.835733
+iter  50 value 1501.776958
+iter  60 value 1464.820645
+iter  70 value 1445.041555
+iter  80 value 1421.386328
+iter  90 value 1411.105380
+iter 100 value 1403.916115
+final  value 1403.916115 
 stopped after 100 iterations
 # weights:  17
-initial  value 6889.704214 
-iter  10 value 3125.369131
-iter  20 value 3092.754010
-iter  30 value 3004.829070
-iter  40 value 2483.676423
-iter  50 value 2439.809778
-iter  60 value 2414.588119
-iter  70 value 2400.234076
-iter  80 value 2398.468999
-iter  90 value 2397.961814
-iter 100 value 1610.514538
-final  value 1610.514538 
+initial  value 6612.832860 
+iter  10 value 3125.045586
+iter  20 value 3092.377864
+iter  30 value 3089.584645
+iter  40 value 2351.212826
+iter  50 value 2286.612413
+iter  60 value 2274.722589
+iter  70 value 2256.152788
+iter  80 value 2251.069768
+iter  90 value 2251.023782
+iter 100 value 2233.657127
+final  value 2233.657127 
 stopped after 100 iterations
 # weights:  41
-initial  value 6075.577018 
-iter  10 value 3126.255207
-iter  20 value 3092.202464
-iter  30 value 2569.017631
-iter  40 value 2393.663082
-iter  50 value 2368.316103
-iter  60 value 2351.798166
-iter  70 value 2343.370999
-iter  80 value 2341.670139
-iter  90 value 2341.399631
-iter 100 value 2341.051539
-final  value 2341.051539 
+initial  value 6348.199934 
+iter  10 value 5562.094297
+iter  20 value 3091.192991
+iter  30 value 2404.492603
+iter  40 value 2365.971624
+iter  50 value 2351.549473
+iter  60 value 2345.919343
+iter  70 value 2344.969647
+iter  80 value 2339.720598
+iter  90 value 2336.176154
+iter 100 value 2330.677941
+final  value 2330.677941 
 stopped after 100 iterations
 # weights:  65
-initial  value 8371.878085 
-iter  10 value 3174.664222
-iter  20 value 3092.953054
-iter  30 value 3091.045958
-iter  40 value 1994.984564
-iter  50 value 1642.004419
-iter  60 value 1526.929230
-iter  70 value 1473.344094
-iter  80 value 1459.839658
-iter  90 value 1430.979821
-iter 100 value 1406.343153
-final  value 1406.343153 
-stopped after 100 iterations
-# weights:  17
-initial  value 7604.545655 
-final  value 3092.000000 
-converged
-# weights:  41
-initial  value 7760.150446 
-final  value 3092.000000 
-converged
-# weights:  65
-initial  value 9226.545278 
-final  value 3092.000000 
-converged
-# weights:  17
-initial  value 8738.875498 
-iter  10 value 2948.567938
-iter  20 value 2160.505505
-iter  30 value 1711.330484
-iter  40 value 1570.755727
-iter  50 value 1551.781815
-iter  60 value 1551.310326
-final  value 1551.267668 
-converged
-# weights:  41
-initial  value 8367.529436 
-iter  10 value 2987.323327
-iter  20 value 1994.896407
-iter  30 value 1594.173758
-iter  40 value 1491.010587
-iter  50 value 1454.020220
-iter  60 value 1437.981452
-iter  70 value 1436.348666
-iter  80 value 1434.582827
-iter  90 value 1433.623923
-iter 100 value 1433.443390
-final  value 1433.443390 
+initial  value 6872.833267 
+iter  10 value 3160.243456
+iter  20 value 3092.786793
+iter  30 value 3092.275683
+iter  40 value 3068.367439
+iter  50 value 2226.059389
+iter  60 value 2187.111202
+iter  70 value 2176.356149
+iter  80 value 2173.455602
+iter  90 value 2170.405900
+iter 100 value 2164.592747
+final  value 2164.592747 
 stopped after 100 iterations
 # weights:  65
-initial  value 10628.159836 
-iter  10 value 2842.305722
-iter  20 value 2077.967679
-iter  30 value 1722.253746
-iter  40 value 1509.934640
-iter  50 value 1449.465407
-iter  60 value 1413.354531
-iter  70 value 1395.351176
-iter  80 value 1388.792425
-iter  90 value 1384.812772
-iter 100 value 1377.246196
-final  value 1377.246196 
+initial  value 6847.273744 
+iter  10 value 3432.790309
+iter  20 value 2664.982445
+iter  30 value 1861.514163
+iter  40 value 1697.744748
+iter  50 value 1630.738852
+iter  60 value 1603.133494
+iter  70 value 1580.439296
+iter  80 value 1572.664020
+iter  90 value 1563.563616
+iter 100 value 1561.980102
+final  value 1561.980102 
 stopped after 100 iterations
-# weights:  17
-initial  value 5483.898778 
-iter  10 value 3115.705249
-iter  20 value 3092.268224
-iter  30 value 2433.010546
-iter  40 value 2394.556889
-iter  50 value 1566.470496
-iter  60 value 1549.310458
-iter  70 value 1548.782380
-iter  80 value 1548.758052
-iter  90 value 1548.749002
-iter 100 value 1548.742111
-final  value 1548.742111 
-stopped after 100 iterations
-# weights:  41
-initial  value 5568.890757 
-iter  10 value 3121.248312
-iter  20 value 3092.337210
-iter  30 value 3092.126532
-iter  40 value 3092.121236
-iter  50 value 3092.110265
-iter  60 value 3092.072593
-iter  70 value 3091.358664
-iter  80 value 2244.425533
-iter  90 value 2213.039814
-iter 100 value 2205.592751
-final  value 2205.592751 
-stopped after 100 iterations
-# weights:  65
-initial  value 10132.040282 
-iter  10 value 3192.733860
-iter  20 value 3093.161382
-iter  30 value 1930.142633
-iter  40 value 1698.630510
-iter  50 value 1611.273167
-iter  60 value 1518.888085
-iter  70 value 1490.871870
-iter  80 value 1465.082890
-iter  90 value 1436.200209
-iter 100 value 1419.292874
-final  value 1419.292874 
-stopped after 100 iterations
-# weights:  65
-initial  value 10356.531016 
-iter  10 value 3705.042869
-iter  20 value 3134.857850
-iter  30 value 2336.863216
-iter  40 value 1942.961540
-iter  50 value 1728.094213
-iter  60 value 1674.826152
-iter  70 value 1633.171909
-iter  80 value 1607.567686
-iter  90 value 1594.867079
-iter 100 value 1584.068750
-final  value 1584.068750 
-stopped after 100 iterations
-             svmPoly        C5.0          nb         nnet         pls        fda     pcaNNet
-svmPoly  1.000000000  0.04533315 -0.22891038 -0.009566648  0.12958476 -0.3383834 -0.20333578
-C5.0     0.045333152  1.00000000 -0.06929350 -0.462560061  0.02973481  0.4125576  0.07611362
-nb      -0.228910380 -0.06929350  1.00000000  0.083149353 -0.58022092  0.3154562 -0.47264207
-nnet    -0.009566648 -0.46256006  0.08314935  1.000000000 -0.34035542  0.3170959 -0.35731605
-pls      0.129584757  0.02973481 -0.58022092 -0.340355419  1.00000000 -0.2193360 -0.01133505
-fda     -0.338383386  0.41255760  0.31545621  0.317095919 -0.21933600  1.0000000 -0.17700296
-pcaNNet -0.203335778  0.07611362 -0.47264207 -0.357316053 -0.01133505 -0.1770030  1.00000000
+            svmPoly        C5.0          nb        nnet         pls         fda     pcaNNet
+svmPoly  1.00000000 -0.01256639 -0.15281446  0.13822175  0.02272915 -0.22792553 -0.31608210
+C5.0    -0.01256639  1.00000000 -0.13169819  0.10505179 -0.15525316 -0.68593800 -0.18918450
+nb      -0.15281446 -0.13169819  1.00000000 -0.35495250  0.12729269 -0.14950111 -0.04852729
+nnet     0.13822175  0.10505179 -0.35495250  1.00000000  0.04494311 -0.17891039  0.50102139
+pls      0.02272915 -0.15525316  0.12729269  0.04494311  1.00000000 -0.01154773  0.04096653
+fda     -0.22792553 -0.68593800 -0.14950111 -0.17891039 -0.01154773  1.00000000  0.15074900
+pcaNNet -0.31608210 -0.18918450 -0.04852729  0.50102139  0.04096653  0.15074900  1.00000000
    user  system elapsed 
- 685.25    9.88  759.74 
+ 723.19    6.80  794.27 

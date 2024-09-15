@@ -8,21 +8,21 @@ Partial Least Squares
 
 Pre-processing: centered (3), scaled (3) 
 Resampling: Cross-Validated (10 fold, repeated 10 times) 
-Summary of sample sizes: 5763, 5760, 5761, 5762, 5762, 5762, ... 
+Summary of sample sizes: 5763, 5762, 5762, 5761, 5762, 5762, ... 
 Resampling results across tuning parameters:
 
   ncomp  logLoss   AUC        prAUC      Accuracy   Kappa      Mean_F1  Mean_Sensitivity  Mean_Specificity
-  1      1.207489  0.6923185  0.3008324  0.7590925  0.2127401  NaN      0.2345365         0.8344857       
-  2      1.206313  0.7401655  0.3231080  0.7598580  0.2137516  NaN      0.2346124         0.8346105       
+  1      1.207515  0.6901291  0.3021395  0.7591707  0.2128543  NaN      0.2345592         0.8344749       
+  2      1.206338  0.7389398  0.3291718  0.7596868  0.2129581  NaN      0.2344414         0.8344819       
   Mean_Pos_Pred_Value  Mean_Neg_Pred_Value  Mean_Precision  Mean_Recall  Mean_Detection_Rate  Mean_Balanced_Accuracy
-  NaN                  0.9008080            NaN             0.2345365    0.1518185            0.5345111             
-  NaN                  0.9027343            NaN             0.2346124    0.1519716            0.5346114             
+  NaN                  0.9011879            NaN             0.2345592    0.1518341            0.5345171             
+  NaN                  0.9029553            NaN             0.2344414    0.1519374            0.5344617             
 
 logLoss was used to select the optimal model using the smallest value.
 The final value used for the model was ncomp = 2.
 [1] "Train time"
    user  system elapsed 
-  14.73    0.14   21.69 
+  22.19    0.25   28.74 
  Factor w/ 5 levels "E","N","P","R",..: 2 2 2 2 2 2 2 2 2 2 ...
 NULL
            E         N         P         R         T
@@ -66,7 +66,7 @@ Detection Prevalence 0.000000   0.9205   0.0000  0.07947  0.00000
 Balanced Accuracy    0.500000   0.5893   0.5000  0.57935  0.50000
 [1] "Predict time"
    user  system elapsed 
-   0.08    0.00    0.22 
+   0.17    0.00    0.21 
 pls variable importance
 
   variables are sorted by maximum importance across the classes
@@ -76,7 +76,7 @@ By 0.0056512 0.091180 1.029e-03 0.076072 0.0151694
 Bz 0.0001296 0.004949 3.133e-05 0.004139 0.0004192
 [1] "Importance time"
    user  system elapsed 
-      0       0       0 
+   0.01    0.00    0.00 
 [1] "Total time"
    user  system elapsed 
-  15.65    0.14   22.72 
+  23.25    0.25   29.89 

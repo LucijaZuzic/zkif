@@ -391,7 +391,7 @@ for (i in 1:length(model_types)) {
   for (j in 1:length(model_name_list)) {
     model_name_use <- model_name_list[[j]]
     file_name <- paste(paste(model_type_use, model_name_use, sep = "/"), "txt", sep = ".")
-    if (!file.exists(file_name)) {
+    if (file.exists(file_name)) {
       print(model_type_use)
       print(model_name_use)
       sink(file_name)
@@ -408,7 +408,7 @@ for (i in 1:length(model_types)) {
   list4 <- c("svmPoly", "nnet", "C5.0", "nb")
   list7 <- c("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet")
   
-  if (!file.exists(paste(model_type_use, "ansamble4.txt", sep = "/"))) {
+  if (file.exists(paste(model_type_use, "ansamble4.txt", sep = "/"))) {
       print(model_type_use)
       print("ansamble4")
       sink(paste(model_type_use, "ansamble4.txt", sep = "/"))
@@ -420,7 +420,7 @@ for (i in 1:length(model_types)) {
       print(time_taken)
   }
   
-  if (!file.exists(paste(model_type_use, "ansamble7.txt", sep = "/"))) {
+  if (file.exists(paste(model_type_use, "ansamble7.txt", sep = "/"))) {
       print(model_type_use)
       print("ansamble7")
       sink(paste(model_type_use, "ansamble7.txt", sep = "/"))
