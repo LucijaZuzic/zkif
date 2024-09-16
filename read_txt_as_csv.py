@@ -862,9 +862,9 @@ for an in ansamble_list:
     file_label.close()
 all_str_dict = ""
 for kt in keywords_time:
-    file_label = open("latex_table_total/time_dict_" + kt + ".tex", "w")
+    file_label = open("latex_table_total/time_dict_" + kt.lower() + ".tex", "w")
     file_label.write(time_dict[kt][:-1])
     file_label.close()
-    file_label = open("latex_table_total/time_reverse_dict_" + kt + ".tex", "w")
+    file_label = open("latex_table_total/time_reverse_dict_" + kt.lower() + ".tex", "w")
     file_label.write(time_reverse_dict[kt][:-1])
     file_label.close()
