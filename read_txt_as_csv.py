@@ -140,7 +140,7 @@ for wd in wd_list:
                 dict_cm[colname] = []
                 for row_ix in range(1, len(cm[0])):
                     dict_cm[colname].append(cm[row_ix][col_ix])
-            line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\cline{3-7}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{5}{|c|}{Reference - " + wd + " - " + model_name + "} \\\\ \\cline{3-7}\n"
+            line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\cline{3-7}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{5}{|c|}{Reference - " + wd.replace("_", " ") + " - " + model_name + "} \\\\ \\cline{3-7}\n"
             for row_ix in range(len(cm)):
                 line_one += "\t\t & "
                 flag_end = False
@@ -159,8 +159,8 @@ for wd in wd_list:
             line_one = line_one.replace(" & Prediction ", "\\multicolumn{2}{c|}{} ")
             line_one = line_one.replace(" & E", "\\multirow{5}{*}{\\rotatebox{90}{Prediction}} & E")
             line_one = line_one.replace("}\\multirow{5}{*}{\\rotatebox{90}{Prediction}} & E", "} & E")
-            caption_txt = "cm:" + wd + ":" + model_name
-            label_txt = "tab:cm:" + wd + ":" +  model_name
+            caption_txt = "cm:" + wd.replace("_", "") + ":" + model_name
+            label_txt = "tab:cm:" + wd.replace("_", "") + ":" +  model_name
             line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
             if model_name in model_print_list and by_pred:
                 #print(line_one)
@@ -216,7 +216,7 @@ for wd in wd_list:
             for i in range(len(metric_alias) - len(skip_first) + 2):
                 line_one += "|c"
             line_one += "|}"
-            line_one += "\n\t\t\\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{" + str(len(metric_alias) - len(skip_first)) + "}{c|}{Statistics - " + wd + " - " + model_name + "} \\\\ \\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n"
+            line_one += "\n\t\t\\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{" + str(len(metric_alias) - len(skip_first)) + "}{c|}{Statistics - " + wd.replace("_", " ") + " - " + model_name + "} \\\\ \\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n"
             for colname in dict_cs:
                 line_one += "\t\t"
                 if "E" not in colname and "Statistics" not in colname:
@@ -243,8 +243,8 @@ for wd in wd_list:
                     line_one += "\\\\ \\hline\n"
                 else:
                     line_one += "\\\\ \\cline{2-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n"
-            caption_txt = "cs:" + wd + ":" + model_name
-            label_txt = "tab:cs:" + wd + ":" +  model_name
+            caption_txt = "cs:" + wd.replace("_", "") + ":" + model_name
+            label_txt = "tab:cs:" + wd.replace("_", "") + ":" +  model_name
             line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
             if model_name in model_print_list and by_class:
                 line_one = line_one.replace(".0\%", "\%")
@@ -262,7 +262,7 @@ for wd in wd_list:
                 all_model_dict[model_name] += line_one + "\n"
                 stats_dict[model_name] += line_one + "\n"
                 all_str_dict += line_one + "\n"
-            line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\cline{3-7}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{5}{c|}{Class - " + wd + " - " + model_name + "} \\\\ \\cline{3-7}\n"
+            line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\cline{3-7}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{5}{c|}{Class - " + wd.replace("_", " ") + " - " + model_name + "} \\\\ \\cline{3-7}\n"
             for row_ix in range(len(cs)):
                 if cs[row_ix][0] in skip_first:
                     continue
@@ -292,8 +292,8 @@ for wd in wd_list:
                     line_one += "\\\\ \\hline\n"
                 else:
                     line_one += "\\\\ \\cline{2-7}\n"
-            caption_txt = "cs:reverse:" + wd + ":" + model_name
-            label_txt = "tab:cs:reverse:" + wd + ":" +  model_name
+            caption_txt = "cs:reverse:" + wd.replace("_", "") + ":" + model_name
+            label_txt = "tab:cs:reverse:" + wd.replace("_", "") + ":" +  model_name
             line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
             if model_name in model_print_list and by_statistics:
                 line_one = line_one.replace(".0\%", "\%")
@@ -377,8 +377,8 @@ for wd in wd_list:
                 else:
                     lines_time += dict_time_total[time_name][key_name][key_val_ix] + " & "
             lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-        caption_txt = "time:" + wd + ":" + time_name.lower()
-        label_txt = "tab:time:" + wd + ":" + time_name.lower()
+        caption_txt = "time:" + wd.replace("_", "") + ":" + time_name.lower()
+        label_txt = "tab:time:" + wd.replace("_", "") + ":" + time_name.lower()
         lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if by_time_type:
             #print(lines_time)
@@ -410,8 +410,8 @@ for wd in wd_list:
                 else:
                     lines_time += key_val + " & "
             lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-        caption_txt = "time:reverse:" + wd + ":" + time_name.lower()
-        label_txt = "tab:time:reverse:" + wd + ":" + time_name.lower()
+        caption_txt = "time:reverse:" + wd.replace("_", "") + ":" + time_name.lower()
+        label_txt = "tab:time:reverse:" + wd.replace("_", "") + ":" + time_name.lower()
         lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if by_time_model:
             #print(lines_time)
@@ -447,8 +447,8 @@ for wd in wd_list:
             else:
                 lines_time += dict_time_total_total[key_name][key_val_ix] + " & "
         lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-    caption_txt = "time:" + wd
-    label_txt = "tab:time:" + wd
+    caption_txt = "time:" + wd.replace("_", "")
+    label_txt = "tab:time:" + wd.replace("_", "")
     lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
     if by_time_type:
         #print(lines_time)
@@ -480,8 +480,8 @@ for wd in wd_list:
             else:
                 lines_time += key_val + " & "
         lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-    caption_txt = "time:reverse:" + wd
-    label_txt = "tab:time:reverse:" + wd
+    caption_txt = "time:reverse:" + wd.replace("_", "")
+    label_txt = "tab:time:reverse:" + wd.replace("_", "")
     lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
     if by_time_model:
         #print(lines_time)
@@ -524,8 +524,8 @@ for wd in wd_list:
             else:
                 line_print += "NA & "
         line_print = line_print[:-2] + "\\\\ \\hline\n"
-    caption_txt = "stats:" + wd
-    label_txt = "tab:stats:" + wd
+    caption_txt = "stats:" + wd.replace("_", "")
+    label_txt = "tab:stats:" + wd.replace("_", "")
     line_print += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
     if by_metric:
         line_print = line_print.replace("2.2e-16", "2.2 \\times {10}^{-16}")
@@ -563,8 +563,8 @@ for wd in wd_list:
             else:
                 line_print += "NA & "
         line_print = line_print[:-2] + "\\\\ \\hline\n"
-    caption_txt = "stats:reverse:" + wd
-    label_txt = "tab:stats:reverse:" + wd
+    caption_txt = "stats:reverse:" + wd.replace("_", "")
+    label_txt = "tab:stats:reverse:" + wd.replace("_", "")
     line_print += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
     if by_model:
         line_print = line_print.replace("2.2e-16", "2.2 \\times {10}^{-16}")
@@ -633,8 +633,8 @@ for wd in wd_list:
                     else:
                         lines_print_a += str(dict_ansamble[colname][val_ix]) + " & "
             lines_print_a = lines_print_a[:-2] + "\\\\ \\hline\n"
-        caption_txt = "ansamble" + str(num_ansamble) + ":" + wd
-        label_txt = "tab:ansamble" + str(num_ansamble) + ":" + wd
+        caption_txt = "ansamble" + str(num_ansamble) + ":" + wd.replace("_", "")
+        label_txt = "tab:ansamble" + str(num_ansamble) + ":" + wd.replace("_", "")
         lines_print_a += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if num_ansamble in ansamble_print and by_ansamble:
             #print(lines_print_a)
@@ -681,8 +681,8 @@ for wd in wd_list:
                 else:
                     lines_time += str(dict_time_a[num_ansamble][key_name][key_val_ix]) + " & "
             lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-        caption_txt = "time:ansamble:" + wd + ":" + str(num_ansamble)
-        label_txt = "tab:time:ansamble:" + wd + ":" + str(num_ansamble)
+        caption_txt = "time:ansamble:" + wd.replace("_", "") + ":" + str(num_ansamble)
+        label_txt = "tab:time:ansamble:" + wd.replace("_", "") + ":" + str(num_ansamble)
         lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if by_time_type_ansamble and num_ansamble in ansamble_print and by_ansamble:
             #print(lines_time)
@@ -714,8 +714,8 @@ for wd in wd_list:
                 else:
                     lines_time += str(key_val) + " & "
             lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-        caption_txt = "time:ansamble:reverse:" + wd + ":" + str(num_ansamble)
-        label_txt = "tab:time:ansamble:reverse:" + wd + ":"  + str(num_ansamble)
+        caption_txt = "time:ansamble:reverse:" + wd.replace("_", "") + ":" + str(num_ansamble)
+        label_txt = "tab:time:ansamble:reverse:" + wd.replace("_", "") + ":"  + str(num_ansamble)
         lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if by_time_model_ansamble and num_ansamble in ansamble_print and by_ansamble:
             #print(lines_time)
@@ -749,8 +749,8 @@ for wd in wd_list:
             else:
                 lines_time += str(dict_time_a_total[key_name][key_val_ix]) + " & "
         lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-    caption_txt = "time:ansamble:" + wd
-    label_txt = "tab:time:ansamble:" + wd
+    caption_txt = "time:ansamble:" + wd.replace("_", "")
+    label_txt = "tab:time:ansamble:" + wd.replace("_", "")
     lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
     if by_time_type_ansamble and by_ansamble:
         #print(lines_time)
@@ -782,8 +782,8 @@ for wd in wd_list:
             else:
                 lines_time += str(key_val) + " & "
         lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-    caption_txt = "time:ansamble:reverse:" + wd
-    label_txt = "tab:time:ansamble:reverse:" + wd
+    caption_txt = "time:ansamble:reverse:" + wd.replace("_", "")
+    label_txt = "tab:time:ansamble:reverse:" + wd.replace("_", "")
     lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
     if by_time_model_ansamble and by_ansamble:
         #print(lines_time)
