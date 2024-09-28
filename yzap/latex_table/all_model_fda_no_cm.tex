@@ -1,14 +1,14 @@
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-		\cline{3-9}
-		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - yzap - fda} \\ \cline{3-9}
-		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $66.6667\%$ & $99.9373\%$ & $66.6667\%$ & $99.9373\%$ & $0.1252\%$ & $0.1877\%$ & $83.302\%$ \\ \cline{2-9}
-		 & N & $92.05\%$ & $39.25\%$ & $80.55\%$ & $64.37\%$ & $67.4\%$ & $83.67\%$ & $65.65\%$ \\ \cline{2-9}
-		 & P & $0\%$ & $99.9363\%$ & $0\%$ & $98.3093\%$ & $0\%$ & $0.0626\%$ & $49.9682\%$ \\ \cline{2-9}
-		 & R & $38.786\%$ & $91.961\%$ & $60\%$ & $82.853\%$ & $9.199\%$ & $15.332\%$ & $65.373\%$ \\ \cline{2-9}
-		 & T & $0\%$ & $99.24\%$ & $0\%$ & $98.802\%$ & $0\%$ & $0.7509\%$ & $49.62\%$ \\ \hline
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$66.6667\%$ & $99.9373\%$ & $66.6667\%$ & $99.9373\%$ & $0.1252\%$ & $0.1877\%$ & $83.302\%$ \\ \hline
+		$92.05\%$ & $39.25\%$ & $80.55\%$ & $64.37\%$ & $67.4\%$ & $83.67\%$ & $65.65\%$ \\ \hline
+		$0\%$ & $99.9363\%$ & $0\%$ & $98.3093\%$ & $0\%$ & $0.0626\%$ & $49.9682\%$ \\ \hline
+		$38.786\%$ & $91.961\%$ & $60\%$ & $82.853\%$ & $9.199\%$ & $15.332\%$ & $65.373\%$ \\ \hline
+		$0\%$ & $99.24\%$ & $0\%$ & $98.802\%$ & $0\%$ & $0.7509\%$ & $49.62\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the FDA model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:cs:yzap:fda}
@@ -16,17 +16,17 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - yzap - fda} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $66.6667\%$ & $92.05\%$ & $0\%$ & $38.786\%$ & $0\%$ \\ \cline{2-7}
-		 & Spec & $99.9373\%$ & $39.25\%$ & $99.9363\%$ & $91.961\%$ & $99.24\%$ \\ \cline{2-7}
-		 & PPV & $66.6667\%$ & $80.55\%$ & $0\%$ & $60\%$ & $0\%$ \\ \cline{2-7}
-		 & NPV & $99.9373\%$ & $64.37\%$ & $98.3093\%$ & $82.853\%$ & $98.802\%$ \\ \cline{2-7}
-		 & DR & $0.1252\%$ & $67.4\%$ & $0\%$ & $9.199\%$ & $0\%$ \\ \cline{2-7}
-		 & DP & $0.1877\%$ & $83.67\%$ & $0.0626\%$ & $15.332\%$ & $0.7509\%$ \\ \cline{2-7}
-		 & BA & $83.302\%$ & $65.65\%$ & $49.9682\%$ & $65.373\%$ & $49.62\%$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $66.6667\%$ & $92.05\%$ & $0\%$ & $38.786\%$ & $0\%$ \\ \hline
+		Spec & $99.9373\%$ & $39.25\%$ & $99.9363\%$ & $91.961\%$ & $99.24\%$ \\ \hline
+		PPV & $66.6667\%$ & $80.55\%$ & $0\%$ & $60\%$ & $0\%$ \\ \hline
+		NPV & $99.9373\%$ & $64.37\%$ & $98.3093\%$ & $82.853\%$ & $98.802\%$ \\ \hline
+		DR & $0.1252\%$ & $67.4\%$ & $0\%$ & $9.199\%$ & $0\%$ \\ \hline
+		DP & $0.1877\%$ & $83.67\%$ & $0.0626\%$ & $15.332\%$ & $0.7509\%$ \\ \hline
+		BA & $83.302\%$ & $65.65\%$ & $49.9682\%$ & $65.373\%$ & $49.62\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the FDA model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:cs:reverse:yzap:fda}

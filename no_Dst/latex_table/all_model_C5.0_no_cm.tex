@@ -1,14 +1,14 @@
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-		\cline{3-9}
-		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no Dst - C5.0} \\ \cline{3-9}
-		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $33.3333\%$ & $100\%$ & $100\%$ & $99.8748\%$ & $0.0626\%$ & $0.0626\%$ & $66.6667\%$ \\ \cline{2-9}
-		 & N & $91.88\%$ & $70.33\%$ & $89.43\%$ & $76.01\%$ & $67.27\%$ & $75.22\%$ & $81.1\%$ \\ \cline{2-9}
-		 & P & $11.1111\%$ & $99.809\%$ & $50\%$ & $98.4925\%$ & $0.1877\%$ & $0.3755\%$ & $55.4601\%$ \\ \cline{2-9}
-		 & R & $71.5\%$ & $91.39\%$ & $72.07\%$ & $91.16\%$ & $16.96\%$ & $23.53\%$ & $81.45\%$ \\ \cline{2-9}
-		 & T & $36.8421\%$ & $99.62\%$ & $53.8462\%$ & $99.2429\%$ & $0.438\%$ & $0.8135\%$ & $68.2311\%$ \\ \hline
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$33.3333\%$ & $100\%$ & $100\%$ & $99.8748\%$ & $0.0626\%$ & $0.0626\%$ & $66.6667\%$ \\ \hline
+		$91.88\%$ & $70.33\%$ & $89.43\%$ & $76.01\%$ & $67.27\%$ & $75.22\%$ & $81.1\%$ \\ \hline
+		$11.1111\%$ & $99.809\%$ & $50\%$ & $98.4925\%$ & $0.1877\%$ & $0.3755\%$ & $55.4601\%$ \\ \hline
+		$71.5\%$ & $91.39\%$ & $72.07\%$ & $91.16\%$ & $16.96\%$ & $23.53\%$ & $81.45\%$ \\ \hline
+		$36.8421\%$ & $99.62\%$ & $53.8462\%$ & $99.2429\%$ & $0.438\%$ & $0.8135\%$ & $68.2311\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the decision tree model when using all variables except Dst as input.}
 	\label{tab:cs:noDst:C5.0}
@@ -16,17 +16,17 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - no Dst - C5.0} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $33.3333\%$ & $91.88\%$ & $11.1111\%$ & $71.5\%$ & $36.8421\%$ \\ \cline{2-7}
-		 & Spec & $100\%$ & $70.33\%$ & $99.809\%$ & $91.39\%$ & $99.62\%$ \\ \cline{2-7}
-		 & PPV & $100\%$ & $89.43\%$ & $50\%$ & $72.07\%$ & $53.8462\%$ \\ \cline{2-7}
-		 & NPV & $99.8748\%$ & $76.01\%$ & $98.4925\%$ & $91.16\%$ & $99.2429\%$ \\ \cline{2-7}
-		 & DR & $0.0626\%$ & $67.27\%$ & $0.1877\%$ & $16.96\%$ & $0.438\%$ \\ \cline{2-7}
-		 & DP & $0.0626\%$ & $75.22\%$ & $0.3755\%$ & $23.53\%$ & $0.8135\%$ \\ \cline{2-7}
-		 & BA & $66.6667\%$ & $81.1\%$ & $55.4601\%$ & $81.45\%$ & $68.2311\%$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $33.3333\%$ & $91.88\%$ & $11.1111\%$ & $71.5\%$ & $36.8421\%$ \\ \hline
+		Spec & $100\%$ & $70.33\%$ & $99.809\%$ & $91.39\%$ & $99.62\%$ \\ \hline
+		PPV & $100\%$ & $89.43\%$ & $50\%$ & $72.07\%$ & $53.8462\%$ \\ \hline
+		NPV & $99.8748\%$ & $76.01\%$ & $98.4925\%$ & $91.16\%$ & $99.2429\%$ \\ \hline
+		DR & $0.0626\%$ & $67.27\%$ & $0.1877\%$ & $16.96\%$ & $0.438\%$ \\ \hline
+		DP & $0.0626\%$ & $75.22\%$ & $0.3755\%$ & $23.53\%$ & $0.8135\%$ \\ \hline
+		BA & $66.6667\%$ & $81.1\%$ & $55.4601\%$ & $81.45\%$ & $68.2311\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the decision tree model when using all variables except Dst as input.}
 	\label{tab:cs:reverse:noDst:C5.0}

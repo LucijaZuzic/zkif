@@ -1,14 +1,14 @@
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - all - svmPoly} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1102$ & $1$ & $256$ & $0$ \\ \cline{2-7}
-		 & P & $0$ & $68$ & $26$ & $4$ & $0$ \\ \cline{2-7}
-		 & R & $0$ & $0$ & $0$ & $79$ & $0$ \\ \cline{2-7}
-		 & T & $3$ & $0$ & $0$ & $40$ & $19$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1102$ & $1$ & $256$ & $0$ \\ \hline
+		 P & $0$ & $68$ & $26$ & $4$ & $0$ \\ \hline
+		 R & $0$ & $0$ & $0$ & $79$ & $0$ \\ \hline
+		 T & $3$ & $0$ & $0$ & $40$ & $19$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the polynomial SVM model when using all variables as input.}
 	\label{tab:cm:all:svmPoly}
@@ -16,15 +16,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no Dst - svmPoly} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1131$ & $25$ & $343$ & $5$ \\ \cline{2-7}
-		 & P & $0$ & $32$ & $2$ & $2$ & $0$ \\ \cline{2-7}
-		 & R & $0$ & $3$ & $0$ & $20$ & $3$ \\ \cline{2-7}
-		 & T & $3$ & $4$ & $0$ & $14$ & $11$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1131$ & $25$ & $343$ & $5$ \\ \hline
+		 P & $0$ & $32$ & $2$ & $2$ & $0$ \\ \hline
+		 R & $0$ & $3$ & $0$ & $20$ & $3$ \\ \hline
+		 T & $3$ & $4$ & $0$ & $14$ & $11$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the polynomial SVM model when using all variables except Dst as input.}
 	\label{tab:cm:noDst:svmPoly}
@@ -32,15 +32,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no TEC - svmPoly} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1154$ & $26$ & $350$ & $6$ \\ \cline{2-7}
-		 & P & $0$ & $9$ & $1$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $0$ & $3$ & $0$ & $12$ & $1$ \\ \cline{2-7}
-		 & T & $3$ & $4$ & $0$ & $17$ & $12$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1154$ & $26$ & $350$ & $6$ \\ \hline
+		 P & $0$ & $9$ & $1$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $3$ & $0$ & $12$ & $1$ \\ \hline
+		 T & $3$ & $4$ & $0$ & $17$ & $12$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the polynomial SVM model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:cm:noTEC:svmPoly}
@@ -48,15 +48,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - coord - svmPoly} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1168$ & $27$ & $355$ & $9$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $0$ & $0$ & $0$ & $7$ & $1$ \\ \cline{2-7}
-		 & T & $3$ & $2$ & $0$ & $17$ & $9$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1168$ & $27$ & $355$ & $9$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $0$ & $0$ & $7$ & $1$ \\ \hline
+		 T & $3$ & $2$ & $0$ & $17$ & $9$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
 	\label{tab:cm:coord:svmPoly}
@@ -64,15 +64,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xyap - svmPoly} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1163$ & $27$ & $352$ & $6$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $0$ & $3$ & $0$ & $11$ & $2$ \\ \cline{2-7}
-		 & T & $3$ & $4$ & $0$ & $16$ & $11$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1163$ & $27$ & $352$ & $6$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $3$ & $0$ & $11$ & $2$ \\ \hline
+		 T & $3$ & $4$ & $0$ & $16$ & $11$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
 	\label{tab:cm:xyap:svmPoly}
@@ -80,15 +80,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xzap - svmPoly} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1159$ & $27$ & $350$ & $7$ \\ \cline{2-7}
-		 & P & $0$ & $1$ & $0$ & $2$ & $0$ \\ \cline{2-7}
-		 & R & $0$ & $6$ & $0$ & $10$ & $0$ \\ \cline{2-7}
-		 & T & $3$ & $4$ & $0$ & $17$ & $12$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1159$ & $27$ & $350$ & $7$ \\ \hline
+		 P & $0$ & $1$ & $0$ & $2$ & $0$ \\ \hline
+		 R & $0$ & $6$ & $0$ & $10$ & $0$ \\ \hline
+		 T & $3$ & $4$ & $0$ & $17$ & $12$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:cm:xzap:svmPoly}
@@ -96,15 +96,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - yzap - svmPoly} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $1$ & $0$ & $0$ & $0$ & $1$ \\ \cline{2-7}
-		 & N & $2$ & $1166$ & $27$ & $372$ & $18$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $0$ & $4$ & $0$ & $7$ & $0$ \\ \cline{2-7}
-		 & T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $1$ & $0$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $2$ & $1166$ & $27$ & $372$ & $18$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $4$ & $0$ & $7$ & $0$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the polynomial SVM model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:cm:yzap:svmPoly}

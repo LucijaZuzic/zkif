@@ -1,14 +1,14 @@
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no TEC - pcaNNet} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1096$ & $27$ & $137$ & $1$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $3$ & $74$ & $0$ & $242$ & $17$ \\ \cline{2-7}
-		 & T & $0$ & $0$ & $0$ & $0$ & $1$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1096$ & $27$ & $137$ & $1$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $3$ & $74$ & $0$ & $242$ & $17$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $1$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the PCA neural network model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:cm:noTEC:pcaNNet}
@@ -17,14 +17,14 @@
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-		\cline{3-9}
-		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no TEC - pcaNNet} \\ \cline{3-9}
-		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
-		 & N & $93.68\%$ & $61.45\%$ & $86.92\%$ & $78.04\%$ & $68.59\%$ & $78.91\%$ & $77.56\%$ \\ \cline{2-9}
-		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
-		 & R & $63.85\%$ & $92.29\%$ & $72.02\%$ & $89.14\%$ & $15.14\%$ & $21.03\%$ & $78.07\%$ \\ \cline{2-9}
-		 & T & $5.2632\%$ & $100\%$ & $100\%$ & $98.8729\%$ & $0.0626\%$ & $0.0626\%$ & $52.6316\%$ \\ \hline
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$93.68\%$ & $61.45\%$ & $86.92\%$ & $78.04\%$ & $68.59\%$ & $78.91\%$ & $77.56\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$63.85\%$ & $92.29\%$ & $72.02\%$ & $89.14\%$ & $15.14\%$ & $21.03\%$ & $78.07\%$ \\ \hline
+		$5.2632\%$ & $100\%$ & $100\%$ & $98.8729\%$ & $0.0626\%$ & $0.0626\%$ & $52.6316\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:cs:noTEC:pcaNNet}

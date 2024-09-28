@@ -1,14 +1,14 @@
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-		\cline{3-9}
-		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no TEC - svmPoly} \\ \cline{3-9}
-		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
-		 & N & $98.63\%$ & $10.75\%$ & $75.13\%$ & $74.19\%$ & $72.22\%$ & $96.12\%$ & $54.69\%$ \\ \cline{2-9}
-		 & P & $3.7037\%$ & $99.4271\%$ & $10\%$ & $98.3627\%$ & $0.0626\%$ & $0.6258\%$ & $51.5654\%$ \\ \cline{2-9}
-		 & R & $3.1662\%$ & $99.6719\%$ & $75\%$ & $76.8015\%$ & $0.7509\%$ & $1.0013\%$ & $51.419\%$ \\ \cline{2-9}
-		 & T & $63.1579\%$ & $98.4801\%$ & $33.3333\%$ & $99.5519\%$ & $0.7509\%$ & $2.2528\%$ & $80.819\%$ \\ \hline
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$98.63\%$ & $10.75\%$ & $75.13\%$ & $74.19\%$ & $72.22\%$ & $96.12\%$ & $54.69\%$ \\ \hline
+		$3.7037\%$ & $99.4271\%$ & $10\%$ & $98.3627\%$ & $0.0626\%$ & $0.6258\%$ & $51.5654\%$ \\ \hline
+		$3.1662\%$ & $99.6719\%$ & $75\%$ & $76.8015\%$ & $0.7509\%$ & $1.0013\%$ & $51.419\%$ \\ \hline
+		$63.1579\%$ & $98.4801\%$ & $33.3333\%$ & $99.5519\%$ & $0.7509\%$ & $2.2528\%$ & $80.819\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the polynomial SVM model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:cs:noTEC:svmPoly}
@@ -17,14 +17,14 @@
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-		\cline{3-9}
-		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no TEC - C5.0} \\ \cline{3-9}
-		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $33.3333\%$ & $100\%$ & $100\%$ & $99.8748\%$ & $0.0626\%$ & $0.0626\%$ & $66.6667\%$ \\ \cline{2-9}
-		 & N & $93.76\%$ & $63.55\%$ & $87.55\%$ & $78.84\%$ & $68.65\%$ & $78.41\%$ & $78.66\%$ \\ \cline{2-9}
-		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
-		 & R & $64.91\%$ & $93.11\%$ & $74.55\%$ & $89.51\%$ & $15.39\%$ & $20.65\%$ & $79.01\%$ \\ \cline{2-9}
-		 & T & $31.5789\%$ & $99.4934\%$ & $42.8571\%$ & $99.1793\%$ & $0.3755\%$ & $0.8761\%$ & $65.5361\%$ \\ \hline
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$33.3333\%$ & $100\%$ & $100\%$ & $99.8748\%$ & $0.0626\%$ & $0.0626\%$ & $66.6667\%$ \\ \hline
+		$93.76\%$ & $63.55\%$ & $87.55\%$ & $78.84\%$ & $68.65\%$ & $78.41\%$ & $78.66\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$64.91\%$ & $93.11\%$ & $74.55\%$ & $89.51\%$ & $15.39\%$ & $20.65\%$ & $79.01\%$ \\ \hline
+		$31.5789\%$ & $99.4934\%$ & $42.8571\%$ & $99.1793\%$ & $0.3755\%$ & $0.8761\%$ & $65.5361\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the decision tree model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:cs:noTEC:C5.0}
@@ -33,14 +33,14 @@
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-		\cline{3-9}
-		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no TEC - nb} \\ \cline{3-9}
-		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \cline{2-9}
-		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
-		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
-		 & R & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \cline{2-9}
-		 & T & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the naive Bayes model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:cs:noTEC:nb}
@@ -49,14 +49,14 @@
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-		\cline{3-9}
-		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no TEC - nnet} \\ \cline{3-9}
-		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \cline{2-9}
-		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
-		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
-		 & R & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \cline{2-9}
-		 & T & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the neural network model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:cs:noTEC:nnet}
@@ -65,14 +65,14 @@
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-		\cline{3-9}
-		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no TEC - pls} \\ \cline{3-9}
-		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
-		 & N & $96.92\%$ & $35.75\%$ & $80.48\%$ & $80.95\%$ & $70.96\%$ & $88.17\%$ & $66.34\%$ \\ \cline{2-9}
-		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
-		 & R & $34.83\%$ & $95.32\%$ & $69.84\%$ & $82.47\%$ & $8.26\%$ & $11.83\%$ & $65.08\%$ \\ \cline{2-9}
-		 & T & $0\%$ & $100\%$ & NaN & $98.811\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$96.92\%$ & $35.75\%$ & $80.48\%$ & $80.95\%$ & $70.96\%$ & $88.17\%$ & $66.34\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$34.83\%$ & $95.32\%$ & $69.84\%$ & $82.47\%$ & $8.26\%$ & $11.83\%$ & $65.08\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $98.811\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the PLS model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:cs:noTEC:pls}
@@ -81,14 +81,14 @@
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-		\cline{3-9}
-		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no TEC - fda} \\ \cline{3-9}
-		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $33.3333\%$ & $100\%$ & $100\%$ & $99.8748\%$ & $0.0626\%$ & $0.0626\%$ & $66.6667\%$ \\ \cline{2-9}
-		 & N & $92.48\%$ & $56.78\%$ & $85.4\%$ & $73.41\%$ & $67.71\%$ & $79.29\%$ & $74.63\%$ \\ \cline{2-9}
-		 & P & $7.4074\%$ & $99.7454\%$ & $33.3333\%$ & $98.4296\%$ & $0.1252\%$ & $0.3755\%$ & $53.5764\%$ \\ \cline{2-9}
-		 & R & $56.2\%$ & $92.21\%$ & $69.16\%$ & $87.13\%$ & $13.33\%$ & $19.27\%$ & $74.2\%$ \\ \cline{2-9}
-		 & T & $36.842\%$ & $99.43\%$ & $43.75\%$ & $99.241\%$ & $0.438\%$ & $1.001\%$ & $68.136\%$ \\ \hline
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$33.3333\%$ & $100\%$ & $100\%$ & $99.8748\%$ & $0.0626\%$ & $0.0626\%$ & $66.6667\%$ \\ \hline
+		$92.48\%$ & $56.78\%$ & $85.4\%$ & $73.41\%$ & $67.71\%$ & $79.29\%$ & $74.63\%$ \\ \hline
+		$7.4074\%$ & $99.7454\%$ & $33.3333\%$ & $98.4296\%$ & $0.1252\%$ & $0.3755\%$ & $53.5764\%$ \\ \hline
+		$56.2\%$ & $92.21\%$ & $69.16\%$ & $87.13\%$ & $13.33\%$ & $19.27\%$ & $74.2\%$ \\ \hline
+		$36.842\%$ & $99.43\%$ & $43.75\%$ & $99.241\%$ & $0.438\%$ & $1.001\%$ & $68.136\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the FDA model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:cs:noTEC:fda}
@@ -97,14 +97,14 @@
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-		\cline{3-9}
-		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no TEC - pcaNNet} \\ \cline{3-9}
-		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
-		 & N & $93.68\%$ & $61.45\%$ & $86.92\%$ & $78.04\%$ & $68.59\%$ & $78.91\%$ & $77.56\%$ \\ \cline{2-9}
-		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
-		 & R & $63.85\%$ & $92.29\%$ & $72.02\%$ & $89.14\%$ & $15.14\%$ & $21.03\%$ & $78.07\%$ \\ \cline{2-9}
-		 & T & $5.2632\%$ & $100\%$ & $100\%$ & $98.8729\%$ & $0.0626\%$ & $0.0626\%$ & $52.6316\%$ \\ \hline
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$93.68\%$ & $61.45\%$ & $86.92\%$ & $78.04\%$ & $68.59\%$ & $78.91\%$ & $77.56\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$63.85\%$ & $92.29\%$ & $72.02\%$ & $89.14\%$ & $15.14\%$ & $21.03\%$ & $78.07\%$ \\ \hline
+		$5.2632\%$ & $100\%$ & $100\%$ & $98.8729\%$ & $0.0626\%$ & $0.0626\%$ & $52.6316\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:cs:noTEC:pcaNNet}

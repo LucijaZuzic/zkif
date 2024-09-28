@@ -1,14 +1,14 @@
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-		\cline{3-9}
-		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xzap - pls} \\ \cline{3-9}
-		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
-		 & N & $97.52\%$ & $26.64\%$ & $78.42\%$ & $79.72\%$ & $71.4\%$ & $91.05\%$ & $62.08\%$ \\ \cline{2-9}
-		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
-		 & R & $25.066\%$ & $96.062\%$ & $66.434\%$ & $80.481\%$ & $5.945\%$ & $8.949\%$ & $60.564\%$ \\ \cline{2-9}
-		 & T & $0\%$ & $100\%$ & NaN & $98.811\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$97.52\%$ & $26.64\%$ & $78.42\%$ & $79.72\%$ & $71.4\%$ & $91.05\%$ & $62.08\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$25.066\%$ & $96.062\%$ & $66.434\%$ & $80.481\%$ & $5.945\%$ & $8.949\%$ & $60.564\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $98.811\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:cs:xzap:pls}
@@ -16,17 +16,17 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xzap - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $97.52\%$ & $0\%$ & $25.066\%$ & $0\%$ \\ \cline{2-7}
-		 & Spec & $100\%$ & $26.64\%$ & $100\%$ & $96.062\%$ & $100\%$ \\ \cline{2-7}
-		 & PPV & NaN & $78.42\%$ & NaN & $66.434\%$ & NaN \\ \cline{2-7}
-		 & NPV & $99.8123\%$ & $79.72\%$ & $98.31\%$ & $80.481\%$ & $98.811\%$ \\ \cline{2-7}
-		 & DR & $0\%$ & $71.4\%$ & $0\%$ & $5.945\%$ & $0\%$ \\ \cline{2-7}
-		 & DP & $0\%$ & $91.05\%$ & $0\%$ & $8.949\%$ & $0\%$ \\ \cline{2-7}
-		 & BA & $50\%$ & $62.08\%$ & $50\%$ & $60.564\%$ & $50\%$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $97.52\%$ & $0\%$ & $25.066\%$ & $0\%$ \\ \hline
+		Spec & $100\%$ & $26.64\%$ & $100\%$ & $96.062\%$ & $100\%$ \\ \hline
+		PPV & NaN & $78.42\%$ & NaN & $66.434\%$ & NaN \\ \hline
+		NPV & $99.8123\%$ & $79.72\%$ & $98.31\%$ & $80.481\%$ & $98.811\%$ \\ \hline
+		DR & $0\%$ & $71.4\%$ & $0\%$ & $5.945\%$ & $0\%$ \\ \hline
+		DP & $0\%$ & $91.05\%$ & $0\%$ & $8.949\%$ & $0\%$ \\ \hline
+		BA & $50\%$ & $62.08\%$ & $50\%$ & $60.564\%$ & $50\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:cs:reverse:xzap:pls}

@@ -1,14 +1,14 @@
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - yzap - pcaNNet} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $1$ & $1069$ & $25$ & $202$ & $4$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $2$ & $101$ & $2$ & $177$ & $15$ \\ \cline{2-7}
-		 & T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $1$ & $1069$ & $25$ & $202$ & $4$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $2$ & $101$ & $2$ & $177$ & $15$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the PCA neural network model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:cm:yzap:pcaNNet}
@@ -16,17 +16,17 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - yzap - pcaNNet} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $91.37\%$ & $0\%$ & $46.7\%$ & $0\%$ \\ \cline{2-7}
-		 & Spec & $100\%$ & $45.79\%$ & $100\%$ & $90.16\%$ & $100\%$ \\ \cline{2-7}
-		 & PPV & NaN & $82.17\%$ & NaN & $59.6\%$ & NaN \\ \cline{2-7}
-		 & NPV & $99.8123\%$ & $65.99\%$ & $98.31\%$ & $84.47\%$ & $98.811\%$ \\ \cline{2-7}
-		 & DR & $0\%$ & $66.9\%$ & $0\%$ & $11.08\%$ & $0\%$ \\ \cline{2-7}
-		 & DP & $0\%$ & $81.41\%$ & $0\%$ & $18.59\%$ & $0\%$ \\ \cline{2-7}
-		 & BA & $50\%$ & $68.58\%$ & $50\%$ & $68.43\%$ & $50\%$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $91.37\%$ & $0\%$ & $46.7\%$ & $0\%$ \\ \hline
+		Spec & $100\%$ & $45.79\%$ & $100\%$ & $90.16\%$ & $100\%$ \\ \hline
+		PPV & NaN & $82.17\%$ & NaN & $59.6\%$ & NaN \\ \hline
+		NPV & $99.8123\%$ & $65.99\%$ & $98.31\%$ & $84.47\%$ & $98.811\%$ \\ \hline
+		DR & $0\%$ & $66.9\%$ & $0\%$ & $11.08\%$ & $0\%$ \\ \hline
+		DP & $0\%$ & $81.41\%$ & $0\%$ & $18.59\%$ & $0\%$ \\ \hline
+		BA & $50\%$ & $68.58\%$ & $50\%$ & $68.43\%$ & $50\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:cs:reverse:yzap:pcaNNet}

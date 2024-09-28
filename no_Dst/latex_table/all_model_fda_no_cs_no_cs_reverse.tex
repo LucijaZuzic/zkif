@@ -1,14 +1,14 @@
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no Dst - fda} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $1$ & $0$ & $0$ & $0$ & $1$ \\ \cline{2-7}
-		 & N & $0$ & $1076$ & $24$ & $157$ & $1$ \\ \cline{2-7}
-		 & P & $0$ & $1$ & $2$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $0$ & $90$ & $1$ & $215$ & $10$ \\ \cline{2-7}
-		 & T & $2$ & $3$ & $0$ & $7$ & $7$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $1$ & $0$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $0$ & $1076$ & $24$ & $157$ & $1$ \\ \hline
+		 P & $0$ & $1$ & $2$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $90$ & $1$ & $215$ & $10$ \\ \hline
+		 T & $2$ & $3$ & $0$ & $7$ & $7$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the FDA model when using all variables except Dst as input.}
 	\label{tab:cm:noDst:fda}

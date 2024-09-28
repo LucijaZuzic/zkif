@@ -233,25 +233,16 @@ for wd in wd_list:
                 dict_cm[colname] = []
                 for row_ix in range(1, len(cm[0])):
                     dict_cm[colname].append(cm[row_ix][col_ix])
-            line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\cline{3-7}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{5}{|c|}{Reference - " + wd.replace("_", " ") + " - " + model_name + "} \\\\ \\cline{3-7}\n"
+            line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|}\n\t\t\\hline\n\t\t & \\multicolumn{5}{|c|}{Reference} \\\\ \\hline\n"
             for row_ix in range(len(cm)):
-                line_one += "\t\t & "
-                flag_end = False
+                line_one += "\t\t "
                 for col_ix in range(len(cm[row_ix])):
                     if str(cm[row_ix][col_ix]).isdigit():
                         line_one += "$" + str(cm[row_ix][col_ix]) + "$ & "
                     else:
                         line_one += str(cm[row_ix][col_ix]) + " & "
-                    if "T" in str(cm[row_ix][col_ix]):
-                        flag_end = True
                 line_one = line_one[:-2]
-                if flag_end:
-                    line_one += "\\\\ \\hline\n"
-                else:
-                    line_one += "\\\\ \\cline{2-7}\n"
-            line_one = line_one.replace(" & Prediction ", "\\multicolumn{2}{c|}{} ")
-            line_one = line_one.replace(" & E", "\\multirow{5}{*}{\\rotatebox{90}{Prediction}} & E")
-            line_one = line_one.replace("}\\multirow{5}{*}{\\rotatebox{90}{Prediction}} & E", "} & E")
+                line_one += "\\\\ \\hline\n"
             caption_txt = "The confusion matrix for the " + translate_model[model_name] + " model when using " + translate_data[wd] + " as input."
             label_txt = "tab:cm:" + wd.replace("_", "") + ":" +  model_name
             line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
@@ -312,12 +303,9 @@ for wd in wd_list:
             for i in range(len(metric_alias) - len(skip_first) + 2):
                 line_one += "|c"
             line_one += "|}"
-            line_one += "\n\t\t\\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{" + str(len(metric_alias) - len(skip_first)) + "}{c|}{Statistics - " + wd.replace("_", " ") + " - " + model_name + "} \\\\ \\cline{3-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n"
+            line_one += "\n\t\t\\hline\n\t\t & \\multicolumn{" + str(len(metric_alias) - len(skip_first)) + "}{c|}{Statistics} \\\\ \\hline\n"
             for colname in dict_cs:
                 line_one += "\t\t"
-                if "E" not in colname and "Statistics" not in colname:
-                    line_one += " & "
-                line_one += colname.replace("Statistics", "\\multicolumn{2}{c|}{}").replace("E", "\\multirow{5}{*}{\\rotatebox{90}{Class}} & E") + " & "
                 for col_ix in range(len(dict_cs[colname])):
                     if dict_cs["Statistics"][col_ix] in skip_first:
                         continue
@@ -335,10 +323,7 @@ for wd in wd_list:
                         else:
                             line_one += str(dict_cs[colname][col_ix]) + " & "
                 line_one = line_one[:-2]
-                if "Statistics" in colname or "T" in colname:
-                    line_one += "\\\\ \\hline\n"
-                else:
-                    line_one += "\\\\ \\cline{2-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n"
+                line_one += "\\\\ \\hline\n"
             caption_txt = "The performance indicators derived from the confusion matrix for the " + translate_model[model_name] + " model when using " + translate_data[wd] + " as input."
             label_txt = "tab:cs:" + wd.replace("_", "") + ":" +  model_name
             line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
@@ -361,7 +346,7 @@ for wd in wd_list:
                         all_model_dict[model_name][x1][x2][x3] += line_one + "\n"
                         reference_dict[model_name][x1][x2][x3] += line_one + "\n"
                         all_str_dict[x1][x2][x3] += line_one + "\n"
-            line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\cline{3-7}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{5}{c|}{Class - " + wd.replace("_", " ") + " - " + model_name + "} \\\\ \\cline{3-7}\n"
+            line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|}\n\t\t\\hline\n\t\t & \\multicolumn{5}{c|}{Class} \\\\ \\hline\n"
             for row_ix in range(len(cs)):
                 if cs[row_ix][0] in skip_first:
                     continue
@@ -375,22 +360,13 @@ for wd in wd_list:
                     else:
                         if str(cs[row_ix][col_ix]) in metric_alias:
                             if use_alias:
-                                if "Sensitivity" not in str(cs[row_ix][col_ix]):
-                                    line_one += " & " + metric_alias[str(cs[row_ix][col_ix])] + " & "
-                                else:
-                                    line_one += "\\multirow{" + str(len(metric_alias) - len(skip_first)) + "}{*}{\\rotatebox{90}{Statistics}} & " + metric_alias[str(cs[row_ix][col_ix])] + " & "
+                                line_one += metric_alias[str(cs[row_ix][col_ix])] + " & "
                             else:
-                                if "Sensitivity" not in str(cs[row_ix][col_ix]):
-                                    line_one += " & " + str(cs[row_ix][col_ix]) + " & "
-                                else:
-                                    line_one += "\\multirow{" + str(len(metric_alias) - len(skip_first)) + "}{*}{\\rotatebox{90}{Statistics}} & " + str(cs[row_ix][col_ix]) + " & "
+                                line_one += str(cs[row_ix][col_ix]) + " & "
                         else:
-                            line_one += str(cs[row_ix][col_ix]).replace("Statistics", "\\multicolumn{2}{c|}{}") + " & "
+                            line_one += str(cs[row_ix][col_ix]) + " & "
                 line_one = line_one[:-2]
-                if row_ix == 0 or row_ix == len(cs) - 1:
-                    line_one += "\\\\ \\hline\n"
-                else:
-                    line_one += "\\\\ \\cline{2-7}\n"
+                line_one += "\\\\ \\hline\n"
             caption_txt = "The performance indicators derived from the confusion matrix for the " + translate_model[model_name] + " model when using " + translate_data[wd] + " as input."
             label_txt = "tab:cs:reverse:" + wd.replace("_", "") + ":" +  model_name
             line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"

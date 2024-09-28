@@ -1,14 +1,14 @@
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xyap - svmPoly} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1163$ & $27$ & $352$ & $6$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $0$ & $3$ & $0$ & $11$ & $2$ \\ \cline{2-7}
-		 & T & $3$ & $4$ & $0$ & $16$ & $11$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1163$ & $27$ & $352$ & $6$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $3$ & $0$ & $11$ & $2$ \\ \hline
+		 T & $3$ & $4$ & $0$ & $16$ & $11$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
 	\label{tab:cm:xyap:svmPoly}
@@ -16,15 +16,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xyap - C5.0} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1094$ & $26$ & $151$ & $1$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $0$ & $76$ & $1$ & $226$ & $13$ \\ \cline{2-7}
-		 & T & $3$ & $0$ & $0$ & $2$ & $5$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1094$ & $26$ & $151$ & $1$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $76$ & $1$ & $226$ & $13$ \\ \hline
+		 T & $3$ & $0$ & $0$ & $2$ & $5$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the decision tree model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
 	\label{tab:cm:xyap:C5.0}
@@ -32,15 +32,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xyap - nb} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
-		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \hline
+		 P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the naive Bayes model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
 	\label{tab:cm:xyap:nb}
@@ -48,15 +48,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xyap - nnet} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
-		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \hline
+		 P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the neural network model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
 	\label{tab:cm:xyap:nnet}
@@ -64,15 +64,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xyap - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1135$ & $26$ & $266$ & $3$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $3$ & $35$ & $1$ & $113$ & $16$ \\ \cline{2-7}
-		 & T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1135$ & $26$ & $266$ & $3$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $3$ & $35$ & $1$ & $113$ & $16$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the PLS model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
 	\label{tab:cm:xyap:pls}
@@ -80,15 +80,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xyap - fda} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $2$ & $0$ & $0$ & $0$ & $2$ \\ \cline{2-7}
-		 & N & $0$ & $1096$ & $25$ & $167$ & $0$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $0$ & $70$ & $2$ & $208$ & $12$ \\ \cline{2-7}
-		 & T & $1$ & $4$ & $0$ & $4$ & $5$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $2$ & $0$ & $0$ & $0$ & $2$ \\ \hline
+		 N & $0$ & $1096$ & $25$ & $167$ & $0$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $70$ & $2$ & $208$ & $12$ \\ \hline
+		 T & $1$ & $4$ & $0$ & $4$ & $5$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the FDA model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
 	\label{tab:cm:xyap:fda}
@@ -96,15 +96,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xyap - pcaNNet} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1102$ & $26$ & $148$ & $0$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $0$ & $66$ & $1$ & $229$ & $13$ \\ \cline{2-7}
-		 & T & $3$ & $2$ & $0$ & $2$ & $6$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1102$ & $26$ & $148$ & $0$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $66$ & $1$ & $229$ & $13$ \\ \hline
+		 T & $3$ & $2$ & $0$ & $2$ & $6$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the PCA neural network model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
 	\label{tab:cm:xyap:pcaNNet}

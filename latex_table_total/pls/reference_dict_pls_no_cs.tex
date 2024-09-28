@@ -1,14 +1,14 @@
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - all - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1167$ & $27$ & $94$ & $0$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $3$ & $3$ & $0$ & $285$ & $19$ \\ \cline{2-7}
-		 & T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1167$ & $27$ & $94$ & $0$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $3$ & $3$ & $0$ & $285$ & $19$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the PLS model when using all variables as input.}
 	\label{tab:cm:all:pls}
@@ -16,17 +16,17 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - all - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $99.74\%$ & $0\%$ & $75.2\%$ & $0\%$ \\ \cline{2-7}
-		 & Spec & $100\%$ & $71.73\%$ & $100\%$ & $97.95\%$ & $100\%$ \\ \cline{2-7}
-		 & PPV & NaN & $90.61\%$ & NaN & $91.94\%$ & NaN \\ \cline{2-7}
-		 & NPV & $99.8123\%$ & $99.03\%$ & $98.31\%$ & $92.7\%$ & $98.811\%$ \\ \cline{2-7}
-		 & DR & $0\%$ & $73.03\%$ & $0\%$ & $17.83\%$ & $0\%$ \\ \cline{2-7}
-		 & DP & $0\%$ & $80.6\%$ & $0\%$ & $19.4\%$ & $0\%$ \\ \cline{2-7}
-		 & BA & $50\%$ & $85.74\%$ & $50\%$ & $86.57\%$ & $50\%$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $99.74\%$ & $0\%$ & $75.2\%$ & $0\%$ \\ \hline
+		Spec & $100\%$ & $71.73\%$ & $100\%$ & $97.95\%$ & $100\%$ \\ \hline
+		PPV & NaN & $90.61\%$ & NaN & $91.94\%$ & NaN \\ \hline
+		NPV & $99.8123\%$ & $99.03\%$ & $98.31\%$ & $92.7\%$ & $98.811\%$ \\ \hline
+		DR & $0\%$ & $73.03\%$ & $0\%$ & $17.83\%$ & $0\%$ \\ \hline
+		DP & $0\%$ & $80.6\%$ & $0\%$ & $19.4\%$ & $0\%$ \\ \hline
+		BA & $50\%$ & $85.74\%$ & $50\%$ & $86.57\%$ & $50\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the PLS model when using all variables as input.}
 	\label{tab:cs:reverse:all:pls}
@@ -34,15 +34,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no Dst - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1136$ & $26$ & $248$ & $2$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $3$ & $34$ & $1$ & $131$ & $17$ \\ \cline{2-7}
-		 & T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1136$ & $26$ & $248$ & $2$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $3$ & $34$ & $1$ & $131$ & $17$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the PLS model when using all variables except Dst as input.}
 	\label{tab:cm:noDst:pls}
@@ -50,17 +50,17 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - no Dst - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $97.09\%$ & $0\%$ & $34.565\%$ & $0\%$ \\ \cline{2-7}
-		 & Spec & $100\%$ & $35.51\%$ & $100\%$ & $95.488\%$ & $100\%$ \\ \cline{2-7}
-		 & PPV & NaN & $80.45\%$ & NaN & $70.43\%$ & NaN \\ \cline{2-7}
-		 & NPV & $99.8123\%$ & $81.72\%$ & $98.31\%$ & $82.436\%$ & $98.811\%$ \\ \cline{2-7}
-		 & DR & $0\%$ & $71.09\%$ & $0\%$ & $8.198\%$ & $0\%$ \\ \cline{2-7}
-		 & DP & $0\%$ & $88.36\%$ & $0\%$ & $11.64\%$ & $0\%$ \\ \cline{2-7}
-		 & BA & $50\%$ & $66.3\%$ & $50\%$ & $65.026\%$ & $50\%$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $97.09\%$ & $0\%$ & $34.565\%$ & $0\%$ \\ \hline
+		Spec & $100\%$ & $35.51\%$ & $100\%$ & $95.488\%$ & $100\%$ \\ \hline
+		PPV & NaN & $80.45\%$ & NaN & $70.43\%$ & NaN \\ \hline
+		NPV & $99.8123\%$ & $81.72\%$ & $98.31\%$ & $82.436\%$ & $98.811\%$ \\ \hline
+		DR & $0\%$ & $71.09\%$ & $0\%$ & $8.198\%$ & $0\%$ \\ \hline
+		DP & $0\%$ & $88.36\%$ & $0\%$ & $11.64\%$ & $0\%$ \\ \hline
+		BA & $50\%$ & $66.3\%$ & $50\%$ & $65.026\%$ & $50\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the PLS model when using all variables except Dst as input.}
 	\label{tab:cs:reverse:noDst:pls}
@@ -68,15 +68,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no TEC - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1134$ & $26$ & $247$ & $2$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $3$ & $36$ & $1$ & $132$ & $17$ \\ \cline{2-7}
-		 & T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1134$ & $26$ & $247$ & $2$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $3$ & $36$ & $1$ & $132$ & $17$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the PLS model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:cm:noTEC:pls}
@@ -84,17 +84,17 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - no TEC - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $96.92\%$ & $0\%$ & $34.83\%$ & $0\%$ \\ \cline{2-7}
-		 & Spec & $100\%$ & $35.75\%$ & $100\%$ & $95.32\%$ & $100\%$ \\ \cline{2-7}
-		 & PPV & NaN & $80.48\%$ & NaN & $69.84\%$ & NaN \\ \cline{2-7}
-		 & NPV & $99.8123\%$ & $80.95\%$ & $98.31\%$ & $82.47\%$ & $98.811\%$ \\ \cline{2-7}
-		 & DR & $0\%$ & $70.96\%$ & $0\%$ & $8.26\%$ & $0\%$ \\ \cline{2-7}
-		 & DP & $0\%$ & $88.17\%$ & $0\%$ & $11.83\%$ & $0\%$ \\ \cline{2-7}
-		 & BA & $50\%$ & $66.34\%$ & $50\%$ & $65.08\%$ & $50\%$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $96.92\%$ & $0\%$ & $34.83\%$ & $0\%$ \\ \hline
+		Spec & $100\%$ & $35.75\%$ & $100\%$ & $95.32\%$ & $100\%$ \\ \hline
+		PPV & NaN & $80.48\%$ & NaN & $69.84\%$ & NaN \\ \hline
+		NPV & $99.8123\%$ & $80.95\%$ & $98.31\%$ & $82.47\%$ & $98.811\%$ \\ \hline
+		DR & $0\%$ & $70.96\%$ & $0\%$ & $8.26\%$ & $0\%$ \\ \hline
+		DP & $0\%$ & $88.17\%$ & $0\%$ & $11.83\%$ & $0\%$ \\ \hline
+		BA & $50\%$ & $66.34\%$ & $50\%$ & $65.08\%$ & $50\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the PLS model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:cs:reverse:noTEC:pls}
@@ -102,15 +102,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - coord - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1154$ & $27$ & $281$ & $5$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $3$ & $16$ & $0$ & $98$ & $14$ \\ \cline{2-7}
-		 & T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1154$ & $27$ & $281$ & $5$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $3$ & $16$ & $0$ & $98$ & $14$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the PLS model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
 	\label{tab:cm:coord:pls}
@@ -118,17 +118,17 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - coord - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $98.63\%$ & $0\%$ & $25.858\%$ & $0\%$ \\ \cline{2-7}
-		 & Spec & $100\%$ & $26.87\%$ & $100\%$ & $97.293\%$ & $100\%$ \\ \cline{2-7}
-		 & PPV & NaN & $78.66\%$ & NaN & $74.809\%$ & NaN \\ \cline{2-7}
-		 & NPV & $99.8123\%$ & $87.79\%$ & $98.31\%$ & $80.845\%$ & $98.811\%$ \\ \cline{2-7}
-		 & DR & $0\%$ & $72.22\%$ & $0\%$ & $6.133\%$ & $0\%$ \\ \cline{2-7}
-		 & DP & $0\%$ & $91.8\%$ & $0\%$ & $8.198\%$ & $0\%$ \\ \cline{2-7}
-		 & BA & $50\%$ & $62.75\%$ & $50\%$ & $61.575\%$ & $50\%$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $98.63\%$ & $0\%$ & $25.858\%$ & $0\%$ \\ \hline
+		Spec & $100\%$ & $26.87\%$ & $100\%$ & $97.293\%$ & $100\%$ \\ \hline
+		PPV & NaN & $78.66\%$ & NaN & $74.809\%$ & NaN \\ \hline
+		NPV & $99.8123\%$ & $87.79\%$ & $98.31\%$ & $80.845\%$ & $98.811\%$ \\ \hline
+		DR & $0\%$ & $72.22\%$ & $0\%$ & $6.133\%$ & $0\%$ \\ \hline
+		DP & $0\%$ & $91.8\%$ & $0\%$ & $8.198\%$ & $0\%$ \\ \hline
+		BA & $50\%$ & $62.75\%$ & $50\%$ & $61.575\%$ & $50\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
 	\label{tab:cs:reverse:coord:pls}
@@ -136,15 +136,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xyap - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1135$ & $26$ & $266$ & $3$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $3$ & $35$ & $1$ & $113$ & $16$ \\ \cline{2-7}
-		 & T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1135$ & $26$ & $266$ & $3$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $3$ & $35$ & $1$ & $113$ & $16$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the PLS model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
 	\label{tab:cm:xyap:pls}
@@ -152,17 +152,17 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xyap - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $97.01\%$ & $0\%$ & $29.815\%$ & $0\%$ \\ \cline{2-7}
-		 & Spec & $100\%$ & $31.07\%$ & $100\%$ & $95.488\%$ & $100\%$ \\ \cline{2-7}
-		 & PPV & NaN & $79.37\%$ & NaN & $67.262\%$ & NaN \\ \cline{2-7}
-		 & NPV & $99.8123\%$ & $79.17\%$ & $98.31\%$ & $81.399\%$ & $98.811\%$ \\ \cline{2-7}
-		 & DR & $0\%$ & $71.03\%$ & $0\%$ & $7.071\%$ & $0\%$ \\ \cline{2-7}
-		 & DP & $0\%$ & $89.49\%$ & $0\%$ & $10.513\%$ & $0\%$ \\ \cline{2-7}
-		 & BA & $50\%$ & $64.04\%$ & $50\%$ & $62.652\%$ & $50\%$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $97.01\%$ & $0\%$ & $29.815\%$ & $0\%$ \\ \hline
+		Spec & $100\%$ & $31.07\%$ & $100\%$ & $95.488\%$ & $100\%$ \\ \hline
+		PPV & NaN & $79.37\%$ & NaN & $67.262\%$ & NaN \\ \hline
+		NPV & $99.8123\%$ & $79.17\%$ & $98.31\%$ & $81.399\%$ & $98.811\%$ \\ \hline
+		DR & $0\%$ & $71.03\%$ & $0\%$ & $7.071\%$ & $0\%$ \\ \hline
+		DP & $0\%$ & $89.49\%$ & $0\%$ & $10.513\%$ & $0\%$ \\ \hline
+		BA & $50\%$ & $64.04\%$ & $50\%$ & $62.652\%$ & $50\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
 	\label{tab:cs:reverse:xyap:pls}
@@ -170,15 +170,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xzap - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $0$ & $1141$ & $26$ & $284$ & $4$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $3$ & $29$ & $1$ & $95$ & $15$ \\ \cline{2-7}
-		 & T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1141$ & $26$ & $284$ & $4$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $3$ & $29$ & $1$ & $95$ & $15$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the PLS model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:cm:xzap:pls}
@@ -186,17 +186,17 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xzap - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $97.52\%$ & $0\%$ & $25.066\%$ & $0\%$ \\ \cline{2-7}
-		 & Spec & $100\%$ & $26.64\%$ & $100\%$ & $96.062\%$ & $100\%$ \\ \cline{2-7}
-		 & PPV & NaN & $78.42\%$ & NaN & $66.434\%$ & NaN \\ \cline{2-7}
-		 & NPV & $99.8123\%$ & $79.72\%$ & $98.31\%$ & $80.481\%$ & $98.811\%$ \\ \cline{2-7}
-		 & DR & $0\%$ & $71.4\%$ & $0\%$ & $5.945\%$ & $0\%$ \\ \cline{2-7}
-		 & DP & $0\%$ & $91.05\%$ & $0\%$ & $8.949\%$ & $0\%$ \\ \cline{2-7}
-		 & BA & $50\%$ & $62.08\%$ & $50\%$ & $60.564\%$ & $50\%$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $97.52\%$ & $0\%$ & $25.066\%$ & $0\%$ \\ \hline
+		Spec & $100\%$ & $26.64\%$ & $100\%$ & $96.062\%$ & $100\%$ \\ \hline
+		PPV & NaN & $78.42\%$ & NaN & $66.434\%$ & NaN \\ \hline
+		NPV & $99.8123\%$ & $79.72\%$ & $98.31\%$ & $80.481\%$ & $98.811\%$ \\ \hline
+		DR & $0\%$ & $71.4\%$ & $0\%$ & $5.945\%$ & $0\%$ \\ \hline
+		DP & $0\%$ & $91.05\%$ & $0\%$ & $8.949\%$ & $0\%$ \\ \hline
+		BA & $50\%$ & $62.08\%$ & $50\%$ & $60.564\%$ & $50\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:cs:reverse:xzap:pls}
@@ -204,15 +204,15 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - yzap - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & N & $1$ & $1133$ & $24$ & $303$ & $10$ \\ \cline{2-7}
-		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
-		 & R & $2$ & $37$ & $3$ & $76$ & $9$ \\ \cline{2-7}
-		 & T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $1$ & $1133$ & $24$ & $303$ & $10$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $2$ & $37$ & $3$ & $76$ & $9$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
 	\end{tabular}
 	\caption{The confusion matrix for the PLS model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:cm:yzap:pls}
@@ -220,17 +220,17 @@
 
 \begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\cline{3-7}
-		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - yzap - pls} \\ \cline{3-7}
-		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
-		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $96.84\%$ & $0\%$ & $20.053\%$ & $0\%$ \\ \cline{2-7}
-		 & Spec & $100\%$ & $21.03\%$ & $100\%$ & $95.816\%$ & $100\%$ \\ \cline{2-7}
-		 & PPV & NaN & $77.02\%$ & NaN & $59.843\%$ & NaN \\ \cline{2-7}
-		 & NPV & $99.8123\%$ & $70.87\%$ & $98.31\%$ & $79.402\%$ & $98.811\%$ \\ \cline{2-7}
-		 & DR & $0\%$ & $70.9\%$ & $0\%$ & $4.756\%$ & $0\%$ \\ \cline{2-7}
-		 & DP & $0\%$ & $92.05\%$ & $0\%$ & $7.947\%$ & $0\%$ \\ \cline{2-7}
-		 & BA & $50\%$ & $58.93\%$ & $50\%$ & $57.935\%$ & $50\%$ \\ \hline
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $96.84\%$ & $0\%$ & $20.053\%$ & $0\%$ \\ \hline
+		Spec & $100\%$ & $21.03\%$ & $100\%$ & $95.816\%$ & $100\%$ \\ \hline
+		PPV & NaN & $77.02\%$ & NaN & $59.843\%$ & NaN \\ \hline
+		NPV & $99.8123\%$ & $70.87\%$ & $98.31\%$ & $79.402\%$ & $98.811\%$ \\ \hline
+		DR & $0\%$ & $70.9\%$ & $0\%$ & $4.756\%$ & $0\%$ \\ \hline
+		DP & $0\%$ & $92.05\%$ & $0\%$ & $7.947\%$ & $0\%$ \\ \hline
+		BA & $50\%$ & $58.93\%$ & $50\%$ & $57.935\%$ & $50\%$ \\ \hline
 	\end{tabular}
 	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:cs:reverse:yzap:pls}
