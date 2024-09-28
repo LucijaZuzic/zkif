@@ -1,0 +1,33 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no TEC - svmPoly} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1154$ & $26$ & $350$ & $6$ \\ \cline{2-7}
+		 & P & $0$ & $9$ & $1$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $3$ & $0$ & $12$ & $1$ \\ \cline{2-7}
+		 & T & $3$ & $4$ & $0$ & $17$ & $12$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - no TEC - svmPoly} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $98.63\%$ & $3.7037\%$ & $3.1662\%$ & $63.1579\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $10.75\%$ & $99.4271\%$ & $99.6719\%$ & $98.4801\%$ \\ \cline{2-7}
+		 & PPV & NaN & $75.13\%$ & $10\%$ & $75\%$ & $33.3333\%$ \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $74.19\%$ & $98.3627\%$ & $76.8015\%$ & $99.5519\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $72.22\%$ & $0.0626\%$ & $0.7509\%$ & $0.7509\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $96.12\%$ & $0.6258\%$ & $1.0013\%$ & $2.2528\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $54.69\%$ & $51.5654\%$ & $51.419\%$ & $80.819\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the polynomial SVM model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cs:reverse:noTEC:svmPoly}
+\end{table}

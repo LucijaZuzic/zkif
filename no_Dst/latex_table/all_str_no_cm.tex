@@ -1,0 +1,510 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no Dst - svmPoly} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $96.67\%$ & $12.85\%$ & $75.2\%$ & $58.51\%$ & $70.78\%$ & $94.12\%$ & $54.76\%$ \\ \cline{2-9}
+		 & P & $7.4074\%$ & $97.8358\%$ & $5.5556\%$ & $98.3995\%$ & $0.1252\%$ & $2.2528\%$ & $52.6216\%$ \\ \cline{2-9}
+		 & R & $5.277\%$ & $99.508\%$ & $76.923\%$ & $77.163\%$ & $1.252\%$ & $1.627\%$ & $52.392\%$ \\ \cline{2-9}
+		 & T & $57.8947\%$ & $98.67\%$ & $34.375\%$ & $99.4891\%$ & $0.6884\%$ & $2.0025\%$ & $78.2824\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the polynomial SVM model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - no Dst - svmPoly} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $96.67\%$ & $7.4074\%$ & $5.277\%$ & $57.8947\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $12.85\%$ & $97.8358\%$ & $99.508\%$ & $98.67\%$ \\ \cline{2-7}
+		 & PPV & NaN & $75.2\%$ & $5.5556\%$ & $76.923\%$ & $34.375\%$ \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $58.51\%$ & $98.3995\%$ & $77.163\%$ & $99.4891\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $70.78\%$ & $0.1252\%$ & $1.252\%$ & $0.6884\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $94.12\%$ & $2.2528\%$ & $1.627\%$ & $2.0025\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $54.76\%$ & $52.6216\%$ & $52.392\%$ & $78.2824\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the polynomial SVM model when using all variables except Dst as input.}
+	\label{tab:cs:reverse:noDst:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no Dst - C5.0} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $33.3333\%$ & $100\%$ & $100\%$ & $99.8748\%$ & $0.0626\%$ & $0.0626\%$ & $66.6667\%$ \\ \cline{2-9}
+		 & N & $91.88\%$ & $70.33\%$ & $89.43\%$ & $76.01\%$ & $67.27\%$ & $75.22\%$ & $81.1\%$ \\ \cline{2-9}
+		 & P & $11.1111\%$ & $99.809\%$ & $50\%$ & $98.4925\%$ & $0.1877\%$ & $0.3755\%$ & $55.4601\%$ \\ \cline{2-9}
+		 & R & $71.5\%$ & $91.39\%$ & $72.07\%$ & $91.16\%$ & $16.96\%$ & $23.53\%$ & $81.45\%$ \\ \cline{2-9}
+		 & T & $36.8421\%$ & $99.62\%$ & $53.8462\%$ & $99.2429\%$ & $0.438\%$ & $0.8135\%$ & $68.2311\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the decision tree model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - no Dst - C5.0} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $33.3333\%$ & $91.88\%$ & $11.1111\%$ & $71.5\%$ & $36.8421\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $70.33\%$ & $99.809\%$ & $91.39\%$ & $99.62\%$ \\ \cline{2-7}
+		 & PPV & $100\%$ & $89.43\%$ & $50\%$ & $72.07\%$ & $53.8462\%$ \\ \cline{2-7}
+		 & NPV & $99.8748\%$ & $76.01\%$ & $98.4925\%$ & $91.16\%$ & $99.2429\%$ \\ \cline{2-7}
+		 & DR & $0.0626\%$ & $67.27\%$ & $0.1877\%$ & $16.96\%$ & $0.438\%$ \\ \cline{2-7}
+		 & DP & $0.0626\%$ & $75.22\%$ & $0.3755\%$ & $23.53\%$ & $0.8135\%$ \\ \cline{2-7}
+		 & BA & $66.6667\%$ & $81.1\%$ & $55.4601\%$ & $81.45\%$ & $68.2311\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the decision tree model when using all variables except Dst as input.}
+	\label{tab:cs:reverse:noDst:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no Dst - nb} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $99.9373\%$ & $75\%$ & $100\%$ & $0.1877\%$ & $0.2503\%$ & $99.9687\%$ \\ \cline{2-9}
+		 & N & $99.23\%$ & $99.07\%$ & $99.66\%$ & $97.92\%$ & $72.65\%$ & $72.9\%$ & $99.15\%$ \\ \cline{2-9}
+		 & P & $92.593\%$ & $99.618\%$ & $80.645\%$ & $99.872\%$ & $1.564\%$ & $1.94\%$ & $96.105\%$ \\ \cline{2-9}
+		 & R & $98.94\%$ & $99.75\%$ & $99.21\%$ & $99.67\%$ & $23.47\%$ & $23.65\%$ & $99.35\%$ \\ \cline{2-9}
+		 & T & $100\%$ & $99.937\%$ & $95\%$ & $100\%$ & $1.189\%$ & $1.252\%$ & $99.968\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the naive Bayes model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - no Dst - nb} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $100\%$ & $99.23\%$ & $92.593\%$ & $98.94\%$ & $100\%$ \\ \cline{2-7}
+		 & Spec & $99.9373\%$ & $99.07\%$ & $99.618\%$ & $99.75\%$ & $99.937\%$ \\ \cline{2-7}
+		 & PPV & $75\%$ & $99.66\%$ & $80.645\%$ & $99.21\%$ & $95\%$ \\ \cline{2-7}
+		 & NPV & $100\%$ & $97.92\%$ & $99.872\%$ & $99.67\%$ & $100\%$ \\ \cline{2-7}
+		 & DR & $0.1877\%$ & $72.65\%$ & $1.564\%$ & $23.47\%$ & $1.189\%$ \\ \cline{2-7}
+		 & DP & $0.2503\%$ & $72.9\%$ & $1.94\%$ & $23.65\%$ & $1.252\%$ \\ \cline{2-7}
+		 & BA & $99.9687\%$ & $99.15\%$ & $96.105\%$ & $99.35\%$ & $99.968\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the naive Bayes model when using all variables except Dst as input.}
+	\label{tab:cs:reverse:noDst:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no Dst - nnet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \cline{2-9}
+		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
+		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
+		 & R & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \cline{2-9}
+		 & T & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - no Dst - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & PPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & NPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & DR & $0.1877\%$ & $73.22\%$ & $1.69\%$ & $23.72\%$ & $1.189\%$ \\ \cline{2-7}
+		 & DP & $0.1877\%$ & $73.22\%$ & $1.69\%$ & $23.72\%$ & $1.189\%$ \\ \cline{2-7}
+		 & BA & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using all variables except Dst as input.}
+	\label{tab:cs:reverse:noDst:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no Dst - pls} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $97.09\%$ & $35.51\%$ & $80.45\%$ & $81.72\%$ & $71.09\%$ & $88.36\%$ & $66.3\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & R & $34.565\%$ & $95.488\%$ & $70.43\%$ & $82.436\%$ & $8.198\%$ & $11.64\%$ & $65.026\%$ \\ \cline{2-9}
+		 & T & $0\%$ & $100\%$ & NaN & $98.811\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PLS model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - no Dst - pls} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $97.09\%$ & $0\%$ & $34.565\%$ & $0\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $35.51\%$ & $100\%$ & $95.488\%$ & $100\%$ \\ \cline{2-7}
+		 & PPV & NaN & $80.45\%$ & NaN & $70.43\%$ & NaN \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $81.72\%$ & $98.31\%$ & $82.436\%$ & $98.811\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $71.09\%$ & $0\%$ & $8.198\%$ & $0\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $88.36\%$ & $0\%$ & $11.64\%$ & $0\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $66.3\%$ & $50\%$ & $65.026\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PLS model when using all variables except Dst as input.}
+	\label{tab:cs:reverse:noDst:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no Dst - fda} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $33.3333\%$ & $99.9373\%$ & $50\%$ & $99.8747\%$ & $0.0626\%$ & $0.1252\%$ & $66.6353\%$ \\ \cline{2-9}
+		 & N & $91.97\%$ & $57.48\%$ & $85.53\%$ & $72.35\%$ & $67.33\%$ & $78.72\%$ & $74.72\%$ \\ \cline{2-9}
+		 & P & $7.4074\%$ & $99.9363\%$ & $66.6667\%$ & $98.4326\%$ & $0.1252\%$ & $0.1877\%$ & $53.6719\%$ \\ \cline{2-9}
+		 & R & $56.73\%$ & $91.71\%$ & $68.04\%$ & $87.21\%$ & $13.45\%$ & $19.77\%$ & $74.22\%$ \\ \cline{2-9}
+		 & T & $36.842\%$ & $99.24\%$ & $36.842\%$ & $99.24\%$ & $0.438\%$ & $1.189\%$ & $68.041\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the FDA model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - no Dst - fda} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $33.3333\%$ & $91.97\%$ & $7.4074\%$ & $56.73\%$ & $36.842\%$ \\ \cline{2-7}
+		 & Spec & $99.9373\%$ & $57.48\%$ & $99.9363\%$ & $91.71\%$ & $99.24\%$ \\ \cline{2-7}
+		 & PPV & $50\%$ & $85.53\%$ & $66.6667\%$ & $68.04\%$ & $36.842\%$ \\ \cline{2-7}
+		 & NPV & $99.8747\%$ & $72.35\%$ & $98.4326\%$ & $87.21\%$ & $99.24\%$ \\ \cline{2-7}
+		 & DR & $0.0626\%$ & $67.33\%$ & $0.1252\%$ & $13.45\%$ & $0.438\%$ \\ \cline{2-7}
+		 & DP & $0.1252\%$ & $78.72\%$ & $0.1877\%$ & $19.77\%$ & $1.189\%$ \\ \cline{2-7}
+		 & BA & $66.6353\%$ & $74.72\%$ & $53.6719\%$ & $74.22\%$ & $68.041\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the FDA model when using all variables except Dst as input.}
+	\label{tab:cs:reverse:noDst:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no Dst - pcaNNet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $93.33\%$ & $64.49\%$ & $87.78\%$ & $77.97\%$ & $68.34\%$ & $77.85\%$ & $78.91\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & R & $66.49\%$ & $92.29\%$ & $72.83\%$ & $89.86\%$ & $15.77\%$ & $21.65\%$ & $79.39\%$ \\ \cline{2-9}
+		 & T & $21.0526\%$ & $99.7467\%$ & $50\%$ & $99.0566\%$ & $0.2503\%$ & $0.5006\%$ & $60.3997\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - no Dst - pcaNNet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $93.33\%$ & $0\%$ & $66.49\%$ & $21.0526\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $64.49\%$ & $100\%$ & $92.29\%$ & $99.7467\%$ \\ \cline{2-7}
+		 & PPV & NaN & $87.78\%$ & NaN & $72.83\%$ & $50\%$ \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $77.97\%$ & $98.31\%$ & $89.86\%$ & $99.0566\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $68.34\%$ & $0\%$ & $15.77\%$ & $0.2503\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $77.85\%$ & $0\%$ & $21.65\%$ & $0.5006\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $78.91\%$ & $50\%$ & $79.39\%$ & $60.3997\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using all variables except Dst as input.}
+	\label{tab:cs:reverse:noDst:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $275.32$ \\ \hline
+		C5.0 & $591.36$ \\ \hline
+		nb & $173.33$ \\ \hline
+		nnet & $479.08$ \\ \hline
+		pls & $41.82$ \\ \hline
+		fda & $48.49$ \\ \hline
+		pcaNNet & $304.58$ \\ \hline
+	\end{tabular}
+	\caption{The train time in seconds for each model when using all variables except Dst as input.}
+	\label{tab:time:noDst:train}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $275.32$ & $591.36$ & $173.33$ & $479.08$ & $41.82$ & $48.49$ & $304.58$ \\ \hline
+	\end{tabular}
+	\caption{The train time in seconds for each model when using all variables except Dst as input.}
+	\label{tab:time:reverse:noDst:train}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $0.36$ \\ \hline
+		C5.0 & $0.08$ \\ \hline
+		nb & $1.50$ \\ \hline
+		nnet & $0.03$ \\ \hline
+		pls & $0.25$ \\ \hline
+		fda & $0.02$ \\ \hline
+		pcaNNet & $0.02$ \\ \hline
+	\end{tabular}
+	\caption{The prediction time in seconds for each model when using all variables except Dst as input.}
+	\label{tab:time:noDst:predict}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $0.36$ & $0.08$ & $1.50$ & $0.03$ & $0.25$ & $0.02$ & $0.02$ \\ \hline
+	\end{tabular}
+	\caption{The prediction time in seconds for each model when using all variables except Dst as input.}
+	\label{tab:time:reverse:noDst:predict}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & NA \\ \hline
+		C5.0 & $0.01$ \\ \hline
+		nb & NA \\ \hline
+		nnet & NA \\ \hline
+		pls & $0.02$ \\ \hline
+		fda & $0.01$ \\ \hline
+		pcaNNet & NA \\ \hline
+	\end{tabular}
+	\caption{The variable importance calculation time in seconds for each model when using all variables except Dst as input.}
+	\label{tab:time:noDst:importance}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & NA & $0.01$ & NA & NA & $0.02$ & $0.01$ & NA \\ \hline
+	\end{tabular}
+	\caption{The variable importance calculation time in seconds for each model when using all variables except Dst as input.}
+	\label{tab:time:reverse:noDst:importance}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $276.24$ \\ \hline
+		C5.0 & $592.32$ \\ \hline
+		nb & $175.38$ \\ \hline
+		nnet & $479.67$ \\ \hline
+		pls & $42.89$ \\ \hline
+		fda & $49.34$ \\ \hline
+		pcaNNet & $305.16$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using all variables except Dst as input.}
+	\label{tab:time:noDst:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $276.24$ & $592.32$ & $175.38$ & $479.67$ & $42.89$ & $49.34$ & $305.16$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using all variables except Dst as input.}
+	\label{tab:time:reverse:noDst:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Model & elapsed_train & elapsed_predict & elapsed_importance & elapsed_total \\ \hline
+		svmPoly & $275.32$ & $0.36$ & NA & $276.24$ \\ \hline
+		C5.0 & $591.36$ & $0.08$ & $0.01$ & $592.32$ \\ \hline
+		nb & $173.33$ & $1.50$ & NA & $175.38$ \\ \hline
+		nnet & $479.08$ & $0.03$ & NA & $479.67$ \\ \hline
+		pls & $41.82$ & $0.25$ & $0.02$ & $42.89$ \\ \hline
+		fda & $48.49$ & $0.02$ & $0.01$ & $49.34$ \\ \hline
+		pcaNNet & $304.58$ & $0.02$ & NA & $305.16$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using all variables except Dst as input.}
+	\label{tab:time:noDst}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed_train & $275.32$ & $591.36$ & $173.33$ & $479.08$ & $41.82$ & $48.49$ & $304.58$ \\ \hline
+		elapsed_predict & $0.36$ & $0.08$ & $1.50$ & $0.03$ & $0.25$ & $0.02$ & $0.02$ \\ \hline
+		elapsed_importance & NA & $0.01$ & NA & NA & $0.02$ & $0.01$ & NA \\ \hline
+		elapsed_total & $276.24$ & $592.32$ & $175.38$ & $479.67$ & $42.89$ & $49.34$ & $305.16$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using all variables except Dst as input.}
+	\label{tab:time:reverse:noDst}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Metric & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		Acc & $0.7284$ & $0.8492$ & $0.9906$ & $1$ & $0.7929$ & $0.8141$ & $0.8436$ \\ \hline
+		$95\%$ CI & $(0.7059, 0.7501)$ & $(0.8307, 0.8664)$ & $(0.9846, 0.9947)$ & $(0.9977, 1)$ & $(0.7722, 0.8125)$ & $(0.7942, 0.8329)$ & $(0.8248, 0.861)$ \\ \hline
+		NIR & $0.7322$ & $0.7322$ & $0.7322$ & $0.7322$ & $0.7322$ & $0.7322$ & $0.7322$ \\ \hline
+		$p$-value & $0.6447$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $1.104e-08$ & $9.859e-15$ & $< 2.2 \times {10}^{-16}$ \\ \hline
+		Kappa & $0.1137$ & $0.6165$ & $0.9771$ & $1$ & $0.3635$ & $0.5064$ & $0.5868$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables except Dst as input.}
+	\label{tab:stats:noDst}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
+		svmPoly & $0.7284$ & $(0.7059, 0.7501)$ & $0.7322$ & $0.6447$ & $0.1137$ \\ \hline
+		C5.0 & $0.8492$ & $(0.8307, 0.8664)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.6165$ \\ \hline
+		nb & $0.9906$ & $(0.9846, 0.9947)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.9771$ \\ \hline
+		nnet & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
+		pls & $0.7929$ & $(0.7722, 0.8125)$ & $0.7322$ & $1.104e-08$ & $0.3635$ \\ \hline
+		fda & $0.8141$ & $(0.7942, 0.8329)$ & $0.7322$ & $9.859e-15$ & $0.5064$ \\ \hline
+		pcaNNet & $0.8436$ & $(0.8248, 0.861)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.5868$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables except Dst as input.}
+	\label{tab:stats:reverse:noDst}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet \\ \hline
+		svmPoly & $100.0\%$ & $11.9342\%$ & $40.3328\%$ & $16.3563\%$ \\ \hline
+		C5.0 & $11.9342\%$ & $100.0\%$ & $-10.5648\%$ & $-7.6816\%$ \\ \hline
+		nb & $40.3328\%$ & $-10.5648\%$ & $100.0\%$ & $3.5862\%$ \\ \hline
+		nnet & $16.3563\%$ & $-7.6816\%$ & $3.5862\%$ & $100.0\%$ \\ \hline
+	\end{tabular}
+	\caption{The model coorelation of an ansamble of 4 models when using all variables except Dst as input.}
+	\label{tab:ansamble4:noDst}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Models & elapsed \\ \hline
+		$4$ & $743.77$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of 4 models when using all variables except Dst as input.}
+	\label{tab:time:ansamble:noDst:4}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Models & $4$ \\ \hline
+		elapsed & $743.77$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of 4 models when using all variables except Dst as input.}
+	\label{tab:time:ansamble:reverse:noDst:4}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		svmPoly & $100.0\%$ & $-1.2566\%$ & $-15.2814\%$ & $13.8222\%$ & $2.2729\%$ & $-22.7926\%$ & $-31.6082\%$ \\ \hline
+		C5.0 & $-1.2566\%$ & $100.0\%$ & $-13.1698\%$ & $10.5052\%$ & $-15.5253\%$ & $-68.5938\%$ & $-18.9184\%$ \\ \hline
+		nb & $-15.2814\%$ & $-13.1698\%$ & $100.0\%$ & $-35.4952\%$ & $12.7293\%$ & $-14.9501\%$ & $-4.8527\%$ \\ \hline
+		nnet & $13.8222\%$ & $10.5052\%$ & $-35.4952\%$ & $100.0\%$ & $4.4943\%$ & $-17.891\%$ & $50.1021\%$ \\ \hline
+		pls & $2.2729\%$ & $-15.5253\%$ & $12.7293\%$ & $4.4943\%$ & $100.0\%$ & $-1.1548\%$ & $4.0967\%$ \\ \hline
+		fda & $-22.7926\%$ & $-68.5938\%$ & $-14.9501\%$ & $-17.891\%$ & $-1.1548\%$ & $100.0\%$ & $15.0749\%$ \\ \hline
+		pcaNNet & $-31.6082\%$ & $-18.9184\%$ & $-4.8527\%$ & $50.1021\%$ & $4.0967\%$ & $15.0749\%$ & $100.0\%$ \\ \hline
+	\end{tabular}
+	\caption{The model coorelation of an ansamble of 7 models when using all variables except Dst as input.}
+	\label{tab:ansamble7:noDst}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Models & elapsed \\ \hline
+		$7$ & $794.27$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of 7 models when using all variables except Dst as input.}
+	\label{tab:time:ansamble:noDst:7}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Models & $7$ \\ \hline
+		elapsed & $794.27$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of 7 models when using all variables except Dst as input.}
+	\label{tab:time:ansamble:reverse:noDst:7}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Models & elapsed \\ \hline
+		$4$ & $743.77$ \\ \hline
+		$7$ & $794.27$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of different numbers of models when using all variables except Dst as input.}
+	\label{tab:time:ansamble:noDst}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Models & $4$ & $7$ \\ \hline
+		elapsed & $743.77$ & $794.27$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of different numbers of models when using all variables except Dst as input.}
+	\label{tab:time:ansamble:reverse:noDst}
+\end{table}

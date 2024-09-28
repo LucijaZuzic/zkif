@@ -1,0 +1,31 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xzap - svmPoly} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1159$ & $27$ & $350$ & $7$ \\ \cline{2-7}
+		 & P & $0$ & $1$ & $0$ & $2$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $6$ & $0$ & $10$ & $0$ \\ \cline{2-7}
+		 & T & $3$ & $4$ & $0$ & $17$ & $12$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:xzap:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xzap - svmPoly} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $99.06\%$ & $10.28\%$ & $75.11\%$ & $80\%$ & $72.53\%$ & $96.56\%$ & $54.67\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $99.809\%$ & $0\%$ & $98.3072\%$ & $0\%$ & $0.1877\%$ & $49.9045\%$ \\ \cline{2-9}
+		 & R & $2.6385\%$ & $99.5078\%$ & $62.5\%$ & $76.6751\%$ & $0.6258\%$ & $1.0013\%$ & $51.0732\%$ \\ \cline{2-9}
+		 & T & $63.1579\%$ & $98.4801\%$ & $33.3333\%$ & $99.5519\%$ & $0.7509\%$ & $2.2528\%$ & $80.819\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:xzap:svmPoly}
+\end{table}

@@ -1,0 +1,33 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - yzap - pls} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $96.84\%$ & $21.03\%$ & $77.02\%$ & $70.87\%$ & $70.9\%$ & $92.05\%$ & $58.93\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & R & $20.053\%$ & $95.816\%$ & $59.843\%$ & $79.402\%$ & $4.756\%$ & $7.947\%$ & $57.935\%$ \\ \cline{2-9}
+		 & T & $0\%$ & $100\%$ & NaN & $98.811\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:yzap:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - yzap - pls} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $96.84\%$ & $0\%$ & $20.053\%$ & $0\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $21.03\%$ & $100\%$ & $95.816\%$ & $100\%$ \\ \cline{2-7}
+		 & PPV & NaN & $77.02\%$ & NaN & $59.843\%$ & NaN \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $70.87\%$ & $98.31\%$ & $79.402\%$ & $98.811\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $70.9\%$ & $0\%$ & $4.756\%$ & $0\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $92.05\%$ & $0\%$ & $7.947\%$ & $0\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $58.93\%$ & $50\%$ & $57.935\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:yzap:pls}
+\end{table}

@@ -1,0 +1,31 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - all - pcaNNet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $1$ \\ \cline{2-7}
+		 & T & $3$ & $0$ & $0$ & $0$ & $18$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PCA neural network model when using all variables as input.}
+	\label{tab:cm:all:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - all - pcaNNet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
+		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
+		 & R & $100\%$ & $99.92\%$ & $99.74\%$ & $100\%$ & $23.72\%$ & $23.78\%$ & $99.96\%$ \\ \cline{2-9}
+		 & T & $94.737\%$ & $99.81\%$ & $85.714\%$ & $99.937\%$ & $1.126\%$ & $1.314\%$ & $97.273\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using all variables as input.}
+	\label{tab:cs:all:pcaNNet}
+\end{table}

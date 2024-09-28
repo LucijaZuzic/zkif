@@ -4,9 +4,22 @@ import os
 
 mod_val = 8
 keywords_time = ["Train", "Predict", "Importance", "Total"]
+translate_time = {"Train": "train",
+                   "Predict": "prediction",
+                   "Importance": "variable importance calculation",
+                   "Total": "execution"
+                   }
 position_start = "!ht"
 model_name_list = ["svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet"]
 model_print_list = ["svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet"]
+translate_model = {"svmPoly": "polynomial SVM",
+                   "C5.0": "decision tree",
+                   "nb": "naive Bayes",
+                   "nnet": "neural network",
+                   "pls": "PLS",
+                   "fda": "FDA",
+                   "pcaNNet": "PCA neural network"
+                   }
 by_pred = True
 by_class = True
 by_statistics = True
@@ -34,7 +47,7 @@ metric_alias = {
     "Detection Rate": "DR",
     "Detection Prevalence": "DP",
     "Balanced Accuracy": "BA"
-}
+    }
 skip_second = ["Mcnemar's Test P-Value"]
 metric_alias_second = {
     "Accuracy": "Acc",
@@ -43,7 +56,7 @@ metric_alias_second = {
     "P-Value [Acc > NIR]": "$p$-value",
     "Kappa": "Kappa",
     "Mcnemar's Test P-Value": "McNemar"
-}
+    }
 metric_alias_fix = {
     "Accuracy": "Accuracy",
     "95% CI": "$95\%$ CI",
@@ -51,23 +64,79 @@ metric_alias_fix = {
     "P-Value [Acc > NIR]": "$p$-value $[$Acc $>$ NIR$]$",
     "Kappa": "Kappa",
     "Mcnemar's Test P-Value": "McNemar's test $p$-value"
-}
+    }
 wd_list = ["all", "no_Dst", "no_TEC", "coord", "xyap", "xzap", "yzap"]
+translate_data = {"all": "all variables",
+                   "no_Dst": "all variables except Dst",
+                   "no_TEC": "all variables except Dst, TEC, and dTEC",
+                   "coord": "only $B_{x}$, $B_{y}$, and $B_{z}$",
+                   "xyap": "only $B_{x}$, $B_{y}$, and $a_{p}$",
+                   "xzap": "only $B_{x}$, $B_{z}$, and $a_{p}$",
+                   "yzap": "only $B_{y}$, $B_{z}$, and $a_{p}$"
+                   }
 ansamble_list = [4, 7]
 ansamble_print = [4, 7]
-all_model_total_dict = ""
-reference_total_dict = ""
-stats_total_dict = ""
-stats_reverse_total_dict = ""
+all_model_total_dict = dict()
+reference_total_dict = dict()
+stats_total_dict = dict()
+stats_reverse_total_dict = dict()
 all_model_dict = dict()
 reference_dict = dict()
 stats_dict = dict()
 stats_reverse_dict = dict()
+all_str_dict = dict()
 for model_name in model_name_list:
-    all_model_dict[model_name] = ""
-    reference_dict[model_name] = ""
-    stats_dict[model_name] = ""
-    stats_reverse_dict[model_name] = ""
+    all_model_dict[model_name] = dict()
+    reference_dict[model_name] = dict()
+    stats_dict[model_name] = dict()
+    stats_reverse_dict[model_name] = dict()
+for x1 in [True, False]:
+    all_model_total_dict[x1] = dict()
+    reference_total_dict[x1] = dict()
+    stats_total_dict[x1] = dict()
+    stats_reverse_total_dict[x1] = dict()
+    all_model_dict[x1] = dict()
+    reference_dict[x1] = dict()
+    stats_dict[x1] = dict()
+    stats_reverse_dict[x1] = dict()
+    all_str_dict[x1] = dict()
+    for model_name in model_name_list:
+        all_model_dict[model_name][x1] = dict()
+        reference_dict[model_name][x1] = dict()
+        stats_dict[model_name][x1] = dict()
+        stats_reverse_dict[model_name][x1] = dict()
+    for x2 in [True, False]:
+        all_model_total_dict[x1][x2] = dict()
+        reference_total_dict[x1][x2] = dict()
+        stats_total_dict[x1][x2] = dict()
+        stats_reverse_total_dict[x1][x2] = dict()
+        all_model_dict[x1][x2] = dict()
+        reference_dict[x1][x2] = dict()
+        stats_dict[x1][x2] = dict()
+        stats_reverse_dict[x1][x2] = dict()
+        all_str_dict[x1][x2] = dict()
+        for model_name in model_name_list:
+            all_model_dict[model_name][x1][x2] = dict()
+            reference_dict[model_name][x1][x2] = dict()
+            stats_dict[model_name][x1][x2] = dict()
+            stats_reverse_dict[model_name][x1][x2] = dict()
+        for x3 in [True, False]:
+            if ((x1 or x2) or x3) == False:
+                continue
+            all_model_total_dict[x1][x2][x3] = ""
+            reference_total_dict[x1][x2][x3] = ""
+            stats_total_dict[x1][x2][x3] = ""
+            stats_reverse_total_dict[x1][x2][x3] = ""
+            all_model_dict[x1][x2][x3] = dict()
+            reference_dict[x1][x2][x3] = dict()
+            stats_dict[x1][x2][x3] = dict()
+            stats_reverse_dict[x1][x2][x3] = dict()
+            all_str_dict[x1][x2][x3] = ""
+            for model_name in model_name_list:
+                all_model_dict[model_name][x1][x2][x3] = ""
+                reference_dict[model_name][x1][x2][x3] = ""
+                stats_dict[model_name][x1][x2][x3] = ""
+                stats_reverse_dict[model_name][x1][x2][x3] = ""
 time_dict = dict()
 time_total_dict = ""
 time_reverse_dict = dict()
@@ -84,22 +153,46 @@ for an in ansamble_list:
     ansamble_dict[an] = ""
     time_ansamble_dict[an] = ""
     time_ansamble_reverse_dict[an] = ""
-all_str_dict = ""
 for kt in keywords_time:
     time_dict[kt] = ""
     time_reverse_dict[kt] = ""
 for wd in wd_list:
-    all_str = ""
-    reference_str = ""
-    stats_str = ""
-    stats_str_reverse = ""
+    all_str = dict()
+    reference_str = dict()
+    stats_str= dict()
+    stats_str_reverse = dict()
+    for x1 in [True, False]:
+        all_str[x1] = dict()
+        reference_str[x1] = dict()
+        stats_str[x1] = dict()
+        stats_str_reverse[x1] = dict()
+        for x2 in [True, False]:
+            all_str[x1][x2] = dict()
+            reference_str[x1][x2] = dict()
+            stats_str[x1][x2] = dict()
+            stats_str_reverse[x1][x2] = dict()
+            for x3 in [True, False]:
+                if ((x1 or x2) or x3) == False:
+                    continue
+                all_str[x1][x2][x3] = ""
+                reference_str[x1][x2][x3] = ""
+                stats_str[x1][x2][x3] = ""
+                stats_str_reverse[x1][x2][x3] = ""
     dict_co_total = dict()
     dict_time_total_total = {"Model": []}
     dict_time_total = dict()
     for time_name in keywords_time:
         dict_time_total[time_name] = {"Model": []}
     for model_name in model_name_list:
-        all_model = ""
+        all_model = dict()
+        for x1 in [True, False]:
+            all_model[x1] = dict()
+            for x2 in [True, False]:
+                all_model[x1][x2] = dict()
+                for x3 in [True, False]:
+                    if ((x1 or x2) or x3) == False:
+                        continue
+                    all_model[x1][x2][x3] = ""
         dict_co_total[model_name] = dict()
         file_open = open(wd + "/" + model_name + ".txt")
         all_lines = file_open.readlines()
@@ -159,7 +252,7 @@ for wd in wd_list:
             line_one = line_one.replace(" & Prediction ", "\\multicolumn{2}{c|}{} ")
             line_one = line_one.replace(" & E", "\\multirow{5}{*}{\\rotatebox{90}{Prediction}} & E")
             line_one = line_one.replace("}\\multirow{5}{*}{\\rotatebox{90}{Prediction}} & E", "} & E")
-            caption_txt = "cm:" + wd.replace("_", "") + ":" + model_name
+            caption_txt = "The confusion matrix for the " + translate_model[model_name] + " model when using " + translate_data[wd] + " as input."
             label_txt = "tab:cm:" + wd.replace("_", "") + ":" +  model_name
             line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
             if model_name in model_print_list and by_pred:
@@ -169,14 +262,17 @@ for wd in wd_list:
                 file_label = open(wd + "/latex_table/" + model_name + "/cm_" + model_name + ".tex", "w")
                 file_label.write(line_one)
                 file_label.close()
-                all_model += line_one + "\n"
-                reference_str += line_one + "\n"
-                all_str += line_one + "\n"
-                all_model_total_dict += line_one + "\n"
-                reference_total_dict += line_one + "\n"
-                all_model_dict[model_name] += line_one + "\n"
-                reference_dict[model_name] += line_one + "\n"
-                all_str_dict += line_one + "\n"
+                x1 = True
+                for x2 in [True, False]:
+                    for x3 in [True, False]:
+                        all_model[x1][x2][x3] += line_one + "\n"
+                        reference_str[x1][x2][x3] += line_one + "\n"
+                        all_str[x1][x2][x3] += line_one + "\n"
+                        all_model_total_dict[x1][x2][x3] += line_one + "\n"
+                        reference_total_dict[x1][x2][x3] += line_one + "\n"
+                        all_model_dict[model_name][x1][x2][x3] += line_one + "\n"
+                        reference_dict[model_name][x1][x2][x3] += line_one + "\n"
+                        all_str_dict[x1][x2][x3] += line_one + "\n"
             #print(dict_cm)
             df_cm = pd.DataFrame(dict_cm)
             df_cm.to_csv(wd + "/" + model_name + "_cm.csv", index = False)
@@ -243,7 +339,7 @@ for wd in wd_list:
                     line_one += "\\\\ \\hline\n"
                 else:
                     line_one += "\\\\ \\cline{2-" + str(len(metric_alias) - len(skip_first) + 2) + "}\n"
-            caption_txt = "cs:" + wd.replace("_", "") + ":" + model_name
+            caption_txt = "The performance indicators derived from the confusion matrix for the " + translate_model[model_name] + " model when using " + translate_data[wd] + " as input."
             label_txt = "tab:cs:" + wd.replace("_", "") + ":" +  model_name
             line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
             if model_name in model_print_list and by_class:
@@ -254,14 +350,17 @@ for wd in wd_list:
                 file_label = open(wd + "/latex_table/" + model_name + "/cs_" + model_name + ".tex", "w")
                 file_label.write(line_one)
                 file_label.close()
-                all_model += line_one + "\n"
-                stats_str += line_one + "\n"
-                all_str += line_one + "\n"
-                all_model_total_dict += line_one + "\n"
-                stats_total_dict += line_one + "\n"
-                all_model_dict[model_name] += line_one + "\n"
-                stats_dict[model_name] += line_one + "\n"
-                all_str_dict += line_one + "\n"
+                x2 = True
+                for x1 in [True, False]:
+                    for x3 in [True, False]:
+                        all_model[x1][x2][x3] += line_one + "\n"
+                        reference_str[x1][x2][x3] += line_one + "\n"
+                        all_str[x1][x2][x3] += line_one + "\n"
+                        all_model_total_dict[x1][x2][x3] += line_one + "\n"
+                        reference_total_dict[x1][x2][x3] += line_one + "\n"
+                        all_model_dict[model_name][x1][x2][x3] += line_one + "\n"
+                        reference_dict[model_name][x1][x2][x3] += line_one + "\n"
+                        all_str_dict[x1][x2][x3] += line_one + "\n"
             line_one = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c|c|c|c|c|c|c|}\n\t\t\\cline{3-7}\n\t\t\\multicolumn{2}{c|}{} & \\multicolumn{5}{c|}{Class - " + wd.replace("_", " ") + " - " + model_name + "} \\\\ \\cline{3-7}\n"
             for row_ix in range(len(cs)):
                 if cs[row_ix][0] in skip_first:
@@ -292,7 +391,7 @@ for wd in wd_list:
                     line_one += "\\\\ \\hline\n"
                 else:
                     line_one += "\\\\ \\cline{2-7}\n"
-            caption_txt = "cs:reverse:" + wd.replace("_", "") + ":" + model_name
+            caption_txt = "The performance indicators derived from the confusion matrix for the " + translate_model[model_name] + " model when using " + translate_data[wd] + " as input."
             label_txt = "tab:cs:reverse:" + wd.replace("_", "") + ":" +  model_name
             line_one += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
             if model_name in model_print_list and by_statistics:
@@ -303,14 +402,17 @@ for wd in wd_list:
                 file_label = open(wd + "/latex_table/" + model_name + "/cs_reverse_" + model_name + ".tex", "w")
                 file_label.write(line_one)
                 file_label.close()
-                all_model += line_one + "\n"
-                stats_str_reverse += line_one + "\n"
-                all_str += line_one + "\n"
-                all_model_total_dict += line_one + "\n"
-                stats_reverse_total_dict += line_one + "\n"
-                all_model_dict[model_name] += line_one + "\n"
-                stats_reverse_dict[model_name] += line_one + "\n"
-                all_str_dict += line_one + "\n"
+                x3 = True
+                for x1 in [True, False]:
+                    for x2 in [True, False]:
+                        all_model[x1][x2][x3] += line_one + "\n"
+                        reference_str[x1][x2][x3] += line_one + "\n"
+                        all_str[x1][x2][x3] += line_one + "\n"
+                        all_model_total_dict[x1][x2][x3] += line_one + "\n"
+                        reference_total_dict[x1][x2][x3] += line_one + "\n"
+                        all_model_dict[model_name][x1][x2][x3] += line_one + "\n"
+                        reference_dict[model_name][x1][x2][x3] += line_one + "\n"
+                        all_str_dict[x1][x2][x3] += line_one + "\n"
             #print(dict_cs)
             df_cs = pd.DataFrame(dict_cs)
             df_cs.to_csv(wd + "/" + model_name + "_cs.csv", index = False)
@@ -340,18 +442,42 @@ for wd in wd_list:
                 dict_time_total[time_name]["Model"].append(model_name)
                 if model_name not in dict_time_total_total["Model"]:
                     dict_time_total_total["Model"].append(model_name)
-            file_label = open(wd + "/latex_table/all_model_" + model_name + ".tex", "w")
-            file_label.write(all_model[:-1])
-            file_label.close()
-    file_label = open(wd + "/latex_table/all_reference.tex", "w")
-    file_label.write(reference_str[:-1])
-    file_label.close()
-    file_label = open(wd + "/latex_table/all_stats.tex", "w")
-    file_label.write(stats_str[:-1])
-    file_label.close()
-    file_label = open(wd + "/latex_table/all_stats_reverse.tex", "w")
-    file_label.write(stats_str_reverse[:-1])
-    file_label.close()
+            for x1 in [True, False]:
+                for x2 in [True, False]:
+                    for x3 in [True, False]:
+                        if ((x1 or x2) or x3) == False:
+                            continue
+                        one_name = wd + "/latex_table/all_model_" + model_name
+                        if not x1:
+                            one_name += "_no_cm"
+                        if not x2:
+                            one_name += "_no_cs"
+                        if not x3:
+                            one_name += "_no_cs_reverse"
+                        file_label = open(one_name + ".tex", "w")
+                        file_label.write(all_model[x1][x2][x3][:-1])
+                        file_label.close()
+    for x1 in [True, False]:
+        for x2 in [True, False]:
+            for x3 in [True, False]:
+                if ((x1 or x2) or x3) == False:
+                    continue
+                one_name = ""
+                if not x1:
+                    one_name += "_no_cm"
+                if not x2:
+                    one_name += "_no_cs"
+                if not x3:
+                    one_name += "_no_cs_reverse"
+                file_label = open(wd + "/latex_table/all_reference" + one_name + ".tex", "w")
+                file_label.write(reference_str[x1][x2][x3][:-1])
+                file_label.close()
+                file_label = open(wd + "/latex_table/all_stats" + one_name + ".tex", "w")
+                file_label.write(stats_str[x1][x2][x3][:-1])
+                file_label.close()
+                file_label = open(wd + "/latex_table/all_stats" + one_name + ".tex", "w")
+                file_label.write(stats_str_reverse[x1][x2][x3][:-1])
+                file_label.close()
     for time_name in keywords_time:
         df_dict_time_total = pd.DataFrame(dict_time_total[time_name])
         df_dict_time_total.to_csv(wd + "/time_" + time_name.lower() + "_models.csv", index = False)
@@ -377,7 +503,7 @@ for wd in wd_list:
                 else:
                     lines_time += dict_time_total[time_name][key_name][key_val_ix] + " & "
             lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-        caption_txt = "time:" + wd.replace("_", "") + ":" + time_name.lower()
+        caption_txt = "The " + translate_time[time_name] + " time in seconds for each model when using " + translate_data[wd] + " as input."
         label_txt = "tab:time:" + wd.replace("_", "") + ":" + time_name.lower()
         lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if by_time_type:
@@ -387,8 +513,13 @@ for wd in wd_list:
             file_label = open(wd + "/latex_table/time_" + time_name.lower() + ".tex", "w")
             file_label.write(lines_time)
             file_label.close()
-            all_str += lines_time + "\n"
-            all_str_dict += lines_time + "\n"
+            for x1 in [True, False]:
+                for x2 in [True, False]:
+                    for x3 in [True, False]:
+                        if ((x1 or x2) or x3) == False:
+                            continue
+                        all_str[x1][x2][x3] += lines_time + "\n"
+                        all_str_dict[x1][x2][x3] += lines_time + "\n"
             time_dict[time_name] += lines_time + "\n"
         lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c"
         for key_name in dict_time_total[time_name]:
@@ -410,7 +541,7 @@ for wd in wd_list:
                 else:
                     lines_time += key_val + " & "
             lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-        caption_txt = "time:reverse:" + wd.replace("_", "") + ":" + time_name.lower()
+        caption_txt = "The " + translate_time[time_name] + " time in seconds for each model when using " + translate_data[wd] + " as input."
         label_txt = "tab:time:reverse:" + wd.replace("_", "") + ":" + time_name.lower()
         lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if by_time_model:
@@ -420,8 +551,13 @@ for wd in wd_list:
             file_label = open(wd + "/latex_table/time_reverse_" + time_name.lower() + ".tex", "w")
             file_label.write(lines_time)
             file_label.close()
-            all_str += lines_time + "\n"
-            all_str_dict += lines_time + "\n"
+            for x1 in [True, False]:
+                for x2 in [True, False]:
+                    for x3 in [True, False]:
+                        if ((x1 or x2) or x3) == False:
+                            continue
+                        all_str[x1][x2][x3] += lines_time + "\n"
+                        all_str_dict[x1][x2][x3] += lines_time + "\n"
             time_reverse_dict[time_name] += lines_time + "\n"
     df_dict_time_total_total = pd.DataFrame(dict_time_total_total)
     df_dict_time_total_total.to_csv(wd + "/time_models.csv", index = False)
@@ -447,7 +583,7 @@ for wd in wd_list:
             else:
                 lines_time += dict_time_total_total[key_name][key_val_ix] + " & "
         lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-    caption_txt = "time:" + wd.replace("_", "")
+    caption_txt = "The time taken for all algorithm stages in seconds for each model when using " + translate_data[wd] + " as input."
     label_txt = "tab:time:" + wd.replace("_", "")
     lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
     if by_time_type:
@@ -457,8 +593,13 @@ for wd in wd_list:
         file_label = open(wd + "/latex_table/time.tex", "w")
         file_label.write(lines_time)
         file_label.close()
-        all_str += lines_time + "\n"
-        all_str_dict += lines_time + "\n"
+        for x1 in [True, False]:
+            for x2 in [True, False]:
+                for x3 in [True, False]:
+                    if ((x1 or x2) or x3) == False:
+                        continue
+                    all_str[x1][x2][x3] += lines_time + "\n"
+                    all_str_dict[x1][x2][x3] += lines_time + "\n"
         time_total_dict += lines_time + "\n"
     lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c"
     for key_name in dict_time_total_total:
@@ -480,7 +621,7 @@ for wd in wd_list:
             else:
                 lines_time += key_val + " & "
         lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-    caption_txt = "time:reverse:" + wd.replace("_", "")
+    caption_txt = "The time taken for all algorithm stages in seconds for each model when using " + translate_data[wd] + " as input."
     label_txt = "tab:time:reverse:" + wd.replace("_", "")
     lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
     if by_time_model:
@@ -490,8 +631,13 @@ for wd in wd_list:
         file_label = open(wd + "/latex_table/time_reverse.tex", "w")
         file_label.write(lines_time)
         file_label.close()
-        all_str += lines_time + "\n"
-        all_str_dict += lines_time + "\n"
+        for x1 in [True, False]:
+            for x2 in [True, False]:
+                for x3 in [True, False]:
+                    if ((x1 or x2) or x3) == False:
+                        continue
+                    all_str[x1][x2][x3] += lines_time + "\n"
+                    all_str_dict[x1][x2][x3] += lines_time + "\n"
         time_reverse_total_dict += lines_time + "\n"
     #print(dict_co_total)
     models_list = list(dict_co_total.keys())
@@ -524,7 +670,7 @@ for wd in wd_list:
             else:
                 line_print += "NA & "
         line_print = line_print[:-2] + "\\\\ \\hline\n"
-    caption_txt = "stats:" + wd.replace("_", "")
+    caption_txt = "The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using " + translate_data[wd] + " as input."
     label_txt = "tab:stats:" + wd.replace("_", "")
     line_print += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
     if by_metric:
@@ -535,8 +681,13 @@ for wd in wd_list:
         file_label = open(wd + "/latex_table/stats.tex", "w")
         file_label.write(line_print)
         file_label.close()
-        all_str += line_print + "\n"
-        all_str_dict += line_print + "\n"
+        for x1 in [True, False]:
+            for x2 in [True, False]:
+                for x3 in [True, False]:
+                    if ((x1 or x2) or x3) == False:
+                        continue
+                    all_str[x1][x2][x3] += line_print + "\n"
+                    all_str_dict[x1][x2][x3] += line_print + "\n"
         all_stats_dict += line_print + "\n"
     line_print = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c"
     for metric in metrics_list:
@@ -563,7 +714,7 @@ for wd in wd_list:
             else:
                 line_print += "NA & "
         line_print = line_print[:-2] + "\\\\ \\hline\n"
-    caption_txt = "stats:reverse:" + wd.replace("_", "")
+    caption_txt = "The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using " + translate_data[wd] + " as input."
     label_txt = "tab:stats:reverse:" + wd.replace("_", "")
     line_print += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
     if by_model:
@@ -574,8 +725,13 @@ for wd in wd_list:
         file_label = open(wd + "/latex_table/stats_reverse.tex", "w")
         file_label.write(line_print)
         file_label.close()
-        all_str += line_print + "\n"
-        all_str_dict += line_print + "\n"
+        for x1 in [True, False]:
+            for x2 in [True, False]:
+                for x3 in [True, False]:
+                    if ((x1 or x2) or x3) == False:
+                        continue
+                    all_str[x1][x2][x3] += line_print + "\n"
+                    all_str_dict[x1][x2][x3] += line_print + "\n"
         all_stats_reverse_dict += line_print + "\n"
     df_new_dict_co = pd.DataFrame(new_dict_co)
     df_new_dict_co.to_csv(wd + "/stats.csv", index = False)
@@ -633,7 +789,7 @@ for wd in wd_list:
                     else:
                         lines_print_a += str(dict_ansamble[colname][val_ix]) + " & "
             lines_print_a = lines_print_a[:-2] + "\\\\ \\hline\n"
-        caption_txt = "ansamble" + str(num_ansamble) + ":" + wd.replace("_", "")
+        caption_txt = "The model coorelation of an ansamble of "  + str(num_ansamble) + " models when using " + translate_data[wd] + " as input."
         label_txt = "tab:ansamble" + str(num_ansamble) + ":" + wd.replace("_", "")
         lines_print_a += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if num_ansamble in ansamble_print and by_ansamble:
@@ -641,8 +797,13 @@ for wd in wd_list:
             file_label = open(wd + "/latex_table/ansamble" + str(num_ansamble) + ".tex", "w")
             file_label.write(lines_print_a)
             file_label.close()
-            all_str += lines_print_a + "\n"
-            all_str_dict+= lines_print_a + "\n"
+            for x1 in [True, False]:
+                for x2 in [True, False]:
+                    for x3 in [True, False]:
+                        if ((x1 or x2) or x3) == False:
+                            continue
+                        all_str[x1][x2][x3] += lines_print_a + "\n"
+                        all_str_dict[x1][x2][x3] += lines_print_a + "\n"
             ansamble_dict[num_ansamble] += lines_print_a + "\n"
             ansamble_dict_total += lines_print_a + "\n"
         for tix in range(len(lines_time_a[0])):
@@ -681,7 +842,7 @@ for wd in wd_list:
                 else:
                     lines_time += str(dict_time_a[num_ansamble][key_name][key_val_ix]) + " & "
             lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-        caption_txt = "time:ansamble:" + wd.replace("_", "") + ":" + str(num_ansamble)
+        caption_txt = "The time taken for all algorithm stages in seconds for an ansamble of "  + str(num_ansamble) + " models when using " + translate_data[wd] + " as input."
         label_txt = "tab:time:ansamble:" + wd.replace("_", "") + ":" + str(num_ansamble)
         lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if by_time_type_ansamble and num_ansamble in ansamble_print and by_ansamble:
@@ -691,8 +852,13 @@ for wd in wd_list:
             file_label = open(wd + "/latex_table/time_ansamble_" + str(num_ansamble) + ".tex", "w")
             file_label.write(lines_time)
             file_label.close()
-            all_str += lines_time + "\n"
-            all_str_dict += lines_time + "\n"
+            for x1 in [True, False]:
+                for x2 in [True, False]:
+                    for x3 in [True, False]:
+                        if ((x1 or x2) or x3) == False:
+                            continue
+                        all_str[x1][x2][x3] += lines_time + "\n"
+                        all_str_dict[x1][x2][x3] += lines_time + "\n"
             time_ansamble_reverse_dict[num_ansamble] += lines_time + "\n"
         lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c"
         for key_name in dict_time_a[num_ansamble]:
@@ -714,7 +880,7 @@ for wd in wd_list:
                 else:
                     lines_time += str(key_val) + " & "
             lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-        caption_txt = "time:ansamble:reverse:" + wd.replace("_", "") + ":" + str(num_ansamble)
+        caption_txt = "The time taken for all algorithm stages in seconds for an ansamble of "  + str(num_ansamble) + " models when using " + translate_data[wd] + " as input."
         label_txt = "tab:time:ansamble:reverse:" + wd.replace("_", "") + ":"  + str(num_ansamble)
         lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
         if by_time_model_ansamble and num_ansamble in ansamble_print and by_ansamble:
@@ -724,8 +890,13 @@ for wd in wd_list:
             file_label = open(wd + "/latex_table/time_ansamble_reverse_" + str(num_ansamble) + ".tex", "w")
             file_label.write(lines_time)
             file_label.close()
-            all_str += lines_time + "\n"
-            all_str_dict += lines_time + "\n"
+            for x1 in [True, False]:
+                for x2 in [True, False]:
+                    for x3 in [True, False]:
+                        if ((x1 or x2) or x3) == False:
+                            continue
+                        all_str[x1][x2][x3] += lines_time + "\n"
+                        all_str_dict[x1][x2][x3] += lines_time + "\n"
             time_ansamble_dict[num_ansamble] += lines_time + "\n"
     lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{"
     for key_time in dict_time_a_total:
@@ -749,7 +920,7 @@ for wd in wd_list:
             else:
                 lines_time += str(dict_time_a_total[key_name][key_val_ix]) + " & "
         lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-    caption_txt = "time:ansamble:" + wd.replace("_", "")
+        caption_txt = "The time taken for all algorithm stages in seconds for an ansamble of different numbers of models when using " + translate_data[wd] + " as input."
     label_txt = "tab:time:ansamble:" + wd.replace("_", "")
     lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
     if by_time_type_ansamble and by_ansamble:
@@ -759,8 +930,13 @@ for wd in wd_list:
         file_label = open(wd + "/latex_table/time_ansamble.tex", "w")
         file_label.write(lines_time)
         file_label.close()
-        all_str += lines_time + "\n"
-        all_str_dict += lines_time + "\n"
+        for x1 in [True, False]:
+            for x2 in [True, False]:
+                for x3 in [True, False]:
+                    if ((x1 or x2) or x3) == False:
+                        continue
+                    all_str[x1][x2][x3] += lines_time + "\n"
+                    all_str_dict[x1][x2][x3] += lines_time + "\n"
         time_ansamble_reverse_total_dict += lines_time + "\n"
     lines_time = "\\begin{table}[" + position_start + "]\n\t\\centering\n\t\\begin{tabular}{|c"
     for key_name in dict_time_a_total:
@@ -782,7 +958,7 @@ for wd in wd_list:
             else:
                 lines_time += str(key_val) + " & "
         lines_time = lines_time[:-2] + "\\\\ \\hline\n"
-    caption_txt = "time:ansamble:reverse:" + wd.replace("_", "")
+        caption_txt = "The time taken for all algorithm stages in seconds for an ansamble of different numbers of models when using " + translate_data[wd] + " as input."
     label_txt = "tab:time:ansamble:reverse:" + wd.replace("_", "")
     lines_time += "\t\\end{tabular}\n\t\\caption{" + caption_txt + "}\n\t\\label{" + label_txt + "}\n\\end{table}\n"
     if by_time_model_ansamble and by_ansamble:
@@ -792,43 +968,60 @@ for wd in wd_list:
         file_label = open(wd + "/latex_table/time_ansamble_reverse.tex", "w")
         file_label.write(lines_time)
         file_label.close()
-        all_str += lines_time + "\n"
-        all_str_dict += lines_time + "\n"
+        for x1 in [True, False]:
+            for x2 in [True, False]:
+                for x3 in [True, False]:
+                    if ((x1 or x2) or x3) == False:
+                        continue
+                    all_str[x1][x2][x3] += lines_time + "\n"
+                    all_str_dict[x1][x2][x3] += lines_time + "\n"
         time_ansamble_total_dict += lines_time + "\n"
     df_new_dict_time_a_total = pd.DataFrame(dict_time_a_total)
     df_new_dict_time_a_total.to_csv(wd + "/time_ansamble_total.csv", index = False)
-    file_label = open(wd + "/latex_table/all_str.tex", "w")
-    file_label.write(all_str[:-1])
-    file_label.close()
-if not os.path.isdir("latex_table_total"):
-    os.makedirs("latex_table_total")
-file_label = open("latex_table_total/all_model_total_dict.tex", "w")
-file_label.write(all_model_total_dict[:-1])
-file_label.close()
-file_label = open("latex_table_total/reference_total_dict.tex", "w")
-file_label.write(reference_total_dict[:-1])
-file_label.close()
-file_label = open("latex_table_total/stats_total_dict.tex", "w")
-file_label.write(stats_total_dict[:-1])
-file_label.close()
-file_label = open("latex_table_total/stats_reverse_total_dict.tex", "w")
-file_label.write(stats_reverse_total_dict[:-1])
-file_label.close()
-for model_name in model_name_list:
-    if not os.path.isdir("latex_table_total/" + model_name):
-        os.makedirs("latex_table_total/" + model_name)
-    file_label = open("latex_table_total/" + model_name + "/all_model_dict_" + model_name + ".tex", "w")
-    file_label.write(all_model_dict[model_name][:-1])
-    file_label.close()
-    file_label = open("latex_table_total/" + model_name + "/reference_dict_" + model_name + ".tex", "w")
-    file_label.write(reference_dict[model_name][:-1])
-    file_label.close()
-    file_label = open("latex_table_total/" + model_name + "/stats_dict_" + model_name + ".tex", "w")
-    file_label.write(stats_dict[model_name][:-1])
-    file_label.close()
-    file_label = open("latex_table_total/" + model_name + "/stats_reverse_dict_" + model_name + ".tex", "w")
-    file_label.write(stats_reverse_dict[model_name][:-1])
-    file_label.close()
+    for x1 in [True, False]:
+        for x2 in [True, False]:
+            for x3 in [True, False]:
+                if ((x1 or x2) or x3) == False:
+                    continue
+                one_name = ""
+                if not x1:
+                    one_name += "_no_cm"
+                if not x2:
+                    one_name += "_no_cs"
+                if not x3:
+                    one_name += "_no_cs_reverse"
+                file_label = open(wd + "/latex_table/all_str" + one_name + ".tex", "w")
+                file_label.write(all_str[x1][x2][x3][:-1])
+                file_label.close()
+                if not os.path.isdir("latex_table_total"):
+                    os.makedirs("latex_table_total")
+                file_label = open("latex_table_total/all_model_total_dict" + one_name + ".tex", "w")
+                file_label.write(all_model_total_dict[x1][x2][x3][:-1])
+                file_label.close()
+                file_label = open("latex_table_total/reference_total_dict" + one_name + ".tex", "w")
+                file_label.write(reference_total_dict[x1][x2][x3][:-1])
+                file_label.close()
+                file_label = open("latex_table_total/stats_total_dict" + one_name + ".tex", "w")
+                file_label.write(stats_total_dict[x1][x2][x3][:-1])
+                file_label.close()
+                file_label = open("latex_table_total/stats_reverse_total_dict" + one_name + ".tex", "w")
+                file_label.write(stats_reverse_total_dict[x1][x2][x3][:-1])
+                file_label.close()
+                for model_name in model_name_list:
+                    if not os.path.isdir("latex_table_total/" + model_name):
+                        os.makedirs("latex_table_total/" + model_name)
+                    file_label = open("latex_table_total/" + model_name + "/all_model_dict_" + model_name + one_name + ".tex", "w")
+                    file_label.write(all_model_dict[model_name][x1][x2][x3][:-1])
+                    file_label.close()
+                    file_label = open("latex_table_total/" + model_name + "/reference_dict_" + model_name + one_name + ".tex", "w")
+                    file_label.write(reference_dict[model_name][x1][x2][x3][:-1])
+                    file_label.close()
+                    file_label = open("latex_table_total/" + model_name + "/stats_dict_" + model_name + one_name + ".tex", "w")
+                    file_label.write(stats_dict[model_name][x1][x2][x3][:-1])
+                    file_label.close()
+                    file_label = open("latex_table_total/" + model_name + "/stats_reverse_dict_" + model_name + one_name + ".tex", "w")
+                    file_label.write(stats_reverse_dict[model_name][x1][x2][x3][:-1])
+                    file_label.close()
 file_label = open("latex_table_total/time_total_dict.tex", "w")
 file_label.write(time_total_dict[:-1])
 file_label.close()

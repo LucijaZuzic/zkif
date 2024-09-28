@@ -1,0 +1,111 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - all - C5.0} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the decision tree model when using all variables as input.}
+	\label{tab:cm:all:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no Dst - C5.0} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $1$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1075$ & $23$ & $104$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $3$ & $3$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $92$ & $1$ & $271$ & $12$ \\ \cline{2-7}
+		 & T & $2$ & $0$ & $0$ & $4$ & $7$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the decision tree model when using all variables except Dst as input.}
+	\label{tab:cm:noDst:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no TEC - C5.0} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $1$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1097$ & $27$ & $127$ & $2$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $73$ & $0$ & $246$ & $11$ \\ \cline{2-7}
+		 & T & $2$ & $0$ & $0$ & $6$ & $6$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the decision tree model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - coord - C5.0} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1105$ & $27$ & $165$ & $1$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $65$ & $0$ & $208$ & $11$ \\ \cline{2-7}
+		 & T & $3$ & $0$ & $0$ & $6$ & $7$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the decision tree model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:cm:coord:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xyap - C5.0} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1094$ & $26$ & $151$ & $1$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $76$ & $1$ & $226$ & $13$ \\ \cline{2-7}
+		 & T & $3$ & $0$ & $0$ & $2$ & $5$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the decision tree model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cm:xyap:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xzap - C5.0} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1099$ & $26$ & $184$ & $1$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $71$ & $1$ & $191$ & $13$ \\ \cline{2-7}
+		 & T & $3$ & $0$ & $0$ & $4$ & $5$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the decision tree model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:xzap:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - yzap - C5.0} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $1$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $1$ & $1087$ & $25$ & $210$ & $6$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $1$ & $83$ & $2$ & $169$ & $13$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the decision tree model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:yzap:C5.0}
+\end{table}

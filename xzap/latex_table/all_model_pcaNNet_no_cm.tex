@@ -1,0 +1,33 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xzap - pcaNNet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $92.99\%$ & $55.37\%$ & $85.07\%$ & $74.29\%$ & $68.09\%$ & $80.04\%$ & $74.18\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & R & $56.46\%$ & $91.39\%$ & $67.08\%$ & $87.1\%$ & $13.39\%$ & $19.96\%$ & $73.93\%$ \\ \cline{2-9}
+		 & T & $0\%$ & $100\%$ & NaN & $98.811\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:xzap:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xzap - pcaNNet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $92.99\%$ & $0\%$ & $56.46\%$ & $0\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $55.37\%$ & $100\%$ & $91.39\%$ & $100\%$ \\ \cline{2-7}
+		 & PPV & NaN & $85.07\%$ & NaN & $67.08\%$ & NaN \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $74.29\%$ & $98.31\%$ & $87.1\%$ & $98.811\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $68.09\%$ & $0\%$ & $13.39\%$ & $0\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $80.04\%$ & $0\%$ & $19.96\%$ & $0\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $74.18\%$ & $50\%$ & $73.93\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xzap:pcaNNet}
+\end{table}

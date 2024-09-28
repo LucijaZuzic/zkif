@@ -1,0 +1,111 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - all - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using all variables as input.}
+	\label{tab:cm:all:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no Dst - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using all variables except Dst as input.}
+	\label{tab:cm:noDst:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no TEC - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - coord - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:cm:coord:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xyap - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cm:xyap:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xzap - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:xzap:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - yzap - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:yzap:nnet}
+\end{table}

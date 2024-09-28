@@ -1,0 +1,237 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xyap - svmPoly} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $99.4\%$ & $10.05\%$ & $75.13\%$ & $86\%$ & $72.78\%$ & $96.87\%$ & $54.72\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & R & $2.9024\%$ & $99.5898\%$ & $68.75\%$ & $76.7383\%$ & $0.6884\%$ & $1.0013\%$ & $51.2461\%$ \\ \cline{2-9}
+		 & T & $57.8947\%$ & $98.5434\%$ & $32.3529\%$ & $99.4885\%$ & $0.6884\%$ & $2.1277\%$ & $78.2191\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:xyap:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xyap - svmPoly} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $99.4\%$ & $0\%$ & $2.9024\%$ & $57.8947\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $10.05\%$ & $100\%$ & $99.5898\%$ & $98.5434\%$ \\ \cline{2-7}
+		 & PPV & NaN & $75.13\%$ & NaN & $68.75\%$ & $32.3529\%$ \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $86\%$ & $98.31\%$ & $76.7383\%$ & $99.4885\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $72.78\%$ & $0\%$ & $0.6884\%$ & $0.6884\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $96.87\%$ & $0\%$ & $1.0013\%$ & $2.1277\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $54.72\%$ & $50\%$ & $51.2461\%$ & $78.2191\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xyap - C5.0} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $93.5\%$ & $58.41\%$ & $86.01\%$ & $76.69\%$ & $68.46\%$ & $79.6\%$ & $75.96\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & R & $59.63\%$ & $92.62\%$ & $71.52\%$ & $88.07\%$ & $14.14\%$ & $19.77\%$ & $76.12\%$ \\ \cline{2-9}
+		 & T & $26.3158\%$ & $99.6833\%$ & $50\%$ & $99.1184\%$ & $0.3129\%$ & $0.6258\%$ & $62.9996\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the decision tree model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:xyap:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xyap - C5.0} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $93.5\%$ & $0\%$ & $59.63\%$ & $26.3158\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $58.41\%$ & $100\%$ & $92.62\%$ & $99.6833\%$ \\ \cline{2-7}
+		 & PPV & NaN & $86.01\%$ & NaN & $71.52\%$ & $50\%$ \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $76.69\%$ & $98.31\%$ & $88.07\%$ & $99.1184\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $68.46\%$ & $0\%$ & $14.14\%$ & $0.3129\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $79.6\%$ & $0\%$ & $19.77\%$ & $0.6258\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $75.96\%$ & $50\%$ & $76.12\%$ & $62.9996\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the decision tree model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xyap - nb} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \cline{2-9}
+		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
+		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
+		 & R & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \cline{2-9}
+		 & T & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the naive Bayes model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:xyap:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xyap - nb} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & PPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & NPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & DR & $0.1877\%$ & $73.22\%$ & $1.69\%$ & $23.72\%$ & $1.189\%$ \\ \cline{2-7}
+		 & DP & $0.1877\%$ & $73.22\%$ & $1.69\%$ & $23.72\%$ & $1.189\%$ \\ \cline{2-7}
+		 & BA & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the naive Bayes model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xyap - nnet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \cline{2-9}
+		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
+		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
+		 & R & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \cline{2-9}
+		 & T & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:xyap:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xyap - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & PPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & NPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & DR & $0.1877\%$ & $73.22\%$ & $1.69\%$ & $23.72\%$ & $1.189\%$ \\ \cline{2-7}
+		 & DP & $0.1877\%$ & $73.22\%$ & $1.69\%$ & $23.72\%$ & $1.189\%$ \\ \cline{2-7}
+		 & BA & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xyap - pls} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $97.01\%$ & $31.07\%$ & $79.37\%$ & $79.17\%$ & $71.03\%$ & $89.49\%$ & $64.04\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & R & $29.815\%$ & $95.488\%$ & $67.262\%$ & $81.399\%$ & $7.071\%$ & $10.513\%$ & $62.652\%$ \\ \cline{2-9}
+		 & T & $0\%$ & $100\%$ & NaN & $98.811\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:xyap:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xyap - pls} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $97.01\%$ & $0\%$ & $29.815\%$ & $0\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $31.07\%$ & $100\%$ & $95.488\%$ & $100\%$ \\ \cline{2-7}
+		 & PPV & NaN & $79.37\%$ & NaN & $67.262\%$ & NaN \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $79.17\%$ & $98.31\%$ & $81.399\%$ & $98.811\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $71.03\%$ & $0\%$ & $7.071\%$ & $0\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $89.49\%$ & $0\%$ & $10.513\%$ & $0\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $64.04\%$ & $50\%$ & $62.652\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xyap - fda} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $66.6667\%$ & $99.8746\%$ & $50\%$ & $99.9373\%$ & $0.1252\%$ & $0.2503\%$ & $83.2706\%$ \\ \cline{2-9}
+		 & N & $93.68\%$ & $55.14\%$ & $85.09\%$ & $76.13\%$ & $68.59\%$ & $80.6\%$ & $74.41\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & R & $54.88\%$ & $93.11\%$ & $71.23\%$ & $86.91\%$ & $13.02\%$ & $18.27\%$ & $74\%$ \\ \cline{2-9}
+		 & T & $26.3158\%$ & $99.43\%$ & $35.7143\%$ & $99.1162\%$ & $0.3129\%$ & $0.8761\%$ & $62.8729\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the FDA model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:xyap:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xyap - fda} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $66.6667\%$ & $93.68\%$ & $0\%$ & $54.88\%$ & $26.3158\%$ \\ \cline{2-7}
+		 & Spec & $99.8746\%$ & $55.14\%$ & $100\%$ & $93.11\%$ & $99.43\%$ \\ \cline{2-7}
+		 & PPV & $50\%$ & $85.09\%$ & NaN & $71.23\%$ & $35.7143\%$ \\ \cline{2-7}
+		 & NPV & $99.9373\%$ & $76.13\%$ & $98.31\%$ & $86.91\%$ & $99.1162\%$ \\ \cline{2-7}
+		 & DR & $0.1252\%$ & $68.59\%$ & $0\%$ & $13.02\%$ & $0.3129\%$ \\ \cline{2-7}
+		 & DP & $0.2503\%$ & $80.6\%$ & $0\%$ & $18.27\%$ & $0.8761\%$ \\ \cline{2-7}
+		 & BA & $83.2706\%$ & $74.41\%$ & $50\%$ & $74\%$ & $62.8729\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the FDA model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xyap - pcaNNet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $94.19\%$ & $59.35\%$ & $86.36\%$ & $78.88\%$ & $68.96\%$ & $79.85\%$ & $76.77\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & R & $60.42\%$ & $93.44\%$ & $74.11\%$ & $88.36\%$ & $14.33\%$ & $19.34\%$ & $76.93\%$ \\ \cline{2-9}
+		 & T & $31.5789\%$ & $99.5567\%$ & $46.1538\%$ & $99.1798\%$ & $0.3755\%$ & $0.8135\%$ & $65.5678\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:xyap:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xyap - pcaNNet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $94.19\%$ & $0\%$ & $60.42\%$ & $31.5789\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $59.35\%$ & $100\%$ & $93.44\%$ & $99.5567\%$ \\ \cline{2-7}
+		 & PPV & NaN & $86.36\%$ & NaN & $74.11\%$ & $46.1538\%$ \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $78.88\%$ & $98.31\%$ & $88.36\%$ & $99.1798\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $68.96\%$ & $0\%$ & $14.33\%$ & $0.3755\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $79.85\%$ & $0\%$ & $19.34\%$ & $0.8135\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $76.77\%$ & $50\%$ & $76.93\%$ & $65.5678\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:pcaNNet}
+\end{table}

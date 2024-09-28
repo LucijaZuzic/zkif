@@ -1,0 +1,33 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no TEC - pls} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1134$ & $26$ & $247$ & $2$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $3$ & $36$ & $1$ & $132$ & $17$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PLS model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - no TEC - pls} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $96.92\%$ & $0\%$ & $34.83\%$ & $0\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $35.75\%$ & $100\%$ & $95.32\%$ & $100\%$ \\ \cline{2-7}
+		 & PPV & NaN & $80.48\%$ & NaN & $69.84\%$ & NaN \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $80.95\%$ & $98.31\%$ & $82.47\%$ & $98.811\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $70.96\%$ & $0\%$ & $8.26\%$ & $0\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $88.17\%$ & $0\%$ & $11.83\%$ & $0\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $66.34\%$ & $50\%$ & $65.08\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PLS model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cs:reverse:noTEC:pls}
+\end{table}

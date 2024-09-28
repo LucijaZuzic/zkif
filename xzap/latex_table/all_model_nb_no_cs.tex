@@ -1,0 +1,33 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xzap - nb} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the naive Bayes model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:xzap:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xzap - nb} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & PPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & NPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & DR & $0.1877\%$ & $73.22\%$ & $1.69\%$ & $23.72\%$ & $1.189\%$ \\ \cline{2-7}
+		 & DP & $0.1877\%$ & $73.22\%$ & $1.69\%$ & $23.72\%$ & $1.189\%$ \\ \cline{2-7}
+		 & BA & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the naive Bayes model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xzap:nb}
+\end{table}

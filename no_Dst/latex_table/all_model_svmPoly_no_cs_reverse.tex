@@ -1,0 +1,31 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no Dst - svmPoly} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1131$ & $25$ & $343$ & $5$ \\ \cline{2-7}
+		 & P & $0$ & $32$ & $2$ & $2$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $3$ & $0$ & $20$ & $3$ \\ \cline{2-7}
+		 & T & $3$ & $4$ & $0$ & $14$ & $11$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using all variables except Dst as input.}
+	\label{tab:cm:noDst:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no Dst - svmPoly} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $96.67\%$ & $12.85\%$ & $75.2\%$ & $58.51\%$ & $70.78\%$ & $94.12\%$ & $54.76\%$ \\ \cline{2-9}
+		 & P & $7.4074\%$ & $97.8358\%$ & $5.5556\%$ & $98.3995\%$ & $0.1252\%$ & $2.2528\%$ & $52.6216\%$ \\ \cline{2-9}
+		 & R & $5.277\%$ & $99.508\%$ & $76.923\%$ & $77.163\%$ & $1.252\%$ & $1.627\%$ & $52.392\%$ \\ \cline{2-9}
+		 & T & $57.8947\%$ & $98.67\%$ & $34.375\%$ & $99.4891\%$ & $0.6884\%$ & $2.0025\%$ & $78.2824\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the polynomial SVM model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:svmPoly}
+\end{table}

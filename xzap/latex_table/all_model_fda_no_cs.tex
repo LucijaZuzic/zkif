@@ -1,0 +1,33 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xzap - fda} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $2$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1096$ & $24$ & $200$ & $1$ \\ \cline{2-7}
+		 & P & $0$ & $1$ & $2$ & $1$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $71$ & $1$ & $168$ & $11$ \\ \cline{2-7}
+		 & T & $1$ & $2$ & $0$ & $10$ & $7$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the FDA model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:xzap:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xzap - fda} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $66.6667\%$ & $93.68\%$ & $7.4074\%$ & $44.33\%$ & $36.842\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $47.43\%$ & $99.8727\%$ & $93.19\%$ & $99.177\%$ \\ \cline{2-7}
+		 & PPV & $100\%$ & $82.97\%$ & $50\%$ & $66.93\%$ & $35\%$ \\ \cline{2-7}
+		 & NPV & $99.9373\%$ & $73.29\%$ & $98.4316\%$ & $84.34\%$ & $99.24\%$ \\ \cline{2-7}
+		 & DR & $0.1252\%$ & $68.59\%$ & $0.1252\%$ & $10.51\%$ & $0.438\%$ \\ \cline{2-7}
+		 & DP & $0.1252\%$ & $82.67\%$ & $0.2503\%$ & $15.71\%$ & $1.252\%$ \\ \cline{2-7}
+		 & BA & $83.3333\%$ & $70.55\%$ & $53.64\%$ & $68.76\%$ & $68.009\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the FDA model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xzap:fda}
+\end{table}

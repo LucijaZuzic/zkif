@@ -1,0 +1,223 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - all - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using all variables as input.}
+	\label{tab:cm:all:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - all - nnet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \cline{2-9}
+		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
+		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
+		 & R & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \cline{2-9}
+		 & T & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using all variables as input.}
+	\label{tab:cs:all:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no Dst - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using all variables except Dst as input.}
+	\label{tab:cm:noDst:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no Dst - nnet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \cline{2-9}
+		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
+		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
+		 & R & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \cline{2-9}
+		 & T & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - no TEC - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - no TEC - nnet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \cline{2-9}
+		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
+		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
+		 & R & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \cline{2-9}
+		 & T & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cs:noTEC:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - coord - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:cm:coord:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - coord - nnet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \cline{2-9}
+		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
+		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
+		 & R & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \cline{2-9}
+		 & T & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:cs:coord:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xyap - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cm:xyap:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xyap - nnet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \cline{2-9}
+		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
+		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
+		 & R & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \cline{2-9}
+		 & T & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:xyap:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - xzap - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:xzap:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xzap - nnet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \cline{2-9}
+		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
+		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
+		 & R & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \cline{2-9}
+		 & T & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:xzap:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{|c|}{Reference - yzap - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Prediction}} & E & $3$ & $0$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & N & $0$ & $1170$ & $0$ & $0$ & $0$ \\ \cline{2-7}
+		 & P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \cline{2-7}
+		 & R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \cline{2-7}
+		 & T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:yzap:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - yzap - nnet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \cline{2-9}
+		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
+		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
+		 & R & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \cline{2-9}
+		 & T & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:yzap:nnet}
+\end{table}

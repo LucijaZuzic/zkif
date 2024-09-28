@@ -1,0 +1,510 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xzap - svmPoly} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $99.06\%$ & $10.28\%$ & $75.11\%$ & $80\%$ & $72.53\%$ & $96.56\%$ & $54.67\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $99.809\%$ & $0\%$ & $98.3072\%$ & $0\%$ & $0.1877\%$ & $49.9045\%$ \\ \cline{2-9}
+		 & R & $2.6385\%$ & $99.5078\%$ & $62.5\%$ & $76.6751\%$ & $0.6258\%$ & $1.0013\%$ & $51.0732\%$ \\ \cline{2-9}
+		 & T & $63.1579\%$ & $98.4801\%$ & $33.3333\%$ & $99.5519\%$ & $0.7509\%$ & $2.2528\%$ & $80.819\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:xzap:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xzap - svmPoly} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $99.06\%$ & $0\%$ & $2.6385\%$ & $63.1579\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $10.28\%$ & $99.809\%$ & $99.5078\%$ & $98.4801\%$ \\ \cline{2-7}
+		 & PPV & NaN & $75.11\%$ & $0\%$ & $62.5\%$ & $33.3333\%$ \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $80\%$ & $98.3072\%$ & $76.6751\%$ & $99.5519\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $72.53\%$ & $0\%$ & $0.6258\%$ & $0.7509\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $96.56\%$ & $0.1877\%$ & $1.0013\%$ & $2.2528\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $54.67\%$ & $49.9045\%$ & $51.0732\%$ & $80.819\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xzap:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xzap - C5.0} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $93.93\%$ & $50.7\%$ & $83.89\%$ & $75.35\%$ & $68.77\%$ & $81.98\%$ & $72.32\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & R & $50.4\%$ & $93.03\%$ & $69.2\%$ & $85.78\%$ & $11.95\%$ & $17.27\%$ & $71.71\%$ \\ \cline{2-9}
+		 & T & $26.3158\%$ & $99.5567\%$ & $41.6667\%$ & $99.1173\%$ & $0.3129\%$ & $0.7509\%$ & $62.9362\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the decision tree model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:xzap:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xzap - C5.0} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $93.93\%$ & $0\%$ & $50.4\%$ & $26.3158\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $50.7\%$ & $100\%$ & $93.03\%$ & $99.5567\%$ \\ \cline{2-7}
+		 & PPV & NaN & $83.89\%$ & NaN & $69.2\%$ & $41.6667\%$ \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $75.35\%$ & $98.31\%$ & $85.78\%$ & $99.1173\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $68.77\%$ & $0\%$ & $11.95\%$ & $0.3129\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $81.98\%$ & $0\%$ & $17.27\%$ & $0.7509\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $72.32\%$ & $50\%$ & $71.71\%$ & $62.9362\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the decision tree model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xzap:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xzap - nb} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \cline{2-9}
+		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
+		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
+		 & R & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \cline{2-9}
+		 & T & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the naive Bayes model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:xzap:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xzap - nb} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & PPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & NPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & DR & $0.1877\%$ & $73.22\%$ & $1.69\%$ & $23.72\%$ & $1.189\%$ \\ \cline{2-7}
+		 & DP & $0.1877\%$ & $73.22\%$ & $1.69\%$ & $23.72\%$ & $1.189\%$ \\ \cline{2-7}
+		 & BA & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the naive Bayes model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xzap:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xzap - nnet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1877\%$ & $0.1877\%$ & $100\%$ \\ \cline{2-9}
+		 & N & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $73.22\%$ & $73.22\%$ & $100\%$ \\ \cline{2-9}
+		 & P & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.69\%$ & $1.69\%$ & $100\%$ \\ \cline{2-9}
+		 & R & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $23.72\%$ & $23.72\%$ & $100\%$ \\ \cline{2-9}
+		 & T & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.189\%$ & $1.189\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:xzap:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xzap - nnet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & PPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & NPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \cline{2-7}
+		 & DR & $0.1877\%$ & $73.22\%$ & $1.69\%$ & $23.72\%$ & $1.189\%$ \\ \cline{2-7}
+		 & DP & $0.1877\%$ & $73.22\%$ & $1.69\%$ & $23.72\%$ & $1.189\%$ \\ \cline{2-7}
+		 & BA & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xzap:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xzap - pls} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $97.52\%$ & $26.64\%$ & $78.42\%$ & $79.72\%$ & $71.4\%$ & $91.05\%$ & $62.08\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & R & $25.066\%$ & $96.062\%$ & $66.434\%$ & $80.481\%$ & $5.945\%$ & $8.949\%$ & $60.564\%$ \\ \cline{2-9}
+		 & T & $0\%$ & $100\%$ & NaN & $98.811\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:xzap:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xzap - pls} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $97.52\%$ & $0\%$ & $25.066\%$ & $0\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $26.64\%$ & $100\%$ & $96.062\%$ & $100\%$ \\ \cline{2-7}
+		 & PPV & NaN & $78.42\%$ & NaN & $66.434\%$ & NaN \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $79.72\%$ & $98.31\%$ & $80.481\%$ & $98.811\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $71.4\%$ & $0\%$ & $5.945\%$ & $0\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $91.05\%$ & $0\%$ & $8.949\%$ & $0\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $62.08\%$ & $50\%$ & $60.564\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xzap:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xzap - fda} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $66.6667\%$ & $100\%$ & $100\%$ & $99.9373\%$ & $0.1252\%$ & $0.1252\%$ & $83.3333\%$ \\ \cline{2-9}
+		 & N & $93.68\%$ & $47.43\%$ & $82.97\%$ & $73.29\%$ & $68.59\%$ & $82.67\%$ & $70.55\%$ \\ \cline{2-9}
+		 & P & $7.4074\%$ & $99.8727\%$ & $50\%$ & $98.4316\%$ & $0.1252\%$ & $0.2503\%$ & $53.64\%$ \\ \cline{2-9}
+		 & R & $44.33\%$ & $93.19\%$ & $66.93\%$ & $84.34\%$ & $10.51\%$ & $15.71\%$ & $68.76\%$ \\ \cline{2-9}
+		 & T & $36.842\%$ & $99.177\%$ & $35\%$ & $99.24\%$ & $0.438\%$ & $1.252\%$ & $68.009\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the FDA model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:xzap:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xzap - fda} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $66.6667\%$ & $93.68\%$ & $7.4074\%$ & $44.33\%$ & $36.842\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $47.43\%$ & $99.8727\%$ & $93.19\%$ & $99.177\%$ \\ \cline{2-7}
+		 & PPV & $100\%$ & $82.97\%$ & $50\%$ & $66.93\%$ & $35\%$ \\ \cline{2-7}
+		 & NPV & $99.9373\%$ & $73.29\%$ & $98.4316\%$ & $84.34\%$ & $99.24\%$ \\ \cline{2-7}
+		 & DR & $0.1252\%$ & $68.59\%$ & $0.1252\%$ & $10.51\%$ & $0.438\%$ \\ \cline{2-7}
+		 & DP & $0.1252\%$ & $82.67\%$ & $0.2503\%$ & $15.71\%$ & $1.252\%$ \\ \cline{2-7}
+		 & BA & $83.3333\%$ & $70.55\%$ & $53.64\%$ & $68.76\%$ & $68.009\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the FDA model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xzap:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\cline{3-9}
+		\multicolumn{2}{c|}{} & \multicolumn{7}{c|}{Statistics - xzap - pcaNNet} \\ \cline{3-9}
+		\multicolumn{2}{c|}{} & Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		\multirow{5}{*}{\rotatebox{90}{Class}} & E & $0\%$ & $100\%$ & NaN & $99.8123\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & N & $92.99\%$ & $55.37\%$ & $85.07\%$ & $74.29\%$ & $68.09\%$ & $80.04\%$ & $74.18\%$ \\ \cline{2-9}
+		 & P & $0\%$ & $100\%$ & NaN & $98.31\%$ & $0\%$ & $0\%$ & $50\%$ \\ \cline{2-9}
+		 & R & $56.46\%$ & $91.39\%$ & $67.08\%$ & $87.1\%$ & $13.39\%$ & $19.96\%$ & $73.93\%$ \\ \cline{2-9}
+		 & T & $0\%$ & $100\%$ & NaN & $98.811\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:xzap:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\cline{3-7}
+		\multicolumn{2}{c|}{} & \multicolumn{5}{c|}{Class - xzap - pcaNNet} \\ \cline{3-7}
+		\multicolumn{2}{c|}{} & E & N & P & R & T \\ \hline
+		\multirow{7}{*}{\rotatebox{90}{Statistics}} & Sen & $0\%$ & $92.99\%$ & $0\%$ & $56.46\%$ & $0\%$ \\ \cline{2-7}
+		 & Spec & $100\%$ & $55.37\%$ & $100\%$ & $91.39\%$ & $100\%$ \\ \cline{2-7}
+		 & PPV & NaN & $85.07\%$ & NaN & $67.08\%$ & NaN \\ \cline{2-7}
+		 & NPV & $99.8123\%$ & $74.29\%$ & $98.31\%$ & $87.1\%$ & $98.811\%$ \\ \cline{2-7}
+		 & DR & $0\%$ & $68.09\%$ & $0\%$ & $13.39\%$ & $0\%$ \\ \cline{2-7}
+		 & DP & $0\%$ & $80.04\%$ & $0\%$ & $19.96\%$ & $0\%$ \\ \cline{2-7}
+		 & BA & $50\%$ & $74.18\%$ & $50\%$ & $73.93\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xzap:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $347.44$ \\ \hline
+		C5.0 & $258.83$ \\ \hline
+		nb & $119.64$ \\ \hline
+		nnet & $474.42$ \\ \hline
+		pls & $24.44$ \\ \hline
+		fda & $75.10$ \\ \hline
+		pcaNNet & $320.40$ \\ \hline
+	\end{tabular}
+	\caption{The train time in seconds for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:xzap:train}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $347.44$ & $258.83$ & $119.64$ & $474.42$ & $24.44$ & $75.10$ & $320.40$ \\ \hline
+	\end{tabular}
+	\caption{The train time in seconds for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:xzap:train}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $0.38$ \\ \hline
+		C5.0 & $0.05$ \\ \hline
+		nb & $0.84$ \\ \hline
+		nnet & $0.02$ \\ \hline
+		pls & $0.22$ \\ \hline
+		fda & $0.02$ \\ \hline
+		pcaNNet & $0.03$ \\ \hline
+	\end{tabular}
+	\caption{The prediction time in seconds for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:xzap:predict}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $0.38$ & $0.05$ & $0.84$ & $0.02$ & $0.22$ & $0.02$ & $0.03$ \\ \hline
+	\end{tabular}
+	\caption{The prediction time in seconds for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:xzap:predict}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & NA \\ \hline
+		C5.0 & $0$ \\ \hline
+		nb & NA \\ \hline
+		nnet & NA \\ \hline
+		pls & $0.01$ \\ \hline
+		fda & $0.02$ \\ \hline
+		pcaNNet & NA \\ \hline
+	\end{tabular}
+	\caption{The variable importance calculation time in seconds for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:xzap:importance}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & NA & $0$ & NA & NA & $0.01$ & $0.02$ & NA \\ \hline
+	\end{tabular}
+	\caption{The variable importance calculation time in seconds for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:xzap:importance}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $348.47$ \\ \hline
+		C5.0 & $259.81$ \\ \hline
+		nb & $121.05$ \\ \hline
+		nnet & $475.05$ \\ \hline
+		pls & $25.56$ \\ \hline
+		fda & $76.04$ \\ \hline
+		pcaNNet & $321.05$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:xzap:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $348.47$ & $259.81$ & $121.05$ & $475.05$ & $25.56$ & $76.04$ & $321.05$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:xzap:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Model & elapsed_train & elapsed_predict & elapsed_importance & elapsed_total \\ \hline
+		svmPoly & $347.44$ & $0.38$ & NA & $348.47$ \\ \hline
+		C5.0 & $258.83$ & $0.05$ & $0$ & $259.81$ \\ \hline
+		nb & $119.64$ & $0.84$ & NA & $121.05$ \\ \hline
+		nnet & $474.42$ & $0.02$ & NA & $475.05$ \\ \hline
+		pls & $24.44$ & $0.22$ & $0.01$ & $25.56$ \\ \hline
+		fda & $75.10$ & $0.02$ & $0.02$ & $76.04$ \\ \hline
+		pcaNNet & $320.40$ & $0.03$ & NA & $321.05$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:xzap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed_train & $347.44$ & $258.83$ & $119.64$ & $474.42$ & $24.44$ & $75.10$ & $320.40$ \\ \hline
+		elapsed_predict & $0.38$ & $0.05$ & $0.84$ & $0.02$ & $0.22$ & $0.02$ & $0.03$ \\ \hline
+		elapsed_importance & NA & $0$ & NA & NA & $0.01$ & $0.02$ & NA \\ \hline
+		elapsed_total & $348.47$ & $259.81$ & $121.05$ & $475.05$ & $25.56$ & $76.04$ & $321.05$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:xzap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Metric & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		Acc & $0.739$ & $0.8104$ & $1$ & $1$ & $0.7735$ & $0.7979$ & $0.8148$ \\ \hline
+		$95\%$ CI & $(0.7168, 0.7604)$ & $(0.7903, 0.8293)$ & $(0.9977, 1)$ & $(0.9977, 1)$ & $(0.7521, 0.7938)$ & $(0.7773, 0.8173)$ & $(0.7948, 0.8335)$ \\ \hline
+		NIR & $0.7322$ & $0.7322$ & $0.7322$ & $0.7322$ & $0.7322$ & $0.7322$ & $0.7322$ \\ \hline
+		$p$-value & $0.2775$ & $1.602e-13$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $8.468e-05$ & $6.224e-10$ & $6.107e-15$ \\ \hline
+		Kappa & $0.1013$ & $0.4714$ & $1$ & $1$ & $0.2742$ & $0.4343$ & $0.4948$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:stats:xzap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
+		svmPoly & $0.739$ & $(0.7168, 0.7604)$ & $0.7322$ & $0.2775$ & $0.1013$ \\ \hline
+		C5.0 & $0.8104$ & $(0.7903, 0.8293)$ & $0.7322$ & $1.602e-13$ & $0.4714$ \\ \hline
+		nb & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
+		nnet & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
+		pls & $0.7735$ & $(0.7521, 0.7938)$ & $0.7322$ & $8.468e-05$ & $0.2742$ \\ \hline
+		fda & $0.7979$ & $(0.7773, 0.8173)$ & $0.7322$ & $6.224e-10$ & $0.4343$ \\ \hline
+		pcaNNet & $0.8148$ & $(0.7948, 0.8335)$ & $0.7322$ & $6.107e-15$ & $0.4948$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:stats:reverse:xzap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet \\ \hline
+		svmPoly & $100.0\%$ & $48.3633\%$ & $-39.1974\%$ & $51.4127\%$ \\ \hline
+		C5.0 & $48.3633\%$ & $100.0\%$ & $4.6801\%$ & $20.8887\%$ \\ \hline
+		nb & $-39.1974\%$ & $4.6801\%$ & $100.0\%$ & $40.0568\%$ \\ \hline
+		nnet & $51.4127\%$ & $20.8887\%$ & $40.0568\%$ & $100.0\%$ \\ \hline
+	\end{tabular}
+	\caption{The model coorelation of an ansamble of 4 models when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:ansamble4:xzap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Models & elapsed \\ \hline
+		$4$ & $843.80$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of 4 models when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:ansamble:xzap:4}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Models & $4$ \\ \hline
+		elapsed & $843.80$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of 4 models when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:ansamble:reverse:xzap:4}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		svmPoly & $100.0\%$ & $11.1954\%$ & $16.5607\%$ & $1.7233\%$ & $27.4431\%$ & $-5.278\%$ & $25.6485\%$ \\ \hline
+		C5.0 & $11.1954\%$ & $100.0\%$ & $31.0991\%$ & $-45.3569\%$ & $54.9882\%$ & $-66.8568\%$ & $39.0368\%$ \\ \hline
+		nb & $16.5607\%$ & $31.0991\%$ & $100.0\%$ & $-38.4186\%$ & $8.5111\%$ & $-7.772\%$ & $3.8377\%$ \\ \hline
+		nnet & $1.7233\%$ & $-45.3569\%$ & $-38.4186\%$ & $100.0\%$ & $11.2341\%$ & $53.1192\%$ & $-28.959\%$ \\ \hline
+		pls & $27.4431\%$ & $54.9882\%$ & $8.5111\%$ & $11.2341\%$ & $100.0\%$ & $-37.0735\%$ & $45.9607\%$ \\ \hline
+		fda & $-5.278\%$ & $-66.8568\%$ & $-7.772\%$ & $53.1192\%$ & $-37.0735\%$ & $100.0\%$ & $-33.1787\%$ \\ \hline
+		pcaNNet & $25.6485\%$ & $39.0368\%$ & $3.8377\%$ & $-28.959\%$ & $45.9607\%$ & $-33.1787\%$ & $100.0\%$ \\ \hline
+	\end{tabular}
+	\caption{The model coorelation of an ansamble of 7 models when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:ansamble7:xzap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Models & elapsed \\ \hline
+		$7$ & $894.95$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of 7 models when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:ansamble:xzap:7}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Models & $7$ \\ \hline
+		elapsed & $894.95$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of 7 models when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:ansamble:reverse:xzap:7}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Models & elapsed \\ \hline
+		$4$ & $843.80$ \\ \hline
+		$7$ & $894.95$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of different numbers of models when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:ansamble:xzap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Models & $4$ & $7$ \\ \hline
+		elapsed & $843.80$ & $894.95$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of different numbers of models when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:ansamble:reverse:xzap}
+\end{table}
