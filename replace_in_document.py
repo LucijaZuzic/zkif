@@ -78,3 +78,11 @@ file_w.close()
 file_w = open(name + "_no_cite_replaced.tex", "w")
 file_w.write(merged_lines_no_cite_all)
 file_w.close()
+from subprocess import call
+list_subproc_no_cite_replaced = ["pandoc", "-s", "-o", name + "_no_cite_replaced.docx", name + "_no_cite_replaced.tex"]
+list_subproc_replaced = ["pandoc", "-s", "-o", name + "_replaced.docx", name + "_replaced.tex"]
+list_subproc = ["pandoc", "-s", "-o", name + ".docx", name + ".tex"]
+
+call(list_subproc_no_cite_replaced)
+call(list_subproc_replaced)
+call(list_subproc)

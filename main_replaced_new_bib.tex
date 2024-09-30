@@ -138,7 +138,7 @@ country={Croatia}}
 \cortext[cor1]{Corresponding author}
 %% Abstract
 \begin{abstract}
-Ambient conditions classification enables a systematic mitigation of adversarial effects on the Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT) performance. This research contributes to the problem with the proposal of classification model of space weather events for sub-equatorial regions. The proposed model is established on machine learning-based classification model development applied on the experimental observations of geomagnetic field components, observed Total Electron Content, and Disturbance Storm-Time (Dst) index. The Least Squares Support Vector Machine (SVM) with Polynomial Kernel, the C5.0 Decision Tree (DT), the Naive Bayes, the Neural Network, and the Partial Least Squares methods are applied to develop the candidate classification model to classify a set of observations of geomagnetic field in TEC into one of the scenarios of space weather conditions. Candidate models’ performance are assessed for their accuracy, confusion matrix, and model development time to yield the C5.0 DT as the best performer. The proposed Dst-based classification model may serve as an indicator of a geomagnetic/ionospheric storm in progress, thus alerting GNSS users of potential degradation of the GNSS PNT performance, and for setting up a framework for development of the tailored GNSS ionospheric correction model for specific classes of the space weather conditions.
+Ambient conditions classification enables a systematic mitigation of adversarial effects on the Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT) performance. This research contributes to the problem with the proposal of classification model of space weather events for sub-equatorial regions. The proposed model is established on machine learning-based classification model development applied on the experimental observations of geomagnetic field components, observed Total Electron Content, and Disturbance Storm-Time (Dst) index. The Least Squares Support Vector Machine (SVM) with Polynomial Kernel, the C5.0 Decision Tree (DT), the Naive Bayes, the Neural Network, and the Partial Least Squares methods are applied to develop the candidate classification model to classify a set of observations of geomagnetic field in TEC into one of the scenarios of space weather conditions. Candidate modelsâ€™ performance are assessed for their accuracy, confusion matrix, and model development time to yield the C5.0 DT as the best performer. The proposed Dst-based classification model may serve as an indicator of a geomagnetic/ionospheric storm in progress, thus alerting GNSS users of potential degradation of the GNSS PNT performance, and for setting up a framework for development of the tailored GNSS ionospheric correction model for specific classes of the space weather conditions.
 \end{abstract}
 %%Graphical abstract
 %\begin{graphicalabstract}
@@ -163,7 +163,7 @@ Global Navigation Satellite System (GNSS) Positioning \sep Navigation, and Timin
 %\label{sec:Introduction}
 Cause-effect relations between space weather \& geomagnetic conditions drive the ionospheric
 conditions, which cause the GNSS ionospheric delay, and, consequently, degradations of the GNSS
-Positioning, Navigation, and Timing (PNT) performance (service quality) – Space weather – GNSS
+Positioning, Navigation, and Timing (PNT) performance (service quality) â€“ Space weather â€“ GNSS
 performance Coupling Model (Fili\'{c}, Filjar, 2018) \cite{filic2018modelling}.
 A need for classification of geomagnetic/ionospheric conditions, in regard to GNSS PNT effect
 intensity.
@@ -239,7 +239,7 @@ The network design process can be simplified using previously defined machine le
 \subsubsection{Support Vector Machine}
 %\label{subsubsec:SVM}
 
-In machine learning, Support Vector Machines (SVMs) or Support Vector Networks (SVNs) are supervised maximum margin models with associated learning algorithms that analyze data for classification and regression. The Vapnik–Chervonenkis theory developed in 1964 provided the basis for the original SVM algorithm developed at AT\&T Bell Laboratories. In addition to linear classification, SVMs are also effective for non-linear classification using the hyperplane kernel trick with maximum margin developed in 1992 by Bernhard Boser, Isabelle Guyon, and Vladimir Vapnik \cite{Boser1992}, implicitly mapping their inputs to high-dimensional feature spaces. 
+In machine learning, Support Vector Machines (SVMs) or Support Vector Networks (SVNs) are supervised maximum margin models with associated learning algorithms that analyze data for classification and regression. The Vapnikâ€“Chervonenkis theory developed in 1964 provided the basis for the original SVM algorithm developed at AT\&T Bell Laboratories. In addition to linear classification, SVMs are also effective for non-linear classification using the hyperplane kernel trick with maximum margin developed in 1992 by Bernhard Boser, Isabelle Guyon, and Vladimir Vapnik \cite{Boser1992}, implicitly mapping their inputs to high-dimensional feature spaces. 
 
 SVMs can also be used for regression tasks where the objective becomes $\epsilon$ -sensitive. A "soft margin" to separate data that is not linearly separable was proposed by Corinna Cortes and Vapnik in 1993 and published in 1995 \cite{Cortes1995}. Support Vector Clustering \cite{BenHur2001} (SVC), developed by Hava Siegelmann and Vladimir Vapnik, applies support vector statistics to unlabeled data in unsupervised learning to find new natural groupings. The popularity of SVMs is due to their amenability to theoretical analysis, flexibility, and application to a wide range of tasks, including structured prediction problems. It is unclear whether SVM predictions perform better than other linear models, such as logistic, and linear regression.
 
@@ -256,7 +256,7 @@ More formally, a support vector machine constructs a hyperplane or set of hyperp
 While the original problem can be posed in a finite-dimensional space, the sets to be distinguished are not always linearly separable. For this reason, it was proposed \cite{Boser1992} to map the original finite-dimensional space into a multidimensional space, with the assumption that the separation will be easier in that space. To keep the computational burden reasonable, mappings using SVM schemes are designed to ensure that the products of matrix multiplication of pairs of input vectors can be easily computed in terms of variables in the source space, defining them in terms of a kernel probability density function $k(x, y)$ chosen to fit the problem \cite{Press2007}.
 
 Hyperplanes in multidimensional space are a set of points whose vector product with a vector in that space is constant. Such a set of vectors is an orthogonal, and thus minimal, set of vectors defining the hyperplane. The vectors defining the hyperplanes can be chosen as linear combinations with the parameters $\alpha_{i}$ of the feature vector images $x_{i}$ appearing in the database. With this choice of hyperplane, the points $x$ in the feature space that are mapped in the hyperplane are defined by the expression 
-in Equation~\ref{eqn:1}, which has a constant sum.
+in Equation~1, which has a constant sum.
 \begin{equation}
 	\sum_{i} \alpha_{i}k(x_{i},x)
 	\label{eqn:1}
@@ -270,7 +270,7 @@ Classification of satellite data such as Synthetic Aperture Radar (SAR) data is 
 
 Let there be a training data set with $n$ points of the form $(\mathbf{x}_{1},y_{1}),\ldots,(\mathbf{x}_{n},y_{n})$ for which $y_{i}$ is $1$ or $-1$, and each denotes the class to which the point $\mathbf{x}_{i}$ belongs. Each $\mathbf{x}_{i}$ is a $p$-dimensional real vector. We want to find the hyperplane with the maximum margin that separates the group of points $\mathbf{x}_{i}$ for which $y_{i}=1$ holds from the group of points for which $y_{i}=-1$ holds. A hyperplane with a maximum margin is defined so the distance between the hyperplane and the nearest point $\mathbf{x}_{i}$ from any group is maximized.
 
-Any hyperplane can be written as a set of points $\mathbf{x}$ that satisfy the expression $\mathbf{w}^{\mathsf{T}}\mathbf{x} -b=0$. The expression $\mathbf{w}$ denotes a vector perpendicular to the hyperplane which is not necessarily normalized. This is similar to the Hesse normal form, except that $\mathbf{w}$ is not necessarily a unit vector. The parameter in Equation~\ref{eqn:2} determines the displacement of the hyperplane from the origin along the normal vector $\mathbf{w}$.
+Any hyperplane can be written as a set of points $\mathbf{x}$ that satisfy the expression $\mathbf{w}^{\mathsf{T}}\mathbf{x} -b=0$. The expression $\mathbf{w}$ denotes a vector perpendicular to the hyperplane which is not necessarily normalized. This is similar to the Hesse normal form, except that $\mathbf{w}$ is not necessarily a unit vector. The parameter in Equation~2 determines the displacement of the hyperplane from the origin along the normal vector $\mathbf{w}$.
 
 \begin{equation}
 	\frac{b}{\|\mathbf{w} \|}
@@ -279,14 +279,14 @@ Any hyperplane can be written as a set of points $\mathbf{x}$ that satisfy the e
 
 The original maximum margin hyperplane algorithm proposed by Vapnik in 1963 constructed a linear classifier. However, in 1992, Bernhard Boser, Isabelle Guyon, and Vladimir Vapnik proposed creating nonlinear classifiers using the kernel trick. The kernel trick on the maximum margin hyperplane \cite{Boser1992} was first proposed by Aizerman et al. \cite{Aizerman1964}. A nonlinear kernel probability density function replaces each matrix multiplication product. This allows the algorithm to fit the maximum margin hyperplane in the transformed feature space. The transformation can be non-linear, and the transformed space can have many dimensions. Although the classifier is a hyperplane in the transformed feature space, it may be nonlinear in the original input space. A multidimensional feature space increases the generalization error of support vector machines, so many samples are needed to enhance performance \cite{Jin2012}. 
 
-Some common kernel probability density functions include the polynomial (homogeneous), which becomes linear for $d=1$, $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = {(\mathbf{x}_{i} \cdot \mathbf{x}_{j})}^{d}$, polynomial (inhomogeneous), $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = {(\mathbf{x}_{i} \cdot \mathbf{x}_{j} + r)}^{d}$, and the Gaussian Radial Basis Function (RBF), for which $\gamma > 0$, $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = \mathrm{exp}(- \gamma{\mid \mid \mathbf{x}_{i} - \mathbf{x}_{j} \mid \mid}^{d})$. RBF can be parameterized as $\gamma = 1 / (2{\sigma}^{2})$. The sigmoid function (hyperbolic tangent) has the equation $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = \mathrm{tanh}(\kappa \mathbf{x}_{i} \ cdot \mathbf{x}_{j} + c)$ for some values of $\kappa > 0$, but not for all, and for $c < 0$. The equation $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = \varphi(\mathbf{x}_{i}) \cdot \varphi(\mathbf{x}_{j})$ links the kernel to the transformation $\varphi(\mathbf{x}_{i})$. The value $\mathbf{w}$ in Equation~\ref{eqn:3} is also located in the transformed space.
+Some common kernel probability density functions include the polynomial (homogeneous), which becomes linear for $d=1$, $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = {(\mathbf{x}_{i} \cdot \mathbf{x}_{j})}^{d}$, polynomial (inhomogeneous), $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = {(\mathbf{x}_{i} \cdot \mathbf{x}_{j} + r)}^{d}$, and the Gaussian Radial Basis Function (RBF), for which $\gamma > 0$, $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = \mathrm{exp}(- \gamma{\mid \mid \mathbf{x}_{i} - \mathbf{x}_{j} \mid \mid}^{d})$. RBF can be parameterized as $\gamma = 1 / (2{\sigma}^{2})$. The sigmoid function (hyperbolic tangent) has the equation $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = \mathrm{tanh}(\kappa \mathbf{x}_{i} \ cdot \mathbf{x}_{j} + c)$ for some values of $\kappa > 0$, but not for all, and for $c < 0$. The equation $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = \varphi(\mathbf{x}_{i}) \cdot \varphi(\mathbf{x}_{j})$ links the kernel to the transformation $\varphi(\mathbf{x}_{i})$. The value $\mathbf{w}$ in Equation~3 is also located in the transformed space.
 
 \begin{equation}
 	\mathbf{w} = \sum_{i} \alpha_{i}y_{i}\varphi(\mathbf{x}_{i} )
 	\label{eqn:3}
 \end{equation}
 
-The matrix product with $\mathbf{w}$ for classification can be calculated using the kernel trick in Equation~\ref{eqn:4}.
+The matrix product with $\mathbf{w}$ for classification can be calculated using the kernel trick in Equation~4.
 
 \begin{equation}
 	\mathbf{w} \cdot \varphi(\mathbf{x}) = \sum_{i} \alpha_{i}y_{i}\varphi (\mathbf{x}_{i}) k(\mathbf{x}_{i}, \mathbf{x}_{j})
@@ -317,21 +317,21 @@ In the statistical literature, naive Bayes models are known by various names, in
 
 In many practical applications, parameter estimation for naive Bayes models uses the maximum likelihood method. In other words, one can work with a naive Bayesian model without accepting Bayesian probability or methods. Despite their simple design and seemingly oversimplified assumptions, naive Bayes classifiers have performed quite well in many complex real-world situations. In 2004, an analysis of the Bayesian classification problem showed that there are reasonable theoretical reasons for the seemingly incredible performance of naive Bayesian classifiers \cite{Zhang2004}. However, a comprehensive comparison with other classification algorithms in 2006 showed that Bayesian classification performed worse than other approaches, such as boosted trees or random forests \cite{Caruana2006}. The advantage of naive Bayes is that it requires only a small amount of training data to estimate the parameters needed for classification \cite{stackexchange}.
 
-In the abstract, naive Bayes is a conditional probability model. The model assigns probabilities $p(C_{k}\mid x_{1},\ldots, x_{n})$ to each of the $K$ possible outcomes or classes $C_{k}$ given the problem instance to be classified, represented by the vector $x = (x_{1},\ldots, x_{n})$ which encodes $n$ features representing mutually independent variables \cite{Murty2011}. The problem with the above formulation is that if the number of features $n$ is large or if the feature can take a large number of values, then it is infeasible to base such a model on probability tables. The model must therefore be reformulated to make it easier. The conditional probability can be decomposed using Bayes' theorem in Equation~\ref{eqn:5}.
+In the abstract, naive Bayes is a conditional probability model. The model assigns probabilities $p(C_{k}\mid x_{1},\ldots, x_{n})$ to each of the $K$ possible outcomes or classes $C_{k}$ given the problem instance to be classified, represented by the vector $x = (x_{1},\ldots, x_{n})$ which encodes $n$ features representing mutually independent variables \cite{Murty2011}. The problem with the above formulation is that if the number of features $n$ is large or if the feature can take a large number of values, then it is infeasible to base such a model on probability tables. The model must therefore be reformulated to make it easier. The conditional probability can be decomposed using Bayes' theorem in Equation~5.
 
 \begin{equation}
 	p(C_{k}\mid \mathbf{x})={\frac{p(C_{k})\ p(\mathbf{x} \mid C_{k})}{p(\mathbf{x})}}
 	\label{eqn:5}
 \end{equation}
 
-Using natural language and Bayesian probability terminology, the above equation can be written in a form presented in Equation~\ref{eqn:6}.
+Using natural language and Bayesian probability terminology, the above equation can be written in a form presented in Equation~6.
 
 \begin{equation}
 	posterior = \frac{prior \times probability}{evidence}
 	\label{eqn:6}
 \end{equation}
 
-In practice, only the numerator is evaluated, because the denominator does not depend on $C$, and the values of the feature $x_{i}$ are given. This means that the denominator is constant in practice. The numerator is equivalent to the pooled probability model $p(C_{k},x_{1},\ldots,x_{n})$ which can be reformulated as follows, using the chain rule to repeatedly apply the definition of conditional probability in Equation~\ref{eqn:7}.
+In practice, only the numerator is evaluated, because the denominator does not depend on $C$, and the values of the feature $x_{i}$ are given. This means that the denominator is constant in practice. The numerator is equivalent to the pooled probability model $p(C_{k},x_{1},\ldots,x_{n})$ which can be reformulated as follows, using the chain rule to repeatedly apply the definition of conditional probability in Equation~7.
 
 \begin{equation}
 	\begin{aligned}
@@ -346,7 +346,7 @@ In practice, only the numerator is evaluated, because the denominator does not d
 	\label{eqn:7}
 \end{equation}
 
-In the next step, "naive" assumptions about conditional independence are accounted for. Assume that all features in $\mathbf{x}$ are mutually conditionally independent considering the category $C_{k}$. Under this assumption, $p(x_{i}\mid x_{i+1}, \ldots,x_{n},C_{k}) = p(x_{i}\mid C_{k})$, and therefore the joint probability model can be expressed in Equation~\ref{eqn:8}
+In the next step, "naive" assumptions about conditional independence are accounted for. Assume that all features in $\mathbf{x}$ are mutually conditionally independent considering the category $C_{k}$. Under this assumption, $p(x_{i}\mid x_{i+1}, \ldots,x_{n},C_{k}) = p(x_{i}\mid C_{k})$, and therefore the joint probability model can be expressed in Equation~8
 
 \begin{equation}
 	\begin{aligned}
@@ -357,28 +357,28 @@ In the next step, "naive" assumptions about conditional independence are account
 	\label{eqn:8}
 \end{equation}
 
-The value $\propto$ indicates proportionality because the denominator $p({\mathbf{x}})$ is omitted. Under the above independence assumptions, the conditional distribution over the class variable $C$ is defined in Equation~\ref{eqn:9}.
+The value $\propto$ indicates proportionality because the denominator $p({\mathbf{x}})$ is omitted. Under the above independence assumptions, the conditional distribution over the class variable $C$ is defined in Equation~9.
 
 \begin{equation}
 	p(C_{k}\mid x_{1},\ldots,x_{n}) = \frac{1}{Z} p(C_{k}) \prod_{i=1}^{n} p(x_{1}\mid C_{k})
 	\label{eqn:9}
 \end{equation}
 
-The proof in Equation~\ref{eqn:10} denotes a scaling factor that depends exclusively on $x_{1}, x_{2}, \ldots, x_{n}$, and constant if the feature variable values are known.
+The proof in Equation~10 denotes a scaling factor that depends exclusively on $x_{1}, x_{2}, \ldots, x_{n}$, and constant if the feature variable values are known.
 
 \begin{equation}
 	Z = p(\mathbf{x}) = \sum_{k} p(C_{k}) p(\mathbf{x}|C_{k})
 	\label{eqn:10}
 \end{equation}
 
-The discussion up to this point has been about the naive Bayesian probability model with independent features. A naive Bayesian classifier combines the specified model with decision rules. One frequently used decision rule is the selection of the most likely hypothesis to minimize the probability of misclassification, also known as maximum a posteriori (MAP). The corresponding classifier, the Bayesian classifier, is a function that assigns a class label to the sample $\hat{y} = C_{k}$ for some class $k$ according to Equation~\ref{eqn:11}.
+The discussion up to this point has been about the naive Bayesian probability model with independent features. A naive Bayesian classifier combines the specified model with decision rules. One frequently used decision rule is the selection of the most likely hypothesis to minimize the probability of misclassification, also known as maximum a posteriori (MAP). The corresponding classifier, the Bayesian classifier, is a function that assigns a class label to the sample $\hat{y} = C_{k}$ for some class $k$ according to Equation~11.
 
 \begin{equation}
 	\hat{y} = \mathrm{argmax}_{k\in \{1, \ldots, K\}} p(C_{k}) \prod_{i=1}^{n} p(x_{i}\mid C_{k})
 	\label{eqn:11}
 \end{equation}
 
-The a priori probability for each class can be calculated using Equation~\ref{eqn:12} if we assume that the classes are equally likely, or by an estimate obtained by dividing the number of samples of the class by the total number of samples in the data set for training.
+The a priori probability for each class can be calculated using Equation~12 if we assume that the classes are equally likely, or by an estimate obtained by dividing the number of samples of the class by the total number of samples in the data set for training.
 
 \begin{equation}
 	p(C_{k}) = \frac{1}{K}
@@ -387,7 +387,7 @@ The a priori probability for each class can be calculated using Equation~\ref{eq
 
 To estimate feature distribution parameters, we must assume a parametric distribution, or generate non-parametric models for the features from the training data set \cite{John2013}. Assumptions about the distribution of features are called an event model or Bayesian classifier, which can introduce confusion by creating both a continuous and discrete model \cite{Mccallum2001, Metsis2006}. Multinomial and Bernoulli distributions have often been used for discrete features in document classification, or spam filtering. The Gaussian naive Bayesian classifier was used since the features used in this study assumed continuous values.
 
-When processing continuous data, it is often assumed that the values are distributed according to a normal (Gaussian) distribution. For example, suppose the training data contains a continuous attribute, $X$. The data is first segmented according to the class, and then according to the mean value and the variance of the variable $x$ which is calculated for each class separately. Let $\mu_{k}$ be the mean value of the sequence $x$ that denotes the class $C_{k}$, and let $\sigma_{k}^{2}$ be the Bessel corrected variance of the sequence $x$ that denotes the class $C_{k}$. Suppose the collected observation value is $v$. Then the probability density $v$ for the class $C_{k}$, $p(x=v\mid C_{k})$, can be calculated by including $v$ in the equation for the normal distribution parameterized by $\mu_{k}$ and $\sigma_{k}^{2}$. The expression in Equation~\ref{eqn:13} is formally valid.
+When processing continuous data, it is often assumed that the values are distributed according to a normal (Gaussian) distribution. For example, suppose the training data contains a continuous attribute, $X$. The data is first segmented according to the class, and then according to the mean value and the variance of the variable $x$ which is calculated for each class separately. Let $\mu_{k}$ be the mean value of the sequence $x$ that denotes the class $C_{k}$, and let $\sigma_{k}^{2}$ be the Bessel corrected variance of the sequence $x$ that denotes the class $C_{k}$. Suppose the collected observation value is $v$. Then the probability density $v$ for the class $C_{k}$, $p(x=v\mid C_{k})$, can be calculated by including $v$ in the equation for the normal distribution parameterized by $\mu_{k}$ and $\sigma_{k}^{2}$. The expression in Equation~13 is formally valid.
 
 \begin{equation}
 	p(x=v\mid C_{k}) = \frac{1}{\sqrt{2\pi \sigma_{k}^{2}}} e^{-\frac{{(v-\mu_{k})}^{2}}{2\sigma_{k}^{2}}}
@@ -405,7 +405,7 @@ Partial least squares (PLS) regression, or projection to latent structures, \cit
 
 PLS discovers how $X$ and $Y$ are related, modeling their covariance structures with a latent variable approach. PLS determines the multidimensional direction in the $X$ space that explains the maximum multidimensional variance direction in the $Y$ space. PLS regression is recommended when there are fewer observations than variables in the predictor matrix or multicollinearity is present among $X$ values. By contrast, standard regression will not succeed without regularization in such problems. PLS regression originated in social sciences but today it is widespread in chemometrics, bioinformatics, sensometrics, neuroscience, and anthropology.
 
-Using $n$ paired observations $\left(\vec{x_{i}}, \vec{y_{i}}\right), i \in 1, \dots, n$. PLS finds the normalized direction $\vec{p_{j}}, \vec{q_{j}}$ that maximizes the covariance in the first step $j = 1$ \cite{youtubeYouTube}, shown in Equation~\ref{eqn:14}. Matrix notation is used in further discussion of the model.
+Using $n$ paired observations $\left(\vec{x_{i}}, \vec{y_{i}}\right), i \in 1, \dots, n$. PLS finds the normalized direction $\vec{p_{j}}, \vec{q_{j}}$ that maximizes the covariance in the first step $j = 1$ \cite{youtubeYouTube}, shown in Equation~14. Matrix notation is used in further discussion of the model.
 
 \begin{equation}
 	\max_{{\vec{p}}_{j},{\vec{q}}_{j}}\operatorname{E} [\underbrace{({\vec{p}}_{j}\cdot {\vec{X}})}_{t_{j}}\underbrace{({\vec{q}}_{j}\cdot {\vec{Y}})}_{u_{j}}
@@ -468,7 +468,7 @@ Many predictors can be used at once in FDA \cite{hastie2009elements}, variable i
 
 Modifying different settings has a high impact on FDA \cite{hallgren2019species}, and the estimation might be unsuccessful if the predictor distributions are highly correlated. FDA is prone to overfitting \cite{thuiller2016ensemble}, and challenging to comprehend or explain \cite{quillfeldt2017influence}. The assumption of normality for the continuous independent variables is necessary \cite{zhang2019using} to determine the response or grouping categorical variable. 
 
-In nonparametric regression analysis, the relationship between predictors and the dependent variable does not have a distribution with previously determined parameters. This function is created based on the input. Because of this additional step, it is necessary to gather more samples than for parametric estimation. For the input and output random variables $X$ and $Y$, we assume the relationship in Equation~\ref{eqn:15} is true, where $m\left(x\right)$ represents a deterministic function.
+In nonparametric regression analysis, the relationship between predictors and the dependent variable does not have a distribution with previously determined parameters. This function is created based on the input. Because of this additional step, it is necessary to gather more samples than for parametric estimation. For the input and output random variables $X$ and $Y$, we assume the relationship in Equation~15 is true, where $m\left(x\right)$ represents a deterministic function.
 
 \begin{equation}
 	\mathbb{E}[Y\mid X=x]=m\left(x\right)
@@ -487,21 +487,21 @@ LDA uses continuous values of observed independent variables. Discriminant corre
 
 A class $y$ is known for a set of observations $\vec{x}$, also known as features, attributes, variables, or measurements for each sample of an object or event. This collection represents the training set in supervised learning. Finding a good predictor for the class $y$, given only an observation $\vec{x}$ for data other than the training set, but belonging to the same distribution, is a classic classification problem \cite{venables2013modern}.
 
-LDA assumes the conditional probability density functions $p({\vec{x}}|y=0)$ and $p({\vec{x}}|y=1)$ follow a normal distribution with mean and covariance parameters $\left({\vec{\mu}}_{0},\Sigma_{0}\right)$ and $\left({\vec{\mu}}_{1},\Sigma_{1}\right)$, respectively. Equation~\ref{eqn:16} shows that, if the log of the likelihood ratios is bigger than a threshold $T$, the Bayes-optimal solution under the previous assumptions is to predict points as being from the second class.
+LDA assumes the conditional probability density functions $p({\vec{x}}|y=0)$ and $p({\vec{x}}|y=1)$ follow a normal distribution with mean and covariance parameters $\left({\vec{\mu}}_{0},\Sigma_{0}\right)$ and $\left({\vec{\mu}}_{1},\Sigma_{1}\right)$, respectively. Equation~16 shows that, if the log of the likelihood ratios is bigger than a threshold $T$, the Bayes-optimal solution under the previous assumptions is to predict points as being from the second class.
 
 \begin{equation}
 	{\frac{1}{2}}({\vec{x}}-{\vec{\mu}}_{0})^{\mathrm{T}}\Sigma_{0}^{-1}({\vec{x}}-{\vec{\mu}}_{0})+{\frac{1}{2}}\ln |\Sigma_{0}|-{\frac{1}{2}}({\vec{x}}-{\vec{\mu}}_{1})^{\mathrm{T}}\Sigma_{1}^{-1}({\vec{x}}-{\vec{\mu}}_{1})-{\frac{1}{2}}\ln |\Sigma_{1}|\ >\ T
 	\label{eqn:16}
 \end{equation}
 
-Quadratic Discriminant Analysis (QDA) uses this classifier without additional assumptions. LDA assumes that the covariances have full rank and also assumes homoscedasticity, meaning that the class covariances are identical, as written in Equation~\ref{eqn:17}.
+Quadratic Discriminant Analysis (QDA) uses this classifier without additional assumptions. LDA assumes that the covariances have full rank and also assumes homoscedasticity, meaning that the class covariances are identical, as written in Equation~17.
 
 \begin{equation}
 	\Sigma_{0}=\Sigma_{1}=\Sigma
 	\label{eqn:17}
 \end{equation}
 
-In this case, terms ${\vec{x}}^{\mathrm{T}}\Sigma_{0}^{-1}{\vec{x}}={\vec{x}}^{\mathrm{T}}\Sigma_{1}^{-1}{\vec{x}}$ and ${\vec{x}}^{\mathrm{T}}{\Sigma_{i}}^{-1}{\vec{\mu}}_{i}={{\vec{\mu}}_{i}}^{\mathrm{T}}{\Sigma_{i}}^{-1}{\vec{x}}$ cancel because $\Sigma_{i}$ is Hermitian and the above decision criterion becomes a threshold on the dot product ${\vec{w}}^{\mathrm{T}}{\vec{x}}>c$ for some threshold constant $c$ in Equation~\ref{eqn:18}, where ${\vec{w}}=\Sigma ^{-1}({\vec{\mu}}_{1}-{\vec{\mu}}_{0})$.
+In this case, terms ${\vec{x}}^{\mathrm{T}}\Sigma_{0}^{-1}{\vec{x}}={\vec{x}}^{\mathrm{T}}\Sigma_{1}^{-1}{\vec{x}}$ and ${\vec{x}}^{\mathrm{T}}{\Sigma_{i}}^{-1}{\vec{\mu}}_{i}={{\vec{\mu}}_{i}}^{\mathrm{T}}{\Sigma_{i}}^{-1}{\vec{x}}$ cancel because $\Sigma_{i}$ is Hermitian and the above decision criterion becomes a threshold on the dot product ${\vec{w}}^{\mathrm{T}}{\vec{x}}>c$ for some threshold constant $c$ in Equation~18, where ${\vec{w}}=\Sigma ^{-1}({\vec{\mu}}_{1}-{\vec{\mu}}_{0})$.
 
 \begin{equation}
 	c={\frac{1}{2}}\,{\vec{w}}^{\mathrm{T}}({\vec{\mu}}_{1}+{\vec{\mu}}_{0})
@@ -530,7 +530,7 @@ The discriminant analysis eigenvalue represents the characteristic root of each 
 
 Even though it is not universally accepted, some suggest eigenvalues be utilized as effect size measures \cite{hansen2005using}. Canonical correlation is a more established measure of effect size similar to the eigenvalue, representing the correlation between groups and the function \cite{hansen2005using}, and equaling the square root of the ratio of $SS_{between}$ and $SS_{total}$. The percent of variance can also be calculated for each function by $(\lambda_{x}/\sigma\lambda_{i}) \times 100$, where $\lambda_{x}$ is the eigenvalue for the function, and $\sigma\lambda_{i}$ is the sum of all eigenvalues indicating the strength of the prediction for one particular function compared to the others \cite{hansen2005using}. The percent of correctly classified data, such as the kappa value, can also be used as the effect size while accounting for random matches in classification \cite{hansen2005using}. Kappa is not biased for any particular class, whether performance is high or low, and instead normalizes across all classes \cite{israel2006performance}. 
 
-Fisher's linear discriminant and LDA are sometimes considered synonyms. However, Fisher \cite{fisher1936use} describes a slightly different discriminant, which does not make some of the assumptions of LDA such as a normal distribution or the equality of covariances for groups. The linear combination of features ${\vec{w}}^{\mathrm{T}}{\vec{x}}$ will have means ${\vec{w}}^{\mathrm{T}}{\vec{\mu}}_{i}$ and variances ${\vec{w}}^{\mathrm{T}}\Sigma_{i}{\vec{w}}$ for $i=0,1$ if two classes of observations have means ${\vec{\mu}}_{0},{\vec{\mu}}_{1}$ and covariances $\Sigma_{0},\Sigma_{1}$. Fisher uses the ratio of the variance between and within the classes to separate these two distributions in Equation~\ref{eqn:19}.
+Fisher's linear discriminant and LDA are sometimes considered synonyms. However, Fisher \cite{fisher1936use} describes a slightly different discriminant, which does not make some of the assumptions of LDA such as a normal distribution or the equality of covariances for groups. The linear combination of features ${\vec{w}}^{\mathrm{T}}{\vec{x}}$ will have means ${\vec{w}}^{\mathrm{T}}{\vec{\mu}}_{i}$ and variances ${\vec{w}}^{\mathrm{T}}\Sigma_{i}{\vec{w}}$ for $i=0,1$ if two classes of observations have means ${\vec{\mu}}_{0},{\vec{\mu}}_{1}$ and covariances $\Sigma_{0},\Sigma_{1}$. Fisher uses the ratio of the variance between and within the classes to separate these two distributions in Equation~19.
 
 \begin{equation}
 	S={\frac{\sigma_{\text{between}}^{2}}{\sigma_{\text{within}}^{2}}}={\frac{({\vec{w}}\cdot{\vec{\mu}}_{1}-{\vec{w}}\cdot {\vec{\mu}}_{0})^{2}}{{\vec{w}}^{\mathrm{T}}\Sigma_{1}{\vec{w}}+{\vec{w}}^{\mathrm{T}}\Sigma_{0}{\vec{w}}}}={\frac{({\vec{w}}\cdot ({\vec{\mu}}_{1}-{\vec{\mu}}_{0}))^{2}}{{\vec{w}}^{\mathrm{T}}(\Sigma_{0}+\Sigma_{1}){\vec{w}}}}
@@ -541,7 +541,7 @@ This measure can be considered a measure of the signal-to-noise ratio for the cl
 The vector  $\vec{w}$ is the normal to the discriminant hyperplane. The separation line for a two-class task is perpendicular to $\vec{w}$, illustrating this claim.
 
 The classified samples are projected onto $\vec{w}$ and then a threshold dividing them is selected among one-dimensional distributions. No universal guidelines exist for this selection. An often-used selection is a hyperplane between projections of the two means, ${\vec{w}}\cdot {\vec{\mu}}_{0}$ and $ \vec{w} \cdot {\vec{\mu}}_{1}$, used if projections of data from both groups have similar distributions. 
-Equation~\ref{eqn:20} denotes how to find the parameter $c$ in the threshold condition ${\vec{w}}\cdot {\vec{x}} > c$ for this hyperplane.
+Equation~20 denotes how to find the parameter $c$ in the threshold condition ${\vec{w}}\cdot {\vec{x}} > c$ for this hyperplane.
 
 \begin{equation}
 	c={\vec{w}}\cdot {\frac{1}{2}}({\vec{\mu}}_{0}+{\vec{\mu}}_{1})={\frac{1}{2}}{\vec{\mu}}_{1}^{\mathrm{T}}\Sigma_{1}^{-1}{\vec{\mu}}_{1}-{\frac{1}{2}}{\vec{\mu}}_{0}^{\mathrm{T}}\Sigma_{0}^{-1}{\vec{\mu}}_{0}
@@ -550,13 +550,13 @@ Equation~\ref{eqn:20} denotes how to find the parameter $c$ in the threshold con
 
 Otsu's method, related to Fisher's linear discriminant, chooses a black/white threshold that minimizes intra-class variance to convert a pixel histogram to grayscale and maximizes inter-class variance within/between grayscales assigned to black and white pixel classes. Canonical discriminant analysis (CDA) divides $k$ classes with the fewest errors by finding $k - 1$ axes that define canonical coordinates. The $n$-dimensional input is projected to a $k - 1$-dimensional space by using $k - 1$ linear functions that are not correlated.
 
-The application of the Fisher discriminant is expanded to find a subspace capturing all class variability \cite{archive765Discriminant} for multiple groups, as suggested by C. R. Rao \cite{rao1948utilization}. Then The scatter between class variability is defined by the sample covariance of the class means in Equation~\ref{eqn:21} if each of $C$ classes has a mean $\mu_{i}$ and the same covariance  $\Sigma$, where $\mu$ is the mean of the class means.
+The application of the Fisher discriminant is expanded to find a subspace capturing all class variability \cite{archive765Discriminant} for multiple groups, as suggested by C. R. Rao \cite{rao1948utilization}. Then The scatter between class variability is defined by the sample covariance of the class means in Equation~21 if each of $C$ classes has a mean $\mu_{i}$ and the same covariance  $\Sigma$, where $\mu$ is the mean of the class means.
 
 \begin{equation}
 	\Sigma_{b}={\frac{1}{C}}\sum_{i=1}^{C}\left(\mu_{i}-\mu\right)\left(\mu_{i}-\mu\right)^{\mathrm{T}}
 	\label{eqn:21}
 \end{equation}
-Equation~\ref{eqn:22} describes class division in the direction $\vec{w}$.
+Equation~22 describes class division in the direction $\vec{w}$.
 \begin{equation}
 	S={\frac{{\vec{w}}^{\mathrm{T}}\Sigma_{b}{\vec{w}}}{{\vec{w}}^{\mathrm{T}}\Sigma {\vec{w}}}}
 	\label{eqn:22}
@@ -577,7 +577,7 @@ When performing PCA, the first principal component of a set of $p$ variables is 
 
 The principal components are eigenvectors of the data's covariance matrix and are often computed by eigendecomposition of the data covariance matrix or singular value decomposition of the data matrix. PCA is closely related to factor analysis and is the simplest of the true eigenvector-based multivariate analyses. Factor analysis usually uses more domain-specific assumptions about the underlying structure and solves eigenvectors of a slightly different matrix. PCA is also related to canonical correlation analysis (CCA). PCA defines a new orthogonal coordinate system that optimally describes the variance in a single dataset \cite{barnett1987origins, hsu2012spectral, markopoulos2017efficient, chachlakis2019l1}. CCA does the same for the cross-covariance between two datasets. Robust and L1-norm-based variants of standard PCA have also been proposed \cite{chachlakis2019l1, markopoulos2014optimal, zhan2015robust, ke2005robust}.
 
-Karl Pearson \cite{pearson1901liii} conceived of PCA in 1901 as a counterpart of the principal axis theorem in mechanics \cite{stewart2019introduction}. Harold Hotelling discovered the Hotelling transform in multivariate quality control in the 1930s without knowledge of the previous work \cite{hotelling1933analysis, hotelling1992relations}. Synonyms for PCA include the discrete proper orthogonal decomposition (POD) \cite{berkooz1993proper, karhunen1946spektraltheorie, loeve1977elementary, sirovich1987turbulence} in mechanical engineering and the Kosambi–Karhunen–Loève or Karhunen–Loève theorem (KLT) \cite{sapatnekar2011overcoming, ghoman2012pod, archiveKarhunenLoeveTransform, amslaurea10169, mallat1999wavelet, tang1998texture} in signal processing. Singular value decomposition (SVD) of X, established in the final quarter of the 19th century \cite{stewart1993early}, is also similar to PCA. Eigenvalue decomposition (EVD) of a matrix $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ in linear algebra shares the mathematical foundations of PCA \cite{gloub1996matrix, hayden2002observations}. Factor analysis differs in several key features \cite{jolliffe2002principal}, but has many aspects in common with PCA. Empirical orthogonal functions (EOF) \cite{lorenz1956empirical} in meteorological science were developed by Lorenz in 1956 \cite{lorenz1956empirical}. The Eckart–Young theorem \cite{eckart1936approximation} and quasiharmonic modes \cite{dove1993introduction} are both connected to PCA. Empirical modal analysis in structural dynamics and spectral decomposition in noise and vibration also take a similar approach to PCA.
+Karl Pearson \cite{pearson1901liii} conceived of PCA in 1901 as a counterpart of the principal axis theorem in mechanics \cite{stewart2019introduction}. Harold Hotelling discovered the Hotelling transform in multivariate quality control in the 1930s without knowledge of the previous work \cite{hotelling1933analysis, hotelling1992relations}. Synonyms for PCA include the discrete proper orthogonal decomposition (POD) \cite{berkooz1993proper, karhunen1946spektraltheorie, loeve1977elementary, sirovich1987turbulence} in mechanical engineering and the Kosambiâ€“Karhunenâ€“LoĂ¨ve or Karhunenâ€“LoĂ¨ve theorem (KLT) \cite{sapatnekar2011overcoming, ghoman2012pod, archiveKarhunenLoeveTransform, amslaurea10169, mallat1999wavelet, tang1998texture} in signal processing. Singular value decomposition (SVD) of X, established in the final quarter of the 19th century \cite{stewart1993early}, is also similar to PCA. Eigenvalue decomposition (EVD) of a matrix $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ in linear algebra shares the mathematical foundations of PCA \cite{gloub1996matrix, hayden2002observations}. Factor analysis differs in several key features \cite{jolliffe2002principal}, but has many aspects in common with PCA. Empirical orthogonal functions (EOF) \cite{lorenz1956empirical} in meteorological science were developed by Lorenz in 1956 \cite{lorenz1956empirical}. The Eckartâ€“Young theorem \cite{eckart1936approximation} and quasiharmonic modes \cite{dove1993introduction} are both connected to PCA. Empirical modal analysis in structural dynamics and spectral decomposition in noise and vibration also take a similar approach to PCA.
 
 PCA is similar to fitting a $p$-dimensional ellipsoid to the data, with a principal component modeled by an ellipsoid axis. If the variance along an axis increases, the ellipsoid does as well.
 A variable must be centered by subtracting the mean to determine the ellipsoid axes. The covariance matrix of the data, eigenvalues, and eigenvectors are defined after this step. To obtain unit vectors, the orthogonal eigenvectors are normalized. The axes of the ellipsoid fitted to the data are then represented by the mutually orthogonal unit eigenvectors. The covariance is diagonalized by the selected basis, with the variance of each axis contained in the diagonal elements. If the eigenvector is divided by the eigenvalue, its proportion of the variance can be obtained.
@@ -585,7 +585,7 @@ PCA analysis often includes biplots and scree plots, displaying the degree of ex
 
 The data in PCA is converted to a new coordinate system using a scalar projection, an orthogonal linear transformation on a real inner product space. The first coordinate or principal component covers the largest portion of the variance, decreasing with each following component \cite{jolliffe2002principal}.
 PCA uses an $n\times p$ data matrix $\mathbf{X}$, where the $p$ columns representing features have been shifted so that the means equal zero, and each of the $n$ rows is an experiment iteration.
-The transformation given by Equation~\ref{eqn:23} uses a set of $l$ of $p$-dimensional vectors containing weights or coefficients $\mathbf{w}_{\left(k\right)}=(w_{1},\dots ,w_{p})_{\left(k\right)}$ and maps row vectors $\mathbf{x}_{\left(i\right)}=(x_{1},\dots ,x_{p})_{\left(i\right)}$ of $\mathbf{X}$ to new vectors of principal component scores $\mathbf{t}_{\left(i\right)}=(t_{1},\dots ,t_{l})_{\left(i\right)}$.
+The transformation given by Equation~23 uses a set of $l$ of $p$-dimensional vectors containing weights or coefficients $\mathbf{w}_{\left(k\right)}=(w_{1},\dots ,w_{p})_{\left(k\right)}$ and maps row vectors $\mathbf{x}_{\left(i\right)}=(x_{1},\dots ,x_{p})_{\left(i\right)}$ of $\mathbf{X}$ to new vectors of principal component scores $\mathbf{t}_{\left(i\right)}=(t_{1},\dots ,t_{l})_{\left(i\right)}$.
 
 \begin{equation}
 	{t_{k}}_{\left(i\right)}=\mathbf{x}_{\left(i\right)}\cdot \mathbf{w}_{\left(k\right)}\qquad \mathrm{for} \qquad i=1,\dots ,n\qquad k=1,\dots ,l
@@ -594,7 +594,7 @@ The transformation given by Equation~\ref{eqn:23} uses a set of $l$ of $p$-dimen
 
 The variables $t_{1},\dots ,t_{l}$ of $t$ have the maximum possible variance, the same as for $\mathbf{X}$. The coefficient vectors $w$ are unit vectors. The number of features $p$ is commonly larger than $l$ to reduce dimensionality. The matrix equivalent of the previously stated claims is $\mathbf{T}=\mathbf{X} \mathbf{W}$ where ${\mathbf{T}}_{ik}={t_{k}}_{\left(i\right)}$, ${\mathbf{X}}_{ij}={x_{j}}_{\left(i\right)}$, and ${\mathbf{W}}_{jk}={w_{j}}_{\left(k\right)}$.
 
-The first weight vector $\mathbf{w}_{\left(1\right)}$ in Equation~\ref{eqn:24} has maximum variance, with the matrix form in Equation~\ref{eqn:25}.
+The first weight vector $\mathbf{w}_{\left(1\right)}$ in Equation~24 has maximum variance, with the matrix form in Equation~25.
 
 \begin{equation}
 	\mathbf{w}_{\left(1\right)}=\arg \max_{\Vert \mathbf{w} \Vert =1}\,\left\{\sum_{i}(t_{1})_{\left(i\right)}^{2}\right\}=\arg \max_{\Vert \mathbf{w} \Vert =1}\,\left\{\sum_{i}\left(\mathbf{x}_{\left(i\right)}\cdot \mathbf{w} \right)^{2}\right\}
@@ -606,7 +606,7 @@ The first weight vector $\mathbf{w}_{\left(1\right)}$ in Equation~\ref{eqn:24} h
 	\label{eqn:25}
 \end{equation}
 
-The vector $\mathbf{w}_{\left(1\right)}$ needs to conform to Equation~\ref{eqn:26} to be a unit vector.
+The vector $\mathbf{w}_{\left(1\right)}$ needs to conform to Equation~26 to be a unit vector.
 
 \begin{equation}
 	\mathbf{w}_{\left(1\right)}=\arg \max \left\{{\frac{\mathbf{w}^{\mathsf{T}}\mathbf{X}^{\mathsf{T}}\mathbf{Xw}}{\mathbf{w}^{\mathsf{T}}\mathbf{w}}}\right\}
@@ -616,21 +616,21 @@ The vector $\mathbf{w}_{\left(1\right)}$ needs to conform to Equation~\ref{eqn:2
 The value we aim to increase can be considered a Rayleigh quotient. A positive semidefinite matrix, for example, $\mathbf{X}^{\mathsf{T}}\mathbf{X}$, produces an output where the quotient's maximum possible value is the largest eigenvalue of the matrix and $w$ is the corresponding eigenvector.
 The first principal component  $t_{1_{\left(i\right)}}$ of a data vector $\mathbf{x}_{\left(i\right)}$ equals $\{\mathbf{x}_{\left(i\right)} \cdot \mathbf{w}_{\left(1\right)}\} \mathbf{w}_{\left(1\right)}$  in the original and $\mathbf{x}_{\left(i\right)} \cdot \mathbf{w}_{\left(1\right)}$ in the transformed space, once $\mathbf{w}_{\left(1\right)}$ is calculated.
 
-By subtracting the first $k - 1$ principal components from $\mathbf{X}$, we obtain tThe $k$-th component in Equation~\ref{eqn:27}.
+By subtracting the first $k - 1$ principal components from $\mathbf{X}$, we obtain tThe $k$-th component in Equation~27.
 
 \begin{equation}
 	\mathbf{\hat{X}}_{k}=\mathbf{X} -\sum_{s=1}^{k-1}\mathbf{X} \mathbf{w}_{\left(s\right)}\mathbf{w}_{\left(s\right)}^{\mathsf{T}}
 	\label{eqn:27}
 \end{equation}
 
-Equation~\ref{eqn:28} describes using the new data matrix to determine the weight vector with the maximum variance. This weight vector represents the eigenvectors of $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ that are still in consideration, with the maximum values for the quantity in brackets given by their corresponding eigenvalues. 
+Equation~28 describes using the new data matrix to determine the weight vector with the maximum variance. This weight vector represents the eigenvectors of $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ that are still in consideration, with the maximum values for the quantity in brackets given by their corresponding eigenvalues. 
 
 \begin{equation}
-    \mathbf{w}_{\left(k\right)}=\mathop{\operatorname{arg\,max}}_{\left\|\mathbf{w} \right\|=1}\left\{\left\|\mathbf{\hat{X}}_{k}\mathbf{w} \right\|^{2}\right\}=\arg \max \left\{{\frac{\mathbf{w}^{\mathsf{T}}\mathbf{\hat{X}}_{k}^{\mathsf{T}}\mathbf{\hat{X}}_{k}\mathbf{w}}{\mathbf{w}^{T}\mathbf{w}}}\right\}
+	\mathbf{w}_{\left(k\right)}=\mathop{\operatorname{arg\,max}}_{\left\|\mathbf{w} \right\|=1}\left\{\left\|\mathbf{\hat{X}}_{k}\mathbf{w} \right\|^{2}\right\}=\arg \max \left\{{\frac{\mathbf{w}^{\mathsf{T}}\mathbf{\hat{X}}_{k}^{\mathsf{T}}\mathbf{\hat{X}}_{k}\mathbf{w}}{\mathbf{w}^{T}\mathbf{w}}}\right\}
 	\label{eqn:28}
 \end{equation}
 
-If $\mathbf{w}_{\left(k\right)}$ is the $k$-th eigenvector of $\mathbf{X}^{\mathsf{T}}\mathbf{X}$, the $k$-th principal component $t_{k_{\left(i\right)}}$ of a data vector $\mathbf{x}_{\left(i\right)}$ equals $\{\mathbf{x}_{\left(i\right)} \cdot \mathbf{w}_{\left(k\right)}\} \mathbf{w}_{\left(k\right)}$ in the original and $\mathbf{x}_{\left(k\right)} \cdot \mathbf{w}_{\left(1\right)}$ in the transformed space. If $\mathbf{W}$ is a $p$-by-$p$ matrix of weights and the eigenvectors of $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ are columns, the complete principal components decomposition of $\mathbf{X}$ is equal to $\mathbf{T} =\mathbf{X} \mathbf{W}$. The whitening or sphering transformation uses the transpose of $\mathbf{W}$. Loadings in PCA or factor analysis equal the eigenvectors scaled up by variances, or the columns of $\mathbf{W}$ multiplied by the square root of corresponding eigenvalues. The matrix $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ is proportional to the empirical sample covariance matrix $\mathbf{X}^{\mathsf{T}}$ \cite{jolliffe2002principal}. Equation~\ref{eqn:29} contains the sample covariance $Q$ between two principal components.
+If $\mathbf{w}_{\left(k\right)}$ is the $k$-th eigenvector of $\mathbf{X}^{\mathsf{T}}\mathbf{X}$, the $k$-th principal component $t_{k_{\left(i\right)}}$ of a data vector $\mathbf{x}_{\left(i\right)}$ equals $\{\mathbf{x}_{\left(i\right)} \cdot \mathbf{w}_{\left(k\right)}\} \mathbf{w}_{\left(k\right)}$ in the original and $\mathbf{x}_{\left(k\right)} \cdot \mathbf{w}_{\left(1\right)}$ in the transformed space. If $\mathbf{W}$ is a $p$-by-$p$ matrix of weights and the eigenvectors of $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ are columns, the complete principal components decomposition of $\mathbf{X}$ is equal to $\mathbf{T} =\mathbf{X} \mathbf{W}$. The whitening or sphering transformation uses the transpose of $\mathbf{W}$. Loadings in PCA or factor analysis equal the eigenvectors scaled up by variances, or the columns of $\mathbf{W}$ multiplied by the square root of corresponding eigenvalues. The matrix $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ is proportional to the empirical sample covariance matrix $\mathbf{X}^{\mathsf{T}}$ \cite{jolliffe2002principal}. Equation~29 contains the sample covariance $Q$ between two principal components.
 
 \begin{equation}
 	\begin{aligned}
@@ -641,7 +641,7 @@ If $\mathbf{w}_{\left(k\right)}$ is the $k$-th eigenvector of $\mathbf{X}^{\math
 
 When progressing from line $2$ to line $3$, the eigenvalue property of $\mathbf{w}_{\left(k\right)}$ is utilized. If the eigenvalues of a symmetric matrix are not the same, the eigenvectors $\mathbf{w}_{\left(j\right)}$ and $\mathbf{w}_{\left(k\right)}$ corresponding to them are orthogonal. If the vectors have the same repeated value, they can be orthogonalised. There is no sample covariance between principal components so the final product is zero. Principal components can also be described using transformation coordinates that convert the empirical sample covariance matrix to a diagonal matrix.
 
-The empirical covariance matrix for the original variables in matrix form equals $\mathbf{Q} \propto \mathbf{X}^{\mathsf{T}}\mathbf{X} =\mathbf{W} \mathbf{\Lambda} \mathbf{W}^{\mathsf{T}}$. If $\mathbf{\Lambda}$ is the diagonal matrix of eigenvalues $\lambda_{\left(k\right)}$ of $\mathbf{X}^{\mathsf{T}}\mathbf{X}$, the empirical covariance matrix for the principal components is equal to $\mathbf{W}^{\mathsf{T}}\mathbf{Q} \mathbf{W} \propto \mathbf{W}^{\mathsf{T}}\mathbf{W} \,\mathbf{\Lambda} \,\mathbf{W}^{\mathsf{T}}\mathbf{W} =\mathbf{\Lambda}$. The sum of squares for a component $k$ is equal to $\lambda_{\left(k\right)}$, demonstrated in Equation~\ref{eqn:30}.
+The empirical covariance matrix for the original variables in matrix form equals $\mathbf{Q} \propto \mathbf{X}^{\mathsf{T}}\mathbf{X} =\mathbf{W} \mathbf{\Lambda} \mathbf{W}^{\mathsf{T}}$. If $\mathbf{\Lambda}$ is the diagonal matrix of eigenvalues $\lambda_{\left(k\right)}$ of $\mathbf{X}^{\mathsf{T}}\mathbf{X}$, the empirical covariance matrix for the principal components is equal to $\mathbf{W}^{\mathsf{T}}\mathbf{Q} \mathbf{W} \propto \mathbf{W}^{\mathsf{T}}\mathbf{W} \,\mathbf{\Lambda} \,\mathbf{W}^{\mathsf{T}}\mathbf{W} =\mathbf{\Lambda}$. The sum of squares for a component $k$ is equal to $\lambda_{\left(k\right)}$, demonstrated in Equation~30.
 
 \begin{equation}
 	\lambda(k) = \sigma_{i} {t_{\left(k\right)}}^{2}_{\left(i\right)} = \sigma_{i} {\left(\mathbf{x}_{\left(i\right)} \cdot \mathbf{w}_{\left(k\right)}\right)}^{2}
@@ -720,21 +720,21 @@ A $95\%$ confidence interval for the accuracy rate is computed using \textit{bin
 The binomial test \cite{howell1992statistical, graphpadGraphPadPrism} for two classes is an exact test of the statistical significance of deviations from a theoretically expected distribution.
 
 The binomial test is often utilized to validate a hypothesis about the probability ($\pi$) of success 
-$H_{0}\colon \pi =\pi_{0}$, where users define $\pi_{0}$ between $0$ and $1$. The expected number of successes would be $n\pi_{0}$ if the null hypothesis $H_{0}$ were correct. If $k$ out of $n$ attempts are successfull, the binomial distribution formula defines the probability in Equation~\ref{eqn:31}.
+$H_{0}\colon \pi =\pi_{0}$, where users define $\pi_{0}$ between $0$ and $1$. The expected number of successes would be $n\pi_{0}$ if the null hypothesis $H_{0}$ were correct. If $k$ out of $n$ attempts are successfull, the binomial distribution formula defines the probability in Equation~31.
 
 \begin{equation}
 	\Pr(X=k)={\binom{n}{k}}p^{k}(1-p)^{n-k}
 	\label{eqn:31}
 \end{equation}
 
-The $p$-value is calculated using the probability of an outcome equally extreme or more extreme than actual occurrences. This is a simple operation for a one-tailed test. Equation~\ref{eqn:32} contains the expression for the $p$-value when testing the hypothesis that $\pi <\pi_{0}$. We can use a range from $k$ to $n$ to test $\pi >\pi_{0}$.
+The $p$-value is calculated using the probability of an outcome equally extreme or more extreme than actual occurrences. This is a simple operation for a one-tailed test. Equation~32 contains the expression for the $p$-value when testing the hypothesis that $\pi <\pi_{0}$. We can use a range from $k$ to $n$ to test $\pi >\pi_{0}$.
 
 \begin{equation}
 	p=\sum_{i=0}^{k}\Pr(X=i)=\sum_{i=0}^{k}{\binom{n}{i}}\pi_{0}^{i}(1-\pi_{0})^{n-i}
 	\label{eqn:32}
 \end{equation}
 
-A binomial distribution isn't symmetric if $\pi_{0}\neq 0.5$, so calculating a $p$-value for a two-tailed test is not as simple. The $p$-value from the one-tailed test cannot be doubled to obtain the result since all events must be considered, including ones more extreme than previously seen. These extreme events are equally or less probable than $X=k$. Equation~\ref{eqn:33} denotes all such events. Equation~\ref{eqn:34} is used to compute the two-tailed $p$-value.
+A binomial distribution isn't symmetric if $\pi_{0}\neq 0.5$, so calculating a $p$-value for a two-tailed test is not as simple. The $p$-value from the one-tailed test cannot be doubled to obtain the result since all events must be considered, including ones more extreme than previously seen. These extreme events are equally or less probable than $X=k$. Equation~33 denotes all such events. Equation~34 is used to compute the two-tailed $p$-value.
 
 \begin{equation}
 	{\mathcal{I}}=\{i\colon \Pr(X=i)\leq \Pr(X=k)\}
@@ -751,7 +751,7 @@ A binomial distribution isn't symmetric if $\pi_{0}\neq 0.5$, so calculating a $
 
 Cohen's kappa coefficient ($\kappa$, lowercase Greek kappa) indicates inter- and intra-rater reliability for classification \cite{mchugh2012interrater}. As it accounts for random matches in ratings, it is a better metric than simply computing the percentage of agreement. Interpreting indices of agreement is not straightforward, and is still a point of contention among experts. Using disagreement instead of agreement in ratings might be simpler \cite{pontius2011death}. Galton was the first to use a statistic similar to Cohen's kappa in 1892 \cite{galton1892finger, smeeton1985early}. Jacob Cohen formally described the kappa coefficient in 1960 in the journal "Educational and Psychological Measurement" \cite{cohen1960coefficient}.
 
-Two raters group $N$ items into $C$ mutually exclusive classes, and Cohen's kappa measures their agreement. Equation~\ref{eqn:35} defines $\kappa$, where $p_{o}$ is the relative observed agreement among raters, and $p_{e}$ is the hypothetical probability of chance agreement. The observed data influences the computed probabilities of each observer randomly selecting each category.
+Two raters group $N$ items into $C$ mutually exclusive classes, and Cohen's kappa measures their agreement. Equation~35 defines $\kappa$, where $p_{o}$ is the relative observed agreement among raters, and $p_{e}$ is the hypothetical probability of chance agreement. The observed data influences the computed probabilities of each observer randomly selecting each category.
 
 \begin{equation}
 	\kappa \equiv {\frac {p_{o}-p_{e}}{1-p_{e}}}=1-{\frac {1-p_{o}}{1-p_{e}}}
@@ -760,7 +760,7 @@ Two raters group $N$ items into $C$ mutually exclusive classes, and Cohen's kapp
 
 If the raters completely align then $\kappa = 1$. When there is no agreement other than what would be expected by chance and is given by $p_{e}$, $\kappa = 0$. If $\kappa$ statistic is negative \cite{sim2005kappa} there is no match between the raters, which can reflect a real tendency of the raters to give differing ratings.
 
-Equation~\ref{eqn:36} is derived from the construction in Equation~\ref{eqn:37} and holds for $k$ categories with $N$ observations to categorize if $n_{k1}$ is the number of times rater $i$ predicted category $k$. In these equations, ${\widehat{p_{k12}}}$ is the estimated probability that both rater $1$ and rater $2$ will classify the same item as $k$, and ${\widehat {p_{k1}}}$ is the estimated probability that rater $1$ will classify an item as $k$. A similar claim can be made for rater $2$.
+Equation~36 is derived from the construction in Equation~37 and holds for $k$ categories with $N$ observations to categorize if $n_{k1}$ is the number of times rater $i$ predicted category $k$. In these equations, ${\widehat{p_{k12}}}$ is the estimated probability that both rater $1$ and rater $2$ will classify the same item as $k$, and ${\widehat {p_{k1}}}$ is the estimated probability that rater $1$ will classify an item as $k$. A similar claim can be made for rater $2$.
 
 \begin{equation}
 	p_{e}={\frac {1}{N^{2}}}\sum_{k}n_{k1}n_{k2}
@@ -772,14 +772,14 @@ Equation~\ref{eqn:36} is derived from the construction in Equation~\ref{eqn:37} 
 	\label{eqn:37}
 \end{equation}
 
-If ratings are independent Equation~\ref{eqn:38}, can be used.
+If ratings are independent Equation~38, can be used.
 
 \begin{equation}
 	\textstyle{\widehat{p_{k}}}=\sum_{k}{\widehat{p_{k1}}}{\widehat {p_{k2}}}
 	\label{eqn:38}
 \end{equation}
 
-Equation~\ref{eqn:39} is used to estimate the term $\widehat{p_{k1}}$ by using the number of items classified as $k$ by rater $1$ ($n_{k1}$) divided by the total items to classify ($N$).
+Equation~39 is used to estimate the term $\widehat{p_{k1}}$ by using the number of items classified as $k$ by rater $1$ ($n_{k1}$) divided by the total items to classify ($N$).
 
 \begin{equation}
 	\widehat {p_{k1}}=\frac{n_{k1}}{N}
@@ -787,7 +787,7 @@ Equation~\ref{eqn:39} is used to estimate the term $\widehat{p_{k1}}$ by using t
 \end{equation}
  (and similarly for rater $2$).
  
-Equation~\ref{eqn:40} contains the Cohen's Kappa formula \cite{chicco2021matthews} for the traditional confusion matrix for binary classifications in Table~\ref{tab:cm}.
+Equation~40 contains the Cohen's Kappa formula \cite{chicco2021matthews} for the traditional confusion matrix for binary classifications in Table~\ref{tab:cm}.
 
 \begin{equation}
 	\kappa ={\frac{2\times (TP\times TN-FN\times FP)}{(TP+FP)\times (FP+TN)+(TP+FN)\times (FN+TN)}}
@@ -1083,8 +1083,158 @@ The authors declare no conflict of interest.
 This work was fully supported by
 
 % Adding a bibliography if citations are used in the report
-\bibliographystyle{unsrt}
-\bibliography{bibliography}
+\begin{thebibliography}{000}
+\bitem{filic2018modelling} Mia Filić and Renato Filjar. modelling the relation between GNSS positioning performance degradation, and space weather and ionospheric conditions using RReliefF features selection. In ION GNSS+ 2018 Meeting, pages 1999–2006, 2018. 
+\bitem{filjar2024ambient} Renato Filjar, Ivan Heđi, Jasna Prpić-Oršić, and Teodor Iliev. An Ambient Adaptive Global Navigation Satellite System Total Electron Content Predictive Model for Short-Term Rapid Geomagnetic Storm Events. Remote Sensing, 16(16):3051, 2024. 
+\bitem{filjar2022application} Renato Filjar. An application-centred resilient GNSS position estimation algorithm based on positioning environment conditions awareness. In Proceedings of the 2022 International Technical Meeting of The Institute of Navigation, pages 1123–1136, 2022. 
+\bitem{sikirica2021risk} Nenad Sikirica, Franc Dimc, Oliver Jukic, Teodor B Iliev, Darko Spoljar, and Renato Filjar. A Risk Assessment of Geomagnetic Conditions Impact on GPS Positioning Accuracy Degradation in Tropical Regions Using Dst Index. In Proceedings of the 2021 International Technical Meeting of The Institute of Navigation, pages 606–615, 2021. 
+\bitem{filjar2020comparison} Renato Filjar, Ivan Sklebar, and Marko Horvat. A COMPARISON OF MACHINE LEARNING-BASED INDIVIDUAL MOBILITY CLASSIFICATION MODELS DEVELOPED ON SENSOR READINGS FROM LOOSELY ATTACHED SMARTPHONES. Komunik´acie, 22(4), 2020. 
+\bitem{Fan2008} Rong-En Fan, Kai-Wei Chang, Cho-Jui Hsieh, Xiang-Rui Wang, and Chih-Jen Lin. LIBLINEAR: a library for large linear classification. Journal of Machine Learning Research, 9:1871–1874, August 2008. 
+\bitem{Mohamad2013} Ismail Bin Mohamad and Dauda Usman. Standardization and its effects on K-means clustering algorithm. Research Journal of Applied Sciences, Engineering and Technology, 6(17):3299–3303, September 2013. 
+\bitem{Fennell2019} Peter G. Fennell, Zhiya Zuo, and Kristina Lerman. Predicting and explaining behavioral data with structured feature space decomposition. EPJ Data Sci., 8(1), December 2019. 
+\bitem{kuhn2013applied} M Kuhn. Applied predictive modeling, 2013. 
+\bitem{topepoCaretPackage} Max Kuhn. The caret Package — topepo.github.io. https://topepo. github.io/caret/, 2024. Accessed 11.09.2024. 
+\bitem{rprojectProjectStatistical} RCoreTeam. R: The R Project for Statistical Computing — r-project.org. https://www.r-project.org/, 2024. Accessed 11.09.2024. 
+\bitem{mitExplainedNeural} MIT. Explained: Neural networks — news.mit.edu. https://news. mit.edu/2017/explained-neural-networks-deep-learning-0414, 2017. Accessed 27.09.2024. 
+\bitem{brahme2014comprehensive} Anders Brahme. Comprehensive biomedical physics. Newnes, 2014. 
+\bitem{olden2002illuminating} Julian D Olden and Donald A Jackson. Illuminating the “black box”: a randomization approach for understanding variable contributions in artificial neural networks. Ecological modelling, 154(1-2):135–150, 2002. 
+\bitem{ozesmi1999artificial} Stacy L ¨Ozesmi and Uygar ¨Ozesmi. An artificial neural network approach to spatial habitat modelling with interspecific interaction. Ecological modelling, 116(1):15–31, 1999. 
+\bitem{bishop2006pattern} Christopher Bishop. Pattern Recognition and Machine Learning. Springer, 2006. 
+\bitem{vapnik2013nature} Vladimir Vapnik. The nature of statistical learning theory. Springer science & business media, 2013. 
+\bitem{goodfellow2016deep} Ian Goodfellow. Deep learning, 2016. 
+\bitem{probst2019tunability} Philipp Probst, Anne-Laure Boulesteix, and Bernd Bischl. Tunability: Importance of hyperparameters of machine learning algorithms. Journal of Machine Learning Research, 20(53):1–32, 2019. 
+\bitem{zoph2016neural} B Zoph. Neural architecture search with reinforcement learning. arXiv preprint arXiv:1611.01578, 2016. 
+\bitem{jin2019auto} Haifeng Jin, Qingquan Song, and Xia Hu. Auto-keras: An efficient neural architecture search system. In Proceedings of the 25th ACM SIGKDD international conference on knowledge discovery & data mining, pages 1946–1956, 2019. 
+\bitem{claesen2015hyperparameter} Marc Claesen and Bart De Moor. Hyperparameter search in machine learning. arXiv preprint arXiv:1502.02127, 2015. 
+\bitem{Boser1992} Bernhard E. Boser, Isabelle M. Guyon, and Vladimir N. Vapnik. A training algorithm for optimal margin classifiers. In Proceedings of the fifth annual workshop on Computational learning theory, New York, NY, USA, July 1992. ACM. 
+\bitem{Cortes1995} Corinna Cortes and Vladimir Vapnik. Support-vector networks. Mach. Learn., 20(3):273–297, September 1995. 
+\bitem{BenHur2001} Asa Ben-Hur, David Horn, Hava Siegelmann, and Vladimir Vapnik. Support Vector Clustering. Journal of Machine Learning Research, 2:125–137, November 2001. 
+\bitem{Meyer2003} David Meyer, Friedrich Leisch, and Kurt Hornik. The support vector machine under test. Neurocomputing, 55(1-2):169–186, September 2003. 
+\bitem{developers2023} scikit-learn developers. 1.4. Support Vector Machines — scikitlearn.org. http://scikit-learn.org/stable/modules/svm.html, 2023. Accessed 25.01.2024. 
+\bitem{Hastie2009} Trevor Hastie, Saharon Rosset, Ji Zhu, and Hui Zou. Multi-class AdaBoost. Stat. Interface, 2(3):349–360, 2009. 
+\bitem{Press2007} William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery. Numerical recipes 3rd edition. Cambridge University Press, Cambridge, England, third edition, September 2007. 
+\bitem{Joachims1998} Thorsten Joachims. Text categorization with Support Vector Machines: Learning with many relevant features. In Machine Learning: ECML-98, Lecture notes in computer science, pages 137–142. Springer Berlin Heidelberg, Berlin, Heidelberg, 1998. 
+\bitem{Pradhan2004} Sameer S. Pradhan, Wayne H. Ward, Kadri Hacioglu, James H. Martin, and Dan Jurafsky. Shallow Semantic Parsing using Support Vector Machines. In Proceedings of the Human Language Technology Conference of the North American Chapter of the Association for Computational Linguistics: HLT-NAACL 2004, pages 233–240, Boston, Massachusetts, USA, May 2 - May 7 2004. Association for Computational Linguistics. 
+\bitem{Laurent2014} Anne Laurent, Olivier Strauss, Bernadette Bouchon-Meunier, and Ronald R Yager. Information Processing and Management of Uncertainty in Knowledge-Based Systems. Springer, 2014. 
+\bitem{Barghout2015} Lauren Barghout. Spatial-taxon information granules as used in iterative fuzzy-decision-making for image segmentation. In Studies in Big Data, pages 285–318. Springer International Publishing, Cham, 2015. 
+\bitem{Maity2016} Abhishek Maity. Supervised classification of RADARSAT-2 polarimetric data for different land features. arXiv preprint arXiv:1608.00501, August 2016. 
+\bitem{Decoste2002} Dennis Decoste and Bernhard Sch¨olkopf. Training Invariant Support Vector Machines. Mach. Learn., 46(1/3):161–190, 2002. 
+\bitem{Maitra2015} Durjoy Sen Maitra, Ujjwal Bhattacharya, and Swapan K. Parui. CNN based common approach to handwritten character recognition of multiple scripts. In 2015 13th International Conference on Document Analysis and Recognition (ICDAR), Tunis, Tunisia, August 2015. IEEE. 
+\bitem{Gaonkar2013} Bilwaj Gaonkar and Christos Davatzikos. Analytic estimation of statistical significance maps for support vector machine based multi-variate image analysis and classification. Neuroimage, 78:270–283, September 2013. 
+\bitem{Cuingnet2011} R´emi Cuingnet, Charlotte Rosso, Marie Chupin, St´ephane Leh´ericy, Didier Dormont, Habib Benali, Yves Samson, and Olivier Colliot. Spatial regularization of SVM for the detection of diffusion alterations associated with stroke outcome. Med. Image Anal., 15(5):729–737, October 2011. 
+\bitem{Statnikov2006} Alexander Statnikov, D. Hardin, and Constantin Aliferis. Using SVM Weight-Based Methods to Identify Causally Relevant and NonCausally Relevant Variables. Sign, 1, January 2006. 
+\bitem{Aizerman1964} M. A. Aizerman, E. A. Braverman, and L. Rozonoer. Theoretical foundations of the potential function method in pattern recognition learning. In Automation and Remote Control, number 25 in Automation and Remote Control„ pages 821–837, 1964. 
+\bitem{Jin2012} C. Jin and L. Wang. Dimensionality dependent PAC-Bayes margin bound. Advances in Neural Information Processing Systems, 2:1034– 1042, January 2012. 
+\bitem{Hsu2003} Chih-Wei Hsu, Chih-Chung Chang, and Chih-Jen Lin. A Practical Guide to Support Vector Classification. Technical report, Department of Computer Science, National Taiwan University, 2003. 
+\bitem{Studer2011} Matthias Studer, Gilbert Ritschard, Alexis Gabadinho, and Nicolas S. M¨uller. Discrepancy analysis of state sequences. Sociol. Methods Res., 40(3):471–510, August 2011. 
+\bitem{Wu2008} Xindong Wu, Vipin Kumar, Ross J. Quinlan, Joydeep Ghosh, Qiang Yang, Hiroshi Motoda, Geoffrey J. McLachlan, Angus Ng, Bing Liu, Philip S. Yu, Zhi-Hua Zhou, Michael Steinbach, David J. Hand, and Dan Steinberg. Top 10 algorithms in data mining. Knowl. Inf. Syst., 14(1):1–37, January 2008. 
+\bitem{Rokach2014} Lior Rokach and Oded Maimon. Data mining with decision trees. Series in Machine Perception and Artifical Intelligence. World Scientific Publishing Company, October 2014. 
+\bitem{ShalevShwartz2014} Shai Shalev-Shwartz and Shai Ben-David. Decision Trees, pages 212– 218. Cambridge University Press, 2014. 
+\bitem{Quinlan1986} J. R. Quinlan. Induction of decision trees. Mach. Learn., 1(1):81–106, March 1986. 
+\bitem{Rokach2005} L. Rokach and O. Maimon. Top-down induction of decision trees classifiers—A survey. IEEE Trans. Syst. Man Cybern. C Appl. Rev., 35(4):476–487, November 2005. 
+\bitem{McCallum2011} Andrew McCallum. Graphical Models Lecture 2: Bayesian Network Representa;on. https://people.cs.umass.edu/˜mccallum/ courses/gm2011/02-bn-rep.pdf, 2011. Accessed 25.01.2024. 
+\bitem{Russell1999} Stuart Russell and Peter Norvig. Artificial intelligence. Prentice Hall series in artificial intelligence. Pearson, Upper Saddle River, NJ, second edition, July 1999. 
+\bitem{Hand2001} David J. Hand and Keming Yu. Idiot’s Bayes: Not So Stupid after All? Int. Stat. Rev., 69(3):385, December 2001. 
+\bitem{Zhang2004} Harry Zhang. The Optimality of Naive Bayes. In Proceedings of the Seventeenth International Florida Artificial Intelligence Research Society Conference, FLAIRS 2004, volume 2, January 2004. 
+\bitem{Caruana2006} Rich Caruana and Alexandru Niculescu-Mizil. An Empirical Comparison of Supervised Learning Algorithms. Proceedings of the 23rd international conference on Machine learning - ICML ’06, 2006:161–168, June 2006. 
+\bitem{stackexchange} StackExchange. Why is the SVM margin equal to 2/w? — math.stackexchange.com. https: //math.stackexchange.com/questions/1305925/ why-is-the-svm-margin-equal-to-frac2-mathbfw. Accessed 25.01.2024. 
+\bitem{Murty2011} M. Narasimha Murty and V. Susheela Devi. Pattern Recognition. Undergraduate Topics in Computer Science. Springer, London, England, July 2011. 
+\bitem{John2013} George H. John and Pat Langley. Estimating Continuous Distributions in Bayesian Classifiers, 2013. 
+\bitem{Mccallum2001} Andrew Mccallum and Kamal Nigam. A Comparison of Event Models for Naive Bayes Text Classification. Work Learn Text Categ, 752, May 2001. 
+\bitem{Metsis2006} Vangelis Metsis, Ion Androutsopoulos, and Georgios Paliouras. Spam Filtering with Naive Bayes - Which Naive Bayes? In In CEAS, January 2006. 
+\bitem{Piryonesi2020} S. Madeh Piryonesi and Tamer E. El-Diraby. Role of data analytics in infrastructure asset management: Overcoming data size and quality problems. J. Transp. Eng. B Pavements, 146(2):04020022, June 2020. 
+\bitem{wold2001pls} Svante Wold, Michael Sj¨ostr¨om, and Lennart Eriksson. PLS-regression: a basic tool of chemometrics. Chemometrics and intelligent laboratory systems, 58(2):109–130, 2001. 
+\bitem{abdi2010partial} Herv´e Abdi. Partial least squares regression and projection on latent structure regression (PLS Regression). Wiley interdisciplinary reviews: computational statistics, 2(1):97–106, 2010. 
+\bitem{saebo2008lpls} Solve Sæbø, Trygve Almøy, Arnar Flatberg, Are H Aastveit, and Harald Martens. LPLS-regression: a method for prediction and classification under the influence of background information on predictor variables. Chemometrics and Intelligent Laboratory Systems, 91(2):121– 132, 2008. 
+\bitem{youtubeYouTube} Harry Asada. Fall Term (AY 2020-2021) - 2.160 Identification, Estim, & Learn Lecture 6: Partial Least Squares Regression. https: //www.youtube.com/watch?v=Px2otK2nZ1c&t=46s, 2020. Accessed 26.09.2024. 
+\bitem{lindgren1993kernel} Fredrik Lindgren, Paul Geladi, and Svante Wold. The kernel algorithm for PLS. Journal of Chemometrics, 7(1):45–59, 1993. 
+\bitem{de1994comments} Sijmen De Jong and Cajo JF Ter Braak. Comments on the PLS kernel algorithm. Journal of chemometrics, 8(2):169–174, 1994. 
+\bitem{dayal1997improved} Bhupinder S Dayal and John F MacGregor. Improved PLS algorithms. Journal of Chemometrics: A Journal of the Chemometrics Society, 11(1):73–85, 1997. 
+\bitem{de1993simpls} Sijmen De Jong. SIMPLS: an alternative approach to partial least squares regression. Chemometrics and intelligent laboratory systems, 18(3):251–263, 1993. 
+\bitem{rannar1994pls} Stefan R¨annar, Fredrik Lindgren, Paul Geladi, and Svante Wold. A PLS kernel algorithm for data sets with many variables and fewer objects. Part 1: Theory and algorithm. Journal of Chemometrics, 8(2):111–125, 1994. 
+\bitem{hoskuldsson1988pls} Agnar H¨oskuldsson. PLS regression methods. Journal of chemometrics, 2(3):211–228, 1988. 
+\bitem{hastie1995penalized} Trevor Hastie, Andreas Buja, and Robert Tibshirani. Penalized discriminant analysis. The Annals of Statistics, 23(1):73–102, 1995. 
+\bitem{hastie2009elements} Trevor Hastie, Robert Tibshirani, Jerome H Friedman, and Jerome H Friedman. The elements of statistical learning: data mining, inference, and prediction, volume 2. Springer, 2009. 
+\bitem{hastie1994flexible} Trevor Hastie, Robert Tibshirani, and Andreas Buja. Flexible discriminant analysis by optimal scoring. Journal of the American statistical association, 89(428):1255–1270, 1994. 
+\bitem{reynes2006choice} Christelle Reyn`es, Robert Sabatier, and Nicolas Molinari. Choice of B-splines with free parameters in the flexible discriminant analysis context. Computational statistics & data analysis, 51(3):1765–1778, 2006. 
+\bitem{phillips2017applying} Natasha D Phillips, Neil Reid, Tierney Thys, Chris Harrod, Nicholas L Payne, Cheryl A Morgan, Hannah J White, Siobh´an Porter, and Jonathan DR Houghton. Applying species distribution modelling to a data poor, pelagic fish complex: the ocean sunfishes. Journal of biogeography, 44(10):2176–2187, 2017. 
+\bitem{hallgren2019species} W Hallgren, F Santana, S Low-Choy, Y Zhao, and B Mackey. Species distribution models can be highly sensitive to algorithm configuration. Ecological Modelling, 408:108719, 2019. 
+\bitem{thuiller2016ensemble} Wilfried Thuiller, Damien Georges, Robin Engler, and F Breiner. Ensemble platform for species distribution modeling. R Package Version, pages 3–1, 2016. 
+\bitem{quillfeldt2017influence} Petra Quillfeldt, Jan O Engler, Janet RD Silk, and Richard A Phillips. Influence of device accuracy and choice of algorithm for species distribution modelling of seabirds: a case study using black-browed albatrosses. Journal of Avian Biology, 48(12):1549–1555, 2017. 
+\bitem{zhang2019using} Zhixin Zhang, Shengyong Xu, C´esar Capinha, Robbie Weterings, and Tianxiang Gao. Using species distribution model to predict the impact of climate change on the potential distribution of Japanese whiting Sillago japonica. Ecological Indicators, 104:333–340, 2019. 
+\bitem{cohen2013applied} Jacob Cohen, Patricia Cohen, Stephen G West, and Leona S Aiken. Applied multiple regression/correlation analysis for the behavioral sciences. Routledge, 2013. 
+\bitem{hansen2005using} John Hansen. Using SPSS for windows and macintosh: analyzing and understanding data, 2005. 
+\bitem{fisher1936use} Ronald A Fisher. The use of multiple measurements in taxonomic problems. Annals of eugenics, 7(2):179–188, 1936. 
+\bitem{mclachlan2005discriminant} Geoffrey J McLachlan. Discriminant analysis and statistical pattern recognition. John Wiley & Sons, 2005. 
+\bitem{wetcher2011analyzing} Debra Wetcher-Hendricks. Analyzing quantitative data: An introduction for social researchers. John Wiley & Sons, 2011. 
+\bitem{martinez2001pca} Aleix M Martinez and Avinash C Kak. PCA versus LDA. IEEE transactions on pattern analysis and machine intelligence, 23(2):228–233, 2001. 
+\bitem{abdi2007discriminant} Herv´e Abdi. Discriminant correspondence analysis, 2007. 
+\bitem{perriere2003use} Guy Perriere and Jean Thioulouse. Use of correspondence discriminant analysis to predict the subcellular location of bacterial proteins. Computer Methods and Programs in Biomedicine, 70(2):99–105, 2003. 
+\bitem{cokluk2008discriminant} B¨okeo˘glu Cokluk and S Buyukozturk. Discriminant function analysis: concept and application. E˘gitim ara¸stırmaları dergisi, 33:73–92, 2008. 
+\bitem{venables2013modern} William N Venables and Brian D Ripley. Modern applied statistics with S-PLUS. Springer Science & Business Media, 2013. 
+\bitem{lachenbruch1979discriminant} Peter A Lachenbruch and Matthew Goldstein. Discriminant analysis. Biometrics, pages 69–85, 1979. 
+\bitem{klecka1980discriminant} William R Klecka. Discriminant analysis. Sage, 1980. 
+\bitem{Hrdle2003AppliedMS} Wolfgang Karl H¨ardle and L´eopold Simar. Applied Multivariate Statistical Analysis. MD Tech, 2003. 
+\bitem{archive765Discriminant} G. D. Garson. PA 765: Discriminant Function Analysis — web.archive.org. https://web.archive.org/web/20080312065328/ http://www2.chass.ncsu.edu/garson/pA765/discrim.htm, 2008. Accessed 26.09.2024. 
+\bitem{israel2006performance} Steven A Israel. Performance metrics: how and when. Geocarto International, 21(2):23–32, 2006. 
+\bitem{rao1948utilization} C Radhakrishna Rao. The utilization of multiple measurements in problems of biological classification. Journal of the Royal Statistical Society. Series B (Methodological), 10(2):159–203, 1948. 
+\bitem{ripley2007pattern} Brian D Ripley. Pattern recognition and neural networks. Cambridge university press, 2007. 
+\bitem{jolliffe2016principal} Ian T Jolliffe and Jorge Cadima. Principal component analysis: a review and recent developments. Philosophical transactions of the royal society A: Mathematical, Physical and Engineering Sciences, 374(2065):20150202, 2016. 
+\bitem{barnett1987origins} TP Barnett and R Preisendorfer. Origins and levels of monthly and seasonal forecast skill for United States surface air temperatures determined by canonical correlation analysis. Monthly Weather Review, 115(9):1825–1850, 1987. 
+\bitem{hsu2012spectral} Daniel Hsu, Sham M Kakade, and Tong Zhang. A spectral algorithm for learning hidden Markov models. Journal of Computer and System Sciences, 78(5):1460–1480, 2012. 
+\bitem{markopoulos2017efficient} Panos P Markopoulos, Sandipan Kundu, Shubham Chamadia, and Dimitris A Pados. Efficient L1-norm principal-component analysis via bit flipping. IEEE Transactions on Signal Processing, 65(16):4252– 4264, 2017. 
+\bitem{chachlakis2019l1} Dimitris G Chachlakis, Ashley Prater-Bennette, and Panos P Markopoulos. L1-norm Tucker tensor decomposition. IEEE Access, 7:178454–178465, 2019. 
+\bitem{markopoulos2014optimal} Panos P Markopoulos, George N Karystinos, and Dimitris A Pados. Optimal algorithms for L {1}-subspace signal processing. IEEE Transactions on Signal Processing, 62(19):5046–5058, 2014. 
+\bitem{zhan2015robust} Jinchun Zhan and Namrata Vaswani. Robust PCA with partial subspace knowledge. IEEE Transactions on Signal Processing, 63(13):3332–3347, 2015. 
+\bitem{ke2005robust} Qifa Ke and Takeo Kanade. Robust l/sub 1/norm factorization in the presence of outliers and missing data by alternative convex programming. In 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR’05), volume 1, pages 739–746. IEEE, 2005. 
+\bitem{pearson1901liii} Karl Pearson. LIII. On lines and planes of closest fit to systems of points in space. The London, Edinburgh, and Dublin philosophical magazine and journal of science, 2(11):559–572, 1901. 
+\bitem{stewart2019introduction} Frank M Stewart. Introduction to linear algebra. Courier Dover Publications, 2019. 
+\bitem{hotelling1933analysis} Harold Hotelling. Analysis of a complex of statistical variables into principal components. Journal of educational psychology, 24(6):417, 1933. 
+\bitem{hotelling1992relations} Harold Hotelling. Relations between two sets of variates. In Breakthroughs in statistics: methodology and distribution, pages 162–190. Springer, 1992. 
+\bitem{berkooz1993proper} Gal Berkooz, Philip Holmes, and John L Lumley. The proper orthogonal decomposition in the analysis of turbulent flows. Annual review of fluid mechanics, 25(1):539–575, 1993. 
+\bitem{karhunen1946spektraltheorie} Kari Karhunen. Zur spektraltheorie stochasticher. In Annales Academiae Scientiarum Fennicae Series A, volume 1, page 34, 1946. 
+\bitem{loeve1977elementary} Michel Lo`eve. Elementary probability theory. Springer, 1977. 
+\bitem{sirovich1987turbulence} Lawrence Sirovich. Turbulence and the dynamics of coherent structures. I. Coherent structures. Quarterly of applied mathematics, 45(3):561–571, 1987. 
+\bitem{sapatnekar2011overcoming} Sachin S Sapatnekar. Overcoming variations in nanometer-scale technologies. IEEE Journal on Emerging and Selected Topics in Circuits and Systems, 1(1):5–18, 2011. 
+\bitem{ghoman2012pod} Satyajit Ghoman, Zhicun Wang, Ping Chen, and Rakesh Kapania. A POD-based reduced order design scheme for shape optimization of air vehicles. In 53rd AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics and Materials Conference 20th AIAA/ASME/AHS Adaptive Structures Conference 14th AIAA, page 1808, 2012. 
+\bitem{archiveKarhunenLoeveTransform} Ruye Wang. Computer Image Processing and Analysis (E161) lectures, Harvey Mudd College, Karhunen-Loeve Transform (KLT). https://web.archive.org/web/20161128140401/http: //fourier.eng.hmc.edu/e161/lectures/klt/node3.html, 2016. Accessed 29.09.2024. 
+\bitem{amslaurea10169} Giordano Giambartolomei. The Karhunen-Lo`eve theorem. PhD thesis, University of Bologna, 2016. 
+\bitem{mallat1999wavelet} Stephane Mallat. A wavelet tour of signal processing. Academic Press, 1999. 
+\bitem{tang1998texture} Xiaoou Tang. Texture information in run-length matrices. IEEE transactions on image processing, 7(11):1602–1609, 1998. 
+\bitem{stewart1993early} Gilbert W Stewart. On the early history of the singular value decomposition. SIAM review, 35(4):551–566, 1993. 
+\bitem{gloub1996matrix} Gene H Gloub and Charles F Van Loan. Matrix computations. Johns Hopkins Universtiy Press, 3rd edtion, 1996. 
+\bitem{hayden2002observations} Andreas F Hayden and David R Twede. Observations on the relationship between eigenvalues, instrument noise, and detection performance. In Imaging Spectrometry VIII, volume 4816, pages 355–362. SPIE, 2002. 
+\bitem{jolliffe2002principal} IT Jolliffe. Principal Component Analysis (Springer Series in Statistics), Springer, 2002. 
+\bitem{lorenz1956empirical} Edward N Lorenz. Empirical orthogonal functions and statistical weather prediction, volume 1. Massachusetts Institute of Technology, Department of Meteorology Cambridge, 1956. 
+\bitem{eckart1936approximation} Carl Eckart and Gale Young. The approximation of one matrix by another of lower rank. Psychometrika, 1(3):211–218, 1936. 
+\bitem{dove1993introduction} Martin T Dove. Introduction to lattice dynamics. Cambridge university press, 1993. 
+\bitem{bengio2013representation} Yoshua Bengio, Aaron Courville, and Pascal Vincent. Representation learning: A review and new perspectives. IEEE transactions on pattern analysis and machine intelligence, 35(8):1798–1828, 2013. 
+\bitem{forkman2019hypothesis} Johannes Forkman, Julie Josse, and Hans-Peter Piepho. Hypothesis tests for principal component analysis when variables are standardized. Journal of Agricultural, Biological and Environmental Statistics, 24:289–308, 2019. 
+\bitem{topepoDataSplitting} Max Kuhn. 4 Data Splitting — The caret Package — topepo.github.io. https://topepo.github.io/caret/data-splitting.html, 2024. Accessed 28.09.2024. 
+\bitem{hyndman2018forecasting} RJ Hyndman. Forecasting: principles and practice. OTexts, 2018. 
+\bitem{rdocumentationCreateDataPartitionFunction} R Developers. createDataPartition function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/ caret/versions/6.0-94/topics/createDataPartition, 2024. Accessed 27.09.2024. 
+\bitem{kuhn2008building} Max Kuhn. Building predictive models in R using the caret package. Journal of statistical software, 28:1–26, 2008. 
+\bitem{altman1994diagnostic} Douglas G Altman and J Martin Bland. Diagnostic tests. 1: Sensitivity and specificity. BMJ: British Medical Journal, 308(6943):1552, 1994. 
+\bitem{dg1994diagnostic} Douglas G Altman and J Martin Bland. Diagnostic test 2: predictive values. BMJ: British Medical Journal, 309:102, 1994. 
+\bitem{velez2007balanced} Digna R Velez, Bill C White, Alison A Motsinger, William S Bush, Marylyn D Ritchie, Scott M Williams, and Jason H Moore. A balanced accuracy function for epistasis modeling in imbalanced datasets using multifactor dimensionality reduction. Genetic Epidemiology: the Official Publication of the International Genetic Epidemiology Society, 31(4):306–315, 2007. 
+\bitem{rdocumentationConfusionMatrixFunction} R Developers. confusionMatrix function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/ caret/versions/6.0-94/topics/confusionMatrix, 2024. Accessed 27.09.2024. 
+\bitem{rdocumentationBinomtestFunction} R Developers. binom.test function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/stats/ versions/3.6.2/topics/binom.test, 2024. Accessed 28.09.2024. 
+\bitem{clopper1934use} Charles J Clopper and Egon S Pearson. The use of confidence or fiducial limits illustrated in the case of the binomial. Biometrika, 26(4):404– 413, 1934. 
+\bitem{conover1999practical} WJ Conover. Practical nonparametric statistics. John Wiley & Sons, Inc, 1999. 
+\bitem{hollander2013nonparametric} M Hollander. Nonparametric statistical methods. John Wiley & Sons Inc, 2013. 
+\bitem{howell1992statistical} David C Howell. Statistical methods for psychology. PWS-Kent Publishing Co, 1992. 
+\bitem{graphpadGraphPadPrism} Inc. GraphPad Software. GraphPad Prism 6 Statistics Guide The binomial test — graphpad.com. https://www.graphpad.com/ guides/prism/6/statistics/stat_binomial.htm, 2024. Accessed 28.09.2024. 
+\bitem{mchugh2012interrater} Mary L McHugh. Interrater reliability: the kappa statistic. Biochemia medica, 22(3):276–282, 2012. 
+\bitem{pontius2011death} Robert Gilmore Pontius Jr and Marco Millones. Death to Kappa: birth of quantity disagreement and allocation disagreement for accuracy assessment. International journal of remote sensing, 32(15):4407–4429, 2011. 
+\bitem{galton1892finger} Francis Galton. Finger prints. Cosimo Classics, 1892. 
+\bitem{smeeton1985early} Nigel C Smeeton. Early history of the kappa statistic. Biometrics, 41:795, 1985. 
+\bitem{cohen1960coefficient} Jacob Cohen. A coefficient of agreement for nominal scales. Educational and psychological measurement, 20(1):37–46, 1960. 
+\bitem{sim2005kappa} Julius Sim and Chris C Wright. The kappa statistic in reliability studies: use, interpretation, and sample size requirements. Physical therapy, 85(3):257–268, 2005. 
+\bitem{chicco2021matthews} Davide Chicco, Matthijs J Warrens, and Giuseppe Jurman. The Matthews correlation coefficient (MCC) is more informative than Cohen’s Kappa and Brier score in binary classification assessment. IEEE Access, 9:78368–78381, 2021. 
+\bitem{heidke1926berechnung} Paul Heidke. Berechnung des Erfolges und der G¨ute der Windst¨arkevorhersagen im Sturmwarnungsdienst. Geografiska Annaler, 8(4):301–349, 1926. 
+\bitem{philosophical1887bulletin} The Philosophical Society of Washington D.C. Bulletin of the Philosophical Society of Washington, D.C., volume 10. The co-operation of the Smithsonian Institution, 1887. 
+\bitem{rdocumentationSystemtimeFunction} R Developers. system.time function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/base/ versions/3.6.2/topics/system.time, 2024. Accessed 28.09.2024.
+\end{thebibliography}
 % Adds references to the Bibliography in the ToC
 %\addcontentsline{toc}{chapter}{\bibname \ etaile}
 \end{document}

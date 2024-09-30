@@ -273,7 +273,7 @@ Let there be a training data set with $n$ points of the form $(\mathbf{x}_{1},y_
 Any hyperplane can be written as a set of points $\mathbf{x}$ that satisfy the expression $\mathbf{w}^{\mathsf{T}}\mathbf{x} -b=0$. The expression $\mathbf{w}$ denotes a vector perpendicular to the hyperplane which is not necessarily normalized. This is similar to the Hesse normal form, except that $\mathbf{w}$ is not necessarily a unit vector. The parameter in Equation~2 determines the displacement of the hyperplane from the origin along the normal vector $\mathbf{w}$.
 
 \begin{equation}
-	\tfrac{b}{\|\mathbf{w} \|}
+	\frac{b}{\|\mathbf{w} \|}
 	\label{eqn:2}
 \end{equation}
 
@@ -626,7 +626,7 @@ By subtracting the first $k - 1$ principal components from $\mathbf{X}$, we obta
 Equation~28 describes using the new data matrix to determine the weight vector with the maximum variance. This weight vector represents the eigenvectors of $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ that are still in consideration, with the maximum values for the quantity in brackets given by their corresponding eigenvalues. 
 
 \begin{equation}
-	\mathbf{w}_{\left(k\right)}=\mathop{\operatorname{arg\,max}}_{\left\|\mathbf{w} \right\|=1}\left\{\left\|\mathbf{\hat{X}}_{k}\mathbf{w} \right\|^{2}\right\}=\arg \max \left\{{\tfrac{\mathbf{w}^{\mathsf{T}}\mathbf{\hat{X}}_{k}^{\mathsf{T}}\mathbf{\hat{X}}_{k}\mathbf{w}}{\mathbf{w}^{T}\mathbf{w}}}\right\}
+	\mathbf{w}_{\left(k\right)}=\mathop{\operatorname{arg\,max}}_{\left\|\mathbf{w} \right\|=1}\left\{\left\|\mathbf{\hat{X}}_{k}\mathbf{w} \right\|^{2}\right\}=\arg \max \left\{{\frac{\mathbf{w}^{\mathsf{T}}\mathbf{\hat{X}}_{k}^{\mathsf{T}}\mathbf{\hat{X}}_{k}\mathbf{w}}{\mathbf{w}^{T}\mathbf{w}}}\right\}
 	\label{eqn:28}
 \end{equation}
 
