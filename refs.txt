@@ -18,7 +18,7 @@ Meeting of The Institute of Navigation, pages 606–615, 2021.
 [5] Renato Filjar, Ivan Sklebar, and Marko Horvat. A COMPARISON OF
 MACHINE LEARNING-BASED INDIVIDUAL MOBILITY CLAS-
 SIFICATION MODELS DEVELOPED ON SENSOR READINGS
-FROM LOOSELY ATTACHED SMARTPHONES. Komunik´acie,
+FROM LOOSELY ATTACHED SMARTPHONES. Komunikácie,
 22(4), 2020.
 [6] Rong-En Fan, Kai-Wei Chang, Cho-Jui Hsieh, Xiang-Rui Wang, and
 Chih-Jen Lin. LIBLINEAR: a library for large linear classification.
@@ -42,7 +42,7 @@ mit.edu/2017/explained-neural-networks-deep-learning-0414,
 [14] Julian D Olden and Donald A Jackson. Illuminating the “black box”:
 a randomization approach for understanding variable contributions in
 artificial neural networks. Ecological modelling, 154(1-2):135–150, 2002.
-[15] Stacy L ¨Ozesmi and Uygar ¨Ozesmi. An artificial neural network ap-
+[15] Stacy L Özesmi and Uygar Özesmi. An artificial neural network ap-
 proach to spatial habitat modelling with interspecific interaction. Eco-
 logical modelling, 116(1):15–31, 1999.
 [16] Christopher Bishop. Pattern Recognition and Machine Learning.
@@ -101,7 +101,7 @@ Data, pages 285–318. Springer International Publishing, Cham, 2015.
 [34] Abhishek Maity. Supervised classification of RADARSAT-2 polarimet-
 ric data for different land features. arXiv preprint arXiv:1608.00501,
 August 2016.
-[35] Dennis Decoste and Bernhard Sch¨olkopf. Training Invariant Support
+[35] Dennis Decoste and Bernhard Schölkopf. Training Invariant Support
 Vector Machines. Mach. Learn., 46(1/3):161–190, 2002.
 [36] Durjoy Sen Maitra, Ujjwal Bhattacharya, and Swapan K. Parui. CNN
 based common approach to handwritten character recognition of multi-
@@ -111,7 +111,7 @@ ysis and Recognition (ICDAR), Tunis, Tunisia, August 2015. IEEE.
 tical significance maps for support vector machine based multi-variate
 image analysis and classification. Neuroimage, 78:270–283, September
 2013.
-[38] R´emi Cuingnet, Charlotte Rosso, Marie Chupin, St´ephane Leh´ericy,
+[38] Rémi Cuingnet, Charlotte Rosso, Marie Chupin, Stéphane Lehéricy,
 Didier Dormont, Habib Benali, Yves Samson, and Olivier Colliot. Spa-
 tial regularization of SVM for the detection of diffusion alterations
 associated with stroke outcome. Med. Image Anal., 15(5):729–737, Oc-
@@ -130,7 +130,7 @@ bound. Advances in Neural Information Processing Systems, 2:1034–
 Guide to Support Vector Classification. Technical report, Department
 of Computer Science, National Taiwan University, 2003.
 [43] Matthias Studer, Gilbert Ritschard, Alexis Gabadinho, and Nicolas S.
-M¨uller. Discrepancy analysis of state sequences. Sociol. Methods Res.,
+Müller. Discrepancy analysis of state sequences. Sociol. Methods Res.,
 40(3):471–510, August 2011.
 [44] Xindong Wu, Vipin Kumar, Ross J. Quinlan, Joydeep Ghosh, Qiang
 Yang, Hiroshi Motoda, Geoffrey J. McLachlan, Angus Ng, Bing Liu,
@@ -148,7 +148,7 @@ March 1986.
 classifiers—A survey. IEEE Trans. Syst. Man Cybern. C Appl. Rev.,
 35(4):476–487, November 2005.
 [49] Andrew McCallum. Graphical Models Lecture 2: Bayesian Net-
-work Representa;on. https://people.cs.umass.edu/˜mccallum/
+work Representation. https://people.cs.umass.edu/~mccallum/
 courses/gm2011/02-bn-rep.pdf, 2011. Accessed 25.01.2024.
 [50] Stuart Russell and Peter Norvig. Artificial intelligence. Prentice Hall
 series in artificial intelligence. Pearson, Upper Saddle River, NJ, second
@@ -181,10 +181,10 @@ Filtering with Naive Bayes - Which Naive Bayes? In In CEAS, January
 [59] S. Madeh Piryonesi and Tamer E. El-Diraby. Role of data analytics
 in infrastructure asset management: Overcoming data size and quality
 problems. J. Transp. Eng. B Pavements, 146(2):04020022, June 2020.
-[60] Svante Wold, Michael Sj¨ostr¨om, and Lennart Eriksson. PLS-regression:
+[60] Svante Wold, Michael Sjöström, and Lennart Eriksson. PLS-regression:
 a basic tool of chemometrics. Chemometrics and intelligent laboratory
 systems, 58(2):109–130, 2001.
-[61] Herv´e Abdi. Partial least squares regression and projection on latent
+[61] Hervé Abdi. Partial least squares regression and projection on latent
 structure regression (PLS Regression). Wiley interdisciplinary reviews:
 computational statistics, 2(1):97–106, 2010.
 [62] Solve Sæbø, Trygve Almøy, Arnar Flatberg, Are H Aastveit, and Har-
@@ -206,11 +206,11 @@ Journal of Chemometrics: A Journal of the Chemometrics Society,
 [67] Sijmen De Jong. SIMPLS: an alternative approach to partial least
 squares regression. Chemometrics and intelligent laboratory systems,
 18(3):251–263, 1993.
-[68] Stefan R¨annar, Fredrik Lindgren, Paul Geladi, and Svante Wold. A
+[68] Stefan Rännar, Fredrik Lindgren, Paul Geladi, and Svante Wold. A
 PLS kernel algorithm for data sets with many variables and fewer
 objects. Part 1: Theory and algorithm. Journal of Chemometrics,
 8(2):111–125, 1994.
-[69] Agnar H¨oskuldsson. PLS regression methods. Journal of chemometrics,
+[69] Agnar Höskuldsson. PLS regression methods. Journal of chemometrics,
 2(3):211–228, 1988.
 [70] Trevor Hastie, Andreas Buja, and Robert Tibshirani. Penalized dis-
 criminant analysis. The Annals of Statistics, 23(1):73–102, 1995.
@@ -224,7 +224,7 @@ association, 89(428):1255–1270, 1994.
 B-splines with free parameters in the flexible discriminant analysis con-
 text. Computational statistics & data analysis, 51(3):1765–1778, 2006.
 [74] Natasha D Phillips, Neil Reid, Tierney Thys, Chris Harrod, Nicholas L
-Payne, Cheryl A Morgan, Hannah J White, Siobh´an Porter, and
+Payne, Cheryl A Morgan, Hannah J White, Siobhán Porter, and
 Jonathan DR Houghton. Applying species distribution modelling to
 a data poor, pelagic fish complex: the ocean sunfishes. Journal of
 biogeography, 44(10):2176–2187, 2017.
@@ -238,7 +238,7 @@ pages 3–1, 2016.
 Influence of device accuracy and choice of algorithm for species distribu-
 tion modelling of seabirds: a case study using black-browed albatrosses.
 Journal of Avian Biology, 48(12):1549–1555, 2017.
-[78] Zhixin Zhang, Shengyong Xu, C´esar Capinha, Robbie Weterings, and
+[78] Zhixin Zhang, Shengyong Xu, César Capinha, Robbie Weterings, and
 Tianxiang Gao. Using species distribution model to predict the impact
 of climate change on the potential distribution of Japanese whiting
 Sillago japonica. Ecological Indicators, 104:333–340, 2019.
@@ -256,18 +256,18 @@ tion for social researchers. John Wiley & Sons, 2011.
 [84] Aleix M Martinez and Avinash C Kak. PCA versus LDA. IEEE trans-
 actions on pattern analysis and machine intelligence, 23(2):228–233,
 2001.
-[85] Herv´e Abdi. Discriminant correspondence analysis, 2007.
+[85] Hervé Abdi. Discriminant correspondence analysis, 2007.
 [86] Guy Perriere and Jean Thioulouse. Use of correspondence discrimi-
 nant analysis to predict the subcellular location of bacterial proteins.
 Computer Methods and Programs in Biomedicine, 70(2):99–105, 2003.
-[87] B¨okeo˘glu Cokluk and S Buyukozturk. Discriminant function analysis:
-concept and application. E˘gitim ara¸stırmaları dergisi, 33:73–92, 2008.
+[87] Bökeoğlu Cokluk and S Buyukozturk. Discriminant function analysis:
+concept and application. Eğitim ara¸stırmaları dergisi, 33:73–92, 2008.
 [88] William N Venables and Brian D Ripley. Modern applied statistics with
 S-PLUS. Springer Science & Business Media, 2013.
 [89] Peter A Lachenbruch and Matthew Goldstein. Discriminant analysis.
 Biometrics, pages 69–85, 1979.
 [90] William R Klecka. Discriminant analysis. Sage, 1980.
-[91] Wolfgang Karl H¨ardle and L´eopold Simar. Applied Multivariate Sta-
+[91] Wolfgang Karl Härdle and Léopold Simar. Applied Multivariate Sta-
 tistical Analysis. MD Tech, 2003.
 [92] G. D. Garson. PA 765: Discriminant Function Analysis —
 web.archive.org. https://web.archive.org/web/20080312065328/
@@ -430,8 +430,8 @@ ies: use, interpretation, and sample size requirements. Physical therapy,
 Matthews correlation coefficient (MCC) is more informative than Co-
 hen’s Kappa and Brier score in binary classification assessment. IEEE
 Access, 9:78368–78381, 2021.
-[148] Paul Heidke. Berechnung des Erfolges und der G¨ute der
-Windst¨arkevorhersagen im Sturmwarnungsdienst. Geografiska An-
+[148] Paul Heidke. Berechnung des Erfolges und der Güte der
+Windstärkevorhersagen im Sturmwarnungsdienst. Geografiska An-
 naler, 8(4):301–349, 1926.
 [149] The Philosophical Society of Washington D.C. Bulletin of the Philo-
 sophical Society of Washington, D.C., volume 10. The co-operation of

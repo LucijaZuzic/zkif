@@ -96,13 +96,17 @@ for l in all_refs:
     ln = l
     if "-\n" in ln:
         ln = l.replace("-\n", "")
+    elif "/\n" in ln:
+        ln = l.replace("/\n", "/")
+    elif ":\n" in ln:
+        ln = l.replace(":\n", ":")
     else:
         ln = l.replace("\n", " ")
     merged_refs_all += ln
 file_refs_new = open(dir + "refs_new.txt", "w", encoding="UTF8")
 file_refs_new.write(merged_refs_all.replace("[", "\n[").replace("\n[1]", "[1]"))
 file_refs_new.close()
-file_bibliography = open(dir + "bibliography.bib", "r")
+file_bibliography = open(dir + "bibliography.bib", "r", encoding="UTF8")
 all_lines_bibliography = file_bibliography.readlines()
 file_bibliography.close()
 merged_lines_all_bibliography = ""
