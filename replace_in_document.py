@@ -46,7 +46,7 @@ def add_ix_replace(merged_lines):
             parts = new_use[1:-1].split("=")
             parts = [len(p.strip()) for p in parts]
             long_equality = len(parts) > 2
-        if long_equality or "frac" in new_use or "\\sum" in new_use or "max" in new_use:
+        if long_equality or "frac" in new_use or "\\sum" in new_use or "\\int" in new_use or "max" in new_use:
             replacements.append((pos1, pos2, new_use, "\\begin{equation}\n\t" + new_use[1:-1].strip() + "\n\t\label{eqn:" + str(len(replacements)+1) + "}\n\\end{equation}"))
     for r in replacements:
         merged_lines = merged_lines.replace(r[2], r[3])

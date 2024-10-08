@@ -121,6 +121,7 @@ for l in all_lines:
     merged_lines_all += l
 keys_cited = find_citation(merged_lines_all_bibliography)
 errs = 0
+errs_set = set()
 loc_of_keys = dict()
 nk_of_keys = dict()
 ks = []
@@ -136,6 +137,7 @@ while find_cite != -1 and posf < len(merged_lines_all):
 for k in keys_cited:
     if k[1] not in merged_lines_all:
         errs += 1
+        errs_set.add(k[1])
     else:
         posc = 0
         find_ref = merged_lines_all.find(k[1], posc)
@@ -166,6 +168,7 @@ for k in sorted(ks):
     if "@misc" not in loc_of_keys[k]:
         merged_lines_no_misc_new += loc_of_keys[k] + "\n\n"
 print(errs, len(ks))
+print(errs_set)
 file_bibliography_new = open(dir + "bibliography_short.bib", "w")
 file_bibliography_new.write(merged_lines_no_cite_new.replace("author = {}", "author = {Developers, R}").replace("year = {}", "year = {2024}").replace("year={}", "year={2024}"))
 file_bibliography_new.close()
