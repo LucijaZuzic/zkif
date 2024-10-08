@@ -93,18 +93,9 @@ all_refs = file_refs.readlines()
 file_refs.close()
 merged_refs_all = ""
 for l in all_refs:
-    ln = l
-    if "-\n" in ln:
-        ln = l.replace("-\n", "")
-    elif "/\n" in ln:
-        ln = l.replace("/\n", "/")
-    elif ":\n" in ln:
-        ln = l.replace(":\n", ":")
-    else:
-        ln = l.replace("\n", " ")
-    merged_refs_all += ln
+    merged_refs_all += l.replace("]", "] ")
 file_refs_new = open(dir + "refs_new.txt", "w", encoding="UTF8")
-file_refs_new.write(merged_refs_all.replace("[", "\n[").replace("\n[1]", "[1]"))
+file_refs_new.write(merged_refs_all)
 file_refs_new.close()
 file_bibliography = open(dir + "bibliography.bib", "r", encoding="UTF8")
 all_lines_bibliography = file_bibliography.readlines()
@@ -184,17 +175,18 @@ new_start_bib += "}\n"
 end_bib = "\\bibliography{bibliography}"
 new_end_bib = "\\end{thebibliography}"
 new_end_bibliography = ""
-merged_refs_all_bibitem_original = merged_refs_all.replace("[", "\n[").replace("\n[1]", "[1]")
+file_merged_refs_all_bibitem_old = open(dir + "refs_bibitem.txt", "r", encoding="UTF8")
+linesbibitem = file_merged_refs_all_bibitem_old.readlines()
+file_merged_refs_all_bibitem_old.close()
+merged_refs_all_bibitem_original = ""
+for l in linesbibitem:
+    merged_refs_all_bibitem_original += l
 merged_refs_all_bibitem = merged_refs_all_bibitem_original
 ix = 0
 k_of_keys = dict()
 for k in sorted(ks):
     ix += 1
     k_of_keys[nk_of_keys[k]] = ix
-    merged_refs_all_bibitem = merged_refs_all_bibitem.replace("[" + str(ix) + "]", "\\bitem{" + nk_of_keys[k] + "}")
-file_merged_refs_all_bibitem_new = open(dir + "refs_bibitem.txt", "w", encoding="UTF8")
-file_merged_refs_all_bibitem_new.write(merged_refs_all_bibitem)
-file_merged_refs_all_bibitem_new.close()
 import os
 namesall = os.listdir()
 names = []
@@ -231,7 +223,7 @@ for name in names:
     for l in all_lines_fn:
         merged_lines_all_fn += l
     merged_lines_all_fn = add_citation(merged_lines_all_fn, k_of_keys)
-    merged_lines_all_fn = merged_lines_all_fn.replace(start_bib, new_start_bibliography + merged_refs_all_bibitem_original.replace("\n", "\n\n")).replace(end_bib, new_end_bibliography)
+    merged_lines_all_fn = merged_lines_all_fn.replace(start_bib, new_start_bibliography + merged_refs_all).replace(end_bib, new_end_bibliography)
     file_fn = open(dir + name + "_new_bibliography.tex", "w", encoding="UTF8")
     file_fn.write(merged_lines_all_fn)
     file_fn.close()

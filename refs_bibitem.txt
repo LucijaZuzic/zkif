@@ -1,150 +1,159 @@
-\bitem{filjar2022application} Mia Filić and Renato Filjar. modelling the relation between GNSS positioning performance degradation, and space weather and ionospheric conditions using RReliefF features selection. In ION GNSS+ 2018 Meeting, pages 1999–2006, 2018. 
-\bitem{filjar2024ambient} Renato Filjar, Ivan Heđi, Jasna Prpić-Oršić, and Teodor Iliev. An Ambient Adaptive Global Navigation Satellite System Total Electron Content Predictive Model for Short-Term Rapid Geomagnetic Storm Events. Remote Sensing, 16(16):3051, 2024. 
-\bitem{davies1990ionospheric} Renato Filjar. An application-centred resilient GNSS position estimation algorithm based on positioning environment conditions awareness. In Proceedings of the 2022 International Technical Meeting of The Institute of Navigation, pages 1123–1136, 2022. 
-\bitem{filic2018modelling} Nenad Sikirica, Franc Dimc, Oliver Jukic, Teodor B Iliev, Darko Spoljar, and Renato Filjar. A Risk Assessment of Geomagnetic Conditions Impact on GPS Positioning Accuracy Degradation in Tropical Regions Using Dst Index. In Proceedings of the 2021 International Technical Meeting of The Institute of Navigation, pages 606–615, 2021. 
-\bitem{spilker1996global} Renato Filjar, Ivan Sklebar, and Marko Horvat. A COMPARISON OF MACHINE LEARNING-BASED INDIVIDUAL MOBILITY CLASSIFICATION MODELS DEVELOPED ON SENSOR READINGS FROM LOOSELY ATTACHED SMARTPHONES. Komunikácie, 22(4), 2020. 
-\bitem{oxley2017uncertainties} Rong-En Fan, Kai-Wei Chang, Cho-Jui Hsieh, Xiang-Rui Wang, and Chih-Jen Lin. LIBLINEAR: a library for large linear classification. Journal of Machine Learning Research, 9:1871–1874, August 2008. 
-\bitem{sikirica2021risk} Ismail Bin Mohamad and Dauda Usman. Standardization and its effects on K-means clustering algorithm. Research Journal of Applied Sciences, Engineering and Technology, 6(17):3299–3303, September 2013. 
-\bitem{natras2022ensemble} Peter G. Fennell, Zhiya Zuo, and Kristina Lerman. Predicting and explaining behavioral data with structured feature space decomposition. EPJ Data Sci., 8(1), December 2019. 
-\bitem{natras2023regional} M Kuhn. Applied predictive modeling, 2013. 
-\bitem{filjar2020comparison} Max Kuhn. The caret Package — topepo.github.io. https://topepo. github.io/caret/, 2024. Accessed 11.09.2024. 
-\bitem{kuhn2013applied} RCoreTeam. R: The R Project for Statistical Computing — r-project.org. https://www.r-project.org/, 2024. Accessed 11.09.2024. 
-\bitem{topepoCaretPackage} MIT. Explained: Neural networks — news.mit.edu. https://news. mit.edu/2017/explained-neural-networks-deep-learning-0414, 2017. Accessed 27.09.2024. 
-\bitem{rprojectProjectStatistical} Anders Brahme. Comprehensive biomedical physics. Newnes, 2014. 
-\bitem{mitExplainedNeural} Julian D Olden and Donald A Jackson. Illuminating the “black box”:a randomization approach for understanding variable contributions in artificial neural networks. Ecological modelling, 154(1-2):135–150, 2002. 
-\bitem{brahme2014comprehensive} Stacy L Özesmi and Uygar Özesmi. An artificial neural network approach to spatial habitat modelling with interspecific interaction. Ecological modelling, 116(1):15–31, 1999. 
-\bitem{olden2002illuminating} Christopher Bishop. Pattern Recognition and Machine Learning. Springer, 2006. 
-\bitem{ozesmi1999artificial} Vladimir Vapnik. The nature of statistical learning theory. Springer science & business media, 2013. 
-\bitem{bishop2006pattern} Ian Goodfellow. Deep learning, 2016. 
-\bitem{vapnik2013nature} Philipp Probst, Anne-Laure Boulesteix, and Bernd Bischl. Tunability: Importance of hyperparameters of machine learning algorithms. Journal of Machine Learning Research, 20(53):1–32, 2019. 
-\bitem{goodfellow2016deep} B Zoph. Neural architecture search with reinforcement learning. arXiv preprint arXiv:1611.01578, 2016. 
-\bitem{probst2019tunability} Haifeng Jin, Qingquan Song, and Xia Hu. Auto-keras: An efficient neural architecture search system. In Proceedings of the 25th ACM SIGKDD international conference on knowledge discovery & data mining, pages 1946–1956, 2019. 
-\bitem{zoph2016neural} Marc Claesen and Bart De Moor. Hyperparameter search in machine learning. arXiv preprint arXiv:1502.02127, 2015. 
-\bitem{jin2019auto} Bernhard E. Boser, Isabelle M. Guyon, and Vladimir N. Vapnik. A training algorithm for optimal margin classifiers. In Proceedings of the fifth annual workshop on Computational learning theory, New York, NY, USA, July 1992. ACM. 
-\bitem{claesen2015hyperparameter} Corinna Cortes and Vladimir Vapnik. Support-vector networks. Mach. Learn., 20(3):273–297, September 1995. 
-\bitem{liu2020python} Asa Ben-Hur, David Horn, Hava Siegelmann, and Vladimir Vapnik. Support Vector Clustering. Journal of Machine Learning Research, 2:125–137, November 2001. 
-\bitem{Boser1992} David Meyer, Friedrich Leisch, and Kurt Hornik. The support vector machine under test. Neurocomputing, 55(1-2):169–186, September 2003. 
-\bitem{Cortes1995} scikit-learn developers. 1.4. Support Vector Machines — scikitlearn.org. http://scikit-learn.org/stable/modules/svm.html, 2023. Accessed 25.01.2024. 
-\bitem{BenHur2001} Trevor Hastie, Saharon Rosset, Ji Zhu, and Hui Zou. Multi-class AdaBoost. Stat. Interface, 2(3):349–360, 2009. 
-\bitem{Meyer2003} William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery. Numerical recipes 3rd edition. Cambridge University Press, Cambridge, England, third edition, September 2007. 
-\bitem{Fan2008} Thorsten Joachims. Text categorization with Support Vector Machines: Learning with many relevant features. In Machine Learning:ECML-98, Lecture notes in computer science, pages 137–142. Springer Berlin Heidelberg, Berlin, Heidelberg, 1998. 
-\bitem{Mohamad2013} Sameer S. Pradhan, Wayne H. Ward, Kadri Hacioglu, James H. Martin, and Dan Jurafsky. Shallow Semantic Parsing using Support Vector Machines. In Proceedings of the Human Language Technology Conference of the North American Chapter of the Association for Computational Linguistics: HLT-NAACL 2004, pages 233–240, Boston, Massachusetts, USA, May 2 - May 7 2004. Association for Computational Linguistics. 
-\bitem{Fennell2019} Anne Laurent, Olivier Strauss, Bernadette Bouchon-Meunier, and Ronald R Yager. Information Processing and Management of Uncertainty in Knowledge-Based Systems. Springer, 2014. 
-\bitem{developers2023} Lauren Barghout. Spatial-taxon information granules as used in iterative fuzzy-decision-making for image segmentation. In Studies in Big Data, pages 285–318. Springer International Publishing, Cham, 2015. 
-\bitem{Hastie2009} Abhishek Maity. Supervised classification of RADARSAT-2 polarimetric data for different land features. arXiv preprint arXiv:1608.00501, August 2016. 
-\bitem{Press2007} Dennis Decoste and Bernhard Schölkopf. Training Invariant Support Vector Machines. Mach. Learn., 46(1/3):161–190, 2002. 
-\bitem{Joachims1998} Durjoy Sen Maitra, Ujjwal Bhattacharya, and Swapan K. Parui. CNN based common approach to handwritten character recognition of multiple scripts. In 2015 13th International Conference on Document Analysis and Recognition (ICDAR), Tunis, Tunisia, August 2015. IEEE. 
-\bitem{Pradhan2004} Bilwaj Gaonkar and Christos Davatzikos. Analytic estimation of statistical significance maps for support vector machine based multi-variate image analysis and classification. Neuroimage, 78:270–283, September 2013. 
-\bitem{Laurent2014} Rémi Cuingnet, Charlotte Rosso, Marie Chupin, Stéphane Lehéricy, Didier Dormont, Habib Benali, Yves Samson, and Olivier Colliot. Spatial regularization of SVM for the detection of diffusion alterations associated with stroke outcome. Med. Image Anal., 15(5):729–737, October 2011. 
-\bitem{Barghout2015} Alexander Statnikov, D. Hardin, and Constantin Aliferis. Using SVM Weight-Based Methods to Identify Causally Relevant and NonCausally Relevant Variables. Sign, 1, January 2006. 
-\bitem{Maity2016} M. A. Aizerman, E. A. Braverman, and L. Rozonoer. Theoretical foundations of the potential function method in pattern recognition learning. In Automation and Remote Control, number 25 in Automation and Remote Control„ pages 821–837, 1964. 
-\bitem{Decoste2002} C. Jin and L. Wang. Dimensionality dependent PAC-Bayes margin bound. Advances in Neural Information Processing Systems, 2:1034– 1042, January 2012. 
-\bitem{Maitra2015} Chih-Wei Hsu, Chih-Chung Chang, and Chih-Jen Lin. A Practical Guide to Support Vector Classification. Technical report, Department of Computer Science, National Taiwan University, 2003. 
-\bitem{Gaonkar2013} Matthias Studer, Gilbert Ritschard, Alexis Gabadinho, and Nicolas S. Müller. Discrepancy analysis of state sequences. Sociol. Methods Res., 40(3):471–510, August 2011. 
-\bitem{Cuingnet2011} Xindong Wu, Vipin Kumar, Ross J. Quinlan, Joydeep Ghosh, Qiang Yang, Hiroshi Motoda, Geoffrey J. McLachlan, Angus Ng, Bing Liu, Philip S. Yu, Zhi-Hua Zhou, Michael Steinbach, David J. Hand, and Dan Steinberg. Top 10 algorithms in data mining. Knowl. Inf. Syst., 14(1):1–37, January 2008. 
-\bitem{Statnikov2006} Lior Rokach and Oded Maimon. Data mining with decision trees. Series in Machine Perception and Artifical Intelligence. World Scientific Publishing Company, October 2014. 
-\bitem{Aizerman1964} Shai Shalev-Shwartz and Shai Ben-David. Decision Trees, pages 212– 218. Cambridge University Press, 2014. 
-\bitem{Jin2012} J. R. Quinlan. Induction of decision trees. Mach. Learn., 1(1):81–106, March 1986. 
-\bitem{Hsu2003} L. Rokach and O. Maimon. Top-down induction of decision trees classifiers—A survey. IEEE Trans. Syst. Man Cybern. C Appl. Rev., 35(4):476–487, November 2005. 
-\bitem{Studer2011} Andrew McCallum. Graphical Models Lecture 2: Bayesian Network Representation. https://people.cs.umass.edu/~mccallum/courses/gm2011/02-bn-rep.pdf, 2011. Accessed 25.01.2024. 
-\bitem{Wu2008} Stuart Russell and Peter Norvig. Artificial intelligence. Prentice Hall series in artificial intelligence. Pearson, Upper Saddle River, NJ, second edition, July 1999. 
-\bitem{Rokach2014} David J. Hand and Keming Yu. Idiot’s Bayes: Not So Stupid after All? Int. Stat. Rev., 69(3):385, December 2001. 
-\bitem{ShalevShwartz2014} Harry Zhang. The Optimality of Naive Bayes. In Proceedings of the Seventeenth International Florida Artificial Intelligence Research Society Conference, FLAIRS 2004, volume 2, January 2004. 
-\bitem{Quinlan1986} Rich Caruana and Alexandru Niculescu-Mizil. An Empirical Comparison of Supervised Learning Algorithms. Proceedings of the 23rd international conference on Machine learning - ICML ’06, 2006:161–168, June 2006. 
-\bitem{Rokach2005} StackExchange. Why is the SVM margin equal to 2/w? — math.stackexchange.com. https://math.stackexchange.com/questions/1305925/why-is-the-svm-margin-equal-to-frac2-mathbfw. Accessed 25.01.2024. 
-\bitem{McCallum2011} M. Narasimha Murty and V. Susheela Devi. Pattern Recognition. Undergraduate Topics in Computer Science. Springer, London, England, July 2011. 
-\bitem{Russell1999} George H. John and Pat Langley. Estimating Continuous Distributions in Bayesian Classifiers, 2013. 
-\bitem{Hand2001} Andrew Mccallum and Kamal Nigam. A Comparison of Event Models for Naive Bayes Text Classification. Work Learn Text Categ, 752, May 2001. 
-\bitem{Zhang2004} Vangelis Metsis, Ion Androutsopoulos, and Georgios Paliouras. Spam Filtering with Naive Bayes - Which Naive Bayes? In In CEAS, January 2006. 
-\bitem{Caruana2006} S. Madeh Piryonesi and Tamer E. El-Diraby. Role of data analytics in infrastructure asset management: Overcoming data size and quality problems. J. Transp. Eng. B Pavements, 146(2):04020022, June 2020. 
-\bitem{stackexchange} Svante Wold, Michael Sjöström, and Lennart Eriksson. PLS-regression:a basic tool of chemometrics. Chemometrics and intelligent laboratory systems, 58(2):109–130, 2001. 
-\bitem{Murty2011} Hervé Abdi. Partial least squares regression and projection on latent structure regression (PLS Regression). Wiley interdisciplinary reviews:computational statistics, 2(1):97–106, 2010. 
-\bitem{John2013} Solve Sæbø, Trygve Almøy, Arnar Flatberg, Are H Aastveit, and Harald Martens. LPLS-regression: a method for prediction and classification under the influence of background information on predictor variables. Chemometrics and Intelligent Laboratory Systems, 91(2):121– 132, 2008. 
-\bitem{Mccallum2001} Harry Asada. Fall Term (AY 2020-2021) - 2.160 Identification, Estim, & Learn Lecture 6: Partial Least Squares Regression. https://www.youtube.com/watch?v=Px2otK2nZ1c&t=46s, 2020. Accessed 26.09.2024. 
-\bitem{Metsis2006} Fredrik Lindgren, Paul Geladi, and Svante Wold. The kernel algorithm for PLS. Journal of Chemometrics, 7(1):45–59, 1993. 
-\bitem{Piryonesi2020} Sijmen De Jong and Cajo JF Ter Braak. Comments on the PLS kernel algorithm. Journal of chemometrics, 8(2):169–174, 1994. 
-\bitem{wold2001pls} Bhupinder S Dayal and John F MacGregor. Improved PLS algorithms. Journal of Chemometrics: A Journal of the Chemometrics Society, 11(1):73–85, 1997. 
-\bitem{abdi2010partial} Sijmen De Jong. SIMPLS: an alternative approach to partial least squares regression. Chemometrics and intelligent laboratory systems, 18(3):251–263, 1993. 
-\bitem{saebo2008lpls} Stefan Rännar, Fredrik Lindgren, Paul Geladi, and Svante Wold. A PLS kernel algorithm for data sets with many variables and fewer objects. Part 1: Theory and algorithm. Journal of Chemometrics, 8(2):111–125, 1994. 
-\bitem{youtubeYouTube} Agnar Höskuldsson. PLS regression methods. Journal of chemometrics, 2(3):211–228, 1988. 
-\bitem{lindgren1993kernel} Trevor Hastie, Andreas Buja, and Robert Tibshirani. Penalized discriminant analysis. The Annals of Statistics, 23(1):73–102, 1995. 
-\bitem{de1994comments} Trevor Hastie, Robert Tibshirani, Jerome H Friedman, and Jerome H Friedman. The elements of statistical learning: data mining, inference, and prediction, volume 2. Springer, 2009. 
-\bitem{dayal1997improved} Trevor Hastie, Robert Tibshirani, and Andreas Buja. Flexible discriminant analysis by optimal scoring. Journal of the American statistical association, 89(428):1255–1270, 1994. 
-\bitem{de1993simpls} Christelle Reyn`es, Robert Sabatier, and Nicolas Molinari. Choice of B-splines with free parameters in the flexible discriminant analysis context. Computational statistics & data analysis, 51(3):1765–1778, 2006. 
-\bitem{rannar1994pls} Natasha D Phillips, Neil Reid, Tierney Thys, Chris Harrod, Nicholas L Payne, Cheryl A Morgan, Hannah J White, Siobhán Porter, and Jonathan DR Houghton. Applying species distribution modelling to a data poor, pelagic fish complex: the ocean sunfishes. Journal of biogeography, 44(10):2176–2187, 2017. 
-\bitem{takane2016pls} W Hallgren, F Santana, S Low-Choy, Y Zhao, and B Mackey. Species distribution models can be highly sensitive to algorithm configuration. Ecological Modelling, 408:108719, 2019. 
-\bitem{hoskuldsson1988pls} Wilfried Thuiller, Damien Georges, Robin Engler, and F Breiner. Ensemble platform for species distribution modeling. R Package Version, pages 3–1, 2016. 
-\bitem{hastie1995penalized} Petra Quillfeldt, Jan O Engler, Janet RD Silk, and Richard A Phillips. Influence of device accuracy and choice of algorithm for species distribution modelling of seabirds: a case study using black-browed albatrosses. Journal of Avian Biology, 48(12):1549–1555, 2017. 
-\bitem{hastie2009elements} Zhixin Zhang, Shengyong Xu, César Capinha, Robbie Weterings, and Tianxiang Gao. Using species distribution model to predict the impact of climate change on the potential distribution of Japanese whiting Sillago japonica. Ecological Indicators, 104:333–340, 2019. 
-\bitem{hastie1994flexible} Jacob Cohen, Patricia Cohen, Stephen G West, and Leona S Aiken. Applied multiple regression/correlation analysis for the behavioral sciences. Routledge, 2013. 
-\bitem{reynes2006choice} John Hansen. Using SPSS for windows and macintosh: analyzing and understanding data, 2005. 
-\bitem{phillips2017applying} Ronald A Fisher. The use of multiple measurements in taxonomic problems. Annals of eugenics, 7(2):179–188, 1936. 
-\bitem{hallgren2019species} Geoffrey J McLachlan. Discriminant analysis and statistical pattern recognition. John Wiley & Sons, 2005. 
-\bitem{thuiller2016ensemble} Debra Wetcher-Hendricks. Analyzing quantitative data: An introduction for social researchers. John Wiley & Sons, 2011. 
-\bitem{quillfeldt2017influence} Aleix M Martinez and Avinash C Kak. PCA versus LDA. IEEE transactions on pattern analysis and machine intelligence, 23(2):228–233, 2001. 
-\bitem{zhang2019using} Hervé Abdi. Discriminant correspondence analysis, 2007. 
-\bitem{cohen2013applied} Guy Perriere and Jean Thioulouse. Use of correspondence discriminant analysis to predict the subcellular location of bacterial proteins. Computer Methods and Programs in Biomedicine, 70(2):99–105, 2003. 
-\bitem{hansen2005using} Bökeoğlu Cokluk and S Buyukozturk. Discriminant function analysis:concept and application. Eğitim ara¸stırmaları dergisi, 33:73–92, 2008. 
-\bitem{fisher1936use} William N Venables and Brian D Ripley. Modern applied statistics with S-PLUS. Springer Science & Business Media, 2013. 
-\bitem{mclachlan2005discriminant} Peter A Lachenbruch and Matthew Goldstein. Discriminant analysis. Biometrics, pages 69–85, 1979. 
-\bitem{wetcher2011analyzing} William R Klecka. Discriminant analysis. Sage, 1980. 
-\bitem{martinez2001pca} Wolfgang Karl Härdle and Léopold Simar. Applied Multivariate Statistical Analysis. MD Tech, 2003. 
-\bitem{abdi2007discriminant} G. D. Garson. PA 765: Discriminant Function Analysis — web.archive.org. https://web.archive.org/web/20080312065328/http://www2.chass.ncsu.edu/garson/pA765/discrim.htm, 2008. Accessed 26.09.2024. 
-\bitem{perriere2003use} Steven A Israel. Performance metrics: how and when. Geocarto International, 21(2):23–32, 2006. 
-\bitem{cokluk2008discriminant} C Radhakrishna Rao. The utilization of multiple measurements in problems of biological classification. Journal of the Royal Statistical Society. Series B (Methodological), 10(2):159–203, 1948. 
-\bitem{venables2013modern} Brian D Ripley. Pattern recognition and neural networks. Cambridge university press, 2007. 
-\bitem{lachenbruch1979discriminant} Ian T Jolliffe and Jorge Cadima. Principal component analysis: a review and recent developments. Philosophical transactions of the royal society A: Mathematical, Physical and Engineering Sciences, 374(2065):20150202, 2016. 
-\bitem{klecka1980discriminant} TP Barnett and R Preisendorfer. Origins and levels of monthly and seasonal forecast skill for United States surface air temperatures determined by canonical correlation analysis. Monthly Weather Review, 115(9):1825–1850, 1987. 
-\bitem{Hrdle2003AppliedMS} Daniel Hsu, Sham M Kakade, and Tong Zhang. A spectral algorithm for learning hidden Markov models. Journal of Computer and System Sciences, 78(5):1460–1480, 2012. 
-\bitem{archive765Discriminant} Panos P Markopoulos, Sandipan Kundu, Shubham Chamadia, and Dimitris A Pados. Efficient L1-norm principal-component analysis via bit flipping. IEEE Transactions on Signal Processing, 65(16):4252– 4264, 2017. 
-\bitem{israel2006performance} Dimitris G Chachlakis, Ashley Prater-Bennette, and Panos P Markopoulos. L1-norm Tucker tensor decomposition. IEEE Access, 7:178454–178465, 2019. 
-\bitem{rao1948utilization} Panos P Markopoulos, George N Karystinos, and Dimitris A Pados. Optimal algorithms for L {1}-subspace signal processing. IEEE Transactions on Signal Processing, 62(19):5046–5058, 2014. 
-\bitem{ripley2007pattern} Jinchun Zhan and Namrata Vaswani. Robust PCA with partial subspace knowledge. IEEE Transactions on Signal Processing, 63(13):3332–3347, 2015. 
-\bitem{jolliffe2016principal} Qifa Ke and Takeo Kanade. Robust l/sub 1/norm factorization in the presence of outliers and missing data by alternative convex programming. In 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR’05), volume 1, pages 739–746. IEEE, 2005. 
-\bitem{barnett1987origins} Karl Pearson. LIII. On lines and planes of closest fit to systems of points in space. The London, Edinburgh, and Dublin philosophical magazine and journal of science, 2(11):559–572, 1901. 
-\bitem{hsu2012spectral} Frank M Stewart. Introduction to linear algebra. Courier Dover Publications, 2019. 
-\bitem{markopoulos2017efficient} Harold Hotelling. Analysis of a complex of statistical variables into principal components. Journal of educational psychology, 24(6):417, 1933. 
-\bitem{chachlakis2019l1} Harold Hotelling. Relations between two sets of variates. In Breakthroughs in statistics: methodology and distribution, pages 162–190. Springer, 1992. 
-\bitem{markopoulos2014optimal} Gal Berkooz, Philip Holmes, and John L Lumley. The proper orthogonal decomposition in the analysis of turbulent flows. Annual review of fluid mechanics, 25(1):539–575, 1993. 
-\bitem{zhan2015robust} Kari Karhunen. Zur spektraltheorie stochasticher. In Annales Academiae Scientiarum Fennicae Series A, volume 1, page 34, 1946. 
-\bitem{ke2005robust} Michel Lo`eve. Elementary probability theory. Springer, 1977. 
-\bitem{pearson1901liii} Lawrence Sirovich. Turbulence and the dynamics of coherent structures. I. Coherent structures. Quarterly of applied mathematics, 45(3):561–571, 1987. 
-\bitem{stewart2019introduction} Sachin S Sapatnekar. Overcoming variations in nanometer-scale technologies. IEEE Journal on Emerging and Selected Topics in Circuits and Systems, 1(1):5–18, 2011. 
-\bitem{hotelling1933analysis} Satyajit Ghoman, Zhicun Wang, Ping Chen, and Rakesh Kapania. A POD-based reduced order design scheme for shape optimization of air vehicles. In 53rd AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics and Materials Conference 20th AIAA/ASME/AHS Adaptive Structures Conference 14th AIAA, page 1808, 2012. 
-\bitem{hotelling1992relations} Ruye Wang. Computer Image Processing and Analysis (E161) lectures, Harvey Mudd College, Karhunen-Loeve Transform (KLT). https://web.archive.org/web/20161128140401/http://fourier.eng.hmc.edu/e161/lectures/klt/node3.html, 2016. Accessed 29.09.2024. 
-\bitem{berkooz1993proper} Giordano Giambartolomei. The Karhunen-Lo`eve theorem. PhD thesis, University of Bologna, 2016. 
-\bitem{karhunen1946spektraltheorie} Stephane Mallat. A wavelet tour of signal processing. Academic Press, 1999. 
-\bitem{loeve1977elementary} Xiaoou Tang. Texture information in run-length matrices. IEEE transactions on image processing, 7(11):1602–1609, 1998. 
-\bitem{sirovich1987turbulence} Gilbert W Stewart. On the early history of the singular value decomposition. SIAM review, 35(4):551–566, 1993. 
-\bitem{sapatnekar2011overcoming} Gene H Gloub and Charles F Van Loan. Matrix computations. Johns Hopkins Universtiy Press, 3rd edtion, 1996. 
-\bitem{ghoman2012pod} Andreas F Hayden and David R Twede. Observations on the relationship between eigenvalues, instrument noise, and detection performance. In Imaging Spectrometry VIII, volume 4816, pages 355–362. SPIE, 2002. 
-\bitem{archiveKarhunenLoeveTransform} IT Jolliffe. Principal Component Analysis (Springer Series in Statistics), Springer, 2002. 
-\bitem{amslaurea10169} Edward N Lorenz. Empirical orthogonal functions and statistical weather prediction, volume 1. Massachusetts Institute of Technology, Department of Meteorology Cambridge, 1956. 
-\bitem{mallat1999wavelet} Carl Eckart and Gale Young. The approximation of one matrix by another of lower rank. Psychometrika, 1(3):211–218, 1936. 
-\bitem{tang1998texture} Martin T Dove. Introduction to lattice dynamics. Cambridge university press, 1993. 
-\bitem{stewart1993early} Yoshua Bengio, Aaron Courville, and Pascal Vincent. Representation learning: A review and new perspectives. IEEE transactions on pattern analysis and machine intelligence, 35(8):1798–1828, 2013. 
-\bitem{gloub1996matrix} Johannes Forkman, Julie Josse, and Hans-Peter Piepho. Hypothesis tests for principal component analysis when variables are standardized. Journal of Agricultural, Biological and Environmental Statistics, 24:289–308, 2019. 
-\bitem{hayden2002observations} Max Kuhn. 4 Data Splitting — The caret Package — topepo.github.io. https://topepo.github.io/caret/data-splitting.html, 2024. Accessed 28.09.2024. 
-\bitem{jolliffe2002principal} RJ Hyndman. Forecasting: principles and practice. OTexts, 2018. 
-\bitem{lorenz1956empirical} R Developers. createDataPartition function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/createDataPartition, 2024. Accessed 27.09.2024. 
-\bitem{eckart1936approximation} Max Kuhn. Building predictive models in R using the caret package. Journal of statistical software, 28:1–26, 2008. 
-\bitem{dove1993introduction} Douglas G Altman and J Martin Bland. Diagnostic tests. 1: Sensitivity and specificity. BMJ: British Medical Journal, 308(6943):1552, 1994. 
-\bitem{bengio2013representation} Douglas G Altman and J Martin Bland. Diagnostic test 2: predictive values. BMJ: British Medical Journal, 309:102, 1994. 
-\bitem{forkman2019hypothesis} Digna R Velez, Bill C White, Alison A Motsinger, William S Bush, Marylyn D Ritchie, Scott M Williams, and Jason H Moore. A balanced accuracy function for epistasis modeling in imbalanced datasets using multifactor dimensionality reduction. Genetic Epidemiology: the Official Publication of the International Genetic Epidemiology Society, 31(4):306–315, 2007. 
-\bitem{enge1994global} R Developers. confusionMatrix function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/confusionMatrix, 2024. Accessed 27.09.2024. 
-\bitem{klobuchar1987ionospheric} R Developers. binom.test function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/binom.test, 2024. Accessed 28.09.2024. 
-\bitem{topepoDataSplitting} Charles J Clopper and Egon S Pearson. The use of confidence or fiducial limits illustrated in the case of the binomial. Biometrika, 26(4):404– 413, 1934. 
-\bitem{hyndman2018forecasting} WJ Conover. Practical nonparametric statistics. John Wiley & Sons, Inc, 1999. 
-\bitem{rdocumentationCreateDataPartitionFunction} M Hollander. Nonparametric statistical methods. John Wiley & Sons Inc, 2013. 
-\bitem{kuhn2008building} David C Howell. Statistical methods for psychology. PWS-Kent Publishing Co, 1992. 
-\bitem{altman1994diagnostic} Inc. GraphPad Software. GraphPad Prism 6 Statistics Guide The binomial test — graphpad.com. https://www.graphpad.com/guides/prism/6/statistics/stat_binomial.htm, 2024. Accessed 28.09.2024. 
-\bitem{dg1994diagnostic} Mary L McHugh. Interrater reliability: the kappa statistic. Biochemia medica, 22(3):276–282, 2012. 
-\bitem{velez2007balanced} Robert Gilmore Pontius Jr and Marco Millones. Death to Kappa: birth of quantity disagreement and allocation disagreement for accuracy assessment. International journal of remote sensing, 32(15):4407–4429, 2011. 
-\bitem{rdocumentationConfusionMatrixFunction} Francis Galton. Finger prints. Cosimo Classics, 1892. 
-\bitem{rdocumentationBinomtestFunction} Nigel C Smeeton. Early history of the kappa statistic. Biometrics, 41:795, 1985. 
-\bitem{clopper1934use} Jacob Cohen. A coefficient of agreement for nominal scales. Educational and psychological measurement, 20(1):37–46, 1960. 
-\bitem{conover1999practical} Julius Sim and Chris C Wright. The kappa statistic in reliability studies: use, interpretation, and sample size requirements. Physical therapy, 85(3):257–268, 2005. 
-\bitem{hollander2013nonparametric} Davide Chicco, Matthijs J Warrens, and Giuseppe Jurman. The Matthews correlation coefficient (MCC) is more informative than Cohen’s Kappa and Brier score in binary classification assessment. IEEE Access, 9:78368–78381, 2021. 
-\bitem{howell1992statistical} Paul Heidke. Berechnung des Erfolges und der Güte der Windstärkevorhersagen im Sturmwarnungsdienst. Geografiska Annaler, 8(4):301–349, 1926. 
-\bitem{graphpadGraphPadPrism} The Philosophical Society of Washington D.C. Bulletin of the Philosophical Society of Washington, D.C., volume 10. The co-operation of the Smithsonian Institution, 1887. 
-\bitem{mchugh2012interrater} R Developers. system.time function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/system.time, 2024. Accessed 28.09.2024.
+\bibitem{filjar2022application}Filjar, R. An application-centred resilient GNSS position estimation algorithm based on positioning environment conditions awareness. {\em Proceedings Of The 2022 International Technical Meeting Of The Institute Of Navigation}. pp. 1123-1136 (2022)
+\bibitem{filjar2024ambient}Filjar, R., Hedji, I., Prpić-Oršić, J. \& Iliev, T. An Ambient Adaptive Global Navigation Satellite System Total Electron Content Predictive Model for Short-Term Rapid Geomagnetic Storm Events. {\em Remote Sensing}. \textbf{16}, 3051 (2024)
+\bibitem{davies1990ionospheric}Davies, K. Ionospheric Radio. (Institution of Engineering & Technology,1990), https://books.google.hr/books?id=qdWUKSj5PCcC
+\bibitem{filic2018modelling}Filić, M. \& Filjar, R. modelling the relation between GNSS positioning performance degradation, and space weather and ionospheric conditions using RReliefF features selection. {\em ION GNSS+ 2018 Meeting}. pp. 1999-2006 (2018)
+\bibitem{spilker1996global}Spilker Jr, J., Axelrad, P., Parkinson, B. \& Enge, P. Global positioning system: theory and applications, volume I. (American Institute of Aeronautics,1996)
+\bibitem{oxley2017uncertainties}Oxley, A. Uncertainties in GPS Positioning: A mathematical discourse. (Academic Press,2017)
+\bibitem{sikirica2021risk}Sikirica, N., Dimc, F., Jukic, O., Iliev, T., Spoljar, D. \& Filjar, R. A Risk Assessment of Geomagnetic Conditions Impact on GPS Positioning Accuracy Degradation in Tropical Regions Using Dst Index. {\em Proceedings Of The 2021 International Technical Meeting Of The Institute Of Navigation}. pp. 606-615 (2021)
+\bibitem{natras2022ensemble}Natras, R., Soja, B. \& Schmidt, M. Ensemble machine learning of random forest, AdaBoost and XGBoost for vertical total electron content forecasting. {\em Remote Sensing}. \textbf{14}, 3547 (2022)
+\bibitem{natras2023regional}Natras, R., Goss, A., Halilovic, D., Magnet, N., Mulic, M., Schmidt, M. \& Weber, R. Regional ionosphere delay models based on CORS data and machine learning. {\em NAVIGATION: Journal Of The Institute Of Navigation}. \textbf{70} (2023)
+\bibitem{filjar2020comparison}Filjar, R., Sklebar, I. \& Horvat, M. A COMPARISON OF MACHINE LEARNING-BASED INDIVIDUAL MOBILITY CLASSIFICATION MODELS DEVELOPED ON SENSOR READINGS FROM LOOSELY ATTACHED SMARTPHONES.. {\em Komunikácie}. \textbf{22} (2020)
+\bibitem{Fan2008}Fan, R., Chang, K., Hsieh, C., Wang, X. \& Lin, C. LIBLINEAR: a library for large linear classification. {\em Journal Of Machine Learning Research}. \textbf{9} pp. 1871-1874 (2008,8)
+\bibitem{Mohamad2013}Mohamad, I. \& Usman, D. Standardization and its effects on K-means clustering algorithm. {\em Research Journal Of Applied Sciences, Engineering And Technology}. \textbf{6}, 3299-3303 (2013,9)
+\bibitem{Fennell2019}Fennell, P., Zuo, Z. \& Lerman, K. Predicting and explaining behavioral data with structured feature space decomposition. {\em EPJ Data Sci.}. \textbf{8} (2019,12)
+\bibitem{kuhn2013applied}Kuhn, M. Applied predictive modeling. (Springer,2013)
+\bibitem{topepoCaretPackage}Kuhn, M. The caret Package — topepo.github.io. (https://topepo.github.io/caret/,2024), Accessed 11.09.2024.
+\bibitem{rprojectProjectStatistical}RCoreTeam R: The R Project for Statistical Computing — r-project.org. (https://www.r-project.org/,2024), Accessed 11.09.2024.
+\bibitem{mitExplainedNeural}MIT Explained: Neural networks — news.mit.edu. (https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414,2017), Accessed 27.09.2024
+\bibitem{brahme2014comprehensive}Brahme, A. Comprehensive biomedical physics. (Newnes,2014)
+\bibitem{olden2002illuminating}Olden, J. \& Jackson, D. Illuminating the "black box": a randomization approach for understanding variable contributions in artificial neural networks. {\em Ecological Modelling}. \textbf{154}, 135-150 (2002)
+\bibitem{ozesmi1999artificial}Özesmi, S. \& Özesmi, U. An artificial neural network approach to spatial habitat modelling with interspecific interaction. {\em Ecological Modelling}. \textbf{116}, 15-31 (1999)
+\bibitem{bishop2006pattern}Bishop, C. Pattern Recognition and Machine Learning. (Springer,2006)
+\bibitem{vapnik2013nature}Vapnik, V. The nature of statistical learning theory. (Springer science & business media,2013)
+\bibitem{goodfellow2016deep}Goodfellow, I. Deep learning. (MIT press,2016)
+\bibitem{probst2019tunability}Probst, P., Boulesteix, A. \& Bischl, B. Tunability: Importance of hyperparameters of machine learning algorithms. {\em Journal Of Machine Learning Research}. \textbf{20}, 1-32 (2019)
+\bibitem{zoph2016neural}Zoph, B. Neural architecture search with reinforcement learning. {\em ArXiv Preprint ArXiv:1611.01578}. (2016)
+\bibitem{jin2019auto}Jin, H., Song, Q. \& Hu, X. Auto-keras: An efficient neural architecture search system. {\em Proceedings Of The 25th ACM SIGKDD International Conference On Knowledge Discovery & Data Mining}. pp. 1946-1956 (2019)
+\bibitem{claesen2015hyperparameter}Claesen, M. \& De Moor, B. Hyperparameter search in machine learning. {\em ArXiv Preprint ArXiv:1502.02127}. (2015)
+\bibitem{liu2020python}Liu, Y. Python Machine Learning by Example: Build Intelligent Systems Using Python, TensorFlow 2, PyTorch, and Scikit-Learn. (Packt Publishing Ltd,2020)
+\bibitem{Boser1992}Boser, B., Guyon, I. \& Vapnik, V. A training algorithm for optimal margin classifiers. {\em Proceedings Of The Fifth Annual Workshop On Computational Learning Theory}. (1992,7)
+\bibitem{Cortes1995}Cortes, C. \& Vapnik, V. Support-vector networks. {\em Mach. Learn.}. \textbf{20}, 273-297 (1995,9)
+\bibitem{BenHur2001}Ben-Hur, A., Horn, D., Siegelmann, H. \& Vapnik, V. Support Vector Clustering. {\em Journal Of Machine Learning Research}. \textbf{2} pp. 125-137 (2001,11)
+\bibitem{Meyer2003}Meyer, D., Leisch, F. \& Hornik, K. The support vector machine under test. {\em Neurocomputing}. \textbf{55}, 169-186 (2003,9)
+\bibitem{developers2023}Developers 1.4. Support Vector Machines — scikit-learn.org. (http://scikit-learn.org/stable/modules/svm.html,2023), Accessed 25.01.2024.
+\bibitem{Hastie2009}Hastie, T., Rosset, S., Zhu, J. \& Zou, H. Multi-class AdaBoost. {\em Stat. Interface}. \textbf{2}, 349-360 (2009)
+\bibitem{Press2007}Press, W., Teukolsky, S., Vetterling, W. \& Flannery, B. Numerical recipes 3rd edition. (Cambridge University Press,2007,9)
+\bibitem{Joachims1998}Joachims, T. Text categorization with Support Vector Machines: Learning with many relevant features. {\em Machine Learning: ECML-98}. pp. 137-142 (1998)
+\bibitem{Pradhan2004}Pradhan, S., Ward, W., Hacioglu, K., Martin, J. \& Jurafsky, D. Shallow Semantic Parsing using Support Vector Machines. {\em Proceedings Of The Human Language Technology Conference Of The North American Chapter Of The Association For Computational Linguistics: HLT-NAACL 2004}. pp. 233-240 (2004), https://aclanthology.org/N04-1030
+\bibitem{Laurent2014}Laurent, A., Strauss, O., Bouchon-Meunier, B. \& Yager, R. Information Processing and Management of Uncertainty in Knowledge-Based Systems. {\em 16th International Conference, IPMU}. pp. 442 (2014)
+\bibitem{Barghout2015}Barghout, L. Spatial-taxon information granules as used in iterative fuzzy-decision-making for image segmentation. {\em Studies In Big Data}. pp. 285-318 (2015)
+\bibitem{Maity2016}Maity, A. Supervised classification of RADARSAT-2 polarimetric data for different land features. {\em ArXiv Preprint ArXiv:1608.00501}. (2016,8)
+\bibitem{Decoste2002}Decoste, D. \& Schölkopf, B. Training Invariant Support Vector Machines. {\em Mach. Learn.}. \textbf{46}, 161-190 (2002)
+\bibitem{Maitra2015}Maitra, D., Bhattacharya, U. \& Parui, S. CNN based common approach to handwritten character recognition of multiple scripts. {\em 2015 13th International Conference On Document Analysis And Recognition (ICDAR)}. (2015,8)
+\bibitem{Gaonkar2013}Gaonkar, B. \& Davatzikos, C. Analytic estimation of statistical significance maps for support vector machine based multi-variate image analysis and classification. {\em Neuroimage}. \textbf{78} pp. 270-283 (2013,9)
+\bibitem{Cuingnet2011}Cuingnet, R., Rosso, C., Chupin, M., Lehéricy, S., Dormont, D., Benali, H., Samson, Y. \& Colliot, O. Spatial regularization of SVM for the detection of diffusion alterations associated with stroke outcome. {\em Med. Image Anal.}. \textbf{15}, 729-737 (2011,10)
+\bibitem{Statnikov2006}Statnikov, A., Hardin, D. \& Aliferis, C. Using SVM Weight-Based Methods to Identify Causally Relevant and Non-Causally Relevant Variables. {\em Sign}. \textbf{1} (2006,1)
+\bibitem{Aizerman1964}Aizerman, M., Braverman, E. \& Rozonoer, L. Theoretical foundations of the potential function method in pattern recognition learning. {\em Automation And Remote Control}., 821-837 (1964)
+\bibitem{Jin2012}Jin, C. \& Wang, L. Dimensionality dependent PAC-Bayes margin bound. {\em Advances In Neural Information Processing Systems}. \textbf{2} pp. 1034-1042 (2012,1)
+\bibitem{Hsu2003}Hsu, C., Chang, C. \& Lin, C. A Practical Guide to Support Vector Classification. (Department of Computer Science, National Taiwan University,2003), http://www.csie.ntu.edu.tw/~cjlin/papers.html
+\bibitem{Studer2011}Studer, M., Ritschard, G., Gabadinho, A. \& Müller, N. Discrepancy analysis of state sequences. {\em Sociol. Methods Res.}. \textbf{40}, 471-510 (2011,8)
+\bibitem{Wu2008}Wu, X., Kumar, V., Quinlan, R., Ghosh, J., Yang, Q., Motoda, H., McLachlan, G., Ng, A., Liu, B., Yu, P., Zhou, Z., Steinbach, M., Hand, D. \& Steinberg, D. Top 10 algorithms in data mining. {\em Knowl. Inf. Syst.}. \textbf{14}, 1-37 (2008,1)
+\bibitem{Rokach2014}Rokach, L. \& Maimon, O. Data mining with decision trees. (World Scientific Publishing Company,2014,10)
+\bibitem{ShalevShwartz2014}Shalev-Shwartz, S. \& Ben-David, S. Decision Trees. {\em Understanding Machine Learning: From Theory To Algorithms}. pp. 212-218 (2014)
+\bibitem{Quinlan1986}Quinlan, J. Induction of decision trees. {\em Mach. Learn.}. \textbf{1}, 81-106 (1986,3)
+\bibitem{Rokach2005}Rokach, L. \& Maimon, O. Top-down induction of decision trees classifiers—A survey. {\em IEEE Trans. Syst. Man Cybern. C Appl. Rev.}. \textbf{35}, 476-487 (2005,11)
+\bibitem{McCallum2011}McCallum, A. Graphical Models Lecture 2: Bayesian Network Representation. (https://people.cs.umass.edu/ mccallum/courses/gm2011/02-bn-rep.pdf,2011), Accessed 25.01.2024.
+\bibitem{Russell1999}Russell, S. \& Norvig, P. Artificial intelligence. (Pearson,1999,7)
+\bibitem{Hand2001}Hand, D. \& Yu, K. Idiot's Bayes: Not So Stupid after All?. {\em Int. Stat. Rev.}. \textbf{69}, 385 (2001,12)
+\bibitem{Zhang2004}Zhang, H. The Optimality of Naive Bayes. {\em Proceedings Of The Seventeenth International Florida Artificial Intelligence Research Society Conference, FLAIRS 2004}. \textbf{2} (2004,1)
+\bibitem{Caruana2006}Caruana, R. \& Niculescu-Mizil, A. An Empirical Comparison of Supervised Learning Algorithms. {\em Proceedings Of The 23rd International Conference On Machine Learning - ICML '06}. \textbf{2006} pp. 161-168 (2006,6)
+\bibitem{stackexchange}StackExchange Why is the SVM margin equal to 2/w? — math.stackexchange.com. (https://math.stackexchange.com/questions/1305925/why-is-the-svm-margin-equal-to-frac2-mathbfw,2024), Accessed 25.01.2024.
+\bibitem{Murty2011}Murty, M. \& Devi, V. Pattern Recognition. (Springer,2011,7)
+\bibitem{John2013}John, G. \& Langley, P. Estimating Continuous Distributions in Bayesian Classifiers.  (2013)
+\bibitem{Mccallum2001}Mccallum, A. \& Nigam, K. A Comparison of Event Models for Naive Bayes Text Classification. {\em Work Learn Text Categ}. \textbf{752} (2001,5)
+\bibitem{Metsis2006}Metsis, V., Androutsopoulos, I. \& Paliouras, G. Spam Filtering with Naive Bayes - Which Naive Bayes?. {\em In CEAS}. (2006,1)
+\bibitem{Piryonesi2020}Piryonesi, S. \& El-Diraby, T. Role of data analytics in infrastructure asset management: Overcoming data size and quality problems. {\em J. Transp. Eng. B Pavements}. \textbf{146}, 04020022 (2020,6)
+\bibitem{wold2001pls}Wold, S., Sjöström, M. \& Eriksson, L. PLS-regression: a basic tool of chemometrics. {\em Chemometrics And Intelligent Laboratory Systems}. \textbf{58}, 109-130 (2001)
+\bibitem{abdi2010partial}Abdi, H. Partial least squares regression and projection on latent structure regression (PLS Regression). {\em Wiley Interdisciplinary Reviews: Computational Statistics}. \textbf{2}, 97-106 (2010)
+\bibitem{saebo2008lpls}Sæbø, S., Almøy, T., Flatberg, A., Aastveit, A. \& Martens, H. LPLS-regression: a method for prediction and classification under the influence of background information on predictor variables. {\em Chemometrics And Intelligent Laboratory Systems}. \textbf{91}, 121-132 (2008)
+\bibitem{youtubeYouTube}Asada, H. Fall Term (AY 2020-2021) - 2.160 Identification, Estim, & Learn Lecture 6: Partial Least Squares Regression. (https://www.youtube.com/watch?v=Px2otK2nZ1c&t=46s,2020), Accessed 26.09.2024
+\bibitem{lindgren1993kernel}Lindgren, F., Geladi, P. \& Wold, S. The kernel algorithm for PLS. {\em Journal Of Chemometrics}. \textbf{7}, 45-59 (1993)
+\bibitem{de1994comments}De Jong, S. \& Ter Braak, C. Comments on the PLS kernel algorithm. {\em Journal Of Chemometrics}. \textbf{8}, 169-174 (1994)
+\bibitem{dayal1997improved}Dayal, B. \& MacGregor, J. Improved PLS algorithms. {\em Journal Of Chemometrics: A Journal Of The Chemometrics Society}. \textbf{11}, 73-85 (1997)
+\bibitem{de1993simpls}De Jong, S. SIMPLS: an alternative approach to partial least squares regression. {\em Chemometrics And Intelligent Laboratory Systems}. \textbf{18}, 251-263 (1993)
+\bibitem{rannar1994pls}Rännar, S., Lindgren, F., Geladi, P. \& Wold, S. A PLS kernel algorithm for data sets with many variables and fewer objects. Part 1: Theory and algorithm. {\em Journal Of Chemometrics}. \textbf{8}, 111-125 (1994)
+\bibitem{takane2016pls}Takane, Y. \& Loisel, S. On the PLS algorithm for multiple regression (PLS1). {\em The Multiple Facets Of Partial Least Squares And Related Methods: PLS, Paris, France, 2014 8}. pp. 17-28 (2016)
+\bibitem{hoskuldsson1988pls}Höskuldsson, A. PLS regression methods. {\em Journal Of Chemometrics}. \textbf{2}, 211-228 (1988)
+\bibitem{hastie1995penalized}Hastie, T., Buja, A. \& Tibshirani, R. Penalized discriminant analysis. {\em The Annals Of Statistics}. \textbf{23}, 73-102 (1995)
+\bibitem{hastie2009elements}Hastie, T., Tibshirani, R., Friedman, J. \& Friedman, J. The elements of statistical learning: data mining, inference, and prediction. (Springer,2009)
+\bibitem{hastie1994flexible}Hastie, T., Tibshirani, R. \& Buja, A. Flexible discriminant analysis by optimal scoring. {\em Journal Of The American Statistical Association}. \textbf{89}, 1255-1270 (1994)
+\bibitem{reynes2006choice}Reynès, C., Sabatier, R. \& Molinari, N. Choice of B-splines with free parameters in the flexible discriminant analysis context. {\em Computational Statistics & Data Analysis}. \textbf{51}, 1765-1778 (2006)
+\bibitem{phillips2017applying}Phillips, N., Reid, N., Thys, T., Harrod, C., Payne, N., Morgan, C., White, H., Porter, S. \& Houghton, J. Applying species distribution modelling to a data poor, pelagic fish complex: the ocean sunfishes. {\em Journal Of Biogeography}. \textbf{44}, 2176-2187 (2017)
+\bibitem{hallgren2019species}Hallgren, W., Santana, F., Low-Choy, S., Zhao, Y. \& Mackey, B. Species distribution models can be highly sensitive to algorithm configuration. {\em Ecological Modelling}. \textbf{408} pp. 108719 (2019)
+\bibitem{thuiller2016ensemble}Thuiller, W., Georges, D., Engler, R. \& Breiner, F. Ensemble platform for species distribution modeling. {\em R Package Version}. pp. 3-1 (2016)
+\bibitem{quillfeldt2017influence}Quillfeldt, P., Engler, J., Silk, J. \& Phillips, R. Influence of device accuracy and choice of algorithm for species distribution modelling of seabirds: a case study using black-browed albatrosses. {\em Journal Of Avian Biology}. \textbf{48}, 1549-1555 (2017)
+\bibitem{zhang2019using}Zhang, Z., Xu, S., Capinha, C., Weterings, R. \& Gao, T. Using species distribution model to predict the impact of climate change on the potential distribution of Japanese whiting Sillago japonica. {\em Ecological Indicators}. \textbf{104} pp. 333-340 (2019)
+\bibitem{cohen2013applied}Cohen, J., Cohen, P., West, S. \& Aiken, L. Applied multiple regression/correlation analysis for the behavioral sciences. (Routledge,2013)
+\bibitem{hansen2005using}Hansen, J. Using SPSS for windows and macintosh: analyzing and understanding data. (Taylor & Francis,2005)
+\bibitem{fisher1936use}Fisher, R. The use of multiple measurements in taxonomic problems. {\em Annals Of Eugenics}. \textbf{7}, 179-188 (1936)
+\bibitem{mclachlan2005discriminant}McLachlan, G. Discriminant analysis and statistical pattern recognition. (John Wiley & Sons,2005)
+\bibitem{wetcher2011analyzing}Wetcher-Hendricks, D. Analyzing quantitative data: An introduction for social researchers. (John Wiley & Sons,2011)
+\bibitem{martinez2001pca}Martinez, A. \& Kak, A. PCA versus LDA. {\em IEEE Transactions On Pattern Analysis And Machine Intelligence}. \textbf{23}, 228-233 (2001)
+\bibitem{abdi2007discriminant}Abdi, H. Discriminant correspondence analysis. {\em Encyclopedia Of Measurement And Statistics}. \textbf{2007} pp. 1-10 (2007)
+\bibitem{perriere2003use}Perriere, G. \& Thioulouse, J. Use of correspondence discriminant analysis to predict the subcellular location of bacterial proteins. {\em Computer Methods And Programs In Biomedicine}. \textbf{70}, 99-105 (2003)
+\bibitem{cokluk2008discriminant}Cokluk, B. \& Buyukozturk, S. Discriminant function analysis: concept and application. {\em Eğitim Araştırmaları Dergisi}. \textbf{33} pp. 73-92 (2008)
+\bibitem{venables2013modern}Venables, W. \& Ripley, B. Modern applied statistics with S-PLUS. (Springer Science & Business Media,2013)
+\bibitem{lachenbruch1979discriminant}Lachenbruch, P. \& Goldstein, M. Discriminant analysis. {\em Biometrics}. pp. 69-85 (1979)
+\bibitem{klecka1980discriminant}Klecka, W. Discriminant analysis. (Sage,1980)
+\bibitem{Hrdle2003AppliedMS}Härdle, W. \& Simar, L. Applied Multivariate Statistical Analysis. (MD Tech,2003), https://api.semanticscholar.org/CorpusID:39123297
+\bibitem{archive765Discriminant}Garson, G. PA 765: Discriminant Function Analysis — web.archive.org. (https://web.archive.org/web/20080312065328/http://www2.chass.ncsu.edu/garson/pA765/discrim.htm,2008), Accessed 26.09.2024
+\bibitem{israel2006performance}Israel, S. Performance metrics: how and when. {\em Geocarto International}. \textbf{21}, 23-32 (2006)
+\bibitem{rao1948utilization}Rao, C. The utilization of multiple measurements in problems of biological classification. {\em Journal Of The Royal Statistical Society. Series B (Methodological)}. \textbf{10}, 159-203 (1948)
+\bibitem{ripley2007pattern}Ripley, B. Pattern recognition and neural networks. (Cambridge university press,2007)
+\bibitem{jolliffe2016principal}Jolliffe, I. \& Cadima, J. Principal component analysis: a review and recent developments. {\em Philosophical Transactions Of The Royal Society A: Mathematical, Physical And Engineering Sciences}. \textbf{374}, 20150202 (2016)
+\bibitem{barnett1987origins}Barnett, T. \& Preisendorfer, R. Origins and levels of monthly and seasonal forecast skill for United States surface air temperatures determined by canonical correlation analysis. {\em Monthly Weather Review}. \textbf{115}, 1825-1850 (1987)
+\bibitem{hsu2012spectral}Hsu, D., Kakade, S. \& Zhang, T. A spectral algorithm for learning hidden Markov models. {\em Journal Of Computer And System Sciences}. \textbf{78}, 1460-1480 (2012)
+\bibitem{markopoulos2017efficient}Markopoulos, P., Kundu, S., Chamadia, S. \& Pados, D. Efficient L1-norm principal-component analysis via bit flipping. {\em IEEE Transactions On Signal Processing}. \textbf{65}, 4252-4264 (2017)
+\bibitem{chachlakis2019l1}Chachlakis, D., Prater-Bennette, A. \& Markopoulos, P. L1-norm Tucker tensor decomposition. {\em IEEE Access}. \textbf{7} pp. 178454-178465 (2019)
+\bibitem{markopoulos2014optimal}Markopoulos, P., Karystinos, G. \& Pados, D. Optimal algorithms for L1-subspace signal processing. {\em IEEE Transactions On Signal Processing}. \textbf{62}, 5046-5058 (2014)
+\bibitem{zhan2015robust}Zhan, J. \& Vaswani, N. Robust PCA with partial subspace knowledge. {\em IEEE Transactions On Signal Processing}. \textbf{63}, 3332-3347 (2015)
+\bibitem{ke2005robust}Ke, Q. \& Kanade, T. Robust l/sub 1/norm factorization in the presence of outliers and missing data by alternative convex programming. {\em 2005 IEEE Computer Society Conference On Computer Vision And Pattern Recognition (CVPR'05)}. \textbf{1} pp. 739-746 (2005)
+\bibitem{pearson1901liii}Pearson, K. LIII. On lines and planes of closest fit to systems of points in space. {\em The London, Edinburgh, And Dublin Philosophical Magazine And Journal Of Science}. \textbf{2}, 559-572 (1901)
+\bibitem{stewart2019introduction}Stewart, F. Introduction to linear algebra. (Courier Dover Publications,2019)
+\bibitem{hotelling1933analysis}Hotelling, H. Analysis of a complex of statistical variables into principal components.. {\em Journal Of Educational Psychology}. \textbf{24}, 417 (1933)
+\bibitem{hotelling1992relations}Hotelling, H. Relations between two sets of variates. {\em Breakthroughs In Statistics: Methodology And Distribution}. pp. 162-190 (1992)
+\bibitem{berkooz1993proper}Berkooz, G., Holmes, P. \& Lumley, J. The proper orthogonal decomposition in the analysis of turbulent flows. {\em Annual Review Of Fluid Mechanics}. \textbf{25}, 539-575 (1993)
+\bibitem{karhunen1946spektraltheorie}Karhunen, K. Zur spektraltheorie stochasticher. {\em Annales Academiae Scientiarum Fennicae Series A}. \textbf{1} pp. 34 (1946)
+\bibitem{loeve1977elementary}Loève, M. Elementary probability theory. (Springer,1977)
+\bibitem{sirovich1987turbulence}Sirovich, L. Turbulence and the dynamics of coherent structures. I. Coherent structures. {\em Quarterly Of Applied Mathematics}. \textbf{45}, 561-571 (1987)
+\bibitem{sapatnekar2011overcoming}Sapatnekar, S. Overcoming variations in nanometer-scale technologies. {\em IEEE Journal On Emerging And Selected Topics In Circuits And Systems}. \textbf{1}, 5-18 (2011)
+\bibitem{ghoman2012pod}Ghoman, S., Wang, Z., Chen, P. \& Kapania, R. A POD-based reduced order design scheme for shape optimization of air vehicles. {\em 53rd AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics And Materials Conference 20th AIAA/ASME/AHS Adaptive Structures Conference 14th AIAA}. pp. 1808 (2012)
+\bibitem{archiveKarhunenLoeveTransform}Wang, R. Computer Image Processing and Analysis (E161) lectures, Harvey Mudd College, Karhunen-Loeve Transform (KLT). (https://web.archive.org/web/20161128140401/http://fourier.eng.hmc.edu/e161/lectures/klt/node3.html,2016), Accessed 29.09.2024
+\bibitem{amslaurea10169}Giambartolomei, G. The Karhunen-Loève theorem. (University of Bologna,2016), http://amslaurea.unibo.it/10169/
+\bibitem{mallat1999wavelet}Mallat, S. A wavelet tour of signal processing. (Academic Press,1999)
+\bibitem{tang1998texture}Tang, X. Texture information in run-length matrices. {\em IEEE Transactions On Image Processing}. \textbf{7}, 1602-1609 (1998)
+\bibitem{stewart1993early}Stewart, G. On the early history of the singular value decomposition. {\em SIAM Review}. \textbf{35}, 551-566 (1993)
+\bibitem{gloub1996matrix}Gloub, G. \& Van Loan, C. Matrix computations. {\em Johns Hopkins Universtiy Press, 3rd Edtion}. (1996)
+\bibitem{hayden2002observations}Hayden, A. \& Twede, D. Observations on the relationship between eigenvalues, instrument noise, and detection performance. {\em Imaging Spectrometry VIII}. \textbf{4816} pp. 355-362 (2002)
+\bibitem{jolliffe2002principal}Jolliffe, I. Principal Component Analysis (Springer Series in Statistics), Springer.  (2002)
+\bibitem{lorenz1956empirical}Lorenz, E. Empirical orthogonal functions and statistical weather prediction. (Massachusetts Institute of Technology, Department of Meteorology Cambridge,1956)
+\bibitem{eckart1936approximation}Eckart, C. \& Young, G. The approximation of one matrix by another of lower rank. {\em Psychometrika}. \textbf{1}, 211-218 (1936)
+\bibitem{dove1993introduction}Dove, M. Introduction to lattice dynamics. (Cambridge university press,1993)
+\bibitem{bengio2013representation}Bengio, Y., Courville, A. \& Vincent, P. Representation learning: A review and new perspectives. {\em IEEE Transactions On Pattern Analysis And Machine Intelligence}. \textbf{35}, 1798-1828 (2013)
+\bibitem{forkman2019hypothesis}Forkman, J., Josse, J. \& Piepho, H. Hypothesis tests for principal component analysis when variables are standardized. {\em Journal Of Agricultural, Biological And Environmental Statistics}. \textbf{24} pp. 289-308 (2019)
+\bibitem{enge1994global}Enge, P. The global positioning system: Signals, measurements, and performance. {\em International Journal Of Wireless Information Networks}. \textbf{1} pp. 83-105 (1994)
+\bibitem{klobuchar1987ionospheric}Klobuchar, J. Ionospheric time-delay algorithm for single-frequency GPS users. {\em IEEE Transactions On Aerospace And Electronic Systems}. pp. 325-331 (1987)
+\bibitem{topepoDataSplitting}Kuhn, M. 4 Data Splitting | The caret Package — topepo.github.io. (https://topepo.github.io/caret/data-splitting.html,2024), Accessed 28.09.2024
+\bibitem{hyndman2018forecasting}Hyndman, R. Forecasting: principles and practice. (OTexts,2018)
+\bibitem{rdocumentationCreateDataPartitionFunction}Developers, R. createDataPartition function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/createDataPartition,2024), Accessed 27.09.2024
+\bibitem{kuhn2008building}Kuhn, M. Building predictive models in R using the caret package. {\em Journal Of Statistical Software}. \textbf{28} pp. 1-26 (2008)
+\bibitem{altman1994diagnostic}Altman, D. \& Bland, J. Diagnostic tests. 1: Sensitivity and specificity.. {\em BMJ: British Medical Journal}. \textbf{308}, 1552 (1994)
+\bibitem{dg1994diagnostic}Altman, D. \& Bland, J. Diagnostic test 2: predictive values. {\em BMJ: British Medical Journal}. \textbf{309} pp. 102 (1994)
+\bibitem{velez2007balanced}Velez, D., White, B., Motsinger, A., Bush, W., Ritchie, M., Williams, S. \& Moore, J. A balanced accuracy function for epistasis modeling in imbalanced datasets using multifactor dimensionality reduction. {\em Genetic Epidemiology: The Official Publication Of The International Genetic Epidemiology Society}. \textbf{31}, 306-315 (2007)
+\bibitem{rdocumentationConfusionMatrixFunction}Developers, R. confusionMatrix function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/confusionMatrix,2024), Accessed 27.09.2024
+\bibitem{rdocumentationBinomtestFunction}Developers, R. binom.test function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/binom.test,2024), Accessed 28.09.2024
+\bibitem{clopper1934use}Clopper, C. \& Pearson, E. The use of confidence or fiducial limits illustrated in the case of the binomial. {\em Biometrika}. \textbf{26}, 404-413 (1934)
+\bibitem{conover1999practical}Conover, W. Practical nonparametric statistics. (John Wiley & Sons, Inc,1999)
+\bibitem{hollander2013nonparametric}Hollander, M. Nonparametric statistical methods. (John Wiley & Sons Inc,2013)
+\bibitem{howell1992statistical}Howell, D. Statistical methods for psychology. (PWS-Kent Publishing Co,1992)
+\bibitem{graphpadGraphPadPrism}GraphPad Software, I. GraphPad Prism 6 Statistics Guide - The binomial test — graphpad.com. (https://www.graphpad.com/guides/prism/6/statistics/stat_binomial.htm,2024), Accessed 28.09.2024
+\bibitem{mchugh2012interrater}McHugh, M. Interrater reliability: the kappa statistic. {\em Biochemia Medica}. \textbf{22}, 276-282 (2012)
+\bibitem{pontius2011death}Pontius Jr, R. \& Millones, M. Death to Kappa: birth of quantity disagreement and allocation disagreement for accuracy assessment. {\em International Journal Of Remote Sensing}. \textbf{32}, 4407-4429 (2011)
+\bibitem{galton1892finger}Galton, F. Finger prints. (Cosimo Classics,1892)
+\bibitem{smeeton1985early}Smeeton, N. Early history of the kappa statistic. {\em Biometrics}. \textbf{41} pp. 795 (1985)
+\bibitem{cohen1960coefficient}Cohen, J. A coefficient of agreement for nominal scales. {\em Educational And Psychological Measurement}. \textbf{20}, 37-46 (1960)
+\bibitem{sim2005kappa}Sim, J. \& Wright, C. The kappa statistic in reliability studies: use, interpretation, and sample size requirements. {\em Physical Therapy}. \textbf{85}, 257-268 (2005)
+\bibitem{chicco2021matthews}Chicco, D., Warrens, M. \& Jurman, G. The Matthews correlation coefficient (MCC) is more informative than Cohen's Kappa and Brier score in binary classification assessment. {\em IEEE Access}. \textbf{9} pp. 78368-78381 (2021)
+\bibitem{heidke1926berechnung}Heidke, P. Berechnung des Erfolges und der Güte der Windstärkevorhersagen im Sturmwarnungsdienst. {\em Geografiska Annaler}. \textbf{8}, 301-349 (1926)
+\bibitem{philosophical1887bulletin}D.C., T. Bulletin of the Philosophical Society of Washington, D.C.. (The co-operation of the Smithsonian Institution,1887)
+\bibitem{rdocumentationSystemtimeFunction}Developers, R. system.time function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/system.time,2024), Accessed 28.09.2024
