@@ -104,7 +104,7 @@ merged_lines_all_bibliography = ""
 for l in all_lines_bibliography:
     if l[0] != "#":
         merged_lines_all_bibliography += l
-file_open = open(dir + "main_replaced.tex", "r")
+file_open = open(dir + "main_replaced.tex", "r", encoding="UTF8")
 all_lines = file_open.readlines()
 file_open.close()
 merged_lines_all = ""
@@ -160,10 +160,10 @@ for k in sorted(ks):
         merged_lines_no_misc_new += loc_of_keys[k] + "\n\n"
 print(errs, len(ks))
 print(errs_set)
-file_bibliography_new = open(dir + "bibliography_short.bib", "w")
+file_bibliography_new = open(dir + "bibliography_short.bib", "w", encoding="UTF8")
 file_bibliography_new.write(merged_lines_no_cite_new.replace("author = {}", "author = {Developers, R}").replace("year = {}", "year = {2024}").replace("year={}", "year={2024}"))
 file_bibliography_new.close()
-file_bibliography_new_no_misc = open(dir + "bibliography_short_no_misc.bib", "w")
+file_bibliography_new_no_misc = open(dir + "bibliography_short_no_misc.bib", "w", encoding="UTF8")
 file_bibliography_new_no_misc.write(merged_lines_no_misc_new.replace("author = {}", "author = {Developers, R}").replace("year = {}", "year = {2024}").replace("year={}", "year={2024}"))
 file_bibliography_new_no_misc.close()
 start_bib = "\\bibliography{sn-bibliography}% common bib file"
@@ -279,7 +279,7 @@ for name in names:
         continue
     if "_new_chicago" in name:
         continue
-    file_fn_old = open(dir + name + ".tex", "r")
+    file_fn_old = open(dir + name + ".tex", "r", encoding="UTF8")
     all_lines_fn = file_fn_old.readlines()
     file_fn_old.close()
     merged_lines_all_fn = ""
@@ -299,7 +299,7 @@ for name in names:
         continue
     if "_new_chicago" in name:
         continue
-    file_fn_old = open(dir + name + ".tex", "r")
+    file_fn_old = open(dir + name + ".tex", "r", encoding="UTF8")
     all_lines_fn = file_fn_old.readlines()
     file_fn_old.close()
     merged_lines_all_fn = ""
@@ -321,7 +321,7 @@ for name in names:
         continue
     if "_new_chicago" in name:
         continue
-    file_fn_old = open(dir + name + ".tex", "r")
+    file_fn_old = open(dir + name + ".tex", "r", encoding="UTF8")
     all_lines_fn = file_fn_old.readlines()
     file_fn_old.close()
     merged_lines_all_fn = ""

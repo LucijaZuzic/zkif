@@ -53,7 +53,7 @@ def add_ix_replace(merged_lines):
     print(len(replacements))
     return merged_lines
 
-file_open = open(name + ".tex", "r")
+file_open = open(name + ".tex", "r", encoding="UTF8")
 all_lines = file_open.readlines()
 file_open.close()
 old_starts = ["\\cite{", "Equation~\\ref{eqn:", "$\\displaystyle ", "{\\displaystyle ", "\\begin{equation}", "\\begin{align*}"]
@@ -72,10 +72,10 @@ merged_lines_all = remove_begin_end(merged_lines_all, "\\label{eqn:", "}")
 merged_lines_all = add_ix_replace(merged_lines_all)
 merged_lines_no_cite_all = remove_begin_end(merged_lines_no_cite_all, "\\label{eqn:", "}")
 merged_lines_no_cite_all = add_ix_replace(merged_lines_no_cite_all)
-file_w = open(name + "_replaced.tex", "w")
+file_w = open(name + "_replaced.tex", "w", encoding="UTF8")
 file_w.write(merged_lines_all)
 file_w.close()
-file_w = open(name + "_no_cite_replaced.tex", "w")
+file_w = open(name + "_no_cite_replaced.tex", "w", encoding="UTF8")
 file_w.write(merged_lines_no_cite_all)
 file_w.close()
 from subprocess import call
