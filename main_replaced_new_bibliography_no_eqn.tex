@@ -26,7 +26,7 @@
 %%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
 
 
-%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove Â“NumberedÂ” in the optional parenthesis. 
+%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove Numbered in the optional parenthesis. 
 %%The option is available for: sn-basic.bst, sn-vancouver.bst, sn-chicago.bst%  
  
 %%\documentclass[sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
@@ -93,7 +93,7 @@
 
 \title[A $Dst$-based space weather conditions machine learning classification  model for GNSS PNT performance analysis]{A $Dst$-based space weather conditions machine learning classification  model for GNSS PNT performance analysis}
 
-\author[1,2]{\fnm{Lucija} \sur{Å½uÅ¾iÄ‡}}\email{lucija.zuzic@uniri.hr}
+\author[1,2]{\fnm{Lucija} \sur{Žužić}}\email{lucija.zuzic@uniri.hr}
 \equalcont{These authors contributed equally to this work.}
 
 \author[1,2]{\fnm{Deni} \sur{Klen}}\email{deni.klen@uniri.hr}
@@ -124,12 +124,12 @@
 \section{Introduction}
 %\label{sec:Intro}
 
-The Global Navigation Satellite System (GNSS) and its Positioning, Navigation, and Timing (PNT) service have matured to become an essential part of national infrastructure, public goods, and enablers of a vast number of emerging technology and socio-economic applications [1]. Maintaining the GNSS PNT quality has appeared fundamental for the sustainable development of modern economy and society [1]. Overcoming the shortcomings and vulnerabilities of GNSS PNT is a scientific challenge, and the need of a wide variety of scientists, developers, operators, regulators, and users of GNSS-based systems and services [2, 1]. The Earthâ€™s ionosphere, a part of the Earthâ€™s atmosphere stretching from 50 km to 2000 km above the Earthâ€™s surface and comprised of rare but mostly charged atoms and molecules, is the major natural cause of GNSS PNT degradation [3, 4]. This phenomenon especially affects most currently used GNSS receivers, which work as single-frequency receivers exposed to GNSS ionospheric effects [5, 1]. Driven by powerful and random flows of energy and particles from the Sun (space weather conditions), the ionospheric conditions define the properties of GNSS signal propagation through the Earthâ€™s atmosphere and the resulting ionospheric delay [3, 6, 4]. The GNSS ionospheric delay causes errors in GNSS PNT algorithm deployment, designed to produce position, velocity, and time estimates for a GNSS receiver [5, 4]. The ionosphere affects GNSS satellite signals for position estimation by introducing signal propagation delay [5, 4]. The GNSS ionospheric delay is a stochastic variable, whose value is determined by complex physical processes of space weather [4, 1]. How space weather affects GNSS PNT performance was explained using the Space weather â€“ GNSS PNT performance coupling model [4], as depicted in Table~\ref{tab:Space weather â€“ GNSS PNT performance coupling model}
+The Global Navigation Satellite System (GNSS) and its Positioning, Navigation, and Timing (PNT) service have matured to become an essential part of national infrastructure, public goods, and enablers of a vast number of emerging technology and socio-economic applications [1]. Maintaining the GNSS PNT quality has appeared fundamental for the sustainable development of modern economy and society [1]. Overcoming the shortcomings and vulnerabilities of GNSS PNT is a scientific challenge, and the need of a wide variety of scientists, developers, operators, regulators, and users of GNSS-based systems and services [2, 1]. The Earth’s ionosphere, a part of the Earth’s atmosphere stretching from 50 km to 2000 km above the Earth’s surface and comprised of rare but mostly charged atoms and molecules, is the major natural cause of GNSS PNT degradation [3, 4]. This phenomenon especially affects most currently used GNSS receivers, which work as single-frequency receivers exposed to GNSS ionospheric effects [5, 1]. Driven by powerful and random flows of energy and particles from the Sun (space weather conditions), the ionospheric conditions define the properties of GNSS signal propagation through the Earth’s atmosphere and the resulting ionospheric delay [3, 6, 4]. The GNSS ionospheric delay causes errors in GNSS PNT algorithm deployment, designed to produce position, velocity, and time estimates for a GNSS receiver [5, 4]. The ionosphere affects GNSS satellite signals for position estimation by introducing signal propagation delay [5, 4]. The GNSS ionospheric delay is a stochastic variable, whose value is determined by complex physical processes of space weather [4, 1]. How space weather affects GNSS PNT performance was explained using the Space weather – GNSS PNT performance coupling model [4], as depicted in Table~\ref{tab:Space weather – GNSS PNT performance coupling model}
 
 \begin{table}[!ht]
     \centering
-    \caption{The Space weather â€“ GNSS PNT performance coupling model, after [4].}
-    \label{tab:Space weather â€“ GNSS PNT performance coupling model}
+    \caption{The Space weather – GNSS PNT performance coupling model, after [4].}
+    \label{tab:Space weather – GNSS PNT performance coupling model}
     \begin{tabular}{|c|c|c|c|c|}
         \hline
         % & & & & \\
@@ -141,7 +141,7 @@ The Global Navigation Satellite System (GNSS) and its Positioning, Navigation, a
     \end{tabular}
 \end{table}
 
-The GNSS signal encounters a certain number of charged particles from the satellite aerial to a mobile unitâ€™s (GNSS receiverâ€™s) aerial [4, 4]. Such an encounter is quantified using the Total Electron Content ($TEC$) defined by Equation~1 in $electrons/m^{2}$  [4, 3], where $h$ denotes the height above the Earthâ€™s mean sea level in $m$, $N(h)$ represents the vertical ionospheric profile, the volume density of charged particles at height $h$, in $electrons/m^{2}$.
+The GNSS signal encounters a certain number of charged particles from the satellite aerial to a mobile unit’s (GNSS receiver’s) aerial [4, 4]. Such an encounter is quantified using the Total Electron Content ($TEC$) defined by Equation~1 in $electrons/m^{2}$  [4, 3], where $h$ denotes the height above the Earth’s mean sea level in $m$, $N(h)$ represents the vertical ionospheric profile, the volume density of charged particles at height $h$, in $electrons/m^{2}$.
 
 \begin{equation}
 	TEC = \int_{lower \quad ionsopheric \quad boundary}^{upper \quad ionsopheric \quad boundary}N(h)dh
@@ -155,7 +155,7 @@ It should be noted that in the sense of Equation~1, $TEC$ is defined as a result
 	\quad\left(2\right)
 \end{equation}
 
-Combining Equation~1 and Equation~2, one can conclude the linear relation between $\Delta t_{iono}$ and $TEC$, as given in Equation~3, a sub-model incorporated in the Space weather â€“ GNSS PNT performance coupling model [4].
+Combining Equation~1 and Equation~2, one can conclude the linear relation between $\Delta t_{iono}$ and $TEC$, as given in Equation~3, a sub-model incorporated in the Space weather – GNSS PNT performance coupling model [4].
 
 \begin{equation}
 	\Delta t_{iono} = \frac{40.3}{c f^{2}} TEC
@@ -298,7 +298,7 @@ Principal component analysis (PCA) is a linear dimensionality reduction techniqu
 
 PCA is closely related to factor and canonical correlation analysis (CCA). PCA is the simplest of the true eigenvector-based multivariate analyses. PCA defines a new orthogonal coordinate system that optimally describes the variance in a single dataset [101, 102, 103, 104]. CCA does the same for the cross-covariance between two datasets. Robust and L1-norm-based variants of standard PCA have also been proposed [104, 105, 106, 107].
 
-Karl Pearson [108] conceived of PCA in 1901 as a counterpart of the principal axis theorem in mechanics [109]. Harold Hotelling discovered the Hotelling transform in multivariate quality control in the 1930s without knowledge of the previous work [110, 111]. Synonyms for PCA include the discrete proper orthogonal decomposition (POD) [112, 113, 114, 115] in mechanical engineering and the Kosambiâ€“Karhunenâ€“LoÃ¨ve or Karhunenâ€“LoÃ¨ve theorem (KLT) [116, 117, 118, 119, 120, 121] in signal processing. Singular value decomposition (SVD) of X, established in the final quarter of the 19th century [122], is also similar to PCA. Eigenvalue decomposition (EVD) of a matrix $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ in linear algebra shares the mathematical foundations of PCA [123, 124]. Factor analysis differs in several key features [125], but has many aspects in common with PCA. Empirical orthogonal functions (EOF) [126] in meteorological science were developed by Lorenz in 1956 [126]. The Eckartâ€“Young theorem [127] and quasiharmonic modes [128] are both connected to PCA. Empirical modal analysis in structural dynamics and spectral decomposition in noise and vibration also take a similar approach to PCA.
+Karl Pearson [108] conceived of PCA in 1901 as a counterpart of the principal axis theorem in mechanics [109]. Harold Hotelling discovered the Hotelling transform in multivariate quality control in the 1930s without knowledge of the previous work [110, 111]. Synonyms for PCA include the discrete proper orthogonal decomposition (POD) [112, 113, 114, 115] in mechanical engineering and the Kosambi–Karhunen–Loève or Karhunen–Loève theorem (KLT) [116, 117, 118, 119, 120, 121] in signal processing. Singular value decomposition (SVD) of X, established in the final quarter of the 19th century [122], is also similar to PCA. Eigenvalue decomposition (EVD) of a matrix $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ in linear algebra shares the mathematical foundations of PCA [123, 124]. Factor analysis differs in several key features [125], but has many aspects in common with PCA. Empirical orthogonal functions (EOF) [126] in meteorological science were developed by Lorenz in 1956 [126]. The Eckart–Young theorem [127] and quasiharmonic modes [128] are both connected to PCA. Empirical modal analysis in structural dynamics and spectral decomposition in noise and vibration also take a similar approach to PCA.
 
 The data in PCA is converted to a new coordinate system using a scalar projection, an orthogonal linear transformation on a real inner product space. The first coordinate or principal component covers the largest portion of the variance, decreasing with each following component [125, 129]. The significance of the principal components can be checked with parametric bootstrap for a smaller dataset to help decide how many principal components to keep [130].
 
@@ -346,7 +346,7 @@ The GPS ionospheric delay $\Delta \rho \dots$ related to distance measurements c
 	\quad\left(7\right)
 \end{equation}
 
-Appletonâ€™s formula in Equation~8 reasonably approximates the relationship between the refraction index and the free electron density distribution [3, 5]. $N(h)$ is the vertical distribution of the free electron density over a height $h$ above the surface of the Earth, and $f$ is the frequency of the radio signal.
+Appleton’s formula in Equation~8 reasonably approximates the relationship between the refraction index and the free electron density distribution [3, 5]. $N(h)$ is the vertical distribution of the free electron density over a height $h$ above the surface of the Earth, and $f$ is the frequency of the radio signal.
 
 \begin{equation}
 	n(l) = 1 + \frac{40.3 N(h)}{f^{2}}
