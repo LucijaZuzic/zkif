@@ -1,184 +1,143 @@
-%% 
-%% Copyright 2007-2024 Elsevier Ltd
-%% 
-%% This file is part of the 'Elsarticle Bundle'.
-%% ---------------------------------------------
-%% 
-%% It may be distributed under the conditions of the LaTeX Project Public
-%% License, either version 1.3 of this license or (at your option) any
-%% later version.  The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 1999/12/01 or later.
-%% 
-%% The list of all files belonging to the 'Elsarticle Bundle' is
-%% given in the file `manifest.txt'.
-%% 
-%% Template article for Elsevier's document class `elsarticle'
-%% with harvard style bibliographic references
-\documentclass[preprint,12pt]{elsarticle}
-%% Use the option review to obtain double line spacing
-%% \documentclass[preprint,review,12pt]{elsarticle}
-%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
-%% for a journal layout:
-%% \documentclass[final,1p,times]{elsarticle}
-%% \documentclass[final,1p,times,twocolumn]{elsarticle}
-%% \documentclass[final,3p,times]{elsarticle}
-%% \documentclass[final,3p,times,twocolumn]{elsarticle}
-%% \documentclass[final,5p,times]{elsarticle}
-%% \documentclass[final,5p,times,twocolumn]{elsarticle}
-%% For including figures, graphicx.sty has been loaded in
-%% elsarticle.cls. If you prefer to use the old commands
-%% please give \usepackage{epsfig}
-%% The amssymb package provides various useful mathematical symbols
-\usepackage{amssymb}
-%% The amsmath package provides various useful equation environments.
-\usepackage{amsmath}
-%% The amsthm package provides extended theorem environments
-%% \usepackage{amsthm}
-%% The lineno packages adds line numbers. Start line numbering with
-%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
-%% for the whole article with \linenumbers.
-%% \usepackage{lineno}
-%\usepackage[utf8]{inputenc}
-%\usepackage[T1]{fontenc}
-\usepackage{gensymb}
-\usepackage{algorithm}
-\usepackage{algorithmic}
-\usepackage{multicol}
-\usepackage{multirow}
-\usepackage{url}
-\usepackage{lmodern}
-\usepackage{listings}
-\usepackage{xcolor}
-\usepackage{colortbl}
-\definecolor{backcolour}{rgb}{0.96875, 0.97265625, 0.9765625}
-\definecolor{regularback}{rgb}{0.96875 0.96875 0.96875}
-\definecolor{linenumberback}{rgb}{0.9375 0.9375 0.9375}
-\definecolor{grayhighlight}{rgb}{0.3984375, 0.3984375, 0.3984375}
-\definecolor{codegreen}{rgb}{0, 0.5, 0}
-\definecolor{codepurple}{rgb}{0.6640625, 0.1328125, 0.99609375}
-\definecolor{navykeyword}{rgb}{0, 0, 1}
-\definecolor{commentblue}{rgb}{0.23828125,0.48046875,0.48046875}
-\definecolor{codered}{rgb}{0.625, 0, 0}
-\journal{Transportation Research Part D: Transport and Environment}
-\begin{document}
-\begin{frontmatter}
-%% Title, authors and addresses
-%% use the tnoteref command within \title for footnotes;
-%% use the tnotetext command for theassociated footnote;
-%% use the fnref command within \author or \affiliation for footnotes;
-%% use the fntext command for theassociated footnote;
-%% use the corref command within \author for corresponding author footnotes;
-%% use the cortext command for theassociated footnote;
-%% use the ead command for the email address,
-%% and the form \ead[url] for the home page:
-%% \title{Title\tnoteref{label1}}
-%% \tnotetext[label1]{}
-%% \author{Name\corref{cor1}\fnref{label2}}
-%% \ead{email address}
-%% \ead[url]{home page}
-%% \fntext[label2]{}
-%% \cortext[cor1]{}
-%% \affiliation{organization={},
-%%             addressline={},
-%%             city={},
-%%             postcode={},
-%%             state={},
-%%             country={}}
-%% \fntext[label3]{}
-\title{A $Dst$-based space weather conditions machine learning classification  model for GNSS PNT performance analysis} %% Article title
-%% use optional labels to link authors explicitly to addresses:
-%% \author[label1,label2]{}
-%% \affiliation[label1]{organization={},
-%%             addressline={},
-%%             city={},
-%%             postcode={},
-%%             state={},
-%%             country={}}
-%%
-%% \affiliation[label2]{organization={},
-%%             addressline={},
-%%             city={},
-%%             postcode={},
-%%             state={},
-%%             country={}}
-%AUTHOR 1
-\author[1,2]{Lucija \v{Z}u\v{z}i\'{c}}
-\ead{lucija.zuzic@uniri.hr}
-\author[1,2]{Deni Klen}
-\ead{deni.klen@uniri.hr}
-\author[3]{Teodor B. Iliev}%\fnref[label2]
-\ead{tiliev@uni-ruse.bg}
-\author[1,2,4]{Renato Filjar\corref{cor1}}%\fnref[label2]
-\ead{renato.filjar@uniri.hr}
+%Version 3 October 2023
+% See section 11 of the User Manual for version history
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
+
+%%=======================================================%%
+%% to print line numbers in the margin use lineno option %%
+%%=======================================================%%
+
+%%\documentclass[lineno,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%======================================================%%
+%% to compile with pdflatex/xelatex use pdflatex option %%
+%%======================================================%%
+
+%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+
+%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove Â“NumberedÂ” in the optional parenthesis. 
+%%The option is available for: sn-basic.bst, sn-vancouver.bst, sn-chicago.bst%  
  
-% Address/affiliation
-\affiliation[1]{organization={Department of Computer Engineering, Faculty of Engineering, University of Rijeka},
-addressline={Vukovarska 58}, 
-%         city={Rijeka},
-%citysep={Rijeka}, % Uncomment if no comma needed between city and postcode
-postcode={51000 Rijeka}, 
-country={Croatia}}
-\affiliation[2]{organization={Center for Artificial Intelligence and Cybersecurity, University of Rijeka},
-addressline={Radmile Matejcic 2}, 
-postcode={51000 Rijeka}, 
-country={Croatia}}
-%Studentski grad, ul. "Studentska" 8
-\affiliation[3]{organization={University of Ruse},
-addressline={8 Studentska str.}, 
-postcode={7017 Ruse}, 
-country={Bulgaria}}
-\affiliation[4]{organization={Laboratory for Spatial Intelligence, Hrvatsko Zagorje Krapina University of Applied Sciences},
-addressline={Setaliste hrvatskog narodnog preporoda 6}, 
-postcode={49000 Krapina}, 
-country={Croatia}}
-%\fntext[label2]{http://www.riteh.uniri.hr/osoba/jonatan-lerga}
-% Corresponding author text
-\cortext[cor1]{Corresponding author}
-%% Abstract
-\begin{abstract}
-Ambient conditions classification enables systematic mitigation of adversarial effects on the Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT) performance. This research contributes to the problem by proposing a classification model of space weather events for sub-equatorial regions. The proposed model uses machine learning-based classification applied to the experimental observations of geomagnetic field components, observed Total Electron Content ($TEC$), and Disturbance Storm-Time ($Dst$) index. A Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA), and Neural Network using Principal Component Analysis was applied to develop the candidate model to classify observations of the geomagnetic field in $TEC$, combined with other variables, into one of the scenarios of space weather conditions. Performance is assessed using a confusion matrix and development time to yield the Naive Bayes as the best performer. The proposed $Dst$-based classification model serves as an indicator of a geomagnetic/ionospheric storm in progress, thus alerting GNSS users of a potential degradation in GNSS PNT performance and setting up a framework for the development of a tailored GNSS ionospheric correction model for specific classes of the space weather conditions.
-\end{abstract}
-%%Graphical abstract
-%\begin{graphicalabstract}
-%\includegraphics{grabs}
-%\end{graphicalabstract}
-%%Research highlights
-%\begin{highlights}
-%\item Highlight
-%\end{highlights}
-%% Keywords
-\begin{keyword}
-Global Navigation Satellite System (GNSS) Positioning \sep Navigation, and Timing (PNT) \sep space weather conditions \sep machine learning \sep Total Electron Content ($TEC$) \sep Disturbance Storm-Time ($Dst$) index
-\end{keyword}
-\end{frontmatter}
-%% Add \usepackage{lineno} before \begin{document} and uncomment 
-%% following line to enable line numbers
-%% \linenumbers
-%% main text
-%%
-% MAIN TE\mathbf{X}^{\mathsf{T}} 
+%%\documentclass[sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
+%%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+\documentclass[sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style 
+%%\documentclass[sn-mathphys-ay]{sn-jnl}% Math and Physical Sciences Author Year Reference Style
+%%\documentclass[sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
+%%\documentclass[sn-vancouver,Numbered]{sn-jnl}% Vancouver Reference Style
+%%\documentclass[sn-apa]{sn-jnl}% APA Reference Style 
+%%\documentclass[sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
+
+%%%% Standard Packages
+%%<additional latex packages if required can be included here>
+
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{algorithm}%
+\usepackage{algorithmicx}%
+\usepackage{algpseudocode}%
+\usepackage{listings}%
+%%%%
+
+%%%%%=============================================================================%%%%
+%%%%  Remarks: This template is provided to aid authors with the preparation
+%%%%  of original research articles intended for submission to journals published 
+%%%%  by Springer Nature. The guidance has been prepared in partnership with 
+%%%%  production teams to conform to Springer Nature technical requirements. 
+%%%%  Editorial and presentation requirements differ among journal portfolios and 
+%%%%  research disciplines. You may find sections in this template are irrelevant 
+%%%%  to your work and are empowered to omit any such section if allowed by the 
+%%%%  journal you intend to submit to. The submission guidelines and policies 
+%%%%  of the journal take precedence. A detailed User Manual is available in the 
+%%%%  template package for technical guidance.
+%%%%%=============================================================================%%%%
+
+%% as per the requirement new theorem styles can be included as shown below
+%\theoremstyle{thmstyleone}%
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers
+%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
+%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
+\newtheorem{proposition}[theorem]{Proposition}% 
+%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
+
+%\theoremstyle{thmstyletwo}%
+\newtheorem{example}{Example}%
+\newtheorem{remark}{Remark}%
+
+%\theoremstyle{thmstylethree}%
+\newtheorem{definition}{Definition}%
+
+\raggedbottom
+%%\unnumbered% uncomment this for unnumbered level heads
+
+\begin{document}
+
+\title[A $Dst$-based space weather conditions machine learning classification  model for GNSS PNT performance analysis]{A $Dst$-based space weather conditions machine learning classification  model for GNSS PNT performance analysis}
+
+\author[1,2]{\fnm{Lucija} \sur{Å½uÅ¾iÄ‡}}\email{lucija.zuzic@uniri.hr}
+\equalcont{These authors contributed equally to this work.}
+
+\author[1,2]{\fnm{Deni} \sur{Klen}}\email{deni.klen@uniri.hr}
+\equalcont{These authors contributed equally to this work.}
+
+\author[3]{\fnm{Teodor B.} \sur{Iliev}}\email{tiliev@uni-ruse.bg}
+
+\author*[1,2,4]{\fnm{Renato} \sur{Filjar}}\email{renato.filjar@uniri.hr}
+
+\affil*[1]{\orgdiv{Department of Computer Engineering}, \orgname{Faculty of Engineering, University of Rijeka}, \orgaddress{\street{Vukovarska 58}, \city{Rijeka}, \postcode{51000}, \state{Primorje-Gorski Kotar County}, \country{Croatia}}}
+
+\affil[2]{\orgdiv{Center for Artificial Intelligence and Cybersecurity}, \orgname{University of Rijeka}, \orgaddress{\street{Radmile Matejcic 2}, \city{Rijeka}, \postcode{51000}, \state{Primorje-Gorski Kotar County}, \country{Croatia}}}
+
+\affil[3]{\orgdiv{Department of Telecommunication}, \orgname{University of Ruse}, \orgaddress{\street{8 Studentska str.}, \city{Ruse}, \postcode{7017}, \country{Bulgaria}}}
+
+\affil[4]{\orgdiv{Laboratory for Spatial Intelligence}, \orgname{Hrvatsko Zagorje Krapina University of Applied Sciences}, \orgaddress{\street{Setaliste hrvatskog narodnog preporoda 6}, \city{Krapina}, \postcode{49000}, \state{Krapina-Zagorje County}, \country{Croatia}}}
+
+\abstract{Ambient conditions classification enables systematic mitigation of adversarial effects on the Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT) performance. This research contributes to the problem by proposing a classification model of space weather events for sub-equatorial regions. The proposed model uses machine learning-based classification applied to the experimental observations of geomagnetic field components, observed Total Electron Content ($TEC$), and Disturbance Storm-Time ($Dst$) index. A Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA), and Neural Network using Principal Component Analysis was applied to develop the candidate model to classify observations of the geomagnetic field in $TEC$, combined with other variables, into one of the scenarios of space weather conditions. Performance is assessed using a confusion matrix and development time to yield the Naive Bayes as the best performer. The proposed $Dst$-based classification model serves as an indicator of a geomagnetic/ionospheric storm in progress, thus alerting GNSS users of a potential degradation in GNSS PNT performance and setting up a framework for the development of a tailored GNSS ionospheric correction model for specific classes of the space weather conditions.}
+
+\keywords{Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT), space weather conditions, machine learning, classification model, decision tree (DT), neural network (NN), sensor observations aggregation, geomagnetic field, Total Electron Content (TEC), Disturbance Storm-Time (Dst) index}
+
+%%\pacs[JEL Classification]{D8, H51}
+
+%%\pacs[MSC Classification]{35A01, 65L10, 65L12, 65L20, 65L70}
+
+\maketitle
+
 \section{Introduction}
-%\label{sec:Introduction}
+%\label{sec:Intro}
 
 The Global Navigation Satellite System (GNSS) and its Positioning, Navigation, and Timing (PNT) service have matured to become an essential part of national infrastructure, public goods, and enablers of a vast number of emerging technology and socio-economic applications \cite{filjar2022application}. Maintaining the GNSS PNT quality has appeared fundamental for the sustainable development of modern economy and society \cite{filjar2022application}. Overcoming the shortcomings and vulnerabilities of GNSS PNT is a scientific challenge, and the need of a wide variety of scientists, developers, operators, regulators, and users of GNSS-based systems and services \cite{filjar2024ambient, filjar2022application}. The Earthâ€™s ionosphere, a part of the Earthâ€™s atmosphere stretching from 50 km to 2000 km above the Earthâ€™s surface and comprised of rare but mostly charged atoms and molecules, is the major natural cause of GNSS PNT degradation \cite{davies1990ionospheric, filic2018modelling}. This phenomenon especially affects most currently used GNSS receivers, which work as single-frequency receivers exposed to GNSS ionospheric effects \cite{spilker1996global, filjar2022application}. Driven by powerful and random flows of energy and particles from the Sun (space weather conditions), the ionospheric conditions define the properties of GNSS signal propagation through the Earthâ€™s atmosphere and the resulting ionospheric delay \cite{davies1990ionospheric, oxley2017uncertainties, filic2018modelling}. The GNSS ionospheric delay causes errors in GNSS PNT algorithm deployment, designed to produce position, velocity, and time estimates for a GNSS receiver \cite{spilker1996global, filic2018modelling}. The ionosphere affects GNSS satellite signals for position estimation by introducing signal propagation delay \cite{spilker1996global, filic2018modelling}. The GNSS ionospheric delay is a stochastic variable, whose value is determined by complex physical processes of space weather \cite{filic2018modelling, filjar2022application}. How space weather affects GNSS PNT performance was explained using the Space weather â€“ GNSS PNT performance coupling model \cite{filic2018modelling}, as depicted in Table~\ref{tab:Space weather â€“ GNSS PNT performance coupling model}
 
-\begin{table}[ht]
+\begin{table}[!ht]
     \centering
-    \resizebox{\linewidth}{!}{
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-            \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7} \cline{9-9}
-             & & & & & & & & \\
-            SPACE & & GEOMAGNETIC & & IONOSPHERE & & GNSS & & GNSS \\
-            WEATHER & & FIELD & & & & PSEUDO- & & POSITIONING \\
-             & & & & & & RANGES & & PERFORMANCE \\
-             & & & & & & & & \\
-            \cline{1-1} \cline{3-3} \cline{5-5} \cline{7-7} \cline{9-9}
-        \end{tabular}
-    }
     \caption{The Space weather â€“ GNSS PNT performance coupling model, after \cite{filic2018modelling}.}
     \label{tab:Space weather â€“ GNSS PNT performance coupling model}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        % & & & & \\
+        SPACE & GEOMAGNETIC & IONOSPHERE & GNSS & GNSS \\
+        WEATHER & FIELD & & PSEUDO- & POSITIONING \\
+         & & & RANGES & PERFORMANCE \\
+        % & & & & \\
+        \hline
+    \end{tabular}
 \end{table}
 
 The GNSS signal encounters a certain number of charged particles from the satellite aerial to a mobile unitâ€™s (GNSS receiverâ€™s) aerial \cite{filic2018modelling, filic2018modelling}. Such an encounter is quantified using the Total Electron Content ($TEC$) defined by Equation~\ref{eqn:1} in $electrons/m^{2}$  \cite{filic2018modelling, davies1990ionospheric}, where $h$ denotes the height above the Earthâ€™s mean sea level in $m$, $N(h)$ represents the vertical ionospheric profile, the volume density of charged particles at height $h$, in $electrons/m^{2}$.
@@ -188,7 +147,7 @@ The GNSS signal encounters a certain number of charged particles from the satell
 	\label{eqn:1}
 \end{equation}
 
-It should be noted that in the sense of Equation~\ref{eqn:1}, $TEC$ is defined as a result, a consequence, of the ionospheric conditions, and not their descriptor \cite{filjar2022application}. The GNSS ionospheric delay may be determined by derivation from the Appleton-Hartree equation, as given in Equation~\ref{eqn:2}, where $\Delta t_{iono}$ denotes the GNSS ionospheric delay in $s$, $c$ denotes the velocity of electromagnetic wave in vacuum in $m/s$, and $f$ denotes the carrier wave frequency of the satellite signal in $Hz$ \cite{spilker1996global, filic2018modelling}.
+It should be noted that in the sense of Equation~\ref{eqn:1}, $TEC$ is defined as a result, a consequence, of the ionospheric conditions, and not their descriptor \cite{filjar2022application}. The GNSS ionospheric delay may be determined by derivation from the Appleton-Hartree equation, as given in Equation~\ref{eqn:2}, where $\Delta t_{iono}$ denotes the GNSS ionospheric delay in $s$, $c$ denotes the velocity of an electromagnetic wave in vacuum in $m/s$, and $f$ denotes the carrier wave frequency of the satellite signal in $Hz$ \cite{spilker1996global, filic2018modelling}.
 
 \begin{equation}
 	\Delta t_{iono} = \frac{40.3}{c f^{2}} \int_{lower \quad ionsopheric \quad boundary}^{upper \quad ionsopheric \quad boundary}N(h)dh
@@ -206,144 +165,54 @@ The GNSS ionospheric delay has been identified as a source of GNSS PNT degradati
 
 Here we propose a methodology for a machine learning-based classification of the ionospheric conditions based entirely on observations of geomagnetic indices. The proposed method is inspired by previous lightweight machine-learning techniques \cite{filjar2020comparison} for classifying sensor readings. The model is sufficiently simple to be applied on computationally capable platforms with suitable geomagnetic field sensors, such as smartphones and connected/autonomous vehicles. The research presented acquires the ambient data and analyses its statistical properties. The data set is split into training and test sets. Several candidates for the GNSS ionospheric delay model are developed in this study. A tailored set of validation methods is used to assess their performance. The optimal GNSS ionospheric delay correction model is identified based on GNSS PNT-related objective criteria, and its performance is demonstrated in an independent case study.
 
+The main contributions of this paper are:
+
+\begin{itemize}
+    \item Defining multiple $Dst$-based classes using theoretical knowledge and statistics
+    \item Classifying values of $TEC$ and other geomagnetic field variables based on $Dst$
+    \item Proposing a machine learning-based classification model of space weather events
+    \item Achieving an accuracy over $99\%$ for the Naive Bayes model and any input variables
+\end{itemize}
+
+The findings indicate the classification generated by the Naive Bayes model could be used in real-life systems and support our hypothesis.
+
+The rest of the paper is structured as follows. Section~\ref{sec:Dataset} describes this work's methodology, dataset, and evaluation metrics. Section~\ref{sec:Results} presents the results obtained in this study. Section~\ref{sec:Discussion} discusses the implications of the results. The main points are summarised and the conclusion is given in Section~\ref{sec:Conclusion}.
+
 \section{Method and Data}
-%\label{sec:Dataset}
+\label{sec:Dataset}
 
 \subsection{Method}
 %\label{subsec:Method}
 
-A Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), shallow Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA) and shallow Neural Network using Principal Component Analysis (PCA) of the input data were tested based on their ability to classify a set of observations of the geomagnetic field in $TEC$, and other predictors, into one of the scenarios of space weather conditions based on $Dst$.
+A Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), shallow Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA) and shallow Neural Network using Principal Component Analysis (PCA) of the input data were tested based on their ability to classify a set of observations of the geomagnetic field in $TEC$, and other predictors, into one of the scenarios of space weather conditions based on $Dst$. Multiple $Dst$-dependent classes were predefined using theoretical knowledge. Statistical analysis of the data confirmed that distributions of other variables change for different $Dst$ ranges, and not for different $TEC$ ranges, supporting the validity of the classification. The study assumes that the dependent output variable, the $Dst$ class, can be predicted based on the independent variables used as input.
+
+The models were selected because they represent larger families of classification methods. SVMs are supervised maximum margin models. Decision Trees also apply supervised learning. Naive Bayes classifiers are probabilistic classifiers that can be parametric or non-parametric, but this study uses a non-parametric approach. PLS is a non-parametric linear regression model. FDA uses multiple non-parametric linear regression models to create a non-linear classification. PCA is a linear dimensionality reduction technique that extracts a predefined number of components for training a Neural Network. Neural Networks imitate the brain using artificial neurons to produce outputs based on the input and the activation function. Neural Networks require that the model structure be predefined, and hyperparameters are usually tuned or predefined based on assumptions. An automated tuning procedure was used in this study.
 
 All Neural Network models were applied based on research by Kuhn for the \textit{R} \textit{caret} package \cite{kuhn2013applied, topepoCaretPackage, rprojectProjectStatistical}.
-
-\subsubsection{Neural Networks}
-%\label{subsubsec:NN}
-
-The neurons of human or animal brains provide the basis for a Neural Network (NN) or Artificial Neural Network (ANN) with connected units or nodes called artificial neurons in machine learning \cite{mitExplainedNeural, brahme2014comprehensive}. Like biological synapses, edges form links between artificial neurons that receive, process, and transmit data. Real numbers form the input, and a non-linear activation function of the sum of the inputs shapes the output. Weights are modified during training and represent signal strength at the link output. Multiple intermediate hidden layers are typically introduced to transform the data from the first input layer before it reaches the final output layer. 
-
-Shallow Neural Networks are simple and easy to train quickly with fewer parameters, and computational resources. They typically contain only a few hidden layers for processing between the input layer that receives the data, and the final layer that produces the output \cite{olden2002illuminating, ozesmi1999artificial}.  A network with at least two hidden layers \cite{bishop2006pattern} is considered a deep Neural Network. Artificial Neural Networks can extrapolate a solution by training on a dataset with no obvious connections, too complicated for human analysts. Artificial intelligence is used for forecasting, adaptive control, and other tasks.
-
-Neural Networks are typically trained through empirical risk minimization. This method optimizes the network's parameters to minimize the difference or empirical risk, between the predicted output and the actual target values in a given dataset \cite{vapnik2013nature}. Gradient-based methods such as backpropagation are usually used to estimate network parameters  \cite{vapnik2013nature}. During the training phase, ANNs learn from labeled training data by iteratively updating their parameters to minimize a defined loss function \cite{goodfellow2016deep}. This method allows the network to generalize to unseen data.
-
-Using Artificial Neural Networks requires an understanding of their characteristics. The model suitable for a specific task varies depending on how the data is stored and other practical considerations. Many model parameters may need to be adjusted and differ for each model. The type and number of layers, as well as their connections, need to be defined. Each layer has a size, and each connection has a type, including full, pooling, and others. A more advanced model might be more successful but will take longer to execute and take up more storage space. The hyperparameters for the learning algorithm may also be modified to suit the problem \cite{probst2019tunability} during an extensive tuning process experimenting on unseen training data, and various learning algorithms are available. If training is done according to recommended guidelines the model will be robust and perform adequately on additional tests.
-
-The network design process can be simplified using previously defined machine learning techniques like neural architecture search (NAS). These networks have performed well even when pitted against architectures selected by humans. The proposed model is tested and the responses are used to train the NAS network \cite{zoph2016neural}. AutoML and AutoKeras \cite{jin2019auto} provide extensive frameworks for this process. The \textit{scikit-learn} library features various classification, regression, and clustering algorithms including support-vector machines, random forests, gradient boosting, k-means, and Density-Based Spatial Clustering (DBSCAN). These network models are ready to be used and trained once the data and hyperparameters are provided. The hyperparameters must be predefined, are not trained, and include how many neurons are in each layer, learning rate, step, stride, depth, receptive field, and padding for CNNs \cite{claesen2015hyperparameter}. TensorFlow and Keras are used to build a custom network in Python, and the user can define layers, models, or metrics. The data, number of hidden layer units, learning rate, and number of iterations are the required parameters for the Python training function in Table~\ref{tab:train}. This Python code example is based on a book by Liu \cite{liu2020python}.
-
-\begin{table}[ht]
-    \centering
-    {\ttfamily\scriptsize
-        \begin{tabular}{|r l l l l|}
-            \hline
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{1} & \multicolumn{4}{l|}{\textcolor{codegreen}{\textbf{def}} \textcolor{navykeyword}{train}(X, y, n\_hidden, learning\_rate, n\_iter):} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{2} & & \multicolumn{3}{l|}{m, n\_input \textcolor{grayhighlight}{=} X\textcolor{grayhighlight}{.}shape} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{3} & \multicolumn{4}{l|}{} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{4} & & \multicolumn{3}{l|}{\textcolor{commentblue}{\textit{\# 1. random initialize weights and biases}}} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{5} & & \multicolumn{3}{l|}{w1 \textcolor{grayhighlight}{=} np\textcolor{grayhighlight}{.}random\textcolor{grayhighlight}{.}randn(n\_input, n\_hidden)} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{6} & & \multicolumn{3}{l|}{b1 \textcolor{grayhighlight}{=} np\textcolor{grayhighlight}{.}zeros((\textcolor{grayhighlight}{1}, n\_hidden))} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{7} & & \multicolumn{3}{l|}{w2 \textcolor{grayhighlight}{=} np\textcolor{grayhighlight}{.}random\textcolor{grayhighlight}{.}randn(n\_input, \textcolor{grayhighlight}{1})} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{8} & & \multicolumn{3}{l|}{b2 \textcolor{grayhighlight}{=} np\textcolor{grayhighlight}{.}zeros((\textcolor{grayhighlight}{1}, \textcolor{grayhighlight}{1}))} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{9} & \multicolumn{4}{l|}{} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{10} & & \multicolumn{3}{l|}{\textcolor{commentblue}{\textit{\# 2. in each iteration, feed all layers with the latest weights and biases}}} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{11} & & \multicolumn{3}{l|}{\textcolor{codegreen}{\textbf{for}} i \textcolor{codepurple}{\textbf{in}} range(n\_iter \textcolor{grayhighlight}{+} 1):} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{12} & & & \multicolumn{2}{l|}{z2 \textcolor{grayhighlight}{=} np\textcolor{grayhighlight}{.}dot(X, w1) \textcolor{grayhighlight}{+} b1} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{13} & & & \multicolumn{2}{l|}{a2 \textcolor{grayhighlight}{=} sigmoid(z2)} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{14} & & & \multicolumn{2}{l|}{z3 \textcolor{grayhighlight}{=} np\textcolor{grayhighlight}{.}dot(a2, w2) \textcolor{grayhighlight}{+} b2} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{15} & & & \multicolumn{2}{l|}{a3 \textcolor{grayhighlight}{=} z3} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{16} & & & \multicolumn{2}{l|}{dz3 \textcolor{grayhighlight}{=} a3 \textcolor{grayhighlight}{-} y} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{17} & & & \multicolumn{2}{l|}{dw2 \textcolor{grayhighlight}{=} np\textcolor{grayhighlight}{.}dot(a2\textcolor{grayhighlight}{.}T, dz3)} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{18} & & & \multicolumn{2}{l|}{db2 \textcolor{grayhighlight}{=} np\textcolor{grayhighlight}{.}sum(dz3, axis\textcolor{grayhighlight}{=0}, keepdims\textcolor{grayhighlight}{=}\textcolor{codegreen}{\textbf{True}})} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{19} & & & \multicolumn{2}{l|}{dz2 \textcolor{grayhighlight}{=} np\textcolor{grayhighlight}{.}dot(dz3, w2\textcolor{grayhighlight}{.}T) \textcolor{grayhighlight}{*} sigmoid\_derivative(z2)} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{20} & & & \multicolumn{2}{l|}{dw1 \textcolor{grayhighlight}{=} np\textcolor{grayhighlight}{.}dot(X\textcolor{grayhighlight}{.}T, dz2)} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{21} & & & \multicolumn{2}{l|}{db1 \textcolor{grayhighlight}{=} np\textcolor{grayhighlight}{.}sum(dz2, axis\textcolor{grayhighlight}{=0})} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{22} & \multicolumn{4}{l|}{} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{23} & & & \multicolumn{2}{l|}{\textcolor{commentblue}{\textit{\# 3. update weights and biases with gradients}}} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{24} & & & \multicolumn{2}{l|}{w1 \textcolor{grayhighlight}{-=} learning\_rate \textcolor{grayhighlight}{*} dw1 \textcolor{grayhighlight}{/} m} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{25} & & & \multicolumn{2}{l|}{w2 \textcolor{grayhighlight}{-=} learning\_rate \textcolor{grayhighlight}{*} dw2 \textcolor{grayhighlight}{/} m} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{26} & & & \multicolumn{2}{l|}{b1 \textcolor{grayhighlight}{-=} learning\_rate \textcolor{grayhighlight}{*} db1 \textcolor{grayhighlight}{/} m} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{27} & & & \multicolumn{2}{l|}{b2 \textcolor{grayhighlight}{-=} learning\_rate \textcolor{grayhighlight}{*} db2 \textcolor{grayhighlight}{/} m} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{28} & \multicolumn{4}{l|}{} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{29} & & & \multicolumn{2}{l|}{\textcolor{codegreen}{\textbf{if}} i \textcolor{grayhighlight}{\% 1000 == 0}:} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{30} & & & & \textcolor{codegreen}{print}(\textcolor{codered}{"Epoch"}, i, \textcolor{codered}{"loss: "}, np\textcolor{grayhighlight}{.}mean(np\textcolor{grayhighlight}{.}square(dz3))) \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{31} & \multicolumn{4}{l|}{} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{32} & & \multicolumn{3}{l|}{model \textcolor{grayhighlight}{=} \{\textcolor{codered}{"w1"}: w1, \textcolor{codered}{"b1"}: b1, \textcolor{codered}{"w2"}: w2, \textcolor{codered}{"b2"}: b2\}} \\
-            \rowcolor{regularback} \cellcolor{linenumberback} \textcolor{grayhighlight}{33} & & \multicolumn{3}{l|}{\textcolor{codegreen}{\textbf{return}} model} \\
-            \hline
-        \end{tabular}
-    }
-    \caption{An overview of the training function, which uses the training dataset, number of hidden layer units, learning rate, and number of iterations as parameters}
-    \label{tab:train}
-\end{table}
 
 \subsubsection{Support Vector Machine}
 %\label{subsubsec:SVM}
 
-In machine learning, Support Vector Machines (SVMs) or Support Vector Networks (SVNs) are supervised maximum margin models with associated learning algorithms that analyze data for classification and regression. The Vapnikâ€“Chervonenkis theory developed in 1964 provided the basis for the original SVM algorithm developed at AT\&T Bell Laboratories. In addition to linear classification, SVMs are also effective for non-linear classification using the hyperplane kernel trick with maximum margin developed in 1992 by Bernhard Boser, Isabelle Guyon, and Vladimir Vapnik \cite{Boser1992}, implicitly mapping their inputs to high-dimensional feature spaces. 
+In machine learning, Support Vector Machines (SVMs) or Support Vector Networks (SVNs) are supervised maximum margin models with associated learning algorithms that analyze data for classification and regression. In addition to linear classification, SVMs are also effective for non-linear classification using the hyperplane kernel trick \cite{Boser1992}, implicitly mapping their inputs to high-dimensional feature spaces.
 
-SVMs can also be used for regression tasks where the objective becomes $\epsilon$ -sensitive. A "soft margin" to separate data that is not linearly separable was proposed by Corinna Cortes and Vapnik in 1993 and published in 1995 \cite{Cortes1995}. Support Vector Clustering \cite{BenHur2001} (SVC), developed by Hava Siegelmann and Vladimir Vapnik, applies support vector statistics to unlabeled data in unsupervised learning to find new natural groupings. The popularity of SVMs is due to their amenability to theoretical analysis, flexibility, and application to a wide range of tasks, including structured prediction problems. It is unclear whether SVM predictions perform better than other linear models, such as logistic, and linear regression.
+SVMs can also be used for regression tasks where the objective becomes $\epsilon$ -sensitive. A "soft margin" to separate data that is not linearly separable was proposed by Corinna Cortes and Vapnik in 1993 and published in 1995 \cite{Cortes1995}. Support Vector Clustering \cite{BenHur2001} (SVC) applies support vector statistics to unlabeled data in unsupervised learning to find new natural groupings. Meyer, Leisch, and Hornik compared SVM with other classifiers \cite{Meyer2003}, but it is unclear whether SVM predictions perform better than other linear models, such as logistic, and linear regression.
 
-Data classification is a common task in machine learning. Suppose that each of the given data points belongs to one of two classes, and the goal is to decide which class the new data point will belong to. In the case of Support Vector Machines, a data point is viewed as a $p$-dimensional vector, a list of $p$ numbers, and we want to know if such points can be separated using a $(p-1)$-dimensional hyperplane. This is called a linear classifier. Many hyperplanes could classify the data, but a reasonable choice is the one that represents the largest separation, or margin, between the two classes. In this case, the distance of the hyperplane to the nearest data point on each side is maximal. Such a hyperplane is known as a maximum margin hyperplane, and the linear classifier is a maximum margin classifier or an optimal stability perception.
+Support Vector Machine constructs a set of hyperplanes in a high-dimensional space, used for classification, regression, or outlier detection \cite{developers2023}. Intuitively, a good separation is achieved by the hyperplane with the greatest distance to the nearest point in the training data belonging to any class \cite{Hastie2009}.
 
-SVMs belong to the family of generalized linear classifiers and can be interpreted as an extension of perceptrons. They can also be considered a special case of Tikhonov's regulation. A special property is that they simultaneously minimize the empirical classification error and maximize the geometric margin, and are also known as maximum margin classifiers. Meyer, Leisch, and Hornik compared SVM with other classifiers \cite{Meyer2003}.
+The original maximum margin hyperplane algorithm proposed by Vapnik in 1963 constructed a linear classifier. In 1992, Bernhard Boser, Isabelle Guyon, and Vladimir Vapnik proposed creating nonlinear classifiers using the kernel trick \cite{Boser1992, Aizerman1964}. A multidimensional feature space increases the generalization error of Support Vector Machines, so additional samples are needed to enhance performance \cite{Jin2012}. To keep the computational burden reasonable, a kernel probability density function $k(x, y)$ is chosen to fit the problem \cite{Press2007}.
 
-Potential disadvantages of SVMS include fully labeling the input data. SVMs are derived from Vapnik's theory, which avoids probability estimation on finite data, so class membership probabilities are uncalibrated. SVM is directly applicable only for two-class tasks. Therefore, algorithms that reduce the multi-class task to several binary problems must be applied to build a multi-class SVM. The parameters of the solved model are difficult to interpret.
+SVMs have been used to solve a variety of real-world problems. SVMs are useful in text and hypertext categorization, as their application can significantly reduce the need for labeled training instances in standard inductive and transductive settings \cite{Joachims1998}. Some methods for shallow semantic parsing are based on SVMs \cite{Pradhan2004}. Image classification and segmentation can also be performed using SVM models, including a modified version of SVM that uses privileged access as proposed by Vapnik \cite{Laurent2014, Barghout2015}.
 
-Data pre-processing, or standardization, is recommended to increase the classification accuracy \cite{Fan2008}. Minimum-maximum, normalization by decimal scaling, and Z-score \cite{Mohamad2013} are among many standardization methods. Subtracting the mean and dividing by the variance for each feature is commonly used for SVM \cite{Fennell2019}.
+Classification of satellite data such as Synthetic Aperture Radar (SAR) data is possible using a supervised SVM \cite{Maity2016}. Handwritten characters can be recognized using SVM \cite{Decoste2002, Maitra2015}. The SVM algorithm is widely used in biological and other sciences. They were used to classify proteins with up to $90\%$ compounds correctly classified. Permutation tests based on SVM weights have been proposed as a mechanism for interpreting SVM models \cite{Gaonkar2013, Cuingnet2011}. SVM weights were also used to interpret SVM models \cite{Statnikov2006}.
 
-More formally, a Support Vector Machine constructs a hyperplane or set of hyperplanes in a high-dimensional or infinite-dimensional space. Hyperplanes are used for classification, regression, or other tasks such as outlier detection \cite{developers2023}. Intuitively, a good separation is achieved by the hyperplane with the greatest distance to the nearest point in the training data belonging to any class (the so-called functional margin), because the generalization error of the classifier decreases with increasing margin \cite{Hastie2009}. A lower generalization error means overfitting to the training data set is less likely to occur.
-
-While the original problem can be posed in a finite-dimensional space, the sets to be distinguished are not always linearly separable. For this reason, it was proposed \cite{Boser1992} to map the original finite-dimensional space into a multidimensional space, assuming that the separation will be easier in that space. To keep the computational burden reasonable, mappings using SVM schemes are designed to ensure that the products of matrix multiplication of pairs of input vectors can be easily computed in terms of variables in the source space, defining them in terms of a kernel probability density function $k(x, y)$ chosen to fit the problem \cite{Press2007}.
-
-Hyperplanes in multidimensional space are points whose vector product with a vector in that space is constant. Such a set of vectors is an orthogonal, and thus minimal, set of vectors defining the hyperplane. The vectors defining the hyperplanes can be chosen as linear combinations with the parameters $\alpha_{i}$ of the feature vector images $x_{i}$ appearing in the database. With this choice of hyperplane, the points $x$ in the feature space that are mapped in the hyperplane are defined by the expression 
-in Equation~\ref{eqn:4}, which has a constant sum.
-
-\begin{equation}
-	\sum_{i} \alpha_{i}k(x_{i},x)
-	\label{eqn:4}
-\end{equation}
-
-It should be noted that if $k(x, y)$ becomes small as $y$ moves away from $x$, each term in the sum measures the degree of closeness of the test point $x$ to the corresponding point in the database $x_{i}$. The above sum of kernel probability density function values is used to measure the relative proximity of each test point to data points originating from one or the other set to be discriminated between. The set of points $x$ mapped to any hyperplane can be complex, allowing for more sophisticated discrimination between sets that are not convex in the original space.
-
-SVMs have been used to solve a variety of real-world problems. SVMs are useful in text and hypertext categorization, as their application can significantly reduce the need for labeled training instances in standard inductive and transductive settings \cite{Joachims1998}. Some methods for shallow semantic parsing are based on SVMs \cite{Pradhan2004}. Image classification can also be performed using SVM. Experimental results show that SVMs achieve significantly higher search accuracy than traditional query refinement schemes after only three to four rounds of relevance feedback. This is also true for image segmentation systems, including those using a modified version of SVM that uses privileged access as proposed by Vapnik \cite{Laurent2014, Barghout2015}.
-
-Classification of satellite data such as Synthetic Aperture Radar (SAR) data is possible using a supervised SVM \cite{Maity2016}. Handwritten characters can be recognized using SVM \cite{Decoste2002, Maitra2015}. The SVM algorithm is widely used in biological and other sciences. They were used to classify proteins with up to $90\%$ compounds correctly classified. Permutation tests based on SVM weights have been proposed as a mechanism for interpreting SVM models \cite{Gaonkar2013, Cuingnet2011}. SVM weights were also used to interpret SVM models \cite{Statnikov2006}. The subsequent interpretation of SVM models to identify features used by the model for prediction is a relatively new area of research of particular importance in the biological sciences.
-
-Let there be a training data set with $n$ points $(\mathbf{x}_{1},y_{1}),\ldots,(\mathbf{x}_{n},y_{n})$ for which $y_{i}$ is $1$ or $-1$, and each denotes the class to which the point $\mathbf{x}_{i}$ belongs. Each $\mathbf{x}_{i}$ is a $p$-dimensional real vector. We want to find the hyperplane with the maximum margin that separates the group of points $\mathbf{x}_{i}$ for which $y_{i}=1$ holds from the group of points for which $y_{i}=-1$ holds. A hyperplane with a maximum margin is defined so the distance between the hyperplane and the nearest point $\mathbf{x}_{i}$ from any group is maximized.
-
-Any hyperplane can be written as a set of points $\mathbf{x}$ that satisfy the expression $\mathbf{w}^{\mathsf{T}}\mathbf{x} -b=0$. The expression $\mathbf{w}$ denotes a vector perpendicular to the hyperplane which is not necessarily normalized. This is similar to the Hesse normal form, except that $\mathbf{w}$ is not necessarily a unit vector. The parameter in Equation~\ref{eqn:5} determines the displacement of the hyperplane from the origin along the normal vector $\mathbf{w}$.
-
-\begin{equation}
-	\frac{b}{\|\mathbf{w} \|}
-	\label{eqn:5}
-\end{equation}
-
-The original maximum margin hyperplane algorithm proposed by Vapnik in 1963 constructed a linear classifier. However, in 1992, Bernhard Boser, Isabelle Guyon, and Vladimir Vapnik proposed creating nonlinear classifiers using the kernel trick. The kernel trick on the maximum margin hyperplane \cite{Boser1992} was first proposed by Aizerman et al. \cite{Aizerman1964}. A nonlinear kernel probability density function replaces each matrix multiplication product. This allows the algorithm to fit the maximum margin hyperplane in the transformed feature space. The transformation can be non-linear, and the transformed space can have many dimensions. Although the classifier is a hyperplane in the transformed feature space, it may be nonlinear in the original input space. A multidimensional feature space increases the generalization error of Support Vector Machines, so many samples are needed to enhance performance \cite{Jin2012}. 
-
-Some common kernel probability density functions include the polynomial (homogeneous), which becomes linear for $d=1$, $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = {(\mathbf{x}_{i} \cdot \mathbf{x}_{j})}^{d}$, polynomial (inhomogeneous), $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = {(\mathbf{x}_{i} \cdot \mathbf{x}_{j} + r)}^{d}$, and the Gaussian Radial Basis Function (RBF), for which $\gamma > 0$, $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = \mathrm{exp}(- \gamma{\mid \mid \mathbf{x}_{i} - \mathbf{x}_{j} \mid \mid}^{d})$. RBF can be parameterized as $\gamma = 1 / (2{\sigma}^{2})$. The sigmoid function (hyperbolic tangent) has the equation $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = \mathrm{tanh}(\kappa \mathbf{x}_{i} \ cdot \mathbf{x}_{j} + c)$ for some values of $\kappa > 0$, but not for all, and for $c < 0$. The equation $k(\mathbf{x}_{i}, \mathbf{x}_{j}) = \varphi(\mathbf{x}_{i}) \cdot \varphi(\mathbf{x}_{j})$ links the kernel to the transformation $\varphi(\mathbf{x}_{i})$. The value $\mathbf{w}$ in Equation~\ref{eqn:6} is also located in the transformed space.
-
-\begin{equation}
-	\mathbf{w} = \sum_{i} \alpha_{i}y_{i}\varphi(\mathbf{x}_{i} )
-	\label{eqn:6}
-\end{equation}
-
-The matrix product with $\mathbf{w}$ for classification can be calculated using the kernel trick in Equation~\ref{eqn:7}.
-
-\begin{equation}
-	\mathbf{w} \cdot \varphi(\mathbf{x}) = \sum_{i} \alpha_{i}y_{i}\varphi (\mathbf{x}_{i}) k(\mathbf{x}_{i}, \mathbf{x}_{j})
-	\label{eqn:7}
-\end{equation}
-
-The performance of SVM depends on the kernel probability density function, the parameters of the specified kernel probability density function, and the "soft" margin parameter $\lambda$. The Gaussian kernel probability density function, which has one parameter $\gamma$, is often used. The best combination of $\lambda$ and $\gamma$ is selected by searching a grid with exponentially increasing sequences of $\lambda$ and $\gamma$, for example, $\lambda \in \{2^{-5},2^{-3},\dots,2^{13},2^{15}$, $\gamma \in \{2^{-15},2^{-13},\dots,2^{1}, 2^{3}\}$. Each combination of parameter choices is usually cross-validated, and the parameters with the best accuracy are selected. Recent advances in Bayesian optimization can be used to choose $\lambda$ and $\gamma$. This method requires the evaluation of many fewer combinations of parameters than when searching the entire network. The final model is used to test and classify new data and is trained using the selected parameters \cite{Hsu2003}.
+The performance of SVM depends on the kernel probability density function, the parameters of the specified kernel probability density function, and the "soft" margin parameter $\lambda$. Each combination of parameter choices is usually cross-validated, and the parameters with the best accuracy are selected. The final model is used to test and classify new data and is trained using the best parameters \cite{Hsu2003}.
 
 \subsubsection{Decision Tree}
 %\label{subsubsec:DT}
 
-Decision Trees are an approach to supervised learning in statistics, data mining, and machine learning. They represent predictive or decision-making model used to make inferences about a series of observations. Tree models in which the target variable can take on a discrete set of values are called classification trees. In these tree structures, the leaves represent the class labels and the branches represent the combinations of features that lead to those class labels. Decision Trees where the target variable can take on continuous values (usually real numbers) are called regression trees. More generally, the concept of a regression tree can be extended to any object equipped with pairwise differences such as categorical arrays \cite{Studer2011}.
+Decision Trees are an approach to supervised learning in statistics, data mining, and machine learning. They represent predictive or decision-making model used to make inferences about a series of observations. Tree models in which the target variable can take on a discrete set of values are called classification trees. Decision Trees where the target variable can take on continuous values (usually real numbers) are called regression trees. A regression tree can be extended to any object with pairwise differences such as categorical arrays \cite{Studer2011}. Decision Trees are among the most popular machine learning algorithms due to their comprehensibility and simplicity \cite{Wu2008}. A Decision Tree describes the input data and the resulting classification tree can be the input for decision-making in data mining \cite{Rokach2014}.
 
-Decision Trees are among the most popular machine learning algorithms due to their comprehensibility and simplicity \cite{Wu2008}. A Decision Tree can visually and explicitly represent decisions and decision-making in decision analysis. The Decision Tree describes the data in data mining, but the resulting classification tree can be the input for decision-making. Decision Tree learning is often used in data mining \cite{Rokach2014}. The goal is to create a model that predicts the value of a target variable based on several input variables.
-
-A Decision Tree is a simple representation for classifying examples. For this text, assume that all input features have finite discrete domains and that there is a single target feature called "classification". Each element of the classification domain is called a class. A decision or classification tree is one in which each internal node, not a leaf, is labeled with an input feature. Arcs coming from a node labeled by an input feature are labeled with each of the possible values of the target feature, or an arc leads to a child decision node on another input feature. Each leaf of the tree is labeled with a class or a probability distribution over the classes, which means that the tree has classified the data set into a particular class or probability distribution. The probability distribution is skewed toward certain subsets of classes if the Decision Tree is well constructed.
-
-The tree is built by dividing the original set, which forms the root node, into subsets that form descendants, or successors. The segmentation is made using a set of rules based on classification features \cite{ShalevShwartz2014}. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is complete when the subset at a node all have the same target variable values or the division no longer adds value to the predictions. This process of Top-Down Induction of Decision Trees (TDIDT) \cite{Quinlan1986} is an example of a greedy algorithm and is by far the most common strategy for learning Decision Trees from data \cite{Rokach2005}. C5.0, used in the \textit{caret} package in R, has a similar approach and improves the ID3 and C4.5 algorithms.
+A tree is built by dividing the original set, which forms the root node, into subsets that form descendants, or successors. The segmentation is made using a set of rules based on classification features \cite{ShalevShwartz2014}. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is complete when the subset at a node all have the same target variable values or the division no longer adds value to the predictions. This process of Top-Down Induction of Decision Trees (TDIDT) \cite{Quinlan1986} is an example of a greedy algorithm and is by far the most common strategy for learning Decision Trees from data \cite{Rokach2005}. C5.0, used in the \textit{caret} package in R, has a similar approach and improves the ID3 and C4.5 algorithms.
 
 Decision Trees can also be described as a combination of mathematical and computational techniques that help describe, categorize, and generalize a given data set in data mining. Data comes in records of the form $(x, Y) = (x_{1}, x_{2}, x_{3}, \ldots, x_{k}, Y)$. The dependent variable $Y$ is the target variable we need to understand, classify, or generalize. Features $x_{1}, x_{2}, x_{3}, \ldots, x_{k}$ form the vector $X$ used for that task.
 
@@ -352,378 +221,108 @@ Decision Trees can also be described as a combination of mathematical and comput
 
 In statistics, Naive Bayes (NB) classifiers are a family of linear "probabilistic classifiers" that assume that, given a target class, the features are conditionally independent. The classifier got its name from this strong and possibly naive assumption. These classifiers are among the simplest Bayesian network models \cite{McCallum2011}. Naive Bayes classifiers are highly scalable and require several parameters. The number of parameters depends linearly on the number of variables. Variables represent features or predictors in the learning problem. Maximum likelihood training can be performed by evaluating a closed-form expression \cite{Russell1999}, which requires linear time, instead of the expensive iterative approximation used for many other classifiers.
 
-In the statistical literature, Naive Bayes models are known by various names, including simple Bayes and independent Bayes \cite{Hand2001}. These names refer to Bayes' theorem in the classifier's decision rule, but a Naive Bayesian classifier is not necessarily a Bayesian method \cite{Russell1999, Hand2001}. Naive Bayes is a simple technique for constructing classifiers. A classifier is a model that assigns class labels to problem instances, represented as vectors of feature values, and the class labels are values from some finite set. The family of Naive Bayes algorithms is based on a common principle that the value of a particular feature, given a class variable, is independent of the value of any other feature. For example, a fruit can be considered an apple if it is red, round, and about ten centimeters in diameter. A Naive Bayesian classifier considers each feature to contribute to the probability that this fruit is an apple, regardless of any possible correlations between the color, shape, and diameter features.
+In the statistical literature, Naive Bayes models are known by various names, including simple Bayes and independent Bayes \cite{Hand2001}. These names refer to Bayes' theorem in the classifier's decision rule, but a Naive Bayesian classifier is not necessarily a Bayesian method \cite{Russell1999, Hand2001}. In other words, one can work with a Naive Bayesian model without accepting Bayesian probability or methods. In many practical applications, parameter estimation for Naive Bayes models uses the maximum likelihood method.
 
-In many practical applications, parameter estimation for Naive Bayes models uses the maximum likelihood method. In other words, one can work with a Naive Bayesian model without accepting Bayesian probability or methods. Despite their simple design and seemingly oversimplified assumptions, Naive Bayes classifiers have performed quite well in many complex real-world situations. In 2004, an analysis of the Bayesian classification problem showed that there are reasonable theoretical reasons for the seemingly incredible performance of Naive Bayesian classifiers \cite{Zhang2004}. However, a comprehensive comparison with other classification algorithms in 2006 showed that Bayesian classification performed worse than other approaches, such as boosted trees or random forests \cite{Caruana2006}. The advantage of Naive Bayes is that it requires only a small amount of training data to estimate the parameters needed for classification \cite{stackexchange}.
+Despite their simple design and seemingly oversimplified assumptions, Naive Bayes classifiers have performed quite well in many complex real-world situations. In 2004, an analysis of the Bayesian classification problem showed that there are reasonable theoretical reasons for the seemingly incredible performance of Naive Bayesian classifiers \cite{Zhang2004}. However, a comprehensive comparison with other classification algorithms in 2006 showed that Bayesian classification performed worse than other approaches, such as boosted trees or random forests \cite{Caruana2006}. The advantage of Naive Bayes is that it requires only a small amount of training data to estimate the parameters needed for classification \cite{stackexchange}.
 
-In the abstract, Naive Bayes is a conditional probability model. The model assigns probabilities $p(C_{k}\mid x_{1},\ldots, x_{n})$ to each of the $K$ possible outcomes or classes $C_{k}$ given the problem instance to be classified, represented by the vector $x = (x_{1},\ldots, x_{n})$ which encodes $n$ features representing mutually independent variables \cite{Murty2011}. The problem with the above formulation is that if the number of features $n$ is large or the feature has a large value range, it is infeasible to base a model on probability tables. The model must therefore be reformulated to make it easier. The conditional probability can be decomposed using Bayes' theorem in Equation~\ref{eqn:8}.
+In the abstract, Naive Bayes is a conditional probability model. The model assigns probabilities $p(C_{k}\mid x_{1},\ldots, x_{n})$ to each of the $K$ possible outcomes or classes $C_{k}$ given the problem instance to be classified, represented by the vector $x = (x_{1},\ldots, x_{n})$ which encodes $n$ features representing mutually independent variables \cite{Murty2011}. The problem with the above formulation is that if the number of features $n$ is large or the feature has a large value range, it is infeasible to base a model on probability tables. The model must therefore be reformulated using conditional probability represented by Bayes' theorem in Equation~\ref{eqn:4}.
 
 \begin{equation}
 	p(C_{k}\mid \mathbf{x})={\frac{p(C_{k})\ p(\mathbf{x} \mid C_{k})}{p(\mathbf{x})}}
-	\label{eqn:8}
-\end{equation}
-
-Using natural language and Bayesian probability terminology, the above equation can be written in a form presented in Equation~\ref{eqn:9}.
-
-\begin{equation}
-	posterior = \frac{prior \times probability}{evidence}
-	\label{eqn:9}
-\end{equation}
-
-In practice, only the numerator is evaluated, because the denominator does not depend on $C$, and the values of the feature $x_{i}$ are given. This means that the denominator is constant in practice. The numerator is equivalent to the pooled probability model $p(C_{k},x_{1},\ldots,x_{n})$ which can be reformulated as follows, using the chain rule to repeatedly apply the definition of conditional probability in Equation~\ref{eqn:10}.
-
-\begin{equation}
-	\begin{aligned}
-        p(C_{k},x_{1},\ldots,x_{n}) &= p(x_{1},\ldots,x_{n},C_{k}) \\
-        &= p(x_{1}\mid x_{2}, \ldots,x_{n},C_{k}) p(x_{2},\ldots,x_{n},C_{k}) \\
-        &= p(x_{1}\mid x_{2}, \ldots,x_{n},C_{k}) p(x_{2}\mid x_{3}, \ldots,x_{n},C_{k} {k}) \\
-        &\quad p(x_{3},\ldots,x_{n},C_{k}) \\
-        &= \cdots \\
-        &= p(x_{1}\mid x_{2}, \ldots,x_{n},C_{k}) p(x_{2}\mid x_{3}, \ldots,x_{n},C_{k} {k}) \\
-        &\quad \cdots p(x_{n-1}\mid x_{n},C_{k}) p(x_{n}\mid C_{k}) p(C_{k})\\
-    \end{aligned}
-	\label{eqn:10}
-\end{equation}
-
-In the next step, "naive" assumptions about conditional independence are accounted for. Assume that all features in $\mathbf{x}$ are mutually conditionally independent considering the category $C_{k}$. Under this assumption, $p(x_{i}\mid x_{i+1}, \ldots,x_{n},C_{k}) = p(x_{i}\mid C_{k})$, and therefore the joint probability model can be expressed in Equation~\ref{eqn:11}
-
-\begin{equation}
-	\begin{aligned}
-        p(C_{k}\mid x_{1},\ldots,x_{n}) \propto &p(C_{k}, x_{1},\ldots,x_{n}) \\
-        &= p(C_{k})p(x_{1}\mid C_{k}) p(x_{2}\mid C_{k}) p(x_{3}\mid C_{k}) \cdots \\
-        &= p(C_{k}) \prod_{i=1}^{n} p(x_{1}\mid C_{k}) \\
-    \end{aligned}
-	\label{eqn:11}
-\end{equation}
-
-The value $\propto$ indicates proportionality because the denominator $p({\mathbf{x}})$ is omitted. Under the above independence assumptions, the conditional distribution over the class variable $C$ is defined in Equation~\ref{eqn:12}.
-
-\begin{equation}
-	p(C_{k}\mid x_{1},\ldots,x_{n}) = \frac{1}{Z} p(C_{k}) \prod_{i=1}^{n} p(x_{1}\mid C_{k})
-	\label{eqn:12}
-\end{equation}
-
-The proof in Equation~\ref{eqn:13} denotes a scaling factor that depends exclusively on $x_{1}, x_{2}, \ldots, x_{n}$, and constant if the feature variable values are known.
-
-\begin{equation}
-	Z = p(\mathbf{x}) = \sum_{k} p(C_{k}) p(\mathbf{x}|C_{k})
-	\label{eqn:13}
-\end{equation}
-
-The discussion up to this point has been about the Naive Bayesian probability model with independent features. A Naive Bayesian classifier combines the specified model with decision rules. One frequently used decision rule is the selection of the most likely hypothesis to minimize the probability of misclassification, also known as maximum a posteriori (MAP). The corresponding classifier, the Bayesian classifier, is a function that assigns a class label to the sample $\hat{y} = C_{k}$ for some class $k$ according to Equation~\ref{eqn:14}.
-
-\begin{equation}
-	\hat{y} = \mathrm{argmax}_{k\in \{1, \ldots, K\}} p(C_{k}) \prod_{i=1}^{n} p(x_{i}\mid C_{k})
-	\label{eqn:14}
-\end{equation}
-
-The a priori probability for each class can be calculated using Equation~\ref{eqn:15} if we assume that the classes are equally likely, or by an estimate obtained by dividing the number of samples of the class by the total number of samples in the data set for training.
-
-\begin{equation}
-	p(C_{k}) = \frac{1}{K}
-	\label{eqn:15}
+	\label{eqn:4}
 \end{equation}
 
 To estimate feature distribution parameters, we must assume a parametric distribution, or generate non-parametric models for the features from the training data set \cite{John2013}. Assumptions about the distribution of features are called an event model or Bayesian classifier, which can introduce confusion by creating both a continuous and discrete model \cite{Mccallum2001, Metsis2006}. Multinomial and Bernoulli distributions have often been used for discrete features in document classification, or spam filtering. The Gaussian Naive Bayesian classifier was used since the features used in this study assumed continuous values.
 
-When processing continuous data, it is often assumed that the values are distributed according to a normal (Gaussian) distribution. For example, suppose the training data contains a continuous attribute, $X$. The data is first segmented according to the class, then according to the mean value and the variance of the variable $x$ which is calculated for each class separately. Let $\mu_{k}$ be the mean value of the sequence $x$ that denotes the class $C_{k}$, and let $\sigma_{k}^{2}$ be the Bessel corrected variance of the sequence $x$ that denotes the class $C_{k}$. Suppose the collected observation value is $v$. Then the probability density $v$ for the class $C_{k}$, $p(x=v\mid C_{k})$, can be calculated by including $v$ in the equation for the normal distribution parameterized by $\mu_{k}$ and $\sigma_{k}^{2}$. The expression in Equation~\ref{eqn:16} is formally valid.
-
-\begin{equation}
-	p(x=v\mid C_{k}) = \frac{1}{\sqrt{2\pi \sigma_{k}^{2}}} e^{-\frac{{(v-\mu_{k})}^{2}}{2\sigma_{k}^{2}}}
-	\label{eqn:16}
-\end{equation}
-
 Clustering is often used to discretize continuous values. The new set of features obtained by discretization follows the Bernoulli distribution. Some literature claims that discretization is necessary to use a Naive Bayesian classifier, but discretization may discard the information needed to distinguish between classes \cite{Hand2001}.
 
 Sometimes the distribution of class-based marginal densities is far from normal. The marginal probability density of each class can be used to estimate the kernel probability density function in such cases. This method, introduced by John and Langley \cite{John2013}, can significantly increase the accuracy of the classifier \cite{Piryonesi2020, Hastie2009}.
+
+\subsubsection{Neural Networks}
+%\label{subsubsec:NN}
+
+The neurons of human or animal brains provide the basis for a Neural Network (NN) or Artificial Neural Network (ANN) with connected units or nodes called artificial neurons in machine learning \cite{mitExplainedNeural, brahme2014comprehensive}. 
+
+Shallow Neural Networks are simple and easy to train quickly with fewer parameters, and computational resources. They typically contain only a few hidden layers for processing between the input layer that receives the data, and the final layer that produces the output \cite{olden2002illuminating, ozesmi1999artificial}.  A network with at least two hidden layers \cite{bishop2006pattern} is considered a deep Neural Network.
+
+Neural Networks are typically trained through empirical risk minimization. This method optimizes the network's parameters to minimize the difference or empirical risk, between the predicted output and the actual target values in a given dataset \cite{vapnik2013nature}. Gradient-based methods such as backpropagation are usually used to estimate network parameters  \cite{vapnik2013nature}. During the training phase, ANNs learn from labeled training data by iteratively updating their parameters to minimize a defined loss function \cite{goodfellow2016deep}.
+
+Using Artificial Neural Networks requires an understanding of their characteristics. The model suitable for a specific task varies depending on how the data is stored and other practical considerations. Many model parameters may need to be adjusted and differ for each model. The hyperparameters for the learning algorithm may also be modified to suit the problem \cite{probst2019tunability} during an extensive tuning process experimenting on unseen training data, and various learning algorithms are available.
+
+The network design process can be simplified using previously defined machine learning techniques like neural architecture search (NAS). These networks have performed well even when pitted against architectures selected by humans. The proposed model is tested and the responses are used to train the NAS network \cite{zoph2016neural}. AutoML and AutoKeras \cite{jin2019auto} provide extensive frameworks for this process. The \textit{scikit-learn} library features various classification, regression, and clustering algorithms including support-vector machines, random forests, gradient boosting, k-means, and Density-Based Spatial Clustering (DBSCAN). The hyperparameters must be predefined, are not trained, and include how many neurons are in each layer, learning rate, step, stride, depth, receptive field, and padding for CNNs \cite{claesen2015hyperparameter}. TensorFlow and Keras are used to build a custom network in Python, and the user can define layers, models, or metrics. The data, number of hidden layer units, learning rate, and number of iterations are required parameters for model training based on a book by Liu \cite{liu2020python}.
 
 \subsubsection{Partial Least Squares}
 %\label{subsubsec:PLS}
 
 Partial Least Squares (PLS) regression, or projection to latent structures, \cite{wold2001pls, abdi2010partial}, is a linear regression statistical model that transforms the predicted and the observable variables to a new space instead of identifying maximum variance hyperplanes used in a linear regression model. Svante and Herman O. A. Wold, a Swedish father and son, founded this approach. PLS methods are bilinear factor models because the $X$ and $Y$ are projected to new spaces. In Partial Least Squares Discriminant Analysis (PLS-DA), $Y$ is categorical \cite{saebo2008lpls}.
 
-PLS discovers how $X$ and $Y$ are related, modeling their covariance structures with a latent variable approach. PLS determines the multidimensional direction in the $X$ space that explains the maximum multidimensional variance direction in the $Y$ space. PLS regression is recommended when there are fewer observations than variables in the predictor matrix or multicollinearity is present among $X$ values. By contrast, standard regression will not succeed without regularization in such problems. PLS regression originated in social sciences but is widespread in chemometrics, bioinformatics, sensometrics, neuroscience, and anthropology.
-
-Using $n$ paired observations $\left(\vec{x_{i}}, \vec{y_{i}}\right), i \in 1, \dots, n$. PLS finds the normalized direction $\vec{p_{j}}, \vec{q_{j}}$ that maximizes the covariance in the first step $j = 1$ \cite{youtubeYouTube}, shown in Equation~\ref{eqn:17}. Matrix notation is used in further discussion of the model.
+Using $n$ paired observations $\left(\vec{x_{i}}, \vec{y_{i}}\right), i \in 1, \dots, n$. PLS finds the normalized direction $\vec{p_{j}}, \vec{q_{j}}$ that maximizes the covariance in the first step $j = 1$ \cite{youtubeYouTube}, shown in Equation~\ref{eqn:5}. Matrix notation is used in further discussion of the model.
 
 \begin{equation}
 	\max_{{\vec{p}}_{j},{\vec{q}}_{j}}\operatorname{E} [\underbrace{({\vec{p}}_{j}\cdot {\vec{X}})}_{t_{j}}\underbrace{({\vec{q}}_{j}\cdot {\vec{Y}})}_{u_{j}}
-	\label{eqn:17}
+	\label{eqn:5}
 \end{equation}
 
-The expressions $X=TP^{\mathrm{T}}+E$ $Y=UQ^{\mathrm{T}}+F$ represent  multivariate PLS with $l$ components, where $X$ is an $n\times m$ matrix of predictors, and $Y$ is an $n\times p$ matrix of responses. $T$ and $U$ are $n\times \ell$ matrix projections of $X$ and $Y$. These projections are the $X$ or $Y$ score, component, or factor matrix. $P$ and $Q$ are $m\times \ell $ and $p\times \ell $ loading matrices, and $E$ and $F$ are the error terms, independent random normal variables following the same distribution.
-
-The decompositions of $X$ and $Y$ aim to increase the covariance between $T$ and $U$. Covariance is defined pair by pair and the covariance of columns of equal length $n$, $i$ of $T$, and $i$ of $U$, is maximized. The covariance of the column $i$ of $T$ with the column $j$ of $U$ is zero if $i$ does not equal $j$.
-
-The scores form an orthogonal basis in PLSR, and the loadings are chosen to achieve this. In Principal Component Analysis (PCA) orthogonality is not imposed on scores but onto loadings instead \cite{lindgren1993kernel, de1994comments, dayal1997improved, de1993simpls, rannar1994pls, abdi2010partial}.
-
-Many versions of PLS exist for estimating the factor and loading matrices $T$, $U$, $P$, and $Q$. They usually approximate linear regression between $X$ and $Y$ as $Y=X{\tilde{B}}+{\tilde{B}}_{0}$. Some PLS algorithms can only be used if $Y$ is a column vector. Others are universally utilized for a matrix $Y$. Algorithms may not always estimate the factor matrix $T$ as an orthogonal matrix. The components will change based on the selected PLS method, but not the final result.
-
-PLS iterates through the required operations $k$ times, once for each component. The first operation is finding the directions of maximal covariance in the input and output space. Least squares regression is done on the input score in the next operation. Finally, the matrices representing the input $X$ and target $Y$ are deflated, but this is not always done.
-
-PLS1 is often utilized if $Y$ is a vector that estimates $T$ as an orthonormal matrix. The $t$ vectors need to be normalized, which is not shown in the pseudocode in Table~\ref{tab:PLS1} based on the paper by Takane and Loisel \cite{takane2016pls}. Variables in capital letters are matrices, variables in lower case letters are vectors if superscripted, and scalars if subscripted.
-
-\begin{table}[ht]
-    \centering
-    {\ttfamily
-        \begin{tabular}{|r l l l l|}
-            \hline
-            \rowcolor{backcolour} 1 & \multicolumn{4}{l|}{\textbf{function} PLS1$\left(X, Y, \ell\right)$} \\
-            \rowcolor{backcolour} 2 & & \multicolumn{3}{l|}{$X^{(0)}\gets X$} \\
-            \rowcolor{backcolour} 3 & & \multicolumn{3}{l|}{$w^{(0)}\gets X^{\mathrm{T}}y/\|X^{\mathrm{T}}y\|$, an initial estimate of $w$.} \\
-            \rowcolor{backcolour} 4 & & \multicolumn{3}{l|}{\textbf{for} $k=0$ \textbf{to} $\ell -1$} \\
-            \rowcolor{backcolour} 5 & & & \multicolumn{2}{l|}{$t^{(k)}\gets X^{(k)}w^{(k)}$} \\
-            \rowcolor{backcolour} 6 & & & \multicolumn{2}{l|}{$t_{k}\gets {t^{(k)}}^{\mathrm{T}}t^{(k)}$ (note this is a scalar)} \\
-            \rowcolor{backcolour} 7 & & & \multicolumn{2}{l|}{$t^{(k)}\gets t^{(k)}/t_{k}$} \\
-            \rowcolor{backcolour} 8 & & & \multicolumn{2}{l|}{$p^{(k)}\gets {X^{(k)}}^{\mathrm{T}}t^{(k)}$} \\
-            \rowcolor{backcolour} 9 & & & \multicolumn{2}{l|}{$q_{k}\gets {y}^{\mathrm{T}}t^{(k)}$ (note this is a scalar)} \\
-            \rowcolor{backcolour} 10 & & & \multicolumn{2}{l|}{\textbf{if} $q_{k}=0$} \\
-            \rowcolor{backcolour} 11 & & & & $\ell \gets k$, \textbf{break} the \textbf{for loop} \\
-            \rowcolor{backcolour} 12 & & & \multicolumn{2}{l|}{\textbf{if} $k<(\ell -1)$} \\
-            \rowcolor{backcolour} 13 & & & & $X^{(k+1)}\gets X^{(k)}-t_{k}t^{(k)} {p^{(k)}}^{\mathrm{T}}$ \\
-            \rowcolor{backcolour} 14 & & & & $w^{(k+1)}\gets {X^{(k+1)}}^{\mathrm{T}}y$ \\
-            \rowcolor{backcolour} 15 & & \multicolumn{3}{l|}{\textbf{end for}} \\
-            \rowcolor{backcolour} 16 & & \multicolumn{3}{l|}{\textbf{define} $W$ to be the matrix with columns} \\
-            \rowcolor{backcolour} & & \multicolumn{3}{l|}{$w^{(0)},w^{(1)},\ldots ,w^{(\ell -1)}$.} \\
-            \rowcolor{backcolour} & & \multicolumn{3}{l|}{Do the same to form the $P$ matrix and $q$ vector.} \\
-            \rowcolor{backcolour} 17 & & \multicolumn{3}{l|}{$B\gets W{(P^{\mathrm{T}}W)}^{-1}q$} \\
-            \rowcolor{backcolour} 18 & & \multicolumn{3}{l|}{$B_{0}\gets q_{0}-{P^{(0)}}^{\mathrm{T}}B$} \\
-            \rowcolor{backcolour} 19 & & \multicolumn{3}{l|}{\textbf{return} $B, B_{0}$} \\
-            \hline
-        \end{tabular}
-    }
-    \caption{PLS1 pseudocode}
-    \label{tab:PLS1}
-\end{table}
-
-The input $X$ and $Y$ are centered implicitly in the presented pseudocode. This pseudocode "deflates" the matrix $X$ (subtraction of $t_{k}t^{(k)}{p^{(k)}}^{\mathrm{T}}$). Deflation of the vector $y$ is unneeded because it does not affect the result \cite{hoskuldsson1988pls}. The user-defined variable $l$ is the maximum number of latent factors in the regression. If $l$ equals the rank of the matrix $X$, the result equals the least squares regression estimates for $B$ and $B_{0}$.
+The scores form an orthogonal basis in PLS regression, and the loadings are chosen to achieve this. In Principal Component Analysis (PCA) orthogonality is not imposed on scores but onto loadings instead \cite{lindgren1993kernel, de1994comments, dayal1997improved, de1993simpls, rannar1994pls, abdi2010partial}. Many versions of PLS exist for estimating the factor and loading matrices, such as the PLS1 algorithm \cite{takane2016pls, hoskuldsson1988pls}. 
 
 \subsubsection{Flexible Discriminant Analysis}
 %\label{subsubsec:FDA}
 
-Flexible Discriminant Analysis (FDA) is a general methodology that creates the discriminant surface for a multigroup non-linear classification model based on a mixture of non-parametric linear regression models \cite{hastie1995penalized}, such as Multivariate Adaptive Regression Splines (MARS) and linear discriminant analysis (LDA). FDA uses optimal scoring to transform the response variable to prepare the input data for linear separation. The range of predictor values is partitioned into several groups or categories using multiple regression models, called basis functions (BF). In the second step, LDA is run on the previously created classes to increase the variance between classes and decrease the variance within classes.
-
-Most of the variance between classes is explained by the first axis FDA creates. Each of the following predictors accounts for a smaller percentage of the variance between classes. This goes on until all of the variance between classes is accounted for. A $2$-dimensional chart with two predictor pairs can be created to increase clarity.
+Flexible Discriminant Analysis (FDA) is a general methodology that creates the discriminant surface for a multigroup non-linear classification model based on a mixture of non-parametric linear regression models \cite{hastie1995penalized}, such as Multivariate Adaptive Regression Splines (MARS) and linear discriminant analysis (LDA).
 
 Many predictors can be used at once in FDA \cite{hastie2009elements}, variable interactions are automatically noted \cite{hastie1994flexible}, it is complex but execution time and computational load are adequate \cite{reynes2006choice}. The algorithm is not significantly affected by outliers \cite{phillips2017applying}.
 
 Modifying different settings has a high impact on FDA \cite{hallgren2019species}, and the estimation might be unsuccessful if the predictor distributions are highly correlated. FDA is prone to overfitting \cite{thuiller2016ensemble}, and challenging to comprehend or explain \cite{quillfeldt2017influence}. The assumption of normality for the continuous independent variables is necessary \cite{zhang2019using} to determine the response or grouping categorical variable. 
 
-In nonparametric regression analysis, the relationship between predictors and the dependent variable does not have a distribution with previously determined parameters. This function is created based on the input. Because of this additional step, it is necessary to gather more samples than for parametric estimation. For the input and output random variables $X$ and $Y$, we assume the relationship in Equation~\ref{eqn:18} is true, where $m\left(x\right)$ represents a deterministic function.
+Linear discriminant analysis (LDA), normal discriminant analysis (NDA), or discriminant function analysis is a generalization of Fisher's linear discriminant defined in 1936 \cite{cohen2013applied}. The results of LDA may be utilized directly or to reduce dimensionality before classification, which is more often used \cite{hansen2005using}. LDA finds a linear combination of features or measurements differentiating two or more sample classes \cite{fisher1936use, mclachlan2005discriminant}. Discriminant analysis has continuous independent variables and a categorical dependent variable representing the groups \cite{wetcher2011analyzing}.
 
-\begin{equation}
-	\mathbb{E}[Y\mid X=x]=m\left(x\right)
-	\label{eqn:18}
-\end{equation}
-
-Linear regression is a restricted case of nonparametric regression where $m\left(x\right)$ is assumed to be the composition of a linear function with a translation. A stronger assumption can be made using a random variable $U$, representing added noise with a zero mean, where $Y=m\left(X\right)+U$. We cannot achieve an unbiased estimate for $m$ without assuming it belongs to a certain parametric distribution, such as the normal or Gaussian distribution. Under unchanging conditions, these assumptions hold for most robust estimators.
-
-Linear discriminant analysis (LDA), normal discriminant analysis (NDA), or discriminant function analysis is a generalization of Fisher's linear discriminant defined in 1936 \cite{cohen2013applied}. LDA finds a linear combination of features differentiating two or more sample classes in statistics and other research. The features may be utilized directly or to reduce dimensionality before classification, which is more often used \cite{hansen2005using}.
-
-LDA is highly similar to the analysis of variance (ANOVA) and multivariate analysis of variance (ANOVA) methods and regression analysis. These methods express one dependent variable as a linear combination of other features or measurements \cite{fisher1936use, mclachlan2005discriminant}. Discriminant analysis has continuous independent variables and a categorical dependent variable representing the groups \cite{wetcher2011analyzing}. ANOVA and MANOVA use categorical independent variables and a continuous dependent variable. Because of these different variable types, ANOVA and LDA are less similar than LDA and logistic or probit regression. However, the LDA method assumes independent variables are normally distributed, which is not necessarily true. Logistic and probit regression explain a categorical variable by the values of continuous independent variables and do not make normality assumptions.
-
-LDA is also closely related to PCA and factor analysis since they identify linear functions of multiple variables that fit the input with the smallest error \cite{martinez2001pca}. LDA depends on the group difference. However, PCA and factor analysis choose the model using similarities. Unlike factor analysis, discriminant analysis is not a standalone algorithm and depends on other methods for differentiating independent and dependent criterion variables.
-
-LDA uses continuous values of observed independent variables. Discriminant correspondence analysis \cite{abdi2007discriminant, perriere2003use} can similarly handle categorical independent variables. The groups are unknown in cluster analysis, which is not the case in discriminant analysis. Points in discriminant function analysis are rated based on quantitative predictors and a group measure \cite{cokluk2008discriminant} to represent classification or distribution into groups or categories of the same type.
-
-A class $y$ is known for a set of observations $\vec{x}$, also known as features, attributes, variables, or measurements for each sample of an object or event. This collection represents the training set in supervised learning. Finding a good predictor for the class $y$, given only an observation $\vec{x}$ for data other than the training set, but belonging to the same distribution, is a classic classification problem \cite{venables2013modern}.
-
-LDA assumes the conditional probability density functions $p({\vec{x}}|y=0)$ and $p({\vec{x}}|y=1)$ follow a normal distribution with mean and covariance parameters $\left({\vec{\mu}}_{0},\Sigma_{0}\right)$ and $\left({\vec{\mu}}_{1},\Sigma_{1}\right)$, respectively. Equation~\ref{eqn:19} shows that, if the log of the likelihood ratios is bigger than a threshold $T$, the Bayes-optimal solution under the previous assumptions is to predict points as being from the second class.
-
-\begin{equation}
-	{\frac{1}{2}}({\vec{x}}-{\vec{\mu}}_{0})^{\mathrm{T}}\Sigma_{0}^{-1}({\vec{x}}-{\vec{\mu}}_{0})+{\frac{1}{2}}\ln |\Sigma_{0}|-{\frac{1}{2}}({\vec{x}}-{\vec{\mu}}_{1})^{\mathrm{T}}\Sigma_{1}^{-1}({\vec{x}}-{\vec{\mu}}_{1})-{\frac{1}{2}}\ln |\Sigma_{1}|\ >\ T
-	\label{eqn:19}
-\end{equation}
-
-Quadratic Discriminant Analysis (QDA) uses this classifier without additional assumptions. LDA assumes that the covariances have full rank and also assumes homoscedasticity, meaning that the class covariances are identical, as written in Equation~\ref{eqn:20}.
-
-\begin{equation}
-	\Sigma_{0}=\Sigma_{1}=\Sigma
-	\label{eqn:20}
-\end{equation}
-
-In this case, terms ${\vec{x}}^{\mathrm{T}}\Sigma_{0}^{-1}{\vec{x}}={\vec{x}}^{\mathrm{T}}\Sigma_{1}^{-1}{\vec{x}}$ and ${\vec{x}}^{\mathrm{T}}{\Sigma_{i}}^{-1}{\vec{\mu}}_{i}={{\vec{\mu}}_{i}}^{\mathrm{T}}{\Sigma_{i}}^{-1}{\vec{x}}$ cancel because $\Sigma_{i}$ is Hermitian and the above decision criterion becomes a threshold on the dot product ${\vec{w}}^{\mathrm{T}}{\vec{x}}>c$ for some threshold constant $c$ in Equation~\ref{eqn:21}, where ${\vec{w}}=\Sigma ^{-1}({\vec{\mu}}_{1}-{\vec{\mu}}_{0})$.
-
-\begin{equation}
-	c={\frac{1}{2}}\,{\vec{w}}^{\mathrm{T}}({\vec{\mu}}_{1}+{\vec{\mu}}_{0})
-	\label{eqn:21}
-\end{equation}
-
-Whether input $\vec{x}$ belongs to a class $y$ depends on this linear combination of the measured observations. Using geometry, whether $\vec{x}$ belongs to a class $y$ depends on a function of a projection of a multidimensional-space point $\vec{x}$ onto s vector $\vec{w}$, so only the direction of the vector is considered. If the corresponding point $\vec{x}$ is located on a certain side of a hyperplane perpendicular to $\vec{w}$, the observation belongs to $y$. The location of the plane is defined by the threshold $c$.
+LDA is closely related to PCA and factor analysis since they identify linear functions of multiple variables that fit the input with the smallest error \cite{martinez2001pca}. Discriminant correspondence analysis \cite{abdi2007discriminant, perriere2003use} is equivalent to LDA for categorical independent variables. Points in discriminant function analysis are rated based on quantitative predictors and a group measure \cite{cokluk2008discriminant} to represent classification \cite{venables2013modern}.
 
 The assumptions of MANOVA are also true for discriminant analysis. The analysis is highly affected by outliers so there must be fewer predictor variables than samples in the smallest class \cite{cokluk2008discriminant}. In every level of the grouping variable, independent variables must be normal to achieve multivariate normality \cite{cokluk2008discriminant, hansen2005using}. Box's M statistic \cite{hansen2005using} test whether homogeneity of variance/covariance is established and whether variances among group variables change for predictor levels. 
 
 Quadratic instead of linear discriminant analysis should be utilized if covariances are different \cite{cokluk2008discriminant}. The scores of one predictor variable should not depend on other predictor variables for any sample, and the samples should be chosen at random \cite{cokluk2008discriminant, hansen2005using}. Discriminant analysis can handle small deviations from these requirements \cite{lachenbruch1979discriminant} and may be used even if multivariate normality is not achieved, such as for dichotomous variables \cite{klecka1980discriminant}.
 
-One or more linear combinations of predictors create a new latent variable for each discriminant function in discriminant analysis. The number of functions is the smaller possible value for $N_{g}-1$, the number of groups $N_{g}$, or the number of predictors $p$. The first function increases the differences between groups for that function. The second function does the same but is not correlated with the first function. This is repeated for additional functions with the condition that the new function is uncorrelated with those defined before.
+The discriminant rules suggest that if $x\in \mathbb{R}_{j}$, then $x\in j$ for a group $j$, and $\mathbb{R}_{j}$ sets of sample space. The discriminant analysis method identifies regions of $\mathbb{R}_{j}$ that decrease errors of classification \cite{Hrdle2003AppliedMS}. A discriminant score describes how well a discriminant differentiates classes. \cite{archive765Discriminant}.
+ 
+The discriminant analysis eigenvalue represents the characteristic root of each function, indicating the quality of the group separation produced by the function. The function differentiates better for a larger eigenvalue \cite{cokluk2008discriminant}. Eigenvalues do not have an upper limit \cite{cokluk2008discriminant, hansen2005using}, so the results should not be taken at face value.
 
-The discriminant rules suggest that if $x\in \mathbb{R}_{j}$, then $x\in j$ for a group $j$, and $\mathbb{R}_{j}$ sets of sample space. The discriminant analysis method identifies regions of $\mathbb{R}_{j}$ that decrease errors of classification \cite{Hrdle2003AppliedMS}.
-A discriminant score describes how well it differentiates classes.
-The correlation between each discriminant score and predictor is represented by a structure correlation coefficient that is a zero-order correlation, meaning that it is not corrected for the other predictors \cite{archive765Discriminant}.
+Even though it is not universally accepted, some suggest eigenvalues be utilized as effect size measures \cite{hansen2005using}. The percent of correctly classified data, such as the kappa value, can also be used as the effect size while accounting for random matches in classification \cite{hansen2005using}. Kappa is not biased for any particular class, whether performance is high or low, and instead normalizes across all classes \cite{israel2006performance}. 
 
-
-Standardized coefficients represent each predictor's weight in the linear combination forming the discriminant function. These coefficients are corrected for the other predictors and are partial, the same as for a regression equation. Standardized coefficients showcase the unique contribution of each predictor in determining class labels. Functions at group centroids are mean discriminant scores for grouping variables for each function. If the difference in means is large, the classification error is small.
-
-The maximum likelihood rule increases class density when choosing the class of $x$ \cite{Hrdle2003AppliedMS}.
-The Bayes Discriminant Rule Assigns aims to increase the value of $\pi_{i}f_{i}(x)$ when choosing the class of $x$, where $\pi_{i}$ is the prior probability of classification, and $f_{i}(x)$ is the class density \cite{Hrdle2003AppliedMS}. Fisher's linear discriminant rule aims to increase the ratio between $SS_{between}$ and $SS_{within}$, identifying a linear combination of the predictors to determine labels \cite{Hrdle2003AppliedMS}.
-
-The discriminant analysis eigenvalue represents the characteristic root of each function, indicating the quality of the group separation produced by the function. The function differentiates better for a larger eigenvalue \cite{cokluk2008discriminant}. Eigenvalues do not have an upper limit \cite{cokluk2008discriminant, hansen2005using}, so the results should not be taken at face value. The eigenvalue can be viewed as a ratio of $SS_{between}$ and $SS_{within}$ as in ANOVA when the dependent variable is the discriminant function, and the groups are its levels \cite{cokluk2008discriminant}. The largest eigenvalue corresponds to the first function, the second largest with the second, repeated for all following eigenvalues.
-
-Even though it is not universally accepted, some suggest eigenvalues be utilized as effect size measures \cite{hansen2005using}. Canonical correlation is a more established measure of effect size similar to the eigenvalue, representing the correlation between groups and the function \cite{hansen2005using}, and equaling the square root of the ratio of $SS_{between}$ and $SS_{total}$. The percent of variance can also be calculated for each function by $(\lambda_{x}/\sigma\lambda_{i}) \times 100$, where $\lambda_{x}$ is the eigenvalue for the function, and $\sigma\lambda_{i}$ is the sum of all eigenvalues indicating the strength of the prediction for one particular function compared to the others \cite{hansen2005using}. The percent of correctly classified data, such as the kappa value, can also be used as the effect size while accounting for random matches in classification \cite{hansen2005using}. Kappa is not biased for any particular class, whether performance is high or low, and instead normalizes across all classes \cite{israel2006performance}. 
-
-Fisher's linear discriminant and LDA are sometimes considered synonyms. However, Fisher \cite{fisher1936use} describes a slightly different discriminant, which does not make some of the assumptions of LDA such as a normal distribution or the equality of covariances for groups. The linear combination of features ${\vec{w}}^{\mathrm{T}}{\vec{x}}$ will have means ${\vec{w}}^{\mathrm{T}}{\vec{\mu}}_{i}$ and variances ${\vec{w}}^{\mathrm{T}}\Sigma_{i}{\vec{w}}$ for $i=0,1$ if two classes of observations have means ${\vec{\mu}}_{0},{\vec{\mu}}_{1}$ and covariances $\Sigma_{0},\Sigma_{1}$. Fisher uses the ratio of the variance between and within the classes to separate these two distributions in Equation~\ref{eqn:22}.
-
-\begin{equation}
-	S={\frac{\sigma_{\text{between}}^{2}}{\sigma_{\text{within}}^{2}}}={\frac{({\vec{w}}\cdot{\vec{\mu}}_{1}-{\vec{w}}\cdot {\vec{\mu}}_{0})^{2}}{{\vec{w}}^{\mathrm{T}}\Sigma_{1}{\vec{w}}+{\vec{w}}^{\mathrm{T}}\Sigma_{0}{\vec{w}}}}={\frac{({\vec{w}}\cdot ({\vec{\mu}}_{1}-{\vec{\mu}}_{0}))^{2}}{{\vec{w}}^{\mathrm{T}}(\Sigma_{0}+\Sigma_{1}){\vec{w}}}}
-	\label{eqn:22}
-\end{equation}
-
-This measure can be considered a measure of the signal-to-noise ratio for the class labels. The maximum separation is achieved when ${\vec{w}}\propto\left(\Sigma_{0}+\Sigma_{1}\right)^{-1}\left({\vec{\mu}}_{1}-{\vec{\mu}}_{0}\right)$. This above equation defines LDA, provided the assumptions made were true.
-
-The vector  $\vec{w}$ is the normal to the discriminant hyperplane. The separation line for a two-class task is perpendicular to $\vec{w}$, illustrating this claim.
-
-The classified samples are projected onto $\vec{w}$ and then a threshold dividing them is selected among one-dimensional distributions. No universal guidelines exist for this selection. An often-used selection is a hyperplane between projections of the two means, ${\vec{w}}\cdot {\vec{\mu}}_{0}$ and $ \vec{w} \cdot {\vec{\mu}}_{1}$, used if projections of data from both groups have similar distributions. 
-
-Equation~\ref{eqn:23} denotes how to find the parameter $c$ in the threshold condition ${\vec{w}}\cdot {\vec{x}} > c$ for this hyperplane.
-
-\begin{equation}
-	c={\vec{w}}\cdot {\frac{1}{2}}({\vec{\mu}}_{0}+{\vec{\mu}}_{1})={\frac{1}{2}}{\vec{\mu}}_{1}^{\mathrm{T}}\Sigma_{1}^{-1}{\vec{\mu}}_{1}-{\frac{1}{2}}{\vec{\mu}}_{0}^{\mathrm{T}}\Sigma_{0}^{-1}{\vec{\mu}}_{0}
-	\label{eqn:23}
-\end{equation}
-
-Otsu's method, related to Fisher's linear discriminant, chooses a black/white threshold that minimizes intra-class variance to convert a pixel histogram to grayscale and maximizes inter-class variance within/between pixels in grayscales assigned to black and white pixel classes. Canonical discriminant analysis (CDA) divides $k$ classes with the fewest errors by finding $k - 1$ axes that define canonical coordinates. The $n$-dimensional input is projected to a $k - 1$-dimensional space by using $k - 1$ linear functions that are not correlated.
-
-The application of the Fisher discriminant is expanded to find a subspace capturing all class variability \cite{archive765Discriminant} for multiple groups, as suggested by C. R. Rao \cite{rao1948utilization}. Then class variability is defined by the sample covariance of the class means in Equation~\ref{eqn:24} if each of the $C$ classes has a mean $\mu_{i}$ and the same covariance $\Sigma$, where $\mu$ is the mean of the class means.
-
-\begin{equation}
-	\Sigma_{b}={\frac{1}{C}}\sum_{i=1}^{C}\left(\mu_{i}-\mu\right)\left(\mu_{i}-\mu\right)^{\mathrm{T}}
-	\label{eqn:24}
-\end{equation}
-
-Equation~\ref{eqn:25} describes class division in the direction $\vec{w}$.
-
-\begin{equation}
-	S={\frac{{\vec{w}}^{\mathrm{T}}\Sigma_{b}{\vec{w}}}{{\vec{w}}^{\mathrm{T}}\Sigma {\vec{w}}}}
-	\label{eqn:25}
-\end{equation}
-
-The division will equal the eigenvalue when $\vec{w}$ is an eigenvector of $\Sigma ^{-1}\Sigma_{b}$. The variability between features will be contained in the subspace defined by the eigenvectors of the $C - 1$ largest eigenvalues if $\Sigma ^{-1}\Sigma_{b}$ is diagonalizable, since the rank of $\Sigma_{b}$ is equal to or less than $C - 1$. PCA and other dimensionality reduction methods utilize these eigenvectors. Regularisation is recommended to reduce the impact of training data on eigenvectors corresponding to the smaller eigenvalues.
-
-Alternative techniques are used for classification in place of dimensionality reduction. For instance, the classes may be partitioned, and a standard Fisher discriminant or LDA is used to classify each partition. LDA is applied in a "one against the rest" approach where the points from one class are juxtaposed with others. The results of $C$ classifiers are joined. In contrast, a new classifier is created for $ C(C - 1)/2$ class pairs in pairwise classification.
+Fisher's linear discriminant and LDA are sometimes considered synonyms. However, Fisher \cite{fisher1936use} describes a slightly different discriminant, which does not make some of the assumptions of LDA such as a normal distribution or the equality of covariances for groups. The application of the Fisher discriminant is expanded to find a subspace capturing all class variability \cite{archive765Discriminant} for multiple groups, as suggested by C. R. Rao \cite{rao1948utilization}.
 
 \subsubsection{Principal Component Analysis}
 %\label{subsubsec:PCA}
 
-Principal component analysis (PCA) is a linear dimensionality reduction technique with applications in exploratory data analysis, visualization, and data preprocessing. It is used in preprocessing before training a Neural Network in the $pcaNNe$ method in the \textit{caret} package in \textit{R} \cite{ripley2007pattern}. The data is linearly transformed into a new coordinate system such that the directions (principal components) capturing the largest variation in the data can be easily identified.
+Principal component analysis (PCA) is a linear dimensionality reduction technique with applications in exploratory data analysis, visualization, and data preprocessing. It is used in preprocessing before training a Neural Network in the $pcaNNe$ method in the \textit{caret} package in \textit{R} \cite{ripley2007pattern}. The data is linearly transformed into a new coordinate system such that the directions (principal components) capturing the largest variation in the data can be easily identified. Many studies use the first two principal components to plot the data and visually identify clusters of closely related data points \cite{jolliffe2016principal}.
 
-The principal components of a collection of points in a real coordinate space are a sequence of $p$ unit vectors, where the $i$-th vector is the direction of a line that best fits the data while being orthogonal to the first $i-1$ vectors. Here, a best-fitting line is defined as one that minimizes the average squared perpendicular distance from the points to the line. These directions (i.e., principal components) constitute an orthonormal basis in which different individual dimensions of the data are linearly uncorrelated. Many studies use the first two principal components to plot the data and visually identify clusters of closely related data points \cite{jolliffe2016principal}.
-
-When performing PCA, the first principal component of a set of $p$ variables is the derived variable formed as a linear combination of the original variables that explains the most variance. The second principal component explains most of the variance once the first component is removed, repeated $p$ times until all the variance is explained. PCA reduces the number of highly correlated variables to an independent set. The first principal component can be defined as a direction with the largest variance of the projected data. The $i$-th principal component has a direction orthogonal to the first $i-1$ principal components maximizing the projected data variance.
-
-The principal components are eigenvectors of the data's covariance matrix and are often computed by eigendecomposition of the data covariance matrix or singular value decomposition of the data matrix. PCA is closely related to factor analysis and is the simplest of the true eigenvector-based multivariate analyses. Factor analysis usually uses more domain-specific assumptions about the underlying structure and solves eigenvectors of a slightly different matrix. PCA is also related to canonical correlation analysis (CCA). PCA defines a new orthogonal coordinate system that optimally describes the variance in a single dataset \cite{barnett1987origins, hsu2012spectral, markopoulos2017efficient, chachlakis2019l1}. CCA does the same for the cross-covariance between two datasets. Robust and L1-norm-based variants of standard PCA have also been proposed \cite{chachlakis2019l1, markopoulos2014optimal, zhan2015robust, ke2005robust}.
+PCA is closely related to factor and canonical correlation analysis (CCA). PCA is the simplest of the true eigenvector-based multivariate analyses. PCA defines a new orthogonal coordinate system that optimally describes the variance in a single dataset \cite{barnett1987origins, hsu2012spectral, markopoulos2017efficient, chachlakis2019l1}. CCA does the same for the cross-covariance between two datasets. Robust and L1-norm-based variants of standard PCA have also been proposed \cite{chachlakis2019l1, markopoulos2014optimal, zhan2015robust, ke2005robust}.
 
 Karl Pearson \cite{pearson1901liii} conceived of PCA in 1901 as a counterpart of the principal axis theorem in mechanics \cite{stewart2019introduction}. Harold Hotelling discovered the Hotelling transform in multivariate quality control in the 1930s without knowledge of the previous work \cite{hotelling1933analysis, hotelling1992relations}. Synonyms for PCA include the discrete proper orthogonal decomposition (POD) \cite{berkooz1993proper, karhunen1946spektraltheorie, loeve1977elementary, sirovich1987turbulence} in mechanical engineering and the Kosambiâ€“Karhunenâ€“LoÃ¨ve or Karhunenâ€“LoÃ¨ve theorem (KLT) \cite{sapatnekar2011overcoming, ghoman2012pod, archiveKarhunenLoeveTransform, amslaurea10169, mallat1999wavelet, tang1998texture} in signal processing. Singular value decomposition (SVD) of X, established in the final quarter of the 19th century \cite{stewart1993early}, is also similar to PCA. Eigenvalue decomposition (EVD) of a matrix $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ in linear algebra shares the mathematical foundations of PCA \cite{gloub1996matrix, hayden2002observations}. Factor analysis differs in several key features \cite{jolliffe2002principal}, but has many aspects in common with PCA. Empirical orthogonal functions (EOF) \cite{lorenz1956empirical} in meteorological science were developed by Lorenz in 1956 \cite{lorenz1956empirical}. The Eckartâ€“Young theorem \cite{eckart1936approximation} and quasiharmonic modes \cite{dove1993introduction} are both connected to PCA. Empirical modal analysis in structural dynamics and spectral decomposition in noise and vibration also take a similar approach to PCA.
 
-PCA is similar to fitting a $p$-dimensional ellipsoid to the data, with a principal component modeled by an ellipsoid axis. If the variance along an axis increases, the ellipsoid does as well.
-A variable must be centered by subtracting the mean to determine the ellipsoid axes. The covariance matrix of the data, eigenvalues, and eigenvectors are defined after this step. To obtain unit vectors, the orthogonal eigenvectors are normalized. The axes of the ellipsoid fitted to the data are then represented by the mutually orthogonal unit eigenvectors. The covariance is diagonalized by the selected basis, with the variance of each axis contained in the diagonal elements. If the eigenvector is divided by the eigenvalue, its proportion of the variance can be obtained.
-PCA analysis often includes biplots and scree plots, displaying the degree of explained variance. The start of the bend in a scree plot, the infection point or "knee", is a guideline for the number of components to keep.
-
-The data in PCA is converted to a new coordinate system using a scalar projection, an orthogonal linear transformation on a real inner product space. The first coordinate or principal component covers the largest portion of the variance, decreasing with each following component \cite{jolliffe2002principal}.
-
-PCA uses an $n\times p$ data matrix $\mathbf{X}$, where the $p$ columns representing features have been shifted so that the means equal zero, and each of the $n$ rows is an experiment iteration.
-
-The transformation given by Equation~\ref{eqn:26} uses a set of $l$ of $p$-dimensional vectors containing weights or coefficients $\mathbf{w}_{\left(k\right)}=(w_{1},\dots ,w_{p})_{\left(k\right)}$ and maps row vectors $\mathbf{x}_{\left(i\right)}=(x_{1},\dots ,x_{p})_{\left(i\right)}$ of $\mathbf{X}$ to new vectors of principal component scores $\mathbf{t}_{\left(i\right)}=(t_{1},\dots ,t_{l})_{\left(i\right)}$.
-
-\begin{equation}
-	{t_{k}}_{\left(i\right)}=\mathbf{x}_{\left(i\right)}\cdot \mathbf{w}_{\left(k\right)}\qquad \mathrm{for} \qquad i=1,\dots,n \qquad k=1,\dots ,l
-	\label{eqn:26}
-\end{equation}
-
-The variables $t_{1},\dots ,t_{l}$ of $t$ have the maximum possible variance, the same as for $\mathbf{X}$. The coefficient vectors $w$ are unit vectors. The number of features $p$ is commonly larger than $l$ to reduce dimensionality. The matrix equivalent of the previously stated claims is $\mathbf{T}=\mathbf{X} \mathbf{W}$ where ${\mathbf{T}}_{ik}={t_{k}}_{\left(i\right)}$, ${\mathbf{X}}_{ij}={x_{j}}_{\left(i\right)}$, and ${\mathbf{W}}_{jk}={w_{j}}_{\left(k\right)}$.
-
-The first weight vector $\mathbf{w}_{\left(1\right)}$ in Equation~\ref{eqn:27} has maximum variance, with the matrix form in Equation~\ref{eqn:28}.
-
-\begin{equation}
-	\mathbf{w}_{\left(1\right)}=\arg \max_{\Vert \mathbf{w} \Vert =1}\,\left\{\sum_{i}(t_{1})_{\left(i\right)}^{2}\right\}=\arg \max_{\Vert \mathbf{w} \Vert =1}\,\left\{\sum_{i}\left(\mathbf{x}_{\left(i\right)}\cdot \mathbf{w} \right)^{2}\right\}
-	\label{eqn:27}
-\end{equation}
-
-\begin{equation}
-	\mathbf{w}_{\left(1\right)}=\arg \max_{\left\|\mathbf{w} \right\|=1}\left\{\left\|\mathbf{Xw} \right\|^{2}\right\}=\arg \max_{\left\|\mathbf{w} \right\|=1}\left\{\mathbf{w}^{\mathsf{T}}\mathbf{X}^{\mathsf{T}}\mathbf{Xw} \right\}
-	\label{eqn:28}
-\end{equation}
-
-The vector $\mathbf{w}_{\left(1\right)}$ needs to conform to Equation~\ref{eqn:29} to be a unit vector.
-
-\begin{equation}
-	\mathbf{w}_{\left(1\right)}=\arg \max \left\{{\frac{\mathbf{w}^{\mathsf{T}}\mathbf{X}^{\mathsf{T}}\mathbf{Xw}}{\mathbf{w}^{\mathsf{T}}\mathbf{w}}}\right\}
-	\label{eqn:29}
-\end{equation}
-
-The value we aim to increase can be considered a Rayleigh quotient. A positive semidefinite matrix, for example, $\mathbf{X}^{\mathsf{T}}\mathbf{X}$, produces an output where the quotient's maximum possible value is the largest eigenvalue of the matrix and $w$ is the corresponding eigenvector.
-
-The first principal component  $t_{1_{\left(i\right)}}$ of a data vector $\mathbf{x}_{\left(i\right)}$ equals $\{\mathbf{x}_{\left(i\right)} \cdot \mathbf{w}_{\left(1\right)}\} \mathbf{w}_{\left(1\right)}$  in the original and $\mathbf{x}_{\left(i\right)} \cdot \mathbf{w}_{\left(1\right)}$ in the transformed space, once $\mathbf{w}_{\left(1\right)}$ is calculated.
-
-By subtracting the first $k - 1$ principal components from $\mathbf{X}$, we obtain tThe $k$-th component in Equation~\ref{eqn:30}.
-
-\begin{equation}
-	\mathbf{\hat{X}}_{k}=\mathbf{X} -\sum_{s=1}^{k-1}\mathbf{X} \mathbf{w}_{\left(s\right)}\mathbf{w}_{\left(s\right)}^{\mathsf{T}}
-	\label{eqn:30}
-\end{equation}
-
-Equation~\ref{eqn:31} describes using the new data matrix to determine the weight vector with the maximum variance. This weight vector represents the eigenvectors of $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ that are still in consideration, with the maximum values for the quantity in brackets given by their corresponding eigenvalues. 
-
-\begin{equation}
-	\mathbf{w}_{\left(k\right)}=\mathop{\operatorname{arg\,max}}_{\left\|\mathbf{w} \right\|=1}\left\{\left\|\mathbf{\hat{X}}_{k}\mathbf{w} \right\|^{2}\right\}=\arg \max \left\{{\frac{\mathbf{w}^{\mathsf{T}}\mathbf{\hat{X}}_{k}^{\mathsf{T}}\mathbf{\hat{X}}_{k}\mathbf{w}}{\mathbf{w}^{T}\mathbf{w}}}\right\}
-	\label{eqn:31}
-\end{equation}
-
-If $\mathbf{w}_{\left(k\right)}$ is the $k$-th eigenvector of $\mathbf{X}^{\mathsf{T}}\mathbf{X}$, the $k$-th principal component $t_{k_{\left(i\right)}}$ of a data vector $\mathbf{x}_{\left(i\right)}$ equals $\{\mathbf{x}_{\left(i\right)} \cdot \mathbf{w}_{\left(k\right)}\} \mathbf{w}_{\left(k\right)}$ in the original and $\mathbf{x}_{\left(k\right)} \cdot \mathbf{w}_{\left(1\right)}$ in the transformed space. If $\mathbf{W}$ is a $p$-by-$p$ matrix of weights and the eigenvectors of $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ are columns, the complete principal components decomposition of $\mathbf{X}$ is equal to $\mathbf{T} =\mathbf{X} \mathbf{W}$. The whitening or sphering transformation uses the transpose of $\mathbf{W}$. Loadings in PCA or factor analysis equal the eigenvectors scaled up by variances, or the columns of $\mathbf{W}$ multiplied by the square root of corresponding eigenvalues. The matrix $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ is proportional to the empirical sample covariance matrix $\mathbf{X}^{\mathsf{T}}$ \cite{jolliffe2002principal}. Equation~\ref{eqn:32} contains the sample covariance $Q$ between two principal components.
-
-\begin{equation}
-	\begin{aligned}
-        Q(\mathrm{PC}_{(j)},\mathrm{PC}_{\left(k\right)})&\propto (\mathbf{X} \mathbf{w}_{(j)})^{\mathsf{T}}(\mathbf{X} \mathbf{w}_{\left(k\right)})\\&=\mathbf{w}_{(j)}^{\mathsf{T}}\mathbf{X}^{\mathsf{T}}\mathbf{X} \mathbf{w}_{\left(k\right)}\\&=\mathbf{w}_{(j)}^{\mathsf{T}}\lambda_{\left(k\right)}\mathbf{w}_{\left(k\right)}\\&=\lambda_{\left(k\right)}\mathbf{w}_{(j)}^{\mathsf{T}}\mathbf{w}_{\left(k\right)}
-    \end{aligned}
-	\label{eqn:32}
-\end{equation}
-
-When progressing from line $2$ to line $3$, the eigenvalue property of $\mathbf{w}_{\left(k\right)}$ is utilized. If the eigenvalues of a symmetric matrix are not the same, the eigenvectors $\mathbf{w}_{\left(j\right)}$ and $\mathbf{w}_{\left(k\right)}$ corresponding to them are orthogonal. If the vectors have the same repeated value, they can be orthogonalised. There is no sample covariance between principal components so the final product is zero. Principal components can also be described using transformation coordinates that convert the empirical sample covariance matrix to a diagonal matrix.
-
-The empirical covariance matrix for the original variables in matrix form equals $\mathbf{Q} \propto \mathbf{X}^{\mathsf{T}}\mathbf{X} =\mathbf{W} \mathbf{\Lambda} \mathbf{W}^{\mathsf{T}}$. If $\mathbf{\Lambda}$ is the diagonal matrix of eigenvalues $\lambda_{\left(k\right)}$ of $\mathbf{X}^{\mathsf{T}}\mathbf{X}$, the empirical covariance matrix for the principal components is equal to $\mathbf{W}^{\mathsf{T}}\mathbf{Q} \mathbf{W} \propto \mathbf{W}^{\mathsf{T}}\mathbf{W} \,\mathbf{\Lambda} \,\mathbf{W}^{\mathsf{T}}\mathbf{W} =\mathbf{\Lambda}$. The sum of squares for a component $k$ is equal to $\lambda_{\left(k\right)}$, demonstrated in Equation~\ref{eqn:33}.
-
-\begin{equation}
-	\lambda(k) = \sigma_{i} {t_{\left(k\right)}}^{2}_{\left(i\right)} = \sigma_{i} {\left(\mathbf{x}_{\left(i\right)} \cdot \mathbf{w}_{\left(k\right)}\right)}^{2}
-	\label{eqn:33}
-\end{equation}
-
-The transformation $\mathbf{T} = \mathbf{X} \mathbf{W}$ maps a data vector $\mathbf{x}_{\left(i\right)}$ from an original to a new space of $p$ uncorrelated variables. If we retain only the first $L$ principal components defined by eigenvectors, the truncated transformation is given by the matrix $\mathbf{T}_{L}=\mathbf{X} \mathbf{W}_{L}$ that has only $L$ columns, but still has $n$ rows. PCA thus defines a linear transformation $t=W_{L}^{\mathsf{T}}x,x\in \mathbb{R}^{p},t\in \mathbb{R}^{L}$. The columns of A $p \times L$ matrix $W_{L}$ form an orthogonal basis for the $L$ decorrelated features representing $t$ \cite{bengio2013representation} The transformed data matrices with only $L$ columns lower the squared reconstruction error $\|\mathbf{T} \mathbf{W}^{T}-\mathbf{T}_{L}\mathbf{W}_{L}^{T}\|_{2}^{2}$ or  $\|\mathbf{X} -\mathbf{X}_{L}\|_{2}^{2}$ and increase the preserved variance.
-
-This is useful for representing high-dimensional datasets while keeping most of the variance. Retaining the first two principal components facilitates the discovery of separated clusters in a two-dimensional plot. If data is randomized, clusters may overlap and cannot be identified. The chance of overfitting in regression analysis increases with the number of explanatory variables allowed, so conclusions cannot be extrapolated to different data. When possible explanatory variables are highly correlated, principal component regression proposes that they can be reduced to a few principal components against which the regression is run. Noisy data can also benefit from dimensionality reduction. Identically distributed Gaussian noise is present in the columns of $\mathbf{T}$ if this was true for the original dataset. The Gaussian noise distribution is invariant if the $\mathbf{W}$ is applied since it represents a rotation of the coordinate axes with a high dimensionality. A lower signal-to-noise ratio and a large noise impact are present in the later principal components containing a smaller part of the total variance. The largest part of the signal in PCA can be found in the first components. The other components may be eliminated with acceptable errors since they mostly contain noise. The significance of the principal components can be checked with parametric bootstrap for a smaller dataset to help decide how many principal components to keep \cite{forkman2019hypothesis}.
+The data in PCA is converted to a new coordinate system using a scalar projection, an orthogonal linear transformation on a real inner product space. The first coordinate or principal component covers the largest portion of the variance, decreasing with each following component \cite{jolliffe2002principal, bengio2013representation}. The significance of the principal components can be checked with parametric bootstrap for a smaller dataset to help decide how many principal components to keep \cite{forkman2019hypothesis}.
 
 \subsection{Data Description and Analysis}
 %\label{subsec:Data}
 
-Many parameters can describe the Earth's geomagnetic field, but this study focuses on those describing disturbances of the geomagnetic field, most importantly $K_p$ , $A_p$, $TEC$, and $Dst$. The $K_p$ index quantifies global geomagnetic activity by measuring disturbances in the horizontal component of Earth's magnetic field. The $K_p$ index is based on 3-hour-based $K$ indices from 12 geomagnetic locations.
+Many parameters can describe the Earth's geomagnetic field, but this study focuses on those describing disturbances of the geomagnetic field, most importantly $K_p$, $A_p$, $TEC$, and $Dst$. The $K_p$ index quantifies global geomagnetic activity by measuring disturbances in the horizontal component of Earth's magnetic field. The $K_p$ index is based on 3-hour-based $K$ indices from 12 geomagnetic locations.
 
 The $K$ index is defined by Table\ref{tab:K}.
 
-\begin{table}[ht]
+\begin{table}[!ht]
     \centering
-    \resizebox{\linewidth}{!}{
-        \begin{tabular}{|c|c|}
-        \hline
-            Geomagnetic & The intensity of a \\ 
-            observatory $K$ index & geomagnetic storm \\ \hline
-            $0$ - $1$ & Quiet geomagnetic conditions \\ \hline
-            $2$ - $4$ & Unsettled \\ \hline
-            $5$ & Minor storm \\ \hline
-            $6$ & Large storm \\ \hline
-            $7$ & Severe geomagnetic storm \\ \hline
-            $8$ - $9$ & Very intense (extreme) geomagnetic storm \\ \hline
-        \end{tabular}
-    }
     \caption{The $K$ index.}
     \label{tab:K}
+    \begin{tabular}{|c|c|}
+        \hline
+        Geomagnetic & The intensity of a \\ 
+        observatory $K$ index & geomagnetic storm \\ \hline
+        $0$ - $1$ & Quiet geomagnetic conditions \\ \hline
+        $2$ - $4$ & Unsettled \\ \hline
+        $5$ & Minor storm \\ \hline
+        $6$ & Large storm \\ \hline
+        $7$ & Severe geomagnetic storm \\ \hline
+        $8$ - $9$ & Very intense (extreme) geomagnetic storm \\ \hline
+    \end{tabular}
 \end{table}
 
 The $K$ index is an integer in the range $0$ to $9$ ($NGK$ lower scare is $500$, $PAF$ lower scale is $750$), the largest range of geomagnetic disturbances $a_x$ and $a_y$ in the two horizontal components $X$ and $Y$ during a $3$-hour UT interval.
@@ -732,81 +331,96 @@ The $A_p$ index is a single value of magnetic activity for the entire day, the a
  
 Elevated $TEC$ levels can increase signal delay which can cause positioning errors, especially critical for high-precision applications. $TEC$ can be calculated as indicated in Equation~\ref{eqn:1}, Equation~\ref{eqn:2}, and Equation~\ref{eqn:3}. 
 
-The GPS Ionospheric delay on the radio ray path between satellite and receiver is defined in Equation~\ref{eqn:34} \cite{spilker1996global} where $\Delta t$ represents the GPS ionospheric delay, $c$ is the velocity of light, and $n(l)$ is the refraction index on the path $l$.
+The GPS Ionospheric delay on the radio ray path between satellite and receiver is defined in Equation~\ref{eqn:6} \cite{spilker1996global} where $\Delta t$ represents the GPS ionospheric delay, $c$ is the velocity of light, and $n(l)$ is the refraction index on the path $l$.
 
 \begin{equation}
 	\Delta t = \frac{1}{c} \int_{satellite}^{receiver} \left[ n(l) - l \right]dl
-	\label{eqn:34}
+	\label{eqn:6}
 \end{equation}
 
-The GPS ionospheric delay $\Delta \rho \dots$ related to distance measurements can be defined using Equation~\ref{eqn:35} \cite{spilker1996global}.
+The GPS ionospheric delay $\Delta \rho \dots$ related to distance measurements can be defined using Equation~\ref{eqn:7} \cite{spilker1996global}.
 
 \begin{equation}
 	\Delta \rho = \frac{1}{c} \int_{satellite}^{receiver} \left[ n(l) - l \right]dl
-	\label{eqn:35}
+	\label{eqn:7}
 \end{equation}
 
-Appletonâ€™s formula in Equation~\ref{eqn:36} reasonably approximates the relationship between the refraction index and the free electron density distribution \cite{davies1990ionospheric, spilker1996global}. $N(h)$ is the vertical distribution of the free electron density over a height $h$ above the surface of the Earth, and $f$ is the frequency of the radio signal.
+Appletonâ€™s formula in Equation~\ref{eqn:8} reasonably approximates the relationship between the refraction index and the free electron density distribution \cite{davies1990ionospheric, spilker1996global}. $N(h)$ is the vertical distribution of the free electron density over a height $h$ above the surface of the Earth, and $f$ is the frequency of the radio signal.
 
 \begin{equation}
 	n(l) = 1 + \frac{40.3 N(h)}{f^{2}}
-	\label{eqn:36}
+	\label{eqn:8}
 \end{equation}
 
-The combination of Equation~\ref{eqn:34} and Equation~\ref{eqn:36} yields Equation~\ref{eqn:37} that directly describes the relationship between the free electron density profile and the GPS ionospheric delay \cite{spilker1996global}.
+The combination of Equation~\ref{eqn:6} and Equation~\ref{eqn:8} yields Equation~\ref{eqn:9} that directly describes the relationship between the free electron density profile and the GPS ionospheric delay \cite{spilker1996global}.
 
 \begin{equation}
 	\Delta t = \frac{40.3}{c f^{2}} \int_{receiver}^{satellite} N(h)dh
-	\label{eqn:37}
+	\label{eqn:9}
 \end{equation}
 
-The $TEC$ \cite{spilker1996global} in Equation~\ref{eqn:38} is calculated using the integral on the right side of Equation~\ref{eqn:37}.
+The $TEC$ \cite{spilker1996global} in Equation~\ref{eqn:10} is calculated using the integral on the right side of Equation~\ref{eqn:9}.
 
 \begin{equation}
 	TEC = \int_{receiver}^{satellite} N(h)dh
-	\label{eqn:38}
+	\label{eqn:10}
 \end{equation}
 
-Using equation Equation~\ref{eqn:38}, Equation~\ref{eqn:37} can be written as shown in Equation~\ref{eqn:39}.
+Using equation Equation~\ref{eqn:10}, Equation~\ref{eqn:9} can be written as shown in Equation~\ref{eqn:11}.
 
 \begin{equation}
 	\Delta t = \frac{40.3}{c f^{2}} TEC
-	\label{eqn:39}
+	\label{eqn:11}
 \end{equation}
 
-Following the same analogy, the equivalent GPS ionospheric delay is calculated in Equation~\ref{eqn:40}.
+Following the same analogy, the equivalent GPS ionospheric delay is calculated in Equation~\ref{eqn:12}.
 
 \begin{equation}
 	\Delta \rho = \frac{40.3}{c f^{2}} TEC
-	\label{eqn:40}
+	\label{eqn:12}
 \end{equation}
 
-Considering the pseudo-range measurements taken on both GPS transmitting frequencies ($f_{1}=1575.42$ MHz and $f_{2}=1227.60$ MHz) and using Equation~\ref{eqn:40}, the relation between the $TEC$ and GPS pseudo-range measurements can be established in Equation~\ref{eqn:41} \cite{spilker1996global}:
+Considering the pseudo-range measurements taken on both GPS transmitting frequencies ($f_{1}=1575.42$ $MHz$ and $f_{2}=1227.60$ $MHz$) and using Equation~\ref{eqn:12}, the relation between the $TEC$ and GPS pseudo-range measurements can be established in Equation~\ref{eqn:13} \cite{spilker1996global}:
  
 \begin{equation}
 	\rho_{1} - \rho_{2} = 40.3 TEC \left( \frac{1}{f_{1}^{2}} - \frac{1}{f_{2}^{2}} \right)
-	\label{eqn:41}
+	\label{eqn:13}
 \end{equation}
 
-Equation~\ref{eqn:41} can be rewritten as in Equation~\ref{eqn:42}, defining $TEC$. The actual value of the $TEC$ can be computed utilizing a dual-frequency GPS receiver and Equation~\ref{eqn:42}.
+Equation~\ref{eqn:13} can be rewritten as in Equation~\ref{eqn:14}, defining $TEC$. The actual value of the $TEC$ can be computed utilizing a dual-frequency GPS receiver and Equation~\ref{eqn:14}.
 
 \begin{equation}
 	TEC = \frac{\rho_{1} - \rho_{2}}{40.3} \frac{{\left(f_{1}f_{2}\right)}^{2}}{f_{2}^{2}-f_{1}^{2}}
-	\label{eqn:42}
+	\label{eqn:14}
 \end{equation}
 
-Considering the imposed regulations for common GPS dual-frequency receiver use, a different method for estimating the $TEC$ and GPS ionospheric delay is needed. A standard GPS ionospheric delay model, such as the Klobuchar model in Equation~\ref{eqn:43} \cite{enge1994global,spilker1996global}. A cosine-like daily dynamic of GPS ionospheric delay values is assumed in the Klobuchar model, with the daily maximum appearing around 14:00 in local time \cite{klobuchar1987ionospheric}.
+Considering the imposed regulations for common GPS dual-frequency receiver use, a different method for estimating the $TEC$ and GPS ionospheric delay is needed. A standard GPS ionospheric delay model, such as the Klobuchar model in Equation~\ref{eqn:15} \cite{enge1994global,spilker1996global}. A cosine-like daily dynamic of GPS ionospheric delay values is assumed in the Klobuchar model, with the daily maximum appearing around 14:00 in local time \cite{klobuchar1987ionospheric}.
 
 \begin{equation}
 	\Delta t = F \left[ t_{n} + A \cos \frac{2\pi\left(t-t_{0}\right)}{P} \right]
-	\label{eqn:43}
+	\label{eqn:15}
 \end{equation}
 
 The next relevant parameter is $Dst$, also known as the $Dst$ index, a measure of geomagnetic storm intensity. $Dst$ describes ring currents forming above the sub-equatorial region and affecting the ionospheric regions in mid-latitudes.
 
 The $Dst$ index is derived from measurements taken by a network of ground-based magnetometer stations located near the magnetic equator, which continuously monitor the horizontal component of Earth's magnetic field. To calculate the $Dst$ index, variations in the horizontal magnetic field from these stations are averaged, and this average is then subtracted from a baseline value representing the quiet-time magnetic field. The resulting $Dst$ value, expressed in nanoteslas ($nT$), measures the intensity of geomagnetic disturbances, with more negative values indicating stronger geomagnetic storms. The performance of GNSS is linked to many dynamic conditions of space weather. Solar activity can induce various effects that degrade the accuracy, availability, and reliability of GNSS PNT. Incorporating parameters such as the $Kp$ and $A_p$ indexes, which provide global measures of geomagnetic activity, alongside $TEC$ and the Disturbance Storm Time ($Dst$) index, allows for a more detailed assessment of the space environment and its potential effects on GNSS signals. In this paper, $A_p$, $TEC$, and $Dst$ were used with ,$B_x$, $B_y$, and $B_z$ to train machine-learning models.
 
+To generate classes, samples were split into $5$ ranges, P (positive, $Dst$ from $15$ to $50$), N (normal, $Dst$ from $-20$ to $15$), R (recovery, $Dst$ from $-55$ to $-20$), T (through, $Dst$ from $-85$ to $-55$), and E (extreme, $Dst$ from $-120$ to $-85$), based on $Dst$ values derived from theoretical knowledge of different storm phases. The ranges are listed in Table \ref{tab:Dstranges}.
 
+\begin{table}[!ht]
+    \centering
+    \caption{$Dst$-based classification rules.}
+    \label{tab:Dstranges}
+    \begin{tabular}{|c|c|}
+        \hline
+        $Dst$ & Storm phase classification \\ \hline
+        $15\dots50$ & positive phase (P) \\ \hline
+        $-20\dots15$ & normal (N) \\ \hline
+        $-55\dots-20$ & recovery phase (R) \\ \hline
+        $-85\dots-55$ & through (T) \\ \hline
+        $-120\dots-85$ & extreme (E) \\ \hline
+    \end{tabular}
+\end{table}
 
 Figure~\ref{fig:correlation} contains a heat map of the correlation between all variables used in this study. Blue represents a low correlation, while red represents a higher correlation. Swapping the row and column leads to the same combination of variables, so the matrix is symmetrical concerning the secondary diagonal. The values on the secondary diagonal equal $1$ and can be disregarded because all variables are fully correlated with themselves. Besides these values on the secondary diagonal, the highest correlation of $0.78$ is between $dTEC$ and $TEC$, as expected based on previously outlined theoretical aspects of these variables. $B_{x}$ and $Dst$ have a correlation coefficient of $0.52$, the second highest value not on the secondary diagonal. This is the only other value larger than $0.5$ not on the secondary diagonal. A high correlation of $B_{x}$ and $Dst$ supports the hypothesis that we can predict $Dst$ values, ranges, or classes using $B_{x}$. The third highest correlation coefficient not on the secondary diagonal is between $B_{x}$ and $B_{y}$ and equals $0.44$. The properties and definitions of these variables explain this correlation.
 
@@ -865,6 +479,8 @@ The scatter plots of all variables for different ranges of $TEC$ values in Figur
 
 \begin{table}[!ht]
     \centering
+    \caption{The minimum, $1^{st}$ quartile, median, arithmetic mean, $3^{rd}$ quartile, and maximum values for all variables.}
+    \label{tab:my_label}
     \begin{tabular}{|c|c|c|c|c|c|}
         \hline
         & $TEC$ & $dTEC$ & $B_{x}$ & $B_{y}$ & $B_{z}$ \\ \hline
@@ -875,8 +491,6 @@ The scatter plots of all variables for different ranges of $TEC$ values in Figur
         $3^{rd}$ Qu. & $34.23$ & $6.49$ & $35423$ & $2015$ & $-29613$ \\ \hline
         Max. & $1288.00$ & $997.00$ & $35527$ & $2092$ & $-29570$ \\ \hline
     \end{tabular}
-    \caption{The minimum, $1^{st}$ quartile, median, arithmetic mean, $3^{rd}$ quartile, and maximum values for all variables.}
-    \label{tab:my_label}
 \end{table}
 
 \subsubsection{Data Pre-processing}
@@ -910,7 +524,9 @@ A false positive (FP) classification result or type I error, incorrectly indicat
 A false negative (FN) classification result or type II error, incorrectly indicates that the sample belongs to the negative class because it truly belongs to the positive class.
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The confusion matrix for a two-class problem.}
+	\label{tab:cm}
 	\begin{tabular}{|c|c|c|}
 		\hline
 		 & \multicolumn{2}{|c|}{Reference} \\ \hline
@@ -918,8 +534,6 @@ A false negative (FN) classification result or type II error, incorrectly indica
         Yes & TP & FP \\ \hline
         No & FN & TN \\ \hline
 	\end{tabular}
-	\caption{The confusion matrix for a two-class problem.}
-	\label{tab:cm}
 \end{table}
 
 Sensitivity, recall, hit rate, or true positive rate (TPR), is calculated as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FN})$, that is, the proportion of samples that are correctly classified as positive among all samples that truly belong to the positive class. Higher TPR values indicate better results for the positive class.
@@ -954,32 +568,32 @@ A $95\%$ confidence interval for the accuracy rate is computed using \textit{bin
 The binomial test \cite{howell1992statistical, graphpadGraphPadPrism} for two classes is an exact test of the statistical significance of deviations from a theoretically expected distribution.
 
 The binomial test is often utilized to validate a hypothesis about the probability ($\pi$) of success 
-$H_{0}\colon \pi =\pi_{0}$, where users define $\pi_{0}$ between $0$ and $1$. The expected number of successes would be $n\pi_{0}$ if the null hypothesis $H_{0}$ were correct. If $k$ out of $n$ attempts are successful, the binomial distribution formula defines the probability in Equation~\ref{eqn:44}.
+$H_{0}\colon \pi =\pi_{0}$, where users define $\pi_{0}$ between $0$ and $1$. The expected number of successes would be $n\pi_{0}$ if the null hypothesis $H_{0}$ were correct. If $k$ out of $n$ attempts are successful, the binomial distribution formula defines the probability in Equation~\ref{eqn:16}.
 
 \begin{equation}
 	\Pr(X=k)={\binom{n}{k}}p^{k}(1-p)^{n-k}
-	\label{eqn:44}
+	\label{eqn:16}
 \end{equation}
 
 The probability of an outcome equally or more extreme than actual occurrences is used to calculate the $p$-value. This is a simple operation for a one-tailed test. 
 
-Equation~\ref{eqn:45} contains the expression for the $p$-value when testing the hypothesis that $\pi <\pi_{0}$. We can use a range from $k$ to $n$ to test $\pi >\pi_{0}$.
+Equation~\ref{eqn:17} contains the expression for the $p$-value when testing the hypothesis that $\pi <\pi_{0}$. We can use a range from $k$ to $n$ to test $\pi >\pi_{0}$.
 
 \begin{equation}
 	p=\sum_{i=0}^{k}\Pr(X=i)=\sum_{i=0}^{k}{\binom{n}{i}}\pi_{0}^{i}(1-\pi_{0})^{n-i}
-	\label{eqn:45}
+	\label{eqn:17}
 \end{equation}
 
-A binomial distribution isn't symmetric if $\pi_{0}\neq 0.5$, so calculating a $p$-value for a two-tailed test is not as simple. The $p$-value from the one-tailed test cannot be doubled to obtain the result since all events must be considered, including ones more extreme than previously seen. These extreme events are equally or less probable than $X=k$. Equation~\ref{eqn:46} denotes all such events. Equation~\ref{eqn:47} is used to compute the two-tailed $p$-value.
+A binomial distribution isn't symmetric if $\pi_{0}\neq 0.5$, so calculating a $p$-value for a two-tailed test is not as simple. The $p$-value from the one-tailed test cannot be doubled to obtain the result since all events must be considered, including ones more extreme than previously seen. These extreme events are equally or less probable than $X=k$. Equation~\ref{eqn:18} denotes all such events. Equation~\ref{eqn:19} is used to compute the two-tailed $p$-value.
 
 \begin{equation}
 	{\mathcal{I}}=\{i\colon \Pr(X=i)\leq \Pr(X=k)\}
-	\label{eqn:46}
+	\label{eqn:18}
 \end{equation}
 
 \begin{equation}
 	p=\sum_{i\in {\mathcal{I}}}\Pr(X=i)=\sum_{i\in {\mathcal{I}}}{\binom{n}{i}}\pi_{0}^{i}(1-\pi_{0})^{n-i}
-	\label{eqn:47}
+	\label{eqn:19}
 \end{equation}
 
 \subsubsection{Cohen's Kappa Coefficient}
@@ -987,58 +601,60 @@ A binomial distribution isn't symmetric if $\pi_{0}\neq 0.5$, so calculating a $
 
 Cohen's kappa coefficient ($\kappa$, lowercase Greek kappa) indicates inter- and intra-rater reliability for classification \cite{mchugh2012interrater}. As it accounts for random matches in ratings, it is a better metric than simply computing the percentage of agreement. Interpreting indices of agreement is not straightforward, and is still a point of contention among experts. Using disagreement instead of agreement in ratings might be simpler \cite{pontius2011death}. Galton was the first to use a statistic similar to Cohen's kappa in 1892 \cite{galton1892finger, smeeton1985early}. Jacob Cohen formally described the kappa coefficient in 1960 in the journal "Educational and Psychological Measurement" \cite{cohen1960coefficient}.
 
-Two raters group $N$ items into $C$ mutually exclusive classes, and Cohen's kappa measures their agreement. Equation~\ref{eqn:48} defines $\kappa$, where $p_{o}$ is the relative observed agreement among raters, and $p_{e}$ is the hypothetical probability of chance agreement. The observed data influences the computed probabilities of each observer randomly selecting each category.
+Two raters group $N$ items into $C$ mutually exclusive classes, and Cohen's kappa measures their agreement. Equation~\ref{eqn:20} defines $\kappa$, where $p_{o}$ is the relative observed agreement among raters, and $p_{e}$ is the hypothetical probability of chance agreement. The observed data influences the computed probabilities of each observer randomly selecting each category.
 
 \begin{equation}
 	\kappa \equiv {\frac {p_{o}-p_{e}}{1-p_{e}}}=1-{\frac {1-p_{o}}{1-p_{e}}}
-	\label{eqn:48}
+	\label{eqn:20}
 \end{equation}
 
 If the raters completely align then $\kappa = 1$. When there is no agreement other than what would be expected by chance and is given by $p_{e}$, $\kappa = 0$. If $\kappa$ statistic is negative \cite{sim2005kappa} there is no match between the raters, which can reflect a real tendency of the raters to give differing ratings.
 
-Equation~\ref{eqn:49} is derived from the construction in Equation~\ref{eqn:50} and holds for $k$ categories with $N$ observations to categorize if $n_{k1}$ is the number of times rater $i$ predicted category $k$. In these equations, ${\widehat{p_{k12}}}$ is the estimated probability that both rater $1$ and rater $2$ will classify the same item as $k$, and ${\widehat {p_{k1}}}$ is the estimated probability that rater $1$ will classify an item as $k$. A similar claim can be made for rater $2$.
+Equation~\ref{eqn:21} is derived from the construction in Equation~\ref{eqn:22} and holds for $k$ categories with $N$ observations to categorize if $n_{k1}$ is the number of times rater $i$ predicted category $k$. In these equations, ${\widehat{p_{k12}}}$ is the estimated probability that both rater $1$ and rater $2$ will classify the same item as $k$, and ${\widehat {p_{k1}}}$ is the estimated probability that rater $1$ will classify an item as $k$. A similar claim can be made for rater $2$.
 
 \begin{equation}
 	p_{e}={\frac {1}{N^{2}}}\sum_{k}n_{k1}n_{k2}
-	\label{eqn:49}
+	\label{eqn:21}
 \end{equation}
 
 \begin{equation}
 	p_{e}=\sum_{k}{\widehat {p_{k12}}}{\overset{\text{ind.}}{=}}\sum_{k}{\widehat {p_{k1}}}{\widehat {p_{k2}}}=\sum_{k}{\frac {n_{k1}}{N}}{\frac {n_{k2}}{N}}={\frac {1}{N^{2}}}\sum_{k}n_{k1}n_{k2}
-	\label{eqn:50}
+	\label{eqn:22}
 \end{equation}
 
-If ratings are independent Equation~\ref{eqn:51}, can be used.
+If ratings are independent Equation~\ref{eqn:23}, can be used.
 
 \begin{equation}
 	\textstyle{\widehat{p_{k}}}=\sum_{k}{\widehat{p_{k1}}}{\widehat {p_{k2}}}
-	\label{eqn:51}
+	\label{eqn:23}
 \end{equation}
 
-Equation~\ref{eqn:52} is used to estimate the term $\widehat{p_{k1}}$ by using the number of items classified as $k$ by rater $1$ ($n_{k1}$) divided by the total items to classify ($N$).
+Equation~\ref{eqn:24} is used to estimate the term $\widehat{p_{k1}}$ by using the number of items classified as $k$ by rater $1$ ($n_{k1}$) divided by the total items to classify ($N$).
 
 \begin{equation}
 	\widehat {p_{k1}}=\frac{n_{k1}}{N}
-	\label{eqn:52}
+	\label{eqn:24}
 \end{equation}
  (and similarly for rater $2$).
  
-Equation~\ref{eqn:53} contains the Cohen's Kappa formula \cite{chicco2021matthews} for the traditional confusion matrix for binary classifications in Table~\ref{tab:cm}.
+Equation~\ref{eqn:25} contains the Cohen's Kappa formula \cite{chicco2021matthews} for the traditional confusion matrix for binary classifications in Table~\ref{tab:cm}.
 
 \begin{equation}
 	\kappa ={\frac{2\times (TP\times TN-FN\times FP)}{(TP+FP)\times (FP+TN)+(TP+FN)\times (FN+TN)}}
-	\label{eqn:53}
+	\label{eqn:25}
 \end{equation}
 
 In this scenario, Cohen's Kappa equals the Heidke skill score introduced by Myrick Haskell Doolittle in 1888 \cite{heidke1926berechnung, philosophical1887bulletin}.
 
 \section{Research Results}
-%\label{sec:Results}
+\label{sec:Results}
 
-The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables (all), all variables except $Dst$ (no $Dst$), all variables except $Dst$, $TEC$, and d$TEC$ (no $TEC$), only $B_{x}$, $B_{y}$, and $B_{z}$ (coord), only $B_{x}$, $B_{y}$, and $A_{p}$ ($x$ $y$ $A_{p}$), only $B_{x}$, $B_{z}$, and $A_{p}$ ($x$ $z$ $A_{p}$), or only $B_{y}$, $B_{z}$, and $A_{p}$ ($y$ $z$ $A_{p}$) is displayed in Table~\ref{tab:stats:reverse:all}, Table~\ref{tab:stats:reverse:no$Dst$}, Table~\ref{tab:stats:reverse:no$TEC$}, Table~\ref{tab:stats:reverse:coord}, Table~\ref{tab:stats:reverse:xyap}, Table~\ref{tab:stats:reverse:xzap}, and Table~\ref{tab:stats:reverse:yzap}.
+The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables (all), all variables except $Dst$ (no $Dst$), all variables except $Dst$, $TEC$, and d$TEC$ (no $TEC$), only $B_{x}$, $B_{y}$, and $B_{z}$ (coord), only $B_{x}$, $B_{y}$, and $A_{p}$ ($x$ $y$ $A_{p}$), only $B_{x}$, $B_{z}$, and $A_{p}$ ($x$ $z$ $A_{p}$), or only $B_{y}$, $B_{z}$, and $A_{p}$ ($y$ $z$ $A_{p}$) is displayed in Table~\ref{tab:stats:reverse:all}, Table~\ref{tab:stats:reverse:noDst}, Table~\ref{tab:stats:reverse:no$TEC$}, Table~\ref{tab:stats:reverse:coord}, Table~\ref{tab:stats:reverse:xyap}, Table~\ref{tab:stats:reverse:xzap}, and Table~\ref{tab:stats:reverse:yzap}.
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables as input.}
+	\label{tab:stats:reverse:all}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
@@ -1050,12 +666,12 @@ The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using 
 		fda & $0.9199$ & $(0.9055, 0.9327)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.8017$ \\ \hline
 		pcaNNet & $0.9975$ & $(0.9936, 0.9993)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.9939$ \\ \hline
 	\end{tabular}
-	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables as input.}
-	\label{tab:stats:reverse:all}
 \end{table}
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables except $Dst$ as input.}
+	\label{tab:stats:reverse:noDst}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
@@ -1067,12 +683,12 @@ The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using 
 		fda & $0.8141$ & $(0.7942, 0.8329)$ & $0.7322$ & $9.859e-15$ & $0.5064$ \\ \hline
 		pcaNNet & $0.8436$ & $(0.8248, 0.861)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.5868$ \\ \hline
 	\end{tabular}
-	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables except $Dst$ as input.}
-	\label{tab:stats:reverse:no$Dst$}
 \end{table}
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables except $Dst$, $TEC$, and d$TEC$ as input.}
+	\label{tab:stats:reverse:no$TEC$}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
@@ -1084,12 +700,12 @@ The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using 
 		fda & $0.8166$ & $(0.7968, 0.8353)$ & $0.7322$ & $1.416e-15$ & $0.5092$ \\ \hline
 		pcaNNet & $0.8379$ & $(0.8189, 0.8557)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.5647$ \\ \hline
 	\end{tabular}
-	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables except $Dst$, $TEC$, and d$TEC$ as input.}
-	\label{tab:stats:reverse:no$TEC$}
 \end{table}
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:stats:reverse:coord}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
@@ -1101,12 +717,12 @@ The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using 
 		fda & $0.7979$ & $(0.7773, 0.8173)$ & $0.7322$ & $6.224e-10$ & $0.4541$ \\ \hline
 		pcaNNet & $0.8254$ & $(0.8059, 0.8437)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.5242$ \\ \hline
 	\end{tabular}
-	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
-	\label{tab:stats:reverse:coord}
 \end{table}
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{y}$, and $A_{p}$ as input.}
+	\label{tab:stats:reverse:xyap}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
@@ -1118,12 +734,12 @@ The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using 
 		fda & $0.8204$ & $(0.8007, 0.8389)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.5099$ \\ \hline
 		pcaNNet & $0.8367$ & $(0.8176, 0.8545)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.5579$ \\ \hline
 	\end{tabular}
-	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{y}$, and $A_{p}$ as input.}
-	\label{tab:stats:reverse:xyap}
 \end{table}
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{z}$, and $A_{p}$ as input.}
+	\label{tab:stats:reverse:xzap}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
@@ -1135,12 +751,12 @@ The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using 
 		fda & $0.7979$ & $(0.7773, 0.8173)$ & $0.7322$ & $6.224e-10$ & $0.4343$ \\ \hline
 		pcaNNet & $0.8148$ & $(0.7948, 0.8335)$ & $0.7322$ & $6.107e-15$ & $0.4948$ \\ \hline
 	\end{tabular}
-	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{z}$, and $A_{p}$ as input.}
-	\label{tab:stats:reverse:xzap}
 \end{table}
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{y}$, $B_{z}$, and $A_{p}$ as input.}
+	\label{tab:stats:reverse:yzap}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
@@ -1152,14 +768,14 @@ The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using 
 		fda & $0.7672$ & $(0.7457, 0.7877)$ & $0.7322$ & $0.0007444$ & $0.3367$ \\ \hline
 		pcaNNet & $0.7797$ & $(0.7586, 0.7998)$ & $0.7322$ & $6.857e-06$ & $0.3878$ \\ \hline
 	\end{tabular}
-	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{y}$, $B_{z}$, and $A_{p}$ as input.}
-	\label{tab:stats:reverse:yzap}
 \end{table}
 
 The execution time in seconds calculated using the R \textit{system.time} function \cite{rdocumentationSystemtimeFunction} for each model when using different combinations of variables as input is displayed in Table~\ref{tab:time:total}. The experiment was run on Windows 11 using R Studio version 2024.04.2+764 and R version 4.4.1, the AMD Radeon RX 6600 GPU, 16GB of RAM, and the AMD Ryzen 5 PRO 4650G CPU with 6 cores.
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The execution time in seconds for each model when using different combinations of variables as input.}
+	\label{tab:time:total}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
@@ -1171,17 +787,17 @@ The execution time in seconds calculated using the R \textit{system.time} functi
 		$x$ $z$ $A_{p}$ & $348.47$ & $259.81$ & $121.05$ & $475.05$ & $25.56$ & $76.04$ & $321.05$ \\ \hline
 		$y$ $z$ $A_{p}$ & $416.75$ & $277.62$ & $124.02$ & $489.08$ & $29.89$ & $95.64$ & $345.05$ \\ \hline
 	\end{tabular}
-	\caption{The execution time in seconds for each model when using different combinations of variables as input.}
-	\label{tab:time:total}
 \end{table}
 
-\subsection{A Comprehensive Analysis of the Naive Bayes Model}
-%\label{subsec:AnalysisNB}
+\subsection{Comprehensive Results for the Naive Bayes Model}
+%\label{subsec:ResultsNB}
 
-The confusion matrix and the performance indicators derived from it when using the Naive Bayes model and all input variables are depicted in Table~\ref{tab:cm:all:nb} and Table~\ref{tab:cs:reverse:all:nb}. The same values when using all input variables except $Dst$ are marked in Table~\ref{tab:cm:no$Dst$:nb} and Table~\ref{tab:cs:reverse:no$Dst$:nb}, and Table~\ref{tab:cm:yzap:nb} and Table~\ref{tab:cs:reverse:yzap:nb} when using only $B_{y}$, $B_{z}$, and $A_{p}$ variables as input. These results are displayed since the Naive Bayes model has low computational load and high accuracy. The combinations of input variables that produced a $100\%$ accuracy when used for the Naive Bayes model were not included since there are no errors in classification.
+The confusion matrix and the performance indicators derived from it when using the Naive Bayes model and all input variables are depicted in Table~\ref{tab:cm:all:nb} and Table~\ref{tab:cs:reverse:all:nb}. The same values when using all input variables except $Dst$ are marked in Table~\ref{tab:cm:noDst:nb} and Table~\ref{tab:cs:reverse:noDst:nb}, and Table~\ref{tab:cm:yzap:nb} and Table~\ref{tab:cs:reverse:yzap:nb} when using only $B_{y}$, $B_{z}$, and $A_{p}$ variables as input. These results are displayed since the Naive Bayes model has low computational load and high accuracy. The combinations of input variables that produced a $100\%$ accuracy when used for the Naive Bayes model were not included since there are no errors in classification.
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The confusion matrix for the Naive Bayes model when using all variables as input.}
+	\label{tab:cm:all:nb}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		 & \multicolumn{5}{|c|}{Reference} \\ \hline
@@ -1192,12 +808,12 @@ The confusion matrix and the performance indicators derived from it when using t
 		 R & $0$ & $3$ & $0$ & $375$ & $0$ \\ \hline
 		 T & $0$ & $0$ & $0$ & $1$ & $19$ \\ \hline
 	\end{tabular}
-	\caption{The confusion matrix for the Naive Bayes model when using all variables as input.}
-	\label{tab:cm:all:nb}
 \end{table}
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The performance indicators derived from the confusion matrix for the Naive Bayes model when using all variables as input.}
+	\label{tab:cs:reverse:all:nb}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		 & \multicolumn{5}{c|}{Class} \\ \hline
@@ -1210,12 +826,12 @@ The confusion matrix and the performance indicators derived from it when using t
 		DP & $0.2503\%$ & $72.78\%$ & $2.065\%$ & $23.65\%$ & $1.252\%$ \\ \hline
 		BA & $99.9687\%$ & $99.38\%$ & $97.925\%$ & $99.35\%$ & $99.968\%$ \\ \hline
 	\end{tabular}
-	\caption{The performance indicators derived from the confusion matrix for the Naive Bayes model when using all variables as input.}
-	\label{tab:cs:reverse:all:nb}
 \end{table}
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The confusion matrix for the Naive Bayes model when using all variables except $Dst$ as input.}
+	\label{tab:cm:noDst:nb}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		 & \multicolumn{5}{|c|}{Reference} \\ \hline
@@ -1226,12 +842,12 @@ The confusion matrix and the performance indicators derived from it when using t
 		 R & $0$ & $3$ & $0$ & $375$ & $0$ \\ \hline
 		 T & $0$ & $0$ & $0$ & $1$ & $19$ \\ \hline
 	\end{tabular}
-	\caption{The confusion matrix for the Naive Bayes model when using all variables except $Dst$ as input.}
-	\label{tab:cm:no$Dst$:nb}
 \end{table}
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The performance indicators derived from the confusion matrix for the Naive Bayes model when using all variables except $Dst$ as input.}
+	\label{tab:cs:reverse:noDst:nb}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		 & \multicolumn{5}{c|}{Class} \\ \hline
@@ -1244,12 +860,12 @@ The confusion matrix and the performance indicators derived from it when using t
 		DP & $0.2503\%$ & $72.9\%$ & $1.94\%$ & $23.65\%$ & $1.252\%$ \\ \hline
 		BA & $99.9687\%$ & $99.15\%$ & $96.105\%$ & $99.35\%$ & $99.968\%$ \\ \hline
 	\end{tabular}
-	\caption{The performance indicators derived from the confusion matrix for the Naive Bayes model when using all variables except $Dst$ as input.}
-	\label{tab:cs:reverse:no$Dst$:nb}
 \end{table}
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The confusion matrix for the Naive Bayes model when using only $B_{y}$, $B_{z}$, and $A_{p}$ as input.}
+	\label{tab:cm:yzap:nb}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		 & \multicolumn{5}{|c|}{Reference} \\ \hline
@@ -1260,12 +876,12 @@ The confusion matrix and the performance indicators derived from it when using t
 		 R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \hline
 		 T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
 	\end{tabular}
-	\caption{The confusion matrix for the Naive Bayes model when using only $B_{y}$, $B_{z}$, and $A_{p}$ as input.}
-	\label{tab:cm:yzap:nb}
 \end{table}
 
 \begin{table}[!ht]
-	\centering
+    \centering
+    \caption{The performance indicators derived from the confusion matrix for the Naive Bayes model when using only $B_{y}$, $B_{z}$, and $A_{p}$ as input.}
+	\label{tab:cs:reverse:yzap:nb}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		 & \multicolumn{5}{c|}{Class} \\ \hline
@@ -1278,47 +894,39 @@ The confusion matrix and the performance indicators derived from it when using t
 		DP & $0.1252\%$ & $73.34\%$ & $1.627\%$ & $23.72\%$ & $1.189\%$ \\ \hline
 		BA & $83.3333\%$ & $99.77\%$ & $98.148\%$ & $100\%$ & $100\%$ \\ \hline
 	\end{tabular}
-	\caption{The performance indicators derived from the confusion matrix for the Naive Bayes model when using only $B_{y}$, $B_{z}$, and $A_{p}$ as input.}
-	\label{tab:cs:reverse:yzap:nb}
 \end{table}
 
 \section{Discussion}
-%\label{sec:Discussion}
+\label{sec:Discussion}
 
-The Neural Network model has the highest execution time for any subset of the input variables due to its complexity and extensive training, evident from the data in Table~\ref{tab:time:total}. However, in each case, it achieved a $100\%$ accuracy, which is shown in Table~\ref{tab:stats:reverse:all}, Table~\ref{tab:stats:reverse:no$Dst$}, Table~\ref{tab:stats:reverse:no$TEC$}, Table~\ref{tab:stats:reverse:coord}, Table~\ref{tab:stats:reverse:xyap}, Table~\ref{tab:stats:reverse:xzap}, and Table~\ref{tab:stats:reverse:yzap}. The Naive Bayes model has the second highest accuracy, over $99\%$. The Naive Bayes model achieved a $100\%$ accuracy, except when using all input variables, all input variables except $Dst$, or only $B_{y}$, $B_{z}$, and $A_{p}$. The difference in accuracy between the Neural Network and the Naive Bayes model is negligible, and the training time for the Neural Network model is more than twice as long. Despite their simple design and seemingly oversimplified assumptions, Naive Bayes classifiers have performed quite well in many complex real-world situations. In 2004., an analysis of the Bayesian classification problem showed that there are reasonable theoretical reasons for the seemingly incredible performance of Naive Bayesian classifiers \cite{Zhang2004}.
+The Neural Network model has the highest execution time for any subset of the input variables due to its complexity and extensive training, evident from the data in Table~\ref{tab:time:total}. However, in each case, it achieved a $100\%$ accuracy, which is shown in Table~\ref{tab:stats:reverse:all}, Table~\ref{tab:stats:reverse:noDst}, Table~\ref{tab:stats:reverse:no$TEC$}, Table~\ref{tab:stats:reverse:coord}, Table~\ref{tab:stats:reverse:xyap}, Table~\ref{tab:stats:reverse:xzap}, and Table~\ref{tab:stats:reverse:yzap}. The Naive Bayes model has the second highest accuracy, over $99\%$. The Naive Bayes model achieved a $100\%$ accuracy, except when using all input variables, all input variables except $Dst$, or only $B_{y}$, $B_{z}$, and $A_{p}$. The difference in accuracy between the Neural Network and the Naive Bayes model is negligible, and the training time for the Neural Network model is more than twice as long. Despite their simple design and seemingly oversimplified assumptions, Naive Bayes classifiers have performed quite well in many complex real-world situations. In 2004., an analysis of the Bayesian classification problem showed that there are reasonable theoretical reasons for the seemingly incredible performance of Naive Bayesian classifiers \cite{Zhang2004}.
 
-All other models fail to achieve an accuracy over $90\%$, except when using all input variables, including $Dst$. The $Dst$ class was derived by thresholding the continuous $Dst$ value and discretizing it by converting it to a single character. This labeling method explains the increase in accuracy when adding the $Dst$ input variable in all except the two best-performing models. For example, the C5.0 model using Decision Trees did not consider any variable except $Dst$ when included in the input, indicated by a $100\%$ variable importance. The svmPoly model is consistently the worst-performing for any subset of input variables, never achieving an accuracy over $80\%$. None of the models achieved an accuracy under $70\%$, so they were all moderately successful.
+All other models fail to achieve an accuracy over $90\%$, except when using all input variables, including $Dst$. The $Dst$ class was derived by thresholding the continuous $Dst$ value and discretizing it by converting it to a single character, so the original $Dst$ value should not be used as model input. This labeling method explains the increase in accuracy when adding the $Dst$ input variable in all except the two best-performing models. For example, the C5.0 model using Decision Trees did not consider any variable except $Dst$ when included in the input, indicated by a $100\%$ variable importance. The svmPoly model is consistently the worst-performing for any subset of input variables, never achieving an accuracy over $80\%$. None of the models achieved an accuracy under $70\%$, so they were all moderately successful.
 
-When studying the performance of the Naive Bayes model by individual class in Table~\ref{tab:cm:all:nb}, Table~\ref{tab:cs:reverse:all:nb}, Table~\ref{tab:cm:no$Dst$:nb}, Table~\ref{tab:cs:reverse:no$Dst$:nb}, Table~\ref{tab:cm:yzap:nb} and Table~\ref{tab:cs:reverse:yzap:nb}, samples of the T class are all correctly classified, but the testing is less extensive since it is the second smallest class. Samples of the R class are sometimes erroneously assigned to the N, P, or less commonly the T class. Samples of the P class are rarely mistaken for the N class. Two of the most common misclassifications were assigning samples of the N class to the P or R classes. This is due to the largest number of samples in the N class between the P and R classes with the narrowest $Dst$ range. Samples of the N class are least often included in the E class, whose range is the furthest apart from the N class. A sample of the E class was attributed to the N class only once. The E class is the smallest with only three samples, which must be accounted for when interpreting these results.
+When studying the performance of the Naive Bayes model by individual class in Table~\ref{tab:cm:all:nb}, Table~\ref{tab:cs:reverse:all:nb}, Table~\ref{tab:cm:noDst:nb}, Table~\ref{tab:cs:reverse:noDst:nb}, Table~\ref{tab:cm:yzap:nb} and Table~\ref{tab:cs:reverse:yzap:nb}, samples of the T class are all correctly classified, but the testing is less extensive since it is the second smallest class. Samples of the R class are sometimes erroneously assigned to the N, P, or less commonly the T class. Samples of the P class are rarely mistaken for the N class. Two of the most common misclassifications were assigning samples of the N class with the highest detection rate and prevalence to the P or R classes with the third and second highest detection rate and prevalence. This is due to the largest number of samples in the N class between the P and R classes with the narrowest $Dst$ range. Samples of the N class are least often included in the E class, whose range is the furthest apart from the N class. A sample of the E class was attributed to the N class only once. The E class is the smallest with only three samples, which must be accounted for when interpreting these results, such as the lowest balanced accuracy of $83.33\%$ and sensitivity of $66.67\%$ when using only $B_{y}$, $B_{z}$, and $A_{p}$ as input, or the lowest positive predictive value of $75\%$ when using all variables as input.
 
 \section{Conclusion}
-%\label{sec:Conclusion}
+\label{sec:Conclusion}
 
-The results indicate that even a limited subset of variables, including coordinates ad $A_{p}$, available on simple devices such as smartphones, without measuring $TEC$ and calculating $Dst$, can be successfully utilized to construct a simple and efficient model using a Naive Bayes classifier to determine $Dst$ classes. The Neural Network model was marginally more accurate. However, the training time and model size were inappropriate for developing a new model with additional data or utilizing the model in practice.
+The presented study aims to classify ambient conditions of space weather events for sub-equatorial regions. GNSS PNT performance is significantly affected by such events. it would be beneficial to indicate to users that a geomagnetic/ionospheric storm is in progress. 
 
-% conflicts of interest
+Machine learning classification models were applied to descriptions of the geomagnetic field expressed in $TEC$ and other input data. It was assumed observations contained independent variables to generate the dependent variable representing the $Dst$ class. 
 
-\section*{Declaration of competing interest}
+Statistical analysis confirmed that other variables change distribution based on $Dst$, not $TEC$. Continuous $Dst$ values in different ranges were converted into discrete classes based on statistics, previous theories, and research. 
 
-The authors declare no conflict of interest.
+An SVM with a Polynomial Kernel, C5.0 Decision Tree, Naive Bayes, Neural Network, PLS, FDA, and PCA Neural Network model created a $Dst$-based classification from multiple combinations of input variables.
 
-\section*{CRediT authorship contribution statement}
+The Naive Bayes model achieved perfect accuracy for most tested combinations of input variables, and over $99\%$ in all cases. It is slightly less successful than a Neural Network, and the total execution time is at least two times shorter, making it more suitable for use in compact, low-performance, and low-cost portable devices such as smartphones.
 
-\textbf{Lucija \v{Z}u\v{z}i\'{c}:} Conceptualization, Methodology, Software, Validation, Investigation, Data Curation, Writing -- Original Draft, Visualization. 
+% TASK ADD CONCLUSION
 
-\textbf{Deni Klen:} Conceptualization, Methodology, Software, Validation, Investigation, Data Curation, Writing -- Original Draft, Visualization. 
+%%===========================================================================================%%
+%% If you are submitting to one of the Nature Portfolio journals, using the eJP submission   %%
+%% system, please include the references within the manuscript file itself. You may do this  %%
+%% by copying the reference list from your .bbl file, paste it into the main manuscript .tex %%
+%% file, and delete the associated \verb+\bibliography+ commands.                            %%
+%%===========================================================================================%%
 
-\textbf{Teodor B. Iliev:} Conceptualization,  Validation, Formal analysis, Investigation, Resources, Writing -- Original Draft, Writing -- Review \& Editing, Supervision. 
-
-\textbf{Renato Filjar:} Conceptualization, Methodology, Validation, Formal analysis, Investigation, Resources, Writing -- Original Draft, Writing -- Review \& Editing, Supervision, Project administration, Funding acquisition.
-
-% acknowledgment
-
-\section*{Funding}
-
-This work was fully supported by
-
-% Adding a bibliography if citations are used in the report
 \begin{thebibliography}{000}
 \bibitem{filjar2022application}Filjar, R. An application-centred resilient GNSS position estimation algorithm based on positioning environment conditions awareness. {\em Proceedings Of The 2022 International Technical Meeting Of The Institute Of Navigation}. pp. 1123-1136 (2022)
 \bibitem{filjar2024ambient}Filjar, R., Hedji, I., Prpić-Oršić, J. \& Iliev, T. An Ambient Adaptive Global Navigation Satellite System Total Electron Content Predictive Model for Short-Term Rapid Geomagnetic Storm Events. {\em Remote Sensing}. \textbf{16}, 3051 (2024)
@@ -1330,12 +938,46 @@ This work was fully supported by
 \bibitem{natras2022ensemble}Natras, R., Soja, B. \& Schmidt, M. Ensemble machine learning of random forest, AdaBoost and XGBoost for vertical total electron content forecasting. {\em Remote Sensing}. \textbf{14}, 3547 (2022)
 \bibitem{natras2023regional}Natras, R., Goss, A., Halilovic, D., Magnet, N., Mulic, M., Schmidt, M. \& Weber, R. Regional ionosphere delay models based on CORS data and machine learning. {\em NAVIGATION: Journal Of The Institute Of Navigation}. \textbf{70} (2023)
 \bibitem{filjar2020comparison}Filjar, R., Sklebar, I. \& Horvat, M. A COMPARISON OF MACHINE LEARNING-BASED INDIVIDUAL MOBILITY CLASSIFICATION MODELS DEVELOPED ON SENSOR READINGS FROM LOOSELY ATTACHED SMARTPHONES.. {\em Komunikácie}. \textbf{22} (2020)
-\bibitem{Fan2008}Fan, R., Chang, K., Hsieh, C., Wang, X. \& Lin, C. LIBLINEAR: a library for large linear classification. {\em Journal Of Machine Learning Research}. \textbf{9} pp. 1871-1874 (2008,8)
-\bibitem{Mohamad2013}Mohamad, I. \& Usman, D. Standardization and its effects on K-means clustering algorithm. {\em Research Journal Of Applied Sciences, Engineering And Technology}. \textbf{6}, 3299-3303 (2013,9)
-\bibitem{Fennell2019}Fennell, P., Zuo, Z. \& Lerman, K. Predicting and explaining behavioral data with structured feature space decomposition. {\em EPJ Data Sci.}. \textbf{8} (2019,12)
 \bibitem{kuhn2013applied}Kuhn, M. Applied predictive modeling. (Springer,2013)
 \bibitem{topepoCaretPackage}Kuhn, M. The caret Package — topepo.github.io. (https://topepo.github.io/caret/,2024), Accessed 11.09.2024.
 \bibitem{rprojectProjectStatistical}RCoreTeam R: The R Project for Statistical Computing — r-project.org. (https://www.r-project.org/,2024), Accessed 11.09.2024.
+\bibitem{Boser1992}Boser, B., Guyon, I. \& Vapnik, V. A training algorithm for optimal margin classifiers. {\em Proceedings Of The Fifth Annual Workshop On Computational Learning Theory}. (1992,7)
+\bibitem{Cortes1995}Cortes, C. \& Vapnik, V. Support-vector networks. {\em Mach. Learn.}. \textbf{20}, 273-297 (1995,9)
+\bibitem{BenHur2001}Ben-Hur, A., Horn, D., Siegelmann, H. \& Vapnik, V. Support Vector Clustering. {\em Journal Of Machine Learning Research}. \textbf{2} pp. 125-137 (2001,11)
+\bibitem{Meyer2003}Meyer, D., Leisch, F. \& Hornik, K. The support vector machine under test. {\em Neurocomputing}. \textbf{55}, 169-186 (2003,9)
+\bibitem{developers2023}Developers 1.4. Support Vector Machines — scikit-learn.org. (http://scikit-learn.org/stable/modules/svm.html,2023), Accessed 25.01.2024.
+\bibitem{Hastie2009}Hastie, T., Rosset, S., Zhu, J. \& Zou, H. Multi-class AdaBoost. {\em Stat. Interface}. \textbf{2}, 349-360 (2009)
+\bibitem{Aizerman1964}Aizerman, M., Braverman, E. \& Rozonoer, L. Theoretical foundations of the potential function method in pattern recognition learning. {\em Automation And Remote Control}., 821-837 (1964)
+\bibitem{Jin2012}Jin, C. \& Wang, L. Dimensionality dependent PAC-Bayes margin bound. {\em Advances In Neural Information Processing Systems}. \textbf{2} pp. 1034-1042 (2012,1)
+\bibitem{Press2007}Press, W., Teukolsky, S., Vetterling, W. \& Flannery, B. Numerical recipes 3rd edition. (Cambridge University Press,2007,9)
+\bibitem{Joachims1998}Joachims, T. Text categorization with Support Vector Machines: Learning with many relevant features. {\em Machine Learning: ECML-98}. pp. 137-142 (1998)
+\bibitem{Pradhan2004}Pradhan, S., Ward, W., Hacioglu, K., Martin, J. \& Jurafsky, D. Shallow Semantic Parsing using Support Vector Machines. {\em Proceedings Of The Human Language Technology Conference Of The North American Chapter Of The Association For Computational Linguistics: HLT-NAACL 2004}. pp. 233-240 (2004), https://aclanthology.org/N04-1030
+\bibitem{Laurent2014}Laurent, A., Strauss, O., Bouchon-Meunier, B. \& Yager, R. Information Processing and Management of Uncertainty in Knowledge-Based Systems. {\em 16th International Conference, IPMU}. pp. 442 (2014)
+\bibitem{Barghout2015}Barghout, L. Spatial-taxon information granules as used in iterative fuzzy-decision-making for image segmentation. {\em Studies In Big Data}. pp. 285-318 (2015)
+\bibitem{Maity2016}Maity, A. Supervised classification of RADARSAT-2 polarimetric data for different land features. {\em ArXiv Preprint ArXiv:1608.00501}. (2016,8)
+\bibitem{Decoste2002}Decoste, D. \& Schölkopf, B. Training Invariant Support Vector Machines. {\em Mach. Learn.}. \textbf{46}, 161-190 (2002)
+\bibitem{Maitra2015}Maitra, D., Bhattacharya, U. \& Parui, S. CNN based common approach to handwritten character recognition of multiple scripts. {\em 2015 13th International Conference On Document Analysis And Recognition (ICDAR)}. (2015,8)
+\bibitem{Gaonkar2013}Gaonkar, B. \& Davatzikos, C. Analytic estimation of statistical significance maps for support vector machine based multi-variate image analysis and classification. {\em Neuroimage}. \textbf{78} pp. 270-283 (2013,9)
+\bibitem{Cuingnet2011}Cuingnet, R., Rosso, C., Chupin, M., Lehéricy, S., Dormont, D., Benali, H., Samson, Y. \& Colliot, O. Spatial regularization of SVM for the detection of diffusion alterations associated with stroke outcome. {\em Med. Image Anal.}. \textbf{15}, 729-737 (2011,10)
+\bibitem{Statnikov2006}Statnikov, A., Hardin, D. \& Aliferis, C. Using SVM Weight-Based Methods to Identify Causally Relevant and Non-Causally Relevant Variables. {\em Sign}. \textbf{1} (2006,1)
+\bibitem{Hsu2003}Hsu, C., Chang, C. \& Lin, C. A Practical Guide to Support Vector Classification. (Department of Computer Science, National Taiwan University,2003)
+\bibitem{Studer2011}Studer, M., Ritschard, G., Gabadinho, A. \& Müller, N. Discrepancy analysis of state sequences. {\em Sociol. Methods Res.}. \textbf{40}, 471-510 (2011,8)
+\bibitem{Wu2008}Wu, X., Kumar, V., Quinlan, R., Ghosh, J., Yang, Q., Motoda, H., McLachlan, G., Ng, A., Liu, B., Yu, P., Zhou, Z., Steinbach, M., Hand, D. \& Steinberg, D. Top 10 algorithms in data mining. {\em Knowl. Inf. Syst.}. \textbf{14}, 1-37 (2008,1)
+\bibitem{Rokach2014}Rokach, L. \& Maimon, O. Data mining with decision trees. (World Scientific Publishing Company,2014,10)
+\bibitem{ShalevShwartz2014}Shalev-Shwartz, S. \& Ben-David, S. Decision Trees. {\em Understanding Machine Learning: From Theory To Algorithms}. pp. 212-218 (2014)
+\bibitem{Quinlan1986}Quinlan, J. Induction of decision trees. {\em Mach. Learn.}. \textbf{1}, 81-106 (1986,3)
+\bibitem{Rokach2005}Rokach, L. \& Maimon, O. Top-down induction of decision trees classifiers—A survey. {\em IEEE Trans. Syst. Man Cybern. C Appl. Rev.}. \textbf{35}, 476-487 (2005,11)
+\bibitem{McCallum2011}McCallum, A. Graphical Models Lecture 2: Bayesian Network Representation. (https://people.cs.umass.edu/ mccallum/courses/gm2011/02-bn-rep.pdf,2011), Accessed 25.01.2024.
+\bibitem{Russell1999}Russell, S. \& Norvig, P. Artificial intelligence: a modern approach. (Pearson,2016)
+\bibitem{Hand2001}Hand, D. \& Yu, K. Idiot's Bayes: Not So Stupid after All?. {\em Int. Stat. Rev.}. \textbf{69}, 385 (2001,12)
+\bibitem{Zhang2004}Zhang, H. The Optimality of Naive Bayes. {\em Proceedings Of The Seventeenth International Florida Artificial Intelligence Research Society Conference, FLAIRS 2004}. \textbf{2} (2004,1)
+\bibitem{Caruana2006}Caruana, R. \& Niculescu-Mizil, A. An Empirical Comparison of Supervised Learning Algorithms. {\em Proceedings Of The 23rd International Conference On Machine Learning - ICML '06}. \textbf{2006} pp. 161-168 (2006,6)
+\bibitem{stackexchange}StackExchange Why is the SVM margin equal to 2/w? — math.stackexchange.com. (https://math.stackexchange.com/questions/1305925/why-is-the-svm-margin-equal-to-frac2-mathbfw,2024), Accessed 25.01.2024.
+\bibitem{Murty2011}Murty, M. \& Devi, V. Pattern recognition: An algorithmic approach. (Springer Science & Business Media,2011)
+\bibitem{John2013}John, G. \& Langley, P. Estimating Continuous Distributions in Bayesian Classifiers.  (2013)
+\bibitem{Mccallum2001}Mccallum, A. \& Nigam, K. A Comparison of Event Models for Naive Bayes Text Classification. {\em Work Learn Text Categ}. \textbf{752} (2001,5)
+\bibitem{Metsis2006}Metsis, V., Androutsopoulos, I. \& Paliouras, G. Spam Filtering with Naive Bayes - Which Naive Bayes?. {\em In CEAS}. (2006,1)
+\bibitem{Piryonesi2020}Piryonesi, S. \& El-Diraby, T. Role of data analytics in infrastructure asset management: Overcoming data size and quality problems. {\em J. Transp. Eng. B Pavements}. \textbf{146}, 04020022 (2020,6)
 \bibitem{mitExplainedNeural}MIT Explained: Neural networks — news.mit.edu. (https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414,2017), Accessed 27.09.2024
 \bibitem{brahme2014comprehensive}Brahme, A. Comprehensive biomedical physics. (Newnes,2014)
 \bibitem{olden2002illuminating}Olden, J. \& Jackson, D. Illuminating the "black box": a randomization approach for understanding variable contributions in artificial neural networks. {\em Ecological Modelling}. \textbf{154}, 135-150 (2002)
@@ -1348,43 +990,6 @@ This work was fully supported by
 \bibitem{jin2019auto}Jin, H., Song, Q. \& Hu, X. Auto-keras: An efficient neural architecture search system. {\em Proceedings Of The 25th ACM SIGKDD International Conference On Knowledge Discovery & Data Mining}. pp. 1946-1956 (2019)
 \bibitem{claesen2015hyperparameter}Claesen, M. \& De Moor, B. Hyperparameter search in machine learning. {\em ArXiv Preprint ArXiv:1502.02127}. (2015)
 \bibitem{liu2020python}Liu, Y. Python Machine Learning by Example: Build Intelligent Systems Using Python, TensorFlow 2, PyTorch, and Scikit-Learn. (Packt Publishing Ltd,2020)
-\bibitem{Boser1992}Boser, B., Guyon, I. \& Vapnik, V. A training algorithm for optimal margin classifiers. {\em Proceedings Of The Fifth Annual Workshop On Computational Learning Theory}. (1992,7)
-\bibitem{Cortes1995}Cortes, C. \& Vapnik, V. Support-vector networks. {\em Mach. Learn.}. \textbf{20}, 273-297 (1995,9)
-\bibitem{BenHur2001}Ben-Hur, A., Horn, D., Siegelmann, H. \& Vapnik, V. Support Vector Clustering. {\em Journal Of Machine Learning Research}. \textbf{2} pp. 125-137 (2001,11)
-\bibitem{Meyer2003}Meyer, D., Leisch, F. \& Hornik, K. The support vector machine under test. {\em Neurocomputing}. \textbf{55}, 169-186 (2003,9)
-\bibitem{developers2023}Developers 1.4. Support Vector Machines — scikit-learn.org. (http://scikit-learn.org/stable/modules/svm.html,2023), Accessed 25.01.2024.
-\bibitem{Hastie2009}Hastie, T., Rosset, S., Zhu, J. \& Zou, H. Multi-class AdaBoost. {\em Stat. Interface}. \textbf{2}, 349-360 (2009)
-\bibitem{Press2007}Press, W., Teukolsky, S., Vetterling, W. \& Flannery, B. Numerical recipes 3rd edition. (Cambridge University Press,2007,9)
-\bibitem{Joachims1998}Joachims, T. Text categorization with Support Vector Machines: Learning with many relevant features. {\em Machine Learning: ECML-98}. pp. 137-142 (1998)
-\bibitem{Pradhan2004}Pradhan, S., Ward, W., Hacioglu, K., Martin, J. \& Jurafsky, D. Shallow Semantic Parsing using Support Vector Machines. {\em Proceedings Of The Human Language Technology Conference Of The North American Chapter Of The Association For Computational Linguistics: HLT-NAACL 2004}. pp. 233-240 (2004), https://aclanthology.org/N04-1030
-\bibitem{Laurent2014}Laurent, A., Strauss, O., Bouchon-Meunier, B. \& Yager, R. Information Processing and Management of Uncertainty in Knowledge-Based Systems. {\em 16th International Conference, IPMU}. pp. 442 (2014)
-\bibitem{Barghout2015}Barghout, L. Spatial-taxon information granules as used in iterative fuzzy-decision-making for image segmentation. {\em Studies In Big Data}. pp. 285-318 (2015)
-\bibitem{Maity2016}Maity, A. Supervised classification of RADARSAT-2 polarimetric data for different land features. {\em ArXiv Preprint ArXiv:1608.00501}. (2016,8)
-\bibitem{Decoste2002}Decoste, D. \& Schölkopf, B. Training Invariant Support Vector Machines. {\em Mach. Learn.}. \textbf{46}, 161-190 (2002)
-\bibitem{Maitra2015}Maitra, D., Bhattacharya, U. \& Parui, S. CNN based common approach to handwritten character recognition of multiple scripts. {\em 2015 13th International Conference On Document Analysis And Recognition (ICDAR)}. (2015,8)
-\bibitem{Gaonkar2013}Gaonkar, B. \& Davatzikos, C. Analytic estimation of statistical significance maps for support vector machine based multi-variate image analysis and classification. {\em Neuroimage}. \textbf{78} pp. 270-283 (2013,9)
-\bibitem{Cuingnet2011}Cuingnet, R., Rosso, C., Chupin, M., Lehéricy, S., Dormont, D., Benali, H., Samson, Y. \& Colliot, O. Spatial regularization of SVM for the detection of diffusion alterations associated with stroke outcome. {\em Med. Image Anal.}. \textbf{15}, 729-737 (2011,10)
-\bibitem{Statnikov2006}Statnikov, A., Hardin, D. \& Aliferis, C. Using SVM Weight-Based Methods to Identify Causally Relevant and Non-Causally Relevant Variables. {\em Sign}. \textbf{1} (2006,1)
-\bibitem{Aizerman1964}Aizerman, M., Braverman, E. \& Rozonoer, L. Theoretical foundations of the potential function method in pattern recognition learning. {\em Automation And Remote Control}., 821-837 (1964)
-\bibitem{Jin2012}Jin, C. \& Wang, L. Dimensionality dependent PAC-Bayes margin bound. {\em Advances In Neural Information Processing Systems}. \textbf{2} pp. 1034-1042 (2012,1)
-\bibitem{Hsu2003}Hsu, C., Chang, C. \& Lin, C. A Practical Guide to Support Vector Classification. (Department of Computer Science, National Taiwan University,2003), http://www.csie.ntu.edu.tw/~cjlin/papers.html
-\bibitem{Studer2011}Studer, M., Ritschard, G., Gabadinho, A. \& Müller, N. Discrepancy analysis of state sequences. {\em Sociol. Methods Res.}. \textbf{40}, 471-510 (2011,8)
-\bibitem{Wu2008}Wu, X., Kumar, V., Quinlan, R., Ghosh, J., Yang, Q., Motoda, H., McLachlan, G., Ng, A., Liu, B., Yu, P., Zhou, Z., Steinbach, M., Hand, D. \& Steinberg, D. Top 10 algorithms in data mining. {\em Knowl. Inf. Syst.}. \textbf{14}, 1-37 (2008,1)
-\bibitem{Rokach2014}Rokach, L. \& Maimon, O. Data mining with decision trees. (World Scientific Publishing Company,2014,10)
-\bibitem{ShalevShwartz2014}Shalev-Shwartz, S. \& Ben-David, S. Decision Trees. {\em Understanding Machine Learning: From Theory To Algorithms}. pp. 212-218 (2014)
-\bibitem{Quinlan1986}Quinlan, J. Induction of decision trees. {\em Mach. Learn.}. \textbf{1}, 81-106 (1986,3)
-\bibitem{Rokach2005}Rokach, L. \& Maimon, O. Top-down induction of decision trees classifiers—A survey. {\em IEEE Trans. Syst. Man Cybern. C Appl. Rev.}. \textbf{35}, 476-487 (2005,11)
-\bibitem{McCallum2011}McCallum, A. Graphical Models Lecture 2: Bayesian Network Representation. (https://people.cs.umass.edu/ mccallum/courses/gm2011/02-bn-rep.pdf,2011), Accessed 25.01.2024.
-\bibitem{Russell1999}Russell, S. \& Norvig, P. Artificial intelligence. (Pearson,1999,7)
-\bibitem{Hand2001}Hand, D. \& Yu, K. Idiot's Bayes: Not So Stupid after All?. {\em Int. Stat. Rev.}. \textbf{69}, 385 (2001,12)
-\bibitem{Zhang2004}Zhang, H. The Optimality of Naive Bayes. {\em Proceedings Of The Seventeenth International Florida Artificial Intelligence Research Society Conference, FLAIRS 2004}. \textbf{2} (2004,1)
-\bibitem{Caruana2006}Caruana, R. \& Niculescu-Mizil, A. An Empirical Comparison of Supervised Learning Algorithms. {\em Proceedings Of The 23rd International Conference On Machine Learning - ICML '06}. \textbf{2006} pp. 161-168 (2006,6)
-\bibitem{stackexchange}StackExchange Why is the SVM margin equal to 2/w? — math.stackexchange.com. (https://math.stackexchange.com/questions/1305925/why-is-the-svm-margin-equal-to-frac2-mathbfw,2024), Accessed 25.01.2024.
-\bibitem{Murty2011}Murty, M. \& Devi, V. Pattern Recognition. (Springer,2011,7)
-\bibitem{John2013}John, G. \& Langley, P. Estimating Continuous Distributions in Bayesian Classifiers.  (2013)
-\bibitem{Mccallum2001}Mccallum, A. \& Nigam, K. A Comparison of Event Models for Naive Bayes Text Classification. {\em Work Learn Text Categ}. \textbf{752} (2001,5)
-\bibitem{Metsis2006}Metsis, V., Androutsopoulos, I. \& Paliouras, G. Spam Filtering with Naive Bayes - Which Naive Bayes?. {\em In CEAS}. (2006,1)
-\bibitem{Piryonesi2020}Piryonesi, S. \& El-Diraby, T. Role of data analytics in infrastructure asset management: Overcoming data size and quality problems. {\em J. Transp. Eng. B Pavements}. \textbf{146}, 04020022 (2020,6)
 \bibitem{wold2001pls}Wold, S., Sjöström, M. \& Eriksson, L. PLS-regression: a basic tool of chemometrics. {\em Chemometrics And Intelligent Laboratory Systems}. \textbf{58}, 109-130 (2001)
 \bibitem{abdi2010partial}Abdi, H. Partial least squares regression and projection on latent structure regression (PLS Regression). {\em Wiley Interdisciplinary Reviews: Computational Statistics}. \textbf{2}, 97-106 (2010)
 \bibitem{saebo2008lpls}Sæbø, S., Almøy, T., Flatberg, A., Aastveit, A. \& Martens, H. LPLS-regression: a method for prediction and classification under the influence of background information on predictor variables. {\em Chemometrics And Intelligent Laboratory Systems}. \textbf{91}, 121-132 (2008)
@@ -1417,7 +1022,7 @@ This work was fully supported by
 \bibitem{venables2013modern}Venables, W. \& Ripley, B. Modern applied statistics with S-PLUS. (Springer Science & Business Media,2013)
 \bibitem{lachenbruch1979discriminant}Lachenbruch, P. \& Goldstein, M. Discriminant analysis. {\em Biometrics}. pp. 69-85 (1979)
 \bibitem{klecka1980discriminant}Klecka, W. Discriminant analysis. (Sage,1980)
-\bibitem{Hrdle2003AppliedMS}Härdle, W. \& Simar, L. Applied Multivariate Statistical Analysis. (MD Tech,2003), https://api.semanticscholar.org/CorpusID:39123297
+\bibitem{Hrdle2003AppliedMS}Härdle, W. Applied multivariate statistical analysis. (Springer Nature,2003)
 \bibitem{archive765Discriminant}Garson, G. PA 765: Discriminant Function Analysis — web.archive.org. (https://web.archive.org/web/20080312065328/http://www2.chass.ncsu.edu/garson/pA765/discrim.htm,2008), Accessed 26.09.2024
 \bibitem{israel2006performance}Israel, S. Performance metrics: how and when. {\em Geocarto International}. \textbf{21}, 23-32 (2006)
 \bibitem{rao1948utilization}Rao, C. The utilization of multiple measurements in problems of biological classification. {\em Journal Of The Royal Statistical Society. Series B (Methodological)}. \textbf{10}, 159-203 (1948)
@@ -1455,6 +1060,9 @@ This work was fully supported by
 \bibitem{forkman2019hypothesis}Forkman, J., Josse, J. \& Piepho, H. Hypothesis tests for principal component analysis when variables are standardized. {\em Journal Of Agricultural, Biological And Environmental Statistics}. \textbf{24} pp. 289-308 (2019)
 \bibitem{enge1994global}Enge, P. The global positioning system: Signals, measurements, and performance. {\em International Journal Of Wireless Information Networks}. \textbf{1} pp. 83-105 (1994)
 \bibitem{klobuchar1987ionospheric}Klobuchar, J. Ionospheric time-delay algorithm for single-frequency GPS users. {\em IEEE Transactions On Aerospace And Electronic Systems}. pp. 325-331 (1987)
+\bibitem{Fan2008}Fan, R., Chang, K., Hsieh, C., Wang, X. \& Lin, C. LIBLINEAR: a library for large linear classification. {\em Journal Of Machine Learning Research}. \textbf{9} pp. 1871-1874 (2008,8)
+\bibitem{Mohamad2013}Mohamad, I. \& Usman, D. Standardization and its effects on K-means clustering algorithm. {\em Research Journal Of Applied Sciences, Engineering And Technology}. \textbf{6}, 3299-3303 (2013,9)
+\bibitem{Fennell2019}Fennell, P., Zuo, Z. \& Lerman, K. Predicting and explaining behavioral data with structured feature space decomposition. {\em EPJ Data Sci.}. \textbf{8} (2019,12)
 \bibitem{topepoDataSplitting}Kuhn, M. 4 Data Splitting | The caret Package — topepo.github.io. (https://topepo.github.io/caret/data-splitting.html,2024), Accessed 28.09.2024
 \bibitem{hyndman2018forecasting}Hyndman, R. Forecasting: principles and practice. (OTexts,2018)
 \bibitem{rdocumentationCreateDataPartitionFunction}Developers, R. createDataPartition function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/createDataPartition,2024), Accessed 27.09.2024
@@ -1467,7 +1075,7 @@ This work was fully supported by
 \bibitem{clopper1934use}Clopper, C. \& Pearson, E. The use of confidence or fiducial limits illustrated in the case of the binomial. {\em Biometrika}. \textbf{26}, 404-413 (1934)
 \bibitem{conover1999practical}Conover, W. Practical nonparametric statistics. (John Wiley & Sons, Inc,1999)
 \bibitem{hollander2013nonparametric}Hollander, M. Nonparametric statistical methods. (John Wiley & Sons Inc,2013)
-\bibitem{howell1992statistical}Howell, D. Statistical methods for psychology. (PWS-Kent Publishing Co,1992)
+\bibitem{howell1992statistical}Howell, D. Statistical methods for psychology, Seventh Edition. (Cengage Wadsworth,2009)
 \bibitem{graphpadGraphPadPrism}GraphPad Software, I. GraphPad Prism 6 Statistics Guide - The binomial test — graphpad.com. (https://www.graphpad.com/guides/prism/6/statistics/stat_binomial.htm,2024), Accessed 28.09.2024
 \bibitem{mchugh2012interrater}McHugh, M. Interrater reliability: the kappa statistic. {\em Biochemia Medica}. \textbf{22}, 276-282 (2012)
 \bibitem{pontius2011death}Pontius Jr, R. \& Millones, M. Death to Kappa: birth of quantity disagreement and allocation disagreement for accuracy assessment. {\em International Journal Of Remote Sensing}. \textbf{32}, 4407-4429 (2011)
@@ -1479,7 +1087,7 @@ This work was fully supported by
 \bibitem{heidke1926berechnung}Heidke, P. Berechnung des Erfolges und der Güte der Windstärkevorhersagen im Sturmwarnungsdienst. {\em Geografiska Annaler}. \textbf{8}, 301-349 (1926)
 \bibitem{philosophical1887bulletin}D.C., T. Bulletin of the Philosophical Society of Washington, D.C.. (The co-operation of the Smithsonian Institution,1887)
 \bibitem{rdocumentationSystemtimeFunction}Developers, R. system.time function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/system.time,2024), Accessed 28.09.2024
+
 \end{thebibliography}
-% Adds references to the Bibliography in the ToC
-%\addcontentsline{toc}{chapter}{\bibname \ etaile}
+
 \end{document}

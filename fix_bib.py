@@ -166,13 +166,13 @@ file_bibliography_new.close()
 file_bibliography_new_no_misc = open(dir + "bibliography_short_no_misc.bib", "w")
 file_bibliography_new_no_misc.write(merged_lines_no_misc_new.replace("author = {}", "author = {Developers, R}").replace("year = {}", "year = {2024}").replace("year={}", "year={2024}"))
 file_bibliography_new_no_misc.close()
-start_bib = "\\bibliographystyle{unsrt}\n"
+start_bib = "\\bibliography{sn-bibliography}% common bib file"
 new_start_bib = "\\begin{thebibliography}{"
 new_start_bibliography = "\\section{Bibliography}\n%\label{sec:Bibliography}\n"
 for ix_zero in range(len(str(len(ks)))):
     new_start_bib += "0"
 new_start_bib += "}\n"
-end_bib = "\\bibliography{bibliography}"
+end_bib = "%%\\input sn-article.bbl"
 new_end_bib = "\\end{thebibliography}"
 new_end_bibliography = ""
 file_merged_refs_all_bibitem_old = open(dir + "refs_bibitem.txt", "r", encoding="UTF8")
