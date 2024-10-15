@@ -56,6 +56,7 @@
 \usepackage{algpseudocode}%
 \usepackage{listings}%
 %%%%
+\usepackage{anyfontsize}
 
 %%%%%=============================================================================%%%%
 %%%%  Remarks: This template is provided to aid authors with the preparation
@@ -188,7 +189,7 @@ A Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT)
 
 The models were selected because they represent larger families of classification methods. SVMs are supervised maximum margin models. Decision Trees also apply supervised learning. Naive Bayes classifiers are probabilistic classifiers that can be parametric or non-parametric, but this study uses a non-parametric approach. PLS is a non-parametric linear regression model. FDA uses multiple non-parametric linear regression models to create a non-linear classification. PCA is a linear dimensionality reduction technique that extracts a predefined number of components for training a Neural Network. Neural Networks imitate the brain using artificial neurons to produce outputs based on the input and the activation function. Neural Networks require that the model structure be predefined, and hyperparameters are usually tuned or predefined based on assumptions. An automated tuning procedure was used in this study.
 
-All Neural Network models were applied based on research by Kuhn for the \textit{R} \textit{caret} package \cite{kuhn2013applied, topepoCaretPackage, rprojectProjectStatistical}.
+All Neural Network models were applied based on research by Kuhn for the \textit{R} \textit{caret} package \cite{kuhn2013applied, KuhnCaret2024, rprojectProjectStatistical}.
 
 \subsubsection{Support Vector Machine}
 %\label{subsubsec:SVM}
@@ -197,7 +198,7 @@ In machine learning, Support Vector Machines (SVMs) or Support Vector Networks (
 
 SVMs can also be used for regression tasks where the objective becomes $\epsilon$ -sensitive. A "soft margin" to separate data that is not linearly separable was proposed by Corinna Cortes and Vapnik in 1993 and published in 1995 \cite{Cortes1995}. Support Vector Clustering \cite{BenHur2001} (SVC) applies support vector statistics to unlabeled data in unsupervised learning to find new natural groupings. Meyer, Leisch, and Hornik compared SVM with other classifiers \cite{Meyer2003}, but it is unclear whether SVM predictions perform better than other linear models, such as logistic, and linear regression.
 
-Support Vector Machine constructs a set of hyperplanes in a high-dimensional space, used for classification, regression, or outlier detection \cite{developers2023}. Intuitively, a good separation is achieved by the hyperplane with the greatest distance to the nearest point in the training data belonging to any class \cite{Hastie2009}.
+Support Vector Machine constructs a set of hyperplanes in a high-dimensional space, used for classification, regression, or outlier detection \cite{scikit-learn2023}. Intuitively, a good separation is achieved by the hyperplane with the greatest distance to the nearest point in the training data belonging to any class \cite{HastieRosset2009}.
 
 The original maximum margin hyperplane algorithm proposed by Vapnik in 1963 constructed a linear classifier. In 1992, Bernhard Boser, Isabelle Guyon, and Vladimir Vapnik proposed creating nonlinear classifiers using the kernel trick \cite{Boser1992, Aizerman1964}. A multidimensional feature space increases the generalization error of Support Vector Machines, so additional samples are needed to enhance performance \cite{Jin2012}. To keep the computational burden reasonable, a kernel probability density function $k(x, y)$ is chosen to fit the problem \cite{Press2007}.
 
@@ -236,7 +237,7 @@ To estimate feature distribution parameters, we must assume a parametric distrib
 
 Clustering is often used to discretize continuous values. The new set of features obtained by discretization follows the Bernoulli distribution. Some literature claims that discretization is necessary to use a Naive Bayesian classifier, but discretization may discard the information needed to distinguish between classes \cite{Hand2001}.
 
-Sometimes the distribution of class-based marginal densities is far from normal. The marginal probability density of each class can be used to estimate the kernel probability density function in such cases. This method, introduced by John and Langley \cite{John2013}, can significantly increase the accuracy of the classifier \cite{Piryonesi2020, Hastie2009}.
+Sometimes the distribution of class-based marginal densities is far from normal. The marginal probability density of each class can be used to estimate the kernel probability density function in such cases. This method, introduced by John and Langley \cite{John2013}, can significantly increase the accuracy of the classifier \cite{Piryonesi2020, HastieRosset2009}.
 
 \subsubsection{Neural Networks}
 %\label{subsubsec:NN}
@@ -270,7 +271,7 @@ The scores form an orthogonal basis in PLS regression, and the loadings are chos
 
 Flexible Discriminant Analysis (FDA) is a general methodology that creates the discriminant surface for a multigroup non-linear classification model based on a mixture of non-parametric linear regression models \cite{hastie1995penalized}, such as Multivariate Adaptive Regression Splines (MARS) and linear discriminant analysis (LDA).
 
-Many predictors can be used at once in FDA \cite{hastie2009elements}, variable interactions are automatically noted \cite{hastie1994flexible}, it is complex but execution time and computational load are adequate \cite{reynes2006choice}. The algorithm is not significantly affected by outliers \cite{phillips2017applying}.
+Many predictors can be used at once in FDA \cite{HastieTibshirani2009}, variable interactions are automatically noted \cite{hastie1994flexible}, it is complex but execution time and computational load are adequate \cite{reynes2006choice}. The algorithm is not significantly affected by outliers \cite{phillips2017applying}.
 
 Modifying different settings has a high impact on FDA \cite{hallgren2019species}, and the estimation might be unsuccessful if the predictor distributions are highly correlated. FDA is prone to overfitting \cite{thuiller2016ensemble}, and challenging to comprehend or explain \cite{quillfeldt2017influence}. The assumption of normality for the continuous independent variables is necessary \cite{zhang2019using} to determine the response or grouping categorical variable. 
 
@@ -282,7 +283,7 @@ The assumptions of MANOVA are also true for discriminant analysis. The analysis 
 
 Quadratic instead of linear discriminant analysis should be utilized if covariances are different \cite{cokluk2008discriminant}. The scores of one predictor variable should not depend on other predictor variables for any sample, and the samples should be chosen at random \cite{cokluk2008discriminant, hansen2005using}. Discriminant analysis can handle small deviations from these requirements \cite{lachenbruch1979discriminant} and may be used even if multivariate normality is not achieved, such as for dichotomous variables \cite{klecka1980discriminant}.
 
-The discriminant rules suggest that if $x\in \mathbb{R}_{j}$, then $x\in j$ for a group $j$, and $\mathbb{R}_{j}$ sets of sample space. The discriminant analysis method identifies regions of $\mathbb{R}_{j}$ that decrease errors of classification \cite{Hrdle2003AppliedMS}. A discriminant score describes how well a discriminant differentiates classes. \cite{archive765Discriminant}.
+The discriminant rules suggest that if $x\in \mathbb{R}_{j}$, then $x\in j$ for a group $j$, and $\mathbb{R}_{j}$ sets of sample space. The discriminant analysis method identifies regions of $\mathbb{R}_{j}$ that decrease errors of classification \cite{Hardle2003AppliedMS}. A discriminant score describes how well a discriminant differentiates classes. \cite{archive765Discriminant}.
  
 The discriminant analysis eigenvalue represents the characteristic root of each function, indicating the quality of the group separation produced by the function. The function differentiates better for a larger eigenvalue \cite{cokluk2008discriminant}. Eigenvalues do not have an upper limit \cite{cokluk2008discriminant, hansen2005using}, so the results should not be taken at face value.
 
@@ -297,7 +298,7 @@ Principal component analysis (PCA) is a linear dimensionality reduction techniqu
 
 PCA is closely related to factor and canonical correlation analysis (CCA). PCA is the simplest of the true eigenvector-based multivariate analyses. PCA defines a new orthogonal coordinate system that optimally describes the variance in a single dataset \cite{barnett1987origins, hsu2012spectral, markopoulos2017efficient, chachlakis2019l1}. CCA does the same for the cross-covariance between two datasets. Robust and L1-norm-based variants of standard PCA have also been proposed \cite{chachlakis2019l1, markopoulos2014optimal, zhan2015robust, ke2005robust}.
 
-Karl Pearson \cite{pearson1901liii} conceived of PCA in 1901 as a counterpart of the principal axis theorem in mechanics \cite{stewart2019introduction}. Harold Hotelling discovered the Hotelling transform in multivariate quality control in the 1930s without knowledge of the previous work \cite{hotelling1933analysis, hotelling1992relations}. Synonyms for PCA include the discrete proper orthogonal decomposition (POD) \cite{berkooz1993proper, karhunen1946spektraltheorie, loeve1977elementary, sirovich1987turbulence} in mechanical engineering and the Kosambi–Karhunen–Loève or Karhunen–Loève theorem (KLT) \cite{sapatnekar2011overcoming, ghoman2012pod, archiveKarhunenLoeveTransform, amslaurea10169, mallat1999wavelet, tang1998texture} in signal processing. Singular value decomposition (SVD) of X, established in the final quarter of the 19th century \cite{stewart1993early}, is also similar to PCA. Eigenvalue decomposition (EVD) of a matrix $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ in linear algebra shares the mathematical foundations of PCA \cite{gloub1996matrix, hayden2002observations}. Factor analysis differs in several key features \cite{jolliffe2002principal}, but has many aspects in common with PCA. Empirical orthogonal functions (EOF) \cite{lorenz1956empirical} in meteorological science were developed by Lorenz in 1956 \cite{lorenz1956empirical}. The Eckart–Young theorem \cite{eckart1936approximation} and quasiharmonic modes \cite{dove1993introduction} are both connected to PCA. Empirical modal analysis in structural dynamics and spectral decomposition in noise and vibration also take a similar approach to PCA.
+Karl Pearson \cite{pearson1901liii} conceived of PCA in 1901 as a counterpart of the principal axis theorem in mechanics \cite{stewart2019introduction}. Harold Hotelling discovered the Hotelling transform in multivariate quality control in the 1930s without knowledge of the previous work \cite{hotelling1933analysis, hotelling1992relations}. Synonyms for PCA include the discrete proper orthogonal decomposition (POD) \cite{berkooz1993proper, karhunen1946spektraltheorie, loeve1977elementary, sirovich1987turbulence} in mechanical engineering and the Kosambi–Karhunen–Loève or Karhunen–Loève theorem (KLT) \cite{sapatnekar2011overcoming, ghoman2012pod, archiveKarhunenLoeveTransform, giambartolomei2016, mallat1999wavelet, tang1998texture} in signal processing. Singular value decomposition (SVD) of X, established in the final quarter of the 19th century \cite{stewart1993early}, is also similar to PCA. Eigenvalue decomposition (EVD) of a matrix $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ in linear algebra shares the mathematical foundations of PCA \cite{gloub1996matrix, hayden2002observations}. Factor analysis differs in several key features \cite{jolliffe2002principal}, but has many aspects in common with PCA. Empirical orthogonal functions (EOF) \cite{lorenz1956empirical} in meteorological science were developed by Lorenz in 1956 \cite{lorenz1956empirical}. The Eckart–Young theorem \cite{eckart1936approximation} and quasiharmonic modes \cite{dove1993introduction} are both connected to PCA. Empirical modal analysis in structural dynamics and spectral decomposition in noise and vibration also take a similar approach to PCA.
 
 The data in PCA is converted to a new coordinate system using a scalar projection, an orthogonal linear transformation on a real inner product space. The first coordinate or principal component covers the largest portion of the variance, decreasing with each following component \cite{jolliffe2002principal, bengio2013representation}. The significance of the principal components can be checked with parametric bootstrap for a smaller dataset to help decide how many principal components to keep \cite{forkman2019hypothesis}.
 
@@ -503,7 +504,7 @@ The values \textit{scale} and \textit{center} were used in the code for this stu
 \subsubsection{Training and Testing Dataset}
 %\label{subsubsec:DataTrainTest}
 
-The samples are divided into training and testing datasets as close as possible to a ratio of $80\%$ for training and $20\%$ for testing. During the division, the share of classes in the original data was taken into account, that is, the division was stratified by class so that an approximately equal ratio of classes was present in both the training data and the testing data, which is a feature of the \textit{createDataPartition} function from the \textit{caret} R library that was used \cite{topepoDataSplitting, hyndman2018forecasting, rdocumentationCreateDataPartitionFunction}.
+The samples are divided into training and testing datasets as close as possible to a ratio of $80\%$ for training and $20\%$ for testing. During the division, the share of classes in the original data was taken into account, that is, the division was stratified by class so that an approximately equal ratio of classes was present in both the training data and the testing data, which is a feature of the \textit{createDataPartition} function from the \textit{caret} R library that was used \cite{KuhnDataSplitting2024, hyndman2018forecasting, createDataPartition2024}.
 
 \subsection{Performance Metrics}
 %\label{subsec:Metrics}
@@ -511,7 +512,7 @@ The samples are divided into training and testing datasets as close as possible 
 \subsubsection{Confusion Matrix}
 %\label{subsubsec:ConfusionMatrix}
 
-The metrics and terminology used to evaluate the classifier performance were taken from the confusion matrix defined in the R function \textit{confusionMatrix} in the \textit{caret} library \cite{kuhn2008building, altman1994diagnostic, dg1994diagnostic, velez2007balanced, rdocumentationConfusionMatrixFunction}. The confusion matrix is suitable for use in multiclass classification, which is the goal of this project. A confusion matrix is a table where the number of rows and columns corresponds to the number of classes. The cells report the number of samples in each class classified into any class. This enables a more detailed analysis than by observing the share of correct classifications, i.e. accuracy. Accuracy will give results that can lead us to a wrong conclusion if the data set is unbalanced, that is, if the numbers of observations in different classes vary significantly, which was the case in this paper, because out of a total of $1597$ samples, $1170$ of them belonged to the largest N class, and $3$ to the smallest E class.
+The metrics and terminology used to evaluate the classifier performance were taken from the confusion matrix defined in the R function \textit{confusionMatrix} in the \textit{caret} library \cite{kuhn2008building, altman1994diagnostic1, altman1994diagnostic2, velez2007balanced, confusionMatrix2024}. The confusion matrix is suitable for use in multiclass classification, which is the goal of this project. A confusion matrix is a table where the number of rows and columns corresponds to the number of classes. The cells report the number of samples in each class classified into any class. This enables a more detailed analysis than by observing the share of correct classifications, i.e. accuracy. Accuracy will give results that can lead us to a wrong conclusion if the data set is unbalanced, that is, if the numbers of observations in different classes vary significantly, which was the case in this paper, because out of a total of $1597$ samples, $1170$ of them belonged to the largest N class, and $3$ to the smallest E class.
 
 If there are only two classes (Yes and No), the metrics are calculated using an example of a confusion matrix in Table~\ref{tab:cm}.
 
@@ -560,7 +561,7 @@ Another metric that can be used instead of accuracy to consider each class separ
 If there are more than two classes, results are calculated for each class separately by viewing that class as the positive class and samples of all other classes as negative, a "one versus all" approach.
 The unweighted Kappa statistic and a \textit{p}-value from McNemar's test are also computed. McNemar's test produces NA values with sparse tables, such as the one in this experiment, so it was not included in the results.
 
-A $95\%$ confidence interval for the accuracy rate is computed using \textit{binom.test} and a one-sided test \cite{rdocumentationBinomtestFunction, clopper1934use, conover1999practical, hollander2013nonparametric} to see if the accuracy is significantly larger than the "no information rate," which is the percentage of the largest class.
+A $95\%$ confidence interval for the accuracy rate is computed using \textit{binom.test} and a one-sided test \cite{binom.test2024, clopper1934use, conover1999practical, hollander2013nonparametric} to see if the accuracy is significantly larger than the "no information rate," which is the percentage of the largest class.
 
 \subsubsection{The Binomial Test}
 %\label{subsubsec:Binomial}
@@ -770,7 +771,7 @@ The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using 
 	\end{tabular}
 \end{table}
 
-The execution time in seconds calculated using the R \textit{system.time} function \cite{rdocumentationSystemtimeFunction} for each model when using different combinations of variables as input is displayed in Table~\ref{tab:time:total}. The experiment was run on Windows 11 using R Studio version 2024.04.2+764 and R version 4.4.1, the AMD Radeon RX 6600 GPU, 16GB of RAM, and the AMD Ryzen 5 PRO 4650G CPU with 6 cores.
+The execution time in seconds calculated using the R \textit{system.time} function \cite{system.time2024} for each model when using different combinations of variables as input is displayed in Table~\ref{tab:time:total}. The experiment was run on Windows 11 using R Studio version 2024.04.2+764 and R version 4.4.1, the AMD Radeon RX 6600 GPU, 16GB of RAM, and the AMD Ryzen 5 PRO 4650G CPU with 6 cores.
 
 \begin{table}[!ht]
     \centering

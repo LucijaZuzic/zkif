@@ -56,6 +56,7 @@
 \usepackage{algpseudocode}%
 \usepackage{listings}%
 %%%%
+\usepackage{anyfontsize}
 
 %%%%%=============================================================================%%%%
 %%%%  Remarks: This template is provided to aid authors with the preparation
@@ -188,7 +189,7 @@ A Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT)
 
 The models were selected because they represent larger families of classification methods. SVMs are supervised maximum margin models. Decision Trees also apply supervised learning. Naive Bayes classifiers are probabilistic classifiers that can be parametric or non-parametric, but this study uses a non-parametric approach. PLS is a non-parametric linear regression model. FDA uses multiple non-parametric linear regression models to create a non-linear classification. PCA is a linear dimensionality reduction technique that extracts a predefined number of components for training a Neural Network. Neural Networks imitate the brain using artificial neurons to produce outputs based on the input and the activation function. Neural Networks require that the model structure be predefined, and hyperparameters are usually tuned or predefined based on assumptions. An automated tuning procedure was used in this study.
 
-All Neural Network models were applied based on research by Kuhn for the \textit{R} \textit{caret} package citestuff(kuhn2013applied, topepoCaretPackage, rprojectProjectStatistical).
+All Neural Network models were applied based on research by Kuhn for the \textit{R} \textit{caret} package citestuff(kuhn2013applied, KuhnCaret2024, rprojectProjectStatistical).
 
 \subsubsection{Support Vector Machine}
 %\label{subsubsec:SVM}
@@ -197,7 +198,7 @@ In machine learning, Support Vector Machines (SVMs) or Support Vector Networks (
 
 SVMs can also be used for regression tasks where the objective becomes $\epsilon$ -sensitive. A "soft margin" to separate data that is not linearly separable was proposed by Corinna Cortes and Vapnik in 1993 and published in 1995 citestuff(Cortes1995). Support Vector Clustering citestuff(BenHur2001) (SVC) applies support vector statistics to unlabeled data in unsupervised learning to find new natural groupings. Meyer, Leisch, and Hornik compared SVM with other classifiers citestuff(Meyer2003), but it is unclear whether SVM predictions perform better than other linear models, such as logistic, and linear regression.
 
-Support Vector Machine constructs a set of hyperplanes in a high-dimensional space, used for classification, regression, or outlier detection citestuff(developers2023). Intuitively, a good separation is achieved by the hyperplane with the greatest distance to the nearest point in the training data belonging to any class citestuff(Hastie2009).
+Support Vector Machine constructs a set of hyperplanes in a high-dimensional space, used for classification, regression, or outlier detection citestuff(scikit-learn2023). Intuitively, a good separation is achieved by the hyperplane with the greatest distance to the nearest point in the training data belonging to any class citestuff(HastieRosset2009).
 
 The original maximum margin hyperplane algorithm proposed by Vapnik in 1963 constructed a linear classifier. In 1992, Bernhard Boser, Isabelle Guyon, and Vladimir Vapnik proposed creating nonlinear classifiers using the kernel trick citestuff(Boser1992, Aizerman1964). A multidimensional feature space increases the generalization error of Support Vector Machines, so additional samples are needed to enhance performance citestuff(Jin2012). To keep the computational burden reasonable, a kernel probability density function $k(x, y)$ is chosen to fit the problem citestuff(Press2007).
 
@@ -236,7 +237,7 @@ To estimate feature distribution parameters, we must assume a parametric distrib
 
 Clustering is often used to discretize continuous values. The new set of features obtained by discretization follows the Bernoulli distribution. Some literature claims that discretization is necessary to use a Naive Bayesian classifier, but discretization may discard the information needed to distinguish between classes citestuff(Hand2001).
 
-Sometimes the distribution of class-based marginal densities is far from normal. The marginal probability density of each class can be used to estimate the kernel probability density function in such cases. This method, introduced by John and Langley citestuff(John2013), can significantly increase the accuracy of the classifier citestuff(Piryonesi2020, Hastie2009).
+Sometimes the distribution of class-based marginal densities is far from normal. The marginal probability density of each class can be used to estimate the kernel probability density function in such cases. This method, introduced by John and Langley citestuff(John2013), can significantly increase the accuracy of the classifier citestuff(Piryonesi2020, HastieRosset2009).
 
 \subsubsection{Neural Networks}
 %\label{subsubsec:NN}
@@ -270,7 +271,7 @@ The scores form an orthogonal basis in PLS regression, and the loadings are chos
 
 Flexible Discriminant Analysis (FDA) is a general methodology that creates the discriminant surface for a multigroup non-linear classification model based on a mixture of non-parametric linear regression models citestuff(hastie1995penalized), such as Multivariate Adaptive Regression Splines (MARS) and linear discriminant analysis (LDA).
 
-Many predictors can be used at once in FDA citestuff(hastie2009elements), variable interactions are automatically noted citestuff(hastie1994flexible), it is complex but execution time and computational load are adequate citestuff(reynes2006choice). The algorithm is not significantly affected by outliers citestuff(phillips2017applying).
+Many predictors can be used at once in FDA citestuff(HastieTibshirani2009), variable interactions are automatically noted citestuff(hastie1994flexible), it is complex but execution time and computational load are adequate citestuff(reynes2006choice). The algorithm is not significantly affected by outliers citestuff(phillips2017applying).
 
 Modifying different settings has a high impact on FDA citestuff(hallgren2019species), and the estimation might be unsuccessful if the predictor distributions are highly correlated. FDA is prone to overfitting citestuff(thuiller2016ensemble), and challenging to comprehend or explain citestuff(quillfeldt2017influence). The assumption of normality for the continuous independent variables is necessary citestuff(zhang2019using) to determine the response or grouping categorical variable. 
 
@@ -282,7 +283,7 @@ The assumptions of MANOVA are also true for discriminant analysis. The analysis 
 
 Quadratic instead of linear discriminant analysis should be utilized if covariances are different citestuff(cokluk2008discriminant). The scores of one predictor variable should not depend on other predictor variables for any sample, and the samples should be chosen at random citestuff(cokluk2008discriminant, hansen2005using). Discriminant analysis can handle small deviations from these requirements citestuff(lachenbruch1979discriminant) and may be used even if multivariate normality is not achieved, such as for dichotomous variables citestuff(klecka1980discriminant).
 
-The discriminant rules suggest that if $x\in \mathbb{R}_{j}$, then $x\in j$ for a group $j$, and $\mathbb{R}_{j}$ sets of sample space. The discriminant analysis method identifies regions of $\mathbb{R}_{j}$ that decrease errors of classification citestuff(Hrdle2003AppliedMS). A discriminant score describes how well a discriminant differentiates classes. citestuff(archive765Discriminant).
+The discriminant rules suggest that if $x\in \mathbb{R}_{j}$, then $x\in j$ for a group $j$, and $\mathbb{R}_{j}$ sets of sample space. The discriminant analysis method identifies regions of $\mathbb{R}_{j}$ that decrease errors of classification citestuff(Hardle2003AppliedMS). A discriminant score describes how well a discriminant differentiates classes. citestuff(archive765Discriminant).
  
 The discriminant analysis eigenvalue represents the characteristic root of each function, indicating the quality of the group separation produced by the function. The function differentiates better for a larger eigenvalue citestuff(cokluk2008discriminant). Eigenvalues do not have an upper limit citestuff(cokluk2008discriminant, hansen2005using), so the results should not be taken at face value.
 
@@ -297,7 +298,7 @@ Principal component analysis (PCA) is a linear dimensionality reduction techniqu
 
 PCA is closely related to factor and canonical correlation analysis (CCA). PCA is the simplest of the true eigenvector-based multivariate analyses. PCA defines a new orthogonal coordinate system that optimally describes the variance in a single dataset citestuff(barnett1987origins, hsu2012spectral, markopoulos2017efficient, chachlakis2019l1). CCA does the same for the cross-covariance between two datasets. Robust and L1-norm-based variants of standard PCA have also been proposed citestuff(chachlakis2019l1, markopoulos2014optimal, zhan2015robust, ke2005robust).
 
-Karl Pearson citestuff(pearson1901liii) conceived of PCA in 1901 as a counterpart of the principal axis theorem in mechanics citestuff(stewart2019introduction). Harold Hotelling discovered the Hotelling transform in multivariate quality control in the 1930s without knowledge of the previous work citestuff(hotelling1933analysis, hotelling1992relations). Synonyms for PCA include the discrete proper orthogonal decomposition (POD) citestuff(berkooz1993proper, karhunen1946spektraltheorie, loeve1977elementary, sirovich1987turbulence) in mechanical engineering and the Kosambiâ€“Karhunenâ€“LoÃ¨ve or Karhunenâ€“LoÃ¨ve theorem (KLT) citestuff(sapatnekar2011overcoming, ghoman2012pod, archiveKarhunenLoeveTransform, amslaurea10169, mallat1999wavelet, tang1998texture) in signal processing. Singular value decomposition (SVD) of X, established in the final quarter of the 19th century citestuff(stewart1993early), is also similar to PCA. Eigenvalue decomposition (EVD) of a matrix $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ in linear algebra shares the mathematical foundations of PCA citestuff(gloub1996matrix, hayden2002observations). Factor analysis differs in several key features citestuff(jolliffe2002principal), but has many aspects in common with PCA. Empirical orthogonal functions (EOF) citestuff(lorenz1956empirical) in meteorological science were developed by Lorenz in 1956 citestuff(lorenz1956empirical). The Eckartâ€“Young theorem citestuff(eckart1936approximation) and quasiharmonic modes citestuff(dove1993introduction) are both connected to PCA. Empirical modal analysis in structural dynamics and spectral decomposition in noise and vibration also take a similar approach to PCA.
+Karl Pearson citestuff(pearson1901liii) conceived of PCA in 1901 as a counterpart of the principal axis theorem in mechanics citestuff(stewart2019introduction). Harold Hotelling discovered the Hotelling transform in multivariate quality control in the 1930s without knowledge of the previous work citestuff(hotelling1933analysis, hotelling1992relations). Synonyms for PCA include the discrete proper orthogonal decomposition (POD) citestuff(berkooz1993proper, karhunen1946spektraltheorie, loeve1977elementary, sirovich1987turbulence) in mechanical engineering and the Kosambiâ€“Karhunenâ€“LoÃ¨ve or Karhunenâ€“LoÃ¨ve theorem (KLT) citestuff(sapatnekar2011overcoming, ghoman2012pod, archiveKarhunenLoeveTransform, giambartolomei2016, mallat1999wavelet, tang1998texture) in signal processing. Singular value decomposition (SVD) of X, established in the final quarter of the 19th century citestuff(stewart1993early), is also similar to PCA. Eigenvalue decomposition (EVD) of a matrix $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ in linear algebra shares the mathematical foundations of PCA citestuff(gloub1996matrix, hayden2002observations). Factor analysis differs in several key features citestuff(jolliffe2002principal), but has many aspects in common with PCA. Empirical orthogonal functions (EOF) citestuff(lorenz1956empirical) in meteorological science were developed by Lorenz in 1956 citestuff(lorenz1956empirical). The Eckartâ€“Young theorem citestuff(eckart1936approximation) and quasiharmonic modes citestuff(dove1993introduction) are both connected to PCA. Empirical modal analysis in structural dynamics and spectral decomposition in noise and vibration also take a similar approach to PCA.
 
 The data in PCA is converted to a new coordinate system using a scalar projection, an orthogonal linear transformation on a real inner product space. The first coordinate or principal component covers the largest portion of the variance, decreasing with each following component citestuff(jolliffe2002principal, bengio2013representation). The significance of the principal components can be checked with parametric bootstrap for a smaller dataset to help decide how many principal components to keep citestuff(forkman2019hypothesis).
 
@@ -503,7 +504,7 @@ The values \textit{scale} and \textit{center} were used in the code for this stu
 \subsubsection{Training and Testing Dataset}
 %\label{subsubsec:DataTrainTest}
 
-The samples are divided into training and testing datasets as close as possible to a ratio of $80\%$ for training and $20\%$ for testing. During the division, the share of classes in the original data was taken into account, that is, the division was stratified by class so that an approximately equal ratio of classes was present in both the training data and the testing data, which is a feature of the \textit{createDataPartition} function from the \textit{caret} R library that was used citestuff(topepoDataSplitting, hyndman2018forecasting, rdocumentationCreateDataPartitionFunction).
+The samples are divided into training and testing datasets as close as possible to a ratio of $80\%$ for training and $20\%$ for testing. During the division, the share of classes in the original data was taken into account, that is, the division was stratified by class so that an approximately equal ratio of classes was present in both the training data and the testing data, which is a feature of the \textit{createDataPartition} function from the \textit{caret} R library that was used citestuff(KuhnDataSplitting2024, hyndman2018forecasting, createDataPartition2024).
 
 \subsection{Performance Metrics}
 %\label{subsec:Metrics}
@@ -511,7 +512,7 @@ The samples are divided into training and testing datasets as close as possible 
 \subsubsection{Confusion Matrix}
 %\label{subsubsec:ConfusionMatrix}
 
-The metrics and terminology used to evaluate the classifier performance were taken from the confusion matrix defined in the R function \textit{confusionMatrix} in the \textit{caret} library citestuff(kuhn2008building, altman1994diagnostic, dg1994diagnostic, velez2007balanced, rdocumentationConfusionMatrixFunction). The confusion matrix is suitable for use in multiclass classification, which is the goal of this project. A confusion matrix is a table where the number of rows and columns corresponds to the number of classes. The cells report the number of samples in each class classified into any class. This enables a more detailed analysis than by observing the share of correct classifications, i.e. accuracy. Accuracy will give results that can lead us to a wrong conclusion if the data set is unbalanced, that is, if the numbers of observations in different classes vary significantly, which was the case in this paper, because out of a total of $1597$ samples, $1170$ of them belonged to the largest N class, and $3$ to the smallest E class.
+The metrics and terminology used to evaluate the classifier performance were taken from the confusion matrix defined in the R function \textit{confusionMatrix} in the \textit{caret} library citestuff(kuhn2008building, altman1994diagnostic1, altman1994diagnostic2, velez2007balanced, confusionMatrix2024). The confusion matrix is suitable for use in multiclass classification, which is the goal of this project. A confusion matrix is a table where the number of rows and columns corresponds to the number of classes. The cells report the number of samples in each class classified into any class. This enables a more detailed analysis than by observing the share of correct classifications, i.e. accuracy. Accuracy will give results that can lead us to a wrong conclusion if the data set is unbalanced, that is, if the numbers of observations in different classes vary significantly, which was the case in this paper, because out of a total of $1597$ samples, $1170$ of them belonged to the largest N class, and $3$ to the smallest E class.
 
 If there are only two classes (Yes and No), the metrics are calculated using an example of a confusion matrix in Table~\ref{tab:cm}.
 
@@ -560,7 +561,7 @@ Another metric that can be used instead of accuracy to consider each class separ
 If there are more than two classes, results are calculated for each class separately by viewing that class as the positive class and samples of all other classes as negative, a "one versus all" approach.
 The unweighted Kappa statistic and a \textit{p}-value from McNemar's test are also computed. McNemar's test produces NA values with sparse tables, such as the one in this experiment, so it was not included in the results.
 
-A $95\%$ confidence interval for the accuracy rate is computed using \textit{binom.test} and a one-sided test citestuff(rdocumentationBinomtestFunction, clopper1934use, conover1999practical, hollander2013nonparametric) to see if the accuracy is significantly larger than the "no information rate," which is the percentage of the largest class.
+A $95\%$ confidence interval for the accuracy rate is computed using \textit{binom.test} and a one-sided test citestuff(binom.test2024, clopper1934use, conover1999practical, hollander2013nonparametric) to see if the accuracy is significantly larger than the "no information rate," which is the percentage of the largest class.
 
 \subsubsection{The Binomial Test}
 %\label{subsubsec:Binomial}
@@ -770,7 +771,7 @@ The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using 
 	\end{tabular}
 \end{table}
 
-The execution time in seconds calculated using the R \textit{system.time} function citestuff(rdocumentationSystemtimeFunction) for each model when using different combinations of variables as input is displayed in Table~\ref{tab:time:total}. The experiment was run on Windows 11 using R Studio version 2024.04.2+764 and R version 4.4.1, the AMD Radeon RX 6600 GPU, 16GB of RAM, and the AMD Ryzen 5 PRO 4650G CPU with 6 cores.
+The execution time in seconds calculated using the R \textit{system.time} function citestuff(system.time2024) for each model when using different combinations of variables as input is displayed in Table~\ref{tab:time:total}. The experiment was run on Windows 11 using R Studio version 2024.04.2+764 and R version 4.4.1, the AMD Radeon RX 6600 GPU, 16GB of RAM, and the AMD Ryzen 5 PRO 4650G CPU with 6 cores.
 
 \begin{table}[!ht]
     \centering
@@ -939,14 +940,14 @@ The Naive Bayes model achieved perfect accuracy for most tested combinations of 
 \bibitem{natras2023regional}Natras, R., Goss, A., Halilovic, D., Magnet, N., Mulic, M., Schmidt, M. \& Weber, R. Regional ionosphere delay models based on CORS data and machine learning. {\em NAVIGATION: Journal Of The Institute Of Navigation}. \textbf{70} (2023)
 \bibitem{filjar2020comparison}Filjar, R., Sklebar, I. \& Horvat, M. A COMPARISON OF MACHINE LEARNING-BASED INDIVIDUAL MOBILITY CLASSIFICATION MODELS DEVELOPED ON SENSOR READINGS FROM LOOSELY ATTACHED SMARTPHONES.. {\em Komunikácie}. \textbf{22} (2020)
 \bibitem{kuhn2013applied}Kuhn, M. Applied predictive modeling. (Springer,2013)
-\bibitem{topepoCaretPackage}Kuhn, M. The caret Package — topepo.github.io. (https://topepo.github.io/caret/,2024), Accessed 11.09.2024.
+\bibitem{KuhnCaret2024}Kuhn, M. The caret Package — topepo.github.io. (https://topepo.github.io/caret/,2024), Accessed 11.09.2024.
 \bibitem{rprojectProjectStatistical}RCoreTeam R: The R Project for Statistical Computing — r-project.org. (https://www.r-project.org/,2024), Accessed 11.09.2024.
 \bibitem{Boser1992}Boser, B., Guyon, I. \& Vapnik, V. A training algorithm for optimal margin classifiers. {\em Proceedings Of The Fifth Annual Workshop On Computational Learning Theory}. (1992,7)
 \bibitem{Cortes1995}Cortes, C. \& Vapnik, V. Support-vector networks. {\em Mach. Learn.}. \textbf{20}, 273-297 (1995,9)
 \bibitem{BenHur2001}Ben-Hur, A., Horn, D., Siegelmann, H. \& Vapnik, V. Support Vector Clustering. {\em Journal Of Machine Learning Research}. \textbf{2} pp. 125-137 (2001,11)
 \bibitem{Meyer2003}Meyer, D., Leisch, F. \& Hornik, K. The support vector machine under test. {\em Neurocomputing}. \textbf{55}, 169-186 (2003,9)
-\bibitem{developers2023}Developers 1.4. Support Vector Machines — scikit-learn.org. (http://scikit-learn.org/stable/modules/svm.html,2023), Accessed 25.01.2024.
-\bibitem{Hastie2009}Hastie, T., Rosset, S., Zhu, J. \& Zou, H. Multi-class AdaBoost. {\em Stat. Interface}. \textbf{2}, 349-360 (2009)
+\bibitem{scikit-learn2023}Developers, P. 1.4. Support Vector Machines — scikit-learn.org. (http://scikit-learn.org/stable/modules/svm.html,2023), Accessed 25.01.2024.
+\bibitem{HastieRosset2009}Hastie, T., Rosset, S., Zhu, J. \& Zou, H. Multi-class AdaBoost. {\em Stat. Interface}. \textbf{2}, 349-360 (2009)
 \bibitem{Aizerman1964}Aizerman, M., Braverman, E. \& Rozonoer, L. Theoretical foundations of the potential function method in pattern recognition learning. {\em Automation And Remote Control}., 821-837 (1964)
 \bibitem{Jin2012}Jin, C. \& Wang, L. Dimensionality dependent PAC-Bayes margin bound. {\em Advances In Neural Information Processing Systems}. \textbf{2} pp. 1034-1042 (2012,1)
 \bibitem{Press2007}Press, W., Teukolsky, S., Vetterling, W. \& Flannery, B. Numerical recipes 3rd edition. (Cambridge University Press,2007,9)
@@ -1002,7 +1003,7 @@ The Naive Bayes model achieved perfect accuracy for most tested combinations of 
 \bibitem{takane2016pls}Takane, Y. \& Loisel, S. On the PLS algorithm for multiple regression (PLS1). {\em The Multiple Facets Of Partial Least Squares And Related Methods: PLS, Paris, France, 2014 8}. pp. 17-28 (2016)
 \bibitem{hoskuldsson1988pls}Höskuldsson, A. PLS regression methods. {\em Journal Of Chemometrics}. \textbf{2}, 211-228 (1988)
 \bibitem{hastie1995penalized}Hastie, T., Buja, A. \& Tibshirani, R. Penalized discriminant analysis. {\em The Annals Of Statistics}. \textbf{23}, 73-102 (1995)
-\bibitem{hastie2009elements}Hastie, T., Tibshirani, R., Friedman, J. \& Friedman, J. The elements of statistical learning: data mining, inference, and prediction. (Springer,2009)
+\bibitem{HastieTibshirani2009}Hastie, T., Tibshirani, R., Friedman, J. \& Friedman, J. The elements of statistical learning: data mining, inference, and prediction. (Springer,2009)
 \bibitem{hastie1994flexible}Hastie, T., Tibshirani, R. \& Buja, A. Flexible discriminant analysis by optimal scoring. {\em Journal Of The American Statistical Association}. \textbf{89}, 1255-1270 (1994)
 \bibitem{reynes2006choice}Reynès, C., Sabatier, R. \& Molinari, N. Choice of B-splines with free parameters in the flexible discriminant analysis context. {\em Computational Statistics & Data Analysis}. \textbf{51}, 1765-1778 (2006)
 \bibitem{phillips2017applying}Phillips, N., Reid, N., Thys, T., Harrod, C., Payne, N., Morgan, C., White, H., Porter, S. \& Houghton, J. Applying species distribution modelling to a data poor, pelagic fish complex: the ocean sunfishes. {\em Journal Of Biogeography}. \textbf{44}, 2176-2187 (2017)
@@ -1022,7 +1023,7 @@ The Naive Bayes model achieved perfect accuracy for most tested combinations of 
 \bibitem{venables2013modern}Venables, W. \& Ripley, B. Modern applied statistics with S-PLUS. (Springer Science & Business Media,2013)
 \bibitem{lachenbruch1979discriminant}Lachenbruch, P. \& Goldstein, M. Discriminant analysis. {\em Biometrics}. pp. 69-85 (1979)
 \bibitem{klecka1980discriminant}Klecka, W. Discriminant analysis. (Sage,1980)
-\bibitem{Hrdle2003AppliedMS}Härdle, W. Applied multivariate statistical analysis. (Springer Nature,2003)
+\bibitem{Hardle2003AppliedMS}Härdle, W. Applied multivariate statistical analysis. (Springer Nature,2003)
 \bibitem{archive765Discriminant}Garson, G. PA 765: Discriminant Function Analysis — web.archive.org. (https://web.archive.org/web/20080312065328/http://www2.chass.ncsu.edu/garson/pA765/discrim.htm,2008), Accessed 26.09.2024
 \bibitem{israel2006performance}Israel, S. Performance metrics: how and when. {\em Geocarto International}. \textbf{21}, 23-32 (2006)
 \bibitem{rao1948utilization}Rao, C. The utilization of multiple measurements in problems of biological classification. {\em Journal Of The Royal Statistical Society. Series B (Methodological)}. \textbf{10}, 159-203 (1948)
@@ -1046,7 +1047,7 @@ The Naive Bayes model achieved perfect accuracy for most tested combinations of 
 \bibitem{sapatnekar2011overcoming}Sapatnekar, S. Overcoming variations in nanometer-scale technologies. {\em IEEE Journal On Emerging And Selected Topics In Circuits And Systems}. \textbf{1}, 5-18 (2011)
 \bibitem{ghoman2012pod}Ghoman, S., Wang, Z., Chen, P. \& Kapania, R. A POD-based reduced order design scheme for shape optimization of air vehicles. {\em 53rd AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics And Materials Conference 20th AIAA/ASME/AHS Adaptive Structures Conference 14th AIAA}. pp. 1808 (2012)
 \bibitem{archiveKarhunenLoeveTransform}Wang, R. Computer Image Processing and Analysis (E161) lectures, Harvey Mudd College, Karhunen-Loeve Transform (KLT). (https://web.archive.org/web/20161128140401/http://fourier.eng.hmc.edu/e161/lectures/klt/node3.html,2016), Accessed 29.09.2024
-\bibitem{amslaurea10169}Giambartolomei, G. The Karhunen-Loève theorem. (University of Bologna,2016), http://amslaurea.unibo.it/10169/
+\bibitem{giambartolomei2016}Giambartolomei, G. The Karhunen-Loève theorem. (University of Bologna,2016), http://amslaurea.unibo.it/10169/
 \bibitem{mallat1999wavelet}Mallat, S. A wavelet tour of signal processing. (Academic Press,1999)
 \bibitem{tang1998texture}Tang, X. Texture information in run-length matrices. {\em IEEE Transactions On Image Processing}. \textbf{7}, 1602-1609 (1998)
 \bibitem{stewart1993early}Stewart, G. On the early history of the singular value decomposition. {\em SIAM Review}. \textbf{35}, 551-566 (1993)
@@ -1063,15 +1064,15 @@ The Naive Bayes model achieved perfect accuracy for most tested combinations of 
 \bibitem{Fan2008}Fan, R., Chang, K., Hsieh, C., Wang, X. \& Lin, C. LIBLINEAR: a library for large linear classification. {\em Journal Of Machine Learning Research}. \textbf{9} pp. 1871-1874 (2008,8)
 \bibitem{Mohamad2013}Mohamad, I. \& Usman, D. Standardization and its effects on K-means clustering algorithm. {\em Research Journal Of Applied Sciences, Engineering And Technology}. \textbf{6}, 3299-3303 (2013,9)
 \bibitem{Fennell2019}Fennell, P., Zuo, Z. \& Lerman, K. Predicting and explaining behavioral data with structured feature space decomposition. {\em EPJ Data Sci.}. \textbf{8} (2019,12)
-\bibitem{topepoDataSplitting}Kuhn, M. 4 Data Splitting | The caret Package — topepo.github.io. (https://topepo.github.io/caret/data-splitting.html,2024), Accessed 28.09.2024
+\bibitem{KuhnDataSplitting2024}Kuhn, M. 4 Data Splitting | The caret Package — topepo.github.io. (https://topepo.github.io/caret/data-splitting.html,2024), Accessed 28.09.2024
 \bibitem{hyndman2018forecasting}Hyndman, R. Forecasting: principles and practice. (OTexts,2018)
-\bibitem{rdocumentationCreateDataPartitionFunction}Developers, R. createDataPartition function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/createDataPartition,2024), Accessed 27.09.2024
+\bibitem{createDataPartition2024}Developers, R. createDataPartition function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/createDataPartition,2024), Accessed 27.09.2024
 \bibitem{kuhn2008building}Kuhn, M. Building predictive models in R using the caret package. {\em Journal Of Statistical Software}. \textbf{28} pp. 1-26 (2008)
-\bibitem{altman1994diagnostic}Altman, D. \& Bland, J. Diagnostic tests. 1: Sensitivity and specificity.. {\em BMJ: British Medical Journal}. \textbf{308}, 1552 (1994)
-\bibitem{dg1994diagnostic}Altman, D. \& Bland, J. Diagnostic test 2: predictive values. {\em BMJ: British Medical Journal}. \textbf{309} pp. 102 (1994)
+\bibitem{altman1994diagnostic1}Altman, D. \& Bland, J. Diagnostic tests. 1: Sensitivity and specificity.. {\em BMJ: British Medical Journal}. \textbf{308}, 1552 (1994)
+\bibitem{altman1994diagnostic2}Altman, D. \& Bland, J. Diagnostic test 2: predictive values. {\em BMJ: British Medical Journal}. \textbf{309} pp. 102 (1994)
 \bibitem{velez2007balanced}Velez, D., White, B., Motsinger, A., Bush, W., Ritchie, M., Williams, S. \& Moore, J. A balanced accuracy function for epistasis modeling in imbalanced datasets using multifactor dimensionality reduction. {\em Genetic Epidemiology: The Official Publication Of The International Genetic Epidemiology Society}. \textbf{31}, 306-315 (2007)
-\bibitem{rdocumentationConfusionMatrixFunction}Developers, R. confusionMatrix function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/confusionMatrix,2024), Accessed 27.09.2024
-\bibitem{rdocumentationBinomtestFunction}Developers, R. binom.test function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/binom.test,2024), Accessed 28.09.2024
+\bibitem{confusionMatrix2024}Developers, R. confusionMatrix function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/confusionMatrix,2024), Accessed 27.09.2024
+\bibitem{binom.test2024}Developers, R. binom.test function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/binom.test,2024), Accessed 28.09.2024
 \bibitem{clopper1934use}Clopper, C. \& Pearson, E. The use of confidence or fiducial limits illustrated in the case of the binomial. {\em Biometrika}. \textbf{26}, 404-413 (1934)
 \bibitem{conover1999practical}Conover, W. Practical nonparametric statistics. (John Wiley & Sons, Inc,1999)
 \bibitem{hollander2013nonparametric}Hollander, M. Nonparametric statistical methods. (John Wiley & Sons Inc,2013)
@@ -1086,7 +1087,7 @@ The Naive Bayes model achieved perfect accuracy for most tested combinations of 
 \bibitem{chicco2021matthews}Chicco, D., Warrens, M. \& Jurman, G. The Matthews correlation coefficient (MCC) is more informative than Cohen's Kappa and Brier score in binary classification assessment. {\em IEEE Access}. \textbf{9} pp. 78368-78381 (2021)
 \bibitem{heidke1926berechnung}Heidke, P. Berechnung des Erfolges und der Güte der Windstärkevorhersagen im Sturmwarnungsdienst. {\em Geografiska Annaler}. \textbf{8}, 301-349 (1926)
 \bibitem{philosophical1887bulletin}D.C., T. Bulletin of the Philosophical Society of Washington, D.C.. (The co-operation of the Smithsonian Institution,1887)
-\bibitem{rdocumentationSystemtimeFunction}Developers, R. system.time function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/system.time,2024), Accessed 28.09.2024
+\bibitem{system.time2024}Developers, R. system.time function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/system.time,2024), Accessed 28.09.2024
 
 \end{thebibliography}
 

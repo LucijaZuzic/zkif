@@ -63,7 +63,7 @@ def find_citation(merged_lines):
             keys_cite.add((merged_lines[pos:pos_end], merged_lines[pos_start+1:pos_end]))
     return keys_cite
 
-def add_citation(merged_lines, dicti_stuff):
+def add_citation(merged_lines, dicti_stuff, marker_start, marker_end):
     pos_o_citen = []
     posf = 0
     find_cite = merged_lines.find("\\cite", posf)
@@ -84,7 +84,7 @@ def add_citation(merged_lines, dicti_stuff):
         for d in dicti_stuff:
             substr_use_new = substr_use_new.replace(d, str(dicti_stuff[d]))
         prep += 1
-        merged_lines = merged_lines.replace(substr_use, "[" + substr_use_new.replace(",", ", ") + "]")
+        merged_lines = merged_lines.replace(substr_use, marker_start + substr_use_new.replace(",", ", ").replace("  ", " ") + marker_end)
     print(prep)
     return merged_lines
 
@@ -190,6 +190,85 @@ for k in sorted(ks):
 import os
 namesall = os.listdir()
 names = []
+file_chicago = open(dir + "chicago.txt", "r", encoding="UTF8")
+clines = file_chicago.readlines()[0][1:-1].split("; ")
+clines_fix = []
+for c in clines:
+    letter_replace = {"ä": "a", "è": "e", "æbø": "aebo", "ö": "o", "ć": "c"}
+    chicago_use_new = c.lower().replace("&", ",").replace(", et al.", "").replace("et al.", "")
+    for l in letter_replace:
+        chicago_use_new = chicago_use_new.replace(l, letter_replace[l])
+    newline_split = chicago_use_new
+    newline_split = chicago_use_new.split(", ")
+    c_no_year = c
+    for y in range(1899, 2025):
+        c_no_year = c_no_year.replace(", " + str(y) + "a", "")
+        c_no_year = c_no_year.replace(", " + str(y) + "b", "")
+        c_no_year = c_no_year.replace(", " + str(y), "")
+    new_dic = {"authors": [], "years": [], "original": c_no_year}
+    for part in newline_split:
+        if part[0] == "2" or part[0] == "1":
+            new_dic["years"].append(part.strip())
+        else:
+            new_dic["authors"].append(part.split(". ")[-1].strip())
+    clines_fix.append(new_dic)
+file_chicago.close()
+find_match_chicago = dict()
+new_key_order = dict()
+for chicago_use in clines_fix:
+    for y in chicago_use["years"]:
+        found_matches_author = dict()
+        for a in chicago_use["authors"]:
+            found_matches_author[a] = set()
+        found_matches_author_any = set()
+        found_matches_year_text = set()
+        found_matches_author_text = set()
+        for k in sorted(ks):
+                for a in chicago_use["authors"]:
+                    if a in nk_of_keys[k].lower():
+                        found_matches_author[a].add(nk_of_keys[k])
+                        found_matches_author_any.add(nk_of_keys[k])
+                    if a in loc_of_keys[k].lower():
+                        found_matches_author_text.add(nk_of_keys[k])
+                if y[:4] in loc_of_keys[k].lower():
+                    found_matches_year_text.add(nk_of_keys[k])
+        found_bib = set()
+        for f in found_matches_author_text:
+            if f in found_matches_year_text:
+                found_bib.add(f)
+        filtered_bib_old = set()
+        if len(found_bib) > 1:
+            filtered_bib_old = found_bib
+            filtered_bib = set()
+            for f in found_bib:
+                if f in found_matches_author_any:
+                    filtered_bib.add(f)
+            found_bib = filtered_bib
+        if len(found_bib) > 1:
+            filtered_bib_old = found_bib
+            filtered_bib = set()
+            for f in found_bib:
+                found_authors = True
+                for a in chicago_use["authors"]:
+                    if f not in found_matches_author[a]:
+                        found_authors = False
+                        break
+                if found_authors:
+                    filtered_bib.add(f)
+            found_bib = filtered_bib
+        if len(found_bib) != 1:
+            print(chicago_use["authors"], y[:4])
+            print(found_bib, filtered_bib_old)
+            ix_a = 0
+            letters_use = ["a", "b", "c", "d", "e"]
+            for f in sorted(list(filtered_bib_old)):
+                if f not in new_key_order:
+                    new_key_order[f] = chicago_use["original"] + ", " + str(y[:4]) + letters_use[ix_a]
+                ix_a += 1
+        else:
+            new_key_order[list(found_bib)[0]] = chicago_use["original"] + ", " + str(y[:4])
+for k in new_key_order:
+    print(k, new_key_order[k])
 for n in namesall:
     if ".tex" in n:
         names.append(n.replace(".tex", ""))
@@ -197,6 +276,8 @@ for name in names:
     if "_new_bib" in name:
         continue
     if "_no_eqn" in name:
+        continue
+    if "_new_chicago" in name:
         continue
     file_fn_old = open(dir + name + ".tex", "r")
     all_lines_fn = file_fn_old.readlines()
@@ -216,13 +297,15 @@ for name in names:
         continue
     if "_no_eqn" in name:
         continue
+    if "_new_chicago" in name:
+        continue
     file_fn_old = open(dir + name + ".tex", "r")
     all_lines_fn = file_fn_old.readlines()
     file_fn_old.close()
     merged_lines_all_fn = ""
     for l in all_lines_fn:
         merged_lines_all_fn += l
-    merged_lines_all_fn = add_citation(merged_lines_all_fn, k_of_keys)
+    merged_lines_all_fn = add_citation(merged_lines_all_fn, k_of_keys, "[", "]")
     merged_lines_all_fn = merged_lines_all_fn.replace(start_bib, new_start_bibliography + merged_refs_all).replace(end_bib, new_end_bibliography)
     file_fn = open(dir + name + "_new_bibliography.tex", "w", encoding="UTF8")
     file_fn.write(merged_lines_all_fn)
@@ -230,6 +313,28 @@ for name in names:
     print(dir + name + "_new_bibliography.tex")
     from subprocess import call
     list_subproc = ["pandoc", "-s", "-o", name + "_new_bibliography.docx", name + "_new_bibliography.tex"]
+    call(list_subproc)
+for name in names:
+    if "_new_bib" in name:
+        continue
+    if "_no_eqn" in name:
+        continue
+    if "_new_chicago" in name:
+        continue
+    file_fn_old = open(dir + name + ".tex", "r")
+    all_lines_fn = file_fn_old.readlines()
+    file_fn_old.close()
+    merged_lines_all_fn = ""
+    for l in all_lines_fn:
+        merged_lines_all_fn += l
+    merged_lines_all_fn = add_citation(merged_lines_all_fn, new_key_order, "(", ")")
+    merged_lines_all_fn = merged_lines_all_fn.replace(start_bib, new_start_bibliography + merged_refs_all).replace(end_bib, new_end_bibliography)
+    file_fn = open(dir + name + "_new_chicago.tex", "w", encoding="UTF8")
+    file_fn.write(merged_lines_all_fn)
+    file_fn.close()
+    print(dir + name + "_new_chicago.tex")
+    from subprocess import call
+    list_subproc = ["pandoc", "-s", "-o", name + "_new_chicago.docx", name + "_new_chicago.tex"]
     call(list_subproc)
 for name in names:
     if "_no_eqn" in name:
