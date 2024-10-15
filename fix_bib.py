@@ -306,7 +306,7 @@ for name in names:
     for l in all_lines_fn:
         merged_lines_all_fn += l
     merged_lines_all_fn = add_citation(merged_lines_all_fn, k_of_keys, "[", "]")
-    merged_lines_all_fn = merged_lines_all_fn.replace(start_bib, new_start_bibliography + merged_refs_all).replace(end_bib, new_end_bibliography)
+    merged_lines_all_fn = merged_lines_all_fn.replace(start_bib, new_start_bibliography + merged_refs_all.replace("\n", "\n\n")).replace(end_bib, new_end_bibliography)
     file_fn = open(dir + name + "_new_bibliography.tex", "w", encoding="UTF8")
     file_fn.write(merged_lines_all_fn)
     file_fn.close()
@@ -328,7 +328,7 @@ for name in names:
     for l in all_lines_fn:
         merged_lines_all_fn += l
     merged_lines_all_fn = add_citation(merged_lines_all_fn, new_key_order, "(", ")")
-    merged_lines_all_fn = merged_lines_all_fn.replace(start_bib, new_start_bibliography + merged_refs_all).replace(end_bib, new_end_bibliography)
+    merged_lines_all_fn = merged_lines_all_fn.replace(start_bib, new_start_bibliography + merged_refs_all.replace("\n", "\n\n")).replace(end_bib, new_end_bibliography)
     file_fn = open(dir + name + "_new_chicago.tex", "w", encoding="UTF8")
     file_fn.write(merged_lines_all_fn)
     file_fn.close()
