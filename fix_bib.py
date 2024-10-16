@@ -273,6 +273,8 @@ for n in namesall:
     if ".tex" in n:
         names.append(n.replace(".tex", ""))
 for name in names:
+    if "glossary" in name:
+        continue
     if "_new_bib" in name:
         continue
     if "_no_eqn" in name:
@@ -293,6 +295,8 @@ for name in names:
     list_subproc = ["pandoc", "-s", "-o", name + "_new_bib.docx", name + "_new_bib.tex"]
     call(list_subproc)
 for name in names:
+    if "glossary" in name:
+        continue
     if "_new_bib" in name:
         continue
     if "_no_eqn" in name:
@@ -315,6 +319,8 @@ for name in names:
     list_subproc = ["pandoc", "-s", "-o", name + "_new_bibliography.docx", name + "_new_bibliography.tex"]
     call(list_subproc)
 for name in names:
+    if "glossary" in name:
+        continue
     if "_new_bib" in name:
         continue
     if "_no_eqn" in name:
@@ -337,6 +343,8 @@ for name in names:
     list_subproc = ["pandoc", "-s", "-o", name + "_new_chicago.docx", name + "_new_chicago.tex"]
     call(list_subproc)
 for name in names:
+    if "glossary" in name:
+        continue
     if "_no_eqn" in name:
         continue
     file_fn_old = open(dir + name + ".tex", "r", encoding="UTF8")
