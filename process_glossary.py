@@ -23,8 +23,8 @@ for l in first_letter:
     for a in all_acro_short:
         if a[0] != l:
             continue
-        all_acro += "\\textit{" + a + "} " + long_for_short[a] + "\n"
-    all_acro += "\n"
+        all_acro += "\\textit{" + a + "} " + long_for_short[a] + "\n\n"
+    all_acro += "\n\n"
 print(all_acro)
 merged_lines_no_acro = merged_lines_no_acro.replace("\\printglossary[type=\\acronymtype]", "\\section{Acronyms}\n\\label{sec:Acronyms}\n\n" + all_acro)
 file_open_w = open("main.tex", "w", encoding="UTF8")
