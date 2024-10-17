@@ -128,8 +128,58 @@
 \bibitem{dove1993introduction}Dove, M. Introduction to lattice dynamics. (Cambridge university press,1993)
 \bibitem{bengio2013representation}Bengio, Y., Courville, A. \& Vincent, P. Representation learning: A review and new perspectives. {\em IEEE Transactions On Pattern Analysis And Machine Intelligence}. \textbf{35}, 1798-1828 (2013)
 \bibitem{forkman2019hypothesis}Forkman, J., Josse, J. \& Piepho, H. Hypothesis tests for principal component analysis when variables are standardized. {\em Journal Of Agricultural, Biological And Environmental Statistics}. \textbf{24} pp. 289-308 (2019)
+\bibitem{tobiska1996current}Tobiska, W. Current status of solar EUV measurements and modeling. {\em Advances In Space Research}. \textbf{18}, 3-10 (1996)
+\bibitem{vitinsky1986statistics}Vitinsky, Y., Kopecky, M. \& Kuklin, G. Statistics of Sunspot Activity (Moscow, USSR. (Nauka,1986)
+\bibitem{lanyi1988comparison}Lanyi, G. \& Roth, T. A comparison of mapped and measured total ionospheric electron content using global positioning system and beacon satellite observations. {\em Radio Science}. \textbf{23}, 483-492 (1988)
+\bibitem{rishbeth1969introduction}Rishbeth, H. \& Garriott, O. Introduction to ionospheric physics. {\em Introduction To Ionospheric Physics}. (1969)
+\bibitem{ratcliffe1972introduction}Ratcliffe, J. An introduction to ionosphere and magnetosphere. (CUP Archive,1972)
+\bibitem{klobuchar1986design}Klobuchar, J. Design and characteristics of the GPS ionospheric time delay algorithm for single frequency users. {\em PLANS 1986-Position Location And Navigation Symposium}. pp. 280-286 (1986)
+\bibitem{zolesi2014ionospheric}Zolesi, B. \& Cander, L. Ionospheric prediction and forecasting. (Springer,2014)
+\bibitem{komjathy2023global}Komjathy, A. Global ionospheric total electron content mapping using the Global Positioning System.  (2023)
+\bibitem{NOAA2024aRadioCommunications}NOAA HF Radio Communications | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. (http://www.swpc.noaa.gov/impacts/hf-radio-communications,2024), Accessed 17.10.2024.
+\bibitem{Gray2019}Gray, A. Solar weather monitoring - National Research Council Canada — nrc.canada.ca. (https://nrc.canada.ca/en/research-development/products-services/technical-advisory-services/solar-weather-monitoring,2019), Accessed 17.10.2024.
+\bibitem{Gray2021}Gray, A. Introducing the solar radio program — spaceweather.gc.ca. (https://www.spaceweather.gc.ca/forecast-prevision/solar-solaire/solarflux/sx-1-en.php,2021), Accessed 17.10.2024.
+\bibitem{wild1994ionosphere}Wild, U. Ionosphere and geodetic satellite systems: permanent GPS tracking data for modelling and monitoring.. {\em Geodätisch-geophysikalische Arbeiten In Der Schweiz}. \textbf{48} (1994)
+\bibitem{hawarey2010uzay}Hawarey, M. \& Ayan, T. Uzay mekiği tırmanışı, deprem, ve füze fırlatılışından kaynaklanan TEC değişimlerinin GPS ile belirlenmesi. {\em İTÜDERGİSİ/d}. \textbf{3} (2010)
+\bibitem{kotz2005encyclopedia}Kotz, S., Balakrishnan, N., Read, C., Vidakovic, B. \& Johnson, N. Encyclopedia of Statistical Sciences, Volume 1. (John Wiley & Sons,2005)
+\bibitem{vellinov1992ionospheric}Vellinov, P., Spassov, C. \& Kolev, S. Ionospheric effects of lightning during the increasing part of solar cycle 22. {\em Journal Of Atmospheric And Terrestrial Physics}. \textbf{54}, 1347-1353 (1992)
+\bibitem{liu20142013}Liu, M., Luo, G. \& Wang, H. The 2013 Lushan earthquake in China tests hazard assessments. {\em Seismological Research Letters}. \textbf{85}, 40-43 (2014)
+\bibitem{ulukavak2018analysis}Ulukavak, M. \& Yalcinkaya, M. Analysis of ionospheric anomalies due to space weather conditions by using GPS-TEC variations. {\em FIG Congress}. pp. 6-11 (2018)
+\bibitem{schwenn2001solar}Schwenn, R. Solar wind: Global properties. {\em Encyclopedia Of Astronomy & Astrophysics}. pp. 1-9 (2001)
+\bibitem{melnikov1990relationships}Melnikov, V. Relationships between Microwave, Hard X ray, and Corpuscular Emissions of Solar Flares. (Ph. D. Thesis, Radiophysical Research Institute, Nizhniy Novgorod, Russia,1990)
+\bibitem{harden2005solar}Harden, P. Solar Activity & HF Propagation. {\em QRP Amateur Radio Club International}. (2005)
+\bibitem{gonzalez1994geomagnetic}Gonzalez, W., Joselyn, J., Kamide, Y., Kroehl, H., Rostoker, G., Tsurutani, B. \& Vasyliunas, V. What is a geomagnetic storm?. {\em Journal Of Geophysical Research: Space Physics}. \textbf{99}, 5771-5792 (1994)
+\bibitem{Viereck2024}Viereck, R. Solar EUV Irradiance | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. (http://www.swpc.noaa.gov/phenomena/solar-euv-irradiance,2024), Accessed 17.10.2024.
+\bibitem{aschwanden2006physics}Aschwanden, M. Physics of the solar corona: an introduction with problems and solutions. (Springer Science & Business Media,2006)
+\bibitem{abraha2014total}Abraha, G. Total electron content (TEC) variability of low latitude ionosphere and role of dynamical coupling: quiet and storm-time characteristics. (Addis Ababa University,2014)
+\bibitem{turunen1980examples}Turunen, T. \& Rao, M. Examples of the influence of strong magnetic storms on the equatorial F-layer. {\em Journal Of Atmospheric And Terrestrial Physics}. \textbf{42}, 323-330 (1980)
+\bibitem{adeniyi1986magnetic}Adeniyi, J. Magnetic storm effects on the morphology of the equatorial F2-layer. {\em Journal Of Atmospheric And Terrestrial Physics}. \textbf{48}, 695-702 (1986)
+\bibitem{Papitashvili2024About}Papitashvili, N. SPDF - About OMNIWeb Data — omniweb.gsfc.nasa.gov. (http://omniweb.gsfc.nasa.gov/html/ow_data.html,2024), Accessed 17.10.2024.
+\bibitem{Papitashvili2024Explorer}Papitashvili, N. OMNIWeb Data Explorer — omniweb.gsfc.nasa.gov. (http://omniweb.gsfc.nasa.gov/form/dx1.html,2024), Accessed 17.10.2024.
+\bibitem{de2007ionosphere}De Canck, M. Ionosphere properties and behaviors. {\em Antennex}. \textbf{119} pp. 6-7 (2007)
+\bibitem{NOAA2024bKindex}NOAA swpc.noaa.gov. (https://www.swpc.noaa.gov/sites/default/files/images/u2/TheK-index.pdf,2024), Accessed 17.10.2024.
+\bibitem{Matzka2024}Matzka, J. Kp Index — gfz-potsdam.de. (https://www.gfz-potsdam.de/en/section/geomagnetism/data-products-services/geomagnetic-kp-index,2024), Accessed 17.10.2024.
+\bibitem{NOAA2024cAlertsWatches}NOAA Alerts, Watches and Warnings | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. (https://www.swpc.noaa.gov/products/alerts-watches-and-warnings,2024), Accessed 17.10.2024.
+\bibitem{Myint2022}Myint, L., Hozumi, K., Saito, S. \& Supnithi, P. Analysis of local geomagnetic index under the influence of equatorial electrojet (EEJ) at the equatorial Phuket geomagnetic station in Thailand. {\em Advances In Space Research}. \textbf{70}, 1429-1440 (2022), https://www.sciencedirect.com/science/article/pii/S0273117722004963
+\bibitem{NOAA2024dPlanetary}NOAA Planetary K-index | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. (https://www.swpc.noaa.gov/products/planetary-k-index,2024), Accessed 17.10.2024.
+\bibitem{NOAA2024eSpace}NOAA NOAA Space Weather Scales | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. (https://www.swpc.noaa.gov/noaa-scales-explanation,2024), Accessed 17.10.2024.
+\bibitem{NOAA2024fScales}NOAA swpc.noaa.gov. (https://www.swpc.noaa.gov/sites/default/files/images/NOAAscales.pdf,2024), Accessed 17.10.2024.
+\bibitem{Matzka2021a}Matzka, J., Bronkalla, O., Tornow, K., Elger, K. \& Stolle, C. Geomagnetic Kp index. (GFZ Data Services,2021)
+\bibitem{Matzka2021b}Matzka, J., Stolle, C., Yamazaki, Y., Bronkalla, O. \& Morschhauser, A. The geomagnetic KP index and derived indices of geomagnetic activity. {\em Space Weather}. \textbf{19} (2021,5)
+\bibitem{NOAA2024gGeomagneticIndices}NOAA Geomagnetic kp and ap Indices | NCEI — ngdc.noaa.gov. (https://www.ngdc.noaa.gov/stp/GEOMAG/kp_ap.html,2024), Accessed 17.10.2024.
+\bibitem{prolss2012physics}Prölss, G. Physics of the Earth’s space environment: an introduction. (Springer Science & Business Media,2012)
+\bibitem{liu2009seismoionospheric}Liu, J., Chen, Y., Chen, C., Liu, C., Chen, C., Nishihashi, M., Li, J., Xia, Y., Oyama, K., Hattori, K. \& Lin, C. Seismoionospheric GPS total electron content anomalies observed before the 12 May 2008 Mw7. 9 Wenchuan earthquake. {\em Journal Of Geophysical Research: Space Physics}. \textbf{114} (2009)
+\bibitem{durmaz2015regional}Durmaz, M. \& Karslioglu, M. Regional vertical total electron content (VTEC) modeling together with satellite and receiver differential code biases (DCBs) using semi-parametric multivariate adaptive regression B-splines (SP-BMARS). {\em Journal Of Geodesy}. \textbf{89} pp. 347-360 (2015)
+\bibitem{jin2012m_dcb}Jin, R., Jin, S. \& Feng, G. M_DCB: Matlab code for estimating GNSS satellite and receiver differential code biases. {\em GPS Solutions}. \textbf{16}, 541-548 (2012)
+\bibitem{schaer1999mapping}Schaer, S. Mapping and predicting the Earth's ionosphere using the Global Positioning System. (Institut für Geodäsie und Photogrammetrie, Eidg. Technische Hochschule,1999)
 \bibitem{enge1994global}Enge, P. The global positioning system: Signals, measurements, and performance. {\em International Journal Of Wireless Information Networks}. \textbf{1} pp. 83-105 (1994)
 \bibitem{klobuchar1987ionospheric}Klobuchar, J. Ionospheric time-delay algorithm for single-frequency GPS users. {\em IEEE Transactions On Aerospace And Electronic Systems}. pp. 325-331 (1987)
+\bibitem{Pradipta2015}Pradipta, R., Valladares, C. \& Doherty, P. An effective TEC data detrending method for the study of equatorial plasma bubbles and traveling ionospheric disturbances. {\em Journal Of Geophysical Research: Space Physics}. \textbf{120}, 11-048 (2015)
+\bibitem{Pradipta2019}Pradipta, R. \& Doherty, P. Comparison between 2-D GPS dTEC Data Maps and Digisonde Observations over the South American and Atlantic Regions. {\em 2019 URSI Asia-Pacific Radio Science Conference (AP-RASC)}. pp. 1-1 (2019)
+\bibitem{loewe1997classification}Loewe, C. \& Prölss, G. Classification and mean behavior of magnetic storms. {\em Journal Of Geophysical Research: Space Physics}. \textbf{102}, 14209-14213 (1997)
+\bibitem{kamide1998two}Kamide, Y., Yokoyama, N., Gonzalez, W., Tsurutani, B., Daglis, I., Brekke, A. \& Masuda, S. Two-step development of geomagnetic storms. {\em Journal Of Geophysical Research: Space Physics}. \textbf{103}, 6917-6921 (1998)
+\bibitem{rozhnoi2004middle}Rozhnoi, A., Solovieva, M., Molchanov, O. \& Hayakawa, M. Middle latitude LF (40 kHz) phase variations associated with earthquakes for quiet and disturbed geomagnetic conditions. {\em Physics And Chemistry Of The Earth, Parts A/B/C}. \textbf{29}, 589-598 (2004)
+\bibitem{contadakis2012total}Contadakis, M., Arabelos, D., Pikridas, C. \& Spatalas, S. Total electron content variations over southern Europe before and during the M 6.3 Abruzzo earthquake of April 6, 2009. {\em Annals Of Geophysics}. \textbf{55} (2012)
 \bibitem{Fan2008}Fan, R., Chang, K., Hsieh, C., Wang, X. \& Lin, C. LIBLINEAR: a library for large linear classification. {\em Journal Of Machine Learning Research}. \textbf{9} pp. 1871-1874 (2008,8)
 \bibitem{Mohamad2013}Mohamad, I. \& Usman, D. Standardization and its effects on K-means clustering algorithm. {\em Research Journal Of Applied Sciences, Engineering And Technology}. \textbf{6}, 3299-3303 (2013,9)
 \bibitem{Fennell2019}Fennell, P., Zuo, Z. \& Lerman, K. Predicting and explaining behavioral data with structured feature space decomposition. {\em EPJ Data Sci.}. \textbf{8} (2019,12)

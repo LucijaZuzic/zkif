@@ -260,7 +260,7 @@ for chicago_use in clines_fix:
             print(chicago_use["authors"], y[:4])
             print(found_bib, filtered_bib_old)
             ix_a = 0
-            letters_use = ["a", "b", "c", "d", "e"]
+            letters_use = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
             for f in sorted(list(filtered_bib_old)):
                 if f not in new_key_order:
                     new_key_order[f] = chicago_use["original"] + ", " + str(y[:4]) + letters_use[ix_a]
