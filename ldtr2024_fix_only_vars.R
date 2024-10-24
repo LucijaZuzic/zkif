@@ -77,7 +77,7 @@ plot_correlation(dataset2, maxcat = 5L)
 dev.copy(pdf, "dataset2correlation.pdf")
 dev.off()
 plot_correlation(iono3, maxcat = 5L)
-dev.copy(pdf, "iono3correlation.pdf.pdf")
+dev.copy(pdf, "iono3correlation.pdf")
 dev.off()
 #Box-plots per Dst values, source of the classification criteria
 plot_boxplot(dataset2, by = "Dst")
