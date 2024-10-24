@@ -1,0 +1,50 @@
+[1] 9799
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  dataset2$TEC
+D = 0.97904, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  dataset2$dTEC
+D = 0.76011, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  dataset2$Bx
+D = 1, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  dataset2$By
+D = 1, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  dataset2$Bz
+D = 1, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  dataset2$Dst
+D = 0.72447, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  dataset2$ap
+D = 0.93051, p-value < 2.2e-16
+alternative hypothesis: two-sided
+

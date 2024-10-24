@@ -1,0 +1,92 @@
+[1] 14
+
+	Shapiro-Wilk normality test
+
+data:  E$TEC
+W = 0.90264, p-value = 0.1232
+
+
+	Shapiro-Wilk normality test
+
+data:  E$dTEC
+W = 0.93195, p-value = 0.3249
+
+
+	Shapiro-Wilk normality test
+
+data:  E$Bx
+W = 0.88826, p-value = 0.07631
+
+
+	Shapiro-Wilk normality test
+
+data:  E$By
+W = 0.93413, p-value = 0.3483
+
+
+	Shapiro-Wilk normality test
+
+data:  E$Bz
+W = 0.96689, p-value = 0.8326
+
+
+	Shapiro-Wilk normality test
+
+data:  E$Dst
+W = 0.85102, p-value = 0.02293
+
+
+	Shapiro-Wilk normality test
+
+data:  E$ap
+W = 0.88022, p-value = 0.05854
+
+
+	Exact one-sample Kolmogorov-Smirnov test
+
+data:  E$TEC
+D = 0.9956, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Exact one-sample Kolmogorov-Smirnov test
+
+data:  E$dTEC
+D = 0.90839, p-value = 6.55e-15
+alternative hypothesis: two-sided
+
+
+	Exact one-sample Kolmogorov-Smirnov test
+
+data:  E$Bx
+D = 1, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Exact one-sample Kolmogorov-Smirnov test
+
+data:  E$By
+D = 1, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Exact one-sample Kolmogorov-Smirnov test
+
+data:  E$Bz
+D = 1, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  E$Dst
+D = 1, p-value = 1.383e-12
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  E$ap
+D = 1, p-value = 1.383e-12
+alternative hypothesis: two-sided
+

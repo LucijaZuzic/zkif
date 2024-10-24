@@ -1,0 +1,92 @@
+[1] 1858
+
+	Shapiro-Wilk normality test
+
+data:  R$TEC
+W = 0.72184, p-value < 2.2e-16
+
+
+	Shapiro-Wilk normality test
+
+data:  R$dTEC
+W = 0.075914, p-value < 2.2e-16
+
+
+	Shapiro-Wilk normality test
+
+data:  R$Bx
+W = 0.97539, p-value < 2.2e-16
+
+
+	Shapiro-Wilk normality test
+
+data:  R$By
+W = 0.99536, p-value = 1.629e-05
+
+
+	Shapiro-Wilk normality test
+
+data:  R$Bz
+W = 0.90293, p-value < 2.2e-16
+
+
+	Shapiro-Wilk normality test
+
+data:  R$Dst
+W = 0.90123, p-value < 2.2e-16
+
+
+	Shapiro-Wilk normality test
+
+data:  R$ap
+W = 0.81996, p-value < 2.2e-16
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  R$TEC
+D = 0.97808, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  R$dTEC
+D = 0.77065, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  R$Bx
+D = 1, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  R$By
+D = 1, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  R$Bz
+D = 1, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  R$Dst
+D = 1, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  R$ap
+D = 0.97133, p-value < 2.2e-16
+alternative hypothesis: two-sided
+

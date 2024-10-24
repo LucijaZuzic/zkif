@@ -1,8 +1,0 @@
-Model,user,system,elapsed
-svmPoly,NA,NA,NA
-C5.0,0.03,0.00,0.02
-nb,NA,NA,NA
-nnet,NA,NA,NA
-pls,0,0,0
-fda,0.01,0.01,0.03
-pcaNNet,NA,NA,NA

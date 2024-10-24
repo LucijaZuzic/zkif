@@ -35,8 +35,6 @@ library(weird)
 oldw <- getOption("warn")
 options(warn = -1)
 
-sink("data_vars.txt")
-
 # Reading the annual observed TEC data at Darwin, NT in 2014 and
 # data frame arrangement
 
@@ -45,7 +43,7 @@ data <- as.data.frame(read.csv('darwin2014.csv', header=TRUE,
                                sep =',', skip=0))
 
 data <- data[,-1]
-print(summary(data))
+summary(data)
 pe <- data[data$min==0 & data$sec==0,]
 
 # Reading the annual estimated Dst and ap data in 2014 and
@@ -60,36 +58,12 @@ dataset <- merge(pe, geo, by = c('DOY', 'hr'))
 dataset <- dataset[,-c(3,4,10)]
 summary(dataset)
 
-# Exloratory analysis of observations per variables
-plot_histogram(dataset, title = 'over-all TEC')
-dev.copy(png, filename = "allTEC.png")
-dev.off()
-# Data set reduction by expelling TEC>=300 outliers
-iono2 <- dataset[dataset$TEC<300,]
-iono2 <- dataset[c(1:8000),]
-plot_histogram(iono2, title = 'TEC<300')
-dev.copy(png, filename = "300TEC.png")
-dev.off()
-#boxplot(dataset, col = 'red', names = c('overall TEC','TEC<200'), 
-#ylab='values [TECU]', cex.axis=1.5, cex.lab=1.5)
 dataset2 <- dataset[,-c(1,2)]
-plot_correlation(dataset2, maxcat = 5L)
-dev.copy(png, filename = "correlation.png")
-dev.off()
-#Box-plots per Dst values, source of the classification criteria
-plot_boxplot(dataset2, by = "Dst")
-dev.copy(png, filename = "dataset2boxplot.png")
-dev.off()
-iono3 <- iono2[,-c(1,2)]
-plot_boxplot(iono3, by = "Dst")
-dev.copy(png, filename = "iono3boxplot.png")
-dev.off()
-plot_scatterplot(dataset2, by = 'TEC', sampled_rows = 1000L)
-dev.copy(png, filename = "dataset2scatterplot.png")
-dev.off()
-plot_scatterplot(iono3, by = 'Dst', sampled_rows = 1000L)
-dev.copy(png, filename = "iono3scatterplot.png")
-dev.off()
+
+# Data set reduction by expelling TEC>=300 outliers
+iono3 <- dataset2[dataset2$TEC<300,]
+
+#iono3 <- iono3[c(1:8000),]
 
 ### Dst-based classification under the following rule:
 # 15 ... 50 positive phase of the storm -> P
@@ -180,6 +154,7 @@ testing_xz_ap <- classdata_xz_ap[-inTrain,]
 training_yz_ap <- classdata_yz_ap[ inTrain,]
 testing_yz_ap <- classdata_yz_ap[-inTrain,]
 
+sink("data_vars.txt")
 nrow(training_all)
 nrow(testing_all)
 
@@ -199,23 +174,6 @@ library(earth,mda) # only for fda
 library(nnet) # only for pcaNNet
 library(binda) # only for binda
 
-# Candidate model 1: svmPoly
-# Least Squares Support Vector Machine with Polynomial Kernel
-# Candidate model 2: C5.0
-# Decision Tree C5.0
-# Candidate model 3: nb
-# Naive Bayes
-# Candidate model 4: nnet
-# Neural Networks
-# Candidate  model 5: pls
-# Partial Least Squares
-# Candidate model 6: fda
-# Flexible Discriminant Analysis
-# Candidate model 7: pcaNNet
-# Candidate model 8: binda
-# Candidate model 9: glmStepAIC ?
-
-#model_name_list <- list("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet", "binda", "glmStepAIC")
 model_name_list <- list("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet")
 
 model_trained_global <- 0
@@ -321,10 +279,6 @@ my_importance <- function(model_name_importance, model_type_importance) {
   # Variable importance
   importance <- varImp(model_trained_global, scale = FALSE)
   print(importance)
-  # Spremanje dijagrama
-  #plot(importance)
-  #dev.copy(png, filename = paste(paste(paste(model_type_importance, "importance", sep = "/"), model_name_importance, sep = "_"), "png", sep = "."))
-  #dev.off()
 }
   
 my_process <- function(model_name, model_type) {
@@ -353,82 +307,90 @@ my_ansamble <- function(list_all) {
                           trControl = econtrol
   )
   results <- resamples(model_list)
-  # What is model correlation?
+  # What is the model correlation?
   mcr <- modelCor(results)
   print(mcr)
 }
 
+use_models <- TRUE
+run_again <- TRUE
 model_types <- c("all", "no_Dst", "no_TEC", "coord", "xyap", "xzap", "yzap")
 
-for (i in 1:length(model_types)) {
-  model_type_use <- model_types[[i]]
-  if (model_type_use == "all") {
-    testing <- testing_all
-    training <- training_all
-  } else if (model_type_use == "no_Dst") {
-    testing <- testing_no_Dst
-    training <- training_no_Dst
-  } else if (model_type_use == "no_TEC") {
-    testing <- testing_no_TEC
-    training <- training_no_TEC
-  } else if (model_type_use == "coord") {
-    testing <- testing_coord
-    training <- training_coord
-  } else if (model_type_use == "xyap") {
-    testing <- testing_xy_ap
-    training <- training_xy_ap
-  } else if (model_type_use == "xzap") {
-    testing <- testing_xz_ap
-    training <- training_xz_ap
-  } else if (model_type_use == "yzap") {
-    testing <- testing_yz_ap
-    training <- training_yz_ap
-  }
-  if (!file.exists(model_type_use)){
-    dir.create(file.path(getCurrentFileLocation(), model_type_use))
-  }
-  trueclasses <- as.factor(testing$Dst_class)
-  for (j in 1:length(model_name_list)) {
-    model_name_use <- model_name_list[[j]]
-    file_name <- paste(paste(model_type_use, model_name_use, sep = "/"), "txt", sep = ".")
-    if (file.exists(file_name)) {
-      print(model_type_use)
-      print(model_name_use)
-      sink(file_name)
-      print(model_type_use)
-      print(model_name_use)
-      time_taken <- system.time(my_process(model_name_use, model_type_use))
-      print("Total time")
-      print(time_taken)
-      sink()
-      print(time_taken)
+if (use_models) {
+  for (i in 1:length(model_types)) {
+    model_type_use <- model_types[[i]]
+    if (model_type_use == "all") {
+      testing <- testing_all
+      training <- training_all
+    } else if (model_type_use == "no_Dst") {
+      testing <- testing_no_Dst
+      training <- training_no_Dst
+    } else if (model_type_use == "no_TEC") {
+      testing <- testing_no_TEC
+      training <- training_no_TEC
+    } else if (model_type_use == "coord") {
+      testing <- testing_coord
+      training <- training_coord
+    } else if (model_type_use == "xyap") {
+      testing <- testing_xy_ap
+      training <- training_xy_ap
+    } else if (model_type_use == "xzap") {
+      testing <- testing_xz_ap
+      training <- training_xz_ap
+    } else if (model_type_use == "yzap") {
+      testing <- testing_yz_ap
+      training <- training_yz_ap
+    }
+    if (!file.exists(model_type_use)){
+      dir.create(file.path(getCurrentFileLocation(), model_type_use))
+    }
+    trueclasses <- as.factor(testing$Dst_class)
+    for (j in 1:length(model_name_list)) {
+      model_name_use <- model_name_list[[j]]
+      file_name <- paste(paste(model_type_use, model_name_use, sep = "/"), "txt", sep = ".")
+      if (!file.exists(file_name) || run_again) {
+        print(model_type_use)
+        print(model_name_use)
+        sink(file_name)
+        print(model_type_use)
+        print(model_name_use)
+        time_taken <- system.time(my_process(model_name_use, model_type_use))
+        print("Total time")
+        print(time_taken)
+        sink()
+        print(time_taken)
+      }
     }
   }
-  
+    
+  use_ansamble <- FALSE
+  run_ansamble_again <- FALSE
   list4 <- c("svmPoly", "nnet", "C5.0", "nb")
   list7 <- c("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet")
   
-  if (file.exists(paste(model_type_use, "ansamble4.txt", sep = "/"))) {
-      print(model_type_use)
-      print("ansamble4")
-      sink(paste(model_type_use, "ansamble4.txt", sep = "/"))
-      print(model_type_use)
-      print("ansamble4")
-      time_taken <- system.time(my_ansamble(list4))
-      print(time_taken)
-      sink()
-      print(time_taken)
-  }
-  
-  if (file.exists(paste(model_type_use, "ansamble7.txt", sep = "/"))) {
-      print(model_type_use)
-      print("ansamble7")
-      sink(paste(model_type_use, "ansamble7.txt", sep = "/"))
-      print(model_type_use)
-      print("ansamble7")
-      time_taken <- system.time(my_ansamble(list7))
-      print(time_taken)
-      sink()
-      print(time_taken)
+  if (use_ansamble) {
+    if (!file.exists(paste(model_type_use, "ansamble4.txt", sep = "/")) || run_ansamble_again) {
+        print(model_type_use)
+        print("ansamble4")
+        sink(paste(model_type_use, "ansamble4.txt", sep = "/"))
+        print(model_type_use)
+        print("ansamble4")
+        time_taken <- system.time(my_ansamble(list4))
+        print(time_taken)
+        sink()
+        print(time_taken)
+    }
+    
+    if (!file.exists(paste(model_type_use, "ansamble7.txt", sep = "/")) || run_ansamble_again) {
+        print(model_type_use)
+        print("ansamble7")
+        sink(paste(model_type_use, "ansamble7.txt", sep = "/"))
+        print(model_type_use)
+        print("ansamble7")
+        time_taken <- system.time(my_ansamble(list7))
+        print(time_taken)
+        sink()
+        print(time_taken)
+    }
   }
 }

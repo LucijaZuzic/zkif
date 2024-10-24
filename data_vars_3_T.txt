@@ -1,0 +1,14 @@
+      TEC              dTEC               Bx              By      
+ Min.   :  2.04   Min.   :  0.260   Min.   :35285   Min.   :1934  
+ 1st Qu.: 15.74   1st Qu.:  2.425   1st Qu.:35339   1st Qu.:1989  
+ Median : 31.80   Median :  5.025   Median :35362   Median :2008  
+ Mean   : 36.99   Mean   : 28.846   Mean   :35358   Mean   :2003  
+ 3rd Qu.: 48.54   3rd Qu.:  7.332   3rd Qu.:35382   3rd Qu.:2020  
+ Max.   :250.00   Max.   :936.000   Max.   :35415   Max.   :2056  
+       Bz              Dst               ap       
+ Min.   :-29642   Min.   :-85.00   Min.   : 5.00  
+ 1st Qu.:-29630   1st Qu.:-67.00   1st Qu.:12.75  
+ Median :-29622   Median :-62.00   Median :22.00  
+ Mean   :-29621   Mean   :-63.69   Mean   :25.28  
+ 3rd Qu.:-29614   3rd Qu.:-57.25   3rd Qu.:32.00  
+ Max.   :-29584   Max.   :-56.00   Max.   :94.00  
