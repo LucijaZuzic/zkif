@@ -6,7 +6,22 @@ rm(list=ls())
 #2. TEC data set, as derived from the RINEX GPS observations using 
 # GPS TEC software - enclosed
 
-setwd('C:/Users/lzuzi/Downloads/zkif-20240911T130930Z-001/zkif')
+library(tidyverse)
+getCurrentFileLocation <-  function()
+{
+    this_file <- commandArgs() %>% 
+    tibble::enframe(name = NULL) %>%
+    tidyr::separate(col=value, into=c("key", "value"), sep="=", fill='right') %>%
+    dplyr::filter(key == "--file") %>%
+    dplyr::pull(value)
+    if (length(this_file)==0)
+    {
+      this_file <- rstudioapi::getSourceEditorContext()$path
+    }
+    return(dirname(this_file))
+}
+
+setwd(getCurrentFileLocation())
 
 #Declaration of the R libraries utilised
 
@@ -28,7 +43,7 @@ data <- as.data.frame(read.csv('darwin2014.csv', header=TRUE,
                                sep =',', skip=0))
 
 data <- data[,-1]
-print(summary(data))
+summary(data)
 pe <- data[data$min==0 & data$sec==0,]
 
 # Reading the annual estimated Dst and ap data in 2014 and
@@ -43,23 +58,12 @@ dataset <- merge(pe, geo, by = c('DOY', 'hr'))
 dataset <- dataset[,-c(3,4,10)]
 summary(dataset)
 
-# Exloratory analysis of observations per variables
-plot_histogram(dataset, title = 'over-all TEC')
+dataset2 <- dataset[,-c(1,2)]
 
 # Data set reduction by expelling TEC>=300 outliers
-iono2 <- dataset[dataset$TEC<300,]
-iono2 <- dataset[c(1:8000),]
-plot_histogram(iono2, title = 'TEC<300')
-#boxplot(dataset, col = 'red', names = c('overall TEC','TEC<200'), 
-#ylab='values [TECU]', cex.axis=1.5, cex.lab=1.5)
-dataset2 <- dataset[,-c(1,2)]
-plot_correlation(dataset2, maxcat = 5L)
-#Box-plots per Dst values, source of the classification criteria
-plot_boxplot(dataset2, by = "Dst")
-iono3 <- iono2[,-c(1,2)]
-plot_boxplot(iono3, by = "Dst")
-plot_scatterplot(dataset2, by = 'TEC', sampled_rows = 1000L)
-plot_scatterplot(iono3, by = 'Dst', sampled_rows = 1000L)
+iono3 <- dataset2[dataset2$TEC<300,]
+
+#iono3 <- iono3[c(1:8000),]
 
 ### Dst-based classification under the following rule:
 # 15 ... 50 positive phase of the storm -> P
@@ -68,13 +72,12 @@ plot_scatterplot(iono3, by = 'Dst', sampled_rows = 1000L)
 # -85 ... -55 through -> T
 # -120 ... -85 extreme -> E
 
-
 Dst_class <- character()
 P <- iono3[iono3$Dst >= 15,]
 N <- iono3[(iono3$Dst < 15 & iono3$Dst >= -20),]
 R <- iono3[(iono3$Dst < (-20) & iono3$Dst >= (-55)),]
 T <- iono3[(iono3$Dst < (-55) & iono3$Dst >= (-85)),]
-E <- iono3[(iono3$Dst <= -85),]
+E <- iono3[(iono3$Dst < -85),]
 
 # Adding estimate class (a categorical variable) to the data set
 for(i in 1:length(iono3$TEC)){
@@ -86,12 +89,29 @@ for(i in 1:length(iono3$TEC)){
     Dst_class[i] <- 'R'
   }else if(iono3$Dst[i]< -55 & iono3$Dst[i]>= -85){
     Dst_class[i] <- 'T'
-  }else if(iono3$Dst[i]<= -85){
+  }else if(iono3$Dst[i]< -85){
     Dst_class[i] <- 'E'
   }
 }
-classdata <- as.data.frame(cbind(iono3,Dst_class))
+classdata <- as.data.frame(cbind(iono3, Dst_class))
 
+classdata_no_Dst <- classdata[c("ap", "Bx", "By", "Bz", "TEC", "dTEC", "Dst_class")]
+colnames(classdata_no_Dst) <- c("ap", "Bx", "By", "Bz", "TEC", "dTEC", "Dst_class")
+
+classdata_no_TEC <- classdata[c("ap", "Bx", "By", "Bz", "Dst_class")]
+colnames(classdata_no_TEC) <- c("ap", "Bx", "By", "Bz", "Dst_class")
+
+classdata_coord <- classdata[c("Bx", "By", "Bz", "Dst_class")]
+colnames(classdata_coord) <- c("Bx", "By", "Bz", "Dst_class")
+
+classdata_xy_ap <- classdata[c("ap", "Bx", "By", "Dst_class")]
+colnames(classdata_xy_ap) <- c("ap", "Bx", "By", "Dst_class")
+
+classdata_xz_ap <- classdata[c("ap", "Bx", "Bz", "Dst_class")]
+colnames(classdata_xz_ap) <- c("ap", "Bx", "Bz", "Dst_class")
+
+classdata_yz_ap <- classdata[c("ap", "By", "Bz", "Dst_class")]
+colnames(classdata_yz_ap) <- c("ap", "By", "Bz", "Dst_class")
 
 ### Classification model development
 
@@ -113,11 +133,29 @@ inTrain <- createDataPartition(
 
 str(inTrain)
 
-training <- classdata[ inTrain,]
-testing  <- classdata[-inTrain,]
+training_all <- classdata[ inTrain,]
+testing_all  <- classdata[-inTrain,]
 
-nrow(training)
-nrow(testing)
+training_no_Dst <- classdata_no_Dst[ inTrain,]
+testing_no_Dst <- classdata_no_Dst[-inTrain,]
+  
+training_no_TEC <- classdata_no_TEC[ inTrain,]
+testing_no_TEC <- classdata_no_TEC[-inTrain,]
+  
+training_coord <- classdata_coord[ inTrain,]
+testing_coord <- classdata_coord[-inTrain,]
+
+training_xy_ap <- classdata_xy_ap[ inTrain,]
+testing_xy_ap <- classdata_xy_ap[-inTrain,]
+
+training_xz_ap <- classdata_xz_ap[ inTrain,]
+testing_xz_ap <- classdata_xz_ap[-inTrain,]
+
+training_yz_ap <- classdata_yz_ap[ inTrain,]
+testing_yz_ap <- classdata_yz_ap[-inTrain,]
+
+nrow(training_all)
+nrow(testing_all)
 
 ctrl <- trainControl(
   method = "repeatedcv",

@@ -1,92 +1,92 @@
-[1] 14
+[1] 13
 
 	Shapiro-Wilk normality test
 
 data:  E$TEC
-W = 0.90264, p-value = 0.1232
+W = 0.8879, p-value = 0.09132
 
 
 	Shapiro-Wilk normality test
 
 data:  E$dTEC
-W = 0.93195, p-value = 0.3249
+W = 0.93709, p-value = 0.4204
 
 
 	Shapiro-Wilk normality test
 
 data:  E$Bx
-W = 0.88826, p-value = 0.07631
+W = 0.89839, p-value = 0.1271
 
 
 	Shapiro-Wilk normality test
 
 data:  E$By
-W = 0.93413, p-value = 0.3483
+W = 0.92017, p-value = 0.2522
 
 
 	Shapiro-Wilk normality test
 
 data:  E$Bz
-W = 0.96689, p-value = 0.8326
+W = 0.97028, p-value = 0.8976
 
 
 	Shapiro-Wilk normality test
 
 data:  E$Dst
-W = 0.85102, p-value = 0.02293
+W = 0.84562, p-value = 0.02502
 
 
 	Shapiro-Wilk normality test
 
 data:  E$ap
-W = 0.88022, p-value = 0.05854
+W = 0.88071, p-value = 0.07292
 
 
 	Exact one-sample Kolmogorov-Smirnov test
 
 data:  E$TEC
-D = 0.9956, p-value < 2.2e-16
+D = 0.9956, p-value = 2.22e-16
 alternative hypothesis: two-sided
 
 
 	Exact one-sample Kolmogorov-Smirnov test
 
 data:  E$dTEC
-D = 0.90839, p-value = 6.55e-15
+D = 0.90289, p-value = 1.367e-13
 alternative hypothesis: two-sided
 
 
 	Exact one-sample Kolmogorov-Smirnov test
 
 data:  E$Bx
-D = 1, p-value < 2.2e-16
+D = 1, p-value = 2.22e-16
 alternative hypothesis: two-sided
 
 
 	Exact one-sample Kolmogorov-Smirnov test
 
 data:  E$By
-D = 1, p-value < 2.2e-16
+D = 1, p-value = 2.22e-16
 alternative hypothesis: two-sided
 
 
 	Exact one-sample Kolmogorov-Smirnov test
 
 data:  E$Bz
-D = 1, p-value < 2.2e-16
+D = 1, p-value = 2.22e-16
 alternative hypothesis: two-sided
 
 
 	Asymptotic one-sample Kolmogorov-Smirnov test
 
 data:  E$Dst
-D = 1, p-value = 1.383e-12
+D = 1, p-value = 1.022e-11
 alternative hypothesis: two-sided
 
 
 	Asymptotic one-sample Kolmogorov-Smirnov test
 
 data:  E$ap
-D = 1, p-value = 1.383e-12
+D = 1, p-value = 1.022e-11
 alternative hypothesis: two-sided
 

@@ -1,6 +1,6 @@
 make_a_table_start = "\\begin{table}[!ht]\n\t\\centering"
 make_a_table_start += "\n\t\\caption{The minimum, $1^{st}$ quartile, median, arithmetic mean, $3^{rd}$ quartile, and maximum values for all variables, DESCUSE.}"
-make_a_table_start += "\n\t\label{tab:minmaxKEYUSE}\n\t\\begin{tabular}{|c|c|c|c|c|c|}\n\t\t\\hline"
+make_a_table_start += "\n\t\label{tab:minmaxKEYUSE}\n\t\\begin{tabular}{|c|}\n\t\t\\hline"
 
 make_a_table_end = "\n\t\end{tabular}\n\end{table}"
 
@@ -73,6 +73,9 @@ for filename_use in filenames_desc:
                      "By": "$B_{y}$",
                      "Bz": "$B_{z}$",
                      "ap": "$a_{p}$"}
+    numvar = len(dict_usable[list(dict_usable.keys())[0]]) + 1
+    if "3_" in filename_use:
+        strtotal += "\n\t\t\\multicolumn{" + str(numvar) + "}{|c|}{" + filename_use.split("_")[-1] + "} \\\\ \\hline"
     for var_use in dict_usable[list(dict_usable.keys())[0]]:
         strline += " & " + transform_var[var_use]
     strtotal += strline + " \\\\ \\hline"
@@ -82,4 +85,5 @@ for filename_use in filenames_desc:
             strline += " & $" + str(dict_usable[metric_use][var_use]) + "$"
         strtotal += strline + " \\\\ \\hline"
     strtotal += make_a_table_end
-    print(strtotal.replace("KEYUSE", filename_use).replace("DESCUSE", filenames_desc[filename_use]))
+    numc = "|c" * numvar + "|"
+    print(strtotal.replace("{tabular}{|c|", "{tabular}{" + numc).replace("KEYUSE", filename_use).replace("DESCUSE", filenames_desc[filename_use]))

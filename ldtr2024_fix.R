@@ -77,7 +77,7 @@ P <- iono3[iono3$Dst >= 15,]
 N <- iono3[(iono3$Dst < 15 & iono3$Dst >= -20),]
 R <- iono3[(iono3$Dst < (-20) & iono3$Dst >= (-55)),]
 T <- iono3[(iono3$Dst < (-55) & iono3$Dst >= (-85)),]
-E <- iono3[(iono3$Dst <= -85),]
+E <- iono3[(iono3$Dst < -85),]
 
 # Adding estimate class (a categorical variable) to the data set
 for(i in 1:length(iono3$TEC)){
@@ -89,7 +89,7 @@ for(i in 1:length(iono3$TEC)){
     Dst_class[i] <- 'R'
   }else if(iono3$Dst[i]< -55 & iono3$Dst[i]>= -85){
     Dst_class[i] <- 'T'
-  }else if(iono3$Dst[i]<= -85){
+  }else if(iono3$Dst[i]< -85){
     Dst_class[i] <- 'E'
   }
 }

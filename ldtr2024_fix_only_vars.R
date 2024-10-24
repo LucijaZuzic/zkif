@@ -106,7 +106,7 @@ P <- iono3[iono3$Dst >= 15,]
 N <- iono3[(iono3$Dst < 15 & iono3$Dst >= -20),]
 R <- iono3[(iono3$Dst < (-20) & iono3$Dst >= (-55)),]
 T <- iono3[(iono3$Dst < (-55) & iono3$Dst >= (-85)),]
-E <- iono3[(iono3$Dst <= -85),]
+E <- iono3[(iono3$Dst < -85),]
 
 sink("data_vars_2.txt")
 print(summary(dataset2))
