@@ -1,0 +1,31 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $1$ & $0$ & $0$ & $2$ \\ \hline
+		 N & $2$ & $1497$ & $27$ & $370$ & $16$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $1$ & $0$ & $1$ & $0$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:yzap:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$0\%$ & $99.8433\%$ & $0\%$ & $99.8955\%$ & $0\%$ & $0.1565\%$ & $49.9217\%$ \\ \hline
+		$99.8666\%$ & $0.7177\%$ & $78.295\%$ & $60\%$ & $78.0908\%$ & $99.7392\%$ & $50.2921\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $98.592\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$0.2695\%$ & $99.9353\%$ & $50\%$ & $80.6788\%$ & $0.0522\%$ & $0.1043\%$ & $50.1024\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $99.061\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the polynomial SVM model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cs:yzap:svmPoly}
+\end{table}

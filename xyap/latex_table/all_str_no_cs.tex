@@ -1,0 +1,432 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1494$ & $27$ & $333$ & $6$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $3$ & $0$ & $17$ & $2$ \\ \hline
+		 T & $2$ & $2$ & $0$ & $21$ & $10$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cm:xyap:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $99.67\%$ & $0\%$ & $4.5822\%$ & $55.5556\%$ \\ \hline
+		Spec & $100\%$ & $12.44\%$ & $100\%$ & $99.6766\%$ & $98.6835\%$ \\ \hline
+		PPV & NaN & $80.32\%$ & NaN & $77.2727\%$ & $28.5714\%$ \\ \hline
+		NPV & $99.8957\%$ & $91.23\%$ & $98.592\%$ & $81.3193\%$ & $99.5749\%$ \\ \hline
+		DR & $0\%$ & $77.93\%$ & $0\%$ & $0.8868\%$ & $0.5216\%$ \\ \hline
+		DP & $0\%$ & $97.03\%$ & $0\%$ & $1.1476\%$ & $1.8258\%$ \\ \hline
+		BA & $50\%$ & $56.05\%$ & $50\%$ & $52.1294\%$ & $77.1195\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1413$ & $26$ & $158$ & $3$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $86$ & $1$ & $213$ & $10$ \\ \hline
+		 T & $2$ & $0$ & $0$ & $0$ & $5$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the decision tree model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cm:xyap:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $94.26\%$ & $0\%$ & $57.41\%$ & $27.7778\%$ \\ \hline
+		Spec & $100\%$ & $55.26\%$ & $100\%$ & $93.73\%$ & $99.8947\%$ \\ \hline
+		PPV & NaN & $88.31\%$ & NaN & $68.71\%$ & $71.4286\%$ \\ \hline
+		NPV & $99.8957\%$ & $72.87\%$ & $98.592\%$ & $90.17\%$ & $99.3194\%$ \\ \hline
+		DR & $0\%$ & $73.71\%$ & $0\%$ & $11.11\%$ & $0.2608\%$ \\ \hline
+		DP & $0\%$ & $83.46\%$ & $0\%$ & $16.17\%$ & $0.3652\%$ \\ \hline
+		BA & $50\%$ & $74.76\%$ & $50\%$ & $75.57\%$ & $63.8362\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the decision tree model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $2$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1499$ & $0$ & $0$ & $0$ \\ \hline
+		 P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $0$ & $0$ & $371$ & $0$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $18$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the naive Bayes model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cm:xyap:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		Spec & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		PPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		NPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		DR & $0.1043\%$ & $78.2\%$ & $1.408\%$ & $19.35\%$ & $0.939\%$ \\ \hline
+		DP & $0.1043\%$ & $78.2\%$ & $1.408\%$ & $19.35\%$ & $0.939\%$ \\ \hline
+		BA & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the naive Bayes model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $2$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1499$ & $0$ & $0$ & $0$ \\ \hline
+		 P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $0$ & $0$ & $371$ & $0$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $18$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cm:xyap:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		Spec & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		PPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		NPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		DR & $0.1043\%$ & $78.2\%$ & $1.408\%$ & $19.35\%$ & $0.939\%$ \\ \hline
+		DP & $0.1043\%$ & $78.2\%$ & $1.408\%$ & $19.35\%$ & $0.939\%$ \\ \hline
+		BA & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1474$ & $26$ & $282$ & $5$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $2$ & $25$ & $1$ & $89$ & $13$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PLS model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cm:xyap:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $98.33\%$ & $0\%$ & $23.989\%$ & $0\%$ \\ \hline
+		Spec & $100\%$ & $25.12\%$ & $100\%$ & $97.348\%$ & $100\%$ \\ \hline
+		PPV & NaN & $82.48\%$ & NaN & $68.462\%$ & NaN \\ \hline
+		NPV & $99.8957\%$ & $80.77\%$ & $98.592\%$ & $84.219\%$ & $99.061\%$ \\ \hline
+		DR & $0\%$ & $76.89\%$ & $0\%$ & $4.643\%$ & $0\%$ \\ \hline
+		DP & $0\%$ & $93.22\%$ & $0\%$ & $6.781\%$ & $0\%$ \\ \hline
+		BA & $50\%$ & $61.73\%$ & $50\%$ & $60.669\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $1$ & $0$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $0$ & $1395$ & $26$ & $153$ & $0$ \\ \hline
+		 P & $0$ & $2$ & $0$ & $0$ & $1$ \\ \hline
+		 R & $0$ & $99$ & $1$ & $211$ & $9$ \\ \hline
+		 T & $1$ & $3$ & $0$ & $7$ & $7$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the FDA model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cm:xyap:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $50\%$ & $93.06\%$ & $0\%$ & $56.87\%$ & $38.8889\%$ \\ \hline
+		Spec & $99.9478\%$ & $57.18\%$ & $99.8413\%$ & $92.95\%$ & $99.4207\%$ \\ \hline
+		PPV & $50\%$ & $88.63\%$ & $0\%$ & $65.94\%$ & $38.8889\%$ \\ \hline
+		NPV & $99.9478\%$ & $69.68\%$ & $98.5893\%$ & $89.98\%$ & $99.4207\%$ \\ \hline
+		DR & $0.0522\%$ & $72.77\%$ & $0\%$ & $11.01\%$ & $0.3652\%$ \\ \hline
+		DP & $0.1043\%$ & $82.11\%$ & $0.1565\%$ & $16.69\%$ & $0.939\%$ \\ \hline
+		BA & $74.9739\%$ & $75.12\%$ & $49.9206\%$ & $74.91\%$ & $69.1548\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the FDA model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1410$ & $26$ & $167$ & $1$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $88$ & $1$ & $204$ & $10$ \\ \hline
+		 T & $2$ & $1$ & $0$ & $0$ & $7$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PCA neural network model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cm:xyap:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $94.06\%$ & $0\%$ & $54.99\%$ & $38.8889\%$ \\ \hline
+		Spec & $100\%$ & $53.59\%$ & $100\%$ & $93.6\%$ & $99.842\%$ \\ \hline
+		PPV & NaN & $87.91\%$ & NaN & $67.33\%$ & $70\%$ \\ \hline
+		NPV & $99.8957\%$ & $71.57\%$ & $98.592\%$ & $89.65\%$ & $99.4232\%$ \\ \hline
+		DR & $0\%$ & $73.55\%$ & $0\%$ & $10.64\%$ & $0.3652\%$ \\ \hline
+		DP & $0\%$ & $83.67\%$ & $0\%$ & $15.81\%$ & $0.5216\%$ \\ \hline
+		BA & $50\%$ & $73.83\%$ & $50\%$ & $74.29\%$ & $69.3655\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $738.47$ \\ \hline
+		C5.0 & $356.39$ \\ \hline
+		nb & $142.45$ \\ \hline
+		nnet & $613.42$ \\ \hline
+		pls & $51.20$ \\ \hline
+		fda & $163.07$ \\ \hline
+		pcaNNet & $479.22$ \\ \hline
+	\end{tabular}
+	\caption{The train time in seconds for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:time:xyap:train}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $738.47$ & $356.39$ & $142.45$ & $613.42$ & $51.20$ & $163.07$ & $479.22$ \\ \hline
+	\end{tabular}
+	\caption{The train time in seconds for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:xyap:train}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $0.46$ \\ \hline
+		C5.0 & $0.06$ \\ \hline
+		nb & $0.94$ \\ \hline
+		nnet & $0.03$ \\ \hline
+		pls & $0.34$ \\ \hline
+		fda & $0.03$ \\ \hline
+		pcaNNet & $0.03$ \\ \hline
+	\end{tabular}
+	\caption{The prediction time in seconds for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:time:xyap:predict}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $0.46$ & $0.06$ & $0.94$ & $0.03$ & $0.34$ & $0.03$ & $0.03$ \\ \hline
+	\end{tabular}
+	\caption{The prediction time in seconds for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:xyap:predict}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & NA \\ \hline
+		C5.0 & $0$ \\ \hline
+		nb & NA \\ \hline
+		nnet & NA \\ \hline
+		pls & $0.02$ \\ \hline
+		fda & $0.03$ \\ \hline
+		pcaNNet & NA \\ \hline
+	\end{tabular}
+	\caption{The variable importance calculation time in seconds for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:time:xyap:importance}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & NA & $0$ & NA & NA & $0.02$ & $0.03$ & NA \\ \hline
+	\end{tabular}
+	\caption{The variable importance calculation time in seconds for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:xyap:importance}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $739.55$ \\ \hline
+		C5.0 & $357.43$ \\ \hline
+		nb & $143.97$ \\ \hline
+		nnet & $614.07$ \\ \hline
+		pls & $52.39$ \\ \hline
+		fda & $164.17$ \\ \hline
+		pcaNNet & $480.02$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:time:xyap:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $739.55$ & $357.43$ & $143.97$ & $614.07$ & $52.39$ & $164.17$ & $480.02$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:xyap:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Model & elapsed_train & elapsed_predict & elapsed_importance & elapsed_total \\ \hline
+		svmPoly & $738.47$ & $0.46$ & NA & $739.55$ \\ \hline
+		C5.0 & $356.39$ & $0.06$ & $0$ & $357.43$ \\ \hline
+		nb & $142.45$ & $0.94$ & NA & $143.97$ \\ \hline
+		nnet & $613.42$ & $0.03$ & NA & $614.07$ \\ \hline
+		pls & $51.20$ & $0.34$ & $0.02$ & $52.39$ \\ \hline
+		fda & $163.07$ & $0.03$ & $0.03$ & $164.17$ \\ \hline
+		pcaNNet & $479.22$ & $0.03$ & NA & $480.02$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:time:xyap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed_train & $738.47$ & $356.39$ & $142.45$ & $613.42$ & $51.20$ & $163.07$ & $479.22$ \\ \hline
+		elapsed_predict & $0.46$ & $0.06$ & $0.94$ & $0.03$ & $0.34$ & $0.03$ & $0.03$ \\ \hline
+		elapsed_importance & NA & $0$ & NA & NA & $0.02$ & $0.03$ & NA \\ \hline
+		elapsed_total & $739.55$ & $357.43$ & $143.97$ & $614.07$ & $52.39$ & $164.17$ & $480.02$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:xyap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Metric & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		Acc & $0.7934$ & $0.8508$ & $1$ & $1$ & $0.8153$ & $0.8419$ & $0.8456$ \\ \hline
+		$95\%$ CI & $(0.7746, 0.8114)$ & $(0.8341, 0.8665)$ & $(0.9981, 1)$ & $(0.9981, 1)$ & $(0.7972, 0.8325)$ & $(0.8248, 0.858)$ & $(0.8286, 0.8615)$ \\ \hline
+		NIR & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ \\ \hline
+		$p$-value & $0.1167$ & $1.544e-14$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $0.0001743$ & $2.527e-11$ & $1.378e-12$ \\ \hline
+		Kappa & $0.1353$ & $0.5279$ & $1$ & $1$ & $0.2841$ & $0.5145$ & $0.5099$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:stats:xyap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
+		svmPoly & $0.7934$ & $(0.7746, 0.8114)$ & $0.782$ & $0.1167$ & $0.1353$ \\ \hline
+		C5.0 & $0.8508$ & $(0.8341, 0.8665)$ & $0.782$ & $1.544e-14$ & $0.5279$ \\ \hline
+		nb & $1$ & $(0.9981, 1)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
+		nnet & $1$ & $(0.9981, 1)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
+		pls & $0.8153$ & $(0.7972, 0.8325)$ & $0.782$ & $0.0001743$ & $0.2841$ \\ \hline
+		fda & $0.8419$ & $(0.8248, 0.858)$ & $0.782$ & $2.527e-11$ & $0.5145$ \\ \hline
+		pcaNNet & $0.8456$ & $(0.8286, 0.8615)$ & $0.782$ & $1.378e-12$ & $0.5099$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:stats:reverse:xyap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|}
+		\hline
+		Models \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:time:ansamble:xyap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|}
+		\hline
+		Models \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of different numbers of models when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:time:ansamble:reverse:xyap}
+\end{table}

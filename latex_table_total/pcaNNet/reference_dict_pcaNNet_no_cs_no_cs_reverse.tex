@@ -1,0 +1,111 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $2$ \\ \hline
+		 N & $0$ & $1499$ & $2$ & $1$ & $0$ \\ \hline
+		 P & $0$ & $0$ & $25$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $0$ & $0$ & $370$ & $0$ \\ \hline
+		 T & $2$ & $0$ & $0$ & $0$ & $16$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PCA neural network model when using all variables as input.}
+	\label{tab:cm:all:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1409$ & $27$ & $152$ & $2$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $2$ & $90$ & $0$ & $219$ & $16$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PCA neural network model when using all variables except Dst as input.}
+	\label{tab:cm:noDst:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1399$ & $27$ & $146$ & $2$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $99$ & $0$ & $225$ & $12$ \\ \hline
+		 T & $2$ & $1$ & $0$ & $0$ & $4$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PCA neural network model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1413$ & $27$ & $174$ & $2$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $2$ & $86$ & $0$ & $197$ & $16$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PCA neural network model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:cm:coord:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1410$ & $26$ & $167$ & $1$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $88$ & $1$ & $204$ & $10$ \\ \hline
+		 T & $2$ & $1$ & $0$ & $0$ & $7$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PCA neural network model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cm:xyap:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1387$ & $26$ & $161$ & $0$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $111$ & $1$ & $210$ & $11$ \\ \hline
+		 T & $2$ & $1$ & $0$ & $0$ & $7$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PCA neural network model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:xzap:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $2$ & $1424$ & $26$ & $226$ & $8$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $75$ & $1$ & $145$ & $10$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PCA neural network model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:yzap:pcaNNet}
+\end{table}

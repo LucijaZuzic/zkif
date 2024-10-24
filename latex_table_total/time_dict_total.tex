@@ -1,0 +1,118 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $148.72$ \\ \hline
+		C5.0 & $186.08$ \\ \hline
+		nb & $206.65$ \\ \hline
+		nnet & $582.41$ \\ \hline
+		pls & $52.59$ \\ \hline
+		fda & $56.20$ \\ \hline
+		pcaNNet & $341.32$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using all variables as input.}
+	\label{tab:time:all:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $330.67$ \\ \hline
+		C5.0 & $670.61$ \\ \hline
+		nb & $200.83$ \\ \hline
+		nnet & $629.67$ \\ \hline
+		pls & $63.48$ \\ \hline
+		fda & $98.11$ \\ \hline
+		pcaNNet & $422.86$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using all variables except Dst as input.}
+	\label{tab:time:noDst:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $392.05$ \\ \hline
+		C5.0 & $466.42$ \\ \hline
+		nb & $164.03$ \\ \hline
+		nnet & $619.30$ \\ \hline
+		pls & $54.26$ \\ \hline
+		fda & $142.19$ \\ \hline
+		pcaNNet & $468.73$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:time:noTEC:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $582.47$ \\ \hline
+		C5.0 & $347.16$ \\ \hline
+		nb & $141.87$ \\ \hline
+		nnet & $587.37$ \\ \hline
+		pls & $36.90$ \\ \hline
+		fda & $144.53$ \\ \hline
+		pcaNNet & $452.75$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:time:coord:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $739.55$ \\ \hline
+		C5.0 & $357.43$ \\ \hline
+		nb & $143.97$ \\ \hline
+		nnet & $614.07$ \\ \hline
+		pls & $52.39$ \\ \hline
+		fda & $164.17$ \\ \hline
+		pcaNNet & $480.02$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:time:xyap:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $670.54$ \\ \hline
+		C5.0 & $330.81$ \\ \hline
+		nb & $147.26$ \\ \hline
+		nnet & $629.48$ \\ \hline
+		pls & $41.92$ \\ \hline
+		fda & $172.64$ \\ \hline
+		pcaNNet & $495.66$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:xzap:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $876.43$ \\ \hline
+		C5.0 & $382.92$ \\ \hline
+		nb & $149.87$ \\ \hline
+		nnet & $644.44$ \\ \hline
+		pls & $59.00$ \\ \hline
+		fda & $185.78$ \\ \hline
+		pcaNNet & $517.78$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:yzap:total}
+\end{table}

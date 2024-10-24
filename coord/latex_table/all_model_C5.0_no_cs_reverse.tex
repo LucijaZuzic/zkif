@@ -1,0 +1,31 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $1$ & $0$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $0$ & $1433$ & $27$ & $195$ & $2$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $66$ & $0$ & $175$ & $13$ \\ \hline
+		 T & $1$ & $0$ & $0$ & $1$ & $2$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the decision tree model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:cm:coord:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$50\%$ & $99.9478\%$ & $50\%$ & $99.9478\%$ & $0.0522\%$ & $0.1043\%$ & $74.9739\%$ \\ \hline
+		$95.6\%$ & $46.41\%$ & $86.48\%$ & $74.62\%$ & $74.75\%$ & $86.44\%$ & $71\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $98.592\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$47.17\%$ & $94.89\%$ & $68.898\%$ & $88.214\%$ & $9.129\%$ & $13.25\%$ & $71.03\%$ \\ \hline
+		$11.1111\%$ & $99.8947\%$ & $50\%$ & $99.1636\%$ & $0.1043\%$ & $0.2087\%$ & $55.5029\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the decision tree model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:cs:coord:C5.0}
+\end{table}

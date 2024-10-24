@@ -1,0 +1,306 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $1$ & $0$ & $0$ & $2$ \\ \hline
+		 N & $2$ & $1497$ & $27$ & $370$ & $16$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $1$ & $0$ & $1$ & $0$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:yzap:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $1$ & $1411$ & $25$ & $210$ & $9$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $1$ & $87$ & $2$ & $161$ & $7$ \\ \hline
+		 T & $0$ & $1$ & $0$ & $0$ & $2$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the decision tree model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:yzap:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $1$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $1$ & $1499$ & $0$ & $0$ & $0$ \\ \hline
+		 P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $0$ & $0$ & $371$ & $0$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $18$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the naive Bayes model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:yzap:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $2$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1499$ & $0$ & $0$ & $0$ \\ \hline
+		 P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $0$ & $0$ & $371$ & $0$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $18$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:yzap:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $2$ & $1474$ & $26$ & $310$ & $11$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $25$ & $1$ & $61$ & $7$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PLS model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:yzap:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $2$ & $0$ & $0$ & $2$ \\ \hline
+		 N & $2$ & $1428$ & $25$ & $267$ & $10$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $69$ & $2$ & $104$ & $5$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $1$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the FDA model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:yzap:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $2$ & $1424$ & $26$ & $226$ & $8$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $75$ & $1$ & $145$ & $10$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PCA neural network model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:yzap:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $875.32$ \\ \hline
+		C5.0 & $381.94$ \\ \hline
+		nb & $148.34$ \\ \hline
+		nnet & $643.80$ \\ \hline
+		pls & $57.49$ \\ \hline
+		fda & $184.64$ \\ \hline
+		pcaNNet & $517.03$ \\ \hline
+	\end{tabular}
+	\caption{The train time in seconds for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:yzap:train}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $875.32$ & $381.94$ & $148.34$ & $643.80$ & $57.49$ & $184.64$ & $517.03$ \\ \hline
+	\end{tabular}
+	\caption{The train time in seconds for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:yzap:train}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $0.50$ \\ \hline
+		C5.0 & $0.05$ \\ \hline
+		nb & $0.92$ \\ \hline
+		nnet & $0.03$ \\ \hline
+		pls & $0.34$ \\ \hline
+		fda & $0.03$ \\ \hline
+		pcaNNet & $0.01$ \\ \hline
+	\end{tabular}
+	\caption{The prediction time in seconds for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:yzap:predict}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $0.50$ & $0.05$ & $0.92$ & $0.03$ & $0.34$ & $0.03$ & $0.01$ \\ \hline
+	\end{tabular}
+	\caption{The prediction time in seconds for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:yzap:predict}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & NA \\ \hline
+		C5.0 & $0.00$ \\ \hline
+		nb & NA \\ \hline
+		nnet & NA \\ \hline
+		pls & $0$ \\ \hline
+		fda & $0.03$ \\ \hline
+		pcaNNet & NA \\ \hline
+	\end{tabular}
+	\caption{The variable importance calculation time in seconds for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:yzap:importance}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & NA & $0.00$ & NA & NA & $0$ & $0.03$ & NA \\ \hline
+	\end{tabular}
+	\caption{The variable importance calculation time in seconds for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:yzap:importance}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $876.43$ \\ \hline
+		C5.0 & $382.92$ \\ \hline
+		nb & $149.87$ \\ \hline
+		nnet & $644.44$ \\ \hline
+		pls & $59.00$ \\ \hline
+		fda & $185.78$ \\ \hline
+		pcaNNet & $517.78$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:yzap:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $876.43$ & $382.92$ & $149.87$ & $644.44$ & $59.00$ & $185.78$ & $517.78$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:yzap:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Model & elapsed_train & elapsed_predict & elapsed_importance & elapsed_total \\ \hline
+		svmPoly & $875.32$ & $0.50$ & NA & $876.43$ \\ \hline
+		C5.0 & $381.94$ & $0.05$ & $0.00$ & $382.92$ \\ \hline
+		nb & $148.34$ & $0.92$ & NA & $149.87$ \\ \hline
+		nnet & $643.80$ & $0.03$ & NA & $644.44$ \\ \hline
+		pls & $57.49$ & $0.34$ & $0$ & $59.00$ \\ \hline
+		fda & $184.64$ & $0.03$ & $0.03$ & $185.78$ \\ \hline
+		pcaNNet & $517.03$ & $0.01$ & NA & $517.78$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:yzap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed_train & $875.32$ & $381.94$ & $148.34$ & $643.80$ & $57.49$ & $184.64$ & $517.03$ \\ \hline
+		elapsed_predict & $0.50$ & $0.05$ & $0.92$ & $0.03$ & $0.34$ & $0.03$ & $0.01$ \\ \hline
+		elapsed_importance & NA & $0.00$ & NA & NA & $0$ & $0.03$ & NA \\ \hline
+		elapsed_total & $876.43$ & $382.92$ & $149.87$ & $644.44$ & $59.00$ & $185.78$ & $517.78$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:reverse:yzap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Metric & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		Acc & $0.7814$ & $0.8211$ & $0.9995$ & $1$ & $0.8007$ & $0.7997$ & $0.8185$ \\ \hline
+		$95\%$ CI & $(0.7622, 0.7997)$ & $(0.8032, 0.838)$ & $(0.9971, 1)$ & $(0.9981, 1)$ & $(0.7821, 0.8184)$ & $(0.7811, 0.8174)$ & $(0.8005, 0.8355)$ \\ \hline
+		NIR & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ \\ \hline
+		$p$-value & $0.5351$ & $1.265e-05$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $0.0239$ & $0.03101$ & $4.382e-05$ \\ \hline
+		Kappa & $0.006$ & $0.4005$ & $0.9985$ & $1$ & $0.1929$ & $0.2725$ & $0.3718$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:stats:yzap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
+		svmPoly & $0.7814$ & $(0.7622, 0.7997)$ & $0.782$ & $0.5351$ & $0.006$ \\ \hline
+		C5.0 & $0.8211$ & $(0.8032, 0.838)$ & $0.782$ & $1.265e-05$ & $0.4005$ \\ \hline
+		nb & $0.9995$ & $(0.9971, 1)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $0.9985$ \\ \hline
+		nnet & $1$ & $(0.9981, 1)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
+		pls & $0.8007$ & $(0.7821, 0.8184)$ & $0.782$ & $0.0239$ & $0.1929$ \\ \hline
+		fda & $0.7997$ & $(0.7811, 0.8174)$ & $0.782$ & $0.03101$ & $0.2725$ \\ \hline
+		pcaNNet & $0.8185$ & $(0.8005, 0.8355)$ & $0.782$ & $4.382e-05$ & $0.3718$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:stats:reverse:yzap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|}
+		\hline
+		Models \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:ansamble:yzap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|}
+		\hline
+		Models \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of different numbers of models when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:ansamble:reverse:yzap}
+\end{table}

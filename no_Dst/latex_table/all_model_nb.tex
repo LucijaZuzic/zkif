@@ -1,0 +1,49 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $2$ & $1$ & $0$ & $1$ & $0$ \\ \hline
+		 N & $0$ & $1492$ & $0$ & $1$ & $0$ \\ \hline
+		 P & $0$ & $4$ & $27$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $2$ & $0$ & $368$ & $1$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $1$ & $17$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the naive Bayes model when using all variables except Dst as input.}
+	\label{tab:cm:noDst:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$100\%$ & $99.8956\%$ & $50\%$ & $100\%$ & $0.1043\%$ & $0.2087\%$ & $99.9478\%$ \\ \hline
+		$99.53\%$ & $99.76\%$ & $99.93\%$ & $98.35\%$ & $77.83\%$ & $77.88\%$ & $99.65\%$ \\ \hline
+		$100\%$ & $99.788\%$ & $87.097\%$ & $100\%$ & $1.408\%$ & $1.617\%$ & $99.894\%$ \\ \hline
+		$99.19\%$ & $99.81\%$ & $99.19\%$ & $99.81\%$ & $19.2\%$ & $19.35\%$ & $99.5\%$ \\ \hline
+		$94.4444\%$ & $99.9473\%$ & $94.4444\%$ & $99.9473\%$ & $0.8868\%$ & $0.939\%$ & $97.1959\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the naive Bayes model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $100\%$ & $99.53\%$ & $100\%$ & $99.19\%$ & $94.4444\%$ \\ \hline
+		Spec & $99.8956\%$ & $99.76\%$ & $99.788\%$ & $99.81\%$ & $99.9473\%$ \\ \hline
+		PPV & $50\%$ & $99.93\%$ & $87.097\%$ & $99.19\%$ & $94.4444\%$ \\ \hline
+		NPV & $100\%$ & $98.35\%$ & $100\%$ & $99.81\%$ & $99.9473\%$ \\ \hline
+		DR & $0.1043\%$ & $77.83\%$ & $1.408\%$ & $19.2\%$ & $0.8868\%$ \\ \hline
+		DP & $0.2087\%$ & $77.88\%$ & $1.617\%$ & $19.35\%$ & $0.939\%$ \\ \hline
+		BA & $99.9478\%$ & $99.65\%$ & $99.894\%$ & $99.5\%$ & $97.1959\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the naive Bayes model when using all variables except Dst as input.}
+	\label{tab:cs:reverse:noDst:nb}
+\end{table}

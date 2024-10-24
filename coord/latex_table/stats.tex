@@ -1,0 +1,14 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Metric & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		Acc & $0.7887$ & $0.8404$ & $1$ & $1$ & $0.8174$ & $0.8252$ & $0.8399$ \\ \hline
+		$95\%$ CI & $(0.7698, 0.8068)$ & $(0.8232, 0.8565)$ & $(0.9981, 1)$ & $(0.9981, 1)$ & $(0.7994, 0.8345)$ & $(0.8075, 0.842)$ & $(0.8227, 0.856)$ \\ \hline
+		NIR & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ \\ \hline
+		$p$-value & $0.2455$ & $8.299e-11$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $7.036e-05$ & $1.45e-06$ & $1.224e-10$ \\ \hline
+		Kappa & $0.1003$ & $0.4651$ & $1$ & $1$ & $0.266$ & $0.4508$ & $0.4841$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:stats:coord}
+\end{table}

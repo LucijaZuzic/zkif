@@ -1,0 +1,111 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1400$ & $0$ & $268$ & $0$ \\ \hline
+		 P & $0$ & $99$ & $27$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $0$ & $0$ & $63$ & $0$ \\ \hline
+		 T & $2$ & $0$ & $0$ & $40$ & $18$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using all variables as input.}
+	\label{tab:cm:all:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $0$ & $1395$ & $14$ & $334$ & $5$ \\ \hline
+		 P & $0$ & $100$ & $13$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $2$ & $0$ & $11$ & $2$ \\ \hline
+		 T & $2$ & $2$ & $0$ & $26$ & $10$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using all variables except Dst as input.}
+	\label{tab:cm:noDst:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $1$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $0$ & $1491$ & $27$ & $328$ & $6$ \\ \hline
+		 P & $0$ & $4$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $1$ & $0$ & $15$ & $2$ \\ \hline
+		 T & $2$ & $2$ & $0$ & $28$ & $9$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1496$ & $27$ & $340$ & $10$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $0$ & $0$ & $9$ & $1$ \\ \hline
+		 T & $2$ & $3$ & $0$ & $22$ & $7$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:cm:coord:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1494$ & $27$ & $333$ & $6$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $3$ & $0$ & $17$ & $2$ \\ \hline
+		 T & $2$ & $2$ & $0$ & $21$ & $10$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cm:xyap:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1494$ & $27$ & $344$ & $5$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $3$ & $0$ & $12$ & $4$ \\ \hline
+		 T & $2$ & $2$ & $0$ & $15$ & $9$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:xzap:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $1$ & $0$ & $0$ & $2$ \\ \hline
+		 N & $2$ & $1497$ & $27$ & $370$ & $16$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $1$ & $0$ & $1$ & $0$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:cm:yzap:svmPoly}
+\end{table}

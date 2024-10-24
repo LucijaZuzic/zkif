@@ -1,0 +1,118 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Model & elapsed_train & elapsed_predict & elapsed_importance & elapsed_total \\ \hline
+		svmPoly & $148.09$ & $0.20$ & NA & $148.72$ \\ \hline
+		C5.0 & $185.28$ & $0.08$ & $0$ & $186.08$ \\ \hline
+		nb & $204.35$ & $1.84$ & NA & $206.65$ \\ \hline
+		nnet & $581.90$ & $0.02$ & NA & $582.41$ \\ \hline
+		pls & $51.47$ & $0.35$ & $0.05$ & $52.59$ \\ \hline
+		fda & $55.38$ & $0.02$ & $0.04$ & $56.20$ \\ \hline
+		pcaNNet & $340.80$ & $0.02$ & NA & $341.32$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using all variables as input.}
+	\label{tab:time:all}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Model & elapsed_train & elapsed_predict & elapsed_importance & elapsed_total \\ \hline
+		svmPoly & $329.78$ & $0.39$ & NA & $330.67$ \\ \hline
+		C5.0 & $669.68$ & $0.09$ & $0.00$ & $670.61$ \\ \hline
+		nb & $198.42$ & $1.86$ & NA & $200.83$ \\ \hline
+		nnet & $629.04$ & $0.03$ & NA & $629.67$ \\ \hline
+		pls & $62.34$ & $0.34$ & $0.00$ & $63.48$ \\ \hline
+		fda & $97.22$ & $0.02$ & $0.02$ & $98.11$ \\ \hline
+		pcaNNet & $422.25$ & $0.03$ & NA & $422.86$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using all variables except Dst as input.}
+	\label{tab:time:noDst}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Model & elapsed_train & elapsed_predict & elapsed_importance & elapsed_total \\ \hline
+		svmPoly & $391.08$ & $0.42$ & NA & $392.05$ \\ \hline
+		C5.0 & $465.45$ & $0.07$ & $0.02$ & $466.42$ \\ \hline
+		nb & $162.32$ & $1.16$ & NA & $164.03$ \\ \hline
+		nnet & $618.67$ & $0.02$ & NA & $619.30$ \\ \hline
+		pls & $53.00$ & $0.33$ & $0.01$ & $54.26$ \\ \hline
+		fda & $141.32$ & $0.01$ & $0.01$ & $142.19$ \\ \hline
+		pcaNNet & $468.00$ & $0.03$ & NA & $468.73$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:time:noTEC}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Model & elapsed_train & elapsed_predict & elapsed_importance & elapsed_total \\ \hline
+		svmPoly & $581.37$ & $0.44$ & NA & $582.47$ \\ \hline
+		C5.0 & $346.22$ & $0.06$ & $0$ & $347.16$ \\ \hline
+		nb & $141.03$ & $0.28$ & NA & $141.87$ \\ \hline
+		nnet & $586.70$ & $0.03$ & NA & $587.37$ \\ \hline
+		pls & $35.57$ & $0.33$ & $0.01$ & $36.90$ \\ \hline
+		fda & $143.53$ & $0.03$ & $0.01$ & $144.53$ \\ \hline
+		pcaNNet & $452.11$ & $0.03$ & NA & $452.75$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:time:coord}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Model & elapsed_train & elapsed_predict & elapsed_importance & elapsed_total \\ \hline
+		svmPoly & $738.47$ & $0.46$ & NA & $739.55$ \\ \hline
+		C5.0 & $356.39$ & $0.06$ & $0$ & $357.43$ \\ \hline
+		nb & $142.45$ & $0.94$ & NA & $143.97$ \\ \hline
+		nnet & $613.42$ & $0.03$ & NA & $614.07$ \\ \hline
+		pls & $51.20$ & $0.34$ & $0.02$ & $52.39$ \\ \hline
+		fda & $163.07$ & $0.03$ & $0.03$ & $164.17$ \\ \hline
+		pcaNNet & $479.22$ & $0.03$ & NA & $480.02$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:time:xyap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Model & elapsed_train & elapsed_predict & elapsed_importance & elapsed_total \\ \hline
+		svmPoly & $669.52$ & $0.45$ & NA & $670.54$ \\ \hline
+		C5.0 & $329.88$ & $0.06$ & $0.00$ & $330.81$ \\ \hline
+		nb & $145.75$ & $0.93$ & NA & $147.26$ \\ \hline
+		nnet & $628.77$ & $0.01$ & NA & $629.48$ \\ \hline
+		pls & $40.62$ & $0.34$ & $0.02$ & $41.92$ \\ \hline
+		fda & $171.54$ & $0.03$ & $0.03$ & $172.64$ \\ \hline
+		pcaNNet & $494.83$ & $0.02$ & NA & $495.66$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:xzap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Model & elapsed_train & elapsed_predict & elapsed_importance & elapsed_total \\ \hline
+		svmPoly & $875.32$ & $0.50$ & NA & $876.43$ \\ \hline
+		C5.0 & $381.94$ & $0.05$ & $0.00$ & $382.92$ \\ \hline
+		nb & $148.34$ & $0.92$ & NA & $149.87$ \\ \hline
+		nnet & $643.80$ & $0.03$ & NA & $644.44$ \\ \hline
+		pls & $57.49$ & $0.34$ & $0$ & $59.00$ \\ \hline
+		fda & $184.64$ & $0.03$ & $0.03$ & $185.78$ \\ \hline
+		pcaNNet & $517.03$ & $0.01$ & NA & $517.78$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:time:yzap}
+\end{table}

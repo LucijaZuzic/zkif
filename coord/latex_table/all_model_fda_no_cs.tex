@@ -1,0 +1,33 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $0$ & $1391$ & $27$ & $177$ & $3$ \\ \hline
+		 P & $0$ & $3$ & $0$ & $1$ & $0$ \\ \hline
+		 R & $0$ & $103$ & $0$ & $185$ & $8$ \\ \hline
+		 T & $2$ & $2$ & $0$ & $8$ & $6$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the FDA model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:cm:coord:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $92.8\%$ & $0\%$ & $49.87\%$ & $33.333\%$ \\ \hline
+		Spec & $99.9478\%$ & $50.48\%$ & $99.7884\%$ & $92.82\%$ & $99.368\%$ \\ \hline
+		PPV & $0\%$ & $87.05\%$ & $0\%$ & $62.5\%$ & $33.333\%$ \\ \hline
+		NPV & $99.8956\%$ & $66.14\%$ & $98.5886\%$ & $88.53\%$ & $99.368\%$ \\ \hline
+		DR & $0\%$ & $72.56\%$ & $0\%$ & $9.65\%$ & $0.313\%$ \\ \hline
+		DP & $0.0522\%$ & $83.36\%$ & $0.2087\%$ & $15.44\%$ & $0.939\%$ \\ \hline
+		BA & $49.9739\%$ & $71.64\%$ & $49.8942\%$ & $71.34\%$ & $66.351\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the FDA model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:cs:reverse:coord:fda}
+\end{table}

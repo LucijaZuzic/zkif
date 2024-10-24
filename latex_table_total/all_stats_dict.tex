@@ -1,0 +1,104 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Metric & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		Acc & $0.7866$ & $0.9995$ & $0.9953$ & $1$ & $0.9212$ & $0.9025$ & $0.9963$ \\ \hline
+		$95\%$ CI & $(0.7676, 0.8048)$ & $(0.9971, 1)$ & $(0.9911, 0.9979)$ & $(0.9981, 1)$ & $(0.9083, 0.9329)$ & $(0.8883, 0.9154)$ & $(0.9925, 0.9985)$ \\ \hline
+		NIR & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ \\ \hline
+		$p$-value & $0.3206$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ \\ \hline
+		Kappa & $0.3163$ & $0.9985$ & $0.9867$ & $1$ & $0.7432$ & $0.7253$ & $0.9896$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables as input.}
+	\label{tab:stats:all}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Metric & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		Acc & $0.7454$ & $0.8529$ & $0.9943$ & $1$ & $0.8258$ & $0.8472$ & $0.8492$ \\ \hline
+		$95\%$ CI & $(0.7253, 0.7648)$ & $(0.8362, 0.8685)$ & $(0.9898, 0.9971)$ & $(0.9981, 1)$ & $(0.808, 0.8425)$ & $(0.8303, 0.863)$ & $(0.8324, 0.865)$ \\ \hline
+		NIR & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ \\ \hline
+		$p$-value & $0.9999$ & $2.288e-15$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $1.089e-06$ & $3.733e-13$ & $6.194e-14$ \\ \hline
+		Kappa & $0.105$ & $0.5661$ & $0.9838$ & $1$ & $0.3508$ & $0.5159$ & $0.5266$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables except Dst as input.}
+	\label{tab:stats:noDst}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Metric & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		Acc & $0.7903$ & $0.8581$ & $1$ & $1$ & $0.8232$ & $0.8472$ & $0.8492$ \\ \hline
+		$95\%$ CI & $(0.7714, 0.8083)$ & $(0.8417, 0.8734)$ & $(0.9981, 1)$ & $(0.9981, 1)$ & $(0.8053, 0.84)$ & $(0.8303, 0.863)$ & $(0.8324, 0.865)$ \\ \hline
+		NIR & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ \\ \hline
+		$p$-value & $0.196$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $4.402e-06$ & $3.733e-13$ & $6.194e-14$ \\ \hline
+		Kappa & $0.1353$ & $0.5601$ & $1$ & $1$ & $0.3312$ & $0.5208$ & $0.5347$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:stats:noTEC}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Metric & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		Acc & $0.7887$ & $0.8404$ & $1$ & $1$ & $0.8174$ & $0.8252$ & $0.8399$ \\ \hline
+		$95\%$ CI & $(0.7698, 0.8068)$ & $(0.8232, 0.8565)$ & $(0.9981, 1)$ & $(0.9981, 1)$ & $(0.7994, 0.8345)$ & $(0.8075, 0.842)$ & $(0.8227, 0.856)$ \\ \hline
+		NIR & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ \\ \hline
+		$p$-value & $0.2455$ & $8.299e-11$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $7.036e-05$ & $1.45e-06$ & $1.224e-10$ \\ \hline
+		Kappa & $0.1003$ & $0.4651$ & $1$ & $1$ & $0.266$ & $0.4508$ & $0.4841$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
+	\label{tab:stats:coord}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Metric & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		Acc & $0.7934$ & $0.8508$ & $1$ & $1$ & $0.8153$ & $0.8419$ & $0.8456$ \\ \hline
+		$95\%$ CI & $(0.7746, 0.8114)$ & $(0.8341, 0.8665)$ & $(0.9981, 1)$ & $(0.9981, 1)$ & $(0.7972, 0.8325)$ & $(0.8248, 0.858)$ & $(0.8286, 0.8615)$ \\ \hline
+		NIR & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ \\ \hline
+		$p$-value & $0.1167$ & $1.544e-14$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $0.0001743$ & $2.527e-11$ & $1.378e-12$ \\ \hline
+		Kappa & $0.1353$ & $0.5279$ & $1$ & $1$ & $0.2841$ & $0.5145$ & $0.5099$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:stats:xyap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Metric & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		Acc & $0.7903$ & $0.8367$ & $1$ & $1$ & $0.8143$ & $0.8258$ & $0.8367$ \\ \hline
+		$95\%$ CI & $(0.7714, 0.8083)$ & $(0.8194, 0.853)$ & $(0.9981, 1)$ & $(0.9981, 1)$ & $(0.7961, 0.8315)$ & $(0.808, 0.8425)$ & $(0.8194, 0.853)$ \\ \hline
+		NIR & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ \\ \hline
+		$p$-value & $0.196$ & $1.164e-09$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $0.0002689$ & $1.089e-06$ & $1.164e-09$ \\ \hline
+		Kappa & $0.1083$ & $0.4802$ & $1$ & $1$ & $0.267$ & $0.4333$ & $0.4965$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:stats:xzap}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Metric & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		Acc & $0.7814$ & $0.8211$ & $0.9995$ & $1$ & $0.8007$ & $0.7997$ & $0.8185$ \\ \hline
+		$95\%$ CI & $(0.7622, 0.7997)$ & $(0.8032, 0.838)$ & $(0.9971, 1)$ & $(0.9981, 1)$ & $(0.7821, 0.8184)$ & $(0.7811, 0.8174)$ & $(0.8005, 0.8355)$ \\ \hline
+		NIR & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ \\ \hline
+		$p$-value & $0.5351$ & $1.265e-05$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $0.0239$ & $0.03101$ & $4.382e-05$ \\ \hline
+		Kappa & $0.006$ & $0.4005$ & $0.9985$ & $1$ & $0.1929$ & $0.2725$ & $0.3718$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:stats:yzap}
+\end{table}

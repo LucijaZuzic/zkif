@@ -1,0 +1,16 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
+		svmPoly & $0.7866$ & $(0.7676, 0.8048)$ & $0.782$ & $0.3206$ & $0.3163$ \\ \hline
+		C5.0 & $0.9995$ & $(0.9971, 1)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $0.9985$ \\ \hline
+		nb & $0.9953$ & $(0.9911, 0.9979)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $0.9867$ \\ \hline
+		nnet & $1$ & $(0.9981, 1)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
+		pls & $0.9212$ & $(0.9083, 0.9329)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $0.7432$ \\ \hline
+		fda & $0.9025$ & $(0.8883, 0.9154)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $0.7253$ \\ \hline
+		pcaNNet & $0.9963$ & $(0.9925, 0.9985)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $0.9896$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables as input.}
+	\label{tab:stats:reverse:all}
+\end{table}

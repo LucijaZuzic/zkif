@@ -1,0 +1,31 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $1$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $0$ & $1406$ & $26$ & $160$ & $1$ \\ \hline
+		 P & $0$ & $1$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $90$ & $1$ & $210$ & $8$ \\ \hline
+		 T & $2$ & $1$ & $0$ & $1$ & $8$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the FDA model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$0\%$ & $99.8956\%$ & $0\%$ & $99.8956\%$ & $0\%$ & $0.1043\%$ & $49.9478\%$ \\ \hline
+		$93.8\%$ & $55.26\%$ & $88.26\%$ & $71.3\%$ & $73.34\%$ & $83.1\%$ & $74.53\%$ \\ \hline
+		$0\%$ & $99.9471\%$ & $0\%$ & $98.5908\%$ & $0\%$ & $0.0522\%$ & $49.9735\%$ \\ \hline
+		$56.6\%$ & $93.6\%$ & $67.96\%$ & $89.99\%$ & $10.95\%$ & $16.12\%$ & $75.1\%$ \\ \hline
+		$44.4444\%$ & $99.7894\%$ & $66.6667\%$ & $99.4751\%$ & $0.4173\%$ & $0.626\%$ & $72.1169\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the FDA model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cs:noTEC:fda}
+\end{table}

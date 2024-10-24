@@ -1,0 +1,49 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $0$ & $1411$ & $13$ & $69$ & $0$ \\ \hline
+		 P & $0$ & $36$ & $14$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $51$ & $0$ & $294$ & $6$ \\ \hline
+		 T & $2$ & $1$ & $0$ & $8$ & $11$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the FDA model when using all variables as input.}
+	\label{tab:cm:all:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$0\%$ & $99.9478\%$ & $0\%$ & $99.8956\%$ & $0\%$ & $0.0522\%$ & $49.9739\%$ \\ \hline
+		$94.13\%$ & $80.38\%$ & $94.51\%$ & $79.25\%$ & $73.6\%$ & $77.88\%$ & $87.26\%$ \\ \hline
+		$51.8519\%$ & $98.0952\%$ & $28\%$ & $99.3037\%$ & $0.7303\%$ & $2.6082\%$ & $74.9735\%$ \\ \hline
+		$79.25\%$ & $96.31\%$ & $83.76\%$ & $95.08\%$ & $15.34\%$ & $18.31\%$ & $87.78\%$ \\ \hline
+		$61.1111\%$ & $99.4207\%$ & $50\%$ & $99.6306\%$ & $0.5738\%$ & $1.1476\%$ & $80.2659\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the FDA model when using all variables as input.}
+	\label{tab:cs:all:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $94.13\%$ & $51.8519\%$ & $79.25\%$ & $61.1111\%$ \\ \hline
+		Spec & $99.9478\%$ & $80.38\%$ & $98.0952\%$ & $96.31\%$ & $99.4207\%$ \\ \hline
+		PPV & $0\%$ & $94.51\%$ & $28\%$ & $83.76\%$ & $50\%$ \\ \hline
+		NPV & $99.8956\%$ & $79.25\%$ & $99.3037\%$ & $95.08\%$ & $99.6306\%$ \\ \hline
+		DR & $0\%$ & $73.6\%$ & $0.7303\%$ & $15.34\%$ & $0.5738\%$ \\ \hline
+		DP & $0.0522\%$ & $77.88\%$ & $2.6082\%$ & $18.31\%$ & $1.1476\%$ \\ \hline
+		BA & $49.9739\%$ & $87.26\%$ & $74.9735\%$ & $87.78\%$ & $80.2659\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the FDA model when using all variables as input.}
+	\label{tab:cs:reverse:all:fda}
+\end{table}

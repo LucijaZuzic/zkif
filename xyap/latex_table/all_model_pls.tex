@@ -1,0 +1,49 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1474$ & $26$ & $282$ & $5$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $2$ & $25$ & $1$ & $89$ & $13$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PLS model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cm:xyap:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$0\%$ & $100\%$ & NaN & $99.8957\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$98.33\%$ & $25.12\%$ & $82.48\%$ & $80.77\%$ & $76.89\%$ & $93.22\%$ & $61.73\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $98.592\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$23.989\%$ & $97.348\%$ & $68.462\%$ & $84.219\%$ & $4.643\%$ & $6.781\%$ & $60.669\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $99.061\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:xyap:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $98.33\%$ & $0\%$ & $23.989\%$ & $0\%$ \\ \hline
+		Spec & $100\%$ & $25.12\%$ & $100\%$ & $97.348\%$ & $100\%$ \\ \hline
+		PPV & NaN & $82.48\%$ & NaN & $68.462\%$ & NaN \\ \hline
+		NPV & $99.8957\%$ & $80.77\%$ & $98.592\%$ & $84.219\%$ & $99.061\%$ \\ \hline
+		DR & $0\%$ & $76.89\%$ & $0\%$ & $4.643\%$ & $0\%$ \\ \hline
+		DP & $0\%$ & $93.22\%$ & $0\%$ & $6.781\%$ & $0\%$ \\ \hline
+		BA & $50\%$ & $61.73\%$ & $50\%$ & $60.669\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PLS model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
+	\label{tab:cs:reverse:xyap:pls}
+\end{table}

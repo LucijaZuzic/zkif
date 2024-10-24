@@ -1,0 +1,16 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
+		svmPoly & $0.7903$ & $(0.7714, 0.8083)$ & $0.782$ & $0.196$ & $0.1083$ \\ \hline
+		C5.0 & $0.8367$ & $(0.8194, 0.853)$ & $0.782$ & $1.164e-09$ & $0.4802$ \\ \hline
+		nb & $1$ & $(0.9981, 1)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
+		nnet & $1$ & $(0.9981, 1)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
+		pls & $0.8143$ & $(0.7961, 0.8315)$ & $0.782$ & $0.0002689$ & $0.267$ \\ \hline
+		fda & $0.8258$ & $(0.808, 0.8425)$ & $0.782$ & $1.089e-06$ & $0.4333$ \\ \hline
+		pcaNNet & $0.8367$ & $(0.8194, 0.853)$ & $0.782$ & $1.164e-09$ & $0.4965$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
+	\label{tab:stats:reverse:xzap}
+\end{table}

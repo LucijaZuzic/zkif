@@ -1,0 +1,432 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $1$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $0$ & $1491$ & $27$ & $328$ & $6$ \\ \hline
+		 P & $0$ & $4$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $1$ & $0$ & $15$ & $2$ \\ \hline
+		 T & $2$ & $2$ & $0$ & $28$ & $9$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $99.47\%$ & $0\%$ & $4.0431\%$ & $50\%$ \\ \hline
+		Spec & $99.8956\%$ & $13.64\%$ & $99.7884\%$ & $99.806\%$ & $98.3149\%$ \\ \hline
+		PPV & $0\%$ & $80.51\%$ & $0\%$ & $83.3333\%$ & $21.9512\%$ \\ \hline
+		NPV & $99.8956\%$ & $87.69\%$ & $98.5886\%$ & $81.2533\%$ & $99.5203\%$ \\ \hline
+		DR & $0\%$ & $77.78\%$ & $0\%$ & $0.7825\%$ & $0.4695\%$ \\ \hline
+		DP & $0.1043\%$ & $96.61\%$ & $0.2087\%$ & $0.939\%$ & $2.1388\%$ \\ \hline
+		BA & $49.9478\%$ & $56.55\%$ & $49.8942\%$ & $51.9245\%$ & $74.1575\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the polynomial SVM model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cs:reverse:noTEC:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1410$ & $26$ & $141$ & $3$ \\ \hline
+		 P & $0$ & $2$ & $1$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $87$ & $0$ & $229$ & $10$ \\ \hline
+		 T & $2$ & $0$ & $0$ & $1$ & $5$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the decision tree model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $94.06\%$ & $3.7037\%$ & $61.73\%$ & $27.7778\%$ \\ \hline
+		Spec & $100\%$ & $59.33\%$ & $99.8942\%$ & $93.73\%$ & $99.842\%$ \\ \hline
+		PPV & NaN & $89.24\%$ & $33.3333\%$ & $70.25\%$ & $62.5\%$ \\ \hline
+		NPV & $99.8957\%$ & $73.59\%$ & $98.6416\%$ & $91.07\%$ & $99.319\%$ \\ \hline
+		DR & $0\%$ & $73.55\%$ & $0.0522\%$ & $11.95\%$ & $0.2608\%$ \\ \hline
+		DP & $0\%$ & $82.42\%$ & $0.1565\%$ & $17.01\%$ & $0.4173\%$ \\ \hline
+		BA & $50\%$ & $76.7\%$ & $51.7989\%$ & $77.73\%$ & $63.8099\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the decision tree model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cs:reverse:noTEC:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $2$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1499$ & $0$ & $0$ & $0$ \\ \hline
+		 P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $0$ & $0$ & $371$ & $0$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $18$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the naive Bayes model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		Spec & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		PPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		NPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		DR & $0.1043\%$ & $78.2\%$ & $1.408\%$ & $19.35\%$ & $0.939\%$ \\ \hline
+		DP & $0.1043\%$ & $78.2\%$ & $1.408\%$ & $19.35\%$ & $0.939\%$ \\ \hline
+		BA & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the naive Bayes model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cs:reverse:noTEC:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $2$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1499$ & $0$ & $0$ & $0$ \\ \hline
+		 P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $0$ & $0$ & $371$ & $0$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $18$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		Spec & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		PPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		NPV & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		DR & $0.1043\%$ & $78.2\%$ & $1.408\%$ & $19.35\%$ & $0.939\%$ \\ \hline
+		DP & $0.1043\%$ & $78.2\%$ & $1.408\%$ & $19.35\%$ & $0.939\%$ \\ \hline
+		BA & $100\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cs:reverse:noTEC:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1471$ & $26$ & $264$ & $5$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $2$ & $28$ & $1$ & $107$ & $13$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PLS model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $98.13\%$ & $0\%$ & $28.841\%$ & $0\%$ \\ \hline
+		Spec & $100\%$ & $29.43\%$ & $100\%$ & $97.154\%$ & $100\%$ \\ \hline
+		PPV & NaN & $83.3\%$ & NaN & $70.861\%$ & NaN \\ \hline
+		NPV & $99.8957\%$ & $81.46\%$ & $98.592\%$ & $85.051\%$ & $99.061\%$ \\ \hline
+		DR & $0\%$ & $76.73\%$ & $0\%$ & $5.582\%$ & $0\%$ \\ \hline
+		DP & $0\%$ & $92.12\%$ & $0\%$ & $7.877\%$ & $0\%$ \\ \hline
+		BA & $50\%$ & $63.78\%$ & $50\%$ & $62.997\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PLS model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cs:reverse:noTEC:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $1$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $0$ & $1406$ & $26$ & $160$ & $1$ \\ \hline
+		 P & $0$ & $1$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $90$ & $1$ & $210$ & $8$ \\ \hline
+		 T & $2$ & $1$ & $0$ & $1$ & $8$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the FDA model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $93.8\%$ & $0\%$ & $56.6\%$ & $44.4444\%$ \\ \hline
+		Spec & $99.8956\%$ & $55.26\%$ & $99.9471\%$ & $93.6\%$ & $99.7894\%$ \\ \hline
+		PPV & $0\%$ & $88.26\%$ & $0\%$ & $67.96\%$ & $66.6667\%$ \\ \hline
+		NPV & $99.8956\%$ & $71.3\%$ & $98.5908\%$ & $89.99\%$ & $99.4751\%$ \\ \hline
+		DR & $0\%$ & $73.34\%$ & $0\%$ & $10.95\%$ & $0.4173\%$ \\ \hline
+		DP & $0.1043\%$ & $83.1\%$ & $0.0522\%$ & $16.12\%$ & $0.626\%$ \\ \hline
+		BA & $49.9478\%$ & $74.53\%$ & $49.9735\%$ & $75.1\%$ & $72.1169\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the FDA model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cs:reverse:noTEC:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1399$ & $27$ & $146$ & $2$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $99$ & $0$ & $225$ & $12$ \\ \hline
+		 T & $2$ & $1$ & $0$ & $0$ & $4$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PCA neural network model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{c|}{Class} \\ \hline
+		Statistics & E & N & P & R & T \\ \hline
+		Sen & $0\%$ & $93.33\%$ & $0\%$ & $60.65\%$ & $22.2222\%$ \\ \hline
+		Spec & $100\%$ & $58.13\%$ & $100\%$ & $92.82\%$ & $99.842\%$ \\ \hline
+		PPV & NaN & $88.88\%$ & NaN & $66.96\%$ & $57.1429\%$ \\ \hline
+		NPV & $99.8957\%$ & $70.85\%$ & $98.592\%$ & $90.77\%$ & $99.267\%$ \\ \hline
+		DR & $0\%$ & $72.98\%$ & $0\%$ & $11.74\%$ & $0.2087\%$ \\ \hline
+		DP & $0\%$ & $82.11\%$ & $0\%$ & $17.53\%$ & $0.3652\%$ \\ \hline
+		BA & $50\%$ & $75.73\%$ & $50\%$ & $76.73\%$ & $61.0321\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cs:reverse:noTEC:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $391.08$ \\ \hline
+		C5.0 & $465.45$ \\ \hline
+		nb & $162.32$ \\ \hline
+		nnet & $618.67$ \\ \hline
+		pls & $53.00$ \\ \hline
+		fda & $141.32$ \\ \hline
+		pcaNNet & $468.00$ \\ \hline
+	\end{tabular}
+	\caption{The train time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:time:noTEC:train}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $391.08$ & $465.45$ & $162.32$ & $618.67$ & $53.00$ & $141.32$ & $468.00$ \\ \hline
+	\end{tabular}
+	\caption{The train time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:time:reverse:noTEC:train}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $0.42$ \\ \hline
+		C5.0 & $0.07$ \\ \hline
+		nb & $1.16$ \\ \hline
+		nnet & $0.02$ \\ \hline
+		pls & $0.33$ \\ \hline
+		fda & $0.01$ \\ \hline
+		pcaNNet & $0.03$ \\ \hline
+	\end{tabular}
+	\caption{The prediction time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:time:noTEC:predict}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $0.42$ & $0.07$ & $1.16$ & $0.02$ & $0.33$ & $0.01$ & $0.03$ \\ \hline
+	\end{tabular}
+	\caption{The prediction time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:time:reverse:noTEC:predict}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & NA \\ \hline
+		C5.0 & $0.02$ \\ \hline
+		nb & NA \\ \hline
+		nnet & NA \\ \hline
+		pls & $0.01$ \\ \hline
+		fda & $0.01$ \\ \hline
+		pcaNNet & NA \\ \hline
+	\end{tabular}
+	\caption{The variable importance calculation time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:time:noTEC:importance}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & NA & $0.02$ & NA & NA & $0.01$ & $0.01$ & NA \\ \hline
+	\end{tabular}
+	\caption{The variable importance calculation time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:time:reverse:noTEC:importance}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Model & elapsed \\ \hline
+		svmPoly & $392.05$ \\ \hline
+		C5.0 & $466.42$ \\ \hline
+		nb & $164.03$ \\ \hline
+		nnet & $619.30$ \\ \hline
+		pls & $54.26$ \\ \hline
+		fda & $142.19$ \\ \hline
+		pcaNNet & $468.73$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:time:noTEC:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed & $392.05$ & $466.42$ & $164.03$ & $619.30$ & $54.26$ & $142.19$ & $468.73$ \\ \hline
+	\end{tabular}
+	\caption{The execution time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:time:reverse:noTEC:total}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Model & elapsed_train & elapsed_predict & elapsed_importance & elapsed_total \\ \hline
+		svmPoly & $391.08$ & $0.42$ & NA & $392.05$ \\ \hline
+		C5.0 & $465.45$ & $0.07$ & $0.02$ & $466.42$ \\ \hline
+		nb & $162.32$ & $1.16$ & NA & $164.03$ \\ \hline
+		nnet & $618.67$ & $0.02$ & NA & $619.30$ \\ \hline
+		pls & $53.00$ & $0.33$ & $0.01$ & $54.26$ \\ \hline
+		fda & $141.32$ & $0.01$ & $0.01$ & $142.19$ \\ \hline
+		pcaNNet & $468.00$ & $0.03$ & NA & $468.73$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:time:noTEC}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		elapsed_train & $391.08$ & $465.45$ & $162.32$ & $618.67$ & $53.00$ & $141.32$ & $468.00$ \\ \hline
+		elapsed_predict & $0.42$ & $0.07$ & $1.16$ & $0.02$ & $0.33$ & $0.01$ & $0.03$ \\ \hline
+		elapsed_importance & NA & $0.02$ & NA & NA & $0.01$ & $0.01$ & NA \\ \hline
+		elapsed_total & $392.05$ & $466.42$ & $164.03$ & $619.30$ & $54.26$ & $142.19$ & $468.73$ \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:time:reverse:noTEC}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		Metric & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
+		Acc & $0.7903$ & $0.8581$ & $1$ & $1$ & $0.8232$ & $0.8472$ & $0.8492$ \\ \hline
+		$95\%$ CI & $(0.7714, 0.8083)$ & $(0.8417, 0.8734)$ & $(0.9981, 1)$ & $(0.9981, 1)$ & $(0.8053, 0.84)$ & $(0.8303, 0.863)$ & $(0.8324, 0.865)$ \\ \hline
+		NIR & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ & $0.782$ \\ \hline
+		$p$-value & $0.196$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $< 2.2 \times {10}^{-16}$ & $4.402e-06$ & $3.733e-13$ & $6.194e-14$ \\ \hline
+		Kappa & $0.1353$ & $0.5601$ & $1$ & $1$ & $0.3312$ & $0.5208$ & $0.5347$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:stats:noTEC}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
+		svmPoly & $0.7903$ & $(0.7714, 0.8083)$ & $0.782$ & $0.196$ & $0.1353$ \\ \hline
+		C5.0 & $0.8581$ & $(0.8417, 0.8734)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $0.5601$ \\ \hline
+		nb & $1$ & $(0.9981, 1)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
+		nnet & $1$ & $(0.9981, 1)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
+		pls & $0.8232$ & $(0.8053, 0.84)$ & $0.782$ & $4.402e-06$ & $0.3312$ \\ \hline
+		fda & $0.8472$ & $(0.8303, 0.863)$ & $0.782$ & $3.733e-13$ & $0.5208$ \\ \hline
+		pcaNNet & $0.8492$ & $(0.8324, 0.865)$ & $0.782$ & $6.194e-14$ & $0.5347$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:stats:reverse:noTEC}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|}
+		\hline
+		Models \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:time:ansamble:noTEC}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|}
+		\hline
+		Models \\ \hline
+	\end{tabular}
+	\caption{The time taken for all algorithm stages in seconds for an ansamble of different numbers of models when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:time:ansamble:reverse:noTEC}
+\end{table}

@@ -1,0 +1,16 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
+		svmPoly & $0.7454$ & $(0.7253, 0.7648)$ & $0.782$ & $0.9999$ & $0.105$ \\ \hline
+		C5.0 & $0.8529$ & $(0.8362, 0.8685)$ & $0.782$ & $2.288e-15$ & $0.5661$ \\ \hline
+		nb & $0.9943$ & $(0.9898, 0.9971)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $0.9838$ \\ \hline
+		nnet & $1$ & $(0.9981, 1)$ & $0.782$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
+		pls & $0.8258$ & $(0.808, 0.8425)$ & $0.782$ & $1.089e-06$ & $0.3508$ \\ \hline
+		fda & $0.8472$ & $(0.8303, 0.863)$ & $0.782$ & $3.733e-13$ & $0.5159$ \\ \hline
+		pcaNNet & $0.8492$ & $(0.8324, 0.865)$ & $0.782$ & $6.194e-14$ & $0.5266$ \\ \hline
+	\end{tabular}
+	\caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables except Dst as input.}
+	\label{tab:stats:reverse:noDst}
+\end{table}

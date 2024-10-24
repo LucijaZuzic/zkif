@@ -1,0 +1,223 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $0$ & $1395$ & $14$ & $334$ & $5$ \\ \hline
+		 P & $0$ & $100$ & $13$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $2$ & $0$ & $11$ & $2$ \\ \hline
+		 T & $2$ & $2$ & $0$ & $26$ & $10$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the polynomial SVM model when using all variables except Dst as input.}
+	\label{tab:cm:noDst:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$0\%$ & $99.9478\%$ & $0\%$ & $99.8956\%$ & $0\%$ & $0.0522\%$ & $49.9739\%$ \\ \hline
+		$93.06\%$ & $15.55\%$ & $79.81\%$ & $38.46\%$ & $72.77\%$ & $91.18\%$ & $54.31\%$ \\ \hline
+		$48.1481\%$ & $94.709\%$ & $11.5044\%$ & $99.2239\%$ & $0.6781\%$ & $5.8946\%$ & $71.4286\%$ \\ \hline
+		$2.965\%$ & $99.7413\%$ & $73.3333\%$ & $81.0726\%$ & $0.5738\%$ & $0.7825\%$ & $51.3531\%$ \\ \hline
+		$55.5556\%$ & $98.4202\%$ & $25\%$ & $99.5738\%$ & $0.5216\%$ & $2.0866\%$ & $76.9879\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the polynomial SVM model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:svmPoly}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $0$ & $1380$ & $24$ & $123$ & $2$ \\ \hline
+		 P & $0$ & $6$ & $3$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $113$ & $0$ & $246$ & $9$ \\ \hline
+		 T & $2$ & $0$ & $0$ & $2$ & $6$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the decision tree model when using all variables except Dst as input.}
+	\label{tab:cm:noDst:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$0\%$ & $99.9478\%$ & $0\%$ & $99.8956\%$ & $0\%$ & $0.0522\%$ & $49.9739\%$ \\ \hline
+		$92.06\%$ & $64.35\%$ & $90.26\%$ & $69.33\%$ & $71.99\%$ & $79.76\%$ & $78.21\%$ \\ \hline
+		$11.1111\%$ & $99.6825\%$ & $33.3333\%$ & $98.7421\%$ & $0.1565\%$ & $0.4695\%$ & $55.3968\%$ \\ \hline
+		$66.31\%$ & $92.11\%$ & $66.85\%$ & $91.93\%$ & $12.83\%$ & $19.2\%$ & $79.21\%$ \\ \hline
+		$33.3333\%$ & $99.7894\%$ & $60\%$ & $99.3707\%$ & $0.313\%$ & $0.5216\%$ & $66.5613\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the decision tree model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:C5.0}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $2$ & $1$ & $0$ & $1$ & $0$ \\ \hline
+		 N & $0$ & $1492$ & $0$ & $1$ & $0$ \\ \hline
+		 P & $0$ & $4$ & $27$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $2$ & $0$ & $368$ & $1$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $1$ & $17$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the naive Bayes model when using all variables except Dst as input.}
+	\label{tab:cm:noDst:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$100\%$ & $99.8956\%$ & $50\%$ & $100\%$ & $0.1043\%$ & $0.2087\%$ & $99.9478\%$ \\ \hline
+		$99.53\%$ & $99.76\%$ & $99.93\%$ & $98.35\%$ & $77.83\%$ & $77.88\%$ & $99.65\%$ \\ \hline
+		$100\%$ & $99.788\%$ & $87.097\%$ & $100\%$ & $1.408\%$ & $1.617\%$ & $99.894\%$ \\ \hline
+		$99.19\%$ & $99.81\%$ & $99.19\%$ & $99.81\%$ & $19.2\%$ & $19.35\%$ & $99.5\%$ \\ \hline
+		$94.4444\%$ & $99.9473\%$ & $94.4444\%$ & $99.9473\%$ & $0.8868\%$ & $0.939\%$ & $97.1959\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the naive Bayes model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:nb}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $2$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1499$ & $0$ & $0$ & $0$ \\ \hline
+		 P & $0$ & $0$ & $27$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $0$ & $0$ & $371$ & $0$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $18$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the neural network model when using all variables except Dst as input.}
+	\label{tab:cm:noDst:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.1043\%$ & $0.1043\%$ & $100\%$ \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $78.2\%$ & $78.2\%$ & $100\%$ \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $1.408\%$ & $1.408\%$ & $100\%$ \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $19.35\%$ & $19.35\%$ & $100\%$ \\ \hline
+		$100\%$ & $100\%$ & $100\%$ & $100\%$ & $0.939\%$ & $0.939\%$ & $100\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the neural network model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:nnet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1467$ & $26$ & $255$ & $5$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $2$ & $32$ & $1$ & $116$ & $13$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PLS model when using all variables except Dst as input.}
+	\label{tab:cm:noDst:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$0\%$ & $100\%$ & NaN & $99.8957\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$97.87\%$ & $31.58\%$ & $83.69\%$ & $80.49\%$ & $76.53\%$ & $91.44\%$ & $64.72\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $98.592\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$31.267\%$ & $96.895\%$ & $70.732\%$ & $85.454\%$ & $6.051\%$ & $8.555\%$ & $64.081\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $99.061\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PLS model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:pls}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $1$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $0$ & $1414$ & $26$ & $164$ & $1$ \\ \hline
+		 P & $0$ & $3$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $81$ & $1$ & $202$ & $8$ \\ \hline
+		 T & $2$ & $0$ & $0$ & $5$ & $8$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the FDA model when using all variables except Dst as input.}
+	\label{tab:cm:noDst:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$0\%$ & $99.8956\%$ & $0\%$ & $99.8956\%$ & $0\%$ & $0.1043\%$ & $49.9478\%$ \\ \hline
+		$94.33\%$ & $54.31\%$ & $88.1\%$ & $72.76\%$ & $73.76\%$ & $83.72\%$ & $74.32\%$ \\ \hline
+		$0\%$ & $99.8413\%$ & $0\%$ & $98.5893\%$ & $0\%$ & $0.1565\%$ & $49.9206\%$ \\ \hline
+		$54.45\%$ & $94.18\%$ & $69.18\%$ & $89.6\%$ & $10.54\%$ & $15.23\%$ & $74.31\%$ \\ \hline
+		$44.4444\%$ & $99.6314\%$ & $53.3333\%$ & $99.4742\%$ & $0.4173\%$ & $0.7825\%$ & $72.0379\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the FDA model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:fda}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1409$ & $27$ & $152$ & $2$ \\ \hline
+		 P & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $2$ & $90$ & $0$ & $219$ & $16$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the PCA neural network model when using all variables except Dst as input.}
+	\label{tab:cm:noDst:pcaNNet}
+\end{table}
+
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{7}{c|}{Statistics} \\ \hline
+		Sen & Spec & PPV & NPV & DR & DP & BA \\ \hline
+		$0\%$ & $100\%$ & NaN & $99.8957\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$94\%$ & $56.7\%$ & $88.62\%$ & $72.48\%$ & $73.5\%$ & $82.94\%$ & $75.35\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $98.592\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+		$59.03\%$ & $93.01\%$ & $66.97\%$ & $90.44\%$ & $11.42\%$ & $17.06\%$ & $76.02\%$ \\ \hline
+		$0\%$ & $100\%$ & NaN & $99.061\%$ & $0\%$ & $0\%$ & $50\%$ \\ \hline
+	\end{tabular}
+	\caption{The performance indicators derived from the confusion matrix for the PCA neural network model when using all variables except Dst as input.}
+	\label{tab:cs:noDst:pcaNNet}
+\end{table}

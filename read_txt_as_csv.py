@@ -74,8 +74,8 @@ translate_data = {"all": "all variables",
                    "xzap": "only $B_{x}$, $B_{z}$, and $a_{p}$",
                    "yzap": "only $B_{y}$, $B_{z}$, and $a_{p}$"
                    }
-ansamble_list = [4, 7]
-ansamble_print = [4, 7]
+ansamble_list = []
+ansamble_print = []
 all_model_total_dict = dict()
 reference_total_dict = dict()
 stats_total_dict = dict()
@@ -272,7 +272,7 @@ for wd in wd_list:
                 while "  " in cs[line_ix]:
                     cs[line_ix] = cs[line_ix].replace("  ", " ")
                 cs[line_ix] = cs[line_ix].replace("Class: ", "")
-                cs[line_ix] = cs[line_ix].replace("NaN", "100000")
+                cs[line_ix] = cs[line_ix].replace("NA", "100000").replace("NaN", "100000")
                 if line_ix > 0:
                     uppers = []
                     for val_ix in range(len(cs[line_ix])):

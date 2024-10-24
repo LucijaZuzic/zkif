@@ -1,0 +1,15 @@
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		 & \multicolumn{5}{|c|}{Reference} \\ \hline
+		 Prediction & E & N & P & R & T \\ \hline
+		 E & $0$ & $1$ & $0$ & $0$ & $1$ \\ \hline
+		 N & $0$ & $1406$ & $26$ & $160$ & $1$ \\ \hline
+		 P & $0$ & $1$ & $0$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $90$ & $1$ & $210$ & $8$ \\ \hline
+		 T & $2$ & $1$ & $0$ & $1$ & $8$ \\ \hline
+	\end{tabular}
+	\caption{The confusion matrix for the FDA model when using all variables except Dst, TEC, and dTEC as input.}
+	\label{tab:cm:noTEC:fda}
+\end{table}
