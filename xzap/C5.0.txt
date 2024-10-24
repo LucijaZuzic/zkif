@@ -1,0 +1,52 @@
+[1] "xzap"
+[1] "C5.0"
+[1] "Train time"
+   user  system elapsed 
+ 317.95    1.19  329.88 
+Confusion Matrix and Statistics
+
+          Reference
+Prediction    E    N    P    R    T
+         E    0    0    0    0    0
+         N    0 1405   26  172    1
+         P    0    0    0    0    0
+         R    2   94    1  199   17
+         T    0    0    0    0    0
+
+Overall Statistics
+                                         
+               Accuracy : 0.8367         
+                 95% CI : (0.8194, 0.853)
+    No Information Rate : 0.782          
+    P-Value [Acc > NIR] : 1.164e-09      
+                                         
+                  Kappa : 0.4802         
+                                         
+ Mcnemar's Test P-Value : NA             
+
+Statistics by Class:
+
+                     Class: E Class: N Class: P Class: R Class: T
+Sensitivity          0.000000   0.9373  0.00000   0.5364  0.00000
+Specificity          1.000000   0.5239  1.00000   0.9263  1.00000
+Pos Pred Value            NaN   0.8759      NaN   0.6358      NaN
+Neg Pred Value       0.998957   0.6997  0.98592   0.8928  0.99061
+Prevalence           0.001043   0.7820  0.01408   0.1935  0.00939
+Detection Rate       0.000000   0.7329  0.00000   0.1038  0.00000
+Detection Prevalence 0.000000   0.8367  0.00000   0.1633  0.00000
+Balanced Accuracy    0.500000   0.7306  0.50000   0.7313  0.50000
+[1] "Predict time"
+   user  system elapsed 
+   0.06    0.00    0.06 
+C5.0 variable importance
+
+   Overall
+Bx  100.00
+ap  100.00
+Bz   99.45
+[1] "Importance time"
+   user  system elapsed 
+   0.01    0.00    0.00 
+[1] "Total time"
+   user  system elapsed 
+ 318.87    1.19  330.81 

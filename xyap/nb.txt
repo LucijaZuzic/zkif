@@ -1,0 +1,43 @@
+[1] "xyap"
+[1] "nb"
+[1] "Train time"
+   user  system elapsed 
+ 124.00    2.15  142.45 
+Confusion Matrix and Statistics
+
+          Reference
+Prediction    E    N    P    R    T
+         E    2    0    0    0    0
+         N    0 1499    0    0    0
+         P    0    0   27    0    0
+         R    0    0    0  371    0
+         T    0    0    0    0   18
+
+Overall Statistics
+                                     
+               Accuracy : 1          
+                 95% CI : (0.9981, 1)
+    No Information Rate : 0.782      
+    P-Value [Acc > NIR] : < 2.2e-16  
+                                     
+                  Kappa : 1          
+                                     
+ Mcnemar's Test P-Value : NA         
+
+Statistics by Class:
+
+                     Class: E Class: N Class: P Class: R Class: T
+Sensitivity          1.000000    1.000  1.00000   1.0000  1.00000
+Specificity          1.000000    1.000  1.00000   1.0000  1.00000
+Pos Pred Value       1.000000    1.000  1.00000   1.0000  1.00000
+Neg Pred Value       1.000000    1.000  1.00000   1.0000  1.00000
+Prevalence           0.001043    0.782  0.01408   0.1935  0.00939
+Detection Rate       0.001043    0.782  0.01408   0.1935  0.00939
+Detection Prevalence 0.001043    0.782  0.01408   0.1935  0.00939
+Balanced Accuracy    1.000000    1.000  1.00000   1.0000  1.00000
+[1] "Predict time"
+   user  system elapsed 
+   0.79    0.02    0.94 
+[1] "Total time"
+   user  system elapsed 
+ 125.38    2.17  143.97 

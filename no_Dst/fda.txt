@@ -1,0 +1,55 @@
+[1] "no_Dst"
+[1] "fda"
+[1] "Train time"
+   user  system elapsed 
+  93.59    0.72   97.22 
+Confusion Matrix and Statistics
+
+          Reference
+Prediction    E    N    P    R    T
+         E    0    1    0    0    1
+         N    0 1414   26  164    1
+         P    0    3    0    0    0
+         R    0   81    1  202    8
+         T    2    0    0    5    8
+
+Overall Statistics
+                                         
+               Accuracy : 0.8472         
+                 95% CI : (0.8303, 0.863)
+    No Information Rate : 0.782          
+    P-Value [Acc > NIR] : 3.733e-13      
+                                         
+                  Kappa : 0.5159         
+                                         
+ Mcnemar's Test P-Value : NA             
+
+Statistics by Class:
+
+                     Class: E Class: N Class: P Class: R Class: T
+Sensitivity          0.000000   0.9433 0.000000   0.5445 0.444444
+Specificity          0.998956   0.5431 0.998413   0.9418 0.996314
+Pos Pred Value       0.000000   0.8810 0.000000   0.6918 0.533333
+Neg Pred Value       0.998956   0.7276 0.985893   0.8960 0.994742
+Prevalence           0.001043   0.7820 0.014085   0.1935 0.009390
+Detection Rate       0.000000   0.7376 0.000000   0.1054 0.004173
+Detection Prevalence 0.001043   0.8372 0.001565   0.1523 0.007825
+Balanced Accuracy    0.499478   0.7432 0.499206   0.7431 0.720379
+[1] "Predict time"
+   user  system elapsed 
+   0.02    0.00    0.02 
+fda variable importance
+
+    Overall
+PC4  100.00
+PC2   85.47
+PC1   71.41
+PC3   59.69
+PC5   45.35
+PC6   27.77
+[1] "Importance time"
+   user  system elapsed 
+   0.03    0.00    0.02 
+[1] "Total time"
+   user  system elapsed 
+  94.48    0.72   98.11 

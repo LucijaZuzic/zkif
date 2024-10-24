@@ -1,0 +1,94 @@
+[1] "all"
+[1] "pls"
+Partial Least Squares 
+
+7674 samples
+   7 predictor
+   5 classes: 'E', 'N', 'P', 'R', 'T' 
+
+Pre-processing: centered (7), scaled (7) 
+Resampling: Cross-Validated (10 fold, repeated 10 times) 
+Summary of sample sizes: 6908, 6906, 6907, 6907, 6907, 6905, ... 
+Resampling results across tuning parameters:
+
+  ncomp  logLoss   AUC        prAUC      Accuracy   Kappa      Mean_F1  Mean_Sensitivity  Mean_Specificity
+  1      1.085008  0.5383333  0.3466139  0.8866181  0.6159937  NaN      0.3144199         0.9084450       
+  2      1.073577  0.5348191  0.3497362  0.9049654  0.6883509  NaN      0.3326157         0.9245946       
+  3      1.069198  0.5398069  0.3558242  0.9211507  0.7459377  NaN      0.3466195         0.9370785       
+  4      1.067897  0.5560241  0.3591022  0.9235486  0.7528618  NaN      0.3475272         0.9379266       
+  5      1.066771  0.5641321  0.3584283  0.9253853  0.7599290  NaN      0.3496677         0.9398247       
+  6      1.066612  0.5721517  0.3609190  0.9254893  0.7602245  NaN      0.3497146         0.9398581       
+  Mean_Pos_Pred_Value  Mean_Neg_Pred_Value  Mean_Precision  Mean_Recall  Mean_Detection_Rate  Mean_Balanced_Accuracy
+  NaN                  0.9651057            NaN             0.3144199    0.1773236            0.6114325             
+  NaN                  0.9714022            NaN             0.3326157    0.1809931            0.6286052             
+  NaN                  0.9791548            NaN             0.3466195    0.1842301            0.6418490             
+  NaN                  0.9818306            NaN             0.3475272    0.1847097            0.6427269             
+  NaN                  0.9819262            NaN             0.3496677    0.1850771            0.6447462             
+  NaN                  0.9820325            NaN             0.3497146    0.1850979            0.6447864             
+
+logLoss was used to select the optimal model using the smallest value.
+The final value used for the model was ncomp = 6.
+[1] "Train time"
+   user  system elapsed 
+  45.00    1.22   51.47 
+ Factor w/ 5 levels "E","N","P","R",..: 2 2 2 2 2 2 2 2 2 2 ...
+NULL
+           E         N         P         R         T
+5  0.1639966 0.2901749 0.1643127 0.2114235 0.1700923
+11 0.1630362 0.2626251 0.1582446 0.2463647 0.1697295
+15 0.1603624 0.2948900 0.1626349 0.2193165 0.1627962
+21 0.1515461 0.3938596 0.1505013 0.1511793 0.1529138
+23 0.1446685 0.4364187 0.1502345 0.1245793 0.1440989
+25 0.1430483 0.4429422 0.1477899 0.1242651 0.1419544
+Confusion Matrix and Statistics
+
+          Reference
+Prediction    E    N    P    R    T
+         E    0    0    0    0    0
+         N    0 1498   27  103    0
+         P    0    0    0    0    0
+         R    2    1    0  268   18
+         T    0    0    0    0    0
+
+Overall Statistics
+                                          
+               Accuracy : 0.9212          
+                 95% CI : (0.9083, 0.9329)
+    No Information Rate : 0.782           
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.7432          
+                                          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: E Class: N Class: P Class: R Class: T
+Sensitivity          0.000000   0.9993  0.00000   0.7224  0.00000
+Specificity          1.000000   0.6890  1.00000   0.9864  1.00000
+Pos Pred Value            NaN   0.9201      NaN   0.9273      NaN
+Neg Pred Value       0.998957   0.9965  0.98592   0.9367  0.99061
+Prevalence           0.001043   0.7820  0.01408   0.1935  0.00939
+Detection Rate       0.000000   0.7814  0.00000   0.1398  0.00000
+Detection Prevalence 0.000000   0.8492  0.00000   0.1508  0.00000
+Balanced Accuracy    0.500000   0.8442  0.50000   0.8544  0.50000
+[1] "Predict time"
+   user  system elapsed 
+   0.28    0.04    0.35 
+pls variable importance
+
+  variables are sorted by maximum importance across the classes
+             E        N        P        R         T
+Dst  0.0037332 0.147623 0.011203 0.129894 0.0167110
+ap   0.0025032 0.077778 0.007904 0.069670 0.0088335
+Bx   0.0019582 0.074381 0.004983 0.065230 0.0083329
+By   0.0022313 0.057157 0.004799 0.049029 0.0074481
+dTEC 0.0009680 0.008542 0.003832 0.008295 0.0017676
+TEC  0.0007766 0.006279 0.003191 0.007467 0.0006890
+Bz   0.0005338 0.003039 0.004523 0.005614 0.0007316
+[1] "Importance time"
+   user  system elapsed 
+   0.00    0.00    0.05 
+[1] "Total time"
+   user  system elapsed 
+  45.96    1.28   52.59 

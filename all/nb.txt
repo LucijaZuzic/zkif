@@ -1,0 +1,43 @@
+[1] "all"
+[1] "nb"
+[1] "Train time"
+   user  system elapsed 
+ 181.99    3.89  204.35 
+Confusion Matrix and Statistics
+
+          Reference
+Prediction    E    N    P    R    T
+         E    2    0    0    0    0
+         N    0 1492    0    1    0
+         P    0    5   27    0    0
+         R    0    2    0  369    0
+         T    0    0    0    1   18
+
+Overall Statistics
+                                          
+               Accuracy : 0.9953          
+                 95% CI : (0.9911, 0.9979)
+    No Information Rate : 0.782           
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.9867          
+                                          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: E Class: N Class: P Class: R Class: T
+Sensitivity          1.000000   0.9953  1.00000   0.9946 1.000000
+Specificity          1.000000   0.9976  0.99735   0.9987 0.999473
+Pos Pred Value       1.000000   0.9993  0.84375   0.9946 0.947368
+Neg Pred Value       1.000000   0.9835  1.00000   0.9987 1.000000
+Prevalence           0.001043   0.7820  0.01408   0.1935 0.009390
+Detection Rate       0.001043   0.7783  0.01408   0.1925 0.009390
+Detection Prevalence 0.001043   0.7788  0.01669   0.1935 0.009911
+Balanced Accuracy    1.000000   0.9965  0.99868   0.9967 0.999737
+[1] "Predict time"
+   user  system elapsed 
+   1.68    0.05    1.84 
+[1] "Total time"
+   user  system elapsed 
+ 184.12    3.94  206.65 

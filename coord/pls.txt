@@ -1,0 +1,82 @@
+[1] "coord"
+[1] "pls"
+Partial Least Squares 
+
+7674 samples
+   3 predictor
+   5 classes: 'E', 'N', 'P', 'R', 'T' 
+
+Pre-processing: centered (3), scaled (3) 
+Resampling: Cross-Validated (10 fold, repeated 10 times) 
+Summary of sample sizes: 6905, 6907, 6907, 6906, 6907, 6907, ... 
+Resampling results across tuning parameters:
+
+  ncomp  logLoss   AUC        prAUC      Accuracy   Kappa      Mean_F1  Mean_Sensitivity  Mean_Specificity
+  1      1.157325  0.7351117  0.3304749  0.8085108  0.2044995  NaN      0.2297241         0.8304843       
+  2      1.146357  0.7302178  0.3249880  0.8186104  0.2833575  NaN      0.2441935         0.8436093       
+  Mean_Pos_Pred_Value  Mean_Neg_Pred_Value  Mean_Precision  Mean_Recall  Mean_Detection_Rate  Mean_Balanced_Accuracy
+  NaN                  0.9493863            NaN             0.2297241    0.1617022            0.5301042             
+  NaN                  0.9383070            NaN             0.2441935    0.1637221            0.5439014             
+
+logLoss was used to select the optimal model using the smallest value.
+The final value used for the model was ncomp = 2.
+[1] "Train time"
+   user  system elapsed 
+  32.91    0.25   35.57 
+ Factor w/ 5 levels "E","N","P","R",..: 2 2 2 2 2 2 2 2 2 2 ...
+NULL
+           E         N         P         R         T
+5  0.1583114 0.3112138 0.1591258 0.2102326 0.1611164
+11 0.1559073 0.3421452 0.1578661 0.1866054 0.1574760
+15 0.1547083 0.3548455 0.1571086 0.1775168 0.1558207
+21 0.1382365 0.4709766 0.1444577 0.1121315 0.1341976
+23 0.1463049 0.4206587 0.1510253 0.1377269 0.1442843
+25 0.1458728 0.4234206 0.1506969 0.1363385 0.1436712
+Confusion Matrix and Statistics
+
+          Reference
+Prediction    E    N    P    R    T
+         E    0    0    0    0    0
+         N    0 1487   27  291   12
+         P    0    0    0    0    0
+         R    2   12    0   80    6
+         T    0    0    0    0    0
+
+Overall Statistics
+                                          
+               Accuracy : 0.8174          
+                 95% CI : (0.7994, 0.8345)
+    No Information Rate : 0.782           
+    P-Value [Acc > NIR] : 7.036e-05       
+                                          
+                  Kappa : 0.266           
+                                          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: E Class: N Class: P Class: R Class: T
+Sensitivity          0.000000   0.9920  0.00000  0.21563  0.00000
+Specificity          1.000000   0.2105  1.00000  0.98706  1.00000
+Pos Pred Value            NaN   0.8184      NaN  0.80000      NaN
+Neg Pred Value       0.998957   0.8800  0.98592  0.83985  0.99061
+Prevalence           0.001043   0.7820  0.01408  0.19353  0.00939
+Detection Rate       0.000000   0.7757  0.00000  0.04173  0.00000
+Detection Prevalence 0.000000   0.9478  0.00000  0.05216  0.00000
+Balanced Accuracy    0.500000   0.6013  0.50000  0.60135  0.50000
+[1] "Predict time"
+   user  system elapsed 
+   0.28    0.00    0.33 
+pls variable importance
+
+  variables are sorted by maximum importance across the classes
+           E       N         P       R         T
+Bx 2.498e-03 0.12257 0.0065045 0.11259 0.0139791
+By 1.961e-03 0.09602 0.0050931 0.08817 0.0109684
+Bz 5.075e-05 0.01485 0.0009348 0.01555 0.0006343
+[1] "Importance time"
+   user  system elapsed 
+   0.01    0.00    0.01 
+[1] "Total time"
+   user  system elapsed 
+  34.17    0.25   36.90 
