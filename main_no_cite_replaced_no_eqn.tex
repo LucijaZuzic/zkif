@@ -57,7 +57,6 @@
 \usepackage{listings}%
 %%%%
 \usepackage{anyfontsize}
-\usepackage{gensymb}
 
 %%%%%=============================================================================%%%%
 %%%%  Remarks: This template is provided to aid authors with the preparation
@@ -94,8 +93,12 @@
 
 \makeglossaries
 \newacronym{dst}{Dst}{Disturbance Storm-Time}
+\newacronym{rin}{RIN}{The Royal Institute of Navigation}
+\newacronym{ion}{ION}{The Institute of Navigation}
+\newacronym{ursi}{URSI}{Union Radio-Scientifique Internationale}
+\newacronym{rinex}{RINEX}{Receiver Independent Exchange Format}
 \newacronym{tec}{TEC}{Total Electron Content}
-\newacronym{dtec}{dTEC}{detrended Total Electron Content}
+\newacronym{dtec}{dTEC}{standard deviation of Total Electron Content}
 \newacronym{gnss}{GNSS}{Global Navigation Satellite System}
 \newacronym{pnt}{PNT}{Positioning, Navigation, and Timing}
 \newacronym{svm}{SVM}{Support Vector Machine}
@@ -159,24 +162,27 @@
 
 \title[A $Dst$-based space weather conditions machine learning classification  model for GNSS PNT performance analysis]{A $Dst$-based space weather conditions machine learning classification  model for GNSS PNT performance analysis}
 
-\author[1,2]{\fnm{Lucija} \sur{Žužić}}\email{lucija.zuzic@uniri.hr}
+\author[1,2]{\fnm{Lucija} \sur{\v{Z}u\v{z}i\'{c}}}\email{lucija.zuzic@uniri.hr}
+\equalcont{These authors contributed equally to this work.}
+
+\author[1,2]{\fnm{Deni} \sur{Klen}}\email{deni.klen@uniri.hr}
 \equalcont{These authors contributed equally to this work.}
 
 \author[3]{\fnm{Teodor B.} \sur{Iliev}}\email{tiliev@uni-ruse.bg}
 
 \author*[1,2,4]{\fnm{Renato} \sur{Filjar}}\email{renato.filjar@uniri.hr}
 
-\affil*[1]{\orgdiv{Department of Computer Engineering}, \orgname{Faculty of Engineering, University of Rijeka}, \orgaddress{\street{Vukovarska 58}, \city{Rijeka}, \postcode{51000}, \state{Primorje-Gorski Kotar County}, \country{Croatia}}}
+\affil*[1]{\orgdiv{Department of Computer Engineering}, \orgname{Faculty of Engineering, University of Rijeka}, \orgaddress{\street{Vukovarska 58}, \city{Rijeka}, \postcode{51000}, \country{Croatia}}}
 
-\affil[2]{\orgdiv{Center for Artificial Intelligence and Cybersecurity}, \orgname{University of Rijeka}, \orgaddress{\street{Radmile Matejcic 2}, \city{Rijeka}, \postcode{51000}, \state{Primorje-Gorski Kotar County}, \country{Croatia}}}
+\affil[2]{\orgdiv{Center for Artificial Intelligence and Cybersecurity}, \orgname{University of Rijeka}, \orgaddress{\street{Radmile Matejcic 2}, \city{Rijeka}, \postcode{51000}, \country{Croatia}}}
 
 \affil[3]{\orgdiv{Department of Telecommunication}, \orgname{University of Ruse}, \orgaddress{\street{8 Studentska str.}, \city{Ruse}, \postcode{7017}, \country{Bulgaria}}}
 
-\affil[4]{\orgdiv{Laboratory for Spatial Intelligence}, \orgname{Hrvatsko Zagorje Krapina University of Applied Sciences}, \orgaddress{\street{Setaliste hrvatskog narodnog preporoda 6}, \city{Krapina}, \postcode{49000}, \state{Krapina-Zagorje County}, \country{Croatia}}}
+\affil[4]{\orgdiv{Laboratory for Spatial Intelligence}, \orgname{Hrvatsko Zagorje Krapina University of Applied Sciences}, \orgaddress{\street{Setaliste hrvatskog narodnog preporoda 6}, \city{Krapina}, \postcode{49000}, \country{Croatia}}}
 
-\abstract{Ambient conditions classification enables systematic mitigation of adversarial effects on the Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT) performance. This research contributes to the problem by proposing a classification model of space weather events for sub-equatorial regions. The proposed model uses machine learning-based classification applied to the experimental observations of geomagnetic field components, observed Total Electron Content (TEC), and Disturbance Storm-Time (Dst)-index. A SVM with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), shallow Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA), and shallow NN using Principal Component Analysis (PCA) was applied to develop the candidate model to classify observations of the geomagnetic field in $TEC$, combined with other variables, into one of the scenarios of space weather conditions. Performance is assessed using a confusion matrix and development time to yield the NB as the best performer. The proposed $Dst$-based classification model serves as an indicator of a geomagnetic/ionospheric storm in progress, thus alerting GNSS users of potential degradation in GNSS PNT performance and setting up a framework for the development of a tailored GNSS ionospheric correction model for specific classes of the space weather conditions.}
+\abstract{Ambient conditions classification enables systematic mitigation of adversarial effects on the Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT) performance. This research contributes to the problem by proposing a classification model of space weather events for sub-equatorial regions. The proposed model uses machine learning-based classification applied to the experimental observations of geomagnetic field components, observed Total Electron Content ($TEC$), and Disturbance Storm-Time ($Dst$-index). A SVM with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), shallow Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA), and shallow NN using Principal Component Analysis (PCA) was applied to develop the candidate model to classify observations of the geomagnetic field in $TEC$, combined with other variables, into one of the scenarios of space weather conditions. Performance is assessed using a confusion matrix and development time to yield the NB as the best performer. The proposed $Dst$-based classification model serves as an indicator of a geomagnetic/ionospheric storm in progress, thus alerting GNSS users of potential degradation in GNSS PNT performance and setting up a framework for the development of a tailored GNSS ionospheric correction model for specific classes of the space weather conditions.}
 
-\keywords{Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT), space weather conditions, machine learning (ML), classification model, Decision Tree (DT), Neural Network (NN), sensor observations aggregation, geomagnetic field, Total Electron Content (TEC), Disturbance Storm-Time (Dst)-index}
+\keywords{Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT), space weather conditions, machine learning (ML), classification model, Decision Tree (DT), Neural Network (NN), sensor observations aggregation, geomagnetic field, Total Electron Content ($TEC$), Disturbance Storm-Time ($Dst$-index)}
 
 %%\pacs[JEL Classification]{D8, H51}
 
@@ -189,7 +195,7 @@
 
 The Global Navigation Satellite System (GNSS) and its Positioning, Navigation, and Timing (PNT) service have matured to become an essential part of national infrastructure, public goods, and enablers of a vast number of emerging technology and socio-economic applications citestuff(filjar2022application). Maintaining the GNSS PNT quality has appeared fundamental for the sustainable development of modern economy and society citestuff(filjar2022application). 
 
-Overcoming the shortcomings and vulnerabilities of GNSS PNT is a scientific challenge, and the need of a wide variety of scientists, developers, operators, regulators, and users of GNSS-based systems and services citestuff(filjar2024ambient, filjar2022application). The Earth’s ionosphere, a part of the Earth’s atmosphere stretching from $50$ $km$ to $2000$ $km$ above the Earth’s surface and comprised of rare but mostly charged atoms and molecules, is the major natural cause of GNSS PNT degradation citestuff(davies1990ionospheric, filic2018modelling). 
+Overcoming the shortcomings and vulnerabilities of GNSS PNT is a scientific challenge, and the need of a wide variety of scientists, developers, operators, regulators, and users of GNSS-based systems and services citestuff(filjar2024ambient, filjar2022application). The Earth’s ionosphere, a part of the Earth’s atmosphere stretching from $50$ $km$ to $2000$ $km$ above the Earth’s surface and comprised of rare but mostly charged atoms and molecules, is the major natural cause of GNSS PNT degradation citestuff(davies1990ionospheric, filic2018modelling).
 
 This phenomenon especially affects most currently used GNSS receivers, which work as single-frequency receivers exposed to GNSS ionospheric effects citestuff(spilker1996global, filjar2022application). Driven by powerful and random flows of energy and particles from the Sun (space weather conditions), the ionospheric conditions define the properties of GNSS signal propagation through the Earth’s atmosphere and the resulting ionospheric delay citestuff(davies1990ionospheric, oxley2017uncertainties, filic2018modelling). The GNSS ionospheric delay causes errors in GNSS PNT algorithm deployment, designed to produce position, velocity, and time estimates for a GNSS receiver citestuff(spilker1996global, filic2018modelling). 
 
@@ -210,7 +216,7 @@ How space weather affects GNSS PNT performance was explained using the Space wea
     \end{tabular}
 \end{table}
 
-The GNSS signal encounters a certain number of charged particles from the satellite aerial to a mobile unit’s (GNSS receiver’s) aerial citestuff(filic2018modelling, filic2018modelling). Such an encounter is quantified using the Total Electron Content (TEC) defined by Equation~1 in $electrons/m^{2}$  citestuff(filic2018modelling, davies1990ionospheric), where $h$ denotes the height above the Earth’s mean sea level in $m$, $N(h)$ represents the vertical ionospheric profile, the volume density of charged particles at height $h$, in $electrons/m^{2}$.
+The GNSS signal encounters a certain number of charged particles from the satellite aerial to a mobile unit’s (GNSS receiver’s) aerial citestuff(filic2018modelling, filic2018modelling). Such an encounter is quantified using the Total Electron Content ($TEC$) defined by Equation~1 in $electrons/m^{2}$  citestuff(filic2018modelling, davies1990ionospheric), where $h$ denotes the height above the Earth’s mean sea level in $m$, $N(h)$ represents the vertical ionospheric profile, the volume density of charged particles at height $h$, in $electrons/m^{2}$. The $TEC$ dataset used in this study was derived from Receiver Independent Exchange Format (RINEX) $TEC$ observations using Global Positioning System (GPS) $TEC$ software by Seemala citestuff(SEEMALA202363).
 
 \begin{equation}
 	TEC = \int_{lower \quad ionsopheric \quad boundary}^{upper \quad ionsopheric \quad boundary}N(h)dh
@@ -231,174 +237,116 @@ Combining Equation~1 and Equation~2, one can conclude the linear relation betwee
 	\quad\left(3\right)
 \end{equation}
 
-The GNSS ionospheric delay has been identified as a source of GNSS PNT degradation since the dawn of GNSS. GNSS systems offer various standard GNSS ionospheric delay estimation (correction) models to mitigate the deteriorating effects on GNSS PNT, such as the Klobuchar model citestuff(spilker1996global, filic2018modelling). The standard ionospheric correction models are global, and insufficiently flexible to update to mitigate GNSS ionospheric delay to satisfy rising demands on GNSS PNT performance citestuff(filjar2024ambient, filic2018modelling). The development of regional and local models attempts to solve the problem of GNSS PNT sustainable performance in various ionospheric conditions citestuff(sikirica2021risk). In recent developments, our team has proposed the Ambient-Aware Application-Aligned ((AA)2) PNT to take into account the actual ionospheric and geomagnetic conditions near a mobile unit (a GNSS receiver) citestuff(filjar2022application, filic2018modelling, filjar2024ambient). Direct measurements of the immediate geomagnetic and ionospheric condition variables may be supplied to a machine learning-based adapted GNSS ionospheric correction model, thus solving the single-frequency GNSS problem citestuff(filjar2022application). Previous research has identified predictors and target variables (descriptors of geomagnetic, ionospheric, and GNSS PNT conditions) citestuff(filic2018modelling, natras2022ensemble, natras2023regional). The classification of different scenarios of GNSS ionospheric conditions with adverse effects on the GNSS PNT remained an unsolved precondition needed for the development of a machine learning-based GNSS ionospheric delay correction model to render the GNSS PNT algorithm ionospheric conditions-agnostic citestuff(filjar2022application, filjar2024ambient).
+The GNSS ionospheric delay has been identified as a source of GNSS PNT degradation since the dawn of GNSS. GNSS systems offer various standard GNSS ionospheric delay estimation (correction) models to mitigate the deteriorating effects on GNSS PNT, such as the Klobuchar model citestuff(spilker1996global, filic2018modelling). The standard ionospheric correction models are global, and insufficiently flexible to update to mitigate GNSS ionospheric delay to satisfy rising demands on GNSS PNT performance citestuff(filjar2024ambient, filic2018modelling). The development of regional and local models attempts to solve the problem of GNSS PNT sustainable performance in various ionospheric conditions citestuff(sikirica2021risk). In recent developments, our team has proposed the Ambient-Aware Application-Aligned ((AA)2) PNT to take into account the actual ionospheric and geomagnetic conditions near a mobile unit (a GNSS receiver) citestuff(filjar2022application, filic2018modelling, filjar2024ambient). Direct measurements of the immediate geomagnetic and ionospheric condition variables may be supplied to a machine learning-based adapted GNSS ionospheric correction model, thus solving the single-frequency GNSS problem citestuff(filjar2022application). Previous research has identified predictors and target variables (descriptors of geomagnetic, ionospheric, and GNSS PNT conditions) citestuff(filic2018modelling, natras2022ensemble, natras2023regional). Current space weather severity scales, such as the one provided by National Oceanic and Atmospheric Administration (NOAA) citestuff(NOAA2024eSpace), are based on global space weather and geomagnetic indices averaged over a certain period (for instance, $3$ hours for the global $K_{p}$ index). The current space weather severity scales do not directly address classifying scenarios of GNSS performance deterioration and have limited potential in deployment for a GNSS ionospheric correction model. The classification of different scenarios of GNSS ionospheric conditions with adverse effects on the GNSS PNT remained an unsolved precondition needed for the development of a machine learning-based GNSS ionospheric delay correction model to render the GNSS PNT algorithm ionospheric conditions-agnostic citestuff(filjar2022application, filjar2024ambient).
 
-Here we propose a methodology for a machine learning-based classification of the ionospheric conditions based entirely on observations of geomagnetic indices. The proposed method is inspired by previous lightweight machine-learning techniques citestuff(filjar2020comparison) for classifying sensor readings. The model is sufficiently simple to be applied on computationally capable platforms with suitable geomagnetic field sensors, such as smartphones and connected/autonomous vehicles. The research presented acquires the ambient data and analyses its statistical properties. The data set is split into training and test sets. Several candidates for the GNSS ionospheric delay model are developed in this study based on Disturbance Storm-Time (Dst). The machine learning (ML) models include a Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), shallow Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA) and shallow Neural Network (NN) using Principal Component Analysis (PCA) of the input data. A tailored set of validation methods is used to assess their performance. The optimal GNSS ionospheric delay correction model is identified based on GNSS PNT-related objective criteria, and its performance is demonstrated in an independent case study.
-
-The main contributions of this paper are:
-
-\begin{itemize}
-    \item Defining multiple $Dst$-based classes using theoretical knowledge and statistics
-    \item Classifying values of $TEC$ and other geomagnetic field variables based on $Dst$
-    \item Proposing a machine learning-based classification model of space weather events
-    \item Achieving an accuracy over $99\%$ for the Naive Bayes (NB) model and any input variables
-\end{itemize}
-
-The findings indicate the classification generated by the NB model could be used in real-life systems and support our hypothesis.
-
-The rest of the paper is structured as follows. Section~\ref{sec:Dataset} describes this work's methodology, dataset, and evaluation metrics. Section~\ref{sec:Results} presents the results obtained in this study. Section~\ref{sec:Discussion} discusses the implications of the results. The main points are summarised and the conclusion is given in Section~\ref{sec:Conclusion}.
+A methodology for a machine learning-based classification of ionospheric conditions based entirely on observations of geomagnetic indices is described in this study. The proposed method is inspired by previous lightweight machine-learning techniques citestuff(filjar2020comparison) for classifying sensor readings. The model is sufficiently simple to be applied on computationally capable platforms with suitable geomagnetic field sensors, such as smartphones and connected/autonomous vehicles. The research presented acquires ambient data and analyses its statistical properties. The dataset is split into training and test sets. Several candidates for the GNSS ionospheric delay model are developed based on Disturbance Storm-Time ($Dst$) data taken from the INTERMAGNET citestuff(Intermagnet2022-cj) dataset, and reformatted to match the format of $TEC$ data. The machine learning (ML) models include a Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), shallow Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA) and shallow Neural Network (NN) using Principal Component Analysis (PCA) of the input data. A tailored set of validation methods is used to assess their performance. The optimal GNSS ionospheric delay correction model is identified based on GNSS PNT-related objective criteria, and its performance is demonstrated in an independent case study.
 
 \section{Method and Data}
 \label{sec:Dataset}
 
+A Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA) and shallow Neural Network (NN) using Principal Component Analysis (PCA) of the input data were tested based on their ability to classify a set of observations of the geomagnetic field in $TEC$, and other predictors, into one of the scenarios of space weather conditions based on $Dst$. 
+
+Multiple $Dst$-dependent classes were predefined using theoretical knowledge. Statistical analysis of the data confirmed that distributions of other variables change for different $Dst$ ranges, supporting the validity of the classification. The study assumes that the dependent output variable, the $Dst$ class, can be predicted based on the independent variables used as input.
+
+$TEC$ data was obtained using GPS $TEC$ software by Seemala to process RINEX $TEC$ observations citestuff(SEEMALA202363). The INTERMAGNET citestuff(Intermagnet2022-cj) dataset contains $Dst$ and $a_{p}$ data from 2014 for a measuring station maintained by Geoscience Australia in Kakadu, referred to as KDU in the database, at $-12.69$ degrees latitude and $132.47$ degrees longitude near Darwin, Nothern Territory, Australia. The two datasets are merged based on location, year, month, day, and time of day in hours.
+
 \subsection{Method}
 %\label{subsec:Method}
 
-A Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA) and shallow Neural Network (NN) using Principal Component Analysis (PCA) of the input data were tested based on their ability to classify a set of observations of the geomagnetic field in $TEC$, and other predictors, into one of the scenarios of space weather conditions based on $Dst$. Multiple $Dst$-dependent classes were predefined using theoretical knowledge. Statistical analysis of the data confirmed that distributions of other variables change for different $Dst$ ranges, and not for different $TEC$ ranges, supporting the validity of the classification. The study assumes that the dependent output variable, the $Dst$ class, can be predicted based on the independent variables used as input.
-
-The models were selected because they represent larger families of classification methods. SVM models are supervised maximum margin models. DT models also apply supervised learning. NB classifiers are probabilistic classifiers that can be parametric or non-parametric, but this study uses a non-parametric approach. PLS is a non-parametric linear regression model. FDA uses multiple non-parametric linear regression models to create a non-linear classification. PCA is a linear dimensionality reduction technique that extracts a predefined number of components for training an NN model. NN models imitate the brain using artificial neurons to produce outputs based on the input and the activation function. NN models require that the structure be predefined, and hyperparameters are usually tuned or predefined based on assumptions. An automated tuning procedure was used in this study.
+The models were selected because they represent larger families of classification methods. SVM models are supervised maximum margin models. DT models also apply supervised learning. NB classifiers are probabilistic classifiers that can be parametric or non-parametric, but this study uses a non-parametric approach. PLS is a non-parametric linear regression model. FDA uses multiple non-parametric linear regression models to create a non-linear classification. PCA is a linear dimensionality reduction technique that extracts a predefined number of components for training an NN model. NN models imitate the brain using artificial neurons to produce outputs based on the input and the activation function. NN models require that the structure be predefined, and hyperparameters are tuned.
 
 All NN models were applied based on research by Kuhn for the \textit{R} \textit{caret} package citestuff(kuhn2013applied, KuhnCaret2024, rprojectProjectStatistical).
 
 \subsubsection{Support Vector Machine}
 %\label{subsubsec:SupportVectorMachine}
 
-In machine learning, a Support Vector Machine (SVM) or Support Vector Network (SVN) model is a supervised maximum margin model with associated learning algorithms that analyzes data for classification and regression. In addition to linear classification, SVM models are also effective for non-linear classification using the hyperplane kernel trick citestuff(Boser1992), implicitly mapping their inputs to high-dimensional feature spaces.
+In machine learning, a Support Vector Machine (SVM) or Support Vector Network (SVN) model is a supervised maximum margin model with associated learning algorithms that analyzes data for classification, regression citestuff(Cortes1995), or outlier detection citestuff(scikit-learn2023). SVM models are also effective for non-linear classification using the hyperplane kernel trick citestuff(Boser1992, Aizerman1964). Intuitively, a good separation is achieved by the hyperplane with the greatest distance to the nearest point in the training data belonging to any class citestuff(HastieRosset2009). Support Vector Clustering (SVC) citestuff(BenHur2001) is a related method for clustering unlabeled data.
 
-An SVM model can also be used for regression tasks where the objective becomes $\epsilon$ -sensitive. A "soft margin" to separate data that is not linearly separable was proposed by Corinna Cortes and Vapnik in 1993 and published in 1995 citestuff(Cortes1995). Support Vector Clustering (SVC) citestuff(BenHur2001) applies support vector statistics to unlabeled data in unsupervised learning to find new natural groupings. Meyer, Leisch, and Hornik compared SVM with other classifiers citestuff(Meyer2003), but it is unclear whether SVM predictions perform better than other linear models, such as logistic, and linear regression.
+Meyer, Leisch, and Hornik compared SVM models with other classifiers citestuff(Meyer2003). However, it is unclear whether SVM predictions perform better than other linear models, such as logistic, and linear regression.
 
-A SVM constructs a set of hyperplanes in a high-dimensional space, used for classification, regression, or outlier detection citestuff(scikit-learn2023). Intuitively, a good separation is achieved by the hyperplane with the greatest distance to the nearest point in the training data belonging to any class citestuff(HastieRosset2009).
+A multidimensional feature space increases the generalization error of SVM models, so additional samples are needed to enhance performance citestuff(Jin2012). To keep the computational burden reasonable, a kernel probability density function $k(x, y)$ is chosen to fit the problem citestuff(Press2007).
 
-The original maximum margin hyperplane algorithm proposed by Vapnik in 1963 constructed a linear classifier. In 1992, Bernhard Boser, Isabelle Guyon, and Vladimir Vapnik proposed creating nonlinear classifiers using the kernel trick citestuff(Boser1992, Aizerman1964). A multidimensional feature space increases the generalization error of SVM models, so additional samples are needed to enhance performance citestuff(Jin2012). To keep the computational burden reasonable, a kernel probability density function $k(x, y)$ is chosen to fit the problem citestuff(Press2007).
-
-SVM models have been used to solve various real-world problems. SVM models are useful in text and hypertext categorization, as their application can significantly reduce the need for labeled training instances in standard inductive and transductive settings citestuff(Joachims1998). Some methods for shallow semantic parsing are based on SVM models citestuff(Pradhan2004). Image classification and segmentation can also be performed using SVM models, including a modified version of SVM that uses privileged access as proposed by Vapnik citestuff(Laurent2014, Barghout2015).
-
-Classification of satellite data such as Synthetic Aperture Radar (SAR) data is possible using a supervised SVM citestuff(Maity2016). Handwritten characters can be recognized using SVM models citestuff(Decoste2002, Maitra2015). The SVM algorithm is widely used in biological and other sciences. They were used to classify proteins with up to $90\%$ compounds correctly classified. Permutation tests based on SVM weights have been proposed as a mechanism for interpreting SVM models citestuff(Gaonkar2013, Cuingnet2011). SVM weights were also used to interpret SVM models citestuff(Statnikov2006).
-
-The performance of SVM depends on the kernel probability density function, the parameters of the specified kernel probability density function, and the "soft" margin parameter $\lambda$. Each combination of parameter choices is usually cross-validated, and the parameters with the best accuracy are selected. The final model is used to test and classify new data and is trained using the best parameters citestuff(Hsu2003).
+The performance of SVM depends on the kernel probability density function, its parameters, and the "soft" margin parameter $\lambda$ chosen in cross-validation to train the final classification model citestuff(Hsu2003).
 
 \subsubsection{Decision Tree}
 %\label{subsubsec:DecisionTree}
 
-Decision Tree (DT) models are an approach to supervised learning in statistics, data mining, and machine learning. They represent predictive or decision-making model used to make inferences about a series of observations. Tree models in which the target variable can take on a discrete set of values are called classification trees. DT models where the target variable can take on continuous values (usually real numbers) are called regression trees. A regression tree can be extended to any object with pairwise differences such as categorical arrays citestuff(Studer2011). DT models are among the most popular ML algorithms due to their comprehensibility and simplicity citestuff(Wu2008). A DT describes the input data and the resulting classification tree can be the input for decision-making in data mining citestuff(Rokach2014).
+Decision Tree (DT) models are used for supervised learning in statistics, data mining citestuff(Rokach2014), and machine learning. Classification trees use a discrete target variable, while regression trees can handle continuous values citestuff(Studer2011). DT models are popular due to their comprehensibility and simplicity citestuff(Wu2008).
 
-A tree is built by dividing the original set, which forms the root node, into subsets that form descendants, or successors. The segmentation is made using a set of rules based on classification features citestuff(ShalevShwartz2014). This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is complete when the subset at a node all have the same target variable values or the division no longer adds value to the predictions. This process of Top-Down Induction of Decision Trees (TDIDT) citestuff(Quinlan1986) is an example of a greedy algorithm and is by far the most common strategy for learning DT models from data citestuff(Rokach2005). C5.0, used in the \textit{caret} package in \textit{R}, has a similar approach and improves the ID3 and C4.5 algorithms.
-
-DT models can also be described as a combination of mathematical and computational techniques that help describe, categorize, and generalize a given data set in data mining. Data comes in records of the form $(x, Y) = (x_{1}, x_{2}, x_{3}, \ldots, x_{k}, Y)$. The dependent variable $Y$ is the target variable we need to understand, classify, or generalize. Features $x_{1}, x_{2}, x_{3}, \ldots, x_{k}$ form the vector $X$ used for that task.
+A tree is recursively partitioned by dividing the original set, or root node, into subsets that form descendants, or successors, using classification rules based on features citestuff(ShalevShwartz2014). This process of Top-Down Induction of Decision Trees (TDIDT) citestuff(Quinlan1986) is an example of a greedy algorithm that is the most common strategy for learning DT models from data citestuff(Rokach2005). C5.0, used in the \textit{caret} package in \textit{R}, has a similar approach and improves the ID3 and C4.5 algorithms.
 
 \subsubsection{Naive Bayes}
 %\label{subsubsec:NaiveBayes}
 
-In statistics, Naive Bayes (NB) models classifiers are a family of linear "probabilistic classifiers" that assume that, given a target class, the features are conditionally independent. The classifier got its name from this strong and possibly naive assumption. These classifiers are among the simplest Bayesian network models citestuff(McCallum2011). NB classifiers are highly scalable and require several parameters. The number of parameters depends linearly on the number of variables. Variables represent features or predictors in the learning problem. Maximum likelihood training can be performed by evaluating a closed-form expression citestuff(Russell1999), which requires linear time, instead of the expensive iterative approximation used for many other classifiers.
+In statistics, Naive Bayes (NB) models, simple Bayes, or independent Bayes citestuff(Hand2001) classifiers are a family of linear "probabilistic classifiers" that assume that, given a target class, the features are conditionally independent. These classifiers are among the simplest Bayesian network models citestuff(McCallum2011), but a NB classifier model is not necessarily a Bayesian method. Maximum likelihood training evaluates a closed-form expression citestuff(Russell1999) in linear time instead of using iterative approximation.
 
-In the statistical literature, NB models are known by various names, including simple Bayes and independent Bayes citestuff(Hand2001). These names refer to Bayes' theorem in the classifier's decision rule, but a NB classifier model is not necessarily a Bayesian method citestuff(Russell1999, Hand2001). In other words, one can work with a NB model without accepting Bayesian probability or methods. In many practical applications, parameter estimation for NB models uses the maximum likelihood method.
+Despite their simplicity, NB classifier models have performed well in real-world situations citestuff(Metsis2006). However, a comprehensive comparison in 2006 showed that Bayesian classification performed worse than boosted trees or Random Forest (RF) citestuff(Caruana2006). An advantage of NB over other models is a smaller amount of training data citestuff(John2013, Mccallum2001).
 
-Despite their simple design and seemingly oversimplified assumptions, NB classifier models have performed quite well in many complex real-world situations. In 2004, an analysis of the Bayesian classification problem showed that there are reasonable theoretical reasons for the seemingly incredible performance of NB classifier models citestuff(Zhang2004). However, a comprehensive comparison with other classification algorithms in 2006 showed that Bayesian classification performed worse than other approaches, such as boosted trees or random forests citestuff(Caruana2006). The advantage of NB models is a small amount of training data used to estimate the parameters needed for classification citestuff(stackexchange).
-
-In the abstract, NB models are conditional probability models. The model assigns probabilities $p(C_{k}\mid x_{1},\ldots, x_{n})$ to each of the $K$ possible outcomes or classes $C_{k}$ given the problem instance to be classified, represented by the vector $x = (x_{1},\ldots, x_{n})$ which encodes $n$ features representing mutually independent variables citestuff(Murty2011). The problem with the above formulation is that if the number of features $n$ is large or the feature has a large value range, it is infeasible to base a model on probability tables. The model must therefore be reformulated using conditional probability represented by Bayes' theorem in Equation~4.
+In the abstract, NB models assign conditional probabilities $p(C_{k}\mid x_{1},\ldots, x_{n})$ to each of the $K$ possible outcomes or classes $C_{k}$ for an instance to be classified, represented by the vector $x = (x_{1},\ldots, x_{n})$ encoding $n$ features citestuff(Murty2011). The model can be reformulated using Bayes' theorem in Equation~4.
 
 \begin{equation}
 	p(C_{k}\mid \mathbf{x})={\frac{p(C_{k})\ p(\mathbf{x} \mid C_{k})}{p(\mathbf{x})}}
 	\quad\left(4\right)
 \end{equation}
 
-To estimate feature distribution parameters, we must assume a parametric distribution, or generate non-parametric models for the features from the training data set citestuff(John2013). Assumptions about the distribution of features are called an event model or Bayesian classifier, which can introduce confusion by creating both a continuous and discrete model citestuff(Mccallum2001, Metsis2006). Multinomial and Bernoulli distributions have often been used for discrete features in document classification, or spam filtering. The Gaussian NB classifier model was used since the features used in this study assumed continuous values.
-
-Clustering is often used to discretize continuous values. The new set of features obtained by discretization follows the Bernoulli distribution. Some literature claims that discretization is necessary to use a NB classifier model, but discretization may discard the information needed to distinguish between classes citestuff(Hand2001).
-
-Sometimes the distribution of class-based marginal densities is far from normal. The marginal probability density of each class can be used to estimate the kernel probability density function in such cases. This method, introduced by John and Langley citestuff(John2013), can significantly increase the accuracy of the classifier citestuff(Piryonesi2020, HastieRosset2009).
-
 \subsubsection{Neural Networks}
 %\label{NeuralNetworks}
 
 The neurons of human or animal brains provide the basis for a Neural Network (NN) or Artificial Neural Network (ANN) with connected units or nodes called artificial neurons in machine learning citestuff(mitExplainedNeural, brahme2014comprehensive). 
 
-Shallow NN models are simple and easy to train quickly with fewer parameters, and computational resources. They typically contain only a few hidden layers for processing between the input layer that receives the data, and the final layer that produces the output citestuff(olden2002illuminating, ozesmi1999artificial).  A network with at least two hidden layers citestuff(bishop2006pattern) is considered a deep NN model.
+Shallow NN models typically contain only a few hidden layers for processing between the input layer that receives the data and the final layer that produces the output citestuff(olden2002illuminating, ozesmi1999artificial). A network with at least two hidden layers citestuff(bishop2006pattern) is a deep NN model.
 
-NN models are typically trained through empirical risk minimization. This method optimizes the network's parameters to minimize the difference or empirical risk, between the predicted output and the actual target values in a given dataset citestuff(vapnik2013nature). Gradient-based methods such as backpropagation are usually used to estimate network parameters  citestuff(vapnik2013nature). During the training phase, ANN models learn from labeled training data by iteratively updating their parameters to minimize a defined loss function citestuff(goodfellow2016deep).
+Gradient-based methods such as backpropagation estimate ANN parameters citestuff(vapnik2013nature) to minimize the difference or empirical risk between the output and target labels, expressed in a loss function citestuff(goodfellow2016deep). The hyperparameters may also be modified to suit the problem citestuff(probst2019tunability) during an extensive tuning process, like the one used in this study.
 
-Using ANN models requires an understanding of their characteristics. The model suitable for a specific task varies depending on how the data is stored and other practical considerations. Many model parameters may need to be adjusted and differ for each model. The hyperparameters for the learning algorithm may also be modified to suit the problem citestuff(probst2019tunability) during an extensive tuning process experimenting on unseen training data, and various learning algorithms are available.
-
-The network design process can be simplified using previously defined ML techniques like Neural Architecture Search (NAS). These networks have performed well even when pitted against architectures selected by humans. The proposed model is tested and the responses are used to train the NAS network citestuff(zoph2016neural). \textit{AutoML} and \textit{AutoKeras} citestuff(jin2019auto) provide extensive frameworks for this process. The \textit{scikit-learn} library features various classification, regression, and clustering algorithms including SVM, Random Forest (RF), gradient boosting, k-means, and Density-Based Spatial Clustering (DBSCAN). The hyperparameters must be predefined, are not trained, and include how many neurons are in each layer, learning rate, step, stride, depth, receptive field, and padding for Convolutional Neural Network (CNN) citestuff(claesen2015hyperparameter). \textit{TensorFlow} and \textit{Keras} are used to build a custom network in \textit{Python}, and the user can define layers, models, or metrics. The data, number of hidden layer units, learning rate, and number of iterations are required parameters for model training based on a book by Liu citestuff(liu2020python).
+Principal Component Analysis (PCA) citestuff(pearson1901liii, stewart2019introduction) is a linear dimensionality reduction technique in exploratory data analysis, visualization citestuff(jolliffe2016principal), and preprocessing. The $pcaNNet$ method in the \textit{caret} package in \textit{R} citestuff(ripley2007pattern) uses PCA in preprocessing.
 
 \subsubsection{Partial Least Squares}
 %\label{subsubsec:PLS}
 
-Partial Least Squares (PLS) regression, or projection to latent structures, citestuff(wold2001pls, abdi2010partial), is a linear regression statistical model that transforms the predicted and the observable variables to a new space instead of identifying maximum variance hyperplanes used in a linear regression model. Svante and Herman O. A. Wold, a Swedish father and son, founded this approach. PLS methods are bilinear factor models because the $X$ and $Y$ are projected to new spaces. In Partial Least Squares Discriminant Analysis (PLS-DA), $Y$ is categorical citestuff(saebo2008lpls).
+Partial Least Squares (PLS) regression, or projection to latent structures, citestuff(wold2001pls, abdi2010partial), is a linear regression statistical model that transforms the predicted and the observable variables to a new space. PLS methods are bilinear factor models because the $X$ and $Y$ are projected to new spaces. In Partial Least Squares Discriminant Analysis (PLS-DA), $Y$ is categorical citestuff(saebo2008lpls).
 
-Using $n$ paired observations $\left(\vec{x_{i}}, \vec{y_{i}}\right), i \in 1, \dots, n$. PLS finds the normalized direction $\vec{p_{j}}, \vec{q_{j}}$ that maximizes the covariance in the first step $j = 1$ citestuff(youtubeYouTube), shown in Equation~5. Matrix notation is used in further discussion of the model.
+Using $n$ paired observations $\left(\vec{x_{i}}, \vec{y_{i}}\right), i \in 1, \dots, n$. PLS finds the normalized direction $\vec{p_{j}}, \vec{q_{j}}$ that maximizes the covariance in the first step $j = 1$, shown in Equation~5.
 
 \begin{equation}
 	\max_{{\vec{p}}_{j},{\vec{q}}_{j}}\operatorname{E} [\underbrace{({\vec{p}}_{j}\cdot {\vec{X}})}_{t_{j}}\underbrace{({\vec{q}}_{j}\cdot {\vec{Y}})}_{u_{j}}
 	\quad\left(5\right)
 \end{equation}
 
-The scores form an orthogonal basis in PLS regression, and the loadings are chosen to achieve this. In PCA orthogonality is not imposed on scores but onto loadings instead citestuff(lindgren1993kernel, de1994comments, dayal1997improved, de1993simpls, rannar1994pls, abdi2010partial). Many versions of PLS exist for estimating the factor and loading matrices, such as the PLS1 algorithm citestuff(takane2016pls, hoskuldsson1988pls). 
+The scores (projections) form an orthogonal basis in PLS regression, and the loadings are chosen to achieve this. In PCA orthogonality is not imposed on scores citestuff(lindgren1993kernel) but onto loadings instead citestuff(de1994comments, dayal1997improved). Many versions of PLS exist citestuff(de1993simpls, rannar1994pls) for estimating the factor and loading matrices, such as the PLS1 algorithm citestuff(takane2016pls, hoskuldsson1988pls). 
 
 \subsubsection{Flexible Discriminant Analysis}
 %\label{subsubsec:FDA}
 
-Flexible Discriminant Analysis (FDA) is a general methodology that creates the discriminant surface for a multigroup non-linear classification model based on a mixture of non-parametric linear regression models citestuff(hastie1995penalized), such as Multivariate Adaptive Regression Splines (MARS) and Linear Discriminant Analysis (LDA).
+Flexible Discriminant Analysis (FDA) is a general methodology that creates the discriminant surface for a multigroup non-linear classification model  citestuff(fisher1936use, mclachlan2005discriminant) based on a mixture of non-parametric linear regression models citestuff(hastie1995penalized), such as Multivariate Adaptive Regression Splines (MARS) and Linear Discriminant Analysis (LDA).
 
-Many predictors can be used at once in FDA citestuff(HastieTibshirani2009), variable interactions are automatically noted citestuff(hastie1994flexible), it is complex but execution time and computational load are adequate citestuff(reynes2006choice). The algorithm is not significantly affected by outliers citestuff(phillips2017applying).
+Many predictors can be used at once in FDA citestuff(HastieTibshirani2009), and variable interactions are automatically noted citestuff(hastie1994flexible). FDA is complex but execution time and computational load are adequate citestuff(reynes2006choice). The algorithm is not largely affected by outliers citestuff(phillips2017applying).
 
-Modifying different settings has a high impact on FDA citestuff(hallgren2019species), and the estimation might be unsuccessful if the predictor distributions are highly correlated. FDA is prone to overfitting citestuff(thuiller2016ensemble), and challenging to comprehend or explain citestuff(quillfeldt2017influence). The assumption of normality for the continuous independent variables is necessary citestuff(zhang2019using) to determine the response or grouping categorical variable. 
+Changed settings significantly alter FDA citestuff(hallgren2019species), and estimation might fail if predictors are correlated. FDA is prone to overfitting citestuff(thuiller2016ensemble), and challenging to comprehend citestuff(quillfeldt2017influence). Feature normality and equal group covariances are assumed citestuff(zhang2019using, wetcher2011analyzing).
 
-LDA, Normal Discriminant Analysis (NDA), or discriminant function analysis is a generalization of Fisher's linear LDA defined in 1936 citestuff(cohen2013applied). The results of LDA may be utilized directly or to reduce dimensionality before classification, which is more often used citestuff(hansen2005using). LDA finds a linear combination of features or measurements differentiating two or more sample classes citestuff(fisher1936use, mclachlan2005discriminant). Discriminant analysis has continuous independent variables and a categorical dependent variable representing the groups citestuff(wetcher2011analyzing).
-
-LDA is closely related to PCA and factor analysis since they identify linear functions of multiple variables that fit the input with the smallest error citestuff(martinez2001pca). Discriminant correspondence analysis citestuff(abdi2007discriminant, perriere2003use) is equivalent to LDA for categorical independent variables. Points in discriminant function analysis are rated based on quantitative predictors and a group measure citestuff(cokluk2008discriminant) to represent classification citestuff(venables2013modern).
-
-The assumptions of Multivariate Analysis Of Variance (MANOVA) are also true for discriminant analysis. The analysis is highly affected by outliers so there must be fewer predictor variables than samples in the smallest class citestuff(cokluk2008discriminant). In every level of the grouping variable, independent variables must be normal to achieve multivariate normality citestuff(cokluk2008discriminant, hansen2005using). Box's M statistic citestuff(hansen2005using) test whether homogeneity of variance/covariance is established and whether variances among group variables change for predictor levels. 
-
-Quadratic instead of linear discriminant analysis should be utilized if covariances are different citestuff(cokluk2008discriminant). The scores of one predictor variable should not depend on other predictor variables for any sample, and the samples should be chosen at random citestuff(cokluk2008discriminant, hansen2005using). Discriminant analysis can handle small deviations from these requirements citestuff(lachenbruch1979discriminant) and may be used even if multivariate normality is not achieved, such as for dichotomous variables citestuff(klecka1980discriminant).
-
-The discriminant rules suggest that if $x\in \mathbb{R}_{j}$, then $x\in j$ for a group $j$, and $\mathbb{R}_{j}$ sets of sample space. The discriminant analysis method identifies regions of $\mathbb{R}_{j}$ that decrease errors of classification citestuff(Hardle2003AppliedMS). A discriminant score describes how well a discriminant differentiates classes. citestuff(archive765Discriminant).
- 
-The discriminant analysis eigenvalue represents the characteristic root of each function, indicating the quality of the group separation produced by the function. The function differentiates better for a larger eigenvalue citestuff(cokluk2008discriminant). Eigenvalues do not have an upper limit citestuff(cokluk2008discriminant, hansen2005using), so the results should not be taken at face value.
-
-Even though it is not universally accepted, some suggest eigenvalues be utilized as effect size measures citestuff(hansen2005using). The percent of correctly classified data, such as the kappa value, can also be used as the effect size while accounting for random matches in classification citestuff(hansen2005using). Kappa is not biased for any particular class, whether performance is high or low, and instead normalizes across all classes citestuff(israel2006performance). 
-
-Fisher's linear discriminant and LDA are sometimes considered synonyms. However, Fisher citestuff(fisher1936use) describes a slightly different discriminant, which does not make some of the assumptions of LDA such as a normal distribution or the equality of groups covariances. The application of the Fisher discriminant is expanded to find a subspace capturing all class variability citestuff(archive765Discriminant) for multiple groups, as suggested by C. R. Rao citestuff(rao1948utilization).
-
-\subsubsection{Principal Component Analysis}
-%\label{subsubsec:PCA}
-
-Principal Component Analysis (PCA) is a linear dimensionality reduction technique with applications in exploratory data analysis, visualization, and data preprocessing. It is used in preprocessing before training a Neural Network in the $pcaNNe$ method in the \textit{caret} package in \textit{R} citestuff(ripley2007pattern). The data is linearly transformed into a new coordinate system such that the directions (principal components) capturing the largest variation in the data can be easily identified. Many studies use the first two principal components to plot the data and visually identify clusters of closely related data points citestuff(jolliffe2016principal).
-
-PCA is closely related to factor and Canonical Correlation Analysis (CCA). PCA is the simplest of the true eigenvector-based multivariate analyses. PCA defines a new orthogonal coordinate system that optimally describes the variance in a single dataset citestuff(barnett1987origins, hsu2012spectral, markopoulos2017efficient, chachlakis2019l1). CCA does the same for the cross-covariance between two datasets. Robust and L1-norm-based variants of standard PCA have also been proposed citestuff(chachlakis2019l1, markopoulos2014optimal, zhan2015robust, ke2005robust).
-
-Karl Pearson citestuff(pearson1901liii) conceived of PCA in 1901 as a counterpart of the principal axis theorem in mechanics citestuff(stewart2019introduction). Harold Hotelling discovered the Hotelling transform in multivariate quality control in the 1930s without knowledge of the previous work citestuff(hotelling1933analysis, hotelling1992relations). Synonyms for PCA include the discrete Proper Orthogonal Decomposition (POD) citestuff(berkooz1993proper, karhunen1946spektraltheorie, loeve1977elementary, sirovich1987turbulence) in mechanical engineering and the Kosambi–Karhunen–Loève or Karhunen–Loève Theorem (KLT) citestuff(sapatnekar2011overcoming, ghoman2012pod, archiveKarhunenLoeveTransform, giambartolomei2016, mallat1999wavelet, tang1998texture) in signal processing. Singular Value Decomposition (SVD) of $X$, established in the final quarter of the $19^{th}$ century citestuff(stewart1993early), is also similar to PCA. Eigenvalue Decomposition (EVD) of a matrix $\mathbf{X}^{\mathsf{T}}\mathbf{X}$ in linear algebra shares the mathematical foundations of PCA citestuff(gloub1996matrix, hayden2002observations). Factor analysis differs in several key features citestuff(jolliffe2002principal), but has many aspects in common with PCA. Empirical Orthogonal Functions (EOF) citestuff(lorenz1956empirical) in meteorological science were developed by Lorenz in 1956 citestuff(lorenz1956empirical). The Eckart–Young theorem citestuff(eckart1936approximation) and quasiharmonic modes citestuff(dove1993introduction) are both connected to PCA. Empirical modal analysis in structural dynamics and spectral decomposition in noise and vibration also take a similar approach to PCA.
-
-The data in PCA is converted to a new coordinate system using a scalar projection, an orthogonal linear transformation on a real inner product space. The first coordinate or principal component covers the largest portion of the variance, decreasing with each following component citestuff(jolliffe2002principal, bengio2013representation). The significance of the principal components can be checked with parametric bootstrap for a smaller dataset to help decide how many principal components to keep citestuff(forkman2019hypothesis).
+LDA, Normal Discriminant Analysis (NDA), or discriminant function analysis citestuff(cohen2013applied) is a generalization of Fisher's linear discriminant defined in 1936 citestuff(fisher1936use, archive765Discriminant, rao1948utilization). The results of LDA may be utilized directly, as demonstrated in this experiment, but they are more often used to reduce dimensionality citestuff(hansen2005using).
 
 \subsection{Data Description and Analysis}
 %\label{subsec:Data}
 
-The performance of GNSS is linked to many dynamic space weather conditions. Solar activity can citestuff(tobiska1996current) can induce various effects that degrade the accuracy, availability, and reliability of GNSS PNT.
+Dynamic space weather conditions, such as solar activity and geomagnetic storms, can affect  GNSS PNT performance and high-frequency GPS signals passing through the ionosphere, motivating work on error modeling citestuff(klobuchar1986design, zolesi2014ionospheric). Changes in the ionosphere include the density distribution, $TEC$, and the current balance citestuff(komjathy2023global).
 
-Disturbances caused by geomagnetic storms citestuff(vitinsky1986statistics) can also affect the high-frequency GPS signals citestuff(lanyi1988comparison) passing through the ionosphere layer citestuff(rishbeth1969introduction, ratcliffe1972introduction), motivating work on error modeling of the ionosphere citestuff(klobuchar1986design, zolesi2014ionospheric). Observed changes in the ionosphere layer include the density distribution in the ionosphere, $TEC$ values, and the current balance in the ionosphere citestuff(komjathy2023global).
+Geomagnetic storms cause signal deterioration by affecting Global Electric Current (GEC) variability citestuff(NOAA2024aRadioCommunications). The ionosphere may show changes related to location, geomagnetic and solar activity, sunspots, local time citestuff(kotz2005encyclopedia), seasonality, thunderstorms citestuff(vellinov1992ionospheric), nuclear experiments, earthquakes citestuff(liu20142013), and other phenomena.
 
-Geomagnetic storms citestuff(NOAA2024aRadioCommunications) cause signal deterioration by affecting Global Electric Current (GEC) variability citestuff(Gray2019, Gray2021). The ionosphere citestuff(wild1994ionosphere) may show changes citestuff(hawarey2010uzay) related to geographical and geomagnetic location, geomagnetic and solar activity, the appearance of sunspots, local time citestuff(kotz2005encyclopedia), seasonality, thunderstorms citestuff(vellinov1992ionospheric), nuclear experiments on Earth, earthquakes citestuff(liu20142013), and other phenomena. These effects are characterized by geomagnetic storm $K_{p}$-indices and geomagnetic activity $Dst$-indices, where active changes from space and Earth stations are measured and assessed.
+Many parameters can describe the Earth's geomagnetic field citestuff(ulukavak2018analysis). This study focuses on parameters describing disturbances, most importantly $a_{p}$ indices calculated from $K_{p}$ and $K$ indices, Total Electron Content ($TEC$), standard deviation of Total Electron Content ($dTEC$), and Disturbance Storm-Time ($Dst$). 
 
-Many parameters citestuff(ulukavak2018analysis) can describe the Earth's geomagnetic field. This study focuses on parameters describing disturbances of the Earth's geomagnetic field, most importantly $a_{p}$ indices calculated from $K_{p}$ and $K$ indices, $Total Electron Content (TEC)$, $detrended Total Electron Content (dTEC)$, and $Disturbance Storm-Time (Dst)$. 
-
-Incorporating parameters such as the $K_{p}$-indices and $a_{p}$-indices, which provide global measures of geomagnetic activity, alongside local $TEC$ and $Dst$-index values, allows for a more detailed assessment of the space environment and its potential effects on GNSS signals. $a_{p}$, $TEC$, $dTEC$, $Dst$ were used with $B_x$, $B_y$, and $B_z$ representing components of the Earth's magnetic field to train machine-learning models.
+Incorporating parameters such as the $K_{p}$-indices and $a_{p}$-indices, which provide global measures of geomagnetic activity, alongside local $TEC$ and $Dst$-index values, allows for a more detailed assessment of the space environment and its potential effects on GNSS signals. Values of $a_{p}$, $TEC$, $dTEC$, $Dst$ were used with the $B_x$, $B_y$, and $B_z$ components of the Earth's magnetic field to train machine-learning models.
 
 \subsubsection{Magnetic Field Indices}
 %\label{subsec:BxByBz}
 
-The Earth's magnetic field has similarities to that of a bar magnet. However, plasma gushes citestuff(schwenn2001solar) coming from the solar corona and the domain of the Sun influence the interplanetary magnetic field citestuff(melnikov1990relationships). $B_{x}$, $B_{y}$ and $B_{z}$ vector represent interplanetary magnetic field indices. $B_{x}$ and $B_{y}$ are parallel to the plane of orbits, and the third component $B_{z}$ is perpendicular. 
-
-The Sun's magnetic field is $100$ times larger than the Earth's. Sunspots citestuff(harden2005solar) appear when the Sun's activity is highest. Sunspots are filled with magnetism and large magnetic field lines, and matter sputtering can occur citestuff(gonzalez1994geomagnetic). Affected by solar winds citestuff(Viereck2024), the Earth's magnetic field lines are compressed in the sun's direction and expand in the wind's direction. Twin poles (dipoles) are locations with a high concentration of magnetic field lines. The result is a tear-drop shape of the Earth's magnetosphere. The Sun's magnetic field lines are distant along the equatorial line but closer together in the poles, just like the Earth's citestuff(aschwanden2006physics).
-
-The $B_{z}$ magnetic field component turns south in the initial phase of a magnetic storm while conditions on the north side are stable citestuff(abraha2014total). The electric ($E$) and magnetic ($B$) field is oriented westward in quiet conditions, with $E \times B$ rotation in the $B_{y}$ electric field. During magnetic disturbances in equatorial regions, the $B_{y}$ electric field decreases, as does the downward slip from a positive to a negative value, leading to the positive phase of the storm. When severe deterioration occurs, the $B_{y}$ downward slip increases and the negative phase of a storm begins citestuff(turunen1980examples, adeniyi1986magnetic). An expansion of the F2 layer is also observed due to excess plasma production. Magnetic field indices are available in one-hour resolution from the web interface of the National Aeronautics and Space Administration (NASA) Goddard Space Physics Data Facility (SPDF) citestuff(Papitashvili2024About, Papitashvili2024Explorer).
+The Earth's magnetic field has similarities to that of a bar magnet. However, plasma gushes from the solar corona and the domain of the Sun influence the interplanetary magnetic field citestuff(schwenn2001solar, melnikov1990relationships). The $B_{x}$, $B_{y}$, and $B_{z}$ vectors represent interplanetary magnetic field indices. $B_{x}$ and $B_{y}$ are parallel to the plane of orbits, and the third component $B_{z}$ is perpendicular. Widely available hand-held devices, such as Android smartphones citestuff(Android2024SensorTypes), measure magnetic field indices in micro-Tesla ($\mu T$). The Android magnetometer reports accuracy through a status variable. Readings are calibrated using temperature compensation, factory (or online) soft-iron, and online hard-iron calibration.
  
 \subsubsection{Geomagnetic Storm Indices}
 %\label{subsec:K}
 
-The geomagnetic storm $K$-index is an integer from $0$ to $9$ measuring disturbances in global geomagnetic activity derived from $B_{x}$ and $B_{y}$, the horizontal component of the Earth's magnetic field citestuff(de2007ionosphere). The maximum positive and negative fluctuations of $B_{x}$ and $B_{y}$, relative to a quiet day, and based on magnetometer observations during $3$ hours, are added together to determine the total maximum fluctuation.
+The geomagnetic storm $K$-index is an integer from $0$ to $9$ measuring disturbances in global geomagnetic activity. The maximum positive and negative fluctuations of the horizontal components of the Earth's magnetic field citestuff(de2007ionosphere), $B_{x}$ and $B_{y}$, during $3$ hours, relative to a quiet day, are added to determine the total maximum fluctuation.
 
-Each observatory uses different threshold values to convert the maximum $nT$ (nanotesla) fluctuation to a $K$-index value. The threshold values for each observatory are adjusted so that the historical rate of occurrence for each $K$-index value is similar across all observatories. Observatories with a lower geomagnetic latitude use a lower fluctuation in $B_{x}$ and $B_{y}$ to achieve each $K$-index value. 
+Each observatory uses different threshold values to convert the maximum $nT$ (nano-Tesla) fluctuation to a $K$-index value. The thresholds for each observatory are adjusted so that the historical rate of occurrence for each $K$-index value is similar across all observatories. Observatories with a lower geomagnetic latitude use a lower fluctuation in $B_{x}$ and $B_{y}$ to achieve each $K$-index value. 
 
 The threshold valid in Boulder, Colorado citestuff(NOAA2024bKindex) for transforming the maximum $B_{x}$ and $B_{y}$ fluctuation measured in $nT$ using a magnetometer into a $K$-index value is given in Table~\ref{tab:K}.
 
@@ -424,9 +372,7 @@ Hourly geomagnetic storm index data are available on the NASA Goddard SPDF cites
 
 The official planetary $K_{p}$-index is a weighted average of $K$-indices from multiple observatories. When $K$-index data is not available in real-time, operators such as The National Oceanic and Atmospheric Administration (NOAA) Space Weather Prediction Center (SWPC) calculate near real-time estimates of the $K_{p}$-index citestuff(Myint2022).
 
-The NOAA SWPC citestuff(NOAA2024dPlanetary) uses ground-based magnetometers located in Sitka, (Alaska), Meanook (Canada), Ottawa (Canada), Fredericksburg (Virginia), Hartland (UK), Wingst (Germany), Niemegk (Germany), and Canberra (Australia). The SWPC collaborates with the U.S. Geological Survey, Natural Resources Canada (NRCAN), the British Geological Survey, the German Research Centre for Geosciences (GFZ), and Geoscience Australia to gather additional data. The Institut de Physique du Globe de Paris and the Korean Space Weather also contributed magnetometer observations. 
-
-$K$-index Watches are issued when the highest predicted NOAA estimated $K_{p}$-indices for a day are $K$ $=$ $5$, $6$, $7$, or $\geq 8$ and is reported in terms of the NOAA G scale. $K$-index Warnings are issued when NOAA estimated $K_{p}$-indices of $4$, $5$, $6$, and $7$ or greater are expected. $K$-index Alerts are issued when the NOAA estimated $K_{p}$-indices reach $4$, $5$, $6$, $7$, $8$, or $9$. The $K_{p}$-index as related to geomagnetic storm descriptions and warnings using the NOAA G scale citestuff(NOAA2024eSpace, NOAA2024fScales) is given in Table~\ref{tab:Kp}.
+The $K_{p}$-index as related to geomagnetic storm descriptions and warnings using the NOAA G scale citestuff(NOAA2024eSpace, NOAA2024fScales) is given in Table~\ref{tab:Kp}.
 
 In March 2021, $K_{p}$ was assigned a DOI with a dataset citestuff(Matzka2021a) and a scientific publication citestuff(Matzka2021b) for reference.
 
@@ -434,15 +380,10 @@ In March 2021, $K_{p}$ was assigned a DOI with a dataset citestuff(Matzka2021a) 
     \centering
     \caption{The $K_{p}$-index as related to geomagnetic storm descriptions and warnings using the NOAA G scale citestuff(NOAA2024eSpace, NOAA2024fScales).}
     \label{tab:Kp}
-    \begin{tabular}{|c|c|c|}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
         \hline
-        $K_{p}$-index & NOAA Space Weather Scale Geomagnetic Storm Level \\ \hline
-        $0\leq K_{p}<5$ & G0 \\ \hline
-        $K_{p}=5$ & G1 \\ \hline
-        $K_{p}=6$ & G2 \\ \hline
-        $K_{p}=7$ & G3 \\ \hline
-        $K_{p}=8, 9_{-}$ & G4 \\ \hline
-        $K_{p}=9$ & G5 \\ \hline
+        $K_{p}$-index & $<5$ & $5$ & $6$ & $7$ & $8, 9_{-}$ & $9$ \\ \hline
+        NOAA Space Weather Scale Geomagnetic Storm Level & G0 & G1 & G2 & G3 & G4 & G5 \\ \hline
     \end{tabular}
 \end{table}
 
@@ -478,92 +419,10 @@ The $A$-index citestuff(NOAA2024gGeomagneticIndices) represents a daily average 
  \end{tabular}
 \end{table}
 
-\subsubsection{Total Electron Content}
-%\label{subsubsec:TEC}
-
-The content of gaseous atoms and molecules in the atmosphere increases due to daytime Extreme ultraviolet (EUV) rays and X-rays emitted from the Sun, causing photoionization. Photoionization is a process in which positively charged ions and negatively charged free electrons form and change the electron-ion concentration citestuff(prolss2012physics).
-
-Changes in $Total Electron Content (TEC)$ levels citestuff(liu2009seismoionospheric) can increase signal delay which can cause positioning errors, especially critical for high-precision applications citestuff(durmaz2015regional, jin2012m_dcb). $TEC$ can be calculated as indicated in Equation~1, Equation~2, and Equation~3. 
-
-The Global Positioning System (GPS) ionospheric delay citestuff(schaer1999mapping) on the radio ray path between the satellite and receiver is defined in Equation~6 citestuff(spilker1996global) where $\Delta t$ represents the GPS ionospheric delay, $c$ is the velocity of light, and $n(l)$ is the refraction index on the path $l$.
-
-\begin{equation}
-	\Delta t = \frac{1}{c} \int_{satellite}^{receiver} \left[ n(l) - l \right]dl
-	\quad\left(7\right)
-\end{equation}
-
-The GPS ionospheric delay $\Delta \rho \dots$ related to distance measurements can be defined using Equation~7 citestuff(spilker1996global).
-
-\begin{equation}
-	\Delta \rho = \frac{1}{c} \int_{satellite}^{receiver} \left[ n(l) - l \right]dl
-	\quad\left(8\right)
-\end{equation}
-
-Appleton’s formula in Equation~8 reasonably approximates the relationship between the refraction index and the free electron density distribution citestuff(davies1990ionospheric, spilker1996global). $N(h)$ is the vertical distribution of the free electron density over a height $h$ above the surface of the Earth, and $f$ is the frequency of the radio signal.
-
-\begin{equation}
-	n(l) = 1 + \frac{40.3 N(h)}{f^{2}}
-	\quad\left(9\right)
-\end{equation}
-
-The combination of Equation~6 and Equation~8 yields Equation~9 that directly describes the relationship between the free electron density profile and the GPS ionospheric delay citestuff(spilker1996global).
-
-\begin{equation}
-	\Delta t = \frac{40.3}{c f^{2}} \int_{receiver}^{satellite} N(h)dh
-	\quad\left(10\right)
-\end{equation}
-
-The $TEC$ citestuff(spilker1996global) in Equation~10 is calculated using the integral on the right side of Equation~9.
-
-\begin{equation}
-	TEC = \int_{receiver}^{satellite} N(h)dh
-	\quad\left(11\right)
-\end{equation}
-
-Using equation Equation~10, Equation~9 can be written as shown in Equation~11.
-
-\begin{equation}
-	\Delta t = \frac{40.3}{c f^{2}} TEC
-	\quad\left(12\right)
-\end{equation}
-
-Following the same analogy, the equivalent GPS ionospheric delay is calculated in Equation~12.
-
-\begin{equation}
-	\Delta \rho = \frac{40.3}{c f^{2}} TEC
-	\quad\left(13\right)
-\end{equation}
-
-Considering the pseudo-range measurements taken on both GPS transmitting frequencies ($f_{1}=1575.42$ $MHz$ and $f_{2}=1227.60$ $MHz$) and using Equation~12, the relation between the $TEC$ and GPS pseudo-range measurements can be established in Equation~13 citestuff(spilker1996global):
- 
-\begin{equation}
-	\rho_{1} - \rho_{2} = 40.3 TEC \left( \frac{1}{f_{1}^{2}} - \frac{1}{f_{2}^{2}} \right)
-	\quad\left(14\right)
-\end{equation}
-
-Equation~13 can be rewritten as in Equation~14, defining $TEC$. The actual value of the $TEC$ can be computed utilizing a dual-frequency GPS receiver and Equation~14.
-
-\begin{equation}
-	TEC = \frac{\rho_{1} - \rho_{2}}{40.3} \frac{{\left(f_{1}f_{2}\right)}^{2}}{f_{2}^{2}-f_{1}^{2}}
-	\quad\left(15\right)
-\end{equation}
-
-Considering the imposed regulations for common GPS dual-frequency receiver use, a different method for estimating the $TEC$ and GPS ionospheric delay is needed. A standard GPS ionospheric delay model, such as the Klobuchar model in Equation~15 citestuff(enge1994global,spilker1996global). A cosine-like daily dynamic of GPS ionospheric delay values is assumed in the Klobuchar model, with the daily maximum appearing around 14:00 in local time citestuff(klobuchar1987ionospheric).
-
-\begin{equation}
-	\Delta t = F \left[ t_{n} + A \cos \frac{2\pi\left(t-t_{0}\right)}{P} \right]
-	\quad\left(16\right)
-\end{equation}
-
-\subsubsection{Detrended Total Electron Content}
-%\label{subsubsec:dTEC}
-
-Some ionospheric phenomena, such as Traveling Ionospheric Disturbance (TID) and Equatorial Plasma Bubbles (EPB), are most clearly discernable by examining detrended TEC data instead of absolute TEC measurements of the state of the ionosphere derived from GNSS. A TEC data detrending method developed by Pradipta et al. citestuff(Pradipta2015) can differentiate wavelike fluctuations associated with TID and deep depletions associated with EPB. Subsequent 2-D geospatial latitude/longitude mapping of net detrended Total Electron Content (dTEC) values from more than stations in South America reveal the drift movement throughout the evening and the spatial structures of EPB over that region, closely aligned with the geomagnetic meridian. Spatial awareness of ionospheric irregularities can be enhanced using 2-D latitude/longitude maps of an affected area citestuff(Pradipta2019).
-
 \subsubsection{Disturbance Storm-Time}
 %\label{subsubsec:Dst}
 
-The next relevant parameter is $Disturbance Storm-Time (Dst)$, also known as the geomagnetic activity $Dst$-index, another measure of geomagnetic storm intensity. The $Dst$-index is a geomagnetic indicator of magnetic flux changes derived from measurements taken by a network of ground-based magnetometer stations near the magnetic equator, which continuously monitor $B_{x}$ and $B_{y}$, the horizontal components of Earth's magnetic field citestuff(zolesi2014ionospheric). The $Dst$-index describes ring currents forming above the sub-equatorial region and affecting the ionospheric regions in mid-latitudes.
+The next relevant parameter is Disturbance Storm-Time ($Dst$), also known as the geomagnetic activity $Dst$-index, another measure of geomagnetic storm intensity. The $Dst$-index is a geomagnetic indicator of magnetic flux changes derived from measurements taken by a network of ground-based magnetometer stations near the magnetic equator, which continuously monitor $B_{x}$ and $B_{y}$, the horizontal components of Earth's magnetic field citestuff(zolesi2014ionospheric). The $Dst$-index describes ring currents forming above the sub-equatorial region and affecting the ionospheric regions in mid-latitudes.
 
 To calculate the $Dst$-index, variations in $B_{x}$ and $B_{y}$, the horizontal magnetic field, are obtained from multiple stations and averaged. The average is subtracted from a baseline value representing the quiet-time magnetic field. The resulting $Dst$ value in $nT$ measures the intensity of geomagnetic disturbances, with increasingly negative values indicating stronger geomagnetic storms. 
 
@@ -607,419 +466,164 @@ Loewe and Prölss citestuff(loewe1997classification) classified magnetic activit
         \\
         Intense & $-100$ & $-10$ & $3$ \\
         Moderate & $-50$ & $-5$ & $2$ \\
-        Small & $-30$ & $-3$ & $1$ \\
-        (typical substorm) & & & \\
+        Small (typical substorm) & $-30$ & $-3$ & $1$ \\
         \\
         \hline
     \end{tabular}
 \end{table}
 
-To generate classes for this study, samples were split into $5$ ranges, P (positive, $Dst$ from $15$ to $50$), N (normal, $Dst$ from $-20$ to $15$), R (recovery, $Dst$ from $-55$ to $-20$), T (through, $Dst$ from $-85$ to $-55$), and E (extreme, $Dst$ from $-120$ to $-85$), based on $Dst$ values derived from theoretical knowledge of different storm phases. Table \ref{tab:Dstranges} lists the ranges used in this study.
+\subsubsection{Training and Testing Dataset}
+%\label{subsubsec:DataTrainTest}
+
+Among $9799$ samples, $208$ were considered outliers because the $TEC$ is larger than or equal to $300$ $nT$. The remaining $9591$ samples are used for training and testing. The samples are divided into training and testing datasets as close as possible to a ratio of $80\%$ for training and $20\%$ for testing. The division was stratified so that an approximately equal ratio of classes was present in both the training and testing data, which is a feature of the \textit{createDataPartition} function from the \textit{caret} \textit{R} library that was used citestuff(KuhnDataSplitting2024, hyndman2018forecasting, createDataPartition2024).
+
+Samples were split into $5$ class ranges, based on $Dst$ values derived from theoretical knowledge of different storm phases and similar to Loewe and Prölss citestuff(loewe1997classification). The upper range limits are excluded, while the lower ones are included. 
+
+Table \ref{tab:Dstranges} lists the $Dst$ class ranges used in this study, the total number of samples in each class, and the number of samples used for testing, and training. It is evident from this division that the normal (N), and recovery (R) classes are far more common than other classes with very high or low $Dst$ values, impacting model performance.
 
 \begin{table}[!ht]
     \centering
-    \caption{$Dst$-based classification rules used in this study.}
+    \caption{$Dst$-based classification rules used in this study, the total number of samples in each class, and the number of samples used for testing, and training.}
     \label{tab:Dstranges}
-    \begin{tabular}{|c|c|}
+    \begin{tabular}{|c|c|c|c|c|}
         \hline
-        $Dst$ & Storm phase classification \\ \hline
-        $15\dots50$ & positive phase (P) \\ \hline
-        $-20\dots15$ & normal (N) \\ \hline
-        $-55\dots-20$ & recovery phase (R) \\ \hline
-        $-85\dots-55$ & through (T) \\ \hline
-        $-120\dots-85$ & extreme (E) \\ \hline
-    \end{tabular}
-\end{table}
-
-\subsubsection{Correlation}
-%\label{subsubsec:Correlation}
-
-To verify if variables other than $dTEC$ were truly independent of each other and individually dependent on $dTEC$, which was the assumption used in the hypothesis of this study, the data was examined before training classification models. A Correlation plot formatted as a heat map, box plots, histograms, and scatter plots were generated and studied for different variable ranges and combinations. The minimum, $1^{st}$ quartile, median, arithmetic mean, $3^{rd}$ quartile, and maximum values for all variables are also included in the analysis.
-
-Figure~\ref{fig:correlation} contains a heat map of the correlation between all variables used in this study. Blue represents a low correlation, while red represents a higher correlation. Swapping the row and column leads to the same combination of variables, so the matrix is symmetrical concerning the secondary diagonal. The values on the secondary diagonal equal $1$ and can be disregarded because all variables are fully correlated with themselves. Besides these values on the secondary diagonal, the highest correlation of $0.78$ is between $dTEC$ and $TEC$, as expected based on previously outlined theoretical aspects of these variables. $B_{x}$ and $Dst$ have a correlation coefficient of $0.52$, the second highest value not on the secondary diagonal. This is the only other value larger than $0.5$ not on the secondary diagonal. A high correlation of $B_{x}$ and $Dst$ supports the hypothesis that we can predict $Dst$ values, ranges, or classes using $B_{x}$. The third highest correlation coefficient not on the secondary diagonal is between $B_{x}$ and $B_{y}$ and equals $0.44$. The properties and definitions of these variables explain this correlation.
-
-\begin{figure}
- \centering
- \includegraphics[width=0.9\linewidth]{correlation.pdf}
-    \caption{A heat map of the correlation between all variables used in this study, where red represents a higher correlation, while blue represents a low correlation. All variables are fully correlated with themselves, so all values on the secondary diagonal equal $1$. The matrix is symmetrical concerning the secondary diagonal because the same combination of correlated variables is achieved when swapping the row and column.}
-    \label{fig:correlation}
-\end{figure}
-
-The box plots of all variables for different ranges of $Dst$ values in Figure~\ref{fig:dataset2boxplot}, without restriction on the range of $TEC$, and in Figure~\ref{fig:iono3boxplot}, where the $TEC$ is less than $300$ $nT$, demonstrate that the minimum, maximum, and arithmetic mean of $a_{p}$ decrease for larger $Dst$ values regardless of $TEC$ ranges. The opposite is true for $B_{x}$, as indicated by a high correlation of $B_{x}$ and $Dst$ in Figure~\ref{fig:correlation}. $B_{y}$ exhibits the same trend as $B_{x}$, but it is less prominent. $B_{z}$ is the most stable variable with the smallest changes related to $Dst$ when observing $B_{x}$, $B_{y}$, and $B_{z}$, but an increase for larger $Dst$ values can also be observed. Similar conclusions can be reached from the scatter plots of all variables for different ranges of $Dst$ in Figure~\ref{fig:iono3scatterplot}. 
-
-The scatter plots of all variables for different ranges of $TEC$ values in Figure~\ref{fig:dataset2scatterplot} demonstrate that their distribution is not significantly dependent on $TEC$. This is why the box plots in Figure~\ref{fig:dataset2boxplot} and Figure~\ref{fig:iono3boxplot} that only differ in $TEC$ ranges look very similar. A minimal difference is also evident between the histograms of the relative frequency for all variables in Figure~\ref{fig:allTEC}, without restriction on the range of $TEC$, and in Figure~\ref{fig:300TEC}, where the $TEC$ is less than $300$ $nT$. Table~\ref{tab:minmax} provides the minimum, $1^{st}$ quartile, median, arithmetic mean, $3^{rd}$ quartile, and maximum values for all variables, supporting the conclusions made based on Figure~\ref{fig:dataset2boxplot} and Figure~\ref{fig:allTEC}.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\linewidth]{dataset2boxplot_fix.pdf}
-    \caption{Box plots of all variables without restriction on the range of $TEC$ for different ranges of $Dst$ values defining the class label used in this study.}
-    \label{fig:dataset2boxplot}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\linewidth]{iono3boxplot_fix.pdf}
-    \caption{Box plots of all variables when the $TEC$ is less than $300$ $nT$ for different ranges of $Dst$ values defining the class label used in this study.}
-    \label{fig:iono3boxplot}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\linewidth]{iono3scatterplot.pdf}
-    \caption{Scatter plots of all variables when the $TEC$ is less than $300$ $nT$ for different ranges of $Dst$ values defining the class label used in this study.}
-    \label{fig:iono3scatterplot}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\linewidth]{dataset2scatterplot.pdf}
-    \caption{Scatter plots of all variables for different ranges of $TEC$ values without restriction.}
-    \label{fig:dataset2scatterplot}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\linewidth]{allTEC_fix.pdf}
-    \caption{Histograms of the relative frequency for all variables without restriction on the range of $TEC$.}
-    \label{fig:allTEC}
-\end{figure}
-
-\begin{figure}
- \centering
- \includegraphics[width=0.9\linewidth]{300TEC_fix.pdf}
-    \caption{Histograms of the relative frequency for all variables when the $TEC$ is less than $300$ $nT$.}
-    \label{fig:300TEC}
-\end{figure}
-
-\begin{table}[!ht]
-    \centering
-    \caption{The minimum, $1^{st}$ quartile, median, arithmetic mean, $3^{rd}$ quartile, and maximum values for all variables.}
-    \label{tab:minmax}
-    \begin{tabular}{|c|c|c|c|c|c|}
-        \hline
-        & $TEC$ & $dTEC$ & $B_{x}$ & $B_{y}$ & $B_{z}$ \\ \hline
-        Min. & $1.00$ & $0.01$ & $35268$ & $1900$ & $-29651$ \\ \hline
-        $1^{st}$ Qu. & $7.26$ & $1.66$ & $35400$ & $1988$ & $-29623$ \\ \hline
-        Median & $19.62$ & $3.13$ & $35410$ & $2001$ & $-29620$ \\ \hline
-        Mean & $40.00$ & $15.88$ & $35412$ & $2001$ & $-29617$ \\ \hline
-        $3^{rd}$ Qu. & $34.23$ & $6.49$ & $35423$ & $2015$ & $-29613$ \\ \hline
-        Max. & $1288.00$ & $997.00$ & $35527$ & $2092$ & $-29570$ \\ \hline
+        $Dst$ & Storm phase classification & Total samples & Test samples & Train samples \\ \hline
+        $ \geq 15 $ & positive phase (P) & $135$ & $27$ & $108$ \\ \hline
+        $[-20, 15>$ & normal (N) & $7495$ & $1499$ & $5996$ \\ \hline
+        $[-55, -20>$ & recovery phase (R) & $1858$ & $371$ & $1487$ \\ \hline
+        $[-85, -55>$ & through (T) & $90$ & $18$ & $72$ \\ \hline
+        $ < -85$ & extreme (E) & $13$ & $2$ & $11$ \\ \hline
+        Any & Any & $95$ & $2$ & $11$ \\ \hline
     \end{tabular}
 \end{table}
 
 \subsubsection{Data Preprocessing}
 %\label{subsubsec:Preprocessing}
 
-Data preprocessing is recommended to increase classification accuracy citestuff(Fan2008), so this step was also applied to the input data before training the models in this study. There are many ways to standardize data, such as minimum-maximum, normalization by decimal scaling, and Z-score citestuff(Mohamad2013). Subtracting the mean and dividing by the variance for each feature are commonly used for SVM models citestuff(Fennell2019) and other models tested in this study, so this approach was chosen. 
+Data preprocessing can increase classification accuracy citestuff(Fan2008). There are many ways to standardize data, such as minimum-maximum, normalization by decimal scaling, and Z-score citestuff(Mohamad2013). Subtracting the mean and dividing by the variance for each feature are commonly used for SVM models citestuff(Fennell2019) and other models tested in this study, so this approach was chosen. 
 
-The values \textit{scale} and \textit{center} were used in the code for this study in the \textit{preProcess} parameter for the \textit{train} function from the \textit{caret} package developed for \textit{R}. The option \textit{center} subtracts the mean of each feature while \textit{center} divides by the standard deviation. 
+The values \textit{scale} and \textit{center} were used in the code for this study in the \textit{preProcess} parameter for the \textit{train} function from the \textit{caret} package developed for \textit{R}. The option \textit{center} subtracts the mean of each feature while \textit{scale} divides by the standard deviation.
 
-\subsubsection{Training and Testing Dataset}
-%\label{subsubsec:DataTrainTest}
+\subsubsection{Correlation}
+%\label{subsubsec:Correlation}
 
-The samples are divided into training and testing datasets as close as possible to a ratio of $80\%$ for training and $20\%$ for testing. During the division, the share of classes in the original data was taken into account, that is, the division was stratified by class so that an approximately equal ratio of classes was present in both the training data and the testing data, which is a feature of the \textit{createDataPartition} function from the \textit{caret} \textit{R} library that was used citestuff(KuhnDataSplitting2024, hyndman2018forecasting, createDataPartition2024).
+Figure~\ref{fig:correlation} contains a heat map of the correlation between all variables used in this study. The highest correlation of $0.52$ is between $B_{x}$ and $Dst$, as expected based on theoretical knowledge, and supporting the hypothesis that $Dst$ can be predicted using $B_{x}$. The second highest correlation is between $a_{p}$ and $Dst$ and equals $-0.48$, meaning $a_{p}$ can be used to predict  $Dst$ with an opposite trend.
+
+\begin{figure}
+ \centering
+ \includegraphics[width=0.9\linewidth]{iono3correlation.pdf}
+    \caption{A heat map of the correlation between all variables used in this study, when the $TEC$ is less than $300$ $nT$. Red represents a high positive correlation, blue represents a high negative correlation, and white represents a low correlation. Variables are fully correlated with themselves, so values on the secondary diagonal equal $1$. The matrix is symmetrical concerning the secondary diagonal because the same combination of correlated variables is achieved when swapping the row and column.}
+    \label{fig:correlation}
+\end{figure}
+
+The box plots of all variables for different ranges of $Dst$ values in Figure~\ref{fig:iono3boxplot} demonstrate that the minimum, maximum, and arithmetic mean of $a_{p}$ decrease for larger $Dst$. The opposite is true for $B_{x}$, as indicated by a high correlation in Figure~\ref{fig:correlation}. $B_{y}$ exhibits a reverse trend when compared to $B_{x}$, but it is less prominent. $B_{z}$ is the most stable with the smallest changes related to $Dst$ when observing $B_{x}$, $B_{y}$, and $B_{z}$.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{iono3boxplot_fix.pdf}
+    \caption{Box plots of all variables, when the $TEC$ is less than $300$ $nT$, for different ranges of $Dst$ values defining the class label used in this study.}
+    \label{fig:iono3boxplot}
+\end{figure}
+
+Table~\ref{tab:minmax} provides the minimum, $1^{st}$ quartile, median, arithmetic mean, $3^{rd}$ quartile, and maximum values for all variables when the $TEC$ is less than $300$ $nT$. These values suggest that variables are not normally distributed. The Kolmogorov-Smirnov and Shapiro-Wilk normality tests, using \textit{R} functions \textit{ks.test} citestuff(ks.test2024) and \textit{shapiro.test} citestuff(shapiro.test2024), did not yield a $p$-value larger than the selected $\alpha$-value of $0.05$ for any variable, further strengthening the claim that variables do not follow a normal (Gaussian) distribution. 
+
+\begin{table}[!ht]
+    \centering
+    \caption{The minimum, $1^{st}$ quartile, median, arithmetic mean, $3^{rd}$ quartile, and maximum values for all variables when the $TEC$ is less than $300$ $nT$.}
+    \label{tab:minmax}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|}
+                \hline
+                  & $TEC$ & $dTEC$ & $B_{x}$ & $B_{y}$ & $B_{z}$ & $Dst$ & $a_{p}$ \\ \hline
+                Min. & $1.76$ & $0.02$ & $35275.0$ & $1913.0$ & $-29649.0$ & $-119.0$ & $0.0$ \\ \hline
+                $1^{st}$ Qu. & $8.43$ & $1.12$ & $35402.0$ & $1990.0$ & $-29623.0$ & $-18.0$ & $4.0$ \\ \hline
+                Median & $22.83$ & $2.47$ & $35410.0$ & $2004.0$ & $-29620.0$ & $-5.0$ & $6.0$ \\ \hline
+                Mean & $24.62$ & $6.208$ & $35413.0$ & $2003.0$ & $-29617.0$ & $-9.678$ & $7.539$ \\ \hline
+                $3^{rd}$ Qu. & $34.23$ & $5.54$ & $35423.0$ & $2018.0$ & $-29614.0$ & $-1.0$ & $7.0$ \\ \hline
+                Max. & $288.0$ & $997.0$ & $35524.0$ & $2089.0$ & $-29571.0$ & $46.0$ & $94.0$ \\ \hline
+        \end{tabular}
+\end{table}
 
 \subsection{Performance Metrics}
 %\label{subsec:Metrics}
 
+The metrics and terminology used to evaluate the classifier performance were taken from the confusion matrix defined in the \textit{R} function \textit{confusionMatrix} in the \textit{caret} library citestuff(kuhn2008building, confusionMatrix2024).
+
+The examples for each performance metric use only two groups (Yes and No, positive and negative). For multiple classes, results are calculated by a "one versus all" approach, viewing each class as positive and all others as negative.
+
 \subsubsection{Confusion Matrix}
 %\label{subsubsec:ConfusionMatrix}
 
-The metrics and terminology used to evaluate the classifier performance were taken from the confusion matrix defined in the \textit{R} function \textit{confusionMatrix} in the \textit{caret} library citestuff(kuhn2008building, altman1994diagnostic1, altman1994diagnostic2, velez2007balanced, confusionMatrix2024). The confusion matrix is suitable for use in multiclass classification, which is the goal of this project. A confusion matrix is a table where the number of rows and columns corresponds to the number of classes. The cells report the number of samples in each class classified into any class. This enables a more detailed analysis than by observing the share of correct classifications, i.e. accuracy. Accuracy will give results that can lead us to a wrong conclusion if the data set is unbalanced, that is, if the numbers of observations in different classes vary significantly, which was the case in this paper, because out of a total of $1597$ samples, $1170$ of them belonged to the largest N class, and $3$ to the smallest E class.
+A True Positive (TP), or True Negative (TN) result in the confusion matrix correctly indicates that the sample belongs to a class. A False Positive (FP), or False Negative (FN) classification result incorrectly claims that the sample belongs to a class and represents a type I or type II error, respectively.
 
-If there are only two classes (Yes and No), the metrics are calculated using an example of a confusion matrix in Table~\ref{tab:cm}.
+Sensitivity, recall, hit rate, or True Positive Rate (TPR), calculated as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FN})$, and specificity, selectivity, or True Negative Rate (TNR), calculated as $\mathrm{TN}/(\mathrm{TN}+\mathrm{FP})$, represent the proportion of correctly classified samples among those that truly belong to a class citestuff(altman1994diagnostic1, altman1994diagnostic2).
 
-A True Positive (TP) classification result correctly indicates that the sample belongs to the positive class.
+Precision, or Positive Predictive Value (PPV), calculated as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP})$, and Negative Predictive Value (NPV), calculated as $\mathrm{TN}/(\mathrm{TN}+\mathrm{FN})$, represent the proportion of correctly classified samples among those classified to a class.
 
-A True Negative (TN) classification result correctly indicates that the sample belongs to the negative class.
- 
-A False Positive (FP) classification result or type I error, incorrectly indicates that the sample belongs to the positive class because it truly belongs to the negative class.
+Prevalence, calculated as $(\mathrm{TP}+\mathrm{FN})/(\mathrm{TP}+\mathrm{FP}+\mathrm{FN}+\mathrm{TN})$, and Detection Prevalence (DP), calculated as $(\mathrm{TP}+\mathrm{FP})/(\mathrm{TP}+\mathrm{FP}+\mathrm{FN}+\mathrm{TN})$ represent the proportion of samples that truly belong to or are classified to each class, respectively. Prevalence values other than an even split by the number of classes indicate a class imbalance.
 
-A False Negative (FN) classification result or type II error, incorrectly indicates that the sample belongs to the negative class because it truly belongs to the positive class.
+The Detection Rate (DR), calculated as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP}+\mathrm{FN}+\mathrm{TN})$, and accuracy (Acc), calculated as $(\mathrm{TP} + \mathrm{TN}) / (\mathrm{TP} + \mathrm{TN} + \mathrm{FP} + \mathrm{FN})$, represent the proportion of correctly classified samples for separate classes or any class, respectively.
 
-\begin{table}[!ht]
-    \centering
-    \caption{The confusion matrix for a two-class problem.}
-	\label{tab:cm}
-	\begin{tabular}{|c|c|c|}
-		\hline
-		 & \multicolumn{2}{|c|}{Reference} \\ \hline
-        Prediction & Yes & No \\ \hline
-        Yes &TP & FP \\ \hline
-        No & FN & TN \\ \hline
-	\end{tabular}
-\end{table}
-
-Sensitivity, recall, hit rate, or True Positive Rate (TPR), is calculated as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FN})$, that is, the proportion of samples that are correctly classified as positive among all samples that truly belong to the positive class. Higher TPR values indicate better results for the positive class.
-
-Specificity, selectivity, or True Negative Rate (TNR), is calculated using the expression $\mathrm{TN}/(\mathrm{TN}+\mathrm{FP})$, that is, the proportion of samples that are correctly classified as negative among all samples that truly belong to the negative class. Higher TNR values indicate better results for the negative class.
-
-Prevalence is calculated as $(\mathrm{TP}+\mathrm{FN})/(\mathrm{TP}+\mathrm{FP}+\mathrm{FN}+\mathrm{TN})$ for the positive class, that is, the proportion of samples that truly belong to the positive class among all samples. Prevalence values other than an even split by the number of classes indicate a class imbalance.
-
-Precision, or Positive Predictive Value (PPV), is calculated as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP})$ for a two-class problem, i.e. the proportion of truly positive results among all samples classified as positive. Higher PPV values indicate better results for the positive class.
-
-The Negative Predictive Value (NPV) is calculated as $\mathrm{TN}/(\mathrm{TN}+\mathrm{FN})$ for a two-class problem, i.e. the share of truly negative results among all samples that are classified as negative. Higher NPV values indicate better results for the negative class.
-
-The Detection Rate (DR) is calculated as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP}+\mathrm{FN}+\mathrm{TN})$ for the positive class, that is, that is, the proportion of samples that are correctly classified as positive among all samples.
-
-The Detection Prevalence (DP) is calculated as $(\mathrm{TP}+\mathrm{FP})/(\mathrm{TP}+\mathrm{FP}+\mathrm{FN}+\mathrm{TN})$ for the positive class, that is, that is, the proportion of samples that are correctly or incorrectly classified as positive among all samples.
-
-The accuracy (Acc) is calculated as $(\mathrm{TP} + \mathrm{TN}) / (\mathrm{TP} + \mathrm{TN} + \mathrm{FP} + \mathrm{FN})$, that is, the proportion of samples that are correctly classified among all samples.
-
-Since accuracy is not usable in the case of unbalanced classes, Balanced Accuracy (BA) is introduced, which is calculated as $(\mathrm{TPR} + \mathrm{TNR}) / 2$ and is arithmetic mean TPR and TNR, which are respectively centered on the positive and the negative class separately.
-
-Another metric that can be used instead of accuracy to consider each class separately is the $F1$ score, i.e. the harmonic mean of PPV and TPR, equal to $2 \times (\mathrm{PPV} \times \mathrm{TPR}) / (\mathrm{PPV} + \mathrm{TPR}) = 2 \times \mathrm{TP} / (2 \times \mathrm{TP} + \mathrm{FP} + \mathrm{FN})$.
-
-If there are more than two classes, results are calculated for each class separately by viewing that class as the positive class and samples of all other classes as negative, a "one versus all" approach.
-
-The unweighted Kappa statistic and a \textit{p}-value from McNemar's test are also computed. McNemar's test produces NA values with sparse tables, such as the one in this experiment, so it was not included in the results.
-
-A $95\%$ confidence interval for the accuracy rate is computed using \textit{binom.test} and a one-sided test citestuff(binom.test2024, clopper1934use, conover1999practical, hollander2013nonparametric) to see if the accuracy is significantly larger than the No Information Rate (NIR) which is the percentage of the largest class.
-
-\subsubsection{The Binomial Test}
-%\label{subsubsec:Binomial}
-
-The binomial test citestuff(howell1992statistical, graphpadGraphPadPrism) for two classes is an exact test of the statistical significance of deviations from a theoretically expected distribution.
-
-The binomial test is often utilized to validate a hypothesis about the probability ($\pi$) of success $H_{0}\colon \pi =\pi_{0}$, where users define $\pi_{0}$ between $0$ and $1$. The expected number of successes would be $n\pi_{0}$ if the null hypothesis $H_{0}$ were correct. If $k$ out of $n$ attempts are successful, the binomial distribution formula defines the probability in Equation~16.
-
-\begin{equation}
-	\Pr(X=k)={\binom{n}{k}}p^{k}(1-p)^{n-k}
-	\quad\left(17\right)
-\end{equation}
-
-The probability of an outcome equally or more extreme than actual occurrences is used to calculate the $p$-value. This is a simple operation for a one-tailed test. 
-
-Equation~17 contains the expression for the $p$-value when testing the hypothesis that $\pi <\pi_{0}$. We can use a range from $k$ to $n$ to test $\pi >\pi_{0}$.
-
-\begin{equation}
-	p=\sum_{i=0}^{k}\Pr(X=i)=\sum_{i=0}^{k}{\binom{n}{i}}\pi_{0}^{i}(1-\pi_{0})^{n-i}
-	\quad\left(18\right)
-\end{equation}
-
-A binomial distribution isn't symmetric if $\pi_{0}\neq 0.5$, so calculating a $p$-value for a two-tailed test is not as simple. The $p$-value from the one-tailed test cannot be doubled to obtain the result since all events must be considered, including ones more extreme than previously seen. These extreme events are equally or less probable than $X=k$. Equation~18 denotes all such events. Equation~19 is used to compute the two-tailed $p$-value.
-
-\begin{equation}
-	{\mathcal{I}}=\{i\colon \Pr(X=i)\leq \Pr(X=k)\}
-	\quad\left(19\right)
-\end{equation}
-
-\begin{equation}
-	p=\sum_{i\in {\mathcal{I}}}\Pr(X=i)=\sum_{i\in {\mathcal{I}}}{\binom{n}{i}}\pi_{0}^{i}(1-\pi_{0})^{n-i}
-	\quad\left(20\right)
-\end{equation}
-
-\subsubsection{Cohen's Kappa Coefficient}
-%\label{subsubsec:kappa}
-
-Cohen's kappa coefficient ($\kappa$, lowercase Greek kappa) indicates inter- and intra-rater reliability for classification citestuff(mchugh2012interrater). As it accounts for random matches in ratings, it is a better metric than simply computing the percentage of agreement. Interpreting indices of agreement is not straightforward, and is still a point of contention among experts. Using disagreement instead of agreement in ratings might be simpler citestuff(pontius2011death). Galton was the first to use a statistic similar to Cohen's kappa in 1892 citestuff(galton1892finger, smeeton1985early). Jacob Cohen formally described the kappa coefficient in 1960 in the journal "Educational and Psychological Measurement" citestuff(cohen1960coefficient).
-
-Two raters group $N$ items into $C$ mutually exclusive classes, and Cohen's kappa measures their agreement. Equation~20 defines $\kappa$, where $p_{o}$ is the relative observed agreement among raters, and $p_{e}$ is the hypothetical probability of chance agreement. The observed data influences the computed probabilities of each observer randomly selecting each category.
-
-\begin{equation}
-	\kappa \equiv {\frac {p_{o}-p_{e}}{1-p_{e}}}=1-{\frac {1-p_{o}}{1-p_{e}}}
-	\quad\left(21\right)
-\end{equation}
-
-If the raters completely align then $\kappa = 1$. When there is no agreement other than what would be expected by chance and is given by $p_{e}$, $\kappa = 0$. If $\kappa$ statistic is negative citestuff(sim2005kappa) there is no match between the raters, which can reflect a real tendency of the raters to give differing ratings.
-
-Equation~21 is derived from the construction in Equation~22 and holds for $k$ categories with $N$ observations to categorize if $n_{k1}$ is the number of times rater $i$ predicted category $k$. In these equations, ${\widehat{p_{k12}}}$ is the estimated probability that both rater $1$ and rater $2$ will classify the same item as $k$, and ${\widehat {p_{k1}}}$ is the estimated probability that rater $1$ will classify an item as $k$. A similar claim can be made for rater $2$.
-
-\begin{equation}
-	p_{e}={\frac {1}{N^{2}}}\sum_{k}n_{k1}n_{k2}
-	\quad\left(22\right)
-\end{equation}
-
-\begin{equation}
-	p_{e}=\sum_{k}{\widehat {p_{k12}}}{\overset{\text{ind.}}{=}}\sum_{k}{\widehat {p_{k1}}}{\widehat {p_{k2}}}=\sum_{k}{\frac {n_{k1}}{N}}{\frac {n_{k2}}{N}}={\frac {1}{N^{2}}}\sum_{k}n_{k1}n_{k2}
-	\quad\left(23\right)
-\end{equation}
-
-If ratings are independent Equation~23, can be used.
-
-\begin{equation}
-	\textstyle{\widehat{p_{k}}}=\sum_{k}{\widehat{p_{k1}}}{\widehat {p_{k2}}}
-	\quad\left(24\right)
-\end{equation}
-
-Equation~24 is used to estimate the term $\widehat{p_{k1}}$ by using the number of items classified as $k$ by rater $1$ ($n_{k1}$) divided by the total items to classify ($N$).
-
-\begin{equation}
-	\widehat {p_{k1}}=\frac{n_{k1}}{N}
-	\quad\left(25\right)
-\end{equation}
- (and similarly for rater $2$).
- 
-Equation~25 contains the Cohen's Kappa formula citestuff(chicco2021matthews) for the traditional confusion matrix for binary classifications in Table~\ref{tab:cm}.
-
-\begin{equation}
-	\kappa ={\frac{2\times (TP\times TN-FN\times FP)}{(TP+FP)\times (FP+TN)+(TP+FN)\times (FN+TN)}}
-	\quad\left(26\right)
-\end{equation}
-
-In this scenario, Cohen's Kappa equals the Heidke skill score introduced by Myrick Haskell Doolittle in 1888 citestuff(heidke1926berechnung, philosophical1887bulletin).
+Since accuracy is unusable for unbalanced classes, Balanced Accuracy (BA)  citestuff(velez2007balanced) is calculated as $(\mathrm{TPR} + \mathrm{TNR}) / 2$ and represents the arithmetic mean of TPR and TNR, which are centered on the positive and the negative classes, respectively.
 
 \section{Research Results}
 \label{sec:Results}
 
-The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables (all), all variables except $Dst$ (no $Dst$), all variables except $Dst$, $TEC$, and d$TEC$ (no $TEC$), only $B_{x}$, $B_{y}$, and $B_{z}$ (coord), only $B_{x}$, $B_{y}$, and $a_{p}$ ($x$ $y$ $a_{p}$), only $B_{x}$, $B_{z}$, and $a_{p}$ ($x$ $z$ $a_{p}$), or only $B_{y}$, $B_{z}$, and $a_{p}$ ($y$ $z$ $a_{p}$) is displayed in Table~\ref{tab:stats:reverse:all}, Table~\ref{tab:stats:reverse:no_DisturbanceStormTime}, Table~\ref{tab:stats:reverse:no_TotalElectronContent}, Table~\ref{tab:stats:reverse:coord}, Table~\ref{tab:stats:reverse:xyap}, Table~\ref{tab:stats:reverse:xzap}, and Table~\ref{tab:stats:reverse:yzap}.
+The accuracy for all models when using all variables, all variables except $Dst$ (no $Dst$), all variables except $Dst$, $TEC$, and $dTEC$ (no $TEC$), only $B_{x}$, $B_{y}$, and $B_{z}$ (coord), only $B_{x}$, $B_{y}$, and $a_{p}$ ($x$ $y$ $a_{p}$), only $B_{x}$, $B_{z}$, and $a_{p}$ ($x$ $z$ $a_{p}$), or only $B_{y}$, $B_{z}$, and $a_{p}$ ($y$ $z$ $a_{p}$) as input is displayed in Table~\ref{tab:acc:all}. Accuracy results can lead to an incorrect conclusion if the dataset is unbalanced. Out of $9591$ samples for training and testing, $7495$ belonged to the largest N class, and $13$ to the smallest E class, as listed in Table~\ref{tab:Dstranges}. More comprehensive results by class are presented only for the Naive Bayes (NB) classifier, the second most successful model. The Neural Network (NN) classifier made no errors, so further discussion is redundant.
 
 \begin{table}[!ht]
     \centering
-    \caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables as input.}
-	\label{tab:stats:reverse:all}
-	\begin{tabular}{|c|c|c|c|c|c|}
+    \caption{The accuracy for each model using different combinations of variables as input.}
+	\label{tab:acc:all}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
-		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
-		SVM Poly & $0.7672$ & $(0.7457, 0.7877)$ & $0.7322$ & $0.0007444$ & $0.3607$ \\ \hline
-		C5.0 DT & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
-		NB & $0.9912$ & $(0.9853, 0.9952)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.9787$ \\ \hline
-		NN & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
-		PLS & $0.9086$ & $(0.8934, 0.9223)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.7489$ \\ \hline
-		FDA & $0.9199$ & $(0.9055, 0.9327)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.8017$ \\ \hline
-		PCA NN & $0.9975$ & $(0.9936, 0.9993)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.9939$ \\ \hline
+		Model & all & no $Dst$ & no $TEC$ & coord & $x$ $y$ $a_{p}$ & $x$ $z$ $a_{p}$ & $y$ $z$ $a_{p}$ \\ \hline
+		SVM Poly & $0.7866$ & $0.7454$ & $0.7903$ & $0.7887$ & $0.7934$ & $0.7903$ & $0.7814$ \\ \hline
+		C5.0 DT & $0.9995$ & $0.8529$ & $0.8581$ & $0.8404$ & $0.8508$ & $0.8367$ & $0.8211$ \\ \hline
+		NB & $0.9953$ & $0.9943$ & $1$ & $1$ & $1$ & $1$ & $0.9995$ \\ \hline
+		NN & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ \\ \hline
+		PLS & $0.9212$ & $0.8258$ & $0.8232$ & $0.8174$ & $0.8153$ & $0.8143$ & $0.8007$ \\ \hline
+		FDA & $0.9025$ & $0.8472$ & $0.8472$ & $0.8252$ & $0.8419$ & $0.8258$ & $0.7997$ \\ \hline
+		PCA NN & $0.9963$ & $0.8492$ & $0.8492$ & $0.8399$ & $0.8456$ & $0.8367$ & $0.8185$ \\ \hline
 	\end{tabular}
 \end{table}
 
-\begin{table}[!ht]
-    \centering
-    \caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables except $Dst$ as input.}
-	\label{tab:stats:reverse:no_DisturbanceStormTime}
-	\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
-		SVM Poly & $0.7284$ & $(0.7059, 0.7501)$ & $0.7322$ & $0.6447$ & $0.1137$ \\ \hline
-		C5.0 DT & $0.8492$ & $(0.8307, 0.8664)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.6165$ \\ \hline
-		NB & $0.9906$ & $(0.9846, 0.9947)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.9771$ \\ \hline
-		NN & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
-		PLS & $0.7929$ & $(0.7722, 0.8125)$ & $0.7322$ & $1.104e-08$ & $0.3635$ \\ \hline
-		FDA & $0.8141$ & $(0.7942, 0.8329)$ & $0.7322$ & $9.859e-15$ & $0.5064$ \\ \hline
-		PCA NN & $0.8436$ & $(0.8248, 0.861)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.5868$ \\ \hline
-	\end{tabular}
-\end{table}
+The execution time in seconds ($s$) utilizing the \textit{R} \textit{system.time} function citestuff(system.time2024) for each model and different combinations of variables as input is displayed in Table~\ref{tab:time:total}. The experiment was run on \textit{Windows} 11 using \textit{R Studio} version 2024.04.2+764 and \textit{R} version 4.4.1, the AMD Radeon RX 6600 Graphics Processing Unit (GPU), $16$ GB of Random Access Memory (RAM), and the AMD Ryzen 5 PRO 4650G Central Processing Unit (CPU) with $6$ cores. Execution time is significant because built-in systems for mobile devices using GNSS PNT have low computational capabilities.
 
 \begin{table}[!ht]
-    \centering
-    \caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using all variables except $Dst$, $TEC$, and d$TEC$ as input.}
-	\label{tab:stats:reverse:no_TotalElectronContent}
-	\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
-		SVM Poly & $0.7378$ & $(0.7155, 0.7592)$ & $0.7322$ & $0.3168$ & $0.1066$ \\ \hline
-		C5.0 DT & $0.8448$ & $(0.8261, 0.8622)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.5882$ \\ \hline
-		NB & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
-		NN & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
-		PLS & $0.7922$ & $(0.7715, 0.8119)$ & $0.7322$ & $1.556e-08$ & $0.3634$ \\ \hline
-		FDA & $0.8166$ & $(0.7968, 0.8353)$ & $0.7322$ & $1.416e-15$ & $0.5092$ \\ \hline
-		PCA NN & $0.8379$ & $(0.8189, 0.8557)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.5647$ \\ \hline
-	\end{tabular}
-\end{table}
-
-\begin{table}[!ht]
-    \centering
-    \caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
-	\label{tab:stats:reverse:coord}
-	\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
-		SVM Poly & $0.7409$ & $(0.7187, 0.7623)$ & $0.7322$ & $0.2234$ & $0.0887$ \\ \hline
-		C5.0 DT & $0.826$ & $(0.8065, 0.8443)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.5208$ \\ \hline
-		NB & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
-		NN & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
-		PLS & $0.7835$ & $(0.7625, 0.8035)$ & $0.7322$ & $1.284e-06$ & $0.298$ \\ \hline
-		FDA & $0.7979$ & $(0.7773, 0.8173)$ & $0.7322$ & $6.224e-10$ & $0.4541$ \\ \hline
-		PCA NN & $0.8254$ & $(0.8059, 0.8437)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.5242$ \\ \hline
-	\end{tabular}
-\end{table}
-
-\begin{table}[!ht]
-    \centering
-    \caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
-	\label{tab:stats:reverse:xyap}
-	\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
-		SVM Poly & $0.7416$ & $(0.7193, 0.7629)$ & $0.7322$ & $0.2068$ & $0.103$ \\ \hline
-		C5.0 DT & $0.8292$ & $(0.8098, 0.8473)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.5386$ \\ \hline
-		NB & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
-		NN & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
-		PLS & $0.781$ & $(0.7599, 0.801)$ & $0.7322$ & $3.978e-06$ & $0.3153$ \\ \hline
-		FDA & $0.8204$ & $(0.8007, 0.8389)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.5099$ \\ \hline
-		PCA NN & $0.8367$ & $(0.8176, 0.8545)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.5579$ \\ \hline
-	\end{tabular}
-\end{table}
-
-\begin{table}[!ht]
-    \centering
-    \caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
-	\label{tab:stats:reverse:xzap}
-	\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
-		SVM Poly & $0.739$ & $(0.7168, 0.7604)$ & $0.7322$ & $0.2775$ & $0.1013$ \\ \hline
-		C5.0 DT & $0.8104$ & $(0.7903, 0.8293)$ & $0.7322$ & $1.602e-13$ & $0.4714$ \\ \hline
-		NB & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
-		NN & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
-		PLS & $0.7735$ & $(0.7521, 0.7938)$ & $0.7322$ & $8.468e-05$ & $0.2742$ \\ \hline
-		FDA & $0.7979$ & $(0.7773, 0.8173)$ & $0.7322$ & $6.224e-10$ & $0.4343$ \\ \hline
-		PCA NN & $0.8148$ & $(0.7948, 0.8335)$ & $0.7322$ & $6.107e-15$ & $0.4948$ \\ \hline
-	\end{tabular}
-\end{table}
-
-\begin{table}[!ht]
-    \centering
-    \caption{The accuracy, CI, NIR, $p$-value, and Kappa statistic for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
-	\label{tab:stats:reverse:yzap}
-	\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		Model & Acc & $95\%$ CI & NIR & $p$-value & Kappa \\ \hline
-		SVM Poly & $0.7347$ & $(0.7123, 0.7562)$ & $0.7322$ & $0.4233$ & $0.0251$ \\ \hline
-		C5.0 DT & $0.7866$ & $(0.7657, 0.8065)$ & $0.7322$ & $2.88e-07$ & $0.3926$ \\ \hline
-		NB & $0.9987$ & $(0.9955, 0.9998)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $0.9969$ \\ \hline
-		NN & $1$ & $(0.9977, 1)$ & $0.7322$ & $< 2.2 \times {10}^{-16}$ & $1$ \\ \hline
-		PLS & $0.7566$ & $(0.7348, 0.7774)$ & $0.7322$ & $0.01419$ & $0.2075$ \\ \hline
-		FDA & $0.7672$ & $(0.7457, 0.7877)$ & $0.7322$ & $0.0007444$ & $0.3367$ \\ \hline
-		PCA NN & $0.7797$ & $(0.7586, 0.7998)$ & $0.7322$ & $6.857e-06$ & $0.3878$ \\ \hline
-	\end{tabular}
-\end{table}
-
-The execution time in $s$ is calculated using the \textit{R} \textit{system.time} function citestuff(system.time2024) for each model when using different combinations of variables as input is displayed in Table~\ref{tab:time:total}. The experiment was run on \textit{Windows} 11 using \textit{R Studio} version 2024.04.2+764 and \textit{R} version 4.4.1, the AMD Radeon RX 6600 Graphics Processing Unit (GPU), $16$ GB of Random Access Memory (RAM), and the AMD Ryzen 5 PRO 4650G Central Processing Unit (CPU) with $6$ cores.
-
-\begin{table}[!ht]
-    \centering
-    \caption{The execution time in seconds for each model when using different combinations of variables as input.}
+	\centering
+    \caption{The execution time in seconds ($s$) for each model when using different combinations of variables as input.}
 	\label{tab:time:total}
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
-		Model & SVM Poly & C5.0 DT & NB & NN & PLS & FDA & pcaNNet \\ \hline
-		all & $103.52$ & $169.28$ & $192.05$ & $494.53$ & $49.99$ & $51.57$ & $291.98$ \\ \hline
-		no $Dst$ & $276.24$ & $592.32$ & $175.38$ & $479.67$ & $42.89$ & $49.34$ & $305.16$ \\ \hline
-		no $TEC$ & $285.58$ & $393.72$ & $137.99$ & $453.82$ & $33.11$ & $60.53$ & $294.58$ \\ \hline
-		coord & $331.13$ & $277.63$ & $118.86$ & $441.37$ & $22.28$ & $67.94$ & $294.97$ \\ \hline
-		$x$ $y$ $a_{p}$ & $319.97$ & $295.20$ & $121.73$ & $465.61$ & $26.72$ & $70.97$ & $302.48$ \\ \hline
-		$x$ $z$ $a_{p}$ & $348.47$ & $259.81$ & $121.05$ & $475.05$ & $25.56$ & $76.04$ & $321.05$ \\ \hline
-		$y$ $z$ $a_{p}$ & $416.75$ & $277.62$ & $124.02$ & $489.08$ & $29.89$ & $95.64$ & $345.05$ \\ \hline
+		Model & all & no $Dst$ & no $TEC$ & coord & $x$ $y$ $a_{p}$ & $x$ $z$ $a_{p}$ & $y$ $z$ $a_{p}$ \\ \hline
+		SVM Poly & $148.72$ & $330.67$ & $392.05$ & $582.47$ & $739.55$ & $670.54$ & $876.43$ \\ \hline
+		C5.0 DT & $186.08$ & $670.61$ & $466.42$ & $347.16$ & $357.43$ & $330.81$ & $382.92$ \\ \hline
+		NB & $206.65$ & $200.83$ & $164.03$ & $141.87$ & $143.97$ & $147.26$ & $149.87$ \\ \hline
+		NN & $582.41$ & $629.67$ & $619.30$ & $587.37$ & $614.07$ & $629.48$ & $644.44$ \\ \hline
+		PLS & $52.59$ & $63.48$ & $54.26$ & $36.90$ & $52.39$ & $41.92$ & $59.00$ \\ \hline
+		FDA & $56.20$ & $98.11$ & $142.19$ & $144.53$ & $164.17$ & $172.64$ & $185.78$ \\ \hline
+		PCA NN & $341.32$ & $422.86$ & $468.73$ & $452.75$ & $480.02$ & $495.66$ & $517.78$ \\ \hline
 	\end{tabular}
 \end{table}
 
 \subsection{Comprehensive Results for the Naive Bayes Model}
 %\label{subsec:ResultsNB}
 
-The confusion matrix and the performance indicators derived from it when using the Naive Bayes (NB) model and all input variables are depicted in Table~\ref{tab:cm:all:nb} and Table~\ref{tab:cs:reverse:all:nb}. The same values when using all input variables except $Dst$ are marked in Table~\ref{tab:cm:no_DisturbanceStormTime:nb} and Table~\ref{tab:cs:reverse:no_DisturbanceStormTime:nb}, and Table~\ref{tab:cm:yzap:nb} and Table~\ref{tab:cs:reverse:yzap:nb} when using only $B_{y}$, $B_{z}$, and $a_{p}$ variables as input. These results are displayed since the NB model has low computational load and high accuracy. The combinations of input variables that produced a $100\%$ accuracy when used for the NB model were not included since there are no errors in classification.
+The confusion matrix and the performance indicators derived from it for the Naive Bayes (NB) model, when using different combinations of variables as input, are depicted in Table~\ref{tab:cm:merged}, Table~\ref{tab:cs:reverse:all:nb}, Table~\ref{tab:cs:reverse:no_DisturbanceStormTime:nb}, and Table~\ref{tab:cs:reverse:yzap:nb}. The NB model was chosen because of a low computational load and high accuracy. The results for combinations of input variables with a $100\%$ accuracy using the NB model are ommited.
 
 \begin{table}[!ht]
     \centering
-    \caption{The confusion matrix for the Naive Bayes model when using all variables as input.}
-	\label{tab:cm:all:nb}
-	\begin{tabular}{|c|c|c|c|c|c|}
+    \caption{The confusion matrix for the Naive Bayes model when using all variables as input (left), all variables except $Dst$ as input (center), and only $B_{y}$, $B_{z}$, and $a_{p}$ as input (right).}
+	\label{tab:cm:merged}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 		\hline
-		 & \multicolumn{5}{|c|}{Reference} \\ \hline
-		 Prediction & E & N & P & R & T \\ \hline
-		 E & $3$ & $1$ & $0$ & $0$ & $0$ \\ \hline
-		 N & $0$ & $1161$ & $1$ & $1$ & $0$ \\ \hline
-		 P & $0$ & $5$ & $26$ & $2$ & $0$ \\ \hline
-		 R & $0$ & $3$ & $0$ & $375$ & $0$ \\ \hline
-		 T & $0$ & $0$ & $0$ & $1$ & $19$ \\ \hline
+		 & \multicolumn{5}{|c|}{Reference - all} & \multicolumn{5}{|c|}{Reference - no $Dst$} & \multicolumn{5}{|c|}{Reference - $y$ $z$ $a_{p}$} \\ \hline
+		 Pred. & E & N & P & R & T & E & N & P & R & T & E & N & P & R & T \\ \hline
+		 E & $2$ & $0$ & $0$ & $0$ & $0$ & $2$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $0$ & $0$ & $0$ \\ \hline
+		 N & $0$ & $1492$ & $0$ & $1$ & $0$ & $0$ & $1492$ & $0$ & $1$ & $0$ & $1$ & $1499$ & $0$ & $0$ & $0$ \\ \hline
+		 P & $0$ & $5$ & $27$ & $0$ & $0$ & $0$ & $4$ & $27$ & $0$ & $0$ & $0$ & $0$ & $27$ & $0$ & $0$ \\ \hline
+		 R & $0$ & $2$ & $0$ & $369$ & $0$ & $0$ & $2$ & $0$ & $368$ & $1$ & $0$ & $0$ & $0$ & $371$ & $0$ \\ \hline
+		 T & $0$ & $0$ & $0$ & $1$ & $18$ & $0$ & $0$ & $0$ & $1$ & $17$ & $0$ & $0$ & $0$ & $0$ & $18$ \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -1031,29 +635,13 @@ The confusion matrix and the performance indicators derived from it when using t
 		\hline
 		 & \multicolumn{5}{c|}{Class} \\ \hline
 		Statistics & E & N & P & R & T \\ \hline
-		Sensitivity & $100\%$ & $99.23\%$ & $96.296\%$ & $98.94\%$ & $100\%$ \\ \hline
-		Specificity & $99.9373\%$ & $99.53\%$ & $99.554\%$ & $99.75\%$ & $99.937\%$ \\ \hline
-		PPV & $75\%$ & $99.83\%$ & $78.788\%$ & $99.21\%$ & $95\%$ \\ \hline
-		NPV & $100\%$ & $97.93\%$ & $99.936\%$ & $99.67\%$ & $100\%$ \\ \hline
-		DR & $0.1877\%$ & $72.65\%$ & $1.627\%$ & $23.47\%$ & $1.189\%$ \\ \hline
-		DP & $0.2503\%$ & $72.78\%$ & $2.065\%$ & $23.65\%$ & $1.252\%$ \\ \hline
-		BA & $99.9687\%$ & $99.38\%$ & $97.925\%$ & $99.35\%$ & $99.968\%$ \\ \hline
-	\end{tabular}
-\end{table}
-
-\begin{table}[!ht]
-    \centering
-    \caption{The confusion matrix for the Naive Bayes model when using all variables except $Dst$ as input.}
-	\label{tab:cm:no_DisturbanceStormTime:nb}
-	\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		 & \multicolumn{5}{|c|}{Reference} \\ \hline
-		 Prediction & E & N & P & R & T \\ \hline
-		 E & $3$ & $1$ & $0$ & $0$ & $0$ \\ \hline
-		 N & $0$ & $1161$ & $2$ & $2$ & $0$ \\ \hline
-		 P & $0$ & $5$ & $25$ & $1$ & $0$ \\ \hline
-		 R & $0$ & $3$ & $0$ & $375$ & $0$ \\ \hline
-		 T & $0$ & $0$ & $0$ & $1$ & $19$ \\ \hline
+		Sensitivity & $100\%$ & $99.53\%$ & $100\%$ & $99.46\%$ & $100\%$ \\ \hline
+		Specificity & $100\%$ & $99.76\%$ & $99.735\%$ & $99.87\%$ & $99.9473\%$ \\ \hline
+		PPV & $100\%$ & $99.93\%$ & $84.375\%$ & $99.46\%$ & $94.7368\%$ \\ \hline
+		NPV & $100\%$ & $98.35\%$ & $100\%$ & $99.87\%$ & $100\%$ \\ \hline
+		DR & $0.1043\%$ & $77.83\%$ & $1.408\%$ & $19.25\%$ & $0.939\%$ \\ \hline
+		DP & $0.1043\%$ & $77.88\%$ & $1.669\%$ & $19.35\%$ & $0.9911\%$ \\ \hline
+		BA & $100\%$ & $99.65\%$ & $99.868\%$ & $99.67\%$ & $99.9737\%$ \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -1065,29 +653,13 @@ The confusion matrix and the performance indicators derived from it when using t
 		\hline
 		 & \multicolumn{5}{c|}{Class} \\ \hline
 		Statistics & E & N & P & R & T \\ \hline
-		Sensitivity & $100\%$ & $99.23\%$ & $92.593\%$ & $98.94\%$ & $100\%$ \\ \hline
-		Specificity & $99.9373\%$ & $99.07\%$ & $99.618\%$ & $99.75\%$ & $99.937\%$ \\ \hline
-		PPV & $75\%$ & $99.66\%$ & $80.645\%$ & $99.21\%$ & $95\%$ \\ \hline
-		NPV & $100\%$ & $97.92\%$ & $99.872\%$ & $99.67\%$ & $100\%$ \\ \hline
-		DR & $0.1877\%$ & $72.65\%$ & $1.564\%$ & $23.47\%$ & $1.189\%$ \\ \hline
-		DP & $0.2503\%$ & $72.9\%$ & $1.94\%$ & $23.65\%$ & $1.252\%$ \\ \hline
-		BA & $99.9687\%$ & $99.15\%$ & $96.105\%$ & $99.35\%$ & $99.968\%$ \\ \hline
-	\end{tabular}
-\end{table}
-
-\begin{table}[!ht]
-    \centering
-    \caption{The confusion matrix for the Naive Bayes model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
-	\label{tab:cm:yzap:nb}
-	\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		 & \multicolumn{5}{|c|}{Reference} \\ \hline
-		 Prediction & E & N & P & R & T \\ \hline
-		 E & $2$ & $0$ & $0$ & $0$ & $0$ \\ \hline
-		 N & $1$ & $1170$ & $1$ & $0$ & $0$ \\ \hline
-		 P & $0$ & $0$ & $26$ & $0$ & $0$ \\ \hline
-		 R & $0$ & $0$ & $0$ & $379$ & $0$ \\ \hline
-		 T & $0$ & $0$ & $0$ & $0$ & $19$ \\ \hline
+		Sensitivity & $100\%$ & $99.53\%$ & $100\%$ & $99.19\%$ & $94.4444\%$ \\ \hline
+		Specificity & $99.8956\%$ & $99.76\%$ & $99.788\%$ & $99.81\%$ & $99.9473\%$ \\ \hline
+		PPV & $50\%$ & $99.93\%$ & $87.097\%$ & $99.19\%$ & $94.4444\%$ \\ \hline
+		NPV & $100\%$ & $98.35\%$ & $100\%$ & $99.81\%$ & $99.9473\%$ \\ \hline
+		DR & $0.1043\%$ & $77.83\%$ & $1.408\%$ & $19.2\%$ & $0.8868\%$ \\ \hline
+		DP & $0.2087\%$ & $77.88\%$ & $1.617\%$ & $19.35\%$ & $0.939\%$ \\ \hline
+		BA & $99.9478\%$ & $99.65\%$ & $99.894\%$ & $99.5\%$ & $97.1959\%$ \\ \hline
 	\end{tabular}
 \end{table}
 
@@ -1099,31 +671,31 @@ The confusion matrix and the performance indicators derived from it when using t
 		\hline
 		 & \multicolumn{5}{c|}{Class} \\ \hline
 		Statistics & E & N & P & R & T \\ \hline
-		Sensitivity & $66.6667\%$ & $100\%$ & $96.296\%$ & $100\%$ & $100\%$ \\ \hline
-		Specificity & $100\%$ & $99.53\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
-		PPV & $100\%$ & $99.83\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
-		NPV & $99.9373\%$ & $100\%$ & $99.936\%$ & $100\%$ & $100\%$ \\ \hline
-		DR & $0.1252\%$ & $73.22\%$ & $1.627\%$ & $23.72\%$ & $1.189\%$ \\ \hline
-		DP & $0.1252\%$ & $73.34\%$ & $1.627\%$ & $23.72\%$ & $1.189\%$ \\ \hline
-		BA & $83.3333\%$ & $99.77\%$ & $98.148\%$ & $100\%$ & $100\%$ \\ \hline
+		Sensitivity & $50\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		Specificity & $100\%$ & $99.76\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		PPV & $100\%$ & $99.93\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		NPV & $99.9478\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
+		DR & $0.0522\%$ & $78.2\%$ & $1.408\%$ & $19.35\%$ & $0.939\%$ \\ \hline
+		DP & $0.0522\%$ & $78.25\%$ & $1.408\%$ & $19.35\%$ & $0.939\%$ \\ \hline
+		BA & $75\%$ & $99.88\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
 	\end{tabular}
 \end{table}
 
 \section{Discussion}
 \label{sec:Discussion}
 
-The Neural Network (NN) model has the highest execution time for any subset of the input variables due to its complexity and extensive training, evident from the data in Table~\ref{tab:time:total}. However, in each case, it achieved a $100\%$ accuracy, which is shown in Table~\ref{tab:stats:reverse:all}, Table~\ref{tab:stats:reverse:no_DisturbanceStormTime}, Table~\ref{tab:stats:reverse:no_TotalElectronContent}, Table~\ref{tab:stats:reverse:coord}, Table~\ref{tab:stats:reverse:xyap}, Table~\ref{tab:stats:reverse:xzap}, and Table~\ref{tab:stats:reverse:yzap}. The Naive Bayes (NB) model has the second highest accuracy, over $99\%$. The NB model achieved a $100\%$ accuracy, except when using all input variables, all input variables except Disturbance Storm-Time (Dst), or only $B_{y}$, $B_{z}$, and $a_{p}$. The difference in accuracy between the NN and the NB model is negligible, and the training time for the NN model is more than twice as long. Despite their simple design and seemingly oversimplified assumptions, NB classifiers have performed quite well in many complex real-world situations. In 2004, an analysis of the Bayesian classification problem showed that there are reasonable theoretical reasons for the seemingly incredible performance of NB classifiers citestuff(Zhang2004).
+The Neural Network (NN) model has the highest execution time for any subset of the input variables due to its complexity and extensive training, evident from the data in Table~\ref{tab:time:total}. However, it achieved a $100\%$ accuracy, shown in Table~\ref{tab:acc:all}. The Naive Bayes (NB) model has the second highest accuracy, over $99\%$. The NB model achieved a $100\%$ accuracy, except when using all input variables, all input variables except Disturbance Storm-Time ($Dst$), or only $B_{y}$, $B_{z}$, and $a_{p}$. The difference in accuracy between the NN and the NB model is negligible, and the training time for the NN model is more than twice as long. An analysis in 2004 showed reasonable theoretical reasons for the seemingly incredible performance of NB classifiers citestuff(Zhang2004).
 
 All other models fail to achieve an accuracy over $90\%$, except when using all input variables, including $Dst$. The $Dst$ class was derived by thresholding the continuous $Dst$ value and discretizing it by converting it to a single character, so the original $Dst$ value should not be used as model input. This labeling method explains the increase in accuracy when adding the $Dst$ input variable in all except the two best-performing models. For example, the C5.0 DT model did not consider any variable except $Dst$, indicated by a $100\%$ variable importance. The Support Vector Machine (SVM) model with a Polynomial Kernel is consistently the worst-performing for any subset of input variables, never achieving an accuracy over $80\%$. None of the models achieved an accuracy under $70\%$, so they were all moderately successful.
 
-When studying the performance of the NB model by individual class in Table~\ref{tab:cm:all:nb}, Table~\ref{tab:cs:reverse:all:nb}, Table~\ref{tab:cm:no_DisturbanceStormTime:nb}, Table~\ref{tab:cs:reverse:no_DisturbanceStormTime:nb}, Table~\ref{tab:cm:yzap:nb} and Table~\ref{tab:cs:reverse:yzap:nb}, samples of the T class are all correctly classified, but the testing is less extensive since it is the second smallest class. Samples of the R class are sometimes erroneously assigned to the N, P, or less commonly the T class. Samples of the P class are rarely mistaken for the N class. Two of the most common misclassifications were assigning samples of the N class with the highest detection rate and prevalence to the P or R classes with the third and second highest detection rate and prevalence. This is due to the largest number of samples in the N class between the P and R classes with the narrowest $Dst$ range. Samples of the N class are least often included in the E class, whose range is the furthest apart from the N class. A sample of the E class was attributed to the N class only once. The E class is the smallest with only three samples, which must be accounted for when interpreting these results, such as the lowest balanced accuracy of $83.33\%$ and sensitivity of $66.67\%$ when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input, or the lowest positive predictive value of $75\%$ when using all variables as input.
+When studying the performance of the NB model by individual class in Table~\ref{tab:cm:merged}, Table~\ref{tab:cs:reverse:all:nb}, Table~\ref{tab:cs:reverse:no_DisturbanceStormTime:nb}, and Table~\ref{tab:cs:reverse:yzap:nb}, samples of the T class are all correctly classified except for one case, but the testing is less extensive since it is the second smallest class. Samples of the P class are all correctly classified. Samples of the R class are sometimes erroneously assigned to the N, T, or less commonly the E class. Two of the most common misclassifications were assigning samples of the N class with the highest detection rate and prevalence to the P or R classes with the third and second highest detection rate and prevalence. This is due to the largest number of samples in the N class between the P and R classes with the narrowest $Dst$ range. Samples of the N class are least often included in the E class, whose range is the furthest apart from the N class. A sample of the E class was attributed to the N class only once. The E class is the smallest with only two testing samples, which must be accounted for when interpreting these results, such as the lowest balanced accuracy of $75\%$ and sensitivity of $50\%$ when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input, or the lowest positive predictive value of $50\%$ when using all variables as input.
 
 \section{Conclusion}
 \label{sec:Conclusion}
 
-The presented study aims to classify ambient conditions of space weather events for sub-equatorial regions. Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT) performance is significantly affected by such events. it would be beneficial to indicate to users that a geomagnetic/ionospheric storm is in progress. 
+The presented study aims to classify ambient conditions of space weather events for sub-equatorial regions. Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT) performance is significantly affected by such events. It would be beneficial to warn users of a geomagnetic/ionospheric storm.
 
-Classification models using machine learning were applied to descriptions of the geomagnetic field expressed in Total Electron Content (TEC) and other input data. It was assumed observations contained independent variables to generate the dependent variable representing the Disturbance Storm-Time (Dst) class. 
+Classification models using machine learning were applied to descriptions of the geomagnetic field expressed in Total Electron Content ($TEC$) and other input data. It was assumed observations contained independent variables to generate the dependent variable representing the Disturbance Storm-Time ($Dst$) class. 
 
 Statistical analysis confirmed that other variables change distribution based on $Dst$, not $TEC$. Continuous $Dst$ values in different ranges were converted into discrete classes based on statistics, previous theories, and research. 
 
@@ -1208,6 +780,11 @@ The NB model achieved perfect accuracy for most tested combinations of input var
 
 \\[2\baselineskip]
 
+\textit{ION} The Institute of Navigation
+
+
+\\[2\baselineskip]
+
 \textit{KLT} Karhunen–Loève Theorem
 
 
@@ -1267,6 +844,10 @@ The NB model achieved perfect accuracy for most tested combinations of input var
 
 \textit{RF} Random Forest
 
+\textit{RIN} The Royal Institute of Navigation
+
+\textit{RINEX} Receiver Independent Exchange Format
+
 
 \\[2\baselineskip]
 
@@ -1304,7 +885,12 @@ The NB model achieved perfect accuracy for most tested combinations of input var
 
 \\[2\baselineskip]
 
-\textit{dTEC} detrended Total Electron Content
+\textit{URSI} Union Radio-Scientifique Internationale
+
+
+\\[2\baselineskip]
+
+\textit{dTEC} standard deviation of Total Electron Content
 
 
 
@@ -1324,30 +910,33 @@ The authors declare no conflict of interest.
 \subsection{Funding}
 %\label{subsec:Funding}
 
-This work was fully supported by
+The authors have no funding sources to declare.
 
 \subsection{Authors' contributions}
 %\label{subsec:Contributions}
 
-\textbf{Lucija Žužić:} Conceptualization, Methodology, Software, Validation, Investigation, Data Curation, Writing -- Original Draft, Visualization.
-
-\textbf{Teodor B. Iliev:} Conceptualization, Methodology, Validation, Formal analysis, Investigation, Resources, Writing -- Original Draft, Writing -- Review \& Editing, Supervision, Project administration, Funding acquisition.
-
-\textbf{Renato Filjar:} Conceptualization, Methodology, Validation, Formal analysis, Investigation, Resources, Writing -- Original Draft, Writing -- Review \& Editing, Supervision, Project administration, Funding acquisition.
+L\v{Z} and DK contributed to conceptualization, methodology, software, validation, formal analysis, investigation, data curation, writing of the original draft, reviewing and editing the text, and visualization. TI contributed to validation, formal analysis, investigation, review and editing, supervision, and project administration. RF contributed to conceptualization, methodology, investigation, resources, writing of the original draft, reviewing and editing the text, and supervision. All authors read and approved the final manuscript.
 
 \subsection{Acknowledgements}
 %\label{subsec:Acknowledgements}
 
-This work was fully supported by
+Not applicable
 
 \subsection{Authors' information}
 %\label{subsec:Information}
 
-Lucija Žužić is a doctoral student at the Faculty of Engineering, University of Rijeka, currently employed as an assistant at the Department of Computer Engineering. Her research interests include applied machine learning in biology, chemistry, medicine, and transportation. Maritime transportation is also the subject of her master's thesis.
+LŽ is a doctoral student at the Faculty of Engineering, University of Rijeka, currently employed as an assistant at the Department of Computer Science. Her research interests include applied machine learning in biology, chemistry, medicine, and transportation. Maritime transportation is also the subject of her doctoral research.
 
-Teodor B. Iliev
+DK is a doctoral student at the Faculty of Engineering, University of Rijeka, currently employed as an assistant at the Department of Computer Science. His research interests include applied machine learning in object recognition and image segmentation. Image classification and labeling are also the subject of his doctoral research.
 
-Renato Filjar
+TI earned his MSc and PhD in telecommunication engineering from the University of Ruse “Angel Kanchev,” Ruse, Bulgaria, in 1999 and 2007, respectively. He is a full professor at the Department of Telecommunication, University of Ruse “Angel Kanchev.” His research interests include mobile communications networks, signal processing, wireless technologies, and satellite navigation. Professor Iliev is a Member of IEEE.
+
+RF is an external Professor of Electronics Engineering with the Department for Computer Science, Faculty of Engineering, and Center for Artificial Intelligence and Cybersecurity, both at the University of Rijeka, Croatia, and Head of the Laboratory for Spatial Intelligence at Hrvatsko Zagorje Krapina University of Applied Science, Krapina, Croatia. He holds a BSc, MSc, and PhD in electrical engineering, obtained in 1987, 1994, and 2007, respectively, from the Faculty of Electrical Engineering and Computing, University of Zagreb, Croatia. His professional interests include Ambient-Aware Application-Aligned ((AA)2) Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT), spatial uncertainty quantification, spatial statistical learning, predictive modeling, statistical signal processing, trajectory analysis and prediction, and occupancy modeling. Professor Filjar is a Fellow of The Royal Institute of Navigation (RIN) (London, United Kingdom), a Member of The Institute of Navigation (ION) (Manassas, Virginia), a Senior Member of Union Radio-Scientifique Internationale (URSI) (Ghent, Belgium) and a Member of The Society for Industrial and Applied Mathematics  (Philadelphia, Philadelphia). %He established, and organises the traditional Baška SIF (Spatial Information Fusion) Forum, held annually in Baška, Krk Island, Croatia.
+
+% vidi Philadelphia možda clan, zemlje u razvoju samo 15 dolara godišnje, ciljane sekcije
+% uncertainty modeling souther California
+
+% smanjti reference ko je moguce
 
 %%===========================================================================================%%
 %% If you are submitting to one of the Nature Portfolio journals, using the eJP submission   %%

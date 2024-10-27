@@ -4,206 +4,117 @@
 [4]M. Filić and R. Filjar, “modelling the relation between GNSS positioning performance degradation, and space weather and ionospheric conditions using RReliefF features selection,” in ION GNSS+ 2018 Meeting, 2018, pp. 1999–2006.
 [5]J. J. Spilker Jr, P. Axelrad, B. W. Parkinson, and P. Enge, Global positioning system: theory and applications, volume I. Reston, Virginia: American Institute of Aeronautics, 1996.
 [6]A. Oxley, Uncertainties in GPS Positioning: A mathematical discourse. Cambridge, Massachusetts: Academic Press, 2017.
-[7]N. Sikirica, F. Dimc, O. Jukic, T. B. Iliev, D. Spoljar, and R. Filjar, “A Risk Assessment of Geomagnetic Conditions Impact on GPS Positioning Accuracy Degradation in Tropical Regions Using Dst Index,” in Proceedings of the 2021 International Technical Meeting of The Institute of Navigation, 2021, pp. 606–615.
-[8]R. Natras, B. Soja, and M. Schmidt, “Ensemble machine learning of random forest, AdaBoost and XGBoost for vertical total electron content forecasting,” Remote Sensing, vol. 14, no. 15, p. 3547, 2022.
-[9]R. Natras et al., “Regional ionosphere delay models based on CORS data and machine learning,” NAVIGATION: Journal of the Institute of Navigation, vol. 70, no. 3, 2023.
-[10]R. Filjar, I. Sklebar, and M. Horvat, “A COMPARISON OF MACHINE LEARNING-BASED INDIVIDUAL MOBILITY CLASSIFICATION MODELS DEVELOPED ON SENSOR READINGS FROM LOOSELY ATTACHED SMARTPHONES.,” Komunikácie, vol. 22, no. 4, 2020.
-[11]M. Kuhn, Applied predictive modeling. Springer, 2013.
-[12]M. Kuhn, The caret Package — topepo.github.io. https://topepo.github.io/caret/, 2024. [Online]. Available: https://topepo.github.io/caret/
-[13]RCoreTeam, R: The R Project for Statistical Computing — r-project.org. https://www.r-project.org/, 2024. [Online]. Available: https://www.r-project.org/
-[14]B. E. Boser, I. M. Guyon, and V. N. Vapnik, “A training algorithm for optimal margin classifiers,” Jul. 1992.
-[15]C. Cortes and V. Vapnik, “Support-vector networks,” Mach. Learn., vol. 20, no. 3, pp. 273–297, Sep. 1995.
-[16]A. Ben-Hur, D. Horn, H. Siegelmann, and V. Vapnik, “Support Vector Clustering,” Journal of Machine Learning Research, vol. 2, pp. 125–137, Nov. 2001, doi: 10.1162/15324430260185565.
-[17]D. Meyer, F. Leisch, and K. Hornik, “The support vector machine under test,” Neurocomputing, vol. 55, no. 1–2, pp. 169–186, Sep. 2003.
+[7]G. K. Seemala, “Chapter 4 - Estimation of ionospheric total electron content (TEC) from GNSS observations,” in Atmospheric Remote Sensing, A. Kumar Singh and S. Tiwari, Eds. Amsterdam, Netherlands: Elsevier, 2023, pp. 63–84. doi: https://doi.org/10.1016/B978-0-323-99262-6.00022-5.
+[8]N. Sikirica, F. Dimc, O. Jukic, T. B. Iliev, D. Spoljar, and R. Filjar, “A Risk Assessment of Geomagnetic Conditions Impact on GPS Positioning Accuracy Degradation in Tropical Regions Using Dst Index,” in Proceedings of the 2021 International Technical Meeting of The Institute of Navigation, 2021, pp. 606–615.
+[9]R. Natras, B. Soja, and M. Schmidt, “Ensemble machine learning of random forest, AdaBoost and XGBoost for vertical total electron content forecasting,” Remote Sensing, vol. 14, no. 15, p. 3547, 2022.
+[10]R. Natras et al., “Regional ionosphere delay models based on CORS data and machine learning,” NAVIGATION: Journal of the Institute of Navigation, vol. 70, no. 3, 2023.
+[11]NOAA, NOAA Space Weather Scales | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. https://www.swpc.noaa.gov/noaa-scales-explanation, 2024. [Online]. Available: https://www.swpc.noaa.gov/noaa-scales-explanation
+[12]R. Filjar, I. Sklebar, and M. Horvat, “A COMPARISON OF MACHINE LEARNING-BASED INDIVIDUAL MOBILITY CLASSIFICATION MODELS DEVELOPED ON SENSOR READINGS FROM LOOSELY ATTACHED SMARTPHONES.,” Komunikácie, vol. 22, no. 4, 2020.
+[13]INTERMAGNET and others, Intermagnet reference data set (IRDS) 2019 – definitive magnetic observatory data. GFZ Data Services, 2022. doi: https://doi.org/10.5880/INTERMAGNET.1991.2019.
+[14]M. Kuhn, Applied predictive modeling. Springer, 2013.
+[15]M. Kuhn, The caret Package — topepo.github.io. https://topepo.github.io/caret/, 2024. [Online]. Available: https://topepo.github.io/caret/
+[16]RCoreTeam, R: The R Project for Statistical Computing — r-project.org. https://www.r-project.org/, 2024. [Online]. Available: https://www.r-project.org/
+[17]C. Cortes and V. Vapnik, “Support-vector networks,” Mach. Learn., vol. 20, no. 3, pp. 273–297, Sep. 1995.
 [18]P. scikit-learn developers, 1.4. Support Vector Machines — scikit-learn.org. http://scikit-learn.org/stable/modules/svm.html, 2023. [Online]. Available: http://scikit-learn.org/stable/modules/svm.html
-[19]T. Hastie, S. Rosset, J. Zhu, and H. Zou, “Multi-class AdaBoost,” Stat. Interface, vol. 2, no. 3, pp. 349–360, 2009.
+[19]B. E. Boser, I. M. Guyon, and V. N. Vapnik, “A training algorithm for optimal margin classifiers,” Jul. 1992.
 [20]M. A. Aizerman, E. A. Braverman, and L. Rozonoer, “Theoretical foundations of the potential function method in pattern recognition learning,” in Automation and Remote Control, 1964, no. 25, pp. 821–837.
-[21]C. Jin and L. Wang, “Dimensionality dependent PAC-Bayes margin bound,” Advances in Neural Information Processing Systems, vol. 2, pp. 1034–1042, Jan. 2012.
-[22]W. H. Press, S. A. Teukolsky, W. T. Vetterling, and B. P. Flannery, Numerical recipes 3rd edition, Third. Cambridge, England: Cambridge University Press, 2007.
-[23]T. Joachims, “Text categorization with Support Vector Machines: Learning with many relevant features,” in Machine Learning: ECML-98, Berlin, Heidelberg: Springer Berlin Heidelberg, 1998, pp. 137–142.
-[24]S. S. Pradhan, W. H. Ward, K. Hacioglu, J. H. Martin, and D. Jurafsky, “Shallow Semantic Parsing using Support Vector Machines,” in Proceedings of the Human Language Technology Conference of the North American Chapter of the Association for Computational Linguistics: HLT-NAACL 2004, 2004, pp. 233–240. [Online]. Available: https://aclanthology.org/N04-1030
-[25]A. Laurent, O. Strauss, B. Bouchon-Meunier, and R. R. Yager, Information Processing and Management of Uncertainty in Knowledge-Based Systems. Berlin/Heidelberg, Germany: Springer, 2014, p. 442.
-[26]L. Barghout, “Spatial-taxon information granules as used in iterative fuzzy-decision-making for image segmentation,” in Studies in Big Data, Cham: Springer International Publishing, 2015, pp. 285–318.
-[27]A. Maity, “Supervised classification of RADARSAT-2 polarimetric data for different land features,” arXiv preprint arXiv:1608.00501, Aug. 2016.
-[28]D. Decoste and B. Schölkopf, “Training Invariant Support Vector Machines,” Mach. Learn., vol. 46, no. 1/3, pp. 161–190, 2002.
-[29]D. S. Maitra, U. Bhattacharya, and S. K. Parui, “CNN based common approach to handwritten character recognition of multiple scripts,” Aug. 2015.
-[30]B. Gaonkar and C. Davatzikos, “Analytic estimation of statistical significance maps for support vector machine based multi-variate image analysis and classification,” Neuroimage, vol. 78, pp. 270–283, Sep. 2013.
-[31]R. Cuingnet et al., “Spatial regularization of SVM for the detection of diffusion alterations associated with stroke outcome,” Med. Image Anal., vol. 15, no. 5, pp. 729–737, Oct. 2011.
-[32]A. Statnikov, D. Hardin, and C. Aliferis, “Using SVM Weight-Based Methods to Identify Causally Relevant and Non-Causally Relevant Variables,” Sign, vol. 1, Jan. 2006.
-[33]C. W. Hsu, C. C. Chang, and C. J. Lin, “A Practical Guide to Support Vector Classification,” Department of Computer Science, National Taiwan University, techreport, 2003.
-[34]M. Studer, G. Ritschard, A. Gabadinho, and N. S. Müller, “Discrepancy analysis of state sequences,” Sociol. Methods Res., vol. 40, no. 3, pp. 471–510, Aug. 2011.
-[35]X. Wu et al., “Top 10 algorithms in data mining,” Knowl. Inf. Syst., vol. 14, no. 1, pp. 1–37, Jan. 2008.
-[36]L. Rokach and O. Maimon, Data mining with decision trees. Singapore: World Scientific Publishing Company, 2014.
-[37]S. Shalev-Shwartz and S. Ben-David, “Decision Trees,” in Understanding Machine Learning: From Theory to Algorithms, Cambridge, England: Cambridge University Press, 2014, pp. 212–218. doi: 10.1017/CBO9781107298019.019.
-[38]J. R. Quinlan, “Induction of decision trees,” Mach. Learn., vol. 1, no. 1, pp. 81–106, Mar. 1986.
-[39]L. Rokach and O. Maimon, “Top-down induction of decision trees classifiers—A survey,” IEEE Trans. Syst. Man Cybern. C Appl. Rev., vol. 35, no. 4, pp. 476–487, Nov. 2005.
-[40]A. McCallum, Graphical Models Lecture 2: Bayesian Network Representation. https://people.cs.umass.edu/ mccallum/courses/gm2011/02-bn-rep.pdf, 2011. [Online]. Available: https://people.cs.umass.edu/ mccallum/courses/gm2011/02-bn-rep.pdf
-[41]S. J. Russell and P. Norvig, Artificial intelligence: a modern approach. London, England: Pearson, 2016.
-[42]D. J. Hand and K. Yu, “Idiot’s Bayes: Not So Stupid after All?,” Int. Stat. Rev., vol. 69, no. 3, p. 385, Dec. 2001.
-[43]H. Zhang, “The Optimality of Naive Bayes,” in Proceedings of the Seventeenth International Florida Artificial Intelligence Research Society Conference, FLAIRS 2004, Jan. 2004, vol. 2.
-[44]R. Caruana and A. Niculescu-Mizil, “An Empirical Comparison of Supervised Learning Algorithms,” Proceedings of the 23rd international conference on Machine learning - ICML ’06, vol. 2006, pp. 161–168, Jun. 2006, doi: 10.1145/1143844.1143865.
-[45]StackExchange, Why is the SVM margin equal to 2/w? — math.stackexchange.com. https://math.stackexchange.com/questions/1305925/why-is-the-svm-margin-equal-to-frac2-mathbfw, 2024. [Online]. Available: https://math.stackexchange.com/questions/1305925/why-is-the-svm-margin-equal-to-frac2-mathbfw
-[46]M. N. Murty and V. S. Devi, Pattern recognition: An algorithmic approach. Berlin/Heidelberg, Germany: Springer Science & Business Media, 2011.
-[47]G. H. John and P. Langley, Estimating Continuous Distributions in Bayesian Classifiers. 2013.
-[48]A. Mccallum and K. Nigam, “A Comparison of Event Models for Naive Bayes Text Classification,” Work Learn Text Categ, vol. 752, May 2001.
-[49]V. Metsis, I. Androutsopoulos, and G. Paliouras, “Spam Filtering with Naive Bayes - Which Naive Bayes?,” Jan. 2006.
-[50]S. M. Piryonesi and T. E. El-Diraby, “Role of data analytics in infrastructure asset management: Overcoming data size and quality problems,” J. Transp. Eng. B Pavements, vol. 146, no. 2, p. 04020022, Jun. 2020.
-[51]MIT, Explained: Neural networks — news.mit.edu. https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414, 2017. [Online]. Available: https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414
-[52]A. Brahme, Comprehensive biomedical physics. 8-11 Southampton Street, London: Newnes, 2014.
-[53]J. D. Olden and D. A. Jackson, “Illuminating the ‘black box’: a randomization approach for understanding variable contributions in artificial neural networks,” Ecological modelling, vol. 154, no. 1–2, pp. 135–150, 2002.
-[54]S. L. Özesmi and U. Özesmi, “An artificial neural network approach to spatial habitat modelling with interspecific interaction,” Ecological modelling, vol. 116, no. 1, pp. 15–31, 1999.
-[55]C. Bishop, Pattern Recognition and Machine Learning. Berlin/Heidelberg, Germany: Springer, 2006.
-[56]V. Vapnik, The nature of statistical learning theory. Berlin/Heidelberg, Germany: Springer science & business media, 2013.
-[57]I. Goodfellow, Deep learning. MIT press, 2016.
-[58]P. Probst, A. L. Boulesteix, and B. Bischl, “Tunability: Importance of hyperparameters of machine learning algorithms,” Journal of Machine Learning Research, vol. 20, no. 53, pp. 1–32, 2019.
-[59]B. Zoph, “Neural architecture search with reinforcement learning,” arXiv preprint arXiv:1611.01578, 2016.
-[60]H. Jin, Q. Song, and X. Hu, “Auto-keras: An efficient neural architecture search system,” in Proceedings of the 25th ACM SIGKDD international conference on knowledge discovery & data mining, 2019, pp. 1946–1956.
-[61]M. Claesen and B. De Moor, “Hyperparameter search in machine learning,” arXiv preprint arXiv:1502.02127, 2015.
-[62]Y. H. Liu, Python Machine Learning by Example: Build Intelligent Systems Using Python, TensorFlow 2, PyTorch, and Scikit-Learn. Birmingham, United Kingdom: Packt Publishing Ltd, 2020.
-[63]S. Wold, M. Sjöström, and L. Eriksson, “PLS-regression: a basic tool of chemometrics,” Chemometrics and intelligent laboratory systems, vol. 58, no. 2, pp. 109–130, 2001.
-[64]H. Abdi, “Partial least squares regression and projection on latent structure regression (PLS Regression),” Wiley interdisciplinary reviews: computational statistics, vol. 2, no. 1, pp. 97–106, 2010.
-[65]S. Sæbø, T. Almøy, A. Flatberg, A. H. Aastveit, and H. Martens, “LPLS-regression: a method for prediction and classification under the influence of background information on predictor variables,” Chemometrics and Intelligent Laboratory Systems, vol. 91, no. 2, pp. 121–132, 2008.
-[66]H. Asada, Fall Term (AY 2020-2021) - 2.160 Identification, Estim, & Learn Lecture 6: Partial Least Squares Regression. https://www.youtube.com/watch?v=Px2otK2nZ1c&t=46s, 2020. [Online]. Available: https://www.youtube.com/watch?v=Px2otK2nZ1c&t=46s
-[67]F. Lindgren, P. Geladi, and S. Wold, “The kernel algorithm for PLS,” Journal of Chemometrics, vol. 7, no. 1, pp. 45–59, 1993.
-[68]S. De Jong and C. J. F. Ter Braak, “Comments on the PLS kernel algorithm,” Journal of chemometrics, vol. 8, no. 2, pp. 169–174, 1994.
-[69]B. S. Dayal and J. F. MacGregor, “Improved PLS algorithms,” Journal of Chemometrics: A Journal of the Chemometrics Society, vol. 11, no. 1, pp. 73–85, 1997.
-[70]S. De Jong, “SIMPLS: an alternative approach to partial least squares regression,” Chemometrics and intelligent laboratory systems, vol. 18, no. 3, pp. 251–263, 1993.
-[71]S. Rännar, F. Lindgren, P. Geladi, and S. Wold, “A PLS kernel algorithm for data sets with many variables and fewer objects. Part 1: Theory and algorithm,” Journal of Chemometrics, vol. 8, no. 2, pp. 111–125, 1994.
-[72]Y. Takane and S. Loisel, “On the PLS algorithm for multiple regression (PLS1),” in The Multiple Facets of Partial Least Squares and Related Methods: PLS, Paris, France, 2014 8, 2016, pp. 17–28.
-[73]A. Höskuldsson, “PLS regression methods,” Journal of chemometrics, vol. 2, no. 3, pp. 211–228, 1988.
-[74]T. Hastie, A. Buja, and R. Tibshirani, “Penalized discriminant analysis,” The Annals of Statistics, vol. 23, no. 1, pp. 73–102, 1995.
-[75]T. Hastie, R. Tibshirani, J. H. Friedman, and J. H. Friedman, The elements of statistical learning: data mining, inference, and prediction, vol. 2. Berlin/Heidelberg, Germany: Springer, 2009.
-[76]T. Hastie, R. Tibshirani, and A. Buja, “Flexible discriminant analysis by optimal scoring,” Journal of the American statistical association, vol. 89, no. 428, pp. 1255–1270, 1994.
-[77]C. Reynès, R. Sabatier, and N. Molinari, “Choice of B-splines with free parameters in the flexible discriminant analysis context,” Computational statistics & data analysis, vol. 51, no. 3, pp. 1765–1778, 2006.
-[78]N. D. Phillips et al., “Applying species distribution modelling to a data poor, pelagic fish complex: the ocean sunfishes,” Journal of biogeography, vol. 44, no. 10, pp. 2176–2187, 2017.
-[79]W. Hallgren, F. Santana, S. Low-Choy, Y. Zhao, and B. Mackey, “Species distribution models can be highly sensitive to algorithm configuration,” Ecological Modelling, vol. 408, p. 108719, 2019.
-[80]W. Thuiller, D. Georges, R. Engler, and F. Breiner, “Ensemble platform for species distribution modeling,” R Package Version, pp. 3–1, 2016.
-[81]P. Quillfeldt, J. O. Engler, J. R. D. Silk, and R. A. Phillips, “Influence of device accuracy and choice of algorithm for species distribution modelling of seabirds: a case study using black-browed albatrosses,” Journal of Avian Biology, vol. 48, no. 12, pp. 1549–1555, 2017.
-[82]Z. Zhang, S. Xu, C. Capinha, R. Weterings, and T. Gao, “Using species distribution model to predict the impact of climate change on the potential distribution of Japanese whiting Sillago japonica,” Ecological Indicators, vol. 104, pp. 333–340, 2019.
-[83]J. Cohen, P. Cohen, S. G. West, and L. S. Aiken, Applied multiple regression/correlation analysis for the behavioral sciences. Milton Park, Abingdon-on-Thames, Oxfordshire, England, UK: Routledge, 2013.
-[84]J. Hansen, Using SPSS for windows and macintosh: analyzing and understanding data. Taylor & Francis, 2005.
-[85]R. A. Fisher, “The use of multiple measurements in taxonomic problems,” Annals of eugenics, vol. 7, no. 2, pp. 179–188, 1936.
-[86]G. J. McLachlan, Discriminant analysis and statistical pattern recognition. Hoboken, New Jersey, U.S.: John Wiley & Sons, 2005.
-[87]D. Wetcher-Hendricks, Analyzing quantitative data: An introduction for social researchers. Hoboken, New Jersey, U.S.: John Wiley & Sons, 2011.
-[88]A. M. Martinez and A. C. Kak, “PCA versus LDA,” IEEE transactions on pattern analysis and machine intelligence, vol. 23, no. 2, pp. 228–233, 2001.
-[89]H. Abdi, Discriminant correspondence analysis, vol. 2007. Sage Thousand Oaks, CA, 2007, pp. 1–10.
-[90]G. Perriere and J. Thioulouse, “Use of correspondence discriminant analysis to predict the subcellular location of bacterial proteins,” Computer Methods and Programs in Biomedicine, vol. 70, no. 2, pp. 99–105, 2003.
-[91]B. Cokluk and S. Buyukozturk, “Discriminant function analysis: concept and application,” Eğitim araştırmaları dergisi, vol. 33, pp. 73–92, 2008.
-[92]W. N. Venables and B. D. Ripley, Modern applied statistics with S-PLUS. Berlin/Heidelberg, Germany: Springer Science & Business Media, 2013.
-[93]P. A. Lachenbruch and M. Goldstein, “Discriminant analysis,” Biometrics, pp. 69–85, 1979.
-[94]W. R. Klecka, Discriminant analysis. London, United Kingdom: Sage, 1980.
-[95]W. K. Härdle, Applied multivariate statistical analysis. Berlin, Germany: Springer Nature, 2003.
-[96]G. D. Garson, PA 765: Discriminant Function Analysis — web.archive.org. https://web.archive.org/web/20080312065328/http://www2.chass.ncsu.edu/garson/pA765/discrim.htm, 2008. [Online]. Available: https://web.archive.org/web/20080312065328/http://www2.chass.ncsu.edu/garson/pA765/discrim.htm
-[97]S. A. Israel, “Performance metrics: how and when,” Geocarto International, vol. 21, no. 2, pp. 23–32, 2006.
-[98]C. R. Rao, “The utilization of multiple measurements in problems of biological classification,” Journal of the Royal Statistical Society. Series B (Methodological), vol. 10, no. 2, pp. 159–203, 1948.
-[99]B. D. Ripley, Pattern recognition and neural networks. Cambridge, United Kingdom: Cambridge university press, 2007.
-[100]I. T. Jolliffe and J. Cadima, “Principal component analysis: a review and recent developments,” Philosophical transactions of the royal society A: Mathematical, Physical and Engineering Sciences, vol. 374, no. 2065, p. 20150202, 2016.
-[101]T. P. Barnett and R. Preisendorfer, “Origins and levels of monthly and seasonal forecast skill for United States surface air temperatures determined by canonical correlation analysis,” Monthly Weather Review, vol. 115, no. 9, pp. 1825–1850, 1987.
-[102]D. Hsu, S. M. Kakade, and T. Zhang, “A spectral algorithm for learning hidden Markov models,” Journal of Computer and System Sciences, vol. 78, no. 5, pp. 1460–1480, 2012.
-[103]P. P. Markopoulos, S. Kundu, S. Chamadia, and D. A. Pados, “Efficient L1-norm principal-component analysis via bit flipping,” IEEE Transactions on Signal Processing, vol. 65, no. 16, pp. 4252–4264, 2017.
-[104]D. G. Chachlakis, A. Prater-Bennette, and P. P. Markopoulos, “L1-norm Tucker tensor decomposition,” IEEE Access, vol. 7, pp. 178454–178465, 2019.
-[105]P. P. Markopoulos, G. N. Karystinos, and D. A. Pados, “Optimal algorithms for L1-subspace signal processing,” IEEE Transactions on Signal Processing, vol. 62, no. 19, pp. 5046–5058, 2014.
-[106]J. Zhan and N. Vaswani, “Robust PCA with partial subspace knowledge,” IEEE Transactions on Signal Processing, vol. 63, no. 13, pp. 3332–3347, 2015.
-[107]Q. Ke and T. Kanade, “Robust l/sub 1/norm factorization in the presence of outliers and missing data by alternative convex programming,” in 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR’05), 2005, vol. 1, pp. 739–746.
-[108]K. Pearson, “LIII. On lines and planes of closest fit to systems of points in space,” The London, Edinburgh, and Dublin philosophical magazine and journal of science, vol. 2, no. 11, pp. 559–572, 1901.
-[109]F. M. Stewart, Introduction to linear algebra. Mineola, New York, USA: Courier Dover Publications, 2019.
-[110]H. Hotelling, “Analysis of a complex of statistical variables into principal components.,” Journal of educational psychology, vol. 24, no. 6, p. 417, 1933.
-[111]H. Hotelling, “Relations between two sets of variates,” in Breakthroughs in statistics: methodology and distribution, Berlin/Heidelberg, Germany: Springer, 1992, pp. 162–190.
-[112]G. Berkooz, P. Holmes, and J. L. Lumley, “The proper orthogonal decomposition in the analysis of turbulent flows,” Annual review of fluid mechanics, vol. 25, no. 1, pp. 539–575, 1993.
-[113]K. Karhunen, “Zur spektraltheorie stochasticher,” in Annales Academiae Scientiarum Fennicae Series A, 1946, vol. 1, p. 34.
-[114]M. Loève, Elementary probability theory. Berlin/Heidelberg, Germany: Springer, 1977.
-[115]L. Sirovich, “Turbulence and the dynamics of coherent structures. I. Coherent structures,” Quarterly of applied mathematics, vol. 45, no. 3, pp. 561–571, 1987.
-[116]S. S. Sapatnekar, “Overcoming variations in nanometer-scale technologies,” IEEE Journal on Emerging and Selected Topics in Circuits and Systems, vol. 1, no. 1, pp. 5–18, 2011.
-[117]S. Ghoman, Z. Wang, P. Chen, and R. Kapania, “A POD-based reduced order design scheme for shape optimization of air vehicles,” in 53rd AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics and Materials Conference 20th AIAA/ASME/AHS Adaptive Structures Conference 14th AIAA, 2012, p. 1808.
-[118]R. Wang, Computer Image Processing and Analysis (E161) lectures, Harvey Mudd College, Karhunen-Loeve Transform (KLT). https://web.archive.org/web/20161128140401/http://fourier.eng.hmc.edu/e161/lectures/klt/node3.html, 2016. [Online]. Available: https://web.archive.org/web/20161128140401/http://fourier.eng.hmc.edu/e161/lectures/klt/node3.html
-[119]G. Giambartolomei, “The Karhunen-Loève theorem,” phdthesis, University of Bologna, 2016. [Online]. Available: http://amslaurea.unibo.it/10169/
-[120]S. Mallat, A wavelet tour of signal processing. Cambridge, Massachusetts: Academic Press, 1999.
-[121]X. Tang, “Texture information in run-length matrices,” IEEE transactions on image processing, vol. 7, no. 11, pp. 1602–1609, 1998.
-[122]G. W. Stewart, “On the early history of the singular value decomposition,” SIAM review, vol. 35, no. 4, pp. 551–566, 1993.
-[123]G. H. Gloub and C. F. Van Loan, “Matrix computations,” Johns Hopkins Universtiy Press, 3rd edtion, 1996.
-[124]A. F. Hayden and D. R. Twede, “Observations on the relationship between eigenvalues, instrument noise, and detection performance,” in Imaging Spectrometry VIII, 2002, vol. 4816, pp. 355–362.
-[125]I. T. Jolliffe, Principal Component Analysis (Springer Series in Statistics), Springer. 2002.
-[126]E. N. Lorenz, Empirical orthogonal functions and statistical weather prediction, vol. 1. Cambridge, Massachusetts: Massachusetts Institute of Technology, Department of Meteorology Cambridge, 1956.
-[127]C. Eckart and G. Young, “The approximation of one matrix by another of lower rank,” Psychometrika, vol. 1, no. 3, pp. 211–218, 1936.
-[128]M. T. Dove, Introduction to lattice dynamics. Cambridge, United Kingdom: Cambridge university press, 1993.
-[129]Y. Bengio, A. Courville, and P. Vincent, “Representation learning: A review and new perspectives,” IEEE transactions on pattern analysis and machine intelligence, vol. 35, no. 8, pp. 1798–1828, 2013.
-[130]J. Forkman, J. Josse, and H. P. Piepho, “Hypothesis tests for principal component analysis when variables are standardized,” Journal of Agricultural, Biological and Environmental Statistics, vol. 24, pp. 289–308, 2019.
-[131]W. K. Tobiska, “Current status of solar EUV measurements and modeling,” Advances in Space Research, vol. 18, no. 3, pp. 3–10, 1996.
-[132]Y. I. Vitinsky, M. Kopecky, and G. V. Kuklin, Statistics of Sunspot Activity (Moscow, USSR. Nauka, 1986.
-[133]G. E. Lanyi and T. Roth, “A comparison of mapped and measured total ionospheric electron content using global positioning system and beacon satellite observations,” Radio science, vol. 23, no. 4, pp. 483–492, 1988.
-[134]H. Rishbeth and O. K. Garriott, “Introduction to ionospheric physics,” Introduction to ionospheric physics, 1969.
-[135]J. A. Ratcliffe, An introduction to ionosphere and magnetosphere. Cambridge, United Kingdom: CUP Archive, 1972.
-[136]J. A. Klobuchar, “Design and characteristics of the GPS ionospheric time delay algorithm for single frequency users,” in PLANS 1986-Position Location and Navigation Symposium, 1986, pp. 280–286.
-[137]B. Zolesi and Lj. R. Cander, Ionospheric prediction and forecasting. Berlin/Heidelberg, Germany: Springer, 2014.
-[138]A. Komjathy, “Global ionospheric total electron content mapping using the Global Positioning System,” 2023.
-[139]NOAA, HF Radio Communications | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. http://www.swpc.noaa.gov/impacts/hf-radio-communications, 2024. [Online]. Available: http://www.swpc.noaa.gov/impacts/hf-radio-communications
-[140]A. Gray, Solar weather monitoring - National Research Council Canada — nrc.canada.ca. https://nrc.canada.ca/en/research-development/products-services/technical-advisory-services/solar-weather-monitoring, 2019. [Online]. Available: https://nrc.canada.ca/en/research-development/products-services/technical-advisory-services/solar-weather-monitoring
-[141]A. Gray, Introducing the solar radio program — spaceweather.gc.ca. https://www.spaceweather.gc.ca/forecast-prevision/solar-solaire/solarflux/sx-1-en.php, 2021. [Online]. Available: https://www.spaceweather.gc.ca/forecast-prevision/solar-solaire/solarflux/sx-1-en.php
-[142]U. Wild, “Ionosphere and geodetic satellite systems: permanent GPS tracking data for modelling and monitoring.,” Geodätisch-geophysikalische Arbeiten in der Schweiz, vol. 48, 1994.
-[143]M. Hawarey and T. Ayan, “Uzay mekiği tırmanışı, deprem, ve füze fırlatılışından kaynaklanan TEC değişimlerinin GPS ile belirlenmesi,” İTÜDERGİSİ/d, vol. 3, no. 2-3-4–5, 2010.
-[144]S. Kotz, N. Balakrishnan, C. B. Read, B. Vidakovic, and N. L. Johnson, Encyclopedia of Statistical Sciences, Volume 1. Hoboken, New Jersey, U.S.: John Wiley & Sons, 2005.
-[145]P. I. Vellinov, C. W. Spassov, and S. I. Kolev, “Ionospheric effects of lightning during the increasing part of solar cycle 22,” Journal of atmospheric and terrestrial physics, vol. 54, no. 10, pp. 1347–1353, 1992.
-[146]M. Liu, G. Luo, and H. Wang, “The 2013 Lushan earthquake in China tests hazard assessments,” Seismological Research Letters, vol. 85, no. 1, pp. 40–43, 2014.
-[147]M. Ulukavak and M. Yalcinkaya, “Analysis of ionospheric anomalies due to space weather conditions by using GPS-TEC variations,” in FIG Congress, 2018, pp. 6–11.
-[148]R. Schwenn, “Solar wind: Global properties,” in Encyclopedia of Astronomy & Astrophysics, CRC Press, 2001, pp. 1–9.
-[149]V. F. Melnikov, “Relationships between Microwave, Hard X ray, and Corpuscular Emissions of Solar Flares,” phdthesis, Ph. D. Thesis, Radiophysical Research Institute, Nizhniy Novgorod, Russia, 1990.
-[150]P. Harden, “Solar Activity & HF Propagation,” QRP Amateur Radio Club International, 2005.
-[151]W. D. Gonzalez et al., “What is a geomagnetic storm?,” Journal of Geophysical Research: Space Physics, vol. 99, no. A4, pp. 5771–5792, 1994.
-[152]R. Viereck, Solar EUV Irradiance | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. http://www.swpc.noaa.gov/phenomena/solar-euv-irradiance, 2024. [Online]. Available: http://www.swpc.noaa.gov/phenomena/solar-euv-irradiance
-[153]M. Aschwanden, Physics of the solar corona: an introduction with problems and solutions. Berlin/Heidelberg, Germany: Springer Science & Business Media, 2006.
-[154]G. Abraha, “Total electron content (TEC) variability of low latitude ionosphere and role of dynamical coupling: quiet and storm-time characteristics,” phdthesis, Addis Ababa University, 2014.
-[155]T. Turunen and M. M. Rao, “Examples of the influence of strong magnetic storms on the equatorial F-layer,” Journal of Atmospheric and Terrestrial Physics, vol. 42, no. 4, pp. 323–330, 1980.
-[156]J. O. Adeniyi, “Magnetic storm effects on the morphology of the equatorial F2-layer,” Journal of atmospheric and terrestrial physics, vol. 48, no. 8, pp. 695–702, 1986.
-[157]N. Papitashvili, SPDF - About OMNIWeb Data — omniweb.gsfc.nasa.gov. http://omniweb.gsfc.nasa.gov/html/ow_data.html, 2024. [Online]. Available: http://omniweb.gsfc.nasa.gov/html/ow_data.html
-[158]N. Papitashvili, OMNIWeb Data Explorer — omniweb.gsfc.nasa.gov. http://omniweb.gsfc.nasa.gov/form/dx1.html, 2024. [Online]. Available: http://omniweb.gsfc.nasa.gov/form/dx1.html
-[159]M. H. De Canck, “Ionosphere properties and behaviors,” Antennex, vol. 119, pp. 6–7, 2007.
-[160]NOAA, swpc.noaa.gov. https://www.swpc.noaa.gov/sites/default/files/images/u2/TheK-index.pdf, 2024. [Online]. Available: https://www.swpc.noaa.gov/sites/default/files/images/u2/TheK-index.pdf
-[161]J. Matzka, Kp Index — gfz-potsdam.de. https://www.gfz-potsdam.de/en/section/geomagnetism/data-products-services/geomagnetic-kp-index, 2024. [Online]. Available: https://www.gfz-potsdam.de/en/section/geomagnetism/data-products-services/geomagnetic-kp-index
-[162]NOAA, Alerts, Watches and Warnings | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. https://www.swpc.noaa.gov/products/alerts-watches-and-warnings, 2024. [Online]. Available: https://www.swpc.noaa.gov/products/alerts-watches-and-warnings
-[163]L. M. M. Myint, K. Hozumi, S. Saito, and P. Supnithi, “Analysis of local geomagnetic index under the influence of equatorial electrojet (EEJ) at the equatorial Phuket geomagnetic station in Thailand,” Advances in Space Research, vol. 70, no. 5, pp. 1429–1440, 2022, doi: https://doi.org/10.1016/j.asr.2022.06.024.
-[164]NOAA, Planetary K-index | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. https://www.swpc.noaa.gov/products/planetary-k-index, 2024. [Online]. Available: https://www.swpc.noaa.gov/products/planetary-k-index
-[165]NOAA, NOAA Space Weather Scales | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. https://www.swpc.noaa.gov/noaa-scales-explanation, 2024. [Online]. Available: https://www.swpc.noaa.gov/noaa-scales-explanation
-[166]NOAA, swpc.noaa.gov. https://www.swpc.noaa.gov/sites/default/files/images/NOAAscales.pdf, 2024. [Online]. Available: https://www.swpc.noaa.gov/sites/default/files/images/NOAAscales.pdf
-[167]J. Matzka, O. Bronkalla, K. Tornow, K. Elger, and C. Stolle, Geomagnetic Kp index. GFZ Data Services, 2021. doi: https://doi.org/10.1016/j.asr.2022.06.024.
-[168]J. Matzka, C. Stolle, Y. Yamazaki, O. Bronkalla, and A. Morschhauser, The geomagnetic KP index and derived indices of geomagnetic activity, vol. 19. American Geophysical Union (AGU), 2021. doi: https://doi.org/10.1029/2020SW002641.
-[169]NOAA, Geomagnetic kp and ap Indices | NCEI — ngdc.noaa.gov. https://www.ngdc.noaa.gov/stp/GEOMAG/kp_ap.html, 2024. [Online]. Available: https://www.ngdc.noaa.gov/stp/GEOMAG/kp_ap.html
-[170]G. Prölss, Physics of the Earth’s space environment: an introduction. Berlin/Heidelberg, Germany: Springer Science & Business Media, 2012.
-[171]J. Y. Liu et al., “Seismoionospheric GPS total electron content anomalies observed before the 12 May 2008 Mw7. 9 Wenchuan earthquake,” Journal of Geophysical Research: Space Physics, vol. 114, no. A4, 2009.
-[172]M. Durmaz and M. O. Karslioglu, “Regional vertical total electron content (VTEC) modeling together with satellite and receiver differential code biases (DCBs) using semi-parametric multivariate adaptive regression B-splines (SP-BMARS),” Journal of Geodesy, vol. 89, pp. 347–360, 2015.
-[173]R. Jin, S. Jin, and G. Feng, “M_DCB: Matlab code for estimating GNSS satellite and receiver differential code biases,” GPS solutions, vol. 16, no. 4, pp. 541–548, 2012.
-[174]S. Schaer, Mapping and predicting the Earth’s ionosphere using the Global Positioning System, vol. 59. Zürich: Institut für Geodäsie und Photogrammetrie, Eidg. Technische Hochschule, 1999.
-[175]P. K. Enge, “The global positioning system: Signals, measurements, and performance,” International Journal of Wireless Information Networks, vol. 1, pp. 83–105, 1994.
-[176]J. A. Klobuchar, “Ionospheric time-delay algorithm for single-frequency GPS users,” IEEE Transactions on aerospace and electronic systems, pp. 325–331, 1987.
-[177]R. Pradipta, C. E. Valladares, and P. H. Doherty, “An effective TEC data detrending method for the study of equatorial plasma bubbles and traveling ionospheric disturbances,” Journal of Geophysical Research: Space Physics, vol. 120, no. 12, pp. 11–048, 2015.
-[178]R. Pradipta and P. H. Doherty, “Comparison between 2-D GPS dTEC Data Maps and Digisonde Observations over the South American and Atlantic Regions,” in 2019 URSI Asia-Pacific Radio Science Conference (AP-RASC), 2019, pp. 1–1.
-[179]C. A. Loewe and G. W. Prölss, “Classification and mean behavior of magnetic storms,” Journal of Geophysical Research: Space Physics, vol. 102, no. A7, pp. 14209–14213, 1997.
-[180]Y. Kamide et al., “Two-step development of geomagnetic storms,” Journal of Geophysical Research: Space Physics, vol. 103, no. A4, pp. 6917–6921, 1998.
-[181]A. Rozhnoi, M. S. Solovieva, O. A. Molchanov, and M. Hayakawa, “Middle latitude LF (40 kHz) phase variations associated with earthquakes for quiet and disturbed geomagnetic conditions,” Physics and Chemistry of the Earth, Parts A/B/C, vol. 29, no. 4–9, pp. 589–598, 2004.
-[182]M. E. Contadakis, D. N. Arabelos, C. Pikridas, and S. D. Spatalas, “Total electron content variations over southern Europe before and during the M 6.3 Abruzzo earthquake of April 6, 2009,” Annals of geophysics, vol. 55, no. 1, 2012.
-[183]R. E. Fan, K. W. Chang, C. J. Hsieh, X. R. Wang, and C. J. Lin, “LIBLINEAR: a library for large linear classification,” Journal of Machine Learning Research, vol. 9, pp. 1871–1874, Aug. 2008, doi: 10.1145/1390681.1442794.
-[184]I. B. Mohamad and D. Usman, “Standardization and its effects on K-means clustering algorithm,” Research Journal of Applied Sciences, Engineering and Technology, vol. 6, no. 17, pp. 3299–3303, Sep. 2013.
-[185]P. G. Fennell, Z. Zuo, and K. Lerman, “Predicting and explaining behavioral data with structured feature space decomposition,” EPJ Data Sci., vol. 8, no. 1, Dec. 2019.
-[186]M. Kuhn, 4 Data Splitting | The caret Package — topepo.github.io. https://topepo.github.io/caret/data-splitting.html, 2024. [Online]. Available: https://topepo.github.io/caret/data-splitting.html
-[187]R. J. Hyndman, Forecasting: principles and practice. Melbourne, Australia: OTexts, 2018.
-[188]R. createDataPartition developers, createDataPartition function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/createDataPartition, 2024. [Online]. Available: https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/createDataPartition
-[189]M. Kuhn, “Building predictive models in R using the caret package,” Journal of statistical software, vol. 28, pp. 1–26, 2008.
-[190]D. G. Altman and J. M. Bland, “Diagnostic tests. 1: Sensitivity and specificity.,” BMJ: British Medical Journal, vol. 308, no. 6943, p. 1552, 1994.
-[191]D. G. Altman and J. M. Bland, “Diagnostic test 2: predictive values,” BMJ: British Medical Journal, vol. 309, p. 102, 1994.
-[192]D. R. Velez et al., “A balanced accuracy function for epistasis modeling in imbalanced datasets using multifactor dimensionality reduction,” Genetic Epidemiology: the Official Publication of the International Genetic Epidemiology Society, vol. 31, no. 4, pp. 306–315, 2007.
-[193]R. confusionMatrix developers, confusionMatrix function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/confusionMatrix, 2024. [Online]. Available: https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/confusionMatrix
-[194]R. binom.test developers, binom.test function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/binom.test, 2024. [Online]. Available: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/binom.test
-[195]C. J. Clopper and E. S. Pearson, “The use of confidence or fiducial limits illustrated in the case of the binomial,” Biometrika, vol. 26, no. 4, pp. 404–413, 1934.
-[196]W. J. Conover, Practical nonparametric statistics. Hoboken, New Jersey, U.S.: John Wiley & Sons, Inc, 1999.
-[197]M. Hollander, Nonparametric statistical methods. Hoboken, New Jersey, U.S.: John Wiley & Sons Inc, 2013.
-[198]D. C. Howell, Statistical methods for psychology, Seventh Edition. Belmont, California: Cengage Wadsworth, 2009.
-[199]Inc. GraphPad Software, GraphPad Prism 6 Statistics Guide - The binomial test — graphpad.com. https://www.graphpad.com/guides/prism/6/statistics/stat_binomial.htm, 2024. [Online]. Available: https://www.graphpad.com/guides/prism/6/statistics/stat_binomial.htm
-[200]M. L. McHugh, “Interrater reliability: the kappa statistic,” Biochemia medica, vol. 22, no. 3, pp. 276–282, 2012.
-[201]R. G. Pontius Jr and M. Millones, “Death to Kappa: birth of quantity disagreement and allocation disagreement for accuracy assessment,” International journal of remote sensing, vol. 32, no. 15, pp. 4407–4429, 2011.
-[202]F. Galton, Finger prints. New York, NY: Cosimo Classics, 1892.
-[203]N. C. Smeeton, “Early history of the kappa statistic,” Biometrics, vol. 41, p. 795, 1985.
-[204]J. Cohen, “A coefficient of agreement for nominal scales,” Educational and psychological measurement, vol. 20, no. 1, pp. 37–46, 1960.
-[205]J. Sim and C. C. Wright, “The kappa statistic in reliability studies: use, interpretation, and sample size requirements,” Physical therapy, vol. 85, no. 3, pp. 257–268, 2005.
-[206]D. Chicco, M. J. Warrens, and G. Jurman, “The Matthews correlation coefficient (MCC) is more informative than Cohen’s Kappa and Brier score in binary classification assessment,” IEEE Access, vol. 9, pp. 78368–78381, 2021.
-[207]P. Heidke, “Berechnung des Erfolges und der Güte der Windstärkevorhersagen im Sturmwarnungsdienst,” Geografiska Annaler, vol. 8, no. 4, pp. 301–349, 1926.
-[208]T. P. S. of W. D.C., Bulletin of the Philosophical Society of Washington, D.C., vol. 10. Washington, D.C., USA: The co-operation of the Smithsonian Institution, 1887, p. 83.
-[209]R. system.time developers, system.time function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/system.time, 2024. [Online]. Available: https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/system.time
+[21]T. Hastie, S. Rosset, J. Zhu, and H. Zou, “Multi-class AdaBoost,” Stat. Interface, vol. 2, no. 3, pp. 349–360, 2009.
+[22]A. Ben-Hur, D. Horn, H. Siegelmann, and V. Vapnik, “Support Vector Clustering,” Journal of Machine Learning Research, vol. 2, pp. 125–137, Nov. 2001, doi: 10.1162/15324430260185565.
+[23]D. Meyer, F. Leisch, and K. Hornik, “The support vector machine under test,” Neurocomputing, vol. 55, no. 1–2, pp. 169–186, Sep. 2003.
+[24]C. Jin and L. Wang, “Dimensionality dependent PAC-Bayes margin bound,” Advances in Neural Information Processing Systems, vol. 2, pp. 1034–1042, Jan. 2012.
+[25]W. H. Press, S. A. Teukolsky, W. T. Vetterling, and B. P. Flannery, Numerical recipes 3rd edition, Third. Cambridge, England: Cambridge University Press, 2007.
+[26]C. W. Hsu, C. C. Chang, and C. J. Lin, “A Practical Guide to Support Vector Classification,” Department of Computer Science, National Taiwan University, techreport, 2003.
+[27]L. Rokach and O. Maimon, Data mining with decision trees. Singapore: World Scientific Publishing Company, 2014.
+[28]M. Studer, G. Ritschard, A. Gabadinho, and N. S. Müller, “Discrepancy analysis of state sequences,” Sociol. Methods Res., vol. 40, no. 3, pp. 471–510, Aug. 2011.
+[29]X. Wu et al., “Top 10 algorithms in data mining,” Knowl. Inf. Syst., vol. 14, no. 1, pp. 1–37, Jan. 2008.
+[30]S. Shalev-Shwartz and S. Ben-David, “Decision Trees,” in Understanding Machine Learning: From Theory to Algorithms, Cambridge, England: Cambridge University Press, 2014, pp. 212–218. doi: 10.1017/CBO9781107298019.019.
+[31]J. R. Quinlan, “Induction of decision trees,” Mach. Learn., vol. 1, no. 1, pp. 81–106, Mar. 1986.
+[32]L. Rokach and O. Maimon, “Top-down induction of decision trees classifiers—A survey,” IEEE Trans. Syst. Man Cybern. C Appl. Rev., vol. 35, no. 4, pp. 476–487, Nov. 2005.
+[33]D. J. Hand and K. Yu, “Idiot’s Bayes: Not So Stupid after All?,” Int. Stat. Rev., vol. 69, no. 3, p. 385, Dec. 2001.
+[34]A. McCallum, Graphical Models Lecture 2: Bayesian Network Representation. https://people.cs.umass.edu/ mccallum/courses/gm2011/02-bn-rep.pdf, 2011. [Online]. Available: https://people.cs.umass.edu/ mccallum/courses/gm2011/02-bn-rep.pdf
+[35]S. J. Russell and P. Norvig, Artificial intelligence: a modern approach. London, England: Pearson, 2016.
+[36]V. Metsis, I. Androutsopoulos, and G. Paliouras, “Spam Filtering with Naive Bayes - Which Naive Bayes?,” Jan. 2006.
+[37]R. Caruana and A. Niculescu-Mizil, “An Empirical Comparison of Supervised Learning Algorithms,” Proceedings of the 23rd international conference on Machine learning - ICML ’06, vol. 2006, pp. 161–168, Jun. 2006, doi: 10.1145/1143844.1143865.
+[38]G. H. John and P. Langley, Estimating Continuous Distributions in Bayesian Classifiers. 2013.
+[39]A. Mccallum and K. Nigam, “A Comparison of Event Models for Naive Bayes Text Classification,” Work Learn Text Categ, vol. 752, May 2001.
+[40]M. N. Murty and V. S. Devi, Pattern recognition: An algorithmic approach. Berlin/Heidelberg, Germany: Springer Science & Business Media, 2011.
+[41]MIT, Explained: Neural networks — news.mit.edu. https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414, 2017. [Online]. Available: https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414
+[42]A. Brahme, Comprehensive biomedical physics. 8-11 Southampton Street, London: Newnes, 2014.
+[43]J. D. Olden and D. A. Jackson, “Illuminating the ‘black box’: a randomization approach for understanding variable contributions in artificial neural networks,” Ecological modelling, vol. 154, no. 1–2, pp. 135–150, 2002.
+[44]S. L. Özesmi and U. Özesmi, “An artificial neural network approach to spatial habitat modelling with interspecific interaction,” Ecological modelling, vol. 116, no. 1, pp. 15–31, 1999.
+[45]C. Bishop, Pattern Recognition and Machine Learning. Berlin/Heidelberg, Germany: Springer, 2006.
+[46]V. Vapnik, The nature of statistical learning theory. Berlin/Heidelberg, Germany: Springer science & business media, 2013.
+[47]I. Goodfellow, Deep learning. MIT press, 2016.
+[48]P. Probst, A. L. Boulesteix, and B. Bischl, “Tunability: Importance of hyperparameters of machine learning algorithms,” Journal of Machine Learning Research, vol. 20, no. 53, pp. 1–32, 2019.
+[49]K. Pearson, “LIII. On lines and planes of closest fit to systems of points in space,” The London, Edinburgh, and Dublin philosophical magazine and journal of science, vol. 2, no. 11, pp. 559–572, 1901.
+[50]F. M. Stewart, Introduction to linear algebra. Mineola, New York, USA: Courier Dover Publications, 2019.
+[51]I. T. Jolliffe and J. Cadima, “Principal component analysis: a review and recent developments,” Philosophical transactions of the royal society A: Mathematical, Physical and Engineering Sciences, vol. 374, no. 2065, p. 20150202, 2016.
+[52]B. D. Ripley, Pattern recognition and neural networks. Cambridge, United Kingdom: Cambridge university press, 2007.
+[53]S. Wold, M. Sjöström, and L. Eriksson, “PLS-regression: a basic tool of chemometrics,” Chemometrics and intelligent laboratory systems, vol. 58, no. 2, pp. 109–130, 2001.
+[54]H. Abdi, “Partial least squares regression and projection on latent structure regression (PLS Regression),” Wiley interdisciplinary reviews: computational statistics, vol. 2, no. 1, pp. 97–106, 2010.
+[55]S. Sæbø, T. Almøy, A. Flatberg, A. H. Aastveit, and H. Martens, “LPLS-regression: a method for prediction and classification under the influence of background information on predictor variables,” Chemometrics and Intelligent Laboratory Systems, vol. 91, no. 2, pp. 121–132, 2008.
+[56]F. Lindgren, P. Geladi, and S. Wold, “The kernel algorithm for PLS,” Journal of Chemometrics, vol. 7, no. 1, pp. 45–59, 1993.
+[57]S. De Jong and C. J. F. Ter Braak, “Comments on the PLS kernel algorithm,” Journal of chemometrics, vol. 8, no. 2, pp. 169–174, 1994.
+[58]B. S. Dayal and J. F. MacGregor, “Improved PLS algorithms,” Journal of Chemometrics: A Journal of the Chemometrics Society, vol. 11, no. 1, pp. 73–85, 1997.
+[59]S. De Jong, “SIMPLS: an alternative approach to partial least squares regression,” Chemometrics and intelligent laboratory systems, vol. 18, no. 3, pp. 251–263, 1993.
+[60]S. Rännar, F. Lindgren, P. Geladi, and S. Wold, “A PLS kernel algorithm for data sets with many variables and fewer objects. Part 1: Theory and algorithm,” Journal of Chemometrics, vol. 8, no. 2, pp. 111–125, 1994.
+[61]Y. Takane and S. Loisel, “On the PLS algorithm for multiple regression (PLS1),” in The Multiple Facets of Partial Least Squares and Related Methods: PLS, Paris, France, 2014 8, 2016, pp. 17–28.
+[62]A. Höskuldsson, “PLS regression methods,” Journal of chemometrics, vol. 2, no. 3, pp. 211–228, 1988.
+[63]R. A. Fisher, “The use of multiple measurements in taxonomic problems,” Annals of eugenics, vol. 7, no. 2, pp. 179–188, 1936.
+[64]G. J. McLachlan, Discriminant analysis and statistical pattern recognition. Hoboken, New Jersey, U.S.: John Wiley & Sons, 2005.
+[65]T. Hastie, A. Buja, and R. Tibshirani, “Penalized discriminant analysis,” The Annals of Statistics, vol. 23, no. 1, pp. 73–102, 1995.
+[66]T. Hastie, R. Tibshirani, J. H. Friedman, and J. H. Friedman, The elements of statistical learning: data mining, inference, and prediction, vol. 2. Berlin/Heidelberg, Germany: Springer, 2009.
+[67]T. Hastie, R. Tibshirani, and A. Buja, “Flexible discriminant analysis by optimal scoring,” Journal of the American statistical association, vol. 89, no. 428, pp. 1255–1270, 1994.
+[68]C. Reynès, R. Sabatier, and N. Molinari, “Choice of B-splines with free parameters in the flexible discriminant analysis context,” Computational statistics & data analysis, vol. 51, no. 3, pp. 1765–1778, 2006.
+[69]N. D. Phillips et al., “Applying species distribution modelling to a data poor, pelagic fish complex: the ocean sunfishes,” Journal of biogeography, vol. 44, no. 10, pp. 2176–2187, 2017.
+[70]W. Hallgren, F. Santana, S. Low-Choy, Y. Zhao, and B. Mackey, “Species distribution models can be highly sensitive to algorithm configuration,” Ecological Modelling, vol. 408, p. 108719, 2019.
+[71]W. Thuiller, D. Georges, R. Engler, and F. Breiner, “Ensemble platform for species distribution modeling,” R Package Version, pp. 3–1, 2016.
+[72]P. Quillfeldt, J. O. Engler, J. R. D. Silk, and R. A. Phillips, “Influence of device accuracy and choice of algorithm for species distribution modelling of seabirds: a case study using black-browed albatrosses,” Journal of Avian Biology, vol. 48, no. 12, pp. 1549–1555, 2017.
+[73]Z. Zhang, S. Xu, C. Capinha, R. Weterings, and T. Gao, “Using species distribution model to predict the impact of climate change on the potential distribution of Japanese whiting Sillago japonica,” Ecological Indicators, vol. 104, pp. 333–340, 2019.
+[74]D. Wetcher-Hendricks, Analyzing quantitative data: An introduction for social researchers. Hoboken, New Jersey, U.S.: John Wiley & Sons, 2011.
+[75]J. Cohen, P. Cohen, S. G. West, and L. S. Aiken, Applied multiple regression/correlation analysis for the behavioral sciences. Milton Park, Abingdon-on-Thames, Oxfordshire, England, UK: Routledge, 2013.
+[76]G. D. Garson, PA 765: Discriminant Function Analysis — web.archive.org. https://web.archive.org/web/20080312065328/http://www2.chass.ncsu.edu/garson/pA765/discrim.htm, 2008. [Online]. Available: https://web.archive.org/web/20080312065328/http://www2.chass.ncsu.edu/garson/pA765/discrim.htm
+[77]C. R. Rao, “The utilization of multiple measurements in problems of biological classification,” Journal of the Royal Statistical Society. Series B (Methodological), vol. 10, no. 2, pp. 159–203, 1948.
+[78]J. Hansen, Using SPSS for windows and macintosh: analyzing and understanding data. Taylor & Francis, 2005.
+[79]J. A. Klobuchar, “Design and characteristics of the GPS ionospheric time delay algorithm for single frequency users,” in PLANS 1986-Position Location and Navigation Symposium, 1986, pp. 280–286.
+[80]B. Zolesi and Lj. R. Cander, Ionospheric prediction and forecasting. Berlin/Heidelberg, Germany: Springer, 2014.
+[81]A. Komjathy, “Global ionospheric total electron content mapping using the Global Positioning System,” University of New Brunswick, Department of Geodesy, techreport, 1997. [Online]. Available: https://api.semanticscholar.org/CorpusID:128511894
+[82]NOAA, HF Radio Communications | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. http://www.swpc.noaa.gov/impacts/hf-radio-communications, 2024. [Online]. Available: http://www.swpc.noaa.gov/impacts/hf-radio-communications
+[83]S. Kotz, N. Balakrishnan, C. B. Read, B. Vidakovic, and N. L. Johnson, Encyclopedia of Statistical Sciences, Volume 1. Hoboken, New Jersey, U.S.: John Wiley & Sons, 2005.
+[84]P. I. Vellinov, C. W. Spassov, and S. I. Kolev, “Ionospheric effects of lightning during the increasing part of solar cycle 22,” Journal of atmospheric and terrestrial physics, vol. 54, no. 10, pp. 1347–1353, 1992.
+[85]M. Liu, G. Luo, and H. Wang, “The 2013 Lushan earthquake in China tests hazard assessments,” Seismological Research Letters, vol. 85, no. 1, pp. 40–43, 2014.
+[86]M. Ulukavak and M. Yalcinkaya, “Analysis of ionospheric anomalies due to space weather conditions by using GPS-TEC variations,” in FIG Congress, 2018, pp. 6–11.
+[87]R. Schwenn, “Solar wind: Global properties,” in Encyclopedia of Astronomy & Astrophysics, Boca Raton, Florida, USA: CRC Press, 2001, pp. 1–9.
+[88]V. F. Melnikov, “Relationships between Microwave, Hard X ray, and Corpuscular Emissions of Solar Flares,” phdthesis, Ph. D. Thesis, Radiophysical Research Institute, Nizhniy Novgorod, Russia, 1990.
+[89]A. P. I. Android developers, Sensor types | Android Open Source Project — source.android.com. https://source.android.com/docs/core/interaction/sensors/sensor-types#magnetic_field_sensor, 2024. [Online]. Available: https://source.android.com/docs/core/interaction/sensors/sensor-types#magnetic_field_sensor
+[90]M. H. De Canck, “Ionosphere properties and behaviors,” Antennex, vol. 119, pp. 6–7, 2007.
+[91]NOAA, swpc.noaa.gov. https://www.swpc.noaa.gov/sites/default/files/images/u2/TheK-index.pdf, 2024. [Online]. Available: https://www.swpc.noaa.gov/sites/default/files/images/u2/TheK-index.pdf
+[92]J. Matzka, Kp Index — gfz-potsdam.de. https://www.gfz-potsdam.de/en/section/geomagnetism/data-products-services/geomagnetic-kp-index, 2024. [Online]. Available: https://www.gfz-potsdam.de/en/section/geomagnetism/data-products-services/geomagnetic-kp-index
+[93]NOAA, Alerts, Watches and Warnings | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. https://www.swpc.noaa.gov/products/alerts-watches-and-warnings, 2024. [Online]. Available: https://www.swpc.noaa.gov/products/alerts-watches-and-warnings
+[94]N. Papitashvili, SPDF - About OMNIWeb Data — omniweb.gsfc.nasa.gov. http://omniweb.gsfc.nasa.gov/html/ow_data.html, 2024. [Online]. Available: http://omniweb.gsfc.nasa.gov/html/ow_data.html
+[95]N. Papitashvili, OMNIWeb Data Explorer — omniweb.gsfc.nasa.gov. http://omniweb.gsfc.nasa.gov/form/dx1.html, 2024. [Online]. Available: http://omniweb.gsfc.nasa.gov/form/dx1.html
+[96]L. M. M. Myint, K. Hozumi, S. Saito, and P. Supnithi, “Analysis of local geomagnetic index under the influence of equatorial electrojet (EEJ) at the equatorial Phuket geomagnetic station in Thailand,” Advances in Space Research, vol. 70, no. 5, pp. 1429–1440, 2022, doi: https://doi.org/10.1016/j.asr.2022.06.024.
+[97]NOAA, swpc.noaa.gov. https://www.swpc.noaa.gov/sites/default/files/images/NOAAscales.pdf, 2024. [Online]. Available: https://www.swpc.noaa.gov/sites/default/files/images/NOAAscales.pdf
+[98]J. Matzka, O. Bronkalla, K. Tornow, K. Elger, and C. Stolle, Geomagnetic Kp index. GFZ Data Services, 2021. doi: https://doi.org/10.1016/j.asr.2022.06.024.
+[99]J. Matzka, C. Stolle, Y. Yamazaki, O. Bronkalla, and A. Morschhauser, The geomagnetic KP index and derived indices of geomagnetic activity, vol. 19. American Geophysical Union (AGU), 2021. doi: https://doi.org/10.1029/2020SW002641.
+[100]NOAA, Geomagnetic kp and ap Indices | NCEI — ngdc.noaa.gov. https://www.ngdc.noaa.gov/stp/GEOMAG/kp_ap.html, 2024. [Online]. Available: https://www.ngdc.noaa.gov/stp/GEOMAG/kp_ap.html
+[101]C. A. Loewe and G. W. Prölss, “Classification and mean behavior of magnetic storms,” Journal of Geophysical Research: Space Physics, vol. 102, no. A7, pp. 14209–14213, 1997.
+[102]W. D. Gonzalez et al., “What is a geomagnetic storm?,” Journal of Geophysical Research: Space Physics, vol. 99, no. A4, pp. 5771–5792, 1994.
+[103]Y. Kamide et al., “Two-step development of geomagnetic storms,” Journal of Geophysical Research: Space Physics, vol. 103, no. A4, pp. 6917–6921, 1998.
+[104]A. Rozhnoi, M. S. Solovieva, O. A. Molchanov, and M. Hayakawa, “Middle latitude LF (40 kHz) phase variations associated with earthquakes for quiet and disturbed geomagnetic conditions,” Physics and Chemistry of the Earth, Parts A/B/C, vol. 29, no. 4–9, pp. 589–598, 2004.
+[105]M. E. Contadakis, D. N. Arabelos, C. Pikridas, and S. D. Spatalas, “Total electron content variations over southern Europe before and during the M 6.3 Abruzzo earthquake of April 6, 2009,” Annals of geophysics, vol. 55, no. 1, 2012.
+[106]M. Kuhn, 4 Data Splitting | The caret Package — topepo.github.io. https://topepo.github.io/caret/data-splitting.html, 2024. [Online]. Available: https://topepo.github.io/caret/data-splitting.html
+[107]R. J. Hyndman, Forecasting: principles and practice. Melbourne, Australia: OTexts, 2018.
+[108]R. createDataPartition developers, createDataPartition function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/createDataPartition, 2024. [Online]. Available: https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/createDataPartition
+[109]R. E. Fan, K. W. Chang, C. J. Hsieh, X. R. Wang, and C. J. Lin, “LIBLINEAR: a library for large linear classification,” Journal of Machine Learning Research, vol. 9, pp. 1871–1874, Aug. 2008, doi: 10.1145/1390681.1442794.
+[110]I. B. Mohamad and D. Usman, “Standardization and its effects on K-means clustering algorithm,” Research Journal of Applied Sciences, Engineering and Technology, vol. 6, no. 17, pp. 3299–3303, Sep. 2013.
+[111]P. G. Fennell, Z. Zuo, and K. Lerman, “Predicting and explaining behavioral data with structured feature space decomposition,” EPJ Data Sci., vol. 8, no. 1, Dec. 2019.
+[112]R. ks.test developers, ks.test function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/ks.test, 2024. [Online]. Available: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/ks.test
+[113]R. shapiro.test developers, shapiro.test function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/shapiro.test, 2024. [Online]. Available: https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/shapiro.test
+[114]M. Kuhn, “Building predictive models in R using the caret package,” Journal of statistical software, vol. 28, pp. 1–26, 2008.
+[115]R. confusionMatrix developers, confusionMatrix function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/confusionMatrix, 2024. [Online]. Available: https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/confusionMatrix
+[116]D. G. Altman and J. M. Bland, “Diagnostic tests. 1: Sensitivity and specificity.,” BMJ: British Medical Journal, vol. 308, no. 6943, p. 1552, 1994.
+[117]D. G. Altman and J. M. Bland, “Diagnostic test 2: predictive values,” BMJ: British Medical Journal, vol. 309, p. 102, 1994.
+[118]D. R. Velez et al., “A balanced accuracy function for epistasis modeling in imbalanced datasets using multifactor dimensionality reduction,” Genetic Epidemiology: the Official Publication of the International Genetic Epidemiology Society, vol. 31, no. 4, pp. 306–315, 2007.
+[119]R. system.time developers, system.time function - RDocumentation — rdocumentation.org. https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/system.time, 2024. [Online]. Available: https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/system.time
+[120]H. Zhang, “The Optimality of Naive Bayes,” in Proceedings of the Seventeenth International Florida Artificial Intelligence Research Society Conference, FLAIRS 2004, Jan. 2004, vol. 2.
