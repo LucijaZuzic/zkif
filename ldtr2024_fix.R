@@ -270,6 +270,10 @@ my_predict <- function(model_name_predict, model_type_predict) {
   model_predictions <- predict(model_trained_global, testing)
   # Create confusion matrix
   cm_model <- confusionMatrix(model_predictions, trueclasses)
+  predicted_df <- as.data.frame(cbind(model_predictions, trueclasses))
+  colnames(predicted_df) <- c("model_predictions", "true_classes")
+  file_name_csv <- paste(paste(model_type_predict, model_name_predict, sep = "/"), "csv", sep = ".")
+  write.csv(predicted_df, file_name_csv)
   # Print confusion matrix and results
   print(cm_model)
   assign("model_predictions_global", model_predictions, envir = .GlobalEnv)
