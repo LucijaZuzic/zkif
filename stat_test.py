@@ -280,35 +280,36 @@ for wd in wd_list:
     
     #for t in df_new_unfiltered:
         #print(len(df_new_unfiltered[t]), len(df_new_unfiltered[t][0]))
-    plt.rcParams["svg.fonttype"] = "none"
-    rc('font',**{'family':'Arial'})
-    #plt.rcParams.update({"font.size": 7})
-    SMALL_SIZE = 7
-    MEDIUM_SIZE = 7
-    BIGGER_SIZE = 7
+    for t in df_new_unfiltered:
+        plt.rcParams["svg.fonttype"] = "none"
+        rc('font',**{'family':'Arial'})
+        #plt.rcParams.update({"font.size": 7})
+        SMALL_SIZE = 7
+        MEDIUM_SIZE = 7
+        BIGGER_SIZE = 7
 
-    plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
-    plt.rc('axes', titlesize=SMALL_SIZE)     # fontsize of the axes title
-    plt.rc('axes', labelsize=MEDIUM_SIZE)    # fontsize of the x and y labels
-    plt.rc('xtick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
-    plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
-    plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
-    plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-    plt.figure(figsize = (29.7 / 3 * cm, 21 / 3 * cm), dpi = 300)
-    sns.heatmap(df_new_unfiltered["best"], annot = True, fmt = '.2g')
-    plt.title("Candidate model comparison using\n" + translate_data[wd])
-    plt.xlabel("Methods")
-    #plt.ylabel("Methods")
-    #plt.xticks(rotation=90)
-    plt.yticks(rotation=0)
-    #plt.xticks([i + 0.5 for i in range(len(tick_labels))], ["The " + translate_algo[l].replace(" in ", "\nin ") for l in tick_labels])
-    plt.xticks([])
-    plt.yticks([i + 0.5 for i in range(len(tick_labels))], ["The " + translate_algo[l].replace(" in ", "\nin ") for l in tick_labels])
-    #plt.show()
-    plt.savefig("pvalueplot_" + wd + ".png", bbox_inches = "tight")
-    plt.savefig("pvalueplot_" + wd + ".pdf", bbox_inches = "tight")
-    plt.savefig("pvalueplot_" + wd + ".svg", bbox_inches = "tight")
-    plt.close()
+        plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
+        plt.rc('axes', titlesize=SMALL_SIZE)     # fontsize of the axes title
+        plt.rc('axes', labelsize=MEDIUM_SIZE)    # fontsize of the x and y labels
+        plt.rc('xtick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
+        plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
+        plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
+        plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
+        plt.figure(figsize = (29.7 / 3 * cm, 21 / 3 * cm), dpi = 300)
+        sns.heatmap(df_new_unfiltered[t], annot = True, fmt = '.2g')
+        plt.title("Candidate model comparison using\n" + translate_data[wd])
+        plt.xlabel("Methods")
+        #plt.ylabel("Methods")
+        #plt.xticks(rotation=90)
+        plt.yticks(rotation=0)
+        #plt.xticks([i + 0.5 for i in range(len(tick_labels))], ["The " + translate_algo[l].replace(" in ", "\nin ") for l in tick_labels])
+        plt.xticks([])
+        plt.yticks([i + 0.5 for i in range(len(tick_labels))], ["The " + translate_algo[l].replace(" in ", "\nin ") for l in tick_labels])
+        #plt.show()
+        plt.savefig("pvalueplot_" + wd  + "_" + t + ".png", bbox_inches = "tight")
+        plt.savefig("pvalueplot_" + wd  + "_" + t + ".pdf", bbox_inches = "tight")
+        plt.savefig("pvalueplot_" + wd  + "_" + t + ".svg", bbox_inches = "tight")
+        plt.close()
 
 for m in model_name_list:
     df_new_unfiltered = {"best": []}
@@ -339,32 +340,33 @@ for m in model_name_list:
     
     #for t in df_new_unfiltered:
         #print(len(df_new_unfiltered[t]), len(df_new_unfiltered[t][0]))
-    plt.rcParams["svg.fonttype"] = "none"
-    rc('font',**{'family':'Arial'})
-    #plt.rcParams.update({"font.size": 7})
-    SMALL_SIZE = 7
-    MEDIUM_SIZE = 7
-    BIGGER_SIZE = 7
+    for t in df_new_unfiltered:
+        plt.rcParams["svg.fonttype"] = "none"
+        rc('font',**{'family':'Arial'})
+        #plt.rcParams.update({"font.size": 7})
+        SMALL_SIZE = 7
+        MEDIUM_SIZE = 7
+        BIGGER_SIZE = 7
 
-    plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
-    plt.rc('axes', titlesize=SMALL_SIZE)     # fontsize of the axes title
-    plt.rc('axes', labelsize=MEDIUM_SIZE)    # fontsize of the x and y labels
-    plt.rc('xtick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
-    plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
-    plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
-    plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-    plt.figure(figsize = (29.7 / 3 * cm, 21 / 3 * cm), dpi = 300)
-    sns.heatmap(df_new_unfiltered["best"], annot = True, fmt = '.2g')
-    plt.title("Candidate model comparison using the\n" + translate_algo[m])
-    plt.xlabel("Predictors")
-    #plt.ylabel("Predictors")
-    #plt.xticks(rotation=90)
-    plt.yticks(rotation=0)
-    #plt.xticks([i + 0.5 for i in range(len(tick_labels))], [translate_data[l].replace("(", "\n(").replace("geo", "Geo").replace("as", "\nas").replace("except ", "except\n").replace("$dTEC$, $B_{x}$, ", "$dTEC$, $B_{x}$,\n").replace("the", "The").replace("all", "All") for l in tick_labels])
-    plt.xticks([])
-    plt.yticks([i + 0.5 for i in range(len(tick_labels))], [translate_data[l].replace("(", "\n(").replace("geo", "Geo").replace("as", "\nas").replace("except ", "except\n").replace("$dTEC$, $B_{x}$, ", "$dTEC$, $B_{x}$,\n").replace("the", "The").replace("all", "All") for l in tick_labels])
-    #plt.show()
-    plt.savefig("pvalueplot_" + m + ".png", bbox_inches = "tight")
-    plt.savefig("pvalueplot_" + m + ".pdf", bbox_inches = "tight")
-    plt.savefig("pvalueplot_" + m + ".svg", bbox_inches = "tight")
-    plt.close()
+        plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
+        plt.rc('axes', titlesize=SMALL_SIZE)     # fontsize of the axes title
+        plt.rc('axes', labelsize=MEDIUM_SIZE)    # fontsize of the x and y labels
+        plt.rc('xtick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
+        plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
+        plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
+        plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
+        plt.figure(figsize = (29.7 / 3 * cm, 21 / 3 * cm), dpi = 300)
+        sns.heatmap(df_new_unfiltered[t], annot = True, fmt = '.2g')
+        plt.title("Candidate model comparison using the\n" + translate_algo[m])
+        plt.xlabel("Predictors")
+        #plt.ylabel("Predictors")
+        #plt.xticks(rotation=90)
+        plt.yticks(rotation=0)
+        #plt.xticks([i + 0.5 for i in range(len(tick_labels))], [translate_data[l].replace("(", "\n(").replace("geo", "Geo").replace("as", "\nas").replace("except ", "except\n").replace("$dTEC$, $B_{x}$, ", "$dTEC$, $B_{x}$,\n").replace("the", "The").replace("all", "All") for l in tick_labels])
+        plt.xticks([])
+        plt.yticks([i + 0.5 for i in range(len(tick_labels))], [translate_data[l].replace("(", "\n(").replace("geo", "Geo").replace("as", "\nas").replace("except ", "except\n").replace("$dTEC$, $B_{x}$, ", "$dTEC$, $B_{x}$,\n").replace("the", "The").replace("all", "All") for l in tick_labels])
+        #plt.show()
+        plt.savefig("pvalueplot_" + m + "_" + t + ".png", bbox_inches = "tight")
+        plt.savefig("pvalueplot_" + m + "_" + t + ".pdf", bbox_inches = "tight")
+        plt.savefig("pvalueplot_" + m + "_" + t + ".svg", bbox_inches = "tight")
+        plt.close()
