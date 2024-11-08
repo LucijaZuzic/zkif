@@ -278,8 +278,8 @@ for wd in wd_list:
                 for t in df_new_unfiltered:
                     df_new_unfiltered[t][-1].append(1.0)
     
-    for t in df_new_unfiltered:
-        print(len(df_new_unfiltered[t]), len(df_new_unfiltered[t][0]))
+    #for t in df_new_unfiltered:
+        #print(len(df_new_unfiltered[t]), len(df_new_unfiltered[t][0]))
     plt.rcParams["svg.fonttype"] = "none"
     rc('font',**{'family':'Arial'})
     #plt.rcParams.update({"font.size": 7})
@@ -298,10 +298,11 @@ for wd in wd_list:
     sns.heatmap(df_new_unfiltered["best"], annot = True, fmt = '.2g')
     plt.title("Candidate model comparison using\n" + translate_data[wd])
     plt.xlabel("Methods")
-    plt.ylabel("Methods")
-    plt.xticks(rotation=90)
+    #plt.ylabel("Methods")
+    #plt.xticks(rotation=90)
     plt.yticks(rotation=0)
-    plt.xticks([i + 0.5 for i in range(len(tick_labels))], ["The " + translate_algo[l].replace(" in ", "\nin ") for l in tick_labels])
+    #plt.xticks([i + 0.5 for i in range(len(tick_labels))], ["The " + translate_algo[l].replace(" in ", "\nin ") for l in tick_labels])
+    plt.xticks([])
     plt.yticks([i + 0.5 for i in range(len(tick_labels))], ["The " + translate_algo[l].replace(" in ", "\nin ") for l in tick_labels])
     #plt.show()
     plt.savefig("pvalueplot_" + wd + ".png", bbox_inches = "tight")
@@ -336,8 +337,8 @@ for m in model_name_list:
                 for t in df_new_unfiltered:
                     df_new_unfiltered[t][-1].append(1.0)
     
-    for t in df_new_unfiltered:
-        print(len(df_new_unfiltered[t]), len(df_new_unfiltered[t][0]))
+    #for t in df_new_unfiltered:
+        #print(len(df_new_unfiltered[t]), len(df_new_unfiltered[t][0]))
     plt.rcParams["svg.fonttype"] = "none"
     rc('font',**{'family':'Arial'})
     #plt.rcParams.update({"font.size": 7})
@@ -356,10 +357,11 @@ for m in model_name_list:
     sns.heatmap(df_new_unfiltered["best"], annot = True, fmt = '.2g')
     plt.title("Candidate model comparison using the\n" + translate_algo[m])
     plt.xlabel("Predictors")
-    plt.ylabel("Predictors")
-    plt.xticks(rotation=90)
+    #plt.ylabel("Predictors")
+    #plt.xticks(rotation=90)
     plt.yticks(rotation=0)
-    plt.xticks([i + 0.5 for i in range(len(tick_labels))], [translate_data[l].replace("(", "\n(").replace("geo", "Geo").replace("as", "\nas").replace("except ", "except\n").replace("$dTEC$, $B_{x}$, ", "$dTEC$, $B_{x}$,\n").replace("the", "The").replace("all", "All") for l in tick_labels])
+    #plt.xticks([i + 0.5 for i in range(len(tick_labels))], [translate_data[l].replace("(", "\n(").replace("geo", "Geo").replace("as", "\nas").replace("except ", "except\n").replace("$dTEC$, $B_{x}$, ", "$dTEC$, $B_{x}$,\n").replace("the", "The").replace("all", "All") for l in tick_labels])
+    plt.xticks([])
     plt.yticks([i + 0.5 for i in range(len(tick_labels))], [translate_data[l].replace("(", "\n(").replace("geo", "Geo").replace("as", "\nas").replace("except ", "except\n").replace("$dTEC$, $B_{x}$, ", "$dTEC$, $B_{x}$,\n").replace("the", "The").replace("all", "All") for l in tick_labels])
     #plt.show()
     plt.savefig("pvalueplot_" + m + ".png", bbox_inches = "tight")
