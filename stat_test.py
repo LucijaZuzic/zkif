@@ -294,7 +294,7 @@ for wd in wd_list:
     plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
     plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
     plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-    plt.figure(figsize = (29.7 / 2 * cm, 21 / 2 * cm), dpi = 300)
+    plt.figure(figsize = (29.7 / 3 * cm, 21 / 3 * cm), dpi = 300)
     sns.heatmap(df_new_unfiltered["best"], annot = True, fmt = '.2g')
     plt.title("Candidate model comparison using\n" + translate_data[wd])
     plt.xlabel("Methods")
@@ -353,7 +353,7 @@ for m in model_name_list:
     plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
     plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
     plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-    plt.figure(figsize = (29.7 / 2 * cm, 21 / 2 * cm), dpi = 300)
+    plt.figure(figsize = (29.7 / 3 * cm, 21 / 3 * cm), dpi = 300)
     sns.heatmap(df_new_unfiltered["best"], annot = True, fmt = '.2g')
     plt.title("Candidate model comparison using the\n" + translate_algo[m])
     plt.xlabel("Predictors")
