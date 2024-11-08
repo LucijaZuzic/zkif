@@ -241,13 +241,13 @@
 	\begin{tabular}{|c|c|}
 		\hline
 		Model & elapsed \\ \hline
-		svmPoly & $581.37$ \\ \hline
-		C5.0 & $346.22$ \\ \hline
-		nb & $141.03$ \\ \hline
-		nnet & $586.70$ \\ \hline
-		pls & $35.57$ \\ \hline
-		fda & $143.53$ \\ \hline
-		pcaNNet & $452.11$ \\ \hline
+		svmPoly & $563.98$ \\ \hline
+		C5.0 & $349.05$ \\ \hline
+		nb & $145.02$ \\ \hline
+		nnet & $590.30$ \\ \hline
+		pls & $35.06$ \\ \hline
+		fda & $140.47$ \\ \hline
+		pcaNNet & $449.17$ \\ \hline
 	\end{tabular}
 	\caption{The train time in seconds for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
 	\label{tab:time:coord:train}
@@ -258,7 +258,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & $581.37$ & $346.22$ & $141.03$ & $586.70$ & $35.57$ & $143.53$ & $452.11$ \\ \hline
+		elapsed & $563.98$ & $349.05$ & $145.02$ & $590.30$ & $35.06$ & $140.47$ & $449.17$ \\ \hline
 	\end{tabular}
 	\caption{The train time in seconds for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
 	\label{tab:time:reverse:coord:train}
@@ -269,13 +269,13 @@
 	\begin{tabular}{|c|c|}
 		\hline
 		Model & elapsed \\ \hline
-		svmPoly & $0.44$ \\ \hline
-		C5.0 & $0.06$ \\ \hline
-		nb & $0.28$ \\ \hline
+		svmPoly & $0.52$ \\ \hline
+		C5.0 & $0.07$ \\ \hline
+		nb & $0.33$ \\ \hline
 		nnet & $0.03$ \\ \hline
-		pls & $0.33$ \\ \hline
+		pls & $0.35$ \\ \hline
 		fda & $0.03$ \\ \hline
-		pcaNNet & $0.03$ \\ \hline
+		pcaNNet & $0.02$ \\ \hline
 	\end{tabular}
 	\caption{The prediction time in seconds for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
 	\label{tab:time:coord:predict}
@@ -286,7 +286,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & $0.44$ & $0.06$ & $0.28$ & $0.03$ & $0.33$ & $0.03$ & $0.03$ \\ \hline
+		elapsed & $0.52$ & $0.07$ & $0.33$ & $0.03$ & $0.35$ & $0.03$ & $0.02$ \\ \hline
 	\end{tabular}
 	\caption{The prediction time in seconds for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
 	\label{tab:time:reverse:coord:predict}
@@ -302,7 +302,7 @@
 		nb & NA \\ \hline
 		nnet & NA \\ \hline
 		pls & $0.01$ \\ \hline
-		fda & $0.01$ \\ \hline
+		fda & $0.02$ \\ \hline
 		pcaNNet & NA \\ \hline
 	\end{tabular}
 	\caption{The variable importance calculation time in seconds for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
@@ -314,7 +314,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & NA & $0$ & NA & NA & $0.01$ & $0.01$ & NA \\ \hline
+		elapsed & NA & $0$ & NA & NA & $0.01$ & $0.02$ & NA \\ \hline
 	\end{tabular}
 	\caption{The variable importance calculation time in seconds for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
 	\label{tab:time:reverse:coord:importance}
@@ -325,13 +325,13 @@
 	\begin{tabular}{|c|c|}
 		\hline
 		Model & elapsed \\ \hline
-		svmPoly & $582.47$ \\ \hline
-		C5.0 & $347.16$ \\ \hline
-		nb & $141.87$ \\ \hline
-		nnet & $587.37$ \\ \hline
-		pls & $36.90$ \\ \hline
-		fda & $144.53$ \\ \hline
-		pcaNNet & $452.75$ \\ \hline
+		svmPoly & $565.11$ \\ \hline
+		C5.0 & $350.02$ \\ \hline
+		nb & $145.93$ \\ \hline
+		nnet & $590.97$ \\ \hline
+		pls & $36.47$ \\ \hline
+		fda & $141.52$ \\ \hline
+		pcaNNet & $449.86$ \\ \hline
 	\end{tabular}
 	\caption{The execution time in seconds for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
 	\label{tab:time:coord:total}
@@ -342,7 +342,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & $582.47$ & $347.16$ & $141.87$ & $587.37$ & $36.90$ & $144.53$ & $452.75$ \\ \hline
+		elapsed & $565.11$ & $350.02$ & $145.93$ & $590.97$ & $36.47$ & $141.52$ & $449.86$ \\ \hline
 	\end{tabular}
 	\caption{The execution time in seconds for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
 	\label{tab:time:reverse:coord:total}
@@ -353,13 +353,13 @@
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline
 		Model & elapsed_train & elapsed_predict & elapsed_importance & elapsed_total \\ \hline
-		svmPoly & $581.37$ & $0.44$ & NA & $582.47$ \\ \hline
-		C5.0 & $346.22$ & $0.06$ & $0$ & $347.16$ \\ \hline
-		nb & $141.03$ & $0.28$ & NA & $141.87$ \\ \hline
-		nnet & $586.70$ & $0.03$ & NA & $587.37$ \\ \hline
-		pls & $35.57$ & $0.33$ & $0.01$ & $36.90$ \\ \hline
-		fda & $143.53$ & $0.03$ & $0.01$ & $144.53$ \\ \hline
-		pcaNNet & $452.11$ & $0.03$ & NA & $452.75$ \\ \hline
+		svmPoly & $563.98$ & $0.52$ & NA & $565.11$ \\ \hline
+		C5.0 & $349.05$ & $0.07$ & $0$ & $350.02$ \\ \hline
+		nb & $145.02$ & $0.33$ & NA & $145.93$ \\ \hline
+		nnet & $590.30$ & $0.03$ & NA & $590.97$ \\ \hline
+		pls & $35.06$ & $0.35$ & $0.01$ & $36.47$ \\ \hline
+		fda & $140.47$ & $0.03$ & $0.02$ & $141.52$ \\ \hline
+		pcaNNet & $449.17$ & $0.02$ & NA & $449.86$ \\ \hline
 	\end{tabular}
 	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
 	\label{tab:time:coord}
@@ -370,10 +370,10 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed_train & $581.37$ & $346.22$ & $141.03$ & $586.70$ & $35.57$ & $143.53$ & $452.11$ \\ \hline
-		elapsed_predict & $0.44$ & $0.06$ & $0.28$ & $0.03$ & $0.33$ & $0.03$ & $0.03$ \\ \hline
-		elapsed_importance & NA & $0$ & NA & NA & $0.01$ & $0.01$ & NA \\ \hline
-		elapsed_total & $582.47$ & $347.16$ & $141.87$ & $587.37$ & $36.90$ & $144.53$ & $452.75$ \\ \hline
+		elapsed_train & $563.98$ & $349.05$ & $145.02$ & $590.30$ & $35.06$ & $140.47$ & $449.17$ \\ \hline
+		elapsed_predict & $0.52$ & $0.07$ & $0.33$ & $0.03$ & $0.35$ & $0.03$ & $0.02$ \\ \hline
+		elapsed_importance & NA & $0$ & NA & NA & $0.01$ & $0.02$ & NA \\ \hline
+		elapsed_total & $565.11$ & $350.02$ & $145.93$ & $590.97$ & $36.47$ & $141.52$ & $449.86$ \\ \hline
 	\end{tabular}
 	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
 	\label{tab:time:reverse:coord}

@@ -9169,7 +9169,7 @@ final  value 1540.834160
 stopped after 100 iterations
 [1] "Train time"
    user  system elapsed 
- 457.22    1.31  468.00 
+ 391.41    1.42  460.03 
 Confusion Matrix and Statistics
 
           Reference
@@ -9207,4 +9207,4 @@ Balanced Accuracy    0.500000   0.7573  0.50000   0.7673 0.610321
    0.04    0.00    0.03 
 [1] "Total time"
    user  system elapsed 
- 457.97    1.31  468.73 
+ 392.05    1.42  460.76 

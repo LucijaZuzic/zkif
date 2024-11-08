@@ -12318,7 +12318,7 @@ final  value 37.464300
 stopped after 100 iterations
 [1] "Train time"
    user  system elapsed 
- 567.19    2.18  581.90 
+ 504.67    1.69  593.72 
 Confusion Matrix and Statistics
 
           Reference
@@ -12353,7 +12353,7 @@ Detection Prevalence 0.001043    0.782  0.01408   0.1935  0.00939
 Balanced Accuracy    1.000000    1.000  1.00000   1.0000  1.00000
 [1] "Predict time"
    user  system elapsed 
-   0.00    0.00    0.02 
+   0.01    0.00    0.03 
 [1] "Total time"
    user  system elapsed 
- 567.67    2.18  582.41 
+ 505.15    1.69  594.25 

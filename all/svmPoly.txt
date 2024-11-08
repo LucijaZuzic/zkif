@@ -2,7 +2,7 @@
 [1] "svmPoly"
 [1] "Train time"
    user  system elapsed 
- 139.41    2.87  148.09 
+ 120.45    1.95  151.78 
 Confusion Matrix and Statistics
 
           Reference
@@ -37,7 +37,7 @@ Detection Prevalence 0.000000   0.8701  0.06573  0.03286  0.03130
 Balanced Accuracy    0.500000   0.6464  0.97381  0.58491  0.98894
 [1] "Predict time"
    user  system elapsed 
-   0.21    0.00    0.20 
+   0.16    0.00    0.24 
 [1] "Total time"
    user  system elapsed 
- 140.03    2.87  148.72 
+ 121.00    1.95  152.45 

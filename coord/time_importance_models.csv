@@ -3,6 +3,6 @@ svmPoly,NA,NA,NA
 C5.0,0,0,0
 nb,NA,NA,NA
 nnet,NA,NA,NA
-pls,0.01,0.00,0.01
-fda,0.03,0.00,0.01
+pls,0.00,0.00,0.01
+fda,0.03,0.00,0.02
 pcaNNet,NA,NA,NA

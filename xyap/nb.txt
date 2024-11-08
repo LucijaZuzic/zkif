@@ -2,7 +2,7 @@
 [1] "nb"
 [1] "Train time"
    user  system elapsed 
- 124.00    2.15  142.45 
+  88.00    1.69  148.08 
 Confusion Matrix and Statistics
 
           Reference
@@ -37,7 +37,7 @@ Detection Prevalence 0.001043    0.782  0.01408   0.1935  0.00939
 Balanced Accuracy    1.000000    1.000  1.00000   1.0000  1.00000
 [1] "Predict time"
    user  system elapsed 
-   0.79    0.02    0.94 
+   0.65    0.03    1.00 
 [1] "Total time"
    user  system elapsed 
- 125.38    2.17  143.97 
+  89.24    1.72  149.69 

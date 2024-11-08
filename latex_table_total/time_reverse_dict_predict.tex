@@ -3,7 +3,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & $0.20$ & $0.08$ & $1.84$ & $0.02$ & $0.35$ & $0.02$ & $0.02$ \\ \hline
+		elapsed & $0.24$ & $0.06$ & $1.95$ & $0.03$ & $0.77$ & $0.03$ & $0.03$ \\ \hline
 	\end{tabular}
 	\caption{The prediction time in seconds for each model when using all variables as input.}
 	\label{tab:time:reverse:all:predict}
@@ -14,7 +14,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & $0.39$ & $0.09$ & $1.86$ & $0.03$ & $0.34$ & $0.02$ & $0.03$ \\ \hline
+		elapsed & $0.41$ & $0.10$ & $1.70$ & $0.03$ & $0.35$ & $0.01$ & $0.03$ \\ \hline
 	\end{tabular}
 	\caption{The prediction time in seconds for each model when using all variables except Dst as input.}
 	\label{tab:time:reverse:noDst:predict}
@@ -25,7 +25,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & $0.42$ & $0.07$ & $1.16$ & $0.02$ & $0.33$ & $0.01$ & $0.03$ \\ \hline
+		elapsed & $0.44$ & $0.06$ & $1.25$ & $0.03$ & $0.33$ & $0.03$ & $0.03$ \\ \hline
 	\end{tabular}
 	\caption{The prediction time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:time:reverse:noTEC:predict}
@@ -36,7 +36,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & $0.44$ & $0.06$ & $0.28$ & $0.03$ & $0.33$ & $0.03$ & $0.03$ \\ \hline
+		elapsed & $0.52$ & $0.07$ & $0.33$ & $0.03$ & $0.35$ & $0.03$ & $0.02$ \\ \hline
 	\end{tabular}
 	\caption{The prediction time in seconds for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
 	\label{tab:time:reverse:coord:predict}
@@ -47,7 +47,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & $0.46$ & $0.06$ & $0.94$ & $0.03$ & $0.34$ & $0.03$ & $0.03$ \\ \hline
+		elapsed & $0.47$ & $0.07$ & $1.00$ & $0.03$ & $0.33$ & $0.03$ & $0.03$ \\ \hline
 	\end{tabular}
 	\caption{The prediction time in seconds for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
 	\label{tab:time:reverse:xyap:predict}
@@ -58,7 +58,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & $0.45$ & $0.06$ & $0.93$ & $0.01$ & $0.34$ & $0.03$ & $0.02$ \\ \hline
+		elapsed & $0.47$ & $0.06$ & $0.99$ & $0.02$ & $0.38$ & $0.01$ & $0.03$ \\ \hline
 	\end{tabular}
 	\caption{The prediction time in seconds for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:time:reverse:xzap:predict}
@@ -69,7 +69,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & $0.50$ & $0.05$ & $0.92$ & $0.03$ & $0.34$ & $0.03$ & $0.01$ \\ \hline
+		elapsed & $0.53$ & $0.06$ & $1.02$ & $0.03$ & $0.38$ & $0.03$ & $0.04$ \\ \hline
 	\end{tabular}
 	\caption{The prediction time in seconds for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:time:reverse:yzap:predict}

@@ -22,7 +22,7 @@ logLoss was used to select the optimal model using the smallest value.
 The final value used for the model was ncomp = 2.
 [1] "Train time"
    user  system elapsed 
-  38.05    0.30   40.62 
+  29.27    0.28   40.00 
  Factor w/ 5 levels "E","N","P","R",..: 4 2 2 2 2 2 2 2 2 2 ...
 NULL
            E         N         P         R         T
@@ -66,7 +66,7 @@ Detection Prevalence 0.000000   0.9400  0.00000  0.05999  0.00000
 Balanced Accuracy    0.500000   0.6100  0.50000  0.59650  0.50000
 [1] "Predict time"
    user  system elapsed 
-   0.30    0.03    0.34 
+   0.19    0.00    0.38 
 pls variable importance
 
   variables are sorted by maximum importance across the classes
@@ -76,7 +76,7 @@ Bx 0.0060725 0.114102 3.329e-03 0.093780 0.0174884
 Bz 0.0001634 0.005062 7.387e-05 0.004847 0.0003129
 [1] "Importance time"
    user  system elapsed 
-   0.01    0.00    0.02 
+   0.00    0.00    0.02 
 [1] "Total time"
    user  system elapsed 
-  39.29    0.33   41.92 
+  30.40    0.28   41.37 

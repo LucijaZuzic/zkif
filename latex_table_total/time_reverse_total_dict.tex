@@ -3,10 +3,10 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed_train & $148.09$ & $185.28$ & $204.35$ & $581.90$ & $51.47$ & $55.38$ & $340.80$ \\ \hline
-		elapsed_predict & $0.20$ & $0.08$ & $1.84$ & $0.02$ & $0.35$ & $0.02$ & $0.02$ \\ \hline
-		elapsed_importance & NA & $0$ & NA & NA & $0.05$ & $0.04$ & NA \\ \hline
-		elapsed_total & $148.72$ & $186.08$ & $206.65$ & $582.41$ & $52.59$ & $56.20$ & $341.32$ \\ \hline
+		elapsed_train & $151.78$ & $192.78$ & $215.56$ & $593.72$ & $53.25$ & $56.25$ & $351.31$ \\ \hline
+		elapsed_predict & $0.24$ & $0.06$ & $1.95$ & $0.03$ & $0.77$ & $0.03$ & $0.03$ \\ \hline
+		elapsed_importance & NA & $0$ & NA & NA & $0.06$ & $0.03$ & NA \\ \hline
+		elapsed_total & $152.45$ & $193.61$ & $218.00$ & $594.25$ & $54.85$ & $57.09$ & $351.86$ \\ \hline
 	\end{tabular}
 	\caption{The time taken for all algorithm stages in seconds for each model when using all variables as input.}
 	\label{tab:time:reverse:all}
@@ -17,10 +17,10 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed_train & $329.78$ & $669.68$ & $198.42$ & $629.04$ & $62.34$ & $97.22$ & $422.25$ \\ \hline
-		elapsed_predict & $0.39$ & $0.09$ & $1.86$ & $0.03$ & $0.34$ & $0.02$ & $0.03$ \\ \hline
-		elapsed_importance & NA & $0.00$ & NA & NA & $0.00$ & $0.02$ & NA \\ \hline
-		elapsed_total & $330.67$ & $670.61$ & $200.83$ & $629.67$ & $63.48$ & $98.11$ & $422.86$ \\ \hline
+		elapsed_train & $336.47$ & $680.39$ & $204.88$ & $629.87$ & $60.07$ & $91.61$ & $419.63$ \\ \hline
+		elapsed_predict & $0.41$ & $0.10$ & $1.70$ & $0.03$ & $0.35$ & $0.01$ & $0.03$ \\ \hline
+		elapsed_importance & NA & $0.02$ & NA & NA & $0$ & $0.02$ & NA \\ \hline
+		elapsed_total & $337.38$ & $681.36$ & $207.13$ & $630.47$ & $61.29$ & $92.49$ & $420.25$ \\ \hline
 	\end{tabular}
 	\caption{The time taken for all algorithm stages in seconds for each model when using all variables except Dst as input.}
 	\label{tab:time:reverse:noDst}
@@ -31,10 +31,10 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed_train & $391.08$ & $465.45$ & $162.32$ & $618.67$ & $53.00$ & $141.32$ & $468.00$ \\ \hline
-		elapsed_predict & $0.42$ & $0.07$ & $1.16$ & $0.02$ & $0.33$ & $0.01$ & $0.03$ \\ \hline
-		elapsed_importance & NA & $0.02$ & NA & NA & $0.01$ & $0.01$ & NA \\ \hline
-		elapsed_total & $392.05$ & $466.42$ & $164.03$ & $619.30$ & $54.26$ & $142.19$ & $468.73$ \\ \hline
+		elapsed_train & $390.44$ & $469.97$ & $168.38$ & $617.28$ & $51.43$ & $134.62$ & $460.03$ \\ \hline
+		elapsed_predict & $0.44$ & $0.06$ & $1.25$ & $0.03$ & $0.33$ & $0.03$ & $0.03$ \\ \hline
+		elapsed_importance & NA & $0.02$ & NA & NA & $0.01$ & $0.03$ & NA \\ \hline
+		elapsed_total & $391.42$ & $470.88$ & $170.22$ & $617.97$ & $52.75$ & $135.62$ & $460.76$ \\ \hline
 	\end{tabular}
 	\caption{The time taken for all algorithm stages in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:time:reverse:noTEC}
@@ -45,10 +45,10 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed_train & $581.37$ & $346.22$ & $141.03$ & $586.70$ & $35.57$ & $143.53$ & $452.11$ \\ \hline
-		elapsed_predict & $0.44$ & $0.06$ & $0.28$ & $0.03$ & $0.33$ & $0.03$ & $0.03$ \\ \hline
-		elapsed_importance & NA & $0$ & NA & NA & $0.01$ & $0.01$ & NA \\ \hline
-		elapsed_total & $582.47$ & $347.16$ & $141.87$ & $587.37$ & $36.90$ & $144.53$ & $452.75$ \\ \hline
+		elapsed_train & $563.98$ & $349.05$ & $145.02$ & $590.30$ & $35.06$ & $140.47$ & $449.17$ \\ \hline
+		elapsed_predict & $0.52$ & $0.07$ & $0.33$ & $0.03$ & $0.35$ & $0.03$ & $0.02$ \\ \hline
+		elapsed_importance & NA & $0$ & NA & NA & $0.01$ & $0.02$ & NA \\ \hline
+		elapsed_total & $565.11$ & $350.02$ & $145.93$ & $590.97$ & $36.47$ & $141.52$ & $449.86$ \\ \hline
 	\end{tabular}
 	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{x}$, $B_{y}$, and $B_{z}$ as input.}
 	\label{tab:time:reverse:coord}
@@ -59,10 +59,10 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed_train & $738.47$ & $356.39$ & $142.45$ & $613.42$ & $51.20$ & $163.07$ & $479.22$ \\ \hline
-		elapsed_predict & $0.46$ & $0.06$ & $0.94$ & $0.03$ & $0.34$ & $0.03$ & $0.03$ \\ \hline
-		elapsed_importance & NA & $0$ & NA & NA & $0.02$ & $0.03$ & NA \\ \hline
-		elapsed_total & $739.55$ & $357.43$ & $143.97$ & $614.07$ & $52.39$ & $164.17$ & $480.02$ \\ \hline
+		elapsed_train & $726.38$ & $359.69$ & $148.08$ & $616.16$ & $50.00$ & $158.58$ & $474.79$ \\ \hline
+		elapsed_predict & $0.47$ & $0.07$ & $1.00$ & $0.03$ & $0.33$ & $0.03$ & $0.03$ \\ \hline
+		elapsed_importance & NA & $0.00$ & NA & NA & $0.03$ & $0.02$ & NA \\ \hline
+		elapsed_total & $727.45$ & $360.72$ & $149.69$ & $616.92$ & $51.37$ & $159.61$ & $475.48$ \\ \hline
 	\end{tabular}
 	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{x}$, $B_{y}$, and $a_{p}$ as input.}
 	\label{tab:time:reverse:xyap}
@@ -73,10 +73,10 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed_train & $669.52$ & $329.88$ & $145.75$ & $628.77$ & $40.62$ & $171.54$ & $494.83$ \\ \hline
-		elapsed_predict & $0.45$ & $0.06$ & $0.93$ & $0.01$ & $0.34$ & $0.03$ & $0.02$ \\ \hline
-		elapsed_importance & NA & $0.00$ & NA & NA & $0.02$ & $0.03$ & NA \\ \hline
-		elapsed_total & $670.54$ & $330.81$ & $147.26$ & $629.48$ & $41.92$ & $172.64$ & $495.66$ \\ \hline
+		elapsed_train & $648.20$ & $332.81$ & $150.07$ & $631.77$ & $40.00$ & $166.54$ & $491.09$ \\ \hline
+		elapsed_predict & $0.47$ & $0.06$ & $0.99$ & $0.02$ & $0.38$ & $0.01$ & $0.03$ \\ \hline
+		elapsed_importance & NA & $0.02$ & NA & NA & $0.02$ & $0.03$ & NA \\ \hline
+		elapsed_total & $649.28$ & $333.90$ & $151.67$ & $632.41$ & $41.37$ & $167.59$ & $491.82$ \\ \hline
 	\end{tabular}
 	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{x}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:time:reverse:xzap}
@@ -87,10 +87,10 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed_train & $875.32$ & $381.94$ & $148.34$ & $643.80$ & $57.49$ & $184.64$ & $517.03$ \\ \hline
-		elapsed_predict & $0.50$ & $0.05$ & $0.92$ & $0.03$ & $0.34$ & $0.03$ & $0.01$ \\ \hline
-		elapsed_importance & NA & $0.00$ & NA & NA & $0$ & $0.03$ & NA \\ \hline
-		elapsed_total & $876.43$ & $382.92$ & $149.87$ & $644.44$ & $59.00$ & $185.78$ & $517.78$ \\ \hline
+		elapsed_train & $855.42$ & $387.42$ & $154.25$ & $650.34$ & $58.16$ & $186.60$ & $524.11$ \\ \hline
+		elapsed_predict & $0.53$ & $0.06$ & $1.02$ & $0.03$ & $0.38$ & $0.03$ & $0.04$ \\ \hline
+		elapsed_importance & NA & $0.02$ & NA & NA & $0.02$ & $0.03$ & NA \\ \hline
+		elapsed_total & $856.54$ & $388.50$ & $155.84$ & $651.09$ & $59.63$ & $187.72$ & $524.88$ \\ \hline
 	\end{tabular}
 	\caption{The time taken for all algorithm stages in seconds for each model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
 	\label{tab:time:reverse:yzap}

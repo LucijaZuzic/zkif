@@ -227,13 +227,13 @@
 	\begin{tabular}{|c|c|}
 		\hline
 		Model & elapsed \\ \hline
-		svmPoly & $391.08$ \\ \hline
-		C5.0 & $465.45$ \\ \hline
-		nb & $162.32$ \\ \hline
-		nnet & $618.67$ \\ \hline
-		pls & $53.00$ \\ \hline
-		fda & $141.32$ \\ \hline
-		pcaNNet & $468.00$ \\ \hline
+		svmPoly & $390.44$ \\ \hline
+		C5.0 & $469.97$ \\ \hline
+		nb & $168.38$ \\ \hline
+		nnet & $617.28$ \\ \hline
+		pls & $51.43$ \\ \hline
+		fda & $134.62$ \\ \hline
+		pcaNNet & $460.03$ \\ \hline
 	\end{tabular}
 	\caption{The train time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:time:noTEC:train}
@@ -244,7 +244,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & $391.08$ & $465.45$ & $162.32$ & $618.67$ & $53.00$ & $141.32$ & $468.00$ \\ \hline
+		elapsed & $390.44$ & $469.97$ & $168.38$ & $617.28$ & $51.43$ & $134.62$ & $460.03$ \\ \hline
 	\end{tabular}
 	\caption{The train time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:time:reverse:noTEC:train}
@@ -255,12 +255,12 @@
 	\begin{tabular}{|c|c|}
 		\hline
 		Model & elapsed \\ \hline
-		svmPoly & $0.42$ \\ \hline
-		C5.0 & $0.07$ \\ \hline
-		nb & $1.16$ \\ \hline
-		nnet & $0.02$ \\ \hline
+		svmPoly & $0.44$ \\ \hline
+		C5.0 & $0.06$ \\ \hline
+		nb & $1.25$ \\ \hline
+		nnet & $0.03$ \\ \hline
 		pls & $0.33$ \\ \hline
-		fda & $0.01$ \\ \hline
+		fda & $0.03$ \\ \hline
 		pcaNNet & $0.03$ \\ \hline
 	\end{tabular}
 	\caption{The prediction time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
@@ -272,7 +272,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & $0.42$ & $0.07$ & $1.16$ & $0.02$ & $0.33$ & $0.01$ & $0.03$ \\ \hline
+		elapsed & $0.44$ & $0.06$ & $1.25$ & $0.03$ & $0.33$ & $0.03$ & $0.03$ \\ \hline
 	\end{tabular}
 	\caption{The prediction time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:time:reverse:noTEC:predict}
@@ -288,7 +288,7 @@
 		nb & NA \\ \hline
 		nnet & NA \\ \hline
 		pls & $0.01$ \\ \hline
-		fda & $0.01$ \\ \hline
+		fda & $0.03$ \\ \hline
 		pcaNNet & NA \\ \hline
 	\end{tabular}
 	\caption{The variable importance calculation time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
@@ -300,7 +300,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & NA & $0.02$ & NA & NA & $0.01$ & $0.01$ & NA \\ \hline
+		elapsed & NA & $0.02$ & NA & NA & $0.01$ & $0.03$ & NA \\ \hline
 	\end{tabular}
 	\caption{The variable importance calculation time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:time:reverse:noTEC:importance}
@@ -311,13 +311,13 @@
 	\begin{tabular}{|c|c|}
 		\hline
 		Model & elapsed \\ \hline
-		svmPoly & $392.05$ \\ \hline
-		C5.0 & $466.42$ \\ \hline
-		nb & $164.03$ \\ \hline
-		nnet & $619.30$ \\ \hline
-		pls & $54.26$ \\ \hline
-		fda & $142.19$ \\ \hline
-		pcaNNet & $468.73$ \\ \hline
+		svmPoly & $391.42$ \\ \hline
+		C5.0 & $470.88$ \\ \hline
+		nb & $170.22$ \\ \hline
+		nnet & $617.97$ \\ \hline
+		pls & $52.75$ \\ \hline
+		fda & $135.62$ \\ \hline
+		pcaNNet & $460.76$ \\ \hline
 	\end{tabular}
 	\caption{The execution time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:time:noTEC:total}
@@ -328,7 +328,7 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed & $392.05$ & $466.42$ & $164.03$ & $619.30$ & $54.26$ & $142.19$ & $468.73$ \\ \hline
+		elapsed & $391.42$ & $470.88$ & $170.22$ & $617.97$ & $52.75$ & $135.62$ & $460.76$ \\ \hline
 	\end{tabular}
 	\caption{The execution time in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:time:reverse:noTEC:total}
@@ -339,13 +339,13 @@
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline
 		Model & elapsed_train & elapsed_predict & elapsed_importance & elapsed_total \\ \hline
-		svmPoly & $391.08$ & $0.42$ & NA & $392.05$ \\ \hline
-		C5.0 & $465.45$ & $0.07$ & $0.02$ & $466.42$ \\ \hline
-		nb & $162.32$ & $1.16$ & NA & $164.03$ \\ \hline
-		nnet & $618.67$ & $0.02$ & NA & $619.30$ \\ \hline
-		pls & $53.00$ & $0.33$ & $0.01$ & $54.26$ \\ \hline
-		fda & $141.32$ & $0.01$ & $0.01$ & $142.19$ \\ \hline
-		pcaNNet & $468.00$ & $0.03$ & NA & $468.73$ \\ \hline
+		svmPoly & $390.44$ & $0.44$ & NA & $391.42$ \\ \hline
+		C5.0 & $469.97$ & $0.06$ & $0.02$ & $470.88$ \\ \hline
+		nb & $168.38$ & $1.25$ & NA & $170.22$ \\ \hline
+		nnet & $617.28$ & $0.03$ & NA & $617.97$ \\ \hline
+		pls & $51.43$ & $0.33$ & $0.01$ & $52.75$ \\ \hline
+		fda & $134.62$ & $0.03$ & $0.03$ & $135.62$ \\ \hline
+		pcaNNet & $460.03$ & $0.03$ & NA & $460.76$ \\ \hline
 	\end{tabular}
 	\caption{The time taken for all algorithm stages in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:time:noTEC}
@@ -356,10 +356,10 @@
 	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		Model & svmPoly & C5.0 & nb & nnet & pls & fda & pcaNNet \\ \hline
-		elapsed_train & $391.08$ & $465.45$ & $162.32$ & $618.67$ & $53.00$ & $141.32$ & $468.00$ \\ \hline
-		elapsed_predict & $0.42$ & $0.07$ & $1.16$ & $0.02$ & $0.33$ & $0.01$ & $0.03$ \\ \hline
-		elapsed_importance & NA & $0.02$ & NA & NA & $0.01$ & $0.01$ & NA \\ \hline
-		elapsed_total & $392.05$ & $466.42$ & $164.03$ & $619.30$ & $54.26$ & $142.19$ & $468.73$ \\ \hline
+		elapsed_train & $390.44$ & $469.97$ & $168.38$ & $617.28$ & $51.43$ & $134.62$ & $460.03$ \\ \hline
+		elapsed_predict & $0.44$ & $0.06$ & $1.25$ & $0.03$ & $0.33$ & $0.03$ & $0.03$ \\ \hline
+		elapsed_importance & NA & $0.02$ & NA & NA & $0.01$ & $0.03$ & NA \\ \hline
+		elapsed_total & $391.42$ & $470.88$ & $170.22$ & $617.97$ & $52.75$ & $135.62$ & $460.76$ \\ \hline
 	\end{tabular}
 	\caption{The time taken for all algorithm stages in seconds for each model when using all variables except Dst, TEC, and dTEC as input.}
 	\label{tab:time:reverse:noTEC}

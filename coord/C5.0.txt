@@ -2,7 +2,7 @@
 [1] "C5.0"
 [1] "Train time"
    user  system elapsed 
- 333.42    1.14  346.22 
+ 276.35    0.94  349.05 
 Confusion Matrix and Statistics
 
           Reference
@@ -37,7 +37,7 @@ Detection Prevalence 0.0010433   0.8644  0.00000  0.13250 0.002087
 Balanced Accuracy    0.7497389   0.7100  0.50000  0.71030 0.555029
 [1] "Predict time"
    user  system elapsed 
-   0.06    0.00    0.06 
+   0.04    0.00    0.07 
 C5.0 variable importance
 
    Overall
@@ -49,4 +49,4 @@ Bz   99.36
       0       0       0 
 [1] "Total time"
    user  system elapsed 
- 334.39    1.14  347.16 
+ 277.13    0.95  350.02 

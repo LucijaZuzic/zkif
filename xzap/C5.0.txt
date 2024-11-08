@@ -2,7 +2,7 @@
 [1] "C5.0"
 [1] "Train time"
    user  system elapsed 
- 317.95    1.19  329.88 
+ 274.14    1.45  332.81 
 Confusion Matrix and Statistics
 
           Reference
@@ -46,7 +46,7 @@ ap  100.00
 Bz   99.45
 [1] "Importance time"
    user  system elapsed 
-   0.01    0.00    0.00 
+   0.00    0.00    0.02 
 [1] "Total time"
    user  system elapsed 
- 318.87    1.19  330.81 
+ 275.17    1.45  333.90 

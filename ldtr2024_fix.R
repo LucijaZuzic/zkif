@@ -175,6 +175,7 @@ library(nnet) # only for pcaNNet
 library(binda) # only for binda
 
 model_name_list <- list("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet")
+model_name_list <- list("svmPoly")
 
 model_trained_global <- 0
 model_predictions_global <- 0
@@ -319,6 +320,7 @@ my_ansamble <- function(list_all) {
 use_models <- TRUE
 run_again <- TRUE
 model_types <- c("all", "no_Dst", "no_TEC", "coord", "xyap", "xzap", "yzap")
+model_types <- c("xyap")
 
 if (use_models) {
   for (i in 1:length(model_types)) {
