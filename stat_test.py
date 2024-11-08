@@ -283,9 +283,9 @@ for wd in wd_list:
     plt.rcParams["svg.fonttype"] = "none"
     rc('font',**{'family':'Arial'})
     #plt.rcParams.update({"font.size": 7})
-    SMALL_SIZE = 5
-    MEDIUM_SIZE =5
-    BIGGER_SIZE = 5
+    SMALL_SIZE = 7
+    MEDIUM_SIZE = 7
+    BIGGER_SIZE = 7
 
     plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
     plt.rc('axes', titlesize=SMALL_SIZE)     # fontsize of the axes title
@@ -294,7 +294,7 @@ for wd in wd_list:
     plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
     plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
     plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-    plt.figure(figsize = (29.7 / 4 * cm, 21 / 4 * cm), dpi = 300)
+    plt.figure(figsize = (29.7 / 2 * cm, 21 / 2 * cm), dpi = 300)
     sns.heatmap(df_new_unfiltered["best"], annot = True, fmt = '.2g')
     plt.title("Candidate model comparison using\n" + translate_data[wd])
     plt.xlabel("Methods")
@@ -342,9 +342,9 @@ for m in model_name_list:
     plt.rcParams["svg.fonttype"] = "none"
     rc('font',**{'family':'Arial'})
     #plt.rcParams.update({"font.size": 7})
-    SMALL_SIZE = 5
-    MEDIUM_SIZE =5
-    BIGGER_SIZE = 5
+    SMALL_SIZE = 7
+    MEDIUM_SIZE = 7
+    BIGGER_SIZE = 7
 
     plt.rc('font', size=SMALL_SIZE)          # controls default text sizes
     plt.rc('axes', titlesize=SMALL_SIZE)     # fontsize of the axes title
@@ -353,7 +353,7 @@ for m in model_name_list:
     plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
     plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
     plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-    plt.figure(figsize = (29.7 / 4 * cm, 21 / 4 * cm), dpi = 300)
+    plt.figure(figsize = (29.7 / 2 * cm, 21 / 2 * cm), dpi = 300)
     sns.heatmap(df_new_unfiltered["best"], annot = True, fmt = '.2g')
     plt.title("Candidate model comparison using the\n" + translate_algo[m])
     plt.xlabel("Predictors")
