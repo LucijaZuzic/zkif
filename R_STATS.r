@@ -6,6 +6,22 @@ library(ggplot2)
 library(reshape2)
 library(broom)
 
+getCurrentFileLocation <-  function()
+{
+  this_file <- commandArgs() %>% 
+    tibble::enframe(name = NULL) %>%
+    tidyr::separate(col=value, into=c("key", "value"), sep="=", fill='right') %>%
+    dplyr::filter(key == "--file") %>%
+    dplyr::pull(value)
+  if (length(this_file)==0)
+  {
+    this_file <- rstudioapi::getSourceEditorContext()$path
+  }
+  return(dirname(this_file))
+}
+
+setwd(getCurrentFileLocation())
+
 model_name_list <- c("svmPoly", "C5.0", "nb", "nnet", "pls", "fda", "pcaNNet")
 wd_list <- c("all", "no_Dst", "no_TEC", "coord", "xyap", "xzap", "yzap")
 
