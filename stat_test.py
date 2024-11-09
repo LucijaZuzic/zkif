@@ -300,7 +300,7 @@ for wd in wd_list:
             plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
             plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
             plt.figure(figsize = (29.7 / 3 * cm, 21 / 3 * cm), dpi = 300)
-            sns.heatmap(df_new_unfiltered[t], annot = True, fmt = '.2g')
+            sns.heatmap(df_new_unfiltered[t], annot = True, fmt = '.2g', cbar_kws={'label': '$p$-value'})
             plt.title("Candidate model comparison using\n" + translate_data[wd])
             plt.xlabel("Methods")
             #plt.ylabel("Methods")
@@ -361,7 +361,7 @@ for m in model_name_list:
             plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
             plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
             plt.figure(figsize = (29.7 / 3 * cm, 21 / 3 * cm), dpi = 300)
-            sns.heatmap(df_new_unfiltered[t], annot = True, fmt = '.2g')
+            sns.heatmap(df_new_unfiltered[t], annot = True, fmt = '.2g', cbar_kws={'label': '$p$-value'})
             plt.title("Candidate model comparison using the\n" + translate_algo[m])
             plt.xlabel("Predictors")
             #plt.ylabel("Predictors")
@@ -465,7 +465,7 @@ for m1 in allpvno:
 
 t = "best"
 ax1 = plt.subplot(gs[1])
-sns.heatmap(df_new_unfiltered[t], annot = True, fmt = '.2g', cbar_kws={'location': 'bottom'})
+sns.heatmap(df_new_unfiltered[t], annot = True, fmt = '.2g', cbar_kws={'label': '$p$-value', 'location': 'bottom'})
 plt.title("Candidate model comparison using McNemar’s test, and\nthe " + translate_algo[m])
 #plt.xlabel("Predictors")
 plt.ylabel("Predictors")
@@ -569,7 +569,7 @@ for m1 in allpvno:
 
 t = "best"
 ax1 = plt.subplot(gs[1])
-sns.heatmap(df_new_unfiltered[t], annot = True, fmt = '.2g')
+sns.heatmap(df_new_unfiltered[t], annot = True, fmt = '.2g', cbar_kws={'label': '$p$-value'})
 plt.title("Candidate model comparison using McNemar’s test, and\nthe " + translate_algo[m])
 plt.xlabel("Predictors")
 #plt.ylabel("Predictors")
