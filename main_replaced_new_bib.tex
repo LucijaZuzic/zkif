@@ -31,12 +31,14 @@
  
 %%\documentclass[sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
 %%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
-\documentclass[sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style 
+%%%%\documentclass[sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style 
 %%\documentclass[sn-mathphys-ay]{sn-jnl}% Math and Physical Sciences Author Year Reference Style
 %%\documentclass[sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
 %%\documentclass[sn-vancouver,Numbered]{sn-jnl}% Vancouver Reference Style
 %%\documentclass[sn-apa]{sn-jnl}% APA Reference Style 
 %%\documentclass[sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
+
+\let\LaTeXcline\cline\documentclass[sn-mathphys-num]{sn-jnl}\let\cline\LaTeXcline
 
 %%%% Standard Packages
 %%<additional latex packages if required can be included here>
@@ -90,8 +92,10 @@
 %%\unnumbered% uncomment this for unnumbered level heads
 
 \usepackage[acronym]{glossaries}
+\renewcommand{\glstextformat}[1]{\color{black}#1}
 
 \makeglossaries
+\newacronym{doi}{DOI}{Digital Object Identifier}
 \newacronym{dst}{Dst}{Disturbance Storm-Time}
 \newacronym{rin}{RIN}{The Royal Institute of Navigation}
 \newacronym{ion}{ION}{The Institute of Navigation}
@@ -103,7 +107,6 @@
 \newacronym{pnt}{PNT}{Positioning, Navigation, and Timing}
 \newacronym{svm}{SVM}{Support Vector Machine}
 \newacronym{svn}{SVN}{Support Vector Network}
-\newacronym{svc}{SVC}{Support Vector Clustering}
 \newacronym{dt}{DT}{Decision Tree}
 \newacronym{tdidt}{TDIDT}{Top-Down Induction of Decision Trees}
 \newacronym{nb}{NB}{Naive Bayes}
@@ -158,19 +161,20 @@
 \newacronym{nasa}{NASA}{National Aeronautics and Space Administration}
 \newacronym{euv}{EUV}{Extreme ultraviolet}
 
+\renewcommand*{\acronymname}{List of abbreviations} 
+
 \begin{document}
 
-\title[A $Dst$-based space weather conditions machine learning classification  model for GNSS PNT performance analysis]{A $Dst$-based space weather conditions machine learning classification  model for GNSS PNT performance analysis}
+\title[A $Dst$-based space weather conditions machine learning classification model for GNSS PNT performance analysis]{A $Dst$-based space weather conditions machine learning classification model for GNSS PNT performance analysis}
 
-\author[1,2]{\fnm{Lucija} \sur{\v{Z}u\v{z}i\'{c}}}\email{lucija.zuzic@uniri.hr}
+\author*[1,2]{\fnm{Lucija} \sur{\v{Z}u\v{z}i\'{c}}}\email{lucija.zuzic@uniri.hr}
 \equalcont{These authors contributed equally to this work.}
 
 \author[1,2]{\fnm{Deni} \sur{Klen}}\email{deni.klen@uniri.hr}
-\equalcont{These authors contributed equally to this work.}
 
 \author[3]{\fnm{Teodor B.} \sur{Iliev}}\email{tiliev@uni-ruse.bg}
 
-\author*[1,2,4]{\fnm{Renato} \sur{Filjar}}\email{renato.filjar@uniri.hr}
+\author[1,2,4]{\fnm{Renato} \sur{Filjar}}\email{renato.filjar@uniri.hr}
 
 \affil*[1]{\orgdiv{Department of Computer Engineering}, \orgname{Faculty of Engineering, University of Rijeka}, \orgaddress{\street{Vukovarska 58}, \city{Rijeka}, \postcode{51000}, \country{Croatia}}}
 
@@ -180,7 +184,7 @@
 
 \affil[4]{\orgdiv{Laboratory for Spatial Intelligence}, \orgname{Hrvatsko Zagorje Krapina University of Applied Sciences}, \orgaddress{\street{Setaliste hrvatskog narodnog preporoda 6}, \city{Krapina}, \postcode{49000}, \country{Croatia}}}
 
-\abstract{Ambient conditions classification enables systematic mitigation of adversarial effects on the Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT) performance. This research contributes to the problem by proposing a classification model of space weather events for sub-equatorial regions. The proposed model uses machine learning-based classification applied to the experimental observations of geomagnetic field components, observed Total Electron Content ($TEC$), and Disturbance Storm-Time ($Dst$-index). A SVM with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), shallow Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA), and shallow NN using Principal Component Analysis (PCA) was applied to develop the candidate model to classify observations of the geomagnetic field in $TEC$, combined with other variables, into one of the scenarios of space weather conditions. Performance is assessed using a confusion matrix and development time to yield the NB as the best performer. The proposed $Dst$-based classification model serves as an indicator of a geomagnetic/ionospheric storm in progress, thus alerting GNSS users of potential degradation in GNSS PNT performance and setting up a framework for the development of a tailored GNSS ionospheric correction model for specific classes of the space weather conditions.}
+\abstract{Ambient conditions classification enables systematic mitigation of adversarial effects on Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT) performance. This research contributes to the problem by proposing a classification model of space weather events for sub-equatorial regions. The proposed model uses machine learning-based classification applied to the experimental observations of geomagnetic field components, observed Total Electron Content ($TEC$), and Disturbance Storm-Time ($Dst$-index). A Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), shallow Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA), and shallow NN using Principal Component Analysis (PCA) was applied to develop the candidate model to classify observations of the geomagnetic field in $TEC$, combined with other variables, into one of the scenarios of space weather conditions. Performance is assessed using a confusion matrix and development time to yield the NB as the best performer. The proposed $Dst$-based classification model serves as an indicator of a geomagnetic/ionospheric storm in progress, thus alerting GNSS users of potential degradation in GNSS PNT performance and setting up a framework for the development of a tailored GNSS ionospheric correction model for specific classes of the space weather conditions.}
 
 \keywords{Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT), space weather conditions, machine learning (ML), classification model, Decision Tree (DT), Neural Network (NN), sensor observations aggregation, geomagnetic field, Total Electron Content ($TEC$), Disturbance Storm-Time ($Dst$-index)}
 
@@ -193,96 +197,64 @@
 \section{Introduction}
 %\label{sec:Intro}
 
-The Global Navigation Satellite System (GNSS) and its Positioning, Navigation, and Timing (PNT) service have matured to become an essential part of national infrastructure, public goods, and enablers of a vast number of emerging technology and socio-economic applications \cite{filjar2022application}. Maintaining the GNSS PNT quality has appeared fundamental for the sustainable development of modern economy and society \cite{filjar2022application}. 
+The Global Navigation Satellite System (GNSS) and its Positioning, Navigation, and Timing (PNT) service have matured to become an essential part of national infrastructure, public goods, and enablers of a vast number of emerging technology and socio-economic applications \cite{spilker1996global}. Maintaining the GNSS PNT quality is crucial for the sustainable development of modern economy and society \cite{schaer1999mapping}. Overcoming the shortcomings and vulnerabilities of GNSS PNT is a scientific challenge, and the need of a wide variety of scientists, developers, operators, regulators, and users of GNSS-based systems and services \cite{durmaz2015regional, jin2012m_dcb}. The Earth’s ionosphere, a part of the Earth’s atmosphere stretching from $50$ $km$ to $2000$ $km$ above the Earth’s surface and comprised of rare but mostly charged atoms and molecules, is the major natural cause of GNSS PNT degradation \cite{davies1990ionospheric, liu2009seismoionospheric}. This phenomenon especially affects most currently used GNSS receivers, which work as single-frequency receivers exposed to GNSS ionospheric effects \cite{spilker1996global, prolss2012physics}. Driven by powerful and random flows of energy and particles from the Sun (space weather conditions), the ionospheric conditions define the properties of GNSS signal propagation through the Earth’s atmosphere and the resulting ionospheric delay \cite{davies1990ionospheric, oxley2017uncertainties, prolss2012physics}. The GNSS ionospheric delay causes errors in GNSS PNT algorithm deployment, designed to produce position, velocity, and time estimates for a GNSS receiver \cite{spilker1996global, schaer1999mapping}. The ionosphere affects GNSS satellite signals for position estimation by introducing signal propagation delay \cite{spilker1996global, schaer1999mapping}. The GNSS ionospheric delay is a stochastic variable, whose value is determined by complex physical processes of space weather \cite{spilker1996global, schaer1999mapping}. How space weather affects GNSS PNT performance was explained using the Space weather – GNSS PNT performance coupling model, as depicted in Figure~\ref{fig:SpaceWeather}.
 
-Overcoming the shortcomings and vulnerabilities of GNSS PNT is a scientific challenge, and the need of a wide variety of scientists, developers, operators, regulators, and users of GNSS-based systems and services \cite{filjar2024ambient, filjar2022application}. The Earth’s ionosphere, a part of the Earth’s atmosphere stretching from $50$ $km$ to $2000$ $km$ above the Earth’s surface and comprised of rare but mostly charged atoms and molecules, is the major natural cause of GNSS PNT degradation \cite{davies1990ionospheric, filic2018modelling}.
+\begin{figure}[!ht]
+ \centering
+ \includegraphics[width=0.89\linewidth]{SpaceWeather-TwoLines.drawio.pdf}
+    \caption{The Space weather – GNSS PNT performance coupling model.}
+    \label{fig:SpaceWeather}
+\end{figure}
 
-This phenomenon especially affects most currently used GNSS receivers, which work as single-frequency receivers exposed to GNSS ionospheric effects \cite{spilker1996global, filjar2022application}. Driven by powerful and random flows of energy and particles from the Sun (space weather conditions), the ionospheric conditions define the properties of GNSS signal propagation through the Earth’s atmosphere and the resulting ionospheric delay \cite{davies1990ionospheric, oxley2017uncertainties, filic2018modelling}. The GNSS ionospheric delay causes errors in GNSS PNT algorithm deployment, designed to produce position, velocity, and time estimates for a GNSS receiver \cite{spilker1996global, filic2018modelling}. 
-
-The ionosphere affects GNSS satellite signals for position estimation by introducing signal propagation delay \cite{spilker1996global, filic2018modelling}. The GNSS ionospheric delay is a stochastic variable, whose value is determined by complex physical processes of space weather \cite{filic2018modelling, filjar2022application}.
-
-How space weather affects GNSS PNT performance was explained using the Space weather – GNSS PNT performance coupling model \cite{filic2018modelling}, as depicted in Table~\ref{tab:SpaceWeather}.
-
-\begin{table}[!ht]
-    \centering
-    \caption{The Space weather – GNSS PNT performance coupling model, after \cite{filic2018modelling}.}
-    \label{tab:SpaceWeather}
-    \begin{tabular}{|c|c|c|c|c|}
-        \hline
-        SPACE & GEOMAGNETIC & IONOSPHERE & GNSS & GNSS \\
-        WEATHER & FIELD & & PSEUDO- & POSITIONING \\
-         & & & RANGES & PERFORMANCE \\
-        \hline
-    \end{tabular}
-\end{table}
-
-The GNSS signal encounters a certain number of charged particles from the satellite aerial to a mobile unit’s (GNSS receiver’s) aerial \cite{filic2018modelling, filic2018modelling}. Such an encounter is quantified using the Total Electron Content ($TEC$) defined by Equation~1 in $electrons/m^{2}$  \cite{filic2018modelling, davies1990ionospheric}, where $h$ denotes the height above the Earth’s mean sea level in $m$, $N(h)$ represents the vertical ionospheric profile, the volume density of charged particles at height $h$, in $electrons/m^{2}$. The $TEC$ dataset used in this study was derived from Receiver Independent Exchange Format (RINEX) $TEC$ observations using Global Positioning System (GPS) $TEC$ software by Seemala \cite{SEEMALA202363}.
+The GNSS signal encounters a certain number of charged particles from the satellite aerial to a mobile unit’s (GNSS receiver’s) aerial \cite{schaer1999mapping, prolss2012physics}. This encounter is quantified using the Total Electron Content ($TEC$) defined by Equation~1 in $electrons/m^{2}$ \cite{spilker1996global, schaer1999mapping, davies1990ionospheric}, where $h$ denotes the height above the Earth’s mean sea level in $m$, $N(h)$ represents the vertical ionospheric profile, the volume density of charged particles at height $h$, in $electrons/m^{2}$. For reasons of convenience, $TEC$ may be expressed in $TEC$ Units ($TECU$), with $1$ $TECU$ = $1016$ $electrons/m^{2}$. The $TEC$ dataset used in this study was derived from Receiver Independent Exchange Format (RINEX) $TEC$ observations using Global Positioning System (GPS) $TEC$ software by Seemala \cite{SEEMALA202363}.
 
 \begin{equation}
-	TEC = \int_{lower \quad ionsopheric \quad boundary}^{upper \quad ionsopheric \quad boundary}N(h)dh
+	TEC = \int_{lower \quad ionospheric \quad boundary}^{upper \quad ionospheric \quad boundary}N(h)dh
 	\label{eqn:1}
 \end{equation}
 
-It should be noted that in the sense of Equation~1, $TEC$ is defined as a result, a consequence, of the ionospheric conditions, and not their descriptor \cite{filjar2022application}. The GNSS ionospheric delay may be determined by derivation from the Appleton-Hartree equation, as given in Equation~2, where $\Delta t_{iono}$ denotes the GNSS ionospheric delay in $s$, $c$ denotes the velocity of an electromagnetic wave in vacuum in $m/s$, and $f$ denotes the carrier wave frequency of the satellite signal in $Hz$ \cite{spilker1996global, filic2018modelling}.
+It should be noted that in the sense of Equation~1, $TEC$ is defined as a result, a consequence, of the ionospheric conditions, and not their descriptor \cite{spilker1996global}. The GNSS ionospheric delay may be determined by derivation from the Appleton-Hartree equation, as given in Equation~2, where $\Delta t_{iono}$ denotes the GNSS ionospheric delay in $s$, $c$ denotes the velocity of an electromagnetic wave in vacuum in $m/s$, and $f$ denotes the carrier wave frequency of the satellite signal in $Hz$ \cite{spilker1996global, schaer1999mapping}.
 
 \begin{equation}
-	\Delta t_{iono} = \frac{40.3}{c f^{2}} \int_{lower \quad ionsopheric \quad boundary}^{upper \quad ionsopheric \quad boundary}N(h)dh
+	\Delta t_{iono} = \frac{40.3}{c f^{2}} \int_{lower \quad ionospheric \quad boundary}^{upper \quad ionospheric \quad boundary}N(h)dh
 	\label{eqn:2}
 \end{equation}
 
-Combining Equation~1 and Equation~2, one can conclude the linear relation between $\Delta t_{iono}$ and $TEC$, as given in Equation~3, a sub-model incorporated in the Space weather – GNSS PNT performance coupling model \cite{filic2018modelling}.
+Combining Equation~1 and Equation~2, one can conclude the linear relation between $\Delta t_{iono}$ and $TEC$, as given in Equation~3 \cite{spilker1996global}.
 
 \begin{equation}
 	\Delta t_{iono} = \frac{40.3}{c f^{2}} TEC
 	\label{eqn:3}
 \end{equation}
 
-The GNSS ionospheric delay has been identified as a source of GNSS PNT degradation since the dawn of GNSS. GNSS systems offer various standard GNSS ionospheric delay estimation (correction) models to mitigate the deteriorating effects on GNSS PNT, such as the Klobuchar model \cite{spilker1996global, filic2018modelling}. The standard ionospheric correction models are global, and insufficiently flexible to update to mitigate GNSS ionospheric delay to satisfy rising demands on GNSS PNT performance \cite{filjar2024ambient, filic2018modelling}. The development of regional and local models attempts to solve the problem of GNSS PNT sustainable performance in various ionospheric conditions \cite{sikirica2021risk}. In recent developments, our team has proposed the Ambient-Aware Application-Aligned ((AA)2) PNT to take into account the actual ionospheric and geomagnetic conditions near a mobile unit (a GNSS receiver) \cite{filjar2022application, filic2018modelling, filjar2024ambient}. Direct measurements of the immediate geomagnetic and ionospheric condition variables may be supplied to a machine learning-based adapted GNSS ionospheric correction model, thus solving the single-frequency GNSS problem \cite{filjar2022application}. Previous research has identified predictors and target variables (descriptors of geomagnetic, ionospheric, and GNSS PNT conditions) \cite{filic2018modelling, natras2022ensemble, natras2023regional}. Current space weather severity scales, such as the one provided by National Oceanic and Atmospheric Administration (NOAA) \cite{NOAA2024eSpace}, are based on global space weather and geomagnetic indices averaged over a certain period (for instance, $3$ hours for the global $K_{p}$ index). The current space weather severity scales do not directly address classifying scenarios of GNSS performance deterioration and have limited potential in deployment for a GNSS ionospheric correction model. The classification of different scenarios of GNSS ionospheric conditions with adverse effects on the GNSS PNT remained an unsolved precondition needed for the development of a machine learning-based GNSS ionospheric delay correction model to render the GNSS PNT algorithm ionospheric conditions-agnostic \cite{filjar2022application, filjar2024ambient}.
+The GNSS ionospheric delay has been identified as a source of GNSS PNT degradation since the dawn of GNSS. GNSS systems offer various standard GNSS ionospheric delay estimation (correction) models to mitigate the deteriorating effects on GNSS PNT, such as the Klobuchar model \cite{spilker1996global, klobuchar1987ionospheric}. The standard ionospheric correction models are global, and insufficiently flexible to update to mitigate GNSS ionospheric delay to satisfy rising demands on GNSS PNT performance \cite{spilker1996global, enge1994global}. The development of regional and local models, such as the one presented in this paper, attempts to solve the problem of GNSS PNT sustainable performance in various ionospheric conditions. Some of the authors of this paper recently proposed the Ambient-Aware Application-Aligned ((AA)2) PNT to take into account the actual ionospheric and geomagnetic conditions near a mobile unit (a GNSS receiver) \cite{filjar2024ambient}. Direct measurements of the immediate geomagnetic and ionospheric condition variables may be supplied to a machine learning-based adapted GNSS ionospheric correction model, thus solving the single-frequency GNSS problem. Previous research has identified predictors and target variables (descriptors of geomagnetic, ionospheric, and GNSS PNT conditions) \cite{natras2022ensemble, natras2023regional}. Current space weather severity scales, such as the one provided by National Oceanic and Atmospheric Administration (NOAA), are based on global space weather and geomagnetic indices averaged over a certain period (for instance, $3$ hours for the global $K_{p}$ index). The current space weather severity scales do not directly address classifying scenarios of GNSS performance deterioration and have limited potential in deployment for a GNSS ionospheric correction model. The classification of different scenarios of GNSS ionospheric conditions with adverse effects on the GNSS PNT remained an unsolved precondition needed for the development of a machine learning-based GNSS ionospheric delay correction model to render the GNSS PNT algorithm ionospheric conditions-agnostic.
 
-A methodology for a machine learning-based classification of ionospheric conditions based entirely on observations of geomagnetic indices is described in this study. The proposed method is inspired by previous lightweight machine-learning techniques \cite{filjar2020comparison} for classifying sensor readings. The model is sufficiently simple to be applied on computationally capable platforms with suitable geomagnetic field sensors, such as smartphones and connected/autonomous vehicles. The research presented acquires ambient data and analyses its statistical properties. The dataset is split into training and test sets. Several candidates for the GNSS ionospheric delay model are developed based on Disturbance Storm-Time ($Dst$) data taken from the INTERMAGNET \cite{Intermagnet2022-cj} dataset, and reformatted to match the format of $TEC$ data. The machine learning (ML) models include a Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), shallow Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA) and shallow Neural Network (NN) using Principal Component Analysis (PCA) of the input data. A tailored set of validation methods is used to assess their performance. The optimal GNSS ionospheric delay correction model is identified based on GNSS PNT-related objective criteria, and its performance is demonstrated in an independent case study.
+A methodology for a machine learning-based classification of ionospheric conditions based entirely on observations of geomagnetic indices is described in this study. The model is sufficiently simple to be applied on computationally capable platforms with suitable geomagnetic field sensors, such as smartphones and connected/autonomous vehicles. The research presented acquires ambient data and analyses its statistical properties. The dataset is split into training and test sets. Several candidates for the GNSS ionospheric delay model are developed based on Disturbance Storm-Time ($Dst$) data taken from the INTERMAGNET \cite{Intermagnet2022-cj} dataset, and reformatted to match the format of $TEC$ data. The machine learning (ML) models include a Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), shallow Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA) and shallow Neural Network (NN) using Principal Component Analysis (PCA) of the input data. A tailored set of validation methods is used to assess their performance. The optimal GNSS ionospheric delay correction model is identified based on GNSS PNT-related objective criteria, and its performance is demonstrated in an independent case study.
 
-\section{Method and Data}
+\section{Method and data}
 \label{sec:Dataset}
 
-A Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA) and shallow Neural Network (NN) using Principal Component Analysis (PCA) of the input data were tested based on their ability to classify a set of observations of the geomagnetic field in $TEC$, and other predictors, into one of the scenarios of space weather conditions based on $Dst$. 
-
-Multiple $Dst$-dependent classes were predefined using theoretical knowledge. Statistical analysis of the data confirmed that distributions of other variables change for different $Dst$ ranges, supporting the validity of the classification. The study assumes that the dependent output variable, the $Dst$ class, can be predicted based on the independent variables used as input.
-
-$TEC$ data was obtained using GPS $TEC$ software by Seemala to process RINEX $TEC$ observations \cite{SEEMALA202363}. The INTERMAGNET \cite{Intermagnet2022-cj} dataset contains $Dst$ and $a_{p}$ data from 2014 for a measuring station maintained by Geoscience Australia in Kakadu, referred to as KDU in the database, at $-12.69$ degrees latitude and $132.47$ degrees longitude near Darwin, Nothern Territory, Australia. The two datasets are merged based on location, year, month, day, and time of day in hours.
+A Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA) and shallow Neural Network (NN) using Principal Component Analysis (PCA) of the input data were tested based on their ability to classify a set of observations of the geomagnetic field in $TEC$, and other predictors, into one of the scenarios of space weather conditions based on $Dst$. Multiple $Dst$-dependent classes were predefined using theoretical knowledge. Statistical analysis of the data confirmed that distributions of other variables change for different $Dst$ ranges, supporting the validity of the classification. The study assumes that the dependent output variable, the $Dst$ class, can be predicted based on the independent variables used as input. $TEC$ data was obtained using GPS $TEC$ software by Seemala to process RINEX $TEC$ observations \cite{SEEMALA202363}. The INTERMAGNET \cite{Intermagnet2022-cj} dataset contains $Dst$ and $a_{p}$ data from 2014 for a measuring station maintained by Geoscience Australia in Kakadu, referred to as KDU in the database, at $12.69$ degrees of south latitude and $132.47$ degrees of east longitude near Darwin, Nothern Territory, Australia. The two datasets are merged based on location, year, month, day, and time of day in hours.
 
 \subsection{Method}
 %\label{subsec:Method}
 
-The models were selected because they represent larger families of classification methods. SVM models are supervised maximum margin models. DT models also apply supervised learning. NB classifiers are probabilistic classifiers that can be parametric or non-parametric, but this study uses a non-parametric approach. PLS is a non-parametric linear regression model. FDA uses multiple non-parametric linear regression models to create a non-linear classification. PCA is a linear dimensionality reduction technique that extracts a predefined number of components for training an NN model. NN models imitate the brain using artificial neurons to produce outputs based on the input and the activation function. NN models require that the structure be predefined, and hyperparameters are tuned.
-
-All NN models were applied based on research by Kuhn for the \textit{R} \textit{caret} package \cite{kuhn2013applied, KuhnCaret2024, rprojectProjectStatistical}.
+The methods were selected because they represent larger families of classification methods. SVM models are supervised maximum margin models. DT models also apply supervised learning. NB classifiers are probabilistic classifiers that can be parametric or non-parametric, but this study uses a non-parametric approach. PLS is a non-parametric linear regression model. FDA uses multiple non-parametric linear regression models to create a non-linear classification. PCA is a linear dimensionality reduction technique that extracts a predefined number of components for training an NN model. NN models imitate the brain using artificial neurons to produce outputs based on the input and the activation function. NN models require that the structure be predefined, and hyperparameters are tuned. All NN models were applied based on research by Kuhn for the \textit{R} \textit{caret} package \cite{Kuhn2007, kuhn2008building, kuhn2013applied}.
 
 \subsubsection{Support Vector Machine}
 %\label{subsubsec:SupportVectorMachine}
 
-In machine learning, a Support Vector Machine (SVM) or Support Vector Network (SVN) model is a supervised maximum margin model with associated learning algorithms that analyzes data for classification, regression \cite{Cortes1995}, or outlier detection \cite{scikit-learn2023}. SVM models are also effective for non-linear classification using the hyperplane kernel trick \cite{Boser1992, Aizerman1964}. Intuitively, a good separation is achieved by the hyperplane with the greatest distance to the nearest point in the training data belonging to any class \cite{HastieRosset2009}. Support Vector Clustering (SVC) \cite{BenHur2001} is a related method for clustering unlabeled data.
-
-Meyer, Leisch, and Hornik compared SVM models with other classifiers \cite{Meyer2003}. However, it is unclear whether SVM predictions perform better than other linear models, such as logistic, and linear regression.
-
-A multidimensional feature space increases the generalization error of SVM models, so additional samples are needed to enhance performance \cite{Jin2012}. To keep the computational burden reasonable, a kernel probability density function $k(x, y)$ is chosen to fit the problem \cite{Press2007}.
-
-The performance of SVM depends on the kernel probability density function, its parameters, and the "soft" margin parameter $\lambda$ chosen in cross-validation to train the final classification model \cite{Hsu2003}.
+In machine learning, a Support Vector Machine (SVM) or Support Vector Network (SVN) model is a supervised maximum margin model with associated learning algorithms used for classification. SVM models are also effective for non-linear classification using the hyperplane kernel trick \cite{Boser1992}. Intuitively, a good separation is achieved by the hyperplane with the greatest distance to the nearest point in the training data belonging to any class \cite{HastieRosset2009}. Meyer, Leisch, and Hornik compared SVM models with other classifiers \cite{Meyer2003}. However, it is unclear whether SVM predictions perform better than other linear models, such as logistic, and linear regression. To keep the computational burden reasonable, a kernel probability density function $k(x, y)$ is chosen to fit the problem \cite{Press2007}.
 
 \subsubsection{Decision Tree}
 %\label{subsubsec:DecisionTree}
 
-Decision Tree (DT) models are used for supervised learning in statistics, data mining \cite{Rokach2014}, and machine learning. Classification trees use a discrete target variable, while regression trees can handle continuous values \cite{Studer2011}. DT models are popular due to their comprehensibility and simplicity \cite{Wu2008}.
-
-A tree is recursively partitioned by dividing the original set, or root node, into subsets that form descendants, or successors, using classification rules based on features \cite{ShalevShwartz2014}. This process of Top-Down Induction of Decision Trees (TDIDT) \cite{Quinlan1986} is an example of a greedy algorithm that is the most common strategy for learning DT models from data \cite{Rokach2005}. C5.0, used in the \textit{caret} package in \textit{R}, has a similar approach and improves the ID3 and C4.5 algorithms.
+Decision Tree (DT) models are used for supervised learning in statistics and machine learning. Classification trees use a discrete target variable. DT models are popular due to their comprehensibility and simplicity \cite{Wu2008}. A tree is recursively partitioned by dividing the original set, or root node, into subsets that form descendants, or successors, using classification rules based on features \cite{ShalevShwartz2014}. C5.0, used in the \textit{caret} package in \textit{R}, has a similar approach and improves the ID3 and C4.5 algorithms.
 
 \subsubsection{Naive Bayes}
 %\label{subsubsec:NaiveBayes}
 
-In statistics, Naive Bayes (NB) models, simple Bayes, or independent Bayes \cite{Hand2001} classifiers are a family of linear "probabilistic classifiers" that assume that, given a target class, the features are conditionally independent. These classifiers are among the simplest Bayesian network models \cite{McCallum2011}, but a NB classifier model is not necessarily a Bayesian method. Maximum likelihood training evaluates a closed-form expression \cite{Russell1999} in linear time instead of using iterative approximation.
-
-Despite their simplicity, NB classifier models have performed well in real-world situations \cite{Metsis2006}. However, a comprehensive comparison in 2006 showed that Bayesian classification performed worse than boosted trees or Random Forest (RF) \cite{Caruana2006}. An advantage of NB over other models is a smaller amount of training data \cite{John2013, Mccallum2001}.
-
-In the abstract, NB models assign conditional probabilities $p(C_{k}\mid x_{1},\ldots, x_{n})$ to each of the $K$ possible outcomes or classes $C_{k}$ for an instance to be classified, represented by the vector $x = (x_{1},\ldots, x_{n})$ encoding $n$ features \cite{Murty2011}. The model can be reformulated using Bayes' theorem in Equation~4.
+In statistics, Naive Bayes (NB) models, simple Bayes, or independent Bayes \cite{Hand2001} classifiers are a family of linear "probabilistic classifiers" that assume that, given a target class, the features are conditionally independent. Maximum likelihood training for Naive Bayes (NB) models evaluates a closed-form expression \cite{Russell1999} in linear time instead of using iterative approximation. However, a comprehensive comparison in 2006 showed that Naive Bayes (NB) models performed worse than boosted trees or Random Forest (RF) models \cite{Caruana2006}. An advantage of NB over other models is a smaller amount of required training data \cite{John2013}. NB models assign probabilities $p(C_{k}\mid x_{1},\ldots, x_{n})$ to $K$ classes $C_{k}$ for an input vector $x = (x_{1},\ldots, x_{n})$ with $n$ features \cite{Murty2011}, and use Bayes' theorem in Equation~4.
 
 \begin{equation}
 	p(C_{k}\mid \mathbf{x})={\frac{p(C_{k})\ p(\mathbf{x} \mid C_{k})}{p(\mathbf{x})}}
@@ -292,198 +264,61 @@ In the abstract, NB models assign conditional probabilities $p(C_{k}\mid x_{1},\
 \subsubsection{Neural Networks}
 %\label{NeuralNetworks}
 
-The neurons of human or animal brains provide the basis for a Neural Network (NN) or Artificial Neural Network (ANN) with connected units or nodes called artificial neurons in machine learning \cite{mitExplainedNeural, brahme2014comprehensive}. 
-
-Shallow NN models typically contain only a few hidden layers for processing between the input layer that receives the data and the final layer that produces the output \cite{olden2002illuminating, ozesmi1999artificial}. A network with at least two hidden layers \cite{bishop2006pattern} is a deep NN model.
-
-Gradient-based methods such as backpropagation estimate ANN parameters \cite{vapnik2013nature} to minimize the difference or empirical risk between the output and target labels, expressed in a loss function \cite{goodfellow2016deep}. The hyperparameters may also be modified to suit the problem \cite{probst2019tunability} during an extensive tuning process, like the one used in this study.
-
-Principal Component Analysis (PCA) \cite{pearson1901liii, stewart2019introduction} is a linear dimensionality reduction technique in exploratory data analysis, visualization \cite{jolliffe2016principal}, and preprocessing. The $pcaNNet$ method in the \textit{caret} package in \textit{R} \cite{ripley2007pattern} uses PCA in preprocessing.
+The neurons of human or animal brains provide the basis for a Neural Network (NN) or Artificial Neural Network (ANN) with connected units or nodes called artificial neurons in machine learning \cite{brahme2014comprehensive}. Shallow NN models typically contain only a few hidden layers for processing between the input layer that receives the data and the final layer that produces the output \cite{olden2002illuminating}. A network with at least two hidden layers \cite{bishop2006pattern} is a deep NN model. Gradient-based methods such as backpropagation estimate ANN parameters \cite{vapnik2013nature} to minimize the difference or empirical risk between the output and target labels, expressed in a loss function \cite{goodfellow2016deep}. The hyperparameters may also be modified to suit the problem \cite{probst2019tunability} during an extensive tuning process, like the one used in this study. Principal Component Analysis (PCA) \cite{stewart2019introduction} is a linear dimensionality reduction technique in exploratory data analysis, visualization \cite{jolliffe2016principal}, and preprocessing. The $pcaNNet$ method in the \textit{caret} package in \textit{R} uses PCA in preprocessing \cite{Kuhn2007, kuhn2008building, kuhn2013applied}.
 
 \subsubsection{Partial Least Squares}
 %\label{subsubsec:PLS}
 
-Partial Least Squares (PLS) regression, or projection to latent structures, \cite{wold2001pls, abdi2010partial}, is a linear regression statistical model that transforms the predicted and the observable variables to a new space. PLS methods are bilinear factor models because the $X$ and $Y$ are projected to new spaces. In Partial Least Squares Discriminant Analysis (PLS-DA), $Y$ is categorical \cite{saebo2008lpls}.
-
-Using $n$ paired observations $\left(\vec{x_{i}}, \vec{y_{i}}\right), i \in 1, \dots, n$. PLS finds the normalized direction $\vec{p_{j}}, \vec{q_{j}}$ that maximizes the covariance in the first step $j = 1$, shown in Equation~5.
+Partial Least Squares (PLS) regression, or projection to latent structures, \cite{abdi2010partial}, is a linear regression statistical model that transforms the predicted and the observable variables to a new space. PLS methods are bilinear factor models because the $X$ and $Y$ are projected to new spaces. In Partial Least Squares Discriminant Analysis (PLS-DA), $Y$ is categorical \cite{saebo2008lpls}. Using $n$ paired observations $\left(\vec{x_{i}}, \vec{y_{i}}\right), i \in 1, \dots, n$. PLS finds the normalized direction $\vec{p_{j}}, \vec{q_{j}}$ that maximizes the covariance in the first step $j = 1$, shown in Equation~5. Many versions of PLS exist for estimating the factor and loading matrices, such as the PLS1 algorithm \cite{GONZALEZ2023104876}.
 
 \begin{equation}
 	\max_{{\vec{p}}_{j},{\vec{q}}_{j}}\operatorname{E} [\underbrace{({\vec{p}}_{j}\cdot {\vec{X}})}_{t_{j}}\underbrace{({\vec{q}}_{j}\cdot {\vec{Y}})}_{u_{j}}
 	\label{eqn:5}
 \end{equation}
 
-The scores (projections) form an orthogonal basis in PLS regression, and the loadings are chosen to achieve this. In PCA orthogonality is not imposed on scores \cite{lindgren1993kernel} but onto loadings instead \cite{de1994comments, dayal1997improved}. Many versions of PLS exist \cite{de1993simpls, rannar1994pls} for estimating the factor and loading matrices, such as the PLS1 algorithm \cite{takane2016pls, hoskuldsson1988pls}. 
-
 \subsubsection{Flexible Discriminant Analysis}
 %\label{subsubsec:FDA}
 
-Flexible Discriminant Analysis (FDA) is a general methodology that creates the discriminant surface for a multigroup non-linear classification model  \cite{fisher1936use, mclachlan2005discriminant} based on a mixture of non-parametric linear regression models \cite{hastie1995penalized}, such as Multivariate Adaptive Regression Splines (MARS) and Linear Discriminant Analysis (LDA).
+Flexible Discriminant Analysis (FDA) is a general methodology that creates the discriminant surface for a multigroup non-linear classification model \cite{mclachlan2005discriminant} based on a mixture of non-parametric linear regression models, such as Multivariate Adaptive Regression Splines (MARS) and Linear Discriminant Analysis (LDA). Many predictors can be used in conjunction in FDA \cite{HastieTibshirani2009}. FDA is complex but execution time and computational load are adequate \cite{reynes2006choice}. Feature normality and equal group covariances are assumed \cite{wetcher2011analyzing}. LDA, Normal Discriminant Analysis (NDA), or discriminant function analysis \cite{cohen2013applied} is a generalization of Fisher's linear discriminant defined in 1936 \cite{mclachlan2005discriminant}. The results of LDA may be utilized directly for classification, as demonstrated in this experiment.
 
-Many predictors can be used at once in FDA \cite{HastieTibshirani2009}, and variable interactions are automatically noted \cite{hastie1994flexible}. FDA is complex but execution time and computational load are adequate \cite{reynes2006choice}. The algorithm is not largely affected by outliers \cite{phillips2017applying}.
-
-Changed settings significantly alter FDA \cite{hallgren2019species}, and estimation might fail if predictors are correlated. FDA is prone to overfitting \cite{thuiller2016ensemble}, and challenging to comprehend \cite{quillfeldt2017influence}. Feature normality and equal group covariances are assumed \cite{zhang2019using, wetcher2011analyzing}.
-
-LDA, Normal Discriminant Analysis (NDA), or discriminant function analysis \cite{cohen2013applied} is a generalization of Fisher's linear discriminant defined in 1936 \cite{fisher1936use, archive765Discriminant, rao1948utilization}. The results of LDA may be utilized directly, as demonstrated in this experiment, but they are more often used to reduce dimensionality \cite{hansen2005using}.
-
-\subsection{Data Description and Analysis}
+\subsection{Data description and analysis}
 %\label{subsec:Data}
 
-Dynamic space weather conditions, such as solar activity and geomagnetic storms, can affect  GNSS PNT performance and high-frequency GPS signals passing through the ionosphere, motivating work on error modeling \cite{klobuchar1986design, zolesi2014ionospheric}. Changes in the ionosphere include the density distribution, $TEC$, and the current balance \cite{komjathy2023global}.
+Dynamic space weather conditions, such as solar activity and geomagnetic storms, can affect  GNSS PNT performance and high-frequency GPS signals passing through the ionosphere, motivating work on error modeling \cite{zolesi2014ionospheric}. Geomagnetic storms cause signal deterioration by affecting Global Electric Current (GEC) variability. The ionosphere may show changes related to location, geomagnetic and solar activity, sunspots, local time, seasonality, thunderstorms \cite{vellinov1992ionospheric}, nuclear experiments, earthquakes \cite{liu20142013}, and other phenomena. This study focuses on parameters describing disturbances of the Earth's geomagnetic field, most importantly $a_{p}$-indices derived from $K_{p}$-indices, which are calculated using $K$-indices, Total Electron Content ($TEC$), standard deviation of Total Electron Content ($dTEC$), and Disturbance Storm-Time ($Dst$). Incorporating parameters such as the $K_{p}$-indices and $a_{p}$-indices, which provide global measures of geomagnetic activity, alongside local $TEC$ and $Dst$-index values, allows for a more detailed assessment of the space environment and its potential effects on GNSS signals. Values of $a_{p}$, $TEC$, $dTEC$, $Dst$ were used with the $B_x$, $B_y$, and $B_z$ components of the Earth's magnetic field to train machine-learning models.
 
-Geomagnetic storms cause signal deterioration by affecting Global Electric Current (GEC) variability \cite{NOAA2024aRadioCommunications}. The ionosphere may show changes related to location, geomagnetic and solar activity, sunspots, local time \cite{kotz2005encyclopedia}, seasonality, thunderstorms \cite{vellinov1992ionospheric}, nuclear experiments, earthquakes \cite{liu20142013}, and other phenomena.
-
-Many parameters can describe the Earth's geomagnetic field \cite{ulukavak2018analysis}. This study focuses on parameters describing disturbances, most importantly $a_{p}$ indices calculated from $K_{p}$ and $K$ indices, Total Electron Content ($TEC$), standard deviation of Total Electron Content ($dTEC$), and Disturbance Storm-Time ($Dst$). 
-
-Incorporating parameters such as the $K_{p}$-indices and $a_{p}$-indices, which provide global measures of geomagnetic activity, alongside local $TEC$ and $Dst$-index values, allows for a more detailed assessment of the space environment and its potential effects on GNSS signals. Values of $a_{p}$, $TEC$, $dTEC$, $Dst$ were used with the $B_x$, $B_y$, and $B_z$ components of the Earth's magnetic field to train machine-learning models.
-
-\subsubsection{Magnetic Field Indices}
+\subsubsection{Magnetic field indices}
 %\label{subsec:BxByBz}
 
-The Earth's magnetic field has similarities to that of a bar magnet. However, plasma gushes from the solar corona and the domain of the Sun influence the interplanetary magnetic field \cite{schwenn2001solar, melnikov1990relationships}. The $B_{x}$, $B_{y}$, and $B_{z}$ vectors represent interplanetary magnetic field indices. $B_{x}$ and $B_{y}$ are parallel to the plane of orbits, and the third component $B_{z}$ is perpendicular. Widely available hand-held devices, such as Android smartphones \cite{Android2024SensorTypes}, measure magnetic field indices in micro-Tesla ($\mu T$). The Android magnetometer reports accuracy through a status variable. Readings are calibrated using temperature compensation, factory (or online) soft-iron, and online hard-iron calibration.
+The Earth's magnetic field has similarities to that of a bar magnet. However, plasma gushes from the solar corona and the domain of the Sun influence the interplanetary magnetic field \cite{schwenn2001solar}. The $B_{x}$, $B_{y}$, and $B_{z}$ vectors represent interplanetary magnetic field indices. $B_{x}$ and $B_{y}$ are parallel to the plane of orbits, and the third component $B_{z}$ is perpendicular. Widely available hand-held devices, such as Android smartphones \cite{Bojinov2014}, measure magnetic field indices in micro-Tesla ($\mu T$). The Android magnetometer reports accuracy through a status variable. Readings are calibrated using temperature compensation, factory (or online) soft-iron, and online hard-iron calibration.
  
-\subsubsection{Geomagnetic Storm Indices}
+\subsubsection{Geomagnetic storm indices}
 %\label{subsec:K}
 
-The geomagnetic storm $K$-index is an integer from $0$ to $9$ measuring disturbances in global geomagnetic activity. The maximum positive and negative fluctuations of the horizontal components of the Earth's magnetic field \cite{de2007ionosphere}, $B_{x}$ and $B_{y}$, during $3$ hours, relative to a quiet day, are added to determine the total maximum fluctuation.
+The geomagnetic storm $K$-index is an integer from $0$ to $9$ measuring disturbances in global geomagnetic activity. The maximum positive and negative fluctuations of the horizontal components of the Earth's magnetic field, $B_{x}$ and $B_{y}$, during $3$ hours, relative to a quiet day, are added to determine the total maximum fluctuation. Each observatory uses different threshold values to convert the maximum $nT$ (nano-Tesla) fluctuation to a $K$-index value. The thresholds for each observatory are adjusted so that the historical rate of occurrence for each $K$-index value is similar across all observatories. Observatories with a lower geomagnetic latitude use a lower fluctuation in $B_{x}$ and $B_{y}$ to achieve each $K$-index value.
 
-Each observatory uses different threshold values to convert the maximum $nT$ (nano-Tesla) fluctuation to a $K$-index value. The thresholds for each observatory are adjusted so that the historical rate of occurrence for each $K$-index value is similar across all observatories. Observatories with a lower geomagnetic latitude use a lower fluctuation in $B_{x}$ and $B_{y}$ to achieve each $K$-index value. 
-
-The threshold valid in Boulder, Colorado \cite{NOAA2024bKindex} for transforming the maximum $B_{x}$ and $B_{y}$ fluctuation measured in $nT$ using a magnetometer into a $K$-index value is given in Table~\ref{tab:K}.
-
-\begin{table}[!ht]
-    \centering
-    \caption{The relationship between the $K$-index and  magnetometer observations of $B_{x}$ and $B_{y}$ in $nT$ in Boulder, Colorado.}
-    \label{tab:K}
-    \begin{tabular}{|c|c|c|c|c|c|}
-        \hline
-        $K$ & $0$ & $1$ & $2$ & $3$ & $4$ \\ \hline
-        $B_{x}$ and $B_{y}$ ($nT$)& $0$ - $5$ & $5$ - $10$ & $10$ - $20$ & $20$ - $40$ & $40$ - $70$ \\ \hline
-        $K$ & $5$ & $6$ & $7$ & $8$ & $9$ \\ \hline
-        $B_{x}$ and $B_{y}$ ($nT$) & $70$ - $120$ & $120$ - $200$ & $200$ - $330$ & $330$ - $500$ & $>500$ \\ \hline
-    \end{tabular}
-\end{table}
-
-\subsubsection{Planetary Geomagnetic Storm Indices}
+\subsubsection{Planetary geomagnetic storm indices}
 %\label{subsec:Kp}
 
-The planetary geomagnetic storm $K_{p}$-index \cite{Matzka2024} is derived from $3$-hour-based $K$ indices from $13$ magnetometer stations between $44$ and $60$ degrees of north and south latitude. Announcements and warnings \cite{NOAA2024cAlertsWatches} of geomagnetic changes and disturbances in the Earth's magnetic field are based on the $K_{p}$-index.
+The planetary geomagnetic storm $K_{p}$-index is derived from $3$-hour-based $K$-indices from $13$ magnetometer stations between $44$ and $60$ degrees of north and south latitude. Announcements and warnings of geomagnetic changes and disturbances in the Earth's magnetic field are based on the $K_{p}$-index. Hourly geomagnetic storm index data are available on the NASA Goddard SPDF web pages. The scale values of the $K_{p}$-index are determined by the change of the geomagnetic field and the geomagnetic storm effect in $nT$. The official planetary $K_{p}$-index is a weighted average of $K$-indices from multiple observatories. When $K$-index data is not available in real-time, operators such as The National Oceanic and Atmospheric Administration (NOAA) Space Weather Prediction Center (SWPC) calculate near real-time estimates of the $K_{p}$-index \cite{Myint2022}. The $K_{p}$-index is related to geomagnetic storm descriptions and warnings using the NOAA G scale. For a $K_{p}$-index value of $5$, $6$, $7$, $8$ (including $9_{-}$), and $9$, a NOAA Space Weather Scale Geomagnetic Storm Level of G1, G2, G3, G4, and G5 is assigned, respectively. For a $K_{p}$-index $<5$, the G0 designation means no warning is issued. In March 2021, $K_{p}$ was assigned a Digital Object Identifier (DOI) with a dataset \cite{Matzka2021a} and a scientific publication \cite{Matzka2021b} for reference.
 
-Hourly geomagnetic storm index data are available on the NASA Goddard SPDF \cite{Papitashvili2024About, Papitashvili2024Explorer} web pages. The scale values of the $K_{p}$-index are determined by the change of the geomagnetic field and the geomagnetic storm effect in $nT$.
-
-The official planetary $K_{p}$-index is a weighted average of $K$-indices from multiple observatories. When $K$-index data is not available in real-time, operators such as The National Oceanic and Atmospheric Administration (NOAA) Space Weather Prediction Center (SWPC) calculate near real-time estimates of the $K_{p}$-index \cite{Myint2022}.
-
-The $K_{p}$-index as related to geomagnetic storm descriptions and warnings using the NOAA G scale \cite{NOAA2024eSpace, NOAA2024fScales} is given in Table~\ref{tab:Kp}.
-
-In March 2021, $K_{p}$ was assigned a DOI with a dataset \cite{Matzka2021a} and a scientific publication \cite{Matzka2021b} for reference.
-
-\begin{table}[!ht]
-    \centering
-    \caption{The $K_{p}$-index as related to geomagnetic storm descriptions and warnings using the NOAA G scale \cite{NOAA2024eSpace, NOAA2024fScales}.}
-    \label{tab:Kp}
-    \begin{tabular}{|c|c|c|c|c|c|c|}
-        \hline
-        $K_{p}$-index & $<5$ & $5$ & $6$ & $7$ & $8, 9_{-}$ & $9$ \\ \hline
-        NOAA Space Weather Scale Geomagnetic Storm Level & G0 & G1 & G2 & G3 & G4 & G5 \\ \hline
-    \end{tabular}
-\end{table}
-
-\subsubsection{Equivalent Three Hourly Range Geomagnetic Storm Indices}
+\subsubsection{Equivalent three hourly range geomagnetic storm indices}
 %\label{subsec:A}
 
-The $A$-index \cite{NOAA2024gGeomagneticIndices} represents a daily average level of magnetic activity. Because the relationship between the $K$-index and magnetometer fluctuations is not linear, the $K$-index values are not directly used for calculating average values. Each $K$-index or $K_{p}$-index is converted into the "equivalent three hourly range" $a$-index or $a_{p}$-index that uses a linear scale. Table~\ref{tab:a} illustrates the conversion between $K$-index and $a$-index values \cite{NOAA2024bKindex}. Table~\ref{tab:ap} illustrates the conversion between $K_{p}$-index and $a_{p}$-index values \cite{NOAA2024gGeomagneticIndices}. An average of $8$ $a$-indices (lowercase) is used as the daily $A$-index (uppercase). As an example, if $8$ $K$-indices were $3$, $4$, $6$, $5$, $3$, $2$, $2$, and $1$, the $a$-indices equal $15$, $27$, $80$, $48$, $15$, $7$, $7$, and $3$, and the $A$-index equals \begin{equation}
-	A = (15 + 27 + 80 + 48 + 15 + 7 + 7 + 3)/8 = 202 / 8 = 25.25
-	\label{eqn:6}
-\end{equation}.
-
-\begin{table}[!ht]
-    \centering
-    \caption{The $a$-index values for each $K$-index, from \cite{NOAA2024bKindex}.}
-    \label{tab:a}
-    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
-        \hline
-        $K$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ \\ \hline
-        $a$ & $0$ & $3$ & $7$ & $15$ & $27$ & $48$ & $80$ & $140$ & $240$ & $400$ \\ \hline
-    \end{tabular}
-\end{table}
-
-\begin{table}[!ht]
-    \centering
-    \caption{The $a_{p}$-index values for each $K_{p}$-index, from \cite{NOAA2024gGeomagneticIndices}.}
-    \label{tab:ap}
-    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
-        \hline
-        $K_{p}$ & $0_{o}$ & $0_{+}$ & $1_{-}$ & $1_{o}$ & $1_{+}$ & $2_{-}$ & $2_{o}$ & $2_{+}$ & $3_{-}$ & $3_{o}$ & $3_{+}$ & $4_{-}$ & $4_{o}$ & $4_{+}$ \\ \hline
-        $a_{p}$ & $0$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $9$ & $12$ & $15$ & $18$ & $22$ & $27$ & $32$ \\ \hline
-        $K_{p}$ & $5_{-}$ & $5_{o}$ & $5_{+}$ & $6_{-}$ & $6_{o}$ & $6_{+}$ & $7_{-}$ & $7_{o}$ & $7_{+}$ & $8_{-}$ & $8_{o}$ & $8_{+}$ & $9_{-}$ & $9_{o}$ \\ \hline
-        $a_{p}$ & $39$ & $48$ & $56$ & $67$ & $80$ & $94$ & $111$ & $132$ & $154$ & $179$ & $207$ & $236$ & $300$ & $400$ \\ \hline
- \end{tabular}
-\end{table}
+The $A$-index represents a daily average level of magnetic activity. Because the relationship between the $K$-index and magnetometer fluctuations is not linear, the $K$-index values are not directly used for calculating average values. Each $K$-index or $K_{p}$-index is converted into the "equivalent three hourly range" $a$-index or $a_{p}$-index that uses a linear scale. An average of $8$ $a$-indices (lowercase) is used as the daily $A$-index (uppercase).  
 
 \subsubsection{Disturbance Storm-Time}
 %\label{subsubsec:Dst}
 
-The next relevant parameter is Disturbance Storm-Time ($Dst$), also known as the geomagnetic activity $Dst$-index, another measure of geomagnetic storm intensity. The $Dst$-index is a geomagnetic indicator of magnetic flux changes derived from measurements taken by a network of ground-based magnetometer stations near the magnetic equator, which continuously monitor $B_{x}$ and $B_{y}$, the horizontal components of Earth's magnetic field \cite{zolesi2014ionospheric}. The $Dst$-index describes ring currents forming above the sub-equatorial region and affecting the ionospheric regions in mid-latitudes.
+Disturbance Storm-Time ($Dst$), also known as the geomagnetic activity $Dst$-index, depicts an averaged measure of the geomagnetic storm intensity in the Earth's sub-equatorial region. The $Dst$-index is obtained by post-processing, with the final version often published months after experimental observations were collected. It clearly shows developments of various levels of geomagnetic disturbances, and consequently serves as invaluable input considering GNSS PNT performance degradation due to space weather events and disturbances. The $Dst$-index is a geomagnetic indicator of magnetic flux changes derived from measurements taken by a network of ground-based magnetometer stations near the magnetic equator, which continuously monitor $B_{x}$ and $B_{y}$, the horizontal components of Earth's magnetic field \cite{zolesi2014ionospheric}. The $Dst$-index describes ring currents forming above the sub-equatorial region and affecting the ionospheric regions in mid-latitudes. To calculate the $Dst$-index, variations in $B_{x}$ and $B_{y}$, the horizontal magnetic field, are obtained from multiple stations and averaged. The average is subtracted from a baseline value representing the quiet-time magnetic field. The resulting $Dst$ value in $nT$ measures the intensity of geomagnetic disturbances, with increasingly negative values indicating stronger geomagnetic storms. The $Dst$-indice measurements as an hourly average were evaluated and published on a web interface by the NASA Goddard SPDF, and the Geomagnetism and Space Magnetism Data Analysis Center of the Institute of Science, Kyoto University in Japan. Loewe and Prölss \cite{loewe1997classification} classified magnetic activity $Dst$-indices into $5$ storm classes in 1997. Gonzalez et al. \cite{gonzalez1994geomagnetic} used $3$ groups for the same data in 1994, similar to Kamide et al. in 1998 \cite{kamide1998two}, Rozhnoi et al. in 2004 \cite{rozhnoi2004middle}, and Contadakis et al. in 2012 \cite{contadakis2012total}.
 
-To calculate the $Dst$-index, variations in $B_{x}$ and $B_{y}$, the horizontal magnetic field, are obtained from multiple stations and averaged. The average is subtracted from a baseline value representing the quiet-time magnetic field. The resulting $Dst$ value in $nT$ measures the intensity of geomagnetic disturbances, with increasingly negative values indicating stronger geomagnetic storms. 
-
-The $Dst$-indice measurements as an hourly average were evaluated and published on a web interface by the NASA Goddard SPDF \cite{Papitashvili2024About, Papitashvili2024Explorer}, and the Geomagnetism and Space Magnetism Data Analysis Center of the Institute of Science, Kyoto University in Japan.
-
-Loewe and Prölss \cite{loewe1997classification} classified magnetic activity $Dst$-indices into five storm classes in 1997, as shown in Table~\ref{tab:loewe1997}. Gonzalez et al. \cite{gonzalez1994geomagnetic} used three groups for the same data in 1994, as shown in Table~\ref{tab:gonzalez1994}, similar to Kamide et al. in 1998 \cite{kamide1998two}, Rozhnoi et al. in 2004 \cite{rozhnoi2004middle}, and Contadakis et al. in 2012 \cite{contadakis2012total}.
-
-\begin{table}[!ht]
-    \centering
-    \caption{Storm classification from Loewe and Prölss, in 1997 \cite{loewe1997classification}.}
-    \label{tab:loewe1997}
-    \begin{tabular}{lrrrrrcr}
-        \hline
-        \\
-        Storm class & \multicolumn{2}{c}{Fraction} & $Dst_{min}$-Range & $\overline{Dst_{min}}$ & $\overline{a_{p_{max}}}$ & $\overline{K_{p_{max}}}$ & $\overline{A_{E_{max}}}$ \\
-        \\
-        \hline
-        \\
-        weak & $482$ & $44\%$ & $-30$ to $-50$ $nT$ & $-36$ $nT$ & $27$ & $4_{o}$ & $542$ $nT$ \\
-        moderate & $346$ & $32\%$ & $-50$ to $-100$ $nT$ & $-68$ $nT$ & $48$ & $5_{o}$ & $728$ $nT$ \\
-        strong & $206$ & $19\%$ & $-100$ to $-200$ $nT$ & $-131$ $nT$ & $111$ & $7_{-}$ & $849$ $nT$ \\
-        severe & $45$ & $4\%$ & $-200$ to $-350$ $nT$ & $-254$ $nT$ & $236$ & $8_{+}$ & $1017$ $nT$ \\
-        great & $6$ & $1\%$ & $<-350$ $nT$ & $-427$ $nT$ & $300$ & $9_{-}$ & $1335$ $nT$ \\
-        \\
-        \hline
-        \\
-        \multicolumn{8}{l}{The bars above the magnetic indices indicate median values.} \\
-    \end{tabular}
-\end{table}
-
-\begin{table}[!ht]
-    \centering
-    \caption{Storm classification from Gonzales et al., in 1994 \cite{gonzalez1994geomagnetic}.}
-    \label{tab:gonzalez1994}
-    \begin{tabular}{lrrc}
-        \hline
-        \\
-         & $Dst$, $nT$ & $B_{z}$, $nT$ & $\Delta T$, hours \\
-        \\
-        \hline
-        \\
-        Intense & $-100$ & $-10$ & $3$ \\
-        Moderate & $-50$ & $-5$ & $2$ \\
-        Small (typical substorm) & $-30$ & $-3$ & $1$ \\
-        \\
-        \hline
-    \end{tabular}
-\end{table}
-
-\subsubsection{Training and Testing Dataset}
+\subsubsection{Training and testing dataset}
 %\label{subsubsec:DataTrainTest}
 
-Among $9799$ samples, $208$ were considered outliers because the $TEC$ is larger than or equal to $300$ $nT$. The remaining $9591$ samples are used for training and testing. The samples are divided into training and testing datasets as close as possible to a ratio of $80\%$ for training and $20\%$ for testing. The division was stratified so that an approximately equal ratio of classes was present in both the training and testing data, which is a feature of the \textit{createDataPartition} function from the \textit{caret} \textit{R} library that was used \cite{KuhnDataSplitting2024, hyndman2018forecasting, createDataPartition2024}.
-
-Samples were split into $5$ class ranges, based on $Dst$ values derived from theoretical knowledge of different storm phases and similar to Loewe and Prölss \cite{loewe1997classification}. The upper range limits are excluded, while the lower ones are included. 
-
-Table \ref{tab:Dstranges} lists the $Dst$ class ranges used in this study, the total number of samples in each class, and the number of samples used for testing, and training. It is evident from this division that the normal (N), and recovery (R) classes are far more common than other classes with very high or low $Dst$ values, impacting model performance.
+The original set of observations has been split into training and testing subsets, considering the results of exploratory statistical, and outlier analysis, and sustaining proportions of data relating to classes of geomagnetic disturbances (quiet/normal geomagnetic conditions, the positive phase of a geomagnetic storm, deep negative depression of a geomagnetic storm, and the negative recovery phase of a geomagnetic storm). Classes are based on $Dst$ and differential $Dst$ time series. Out of $9799$ original samples, $208$ were marked as outliers in exploratory statistical analysis, as the $TEC$ is larger than or equal to $300$ $TECU$. $TEC$ values larger than $300$ $TECU$ usually appear due to measurement errors or errors in the $TEC$ estimation process. The remaining $9591$ samples are used for training and testing. The samples are divided into training and testing datasets as close as possible to a ratio of $80\%$ for training and $20\%$ for testing. The division was stratified so that an approximately equal ratio of classes was present in both the training and testing data, which is a feature of the \textit{createDataPartition} function from the \textit{caret} \textit{R} library that was used \cite{Kuhn2007, kuhn2008building}. Samples were split into $5$ class ranges, based on $Dst$ values derived from theoretical knowledge of different storm phases, similar to Loewe and Prölss \cite{loewe1997classification}. Table~\ref{tab:Dstranges} lists the $Dst$ class ranges used in this study, the total number of samples in each class, and the number of samples used for testing, and training.
 
 \begin{table}[!ht]
     \centering
-    \caption{$Dst$-based classification rules used in this study, the total number of samples in each class, and the number of samples used for testing, and training.}
+    \caption{$Dst$-based classification rules used in this study, the total number of samples in each class, and the number of samples used for testing, and training. The upper range limits are excluded, while the lower ones are included.}
     \label{tab:Dstranges}
     \begin{tabular}{|c|c|c|c|c|}
         \hline
@@ -497,39 +332,21 @@ Table \ref{tab:Dstranges} lists the $Dst$ class ranges used in this study, the t
     \end{tabular}
 \end{table}
 
-\subsubsection{Data Preprocessing}
+It is evident from Table~\ref{tab:Dstranges} that the normal (N), and recovery (R) classes are more common than those with very high or low $Dst$ values, impacting model performance.
+
+\subsubsection{Data preprocessing}
 %\label{subsubsec:Preprocessing}
 
-Data preprocessing can increase classification accuracy \cite{Fan2008}. There are many ways to standardize data, such as minimum-maximum, normalization by decimal scaling, and Z-score \cite{Mohamad2013}. Subtracting the mean and dividing by the variance for each feature are commonly used for SVM models \cite{Fennell2019} and other models tested in this study, so this approach was chosen. 
+Data preprocessing can increase classification accuracy \cite{Fan2008}. There are many ways to standardize data, such as minimum-maximum, normalization by decimal scaling, and Z-score \cite{Mohamad2013}. Subtracting the mean and dividing by the variance for each feature are commonly used for SVM models \cite{Fennell2019} and other models tested in this study, so this approach was chosen. The values \textit{scale} and \textit{center} were used in this study in the \textit{preProcess} parameter for the \textit{train} function from the \textit{R} \textit{caret} package. The option \textit{center} subtracts the mean of each feature while \textit{scale} divides by the standard deviation.
 
-The values \textit{scale} and \textit{center} were used in the code for this study in the \textit{preProcess} parameter for the \textit{train} function from the \textit{caret} package developed for \textit{R}. The option \textit{center} subtracts the mean of each feature while \textit{scale} divides by the standard deviation.
+\subsubsection{Distribution analysis for predictors}
+%\label{subsubsec:Distribution}
 
-\subsubsection{Correlation}
-%\label{subsubsec:Correlation}
-
-Figure~\ref{fig:correlation} contains a heat map of the correlation between all variables used in this study. The highest correlation of $0.52$ is between $B_{x}$ and $Dst$, as expected based on theoretical knowledge, and supporting the hypothesis that $Dst$ can be predicted using $B_{x}$. The second highest correlation is between $a_{p}$ and $Dst$ and equals $-0.48$, meaning $a_{p}$ can be used to predict  $Dst$ with an opposite trend.
-
-\begin{figure}
- \centering
- \includegraphics[width=0.9\linewidth]{iono3correlation.pdf}
-    \caption{A heat map of the correlation between all variables used in this study, when the $TEC$ is less than $300$ $nT$. Red represents a high positive correlation, blue represents a high negative correlation, and white represents a low correlation. Variables are fully correlated with themselves, so values on the secondary diagonal equal $1$. The matrix is symmetrical concerning the secondary diagonal because the same combination of correlated variables is achieved when swapping the row and column.}
-    \label{fig:correlation}
-\end{figure}
-
-The box plots of all variables for different ranges of $Dst$ values in Figure~\ref{fig:iono3boxplot} demonstrate that the minimum, maximum, and arithmetic mean of $a_{p}$ decrease for larger $Dst$. The opposite is true for $B_{x}$, as indicated by a high correlation in Figure~\ref{fig:correlation}. $B_{y}$ exhibits a reverse trend when compared to $B_{x}$, but it is less prominent. $B_{z}$ is the most stable with the smallest changes related to $Dst$ when observing $B_{x}$, $B_{y}$, and $B_{z}$.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\linewidth]{iono3boxplot_fix.pdf}
-    \caption{Box plots of all variables, when the $TEC$ is less than $300$ $nT$, for different ranges of $Dst$ values defining the class label used in this study.}
-    \label{fig:iono3boxplot}
-\end{figure}
-
-Table~\ref{tab:minmax} provides the minimum, $1^{st}$ quartile, median, arithmetic mean, $3^{rd}$ quartile, and maximum values for all variables when the $TEC$ is less than $300$ $nT$. These values suggest that variables are not normally distributed. The Kolmogorov-Smirnov and Shapiro-Wilk normality tests, using \textit{R} functions \textit{ks.test} \cite{ks.test2024} and \textit{shapiro.test} \cite{shapiro.test2024}, did not yield a $p$-value larger than the selected $\alpha$-value of $0.05$ for any variable, further strengthening the claim that variables do not follow a normal (Gaussian) distribution. 
+Table~\ref{tab:minmax} provides the minimum, $1^{st}$ quartile, median, arithmetic mean, $3^{rd}$ quartile, and maximum values for all variables when the $TEC$ is less than $300$ $TECU$, suggesting that variables are not normally distributed.
 
 \begin{table}[!ht]
     \centering
-    \caption{The minimum, $1^{st}$ quartile, median, arithmetic mean, $3^{rd}$ quartile, and maximum values for all variables when the $TEC$ is less than $300$ $nT$.}
+    \caption{The minimum, $1^{st}$ quartile, median, arithmetic mean, $3^{rd}$ quartile, and maximum values for all variables when the $TEC$ is less than $300$ $TECU$.}
     \label{tab:minmax}
         \begin{tabular}{|c|c|c|c|c|c|c|c|}
                 \hline
@@ -543,165 +360,133 @@ Table~\ref{tab:minmax} provides the minimum, $1^{st}$ quartile, median, arithmet
         \end{tabular}
 \end{table}
 
-\subsection{Performance Metrics}
+The Kolmogorov-Smirnov and Shapiro-Wilk normality tests, using \textit{R} functions \textit{ks.test} and \textit{shapiro.test}, did not yield a $p$-value larger than the selected $\alpha$-value of $0.05$ for any variable, further strengthening the claim based on Table~\ref{tab:minmax} that variables do not follow a normal (Gaussian) distribution.
+  
+\subsubsection{Correlation analysis for predictors}
+%\label{subsubsec:Correlation}
+
+Observations of statistical variables were assessed for their mutual association/correlation to identify the classification model structure, potential predictors, and targets. Figure~\ref{fig:correlation} contains a heat map of the correlation between all variables used in the study.
+
+\begin{figure}[!ht]
+ \centering
+ \includegraphics[width=0.7\linewidth]{iono3correlation.pdf}
+    \caption{A heat map of the correlation between all variables used in this study, when the $TEC$ is less than $300$ $TECU$. Red represents a high positive correlation, blue represents a high negative correlation, and white represents a low correlation. Variables are fully correlated with themselves, so values on the secondary diagonal equal $1$. The matrix is symmetrical concerning the secondary diagonal because the same combination of correlated variables is achieved when swapping the row and column indices.}
+    \label{fig:correlation}
+\end{figure}
+
+The $B_{x}$ and $Dst$ variables exhibit the largest correlation coefficient in Figure~\ref{fig:correlation}, equaling $0.52$. The association between the two variables seems logical since the $Dst$ index is defined as a result of geomagnetic field conditions described by geomagnetic field components. The second largest correlation coefficient depicts a significant correlation between $a_{p}$ and $Dst$ and equals $-0.48$, thus confirming that the $a_{p}$ variable can be used as a predictor, with the $Dst$ variable as a target, and an opposite trend.
+
+The box plots of all variables for different ranges of $Dst$ values in Figure~\ref{fig:iono3boxplot} are used to support the correlations shown in Figure~\ref{fig:correlation} by exhibiting the trend of each variable.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\linewidth]{iono3boxplot_fix.pdf}
+    \caption{Box plots of all variables, when the $TEC$ is less than $300$ $TECU$, for different ranges of $Dst$ values defining the class label used in this study.}
+    \label{fig:iono3boxplot}
+\end{figure}
+
+Figure~\ref{fig:iono3boxplot} shows the minimum, maximum, and arithmetic mean of $a_{p}$ decreasing for larger $Dst$ values. The opposite is true for $B_{x}$, as indicated by a high correlation in Figure~\ref{fig:correlation}. $B_{y}$ exhibits a reverse trend compared to $B_{x}$, but it is less prominent. $B_{z}$ is the most stable among geomagnetic indices, with the smallest changes related to $Dst$.
+
+\subsection{Confusion Matrix}
 %\label{subsec:Metrics}
 
-The metrics and terminology used to evaluate the classifier performance were taken from the confusion matrix defined in the \textit{R} function \textit{confusionMatrix} in the \textit{caret} library \cite{kuhn2008building, confusionMatrix2024}.
+The metrics and terminology defined in the \textit{R} function \textit{confusionMatrix} in the \textit{caret} library \cite{Kuhn2007, kuhn2008building} were used to evaluate classifier performance. The default approach to a confusion matrix uses only two groups (Yes and No, positive and negative). For multiple classes, results are calculated by a "one versus all" approach, viewing each class as positive and all others as negative.
 
-The examples for each performance metric use only two groups (Yes and No, positive and negative). For multiple classes, results are calculated by a "one versus all" approach, viewing each class as positive and all others as negative.
+\subsubsection{McNemar-Bowker test}
+%\label{subsubsec:McNemar}
 
-\subsubsection{Confusion Matrix}
-%\label{subsubsec:ConfusionMatrix}
+McNemar’s test for correlated proportions used on paired categorical data is based on the chi-squared distribution and was originally designed for methods that differentiate between two classes. The null hypothesis of marginal homogeneity states that marginal probabilities for each outcome are equal, which is more indicative of model difference than directly comparing the sensitivity and specificity of two candidate models.
 
-A True Positive (TP), or True Negative (TN) result in the confusion matrix correctly indicates that the sample belongs to a class. A False Positive (FP), or False Negative (FN) classification result incorrectly claims that the sample belongs to a class and represents a type I or type II error, respectively.
+However, for $k$ groups, the classification can be annotated
+in a $k \times k$ contingency table with the number of samples classified using the first method in separate rows by class, divided into columns depending on the class assigned by the opposing method. The McNemar-Bowker test is applied to this table, formulated by Fagerland et al. \cite{fagerland2017statistical}, and Chow et al. \cite{chow2018sample}.
 
-Sensitivity, recall, hit rate, or True Positive Rate (TPR), calculated as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FN})$, and specificity, selectivity, or True Negative Rate (TNR), calculated as $\mathrm{TN}/(\mathrm{TN}+\mathrm{FP})$, represent the proportion of correctly classified samples among those that truly belong to a class \cite{altman1994diagnostic1, altman1994diagnostic2}.
+If any element in the matrix is smaller than $6$, as shown using class sizes in Table~\ref{tab:Dstranges}, the distribution is not well-approximated by the chi-squared distribution. Edwards \cite{edwards1948note} developed an approximation of the binomial exact $p$-value for continuity-correction, given in Equation~6 for two groups. In Equation~6, $b$ is the number of samples classified in the first group by the first test, and the second group by the second test, while $c$ is the number of samples for which the opposite is true.
+ 
+\begin{equation}
+	\chi^{2}=\frac{(|b-c|-1)^{2}}{b+c}
+	\label{eqn:6}
+\end{equation}
 
-Precision, or Positive Predictive Value (PPV), calculated as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP})$, and Negative Predictive Value (NPV), calculated as $\mathrm{TN}/(\mathrm{TN}+\mathrm{FN})$, represent the proportion of correctly classified samples among those classified to a class.
-
-Prevalence, calculated as $(\mathrm{TP}+\mathrm{FN})/(\mathrm{TP}+\mathrm{FP}+\mathrm{FN}+\mathrm{TN})$, and Detection Prevalence (DP), calculated as $(\mathrm{TP}+\mathrm{FP})/(\mathrm{TP}+\mathrm{FP}+\mathrm{FN}+\mathrm{TN})$ represent the proportion of samples that truly belong to or are classified to each class, respectively. Prevalence values other than an even split by the number of classes indicate a class imbalance.
-
-The Detection Rate (DR), calculated as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP}+\mathrm{FN}+\mathrm{TN})$, and accuracy (Acc), calculated as $(\mathrm{TP} + \mathrm{TN}) / (\mathrm{TP} + \mathrm{TN} + \mathrm{FP} + \mathrm{FN})$, represent the proportion of correctly classified samples for separate classes or any class, respectively.
-
-Since accuracy is unusable for unbalanced classes, Balanced Accuracy (BA)  \cite{velez2007balanced} is calculated as $(\mathrm{TPR} + \mathrm{TNR}) / 2$ and represents the arithmetic mean of TPR and TNR, which are centered on the positive and the negative classes, respectively.
-
-\section{Research Results}
+\section{Research results}
 \label{sec:Results}
 
-The accuracy for all models when using all variables, all variables except $Dst$ (no $Dst$), all variables except $Dst$, $TEC$, and $dTEC$ (no $TEC$), only $B_{x}$, $B_{y}$, and $B_{z}$ (coord), only $B_{x}$, $B_{y}$, and $a_{p}$ ($x$ $y$ $a_{p}$), only $B_{x}$, $B_{z}$, and $a_{p}$ ($x$ $z$ $a_{p}$), or only $B_{y}$, $B_{z}$, and $a_{p}$ ($y$ $z$ $a_{p}$) as input is displayed in Table~\ref{tab:acc:all}. Accuracy results can lead to an incorrect conclusion if the dataset is unbalanced. Out of $9591$ samples for training and testing, $7495$ belonged to the largest N class, and $13$ to the smallest E class, as listed in Table~\ref{tab:Dstranges}. More comprehensive results by class are presented only for the Naive Bayes (NB) classifier, the second most successful model. The Neural Network (NN) classifier made no errors, so further discussion is redundant.
+Candidate models were assessed to determine the optimal method and set of predictors to be used in the final model for application in real settings. The accuracy and the execution time in seconds ($s$) utilizing the \textit{R} \textit{system.time} function for all candidate models are displayed in Table~\ref{tab:acc:time}. Research results are presented with the following initial set of six predictors: Total Electron Content ($TEC$), standard deviation of Total Electron Content ($dTEC$), $B_{x}$, $B_{y}$, $B_{z}$, and $a_{p}$. $Dst$ was not used as a predictor since the initial classification is derived from $Dst$ values. Candidate models have also been developed using: (1.): all predictors except $TEC$, and $dTEC$ ($B_{x}$, $B_{y}$, $B_{z}$, and $a_{p}$), (2.): Geomagnetic indices ($B_{x}$, $B_{y}$, and $B_{z}$), (3.): $B_{x}$, $B_{y}$, and $a_{p}$, (4.): $B_{x}$, $B_{z}$, and $a_{p}$, and (5.): $B_{y}$, $B_{z}$, and $a_{p}$. The reasoning behind this approach was the assumption that reducing the set of predictors would reduce model complexity and computation time. Additionally, it is theoretically established that geomagnetic indices $B_{x}$, $B_{y}$, and $B_{z}$ affect $Dst$, and in turn $TEC$. This is why geomagnetic indices ($B_{x}$, $B_{y}$, and $B_{z}$), and $a_{p}$ were used as predictors in the final model. The highest accuracy in Table~\ref{tab:acc:time} was achieved using $B_{x}$, $B_{y}$, $B_{z}$, and $a_{p}$ as predictors, supporting the hypothesis that $TEC$, and $dTEC$ should be removed from the set of predictors. The Naive Bayes (NB) method yielded the model with the highest accuracy, leading to the decision that it should be used in the final model.
 
 \begin{table}[!ht]
     \centering
-    \caption{The accuracy for each model using different combinations of variables as input.}
-	\label{tab:acc:all}
-	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \caption{The accuracy (top) and the execution time in seconds ($s$) (bottom) for each candidate model developed using different methods and sets of predictors.}
+	\label{tab:acc:time}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
-		Model & all & no $Dst$ & no $TEC$ & coord & $x$ $y$ $a_{p}$ & $x$ $z$ $a_{p}$ & $y$ $z$ $a_{p}$ \\ \hline
-		SVM Poly & $0.7866$ & $0.7454$ & $0.7903$ & $0.7887$ & $0.7934$ & $0.7903$ & $0.7814$ \\ \hline
-		C5.0 DT & $0.9995$ & $0.8529$ & $0.8581$ & $0.8404$ & $0.8508$ & $0.8367$ & $0.8211$ \\ \hline
-		NB & $0.9953$ & $0.9943$ & $1$ & $1$ & $1$ & $1$ & $0.9995$ \\ \hline
-		NN & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ \\ \hline
-		PLS & $0.9212$ & $0.8258$ & $0.8232$ & $0.8174$ & $0.8153$ & $0.8143$ & $0.8007$ \\ \hline
-		FDA & $0.9025$ & $0.8472$ & $0.8472$ & $0.8252$ & $0.8419$ & $0.8258$ & $0.7997$ \\ \hline
-		PCA NN & $0.9963$ & $0.8492$ & $0.8492$ & $0.8399$ & $0.8456$ & $0.8367$ & $0.8185$ \\ \hline
+        Candidate & \multicolumn{6}{|c|}{Accuracy} \\ \cline{2-7}
+        model & \multicolumn{6}{|c|}{Predictors} \\ \hline
+		Method & All & $B_{x}$, $B_{y}$, $B_{z}$, $a_{p}$ & $B_{x}$, $B_{y}$, $B_{z}$ & $B_{x}$ $B_{y}$ $a_{p}$ & $B_{x}$ $B_{z}$ $a_{p}$ & $B_{y}$ $B_{z}$ $a_{p}$ \\ \hline
+		SVM Poly & $0.7454$ & $0.7903$ & $0.7887$ & $0.7934$ & $0.7903$ & $0.7814$ \\ \hline
+		C5.0 DT & $0.8529$ & $0.8581$ & $0.8404$ & $0.8508$ & $0.8367$ & $0.8211$ \\ \hline
+		NB & $0.9943$ & $1$ & $1$ & $1$ & $1$ & $0.9995$ \\ \hline
+		NN & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ \\ \hline
+		PLS & $0.8258$ & $0.8232$ & $0.8174$ & $0.8153$ & $0.8143$ & $0.8007$ \\ \hline
+		FDA & $0.8472$ & $0.8472$ & $0.8252$ & $0.8419$ & $0.8258$ & $0.7997$ \\ \hline
+		PCA NN & $0.8492$ & $0.8492$ & $0.8399$ & $0.8456$ & $0.8367$ & $0.8185$ \\ \hline
+        Candidate & \multicolumn{6}{|c|}{Execution time in seconds ($s$)} \\ \cline{2-7}
+        model & \multicolumn{6}{|c|}{Predictors} \\ \hline
+		Method & All & $B_{x}$, $B_{y}$, $B_{z}$, $a_{p}$ & $B_{x}$, $B_{y}$, $B_{z}$ & $B_{x}$ $B_{y}$ $a_{p}$ & $B_{x}$ $B_{z}$ $a_{p}$ & $B_{y}$ $B_{z}$ $a_{p}$ \\ \hline
+		SVM Poly & $337.38$ & $391.42$ & $565.11$ & $727.45$ & $649.28$ & $856.54$ \\ \hline
+		C5.0 DT & $681.36$ & $470.88$ & $350.02$ & $360.72$ & $333.90$ & $388.50$ \\ \hline
+		NB & $207.13$ & $170.22$ & $145.93$ & $149.69$ & $151.67$ & $155.84$ \\ \hline
+		NN & $630.47$ & $617.97$ & $590.97$ & $616.92$ & $632.41$ & $651.09$ \\ \hline
+		PLS & $61.29$ & $52.75$ & $36.47$ & $51.37$ & $41.37$ & $59.63$ \\ \hline
+		FDA & $92.49$ & $135.62$ & $141.52$ & $159.61$ & $167.59$ & $187.72$ \\ \hline
+		PCA NN & $420.25$ & $460.76$ & $449.86$ & $475.48$ & $491.82$ & $524.88$ \\ \hline
 	\end{tabular}
 \end{table}
 
-The execution time in seconds ($s$) utilizing the \textit{R} \textit{system.time} function \cite{system.time2024} for each model and different combinations of variables as input is displayed in Table~\ref{tab:time:total}. The experiment was run on \textit{Windows} 11 using \textit{R Studio} version 2024.04.2+764 and \textit{R} version 4.4.1, the AMD Radeon RX 6600 Graphics Processing Unit (GPU), $16$ GB of Random Access Memory (RAM), and the AMD Ryzen 5 PRO 4650G Central Processing Unit (CPU) with $6$ cores. Execution time is significant because built-in systems for mobile devices using GNSS PNT have low computational capabilities.
+The experiment was run on \textit{Windows} 11 using \textit{R Studio} version 2024.04.2+764 and \textit{R} version 4.4.1, the AMD Radeon RX 6600 Graphics Processing Unit (GPU), $16$ GB of Random Access Memory (RAM), and the AMD Ryzen 5 PRO 4650G Central Processing Unit (CPU) with $6$ cores. Execution time is significant because built-in systems for mobile devices using GNSS PNT have low computational capabilities. The candidate models using the Partial Least Squares (PLS) method in Table~\ref{tab:acc:time} have the lowest execution time.
 
-\begin{table}[!ht]
-	\centering
-    \caption{The execution time in seconds ($s$) for each model when using different combinations of variables as input.}
-	\label{tab:time:total}
-	\begin{tabular}{|c|c|c|c|c|c|c|c|}
-		\hline
-		Model & all & no $Dst$ & no $TEC$ & coord & $x$ $y$ $a_{p}$ & $x$ $z$ $a_{p}$ & $y$ $z$ $a_{p}$ \\ \hline
-		SVM Poly & $148.72$ & $330.67$ & $392.05$ & $582.47$ & $739.55$ & $670.54$ & $876.43$ \\ \hline
-		C5.0 DT & $186.08$ & $670.61$ & $466.42$ & $347.16$ & $357.43$ & $330.81$ & $382.92$ \\ \hline
-		NB & $206.65$ & $200.83$ & $164.03$ & $141.87$ & $143.97$ & $147.26$ & $149.87$ \\ \hline
-		NN & $582.41$ & $629.67$ & $619.30$ & $587.37$ & $614.07$ & $629.48$ & $644.44$ \\ \hline
-		PLS & $52.59$ & $63.48$ & $54.26$ & $36.90$ & $52.39$ & $41.92$ & $59.00$ \\ \hline
-		FDA & $56.20$ & $98.11$ & $142.19$ & $144.53$ & $164.17$ & $172.64$ & $185.78$ \\ \hline
-		PCA NN & $341.32$ & $422.86$ & $468.73$ & $452.75$ & $480.02$ & $495.66$ & $517.78$ \\ \hline
-	\end{tabular}
-\end{table}
+The performance assessment of candidate models revealed the success of several methods, such as the Neural Network (NN) and Naive Bayes (NB) classifiers. Accuracy results in Table~\ref{tab:acc:time} may lead to an incorrect conclusion as the dataset is unbalanced, as shown in Table~\ref{tab:Dstranges}. Further assessment is needed to determine if a candidate model differs significantly from others. The results of
+McNemar’s test are presented only for candidate models using either the Naive Bayes (NB) method or $B_{x}$, $B_{y}$, $B_{z}$, and $a_{p}$ as predictors variables, as this combination presented as the most accurate among tested candidate models and has a lower computational load than competing models.
 
-\subsection{Comprehensive Results for the Naive Bayes Model}
-%\label{subsec:ResultsNB}
+\subsection{Results of McNemar's test}
+%\label{subsec:ResultsMcNemar}
 
-The confusion matrix and the performance indicators derived from it for the Naive Bayes (NB) model, when using different combinations of variables as input, are depicted in Table~\ref{tab:cm:merged}, Table~\ref{tab:cs:reverse:all:nb}, Table~\ref{tab:cs:reverse:no_DisturbanceStormTime:nb}, and Table~\ref{tab:cs:reverse:yzap:nb}. The NB model was chosen because of a low computational load and high accuracy. The results for combinations of input variables with a $100\%$ accuracy using the NB model are ommited.
+McNemar’s test can help assess if a candidate model performs significantly worse or better than others. Figure~\ref{fig:pvalueplot} contains $p$-values of McNemar's test when comparing candidate models using the Naive Bayes (NB) method and various predictor variable sets, or $B_{x}$, $B_{y}$, $B_{z}$, and $a_{p}$ as predictor variables combined with various classification methods. A higher $p$-value indicates that the marginal probabilities for classification outcomes are unequal for a pair of candidate models, and the null hypothesis can be rejected. A lower $p$-value indicates that the marginal probabilities for classification outcomes are the same for a pair of candidate models, and the null hypothesis cannot be rejected.
 
-\begin{table}[!ht]
-    \centering
-    \caption{The confusion matrix for the Naive Bayes model when using all variables as input (left), all variables except $Dst$ as input (center), and only $B_{y}$, $B_{z}$, and $a_{p}$ as input (right).}
-	\label{tab:cm:merged}
-	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
-		\hline
-		 & \multicolumn{5}{|c|}{Reference - all} & \multicolumn{5}{|c|}{Reference - no $Dst$} & \multicolumn{5}{|c|}{Reference - $y$ $z$ $a_{p}$} \\ \hline
-		 Pred. & E & N & P & R & T & E & N & P & R & T & E & N & P & R & T \\ \hline
-		 E & $2$ & $0$ & $0$ & $0$ & $0$ & $2$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $0$ & $0$ & $0$ \\ \hline
-		 N & $0$ & $1492$ & $0$ & $1$ & $0$ & $0$ & $1492$ & $0$ & $1$ & $0$ & $1$ & $1499$ & $0$ & $0$ & $0$ \\ \hline
-		 P & $0$ & $5$ & $27$ & $0$ & $0$ & $0$ & $4$ & $27$ & $0$ & $0$ & $0$ & $0$ & $27$ & $0$ & $0$ \\ \hline
-		 R & $0$ & $2$ & $0$ & $369$ & $0$ & $0$ & $2$ & $0$ & $368$ & $1$ & $0$ & $0$ & $0$ & $371$ & $0$ \\ \hline
-		 T & $0$ & $0$ & $0$ & $1$ & $18$ & $0$ & $0$ & $0$ & $1$ & $17$ & $0$ & $0$ & $0$ & $0$ & $18$ \\ \hline
-	\end{tabular}
-\end{table}
+\begin{figure}[!ht]
+ \centering
+    \includegraphics[width=\linewidth]{pvalueplot_total_horizontal.pdf}
+    \caption{Candidate model comparison using $p$-values of McNemar's test, and $B_{x}$, $B_{y}$, $B_{z}$, and $a_{p}$ as predictor variables (excluding Total Electron Content ($TEC$), and standard deviation of Total Electron Content ($dTEC$)) combined with various classification methods (left), or the Naive Bayes (NB) method combined with various predictor variable sets (right). Black represents a low $p$-value near $0$, white represents a high $p$-value near $1$, and red represents a $p$-value near $0.5$ between the two extremes. Each candidate model is equal to itself, so values on the primary diagonal equal $1$. The matrix is symmetrical concerning the primary diagonal because the same result is achieved when swapping the order of the first and second compared candidate models.}
+    \label{fig:pvalueplot}
+\end{figure}
 
-\begin{table}[!ht]
-    \centering
-    \caption{The performance indicators derived from the confusion matrix for the Naive Bayes model when using all variables as input.}
-	\label{tab:cs:reverse:all:nb}
-	\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		 & \multicolumn{5}{c|}{Class} \\ \hline
-		Statistics & E & N & P & R & T \\ \hline
-		Sensitivity & $100\%$ & $99.53\%$ & $100\%$ & $99.46\%$ & $100\%$ \\ \hline
-		Specificity & $100\%$ & $99.76\%$ & $99.735\%$ & $99.87\%$ & $99.9473\%$ \\ \hline
-		PPV & $100\%$ & $99.93\%$ & $84.375\%$ & $99.46\%$ & $94.7368\%$ \\ \hline
-		NPV & $100\%$ & $98.35\%$ & $100\%$ & $99.87\%$ & $100\%$ \\ \hline
-		DR & $0.1043\%$ & $77.83\%$ & $1.408\%$ & $19.25\%$ & $0.939\%$ \\ \hline
-		DP & $0.1043\%$ & $77.88\%$ & $1.669\%$ & $19.35\%$ & $0.9911\%$ \\ \hline
-		BA & $100\%$ & $99.65\%$ & $99.868\%$ & $99.67\%$ & $99.9737\%$ \\ \hline
-	\end{tabular}
-\end{table}
+The marginal probabilities for each outcome are different when comparing the candidate model using the NB method, and $B_{x}$, $B_{y}$, $B_{z}$, and $a_{p}$ predictor variables, to the models using the same method, and the full set of predictors (Total Electron Content ($TEC$), standard deviation of Total Electron Content ($dTEC$), $B_{x}$, $B_{y}$, $B_{z}$, and $a_{p}$), or $B_{y}$, $B_{z}$, and $a_{p}$ as predictors.
 
-\begin{table}[!ht]
-    \centering
-    \caption{The performance indicators derived from the confusion matrix for the Naive Bayes model when using all variables except $Dst$ as input.}
-	\label{tab:cs:reverse:no_DisturbanceStormTime:nb}
-	\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		 & \multicolumn{5}{c|}{Class} \\ \hline
-		Statistics & E & N & P & R & T \\ \hline
-		Sensitivity & $100\%$ & $99.53\%$ & $100\%$ & $99.19\%$ & $94.4444\%$ \\ \hline
-		Specificity & $99.8956\%$ & $99.76\%$ & $99.788\%$ & $99.81\%$ & $99.9473\%$ \\ \hline
-		PPV & $50\%$ & $99.93\%$ & $87.097\%$ & $99.19\%$ & $94.4444\%$ \\ \hline
-		NPV & $100\%$ & $98.35\%$ & $100\%$ & $99.81\%$ & $99.9473\%$ \\ \hline
-		DR & $0.1043\%$ & $77.83\%$ & $1.408\%$ & $19.2\%$ & $0.8868\%$ \\ \hline
-		DP & $0.2087\%$ & $77.88\%$ & $1.617\%$ & $19.35\%$ & $0.939\%$ \\ \hline
-		BA & $99.9478\%$ & $99.65\%$ & $99.894\%$ & $99.5\%$ & $97.1959\%$ \\ \hline
-	\end{tabular}
-\end{table}
+This was concluded by rejecting the null hypothesis using $p$-values of McNemar's test that equal $1$, as given in Figure~\ref{fig:pvalueplot}. The $p$-values support the conclusion based on accuracy values, which are highest when using $B_{x}$, $B_{y}$, $B_{z}$, and $a_{p}$. This adds validity to removing $TEC$, and $dTEC$ from the set of predictors.
 
-\begin{table}[!ht]
-    \centering
-    \caption{The performance indicators derived from the confusion matrix for the Naive Bayes model when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input.}
-	\label{tab:cs:reverse:yzap:nb}
-	\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		 & \multicolumn{5}{c|}{Class} \\ \hline
-		Statistics & E & N & P & R & T \\ \hline
-		Sensitivity & $50\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
-		Specificity & $100\%$ & $99.76\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
-		PPV & $100\%$ & $99.93\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
-		NPV & $99.9478\%$ & $100\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
-		DR & $0.0522\%$ & $78.2\%$ & $1.408\%$ & $19.35\%$ & $0.939\%$ \\ \hline
-		DP & $0.0522\%$ & $78.25\%$ & $1.408\%$ & $19.35\%$ & $0.939\%$ \\ \hline
-		BA & $75\%$ & $99.88\%$ & $100\%$ & $100\%$ & $100\%$ \\ \hline
-	\end{tabular}
-\end{table}
+The marginal probabilities for each outcome are different when comparing the candidate model using $B_{x}$, $B_{y}$, $B_{z}$, and $a_{p}$ as predictor variables, and the NB method, to the models using the same set of predictors, and the SVM method with a Polynomial Kernel, or the FDA method. The $p$-values of McNemar's test that equal $1$, as shown in Figure~\ref{fig:pvalueplot}, add validity to accuracy comparison results, which indicate a lower accuracy when using a method other than NB and predictors other than $B_{x}$, $B_{y}$, $B_{z}$, and $a_{p}$.
 
 \section{Discussion}
 \label{sec:Discussion}
 
-The Neural Network (NN) model has the highest execution time for any subset of the input variables due to its complexity and extensive training, evident from the data in Table~\ref{tab:time:total}. However, it achieved a $100\%$ accuracy, shown in Table~\ref{tab:acc:all}. The Naive Bayes (NB) model has the second highest accuracy, over $99\%$. The NB model achieved a $100\%$ accuracy, except when using all input variables, all input variables except Disturbance Storm-Time ($Dst$), or only $B_{y}$, $B_{z}$, and $a_{p}$. The difference in accuracy between the NN and the NB model is negligible, and the training time for the NN model is more than twice as long. An analysis in 2004 showed reasonable theoretical reasons for the seemingly incredible performance of NB classifiers \cite{Zhang2004}.
+The Support Vector Machine (SVM) method with a Polynomial Kernel, C5.0 Decision Tree (DT), Neural Network (NN), and NN method with Principal Component Analysis (PCA) applied in preprocessing have the highest execution time, above $300$ $s$, so they were excluded from further analysis and application in the final model.
 
-All other models fail to achieve an accuracy over $90\%$, except when using all input variables, including $Dst$. The $Dst$ class was derived by thresholding the continuous $Dst$ value and discretizing it by converting it to a single character, so the original $Dst$ value should not be used as model input. This labeling method explains the increase in accuracy when adding the $Dst$ input variable in all except the two best-performing models. For example, the C5.0 DT model did not consider any variable except $Dst$, indicated by a $100\%$ variable importance. The Support Vector Machine (SVM) model with a Polynomial Kernel is consistently the worst-performing for any subset of input variables, never achieving an accuracy over $80\%$. None of the models achieved an accuracy under $70\%$, so they were all moderately successful.
+The Neural Network (NN) method has a high execution time for any set of predictors due to its complexity and extensive training, evident from the data in Table~\ref{tab:acc:time}. However, it achieved a $100\%$ accuracy, also shown in Table~\ref{tab:acc:time}. The Naive Bayes (NB) method has the same accuracy when using $B_{x}$, $B_{y}$, $B_{z}$, and $a_{p}$ as predictors, and the training time for the NN model is more than twice as long, so the NB method is preferred as the approach in the final model.
 
-When studying the performance of the NB model by individual class in Table~\ref{tab:cm:merged}, Table~\ref{tab:cs:reverse:all:nb}, Table~\ref{tab:cs:reverse:no_DisturbanceStormTime:nb}, and Table~\ref{tab:cs:reverse:yzap:nb}, samples of the T class are all correctly classified except for one case, but the testing is less extensive since it is the second smallest class. Samples of the P class are all correctly classified. Samples of the R class are sometimes erroneously assigned to the N, T, or less commonly the E class. Two of the most common misclassifications were assigning samples of the N class with the highest detection rate and prevalence to the P or R classes with the third and second highest detection rate and prevalence. This is due to the largest number of samples in the N class between the P and R classes with the narrowest $Dst$ range. Samples of the N class are least often included in the E class, whose range is the furthest apart from the N class. A sample of the E class was attributed to the N class only once. The E class is the smallest with only two testing samples, which must be accounted for when interpreting these results, such as the lowest balanced accuracy of $75\%$ and sensitivity of $50\%$ when using only $B_{y}$, $B_{z}$, and $a_{p}$ as input, or the lowest positive predictive value of $50\%$ when using all variables as input.
+An analysis in 2004 showed reasonable theoretical reasons for the seemingly incredible performance of NB classifiers \cite{Zhang2004}. The expression used for the NB method is a linear time algorithm if time complexity is expressed as a function of the size of the input and observing asymptotic behavior, explaining the reduced execution time \cite{Russell1999}. Despite their simplicity, NB classifier models have performed well in real-world situations \cite{Metsis2006}, even with a relative lack of data compared to other approaches \cite{John2013, Mccallum2001}.
+
+All candidate models developed using methods other than NN and NB fail to achieve accuracy over $90\%$. This indicates that they are less suitable for this particular application. The SVM method with a Polynomial Kernel is consistently the worst-performing for any set of predictors, never achieving an accuracy over $80\%$. All models achieved an accuracy over $70\%$, suggesting they could indicate Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT) performance.
 
 \section{Conclusion}
 \label{sec:Conclusion}
 
 The presented study aims to classify ambient conditions of space weather events for sub-equatorial regions. Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT) performance is significantly affected by such events. It would be beneficial to warn users of a geomagnetic/ionospheric storm.
 
-Classification models using machine learning were applied to descriptions of the geomagnetic field expressed in Total Electron Content ($TEC$) and other input data. It was assumed observations contained independent variables to generate the dependent variable representing the Disturbance Storm-Time ($Dst$) class. 
+Classification models using machine learning were applied to descriptions of the geomagnetic field expressed in Total Electron Content ($TEC$), standard deviation of Total Electron Content ($dTEC$), $B_{x}$, $B_{y}$, $B_{z}$ (geomagnetic field indices), and $a_{p}$. It was assumed observations contained independent variables to generate the dependent variable representing the Disturbance Storm-Time ($Dst$) class. 
 
 Statistical analysis confirmed that other variables change distribution based on $Dst$, not $TEC$. Continuous $Dst$ values in different ranges were converted into discrete classes based on statistics, previous theories, and research. 
 
 An Support Vector Machine (SVM) with a Polynomial Kernel, C5.0 Decision Tree (DT), Naive Bayes (NB), Neural Network (NN), Partial Least Squares (PLS), Flexible Discriminant Analysis (FDA), and Principal Component Analysis (PCA) NN model created a $Dst$-based classification from multiple combinations of input variables.
 
-The NB model achieved perfect accuracy for most tested combinations of input variables, and over $99\%$ in all cases. It is slightly less successful than the NN model, and the total execution time is at least two times shorter, making it more suitable for use in compact, low-performance, and low-cost portable devices such as smartphones.
+The NB method using $B_{x}$, $B_{y}$, $B_{z}$, and $a_{p}$ as predictors achieved perfect accuracy on the test set. The total execution time is at least two times shorter than for the NN method, making it more suitable for compact, low-performance, and low-cost portable devices such as smartphones. The exclusion of $TEC$ and $dTEC$ is supported by theory since they contain redundant information already presented by $B_{x}$, $B_{y}$, and $B_{z}$ which impact $Dst$, and in turn  $TEC$.
 
 \clearpage
 
@@ -735,6 +520,8 @@ The NB model achieved perfect accuracy for most tested combinations of input var
 \\[2\baselineskip]
 
 \textit{DBSCAN} Density-Based Spatial Clustering
+
+\textit{DOI} Digital Object Identifier
 
 \textit{DP} Detection Prevalence
 
@@ -855,8 +642,6 @@ The NB model achieved perfect accuracy for most tested combinations of input var
 
 \textit{SPDF} Space Physics Data Facility
 
-\textit{SVC} Support Vector Clustering
-
 \textit{SVD} Singular Value Decomposition
 
 \textit{SVM} Support Vector Machine
@@ -915,7 +700,7 @@ The authors have no funding sources to declare.
 \subsection{Authors' contributions}
 %\label{subsec:Contributions}
 
-L\v{Z} and DK contributed to conceptualization, methodology, software, validation, formal analysis, investigation, data curation, writing of the original draft, reviewing and editing the text, and visualization. TI contributed to validation, formal analysis, investigation, review and editing, supervision, and project administration. RF contributed to conceptualization, methodology, investigation, resources, writing of the original draft, reviewing and editing the text, and supervision. All authors read and approved the final manuscript.
+L\v{Z} contributed to conceptualization, methodology, software, validation, formal analysis, investigation, data curation, original draft writing, text review and editing, and visualization. DK contributed to conceptualization, methodology, investigation, original draft writing, and text review and editing. TI contributed to validation, formal analysis, investigation, text review and editing, supervision, and project administration. RF contributed to conceptualization, methodology, investigation, resources, original draft writing, text review and editing, and supervision. All authors read and approved the final manuscript.
 
 \subsection{Acknowledgements}
 %\label{subsec:Acknowledgements}
@@ -925,18 +710,13 @@ Not applicable
 \subsection{Authors' information}
 %\label{subsec:Information}
 
-LŽ is a doctoral student at the Faculty of Engineering, University of Rijeka, currently employed as an assistant at the Department of Computer Science. Her research interests include applied machine learning in biology, chemistry, medicine, and transportation. Maritime transportation is also the subject of her doctoral research.
+L\v{Z} is a doctoral student at the Faculty of Engineering, University of Rijeka, currently employed as an assistant at the Department of Computer Science. Her research interests include applied machine learning in biology, chemistry, medicine, and transportation. Maritime transportation is also the subject of her doctoral research.
 
 DK is a doctoral student at the Faculty of Engineering, University of Rijeka, currently employed as an assistant at the Department of Computer Science. His research interests include applied machine learning in object recognition and image segmentation. Image classification and labeling are also the subject of his doctoral research.
 
 TI earned his MSc and PhD in telecommunication engineering from the University of Ruse “Angel Kanchev,” Ruse, Bulgaria, in 1999 and 2007, respectively. He is a full professor at the Department of Telecommunication, University of Ruse “Angel Kanchev.” His research interests include mobile communications networks, signal processing, wireless technologies, and satellite navigation. Professor Iliev is a Member of IEEE.
 
-RF is an external Professor of Electronics Engineering with the Department for Computer Science, Faculty of Engineering, and Center for Artificial Intelligence and Cybersecurity, both at the University of Rijeka, Croatia, and Head of the Laboratory for Spatial Intelligence at Hrvatsko Zagorje Krapina University of Applied Science, Krapina, Croatia. He holds a BSc, MSc, and PhD in electrical engineering, obtained in 1987, 1994, and 2007, respectively, from the Faculty of Electrical Engineering and Computing, University of Zagreb, Croatia. His professional interests include Ambient-Aware Application-Aligned ((AA)2) Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT), spatial uncertainty quantification, spatial statistical learning, predictive modeling, statistical signal processing, trajectory analysis and prediction, and occupancy modeling. Professor Filjar is a Fellow of The Royal Institute of Navigation (RIN) (London, United Kingdom), a Member of The Institute of Navigation (ION) (Manassas, Virginia), a Senior Member of Union Radio-Scientifique Internationale (URSI) (Ghent, Belgium) and a Member of The Society for Industrial and Applied Mathematics  (Philadelphia, Philadelphia). %He established, and organises the traditional Baška SIF (Spatial Information Fusion) Forum, held annually in Baška, Krk Island, Croatia.
-
-% vidi Philadelphia možda clan, zemlje u razvoju samo 15 dolara godišnje, ciljane sekcije
-% uncertainty modeling souther California
-
-% smanjti reference ko je moguce
+RF is an external Professor of Electronics Engineering with the Department for Computer Science, Faculty of Engineering, and Center for Artificial Intelligence and Cybersecurity, both at the University of Rijeka, Croatia, and Head of the Laboratory for Spatial Intelligence at Hrvatsko Zagorje Krapina University of Applied Science, Krapina, Croatia. He holds a BSc, MSc, and PhD in electrical engineering, obtained in 1987, 1994, and 2007, respectively, from the Faculty of Electrical Engineering and Computing, University of Zagreb, Croatia. His professional interests include Ambient-Aware Application-Aligned ((AA)2) Global Navigation Satellite System (GNSS) Positioning, Navigation, and Timing (PNT), spatial uncertainty quantification, spatial statistical learning, predictive modeling, statistical signal processing, trajectory analysis and prediction, and occupancy modeling. Professor Filjar is a Fellow of The Royal Institute of Navigation (RIN) (London, United Kingdom), a Member of The Institute of Navigation (ION) (Manassas, Virginia), a Senior Member of Union Radio-Scientifique Internationale (URSI) (Ghent, Belgium) and a Member of The Society for Industrial and Applied Mathematics  (Philadelphia, Philadelphia).
 
 %%===========================================================================================%%
 %% If you are submitting to one of the Nature Portfolio journals, using the eJP submission   %%
@@ -945,127 +725,75 @@ RF is an external Professor of Electronics Engineering with the Department for C
 %% file, and delete the associated \verb+\bibliography+ commands.                            %%
 %%===========================================================================================%%
 
-\begin{thebibliography}{000}
-\bibitem{filjar2022application}Filjar, R. An application-centred resilient GNSS position estimation algorithm based on positioning environment conditions awareness. {\em Proceedings Of The 2022 International Technical Meeting Of The Institute Of Navigation}. pp. 1123-1136 (2022)
-\bibitem{filjar2024ambient}Filjar, R., Hedji, I., Prpić-Oršić, J. \& Iliev, T. An Ambient Adaptive Global Navigation Satellite System Total Electron Content Predictive Model for Short-Term Rapid Geomagnetic Storm Events. {\em Remote Sensing}. \textbf{16}, 3051 (2024)
-\bibitem{davies1990ionospheric}Davies, K. Ionospheric Radio. (Institution of Engineering & Technology,1990), https://books.google.hr/books?id=qdWUKSj5PCcC
-\bibitem{filic2018modelling}Filić, M. \& Filjar, R. modelling the relation between GNSS positioning performance degradation, and space weather and ionospheric conditions using RReliefF features selection. {\em ION GNSS+ 2018 Meeting}. pp. 1999-2006 (2018)
+\begin{thebibliography}{00}
 \bibitem{spilker1996global}Spilker Jr, J., Axelrad, P., Parkinson, B. \& Enge, P. Global positioning system: theory and applications, volume I. (American Institute of Aeronautics,1996)
+\bibitem{schaer1999mapping}Schaer, S. Mapping and predicting the Earth's ionosphere using the Global Positioning System. (Institut für Geodäsie und Photogrammetrie, Eidg. Technische Hochschule,1999)
+\bibitem{durmaz2015regional}Durmaz, M. \& Karslioglu, M. Regional vertical total electron content (VTEC) modeling together with satellite and receiver differential code biases (DCBs) using semi-parametric multivariate adaptive regression B-splines (SP-BMARS). {\em Journal Of Geodesy}. \textbf{89} pp. 347-360 (2015), http://dx.doi.org/10.1007/s00190-014-0779-8
+\bibitem{jin2012m_dcb}Jin, R., Jin, S. \& Feng, G. M_DCB: Matlab code for estimating GNSS satellite and receiver differential code biases. {\em GPS Solutions}. \textbf{16}, 541-548 (2012), http://dx.doi.org/10.1007/s10291-012-0279-3
+\bibitem{davies1990ionospheric}Davies, K. Ionospheric Radio. (Institution of Engineering & Technology,1990), https://books.google.hr/books?id=qdWUKSj5PCcC
+\bibitem{liu2009seismoionospheric}Liu, J., Chen, Y., Chen, C., Liu, C., Chen, C., Nishihashi, M., Li, J., Xia, Y., Oyama, K., Hattori, K. \& Lin, C. Seismoionospheric GPS total electron content anomalies observed before the 12 May 2008 Mw7. 9 Wenchuan earthquake. {\em Journal Of Geophysical Research: Space Physics}. \textbf{114} (2009), http://dx.doi.org/10.1029/2008JA013698
+\bibitem{prolss2012physics}Prölss, G. Physics of the Earth’s space environment: an introduction. (Springer Science & Business Media,2012)
 \bibitem{oxley2017uncertainties}Oxley, A. Uncertainties in GPS Positioning: A mathematical discourse. (Academic Press,2017)
-\bibitem{SEEMALA202363}Seemala, G. Chapter 4 - Estimation of ionospheric total electron content (TEC) from GNSS observations. {\em Atmospheric Remote Sensing}. pp. 63-84 (2023), https://www.sciencedirect.com/science/article/pii/B9780323992626000225
-\bibitem{sikirica2021risk}Sikirica, N., Dimc, F., Jukic, O., Iliev, T., Spoljar, D. \& Filjar, R. A Risk Assessment of Geomagnetic Conditions Impact on GPS Positioning Accuracy Degradation in Tropical Regions Using Dst Index. {\em Proceedings Of The 2021 International Technical Meeting Of The Institute Of Navigation}. pp. 606-615 (2021)
-\bibitem{natras2022ensemble}Natras, R., Soja, B. \& Schmidt, M. Ensemble machine learning of random forest, AdaBoost and XGBoost for vertical total electron content forecasting. {\em Remote Sensing}. \textbf{14}, 3547 (2022)
-\bibitem{natras2023regional}Natras, R., Goss, A., Halilovic, D., Magnet, N., Mulic, M., Schmidt, M. \& Weber, R. Regional ionosphere delay models based on CORS data and machine learning. {\em NAVIGATION: Journal Of The Institute Of Navigation}. \textbf{70} (2023)
-\bibitem{NOAA2024aSpace}NOAA NOAA Space Weather Scales | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. (https://www.swpc.noaa.gov/noaa-scales-explanation,2024), Accessed 17 October 2024.
-\bibitem{filjar2020comparison}Filjar, R., Sklebar, I. \& Horvat, M. A COMPARISON OF MACHINE LEARNING-BASED INDIVIDUAL MOBILITY CLASSIFICATION MODELS DEVELOPED ON SENSOR READINGS FROM LOOSELY ATTACHED SMARTPHONES.. {\em Komunikácie}. \textbf{22} (2020)
-\bibitem{Intermagnet2022-cj}INTERMAGNET \& Others Intermagnet reference data set (IRDS) 2019 – definitive magnetic observatory data. (GFZ Data Services,2022)
+\bibitem{SEEMALA202363}Seemala, G. Chapter 4 - Estimation of ionospheric total electron content (TEC) from GNSS observations. {\em Atmospheric Remote Sensing}. pp. 63-84 (2023), http://dx.doi.org/10.1016/B978-0-323-99262-6.00022-5
+\bibitem{klobuchar1987ionospheric}Klobuchar, J. Ionospheric time-delay algorithm for single-frequency GPS users. {\em IEEE Transactions On Aerospace And Electronic Systems}. pp. 325-331 (1987), http://dx.doi.org/10.1109/TAES.1987.310829
+\bibitem{enge1994global}Enge, P. The global positioning system: Signals, measurements, and performance. {\em International Journal Of Wireless Information Networks}. \textbf{1} pp. 83-105 (1994), http://dx.doi.org/10.1007/BF02106512
+\bibitem{filjar2024ambient}Filjar, R., Hedji, I., Prpić-Oršić, J. \& Iliev, T. An Ambient Adaptive Global Navigation Satellite System Total Electron Content Predictive Model for Short-Term Rapid Geomagnetic Storm Events. {\em Remote Sensing}. \textbf{16}, 3051 (2024), http://dx.doi.org/10.3390/rs16163051
+\bibitem{natras2022ensemble}Natras, R., Soja, B. \& Schmidt, M. Ensemble machine learning of random forest, AdaBoost and XGBoost for vertical total electron content forecasting. {\em Remote Sensing}. \textbf{14}, 3547 (2022), http://dx.doi.org/10.3390/rs14153547
+\bibitem{natras2023regional}Natras, R., Goss, A., Halilovic, D., Magnet, N., Mulic, M., Schmidt, M. \& Weber, R. Regional ionosphere delay models based on CORS data and machine learning. {\em NAVIGATION: Journal Of The Institute Of Navigation}. \textbf{70} (2023), http://dx.doi.org/10.33012/navi.577
+\bibitem{Intermagnet2022-cj}INTERMAGNET \& Others Intermagnet reference data set (IRDS) 2019 – definitive magnetic observatory data. {\em GFZ Data Services}. (2022), http://dx.doi.org/10.5880/INTERMAGNET.1991.2019
+\bibitem{Kuhn2007}Kuhn, M. caret: Classification and Regression Training. {\em CRAN: Contributed Packages}. (2007,10), http://dx.doi.org/10.32614/cran.package.caret
+\bibitem{kuhn2008building}Kuhn, M. Building predictive models in R using the caret package. {\em Journal Of Statistical Software}. \textbf{28} pp. 1-26 (2008), http://dx.doi.org/10.18637/jss.v028.i05
 \bibitem{kuhn2013applied}Kuhn, M. Applied predictive modeling. (Springer,2013)
-\bibitem{KuhnCaret2024}Kuhn, M. The caret Package — topepo.github.io. (https://topepo.github.io/caret/,2024), Accessed 11 September 2024.
-\bibitem{rprojectProjectStatistical}RCoreTeam R: The R Project for Statistical Computing — r-project.org. (https://www.r-project.org/,2024), Accessed 11 September 2024.
-\bibitem{Cortes1995}Cortes, C. \& Vapnik, V. Support-vector networks. {\em Mach. Learn.}. \textbf{20}, 273-297 (1995,9)
-\bibitem{scikit-learn2023}Developers, P. 1.4. Support Vector Machines — scikit-learn.org. (http://scikit-learn.org/stable/modules/svm.html,2023), Accessed 25 January 2024.
-\bibitem{Boser1992}Boser, B., Guyon, I. \& Vapnik, V. A training algorithm for optimal margin classifiers. {\em Proceedings Of The Fifth Annual Workshop On Computational Learning Theory}. (1992,7)
-\bibitem{Aizerman1964}Aizerman, M., Braverman, E. \& Rozonoer, L. Theoretical foundations of the potential function method in pattern recognition learning. {\em Automation And Remote Control}., 821-837 (1964)
-\bibitem{HastieRosset2009}Hastie, T., Rosset, S., Zhu, J. \& Zou, H. Multi-class AdaBoost. {\em Stat. Interface}. \textbf{2}, 349-360 (2009)
-\bibitem{BenHur2001}Ben-Hur, A., Horn, D., Siegelmann, H. \& Vapnik, V. Support Vector Clustering. {\em Journal Of Machine Learning Research}. \textbf{2} pp. 125-137 (2001,11)
-\bibitem{Meyer2003}Meyer, D., Leisch, F. \& Hornik, K. The support vector machine under test. {\em Neurocomputing}. \textbf{55}, 169-186 (2003,9)
-\bibitem{Jin2012}Jin, C. \& Wang, L. Dimensionality dependent PAC-Bayes margin bound. {\em Advances In Neural Information Processing Systems}. \textbf{2} pp. 1034-1042 (2012,1)
+\bibitem{Boser1992}Boser, B., Guyon, I. \& Vapnik, V. A training algorithm for optimal margin classifiers. {\em Proceedings Of The Fifth Annual Workshop On Computational Learning Theory}. pp. 144-152 (1992,7), http://dx.doi.org/10.1145/130385.130401
+\bibitem{HastieRosset2009}Hastie, T., Rosset, S., Zhu, J. \& Zou, H. Multi-class AdaBoost. {\em Stat. Interface}. \textbf{2}, 349-360 (2009), http://dx.doi.org/10.4310/SII.2009.v2.n3.a8
+\bibitem{Meyer2003}Meyer, D., Leisch, F. \& Hornik, K. The support vector machine under test. {\em Neurocomputing}. \textbf{55}, 169-186 (2003,9), http://dx.doi.org/10.1016/S0925-2312(03)00431-4
 \bibitem{Press2007}Press, W., Teukolsky, S., Vetterling, W. \& Flannery, B. Numerical recipes 3rd edition. (Cambridge University Press,2007,9)
-\bibitem{Hsu2003}Hsu, C., Chang, C. \& Lin, C. A Practical Guide to Support Vector Classification. (Department of Computer Science, National Taiwan University,2003)
-\bibitem{Rokach2014}Rokach, L. \& Maimon, O. Data mining with decision trees. (World Scientific Publishing Company,2014,10)
-\bibitem{Studer2011}Studer, M., Ritschard, G., Gabadinho, A. \& Müller, N. Discrepancy analysis of state sequences. {\em Sociol. Methods Res.}. \textbf{40}, 471-510 (2011,8)
-\bibitem{Wu2008}Wu, X., Kumar, V., Quinlan, R., Ghosh, J., Yang, Q., Motoda, H., McLachlan, G., Ng, A., Liu, B., Yu, P., Zhou, Z., Steinbach, M., Hand, D. \& Steinberg, D. Top 10 algorithms in data mining. {\em Knowl. Inf. Syst.}. \textbf{14}, 1-37 (2008,1)
-\bibitem{ShalevShwartz2014}Shalev-Shwartz, S. \& Ben-David, S. Decision Trees. {\em Understanding Machine Learning: From Theory To Algorithms}. pp. 212-218 (2014)
-\bibitem{Quinlan1986}Quinlan, J. Induction of decision trees. {\em Mach. Learn.}. \textbf{1}, 81-106 (1986,3)
-\bibitem{Rokach2005}Rokach, L. \& Maimon, O. Top-down induction of decision trees classifiers—A survey. {\em IEEE Trans. Syst. Man Cybern. C Appl. Rev.}. \textbf{35}, 476-487 (2005,11)
-\bibitem{Hand2001}Hand, D. \& Yu, K. Idiot's Bayes: Not So Stupid after All?. {\em Int. Stat. Rev.}. \textbf{69}, 385 (2001,12)
-\bibitem{McCallum2011}McCallum, A. Graphical Models Lecture 2: Bayesian Network Representation. (https://people.cs.umass.edu/ mccallum/courses/gm2011/02-bn-rep.pdf,2011), Accessed 25 January 2024.
+\bibitem{Wu2008}Wu, X., Kumar, V., Quinlan, R., Ghosh, J., Yang, Q., Motoda, H., McLachlan, G., Ng, A., Liu, B., Yu, P., Zhou, Z., Steinbach, M., Hand, D. \& Steinberg, D. Top 10 algorithms in data mining. {\em Knowl. Inf. Syst.}. \textbf{14}, 1-37 (2008,1), http://dx.doi.org/10.1007/s10115-007-0114-2
+\bibitem{ShalevShwartz2014}Shalev-Shwartz, S. \& Ben-David, S. Decision Trees. {\em Understanding Machine Learning: From Theory To Algorithms}. pp. 212-218 (2014), http://dx.doi.org/10.1017/CBO9781107298019.019
+\bibitem{Hand2001}Hand, D. \& Yu, K. Idiot's Bayes: Not So Stupid after All?. {\em Int. Stat. Rev.}. \textbf{69}, 385 (2001,12), http://dx.doi.org/10.1111/j.1751-5823.2001.tb00465.x
 \bibitem{Russell1999}Russell, S. \& Norvig, P. Artificial intelligence: a modern approach. (Pearson,2016)
-\bibitem{Metsis2006}Metsis, V., Androutsopoulos, I. \& Paliouras, G. Spam Filtering with Naive Bayes - Which Naive Bayes?. {\em In CEAS}. (2006,1)
-\bibitem{Caruana2006}Caruana, R. \& Niculescu-Mizil, A. An Empirical Comparison of Supervised Learning Algorithms. {\em Proceedings Of The 23rd International Conference On Machine Learning - ICML '06}. \textbf{2006} pp. 161-168 (2006,6)
-\bibitem{John2013}John, G. \& Langley, P. Estimating Continuous Distributions in Bayesian Classifiers.  (2013)
-\bibitem{Mccallum2001}Mccallum, A. \& Nigam, K. A Comparison of Event Models for Naive Bayes Text Classification. {\em Work Learn Text Categ}. \textbf{752} (2001,5)
+\bibitem{Caruana2006}Caruana, R. \& Niculescu-Mizil, A. An Empirical Comparison of Supervised Learning Algorithms. {\em Proceedings Of The 23rd International Conference On Machine Learning - ICML '06}. \textbf{2006} pp. 161-168 (2006,6), http://dx.doi.org/10.1145/1143844.1143865
+\bibitem{John2013}John, G. \& Langley, P. Estimating Continuous Distributions in Bayesian Classifiers. {\em ArXiv Preprint ArXiv:1302.4964}. (2013), http://dx.doi.org/10.48550/arXiv.1302.4964
 \bibitem{Murty2011}Murty, M. \& Devi, V. Pattern recognition: An algorithmic approach. (Springer Science & Business Media,2011)
-\bibitem{mitExplainedNeural}MIT Explained: Neural networks — news.mit.edu. (https://news.mit.edu/2017/explained-neural-networks-deep-learning-0414,2017), Accessed 27 September 2024.
 \bibitem{brahme2014comprehensive}Brahme, A. Comprehensive biomedical physics. (Newnes,2014)
-\bibitem{olden2002illuminating}Olden, J. \& Jackson, D. Illuminating the "black box": a randomization approach for understanding variable contributions in artificial neural networks. {\em Ecological Modelling}. \textbf{154}, 135-150 (2002)
-\bibitem{ozesmi1999artificial}Özesmi, S. \& Özesmi, U. An artificial neural network approach to spatial habitat modelling with interspecific interaction. {\em Ecological Modelling}. \textbf{116}, 15-31 (1999)
+\bibitem{olden2002illuminating}Olden, J. \& Jackson, D. Illuminating the "black box": a randomization approach for understanding variable contributions in artificial neural networks. {\em Ecological Modelling}. \textbf{154}, 135-150 (2002), http://dx.doi.org/10.1016/S0304-3800(02)00064-9
 \bibitem{bishop2006pattern}Bishop, C. Pattern Recognition and Machine Learning. (Springer,2006)
 \bibitem{vapnik2013nature}Vapnik, V. The nature of statistical learning theory. (Springer science & business media,2013)
-\bibitem{goodfellow2016deep}Goodfellow, I. Deep learning. (MIT press,2016)
-\bibitem{probst2019tunability}Probst, P., Boulesteix, A. \& Bischl, B. Tunability: Importance of hyperparameters of machine learning algorithms. {\em Journal Of Machine Learning Research}. \textbf{20}, 1-32 (2019)
-\bibitem{pearson1901liii}Pearson, K. LIII. On lines and planes of closest fit to systems of points in space. {\em The London, Edinburgh, And Dublin Philosophical Magazine And Journal Of Science}. \textbf{2}, 559-572 (1901)
+\bibitem{goodfellow2016deep}Goodfellow, I., Bengio, Y. \& Courville, A. Deep Learning. (MIT Press,2016), http://www.deeplearningbook.org
+\bibitem{probst2019tunability}Probst, P., Boulesteix, A. \& Bischl, B. Tunability: Importance of hyperparameters of machine learning algorithms. {\em Journal Of Machine Learning Research}. \textbf{20}, 1-32 (2019), http://dx.doi.org/10.48550/arXiv.1802.09596
 \bibitem{stewart2019introduction}Stewart, F. Introduction to linear algebra. (Courier Dover Publications,2019)
-\bibitem{jolliffe2016principal}Jolliffe, I. \& Cadima, J. Principal component analysis: a review and recent developments. {\em Philosophical Transactions Of The Royal Society A: Mathematical, Physical And Engineering Sciences}. \textbf{374}, 20150202 (2016)
-\bibitem{ripley2007pattern}Ripley, B. Pattern recognition and neural networks. (Cambridge university press,2007)
-\bibitem{wold2001pls}Wold, S., Sjöström, M. \& Eriksson, L. PLS-regression: a basic tool of chemometrics. {\em Chemometrics And Intelligent Laboratory Systems}. \textbf{58}, 109-130 (2001)
-\bibitem{abdi2010partial}Abdi, H. Partial least squares regression and projection on latent structure regression (PLS Regression). {\em Wiley Interdisciplinary Reviews: Computational Statistics}. \textbf{2}, 97-106 (2010)
-\bibitem{saebo2008lpls}Sæbø, S., Almøy, T., Flatberg, A., Aastveit, A. \& Martens, H. LPLS-regression: a method for prediction and classification under the influence of background information on predictor variables. {\em Chemometrics And Intelligent Laboratory Systems}. \textbf{91}, 121-132 (2008)
-\bibitem{lindgren1993kernel}Lindgren, F., Geladi, P. \& Wold, S. The kernel algorithm for PLS. {\em Journal Of Chemometrics}. \textbf{7}, 45-59 (1993)
-\bibitem{de1994comments}De Jong, S. \& Ter Braak, C. Comments on the PLS kernel algorithm. {\em Journal Of Chemometrics}. \textbf{8}, 169-174 (1994)
-\bibitem{dayal1997improved}Dayal, B. \& MacGregor, J. Improved PLS algorithms. {\em Journal Of Chemometrics: A Journal Of The Chemometrics Society}. \textbf{11}, 73-85 (1997)
-\bibitem{de1993simpls}De Jong, S. SIMPLS: an alternative approach to partial least squares regression. {\em Chemometrics And Intelligent Laboratory Systems}. \textbf{18}, 251-263 (1993)
-\bibitem{rannar1994pls}Rännar, S., Lindgren, F., Geladi, P. \& Wold, S. A PLS kernel algorithm for data sets with many variables and fewer objects. Part 1: Theory and algorithm. {\em Journal Of Chemometrics}. \textbf{8}, 111-125 (1994)
-\bibitem{takane2016pls}Takane, Y. \& Loisel, S. On the PLS algorithm for multiple regression (PLS1). {\em The Multiple Facets Of Partial Least Squares And Related Methods: PLS, Paris, France, 2014 8}. pp. 17-28 (2016)
-\bibitem{hoskuldsson1988pls}Höskuldsson, A. PLS regression methods. {\em Journal Of Chemometrics}. \textbf{2}, 211-228 (1988)
-\bibitem{fisher1936use}Fisher, R. The use of multiple measurements in taxonomic problems. {\em Annals Of Eugenics}. \textbf{7}, 179-188 (1936)
-\bibitem{mclachlan2005discriminant}McLachlan, G. Discriminant analysis and statistical pattern recognition. (John Wiley & Sons,2005)
-\bibitem{hastie1995penalized}Hastie, T., Buja, A. \& Tibshirani, R. Penalized discriminant analysis. {\em The Annals Of Statistics}. \textbf{23}, 73-102 (1995)
+\bibitem{jolliffe2016principal}Jolliffe, I. \& Cadima, J. Principal component analysis: a review and recent developments. {\em Philosophical Transactions Of The Royal Society A: Mathematical, Physical And Engineering Sciences}. \textbf{374}, 20150202 (2016), http://dx.doi.org/10.1098/rsta.2015.0202
+\bibitem{abdi2010partial}Abdi, H. Partial least squares regression and projection on latent structure regression (PLS Regression). {\em Wiley Interdisciplinary Reviews: Computational Statistics}. \textbf{2}, 97-106 (2010), http://dx.doi.org/10.1002/wics.51
+\bibitem{saebo2008lpls}Sæbø, S., Almøy, T., Flatberg, A., Aastveit, A. \& Martens, H. LPLS-regression: a method for prediction and classification under the influence of background information on predictor variables. {\em Chemometrics And Intelligent Laboratory Systems}. \textbf{91}, 121-132 (2008), http://dx.doi.org/10.1016/j.chemolab.2007.10.006
+\bibitem{GONZALEZ2023104876}González, V., Giraldo, R. \& Leiva, V. PLS1-MD: A partial least squares regression algorithm for solving missing data problems. {\em Chemometrics And Intelligent Laboratory Systems}. \textbf{240} pp. 104876 (2023), http://dx.doi.org/10.1016/j.chemolab.2023.104876
+\bibitem{mclachlan2005discriminant}McLachlan, G. Discriminant analysis and statistical pattern recognition. (John Wiley & Sons,2005), http://dx.doi.org/10.1002/0471725293
 \bibitem{HastieTibshirani2009}Hastie, T., Tibshirani, R., Friedman, J. \& Friedman, J. The elements of statistical learning: data mining, inference, and prediction. (Springer,2009)
-\bibitem{hastie1994flexible}Hastie, T., Tibshirani, R. \& Buja, A. Flexible discriminant analysis by optimal scoring. {\em Journal Of The American Statistical Association}. \textbf{89}, 1255-1270 (1994)
-\bibitem{reynes2006choice}Reynès, C., Sabatier, R. \& Molinari, N. Choice of B-splines with free parameters in the flexible discriminant analysis context. {\em Computational Statistics & Data Analysis}. \textbf{51}, 1765-1778 (2006)
-\bibitem{phillips2017applying}Phillips, N., Reid, N., Thys, T., Harrod, C., Payne, N., Morgan, C., White, H., Porter, S. \& Houghton, J. Applying species distribution modelling to a data poor, pelagic fish complex: the ocean sunfishes. {\em Journal Of Biogeography}. \textbf{44}, 2176-2187 (2017)
-\bibitem{hallgren2019species}Hallgren, W., Santana, F., Low-Choy, S., Zhao, Y. \& Mackey, B. Species distribution models can be highly sensitive to algorithm configuration. {\em Ecological Modelling}. \textbf{408} pp. 108719 (2019)
-\bibitem{thuiller2016ensemble}Thuiller, W., Georges, D., Engler, R. \& Breiner, F. Ensemble platform for species distribution modeling. {\em R Package Version}. pp. 3-1 (2016)
-\bibitem{quillfeldt2017influence}Quillfeldt, P., Engler, J., Silk, J. \& Phillips, R. Influence of device accuracy and choice of algorithm for species distribution modelling of seabirds: a case study using black-browed albatrosses. {\em Journal Of Avian Biology}. \textbf{48}, 1549-1555 (2017)
-\bibitem{zhang2019using}Zhang, Z., Xu, S., Capinha, C., Weterings, R. \& Gao, T. Using species distribution model to predict the impact of climate change on the potential distribution of Japanese whiting Sillago japonica. {\em Ecological Indicators}. \textbf{104} pp. 333-340 (2019)
+\bibitem{reynes2006choice}Reynès, C., Sabatier, R. \& Molinari, N. Choice of B-splines with free parameters in the flexible discriminant analysis context. {\em Computational Statistics & Data Analysis}. \textbf{51}, 1765-1778 (2006), http://dx.doi.org/10.1016/j.csda.2005.11.018
 \bibitem{wetcher2011analyzing}Wetcher-Hendricks, D. Analyzing quantitative data: An introduction for social researchers. (John Wiley & Sons,2011)
 \bibitem{cohen2013applied}Cohen, J., Cohen, P., West, S. \& Aiken, L. Applied multiple regression/correlation analysis for the behavioral sciences. (Routledge,2013)
-\bibitem{archive765Discriminant}Garson, G. PA 765: Discriminant Function Analysis — web.archive.org. (https://web.archive.org/web/20080312065328/http://www2.chass.ncsu.edu/garson/pA765/discrim.htm,2008), Accessed 26 September 2024.
-\bibitem{rao1948utilization}Rao, C. The utilization of multiple measurements in problems of biological classification. {\em Journal Of The Royal Statistical Society. Series B (Methodological)}. \textbf{10}, 159-203 (1948)
-\bibitem{hansen2005using}Hansen, J. Using SPSS for windows and macintosh: analyzing and understanding data. (Taylor & Francis,2005)
-\bibitem{klobuchar1986design}Klobuchar, J. Design and characteristics of the GPS ionospheric time delay algorithm for single frequency users. {\em PLANS 1986-Position Location And Navigation Symposium}. pp. 280-286 (1986)
 \bibitem{zolesi2014ionospheric}Zolesi, B. \& Cander, L. Ionospheric prediction and forecasting. (Springer,2014)
-\bibitem{komjathy1997global}Komjathy, A. Global ionospheric total electron content mapping using the Global Positioning System. (University of New Brunswick, Department of Geodesy,1997), https://api.semanticscholar.org/CorpusID:128511894
-\bibitem{NOAA2024bRadioCommunications}NOAA HF Radio Communications | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. (http://www.swpc.noaa.gov/impacts/hf-radio-communications,2024), Accessed 17 October 2024.
-\bibitem{kotz2005encyclopedia}Kotz, S., Balakrishnan, N., Read, C., Vidakovic, B. \& Johnson, N. Encyclopedia of Statistical Sciences, Volume 1. (John Wiley & Sons,2005)
-\bibitem{vellinov1992ionospheric}Vellinov, P., Spassov, C. \& Kolev, S. Ionospheric effects of lightning during the increasing part of solar cycle 22. {\em Journal Of Atmospheric And Terrestrial Physics}. \textbf{54}, 1347-1353 (1992)
-\bibitem{liu20142013}Liu, M., Luo, G. \& Wang, H. The 2013 Lushan earthquake in China tests hazard assessments. {\em Seismological Research Letters}. \textbf{85}, 40-43 (2014)
-\bibitem{ulukavak2018analysis}Ulukavak, M. \& Yalcinkaya, M. Analysis of ionospheric anomalies due to space weather conditions by using GPS-TEC variations. {\em FIG Congress}. pp. 6-11 (2018)
-\bibitem{schwenn2001solar}Schwenn, R. Solar wind: Global properties. {\em Encyclopedia Of Astronomy & Astrophysics}. pp. 1-9 (2001)
-\bibitem{melnikov1990relationships}Melnikov, V. Relationships between Microwave, Hard X ray, and Corpuscular Emissions of Solar Flares. (Ph. D. Thesis, Radiophysical Research Institute, Nizhniy Novgorod, Russia,1990)
-\bibitem{Android2024SensorTypes}Android developers, A. Sensor types | Android Open Source Project — source.android.com. (https://source.android.com/docs/core/interaction/sensors/sensor-types#magnetic_field_sensor,2024), Accessed 24 October 2024.
-\bibitem{de2007ionosphere}De Canck, M. Ionosphere properties and behaviors. {\em Antennex}. \textbf{119} pp. 6-7 (2007)
-\bibitem{NOAA2024cKindex}NOAA swpc.noaa.gov. (https://www.swpc.noaa.gov/sites/default/files/images/u2/TheK-index.pdf,2024), Accessed 17 October 2024.
-\bibitem{Matzka2024}Matzka, J. Kp Index — gfz-potsdam.de. (https://www.gfz-potsdam.de/en/section/geomagnetism/data-products-services/geomagnetic-kp-index,2024), Accessed 17 October 2024.
-\bibitem{NOAA2024dAlertsWatches}NOAA Alerts, Watches and Warnings | NOAA / NWS Space Weather Prediction Center — swpc.noaa.gov. (https://www.swpc.noaa.gov/products/alerts-watches-and-warnings,2024), Accessed 17 October 2024.
-\bibitem{Papitashvili2024About}Papitashvili, N. SPDF - About OMNIWeb Data — omniweb.gsfc.nasa.gov. (http://omniweb.gsfc.nasa.gov/html/ow_data.html,2024), Accessed 17 October 2024.
-\bibitem{Papitashvili2024Explorer}Papitashvili, N. OMNIWeb Data Explorer — omniweb.gsfc.nasa.gov. (http://omniweb.gsfc.nasa.gov/form/dx1.html,2024), Accessed 17 October 2024.
-\bibitem{Myint2022}Myint, L., Hozumi, K., Saito, S. \& Supnithi, P. Analysis of local geomagnetic index under the influence of equatorial electrojet (EEJ) at the equatorial Phuket geomagnetic station in Thailand. {\em Advances In Space Research}. \textbf{70}, 1429-1440 (2022), https://www.sciencedirect.com/science/article/pii/S0273117722004963
-\bibitem{NOAA2024eScales}NOAA swpc.noaa.gov. (https://www.swpc.noaa.gov/sites/default/files/images/NOAAscales.pdf,2024), Accessed 17 October 2024.
-\bibitem{Matzka2021a}Matzka, J., Bronkalla, O., Tornow, K., Elger, K. \& Stolle, C. Geomagnetic Kp index. (GFZ Data Services,2021)
-\bibitem{Matzka2021b}Matzka, J., Stolle, C., Yamazaki, Y., Bronkalla, O. \& Morschhauser, A. The geomagnetic KP index and derived indices of geomagnetic activity. {\em Space Weather}. \textbf{19} (2021,5)
-\bibitem{NOAA2024fGeomagneticIndices}NOAA Geomagnetic kp and ap Indices | NCEI — ngdc.noaa.gov. (https://www.ngdc.noaa.gov/stp/GEOMAG/kp_ap.html,2024), Accessed 17 October 2024.
-\bibitem{loewe1997classification}Loewe, C. \& Prölss, G. Classification and mean behavior of magnetic storms. {\em Journal Of Geophysical Research: Space Physics}. \textbf{102}, 14209-14213 (1997)
-\bibitem{gonzalez1994geomagnetic}Gonzalez, W., Joselyn, J., Kamide, Y., Kroehl, H., Rostoker, G., Tsurutani, B. \& Vasyliunas, V. What is a geomagnetic storm?. {\em Journal Of Geophysical Research: Space Physics}. \textbf{99}, 5771-5792 (1994)
-\bibitem{kamide1998two}Kamide, Y., Yokoyama, N., Gonzalez, W., Tsurutani, B., Daglis, I., Brekke, A. \& Masuda, S. Two-step development of geomagnetic storms. {\em Journal Of Geophysical Research: Space Physics}. \textbf{103}, 6917-6921 (1998)
-\bibitem{rozhnoi2004middle}Rozhnoi, A., Solovieva, M., Molchanov, O. \& Hayakawa, M. Middle latitude LF (40 kHz) phase variations associated with earthquakes for quiet and disturbed geomagnetic conditions. {\em Physics And Chemistry Of The Earth, Parts A/B/C}. \textbf{29}, 589-598 (2004)
-\bibitem{contadakis2012total}Contadakis, M., Arabelos, D., Pikridas, C. \& Spatalas, S. Total electron content variations over southern Europe before and during the M 6.3 Abruzzo earthquake of April 6, 2009. {\em Annals Of Geophysics}. \textbf{55} (2012)
-\bibitem{KuhnDataSplitting2024}Kuhn, M. 4 Data Splitting | The caret Package — topepo.github.io. (https://topepo.github.io/caret/data-splitting.html,2024), Accessed 28 September 2024.
-\bibitem{hyndman2018forecasting}Hyndman, R. Forecasting: principles and practice. (OTexts,2018)
-\bibitem{createDataPartition2024}Developers, R. createDataPartition function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/createDataPartition,2024), Accessed 27 September 2024.
-\bibitem{Fan2008}Fan, R., Chang, K., Hsieh, C., Wang, X. \& Lin, C. LIBLINEAR: a library for large linear classification. {\em Journal Of Machine Learning Research}. \textbf{9} pp. 1871-1874 (2008,8)
-\bibitem{Mohamad2013}Mohamad, I. \& Usman, D. Standardization and its effects on K-means clustering algorithm. {\em Research Journal Of Applied Sciences, Engineering And Technology}. \textbf{6}, 3299-3303 (2013,9)
-\bibitem{Fennell2019}Fennell, P., Zuo, Z. \& Lerman, K. Predicting and explaining behavioral data with structured feature space decomposition. {\em EPJ Data Sci.}. \textbf{8} (2019,12)
-\bibitem{ks.test2024}Developers, R. ks.test function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/ks.test,2024), Accessed 24 October 2024.
-\bibitem{shapiro.test2024}Developers, R. shapiro.test function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/shapiro.test,2024), Accessed 24 October 2024.
-\bibitem{kuhn2008building}Kuhn, M. Building predictive models in R using the caret package. {\em Journal Of Statistical Software}. \textbf{28} pp. 1-26 (2008)
-\bibitem{confusionMatrix2024}Developers, R. confusionMatrix function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/caret/versions/6.0-94/topics/confusionMatrix,2024), Accessed 27 September 2024.
-\bibitem{altman1994diagnostic1}Altman, D. \& Bland, J. Diagnostic tests. 1: Sensitivity and specificity.. {\em BMJ: British Medical Journal}. \textbf{308}, 1552 (1994)
-\bibitem{altman1994diagnostic2}Altman, D. \& Bland, J. Diagnostic test 2: predictive values. {\em BMJ: British Medical Journal}. \textbf{309} pp. 102 (1994)
-\bibitem{velez2007balanced}Velez, D., White, B., Motsinger, A., Bush, W., Ritchie, M., Williams, S. \& Moore, J. A balanced accuracy function for epistasis modeling in imbalanced datasets using multifactor dimensionality reduction. {\em Genetic Epidemiology: The Official Publication Of The International Genetic Epidemiology Society}. \textbf{31}, 306-315 (2007)
-\bibitem{system.time2024}Developers, R. system.time function - RDocumentation — rdocumentation.org. (https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/system.time,2024), Accessed 28 September 2024.
+\bibitem{vellinov1992ionospheric}Vellinov, P., Spassov, C. \& Kolev, S. Ionospheric effects of lightning during the increasing part of solar cycle 22. {\em Journal Of Atmospheric And Terrestrial Physics}. \textbf{54}, 1347-1353 (1992), http://dx.doi.org/10.1016/0021-9169(92)90044-L
+\bibitem{liu20142013}Liu, M., Luo, G. \& Wang, H. The 2013 Lushan earthquake in China tests hazard assessments. {\em Seismological Research Letters}. \textbf{85}, 40-43 (2014), http://dx.doi.org/10.1785/0220130117
+\bibitem{schwenn2001solar}Schwenn, R. Solar wind: Global properties. {\em Encyclopedia Of Astronomy & Astrophysics}. pp. 1-9 (2001), http://dx.doi.org/10.1888/0333750888/2301
+\bibitem{Bojinov2014}Bojinov, H., Michalevsky, Y., Nakibly, G. \& Boneh, D. Mobile Device Identification via Sensor Fingerprinting. {\em ArXiv Preprint ArXiv:1408.1416}. (2014), http://dx.doi.org/10.48550/arxiv.1408.1416
+\bibitem{Myint2022}Myint, L., Hozumi, K., Saito, S. \& Supnithi, P. Analysis of local geomagnetic index under the influence of equatorial electrojet (EEJ) at the equatorial Phuket geomagnetic station in Thailand. {\em Advances In Space Research}. \textbf{70}, 1429-1440 (2022), http://dx.doi.org/10.1016/j.asr.2022.06.024
+\bibitem{Matzka2021a}Matzka, J., Bronkalla, O., Tornow, K., Elger, K. \& Stolle, C. Geomagnetic Kp index. {\em GFZ Data Services}. (2021), http://dx.doi.org/10.5880/Kp.0001
+\bibitem{Matzka2021b}Matzka, J., Stolle, C., Yamazaki, Y., Bronkalla, O. \& Morschhauser, A. The geomagnetic KP index and derived indices of geomagnetic activity. {\em Space Weather}. \textbf{19} (2021,5), http://dx.doi.org/10.1029/2020SW002641
+\bibitem{loewe1997classification}Loewe, C. \& Prölss, G. Classification and mean behavior of magnetic storms. {\em Journal Of Geophysical Research: Space Physics}. \textbf{102}, 14209-14213 (1997), http://dx.doi.org/10.1029/96JA04020
+\bibitem{gonzalez1994geomagnetic}Gonzalez, W., Joselyn, J., Kamide, Y., Kroehl, H., Rostoker, G., Tsurutani, B. \& Vasyliunas, V. What is a geomagnetic storm?. {\em Journal Of Geophysical Research: Space Physics}. \textbf{99}, 5771-5792 (1994), http://dx.doi.org/10.1029/93JA02867
+\bibitem{kamide1998two}Kamide, Y., Yokoyama, N., Gonzalez, W., Tsurutani, B., Daglis, I., Brekke, A. \& Masuda, S. Two-step development of geomagnetic storms. {\em Journal Of Geophysical Research: Space Physics}. \textbf{103}, 6917-6921 (1998), http://dx.doi.org/10.1029/97JA03337
+\bibitem{rozhnoi2004middle}Rozhnoi, A., Solovieva, M., Molchanov, O. \& Hayakawa, M. Middle latitude LF (40 kHz) phase variations associated with earthquakes for quiet and disturbed geomagnetic conditions. {\em Physics And Chemistry Of The Earth, Parts A/B/C}. \textbf{29}, 589-598 (2004), http://dx.doi.org/10.1016/j.pce.2003.08.061
+\bibitem{contadakis2012total}Contadakis, M., Arabelos, D., Pikridas, C. \& Spatalas, S. Total electron content variations over southern Europe before and during the M 6.3 Abruzzo earthquake of April 6, 2009. {\em Annals Of Geophysics}. \textbf{55} (2012), http://dx.doi.org/10.4401/ag-5322
+\bibitem{Fan2008}Fan, R., Chang, K., Hsieh, C., Wang, X. \& Lin, C. LIBLINEAR: a library for large linear classification. {\em Journal Of Machine Learning Research}. \textbf{9} pp. 1871-1874 (2008,8), http://dx.doi.org/10.1145/1390681.1442794
+\bibitem{Mohamad2013}Mohamad, I. \& Usman, D. Standardization and its effects on K-means clustering algorithm. {\em Research Journal Of Applied Sciences, Engineering And Technology}. \textbf{6}, 3299-3303 (2013,9), http://dx.doi.org/10.19026/rjaset.6.3638
+\bibitem{Fennell2019}Fennell, P., Zuo, Z. \& Lerman, K. Predicting and explaining behavioral data with structured feature space decomposition. {\em EPJ Data Sci.}. \textbf{8} (2019,12), http://dx.doi.org/10.48550/arXiv.1810.09841
+\bibitem{fagerland2017statistical}Fagerland, M., Lydersen, S. \& Laake, P. Statistical Analysis of Contingency Tables. (Chapman,2017)
+\bibitem{chow2018sample}Chow, S., Shao, J., Wang, H. \& Lokhnygina, Y. Sample Size Calculations in Clinical Research. (Chapman,2018)
+\bibitem{edwards1948note}Edwards, A. Note on the "correction for continuity" in testing the significance of the difference between correlated proportions. {\em Psychometrika}. \textbf{13}, 185-187 (1948), http://dx.doi.org/10.1007/BF02289261
 \bibitem{Zhang2004}Zhang, H. The Optimality of Naive Bayes. {\em Proceedings Of The Seventeenth International Florida Artificial Intelligence Research Society Conference, FLAIRS 2004}. \textbf{2} (2004,1)
+\bibitem{Metsis2006}Metsis, V., Androutsopoulos, I. \& Paliouras, G. Spam Filtering with Naive Bayes - Which Naive Bayes?. {\em In CEAS}. (2006,1)
+\bibitem{Mccallum2001}Mccallum, A. \& Nigam, K. A Comparison of Event Models for Naive Bayes Text Classification. {\em Work Learn Text Categ}. \textbf{752} (2001,5)
+
 
 \end{thebibliography}
 
