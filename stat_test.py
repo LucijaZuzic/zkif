@@ -279,7 +279,7 @@ for wd in wd_list:
                     df_new_unfiltered[t][-1].append(p)
             else:
                 for t in df_new_unfiltered:
-                    df_new_unfiltered[t][-1].append(1.0)
+                    df_new_unfiltered[t][-1].append(0.0)
     
     #for t in df_new_unfiltered:
         #print(len(df_new_unfiltered[t]), len(df_new_unfiltered[t][0]))
@@ -340,7 +340,7 @@ for m in model_name_list:
                     df_new_unfiltered[t][-1].append(p)
             else:
                 for t in df_new_unfiltered:
-                    df_new_unfiltered[t][-1].append(1.0)
+                    df_new_unfiltered[t][-1].append(0.0)
     
     #for t in df_new_unfiltered:
         #print(len(df_new_unfiltered[t]), len(df_new_unfiltered[t][0]))
@@ -404,7 +404,7 @@ for m1 in allpvno:
                 df_new_unfiltered[t][-1].append(p)
         else:
             for t in df_new_unfiltered:
-                df_new_unfiltered[t][-1].append(1.0)
+                df_new_unfiltered[t][-1].append(0.0)
 
 t = "best"
 plt.rcParams["svg.fonttype"] = "none"
@@ -461,7 +461,7 @@ for m1 in allpvno:
                 df_new_unfiltered[t][-1].append(p)
         else:
             for t in df_new_unfiltered:
-                df_new_unfiltered[t][-1].append(1.0)
+                df_new_unfiltered[t][-1].append(0.0)
 
 t = "best"
 ax1 = plt.subplot(gs[1])
@@ -508,7 +508,7 @@ for m1 in allpvno:
                 df_new_unfiltered[t][-1].append(p)
         else:
             for t in df_new_unfiltered:
-                df_new_unfiltered[t][-1].append(1.0)
+                df_new_unfiltered[t][-1].append(0.0)
 
 t = "best"
 plt.rcParams["svg.fonttype"] = "none"
@@ -565,7 +565,7 @@ for m1 in allpvno:
                 df_new_unfiltered[t][-1].append(p)
         else:
             for t in df_new_unfiltered:
-                df_new_unfiltered[t][-1].append(1.0)
+                df_new_unfiltered[t][-1].append(0.0)
 
 t = "best"
 ax1 = plt.subplot(gs[1])
