@@ -27,7 +27,7 @@ translate_data = {
     "xzap": "$B_{x}$, $B_{z}$, and $a_{p}$ as predictors",
     "yzap": "$B_{y}$, $B_{z}$, and $a_{p}$ as predictors"
 }
-redo = True
+redo = False
 if redo:
     values_compare = dict()
     for model_name in model_name_list:
@@ -60,8 +60,6 @@ if redo:
                     matr[-1].append(val_add)
                     if val_add <= 4:
                         corr_use = True
-            if "actual" == m1 or "actual" == m2:
-                print(matr)
             mnc = mcnemar(matr, exact=False, correction=True)
             new_data_frame["model1"].append(m1)
             new_data_frame["model2"].append(m2)
@@ -539,7 +537,7 @@ plt.xticks(rotation=90)
 plt.yticks(rotation=0)
 plt.xticks([i + 0.5 for i in range(len(tick_labels))], ["The " + translate_algo[l].replace(" in ", "\nin ") for l in tick_labels])
 plt.yticks([])
-plt.yticks([i + 0.5 for i in range(len(tick_labels))], ["The " + translate_algo[l].replace(" in ", "\nin ") for l in tick_labels])
+#plt.yticks([i + 0.5 for i in range(len(tick_labels))], ["The " + translate_algo[l].replace(" in ", "\nin ") for l in tick_labels])
 #plt.show()
 
 m = "nb"
@@ -580,7 +578,7 @@ plt.xticks(rotation=90)
 plt.yticks(rotation=0)
 plt.xticks([i + 0.5 for i in range(len(tick_labels))], [translate_data[l].replace("(", "\n(").replace("geo", "Geo").replace("as", "\nas").replace("except ", "except\n").replace("$dTEC$, $B_{x}$, ", "$dTEC$, $B_{x}$,\n").replace("the", "The").replace("all", "All") for l in tick_labels])
 plt.yticks([])
-plt.yticks([i + 0.5 for i in range(len(tick_labels))], [translate_data[l].replace("(", "\n(").replace("geo", "Geo").replace("as", "\nas").replace("except ", "except\n").replace("$dTEC$, $B_{x}$, ", "$dTEC$, $B_{x}$,\n").replace("the", "The").replace("all", "All") for l in tick_labels])
+#plt.yticks([i + 0.5 for i in range(len(tick_labels))], [translate_data[l].replace("(", "\n(").replace("geo", "Geo").replace("as", "\nas").replace("except ", "except\n").replace("$dTEC$, $B_{x}$, ", "$dTEC$, $B_{x}$,\n").replace("the", "The").replace("all", "All") for l in tick_labels])
 #plt.show()
 plt.savefig("pvalueplot_total_horizontal.png", bbox_inches = "tight")
 plt.savefig("pvalueplot_total_horizontal.pdf", bbox_inches = "tight")
