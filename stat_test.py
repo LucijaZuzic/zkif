@@ -155,6 +155,8 @@ for ix in range(len(dfnew["model1"])):
     c = dfnew["correction"][ix]
     p = dfnew["pvalue"][ix]
     s = dfnew["statistic"][ix]
+    if str(p) == "":
+        p = 1.0
     if str(s) == "inf":
         p = 1.0
     if m1 not in allpv:
